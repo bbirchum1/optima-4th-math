@@ -314,6 +314,32 @@
 .frac.frac-lg{font-size:1.05em}
 .frac.frac-on-dark .num{border-bottom-color:#fff}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
@@ -341,7 +367,31 @@
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
-<div class="video-wrap" data-video-slot="4-07-03-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.07.03</div><div class="video-wrap-title">Add a fraction to a mixed number — watch the regroup.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-03_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Show a runner's log on the board. "Day 1: ran 1 <span class="frac"><span class="num">2</span><span class="den">3</span></span> miles. Day 2: ran <span class="frac"><span class="num">7</span><span class="den">9</span></span> mile more. How far total?" Lay out pies: one full pie of 9ths shaded (the whole), one pie with 6 of 9 shaded (renamed from <span class="frac"><span class="num">2</span><span class="den">3</span></span>), and 7 more ninths (the addend). "Add the fraction parts first. Both are ninths — same size now. <span class="frac"><span class="num">6</span><span class="den">9</span></span> + <span class="frac"><span class="num">7</span><span class="den">9</span></span> = 13/9." Show the third pie filling up past whole. "<span class="frac"><span class="num">13</span><span class="den">9</span></span> means 1 whole + <span class="frac"><span class="num">4</span><span class="den">9</span></span> more. So we got one extra whole pie." Combine: "Original 1 whole + 1 new whole = 2 wholes. Plus the <span class="frac"><span class="num">4</span><span class="den">9</span></span> left over = 2 <span class="frac"><span class="num">4</span><span class="den">9</span></span> miles." Frame the procedure: <strong>Rename so fractions share a denom. Add the fractions. Regroup any extra whole into the whole-number total.</strong> Tone: clear, story-driven, real-world. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-welcome --></div></div></div></div>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Factor Pairs</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">How many factor pairs does 24 have?</span><input autocomplete="off" class="fluency-input" data-answer="4" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">How many factor pairs does 36 have?</span><input autocomplete="off" class="fluency-input" data-answer="5" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">How many factor pairs does 18 have?</span><input autocomplete="off" class="fluency-input" data-answer="3" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">How many factor pairs does 40 have?</span><input autocomplete="off" class="fluency-input" data-answer="4" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">How many factor pairs does 28 have?</span><input autocomplete="off" class="fluency-input" data-answer="3" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">How many factor pairs does 32 have?</span><input autocomplete="off" class="fluency-input" data-answer="3" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">How many factor pairs does 45 have?</span><input autocomplete="off" class="fluency-input" data-answer="3" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">How many factor pairs does 20 have?</span><input autocomplete="off" class="fluency-input" data-answer="3" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">How many factor pairs does 16 have?</span><input autocomplete="off" class="fluency-input" data-answer="3" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">How many factor pairs does 48 have?</span><input autocomplete="off" class="fluency-input" data-answer="5" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Factor Pairs)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
 <p>Atlas keeps the lead — there's a new procedure today: rename, add, regroup. Hazel pictures pies stacking past a whole. Felix counts. Cora finishes the answer.</p>
 <div class="bubble-row">
@@ -386,7 +436,7 @@
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Answers:</strong> 1 <span class="frac"><span class="num">2</span><span class="den">3</span></span> = 1 <strong>6</strong>/9 (2 × 3 = 6, whole stays). 3 <span class="frac"><span class="num">1</span><span class="den">2</span></span> = 3 <strong>3</strong>/6 (1 × 3 = 3). 7 <span class="frac"><span class="num">3</span><span class="den">4</span></span> = 7 <strong>9</strong>/12 (3 × 3 = 9). The whole number is unchanged — you ONLY rename the fraction part.</div>
 <div class="journal-label">✏️ Pick one. Why does the whole number stay the same when you rename the fraction part? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: Rename mixed fraction part" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
-<div class="video-wrap" data-video-slot="4-07-03-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.07.03</div><div class="video-wrap-title">Renaming mixed numbers — whole stays, fraction changes</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-03_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "1 <span class="frac"><span class="num">2</span><span class="den">3</span></span> = 1 ?/9: rename <span class="frac"><span class="num">2</span><span class="den">3</span></span> with denominator 9. <span class="frac"><span class="num">2</span><span class="den">3</span></span> × <span class="frac"><span class="num">3</span><span class="den">3</span></span> = 6/9. The 1 stays. So 1 <span class="frac"><span class="num">2</span><span class="den">3</span></span> = 1 6/9." Repeat 3 <span class="frac"><span class="num">1</span><span class="den">2</span></span> = 3 <span class="frac"><span class="num">3</span><span class="den">6</span></span> and 7 <span class="frac"><span class="num">3</span><span class="den">4</span></span> = 7 9/12. Frame: "The wholes don't change — they're full pies. You're only re-cutting the fraction-part pie into smaller slices."</div><div class="video-placeholder-id"><!-- slot: lesson-readiness-feedback --></div></div></div></div>
+
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Adding a fraction can spill into a new whole.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">🏃</span><p>A runner ran <strong>1 <span class="frac"><span class="num">2</span><span class="den">3</span></span> miles</strong>, then ran <strong><span class="frac"><span class="num">7</span><span class="den">9</span></span> mile</strong> more. How far did she run total?</p></div>
 <div class="number-talk-visual">
@@ -414,7 +464,7 @@
 <textarea class="journal-box" data-label="Warm-Up — Think Prompt: 1 2/3 + 7/9 runner" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">Rename + add + regroup. Now build the answer yourself with the Sum Builder.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-<div class="tab-panel" id="tab-learn">
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-07-03-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-07-03 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-07-03-concept --></div></div></div></div>
 <div aria-label="Daily vocabulary flash cards" class="vocab-section">
 <div class="vocab-section-head">
 <div class="vocab-section-icon">📚</div>
@@ -451,7 +501,7 @@
 </div>
 </div>
 </div>
-<div class="video-wrap" data-video-slot="4-07-03-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.07.03</div><div class="video-wrap-title">Add fractions first. Regroup if you got an extra whole.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-03_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Three examples. Example 1 (no regroup): 4 <span class="frac"><span class="num">6</span><span class="den">8</span></span> + <span class="frac"><span class="num">3</span><span class="den">8</span></span> = 4 <span class="frac"><span class="num">9</span><span class="den">8</span></span> → wait, <span class="frac"><span class="num">9</span><span class="den">8</span></span> is improper. Show the slices: 6 of 8 + 3 more = 9. Regroup <span class="frac"><span class="num">9</span><span class="den">8</span></span> as 1 1/8. Then 4 + 1 = 5 wholes, + <span class="frac"><span class="num">1</span><span class="den">8</span></span> left = 5 1/8. Example 2 (different denom + regroup): 1 <span class="frac"><span class="num">1</span><span class="den">2</span></span> + 5/6. Rename 1 <span class="frac"><span class="num">1</span><span class="den">2</span></span> = 1 3/6. Add fractions: <span class="frac"><span class="num">3</span><span class="den">6</span></span> + <span class="frac"><span class="num">5</span><span class="den">6</span></span> = 8/6. Regroup as 1 <span class="frac"><span class="num">2</span><span class="den">6</span></span> → simplify to 1 1/3. Total wholes: 1 + 1 = 2. Final: 2 1/3. Example 3 (no regroup): <span class="frac"><span class="num">3</span><span class="den">4</span></span> + 7 5/12. Rename <span class="frac"><span class="num">3</span><span class="den">4</span></span> = 9/12. Add fractions: <span class="frac"><span class="num">9</span><span class="den">12</span></span> + <span class="frac"><span class="num">5</span><span class="den">12</span></span> = <span class="frac"><span class="num">14</span><span class="den">12</span></span> = 1 <span class="frac"><span class="num">2</span><span class="den">12</span></span> → 1 1/6. Whole: 7 + 1 = 8. Final: 8 1/6. Frame: "Three steps every time. Rename if needed. Add fractions. Regroup any extra whole." Tone: clear, methodical. About 2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-concept --></div></div></div></div>
+
 <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Use the Sum Builder below. CLICK to add slices and build the answer to each problem. Watch the regroup happen.</p></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#0E8A8C;">🛠️</div><div><div class="activity-title">Sum Builder</div><div class="activity-sub">CLICK to add slices. Watch the pies fill and the counter regroup.</div></div></div><div class="activity-body"><p>Each problem asks you to BUILD the answer by clicking slice buttons. Add slices one at a time, or a whole pie at a time. The counter shows your current total as both improper and mixed. The status turns green when you hit the target.</p>
 <!-- Problem 1: 4 6/8 + 3/8 -->
@@ -530,7 +580,7 @@ The <span class="frac"><span class="num">6</span><span class="den">9</span></spa
 <textarea class="journal-box" data-label="Learn — Socratic: Why regroup the extra whole" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: 8 <span class="frac"><span class="num">4</span><span class="den">5</span></span> + <span class="frac"><span class="num">7</span><span class="den">20</span></span></div><div class="activity-sub">No regroup needed. Just rename, add, simplify.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Find <strong>8 <span class="frac"><span class="num">4</span><span class="den">5</span></span> + <span class="frac"><span class="num">7</span><span class="den">20</span></span></strong>. Express in simplest form.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
-<div class="video-wrap" data-video-slot="4-07-03-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.07.03</div><div class="video-wrap-title">8 <span class="frac"><span class="num">4</span><span class="den">5</span></span> + <span class="frac"><span class="num">7</span><span class="den">20</span></span> = 8 <span class="frac"><span class="num">23</span><span class="den">20</span></span> → 9 <span class="frac"><span class="num">3</span><span class="den">20</span></span></div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-03_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Atlas reads. "8 <span class="frac"><span class="num">4</span><span class="den">5</span></span> + 7/20. Denominators 5 and 20. 20 is 5 × 4 — so 20 is a multiple of 5." Rename: <span class="frac"><span class="num">4</span><span class="den">5</span></span> × <span class="frac"><span class="num">4</span><span class="den">4</span></span> = 16/20. So 8 <span class="frac"><span class="num">4</span><span class="den">5</span></span> = 8 16/20. Felix adds: "<span class="frac"><span class="num">16</span><span class="den">20</span></span> + <span class="frac"><span class="num">7</span><span class="den">20</span></span> = 23/20." Atlas: "That's improper — regroup. <span class="frac"><span class="num">23</span><span class="den">20</span></span> = 1 3/20." Combine wholes: "8 + 1 = 9." Final: <strong>9 <span class="frac"><span class="num">3</span><span class="den">20</span></span></strong>. Cora checks: "GCF of 3 and 20 = 1 — already simplest." Hazel pictures: "Eight whole pies cut in 20ths, plus <span class="frac"><span class="num">16</span><span class="den">20</span></span> = <span class="frac"><span class="num">4</span><span class="den">5</span></span> of a pie. Add 7 more twentieths to that — the partial pie fills past full." Frame: "Rename, add, regroup, simplify." Tone: methodical. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-07-03-example --></div></div></div></div>
+
 <div style="background:#F3F9F8;border:2px solid #A8D8D6;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.8;font-size:15px;">
 <strong>Step 1 — Rename.</strong> <span class="frac"><span class="num">4</span><span class="den">5</span></span> × <span class="frac"><span class="num">4</span><span class="den">4</span></span> = 16/20. So 8 <span class="frac"><span class="num">4</span><span class="den">5</span></span> = <span style="color:#0E8A8C;font-weight:900;">8 <span class="frac"><span class="num">16</span><span class="den">20</span></span></span>.<br/>
@@ -574,10 +624,10 @@ The <span class="frac"><span class="num">6</span><span class="den">9</span></spa
 <button class="value-card" onclick="pickP1Round(this,'4 9/16')" style="min-width:100px;"><div class="big">4 <span class="frac"><span class="num">9</span><span class="den">16</span></span></div></button>
 </div>
 <div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Exactly.</strong> <span class="frac"><span class="num">6</span><span class="den">8</span></span> + <span class="frac"><span class="num">3</span><span class="den">8</span></span> = <span class="frac"><span class="num">9</span><span class="den">8</span></span> → regroup 1 1/8. Whole: 4 + 1 = 5. Final: <strong>5 <span class="frac"><span class="num">1</span><span class="den">8</span></span></strong>.
-<div class="video-wrap" data-video-slot="4-07-03-practice-1-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 1</div><div class="video-wrap-title">Regrouped clean</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-03_Practice-1_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "<span class="frac"><span class="num">6</span><span class="den">8</span></span> + <span class="frac"><span class="num">3</span><span class="den">8</span></span> = <span class="frac"><span class="num">9</span><span class="den">8</span></span>, regroup to 1 1/8. 4 + 1 = 5. Final: 5 1/8." About 45 sec.</div><div class="video-placeholder-id"></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Look again.</strong> Add the fraction parts. If the sum is improper, regroup the extra whole.
 <div class="hint-callout"><span class="frac"><span class="num">6</span><span class="den">8</span></span> + <span class="frac"><span class="num">3</span><span class="den">8</span></span> = <span class="frac"><span class="num">9</span><span class="den">8</span></span> (improper). Convert: <span class="frac"><span class="num">9</span><span class="den">8</span></span> = 1 1/8. Add the 1 to 4 → 5. Final: 5 1/8.</div>
-<div class="video-wrap" data-video-slot="4-07-03-practice-1-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 1</div><div class="video-wrap-title">Regroup the extra whole</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-03_Practice-1_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. About 1 min.</div><div class="video-placeholder-id"></div></div></div></div></div></div></div>
+</div></div></div>
 <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three More — Mixed + Fraction</div><div class="activity-sub">Some need rename. Some need regroup. All need simplifying.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>Strategy:</strong> Same as the Sum Builder. Rename, add, regroup, simplify.</p></div>
 <div style="display:grid;gap:14px;margin:14px 0;">
 <div style="background:#F3F9F8;border:2px solid #A8D8D6;border-radius:14px;padding:14px;">
@@ -606,10 +656,10 @@ The <span class="frac"><span class="num">6</span><span class="den">9</span></spa
 </div>
 </div>
 <div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ Three for three.</strong> 2a — 1 <span class="frac"><span class="num">1</span><span class="den">2</span></span> = 1 3/6. <span class="frac"><span class="num">3</span><span class="den">6</span></span> + <span class="frac"><span class="num">5</span><span class="den">6</span></span> = <span class="frac"><span class="num">8</span><span class="den">6</span></span> → regroup 1 2/6. 1 + 1 = 2. Simplify <span class="frac"><span class="num">2</span><span class="den">6</span></span> = <span class="frac"><span class="num">1</span><span class="den">3</span></span> → <strong>2 <span class="frac"><span class="num">1</span><span class="den">3</span></span></strong>. 2b — <span class="frac"><span class="num">3</span><span class="den">4</span></span> = 9/12. <span class="frac"><span class="num">9</span><span class="den">12</span></span> + <span class="frac"><span class="num">5</span><span class="den">12</span></span> = <span class="frac"><span class="num">14</span><span class="den">12</span></span> → regroup 1 2/12. 7 + 1 = 8. Simplify <span class="frac"><span class="num">2</span><span class="den">12</span></span> = <span class="frac"><span class="num">1</span><span class="den">6</span></span> → <strong>8 <span class="frac"><span class="num">1</span><span class="den">6</span></span></strong>. 2c — <span class="frac"><span class="num">2</span><span class="den">3</span></span> = 6/9. <span class="frac"><span class="num">4</span><span class="den">9</span></span> + <span class="frac"><span class="num">6</span><span class="den">9</span></span> = <span class="frac"><span class="num">10</span><span class="den">9</span></span> → regroup 1 1/9. 4 + 1 = 5 → <strong>5 <span class="frac"><span class="num">1</span><span class="den">9</span></span></strong>.
-<div class="video-wrap" data-video-slot="4-07-03-practice-2-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 2</div><div class="video-wrap-title">Rename, add, regroup, simplify</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-03_Practice-2_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk all three. About 2 min.</div><div class="video-placeholder-id"></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Look again.</strong> Rename, add fractions, regroup the extra whole, simplify.
 <div class="hint-callout">2a: 1 <span class="frac"><span class="num">3</span><span class="den">6</span></span> + <span class="frac"><span class="num">5</span><span class="den">6</span></span>, sum <span class="frac"><span class="num">8</span><span class="den">6</span></span> → 1 <span class="frac"><span class="num">2</span><span class="den">6</span></span> → 2 <span class="frac"><span class="num">2</span><span class="den">6</span></span> → 2 1/3. 2b: 7 <span class="frac"><span class="num">9</span><span class="den">12</span></span> + <span class="frac"><span class="num">5</span><span class="den">12</span></span> → <span class="frac"><span class="num">14</span><span class="den">12</span></span> → 7 + 1 = 8, <span class="frac"><span class="num">2</span><span class="den">12</span></span> = <span class="frac"><span class="num">1</span><span class="den">6</span></span> → 8 1/6. 2c: 4 <span class="frac"><span class="num">6</span><span class="den">9</span></span> + <span class="frac"><span class="num">4</span><span class="den">9</span></span> → <span class="frac"><span class="num">10</span><span class="den">9</span></span> → 4 + 1 = 5, <span class="frac"><span class="num">1</span><span class="den">9</span></span> left → 5 1/9.</div>
-<div class="video-wrap" data-video-slot="4-07-03-practice-2-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 2</div><div class="video-wrap-title">Watch each step</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-03_Practice-2_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. About 1-2 min.</div><div class="video-placeholder-id"></div></div></div></div></div></div></div>
+</div></div></div>
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#0E8A8C;">3</div><div><div class="activity-title">Find Jana's Mistake — She Skipped the Regroup</div><div class="activity-sub">She left the fraction part improper instead of converting.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Jana added 1 <span class="frac"><span class="num">1</span><span class="den">2</span></span> + <span class="frac"><span class="num">5</span><span class="den">6</span></span> and got 1 <span class="frac"><span class="num">8</span><span class="den">6</span></span> — but <span class="frac"><span class="num">8</span><span class="den">6</span></span> is improper. She forgot to regroup.</p></div>
 <div class="task-box"><div class="task-label">Jana's Work</div>
 <p>Jana was asked: <strong>"Find 1 <span class="frac"><span class="num">1</span><span class="den">2</span></span> + <span class="frac"><span class="num">5</span><span class="den">6</span></span> in simplest form."</strong></p>
@@ -626,17 +676,14 @@ The <span class="frac"><span class="num">6</span><span class="den">9</span></spa
 <button class="purple-btn" onclick="checkErrorAnalysis()">✓ Check My Picks</button>
 <div class="journal-label">✏️ Help Jana. Write a rule: what do you do when the fraction-part sum is improper? <span class="saved-dot" id="dot-ea"></span></div>
 <textarea class="journal-box" data-label="Practice 3 — Error Analysis: Must regroup improper fraction part" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
-<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Regroup <span class="frac"><span class="num">8</span><span class="den">6</span></span> → 1 <span class="frac"><span class="num">2</span><span class="den">6</span></span> → add the 1 to the whole part → 2 <span class="frac"><span class="num">2</span><span class="den">6</span></span> → simplify → <strong>2 <span class="frac"><span class="num">1</span><span class="den">3</span></span></strong>. <div class="video-wrap" data-video-slot="4-07-03-practice-3-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 3</div><div class="video-wrap-title">Don't leave it improper</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-03_Practice-3_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Frame the rule. About 45 sec.</div><div class="video-placeholder-id"></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three are true.</strong><div class="hint-callout">1 <span class="frac"><span class="num">8</span><span class="den">6</span></span> isn't in simplest form. Regroup <span class="frac"><span class="num">8</span><span class="den">6</span></span> = 1 2/6. 1 + 1 = 2. Simplify <span class="frac"><span class="num">2</span><span class="den">6</span></span> = 1/3. Final: 2 1/3.</div><div class="video-wrap" data-video-slot="4-07-03-practice-3-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 3</div><div class="video-wrap-title">Regroup matters</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-03_Practice-3_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. About 1 min.</div><div class="video-placeholder-id"></div></div></div></div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
+<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Regroup <span class="frac"><span class="num">8</span><span class="den">6</span></span> → 1 <span class="frac"><span class="num">2</span><span class="den">6</span></span> → add the 1 to the whole part → 2 <span class="frac"><span class="num">2</span><span class="den">6</span></span> → simplify → <strong>2 <span class="frac"><span class="num">1</span><span class="den">3</span></span></strong>. </div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three are true.</strong><div class="hint-callout">1 <span class="frac"><span class="num">8</span><span class="den">6</span></span> isn't in simplest form. Regroup <span class="frac"><span class="num">8</span><span class="den">6</span></span> = 1 2/6. 1 + 1 = 2. Simplify <span class="frac"><span class="num">2</span><span class="den">6</span></span> = 1/3. Final: 2 1/3.</div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">You built the answer. Now practice the procedure.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Adding a mixed number and a fraction. Rename, add, regroup, simplify.</div></div></div><div class="activity-body"><p>For each, show your work — name the rename, the add, the regroup (if any), and the simplify.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Do the denominators MATCH? Or do I need to rename one or both? Or is a benchmark (<span class="frac"><span class="num">1</span><span class="den">2</span></span>, 1) faster?</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Add the mixed numbers and fractions.</strong> Same denominator each. Express in simplest form.<br/>(a) 4 <span class="frac"><span class="num">6</span><span class="den">8</span></span> + <span class="frac"><span class="num">3</span><span class="den">8</span></span><br/>(b) 6 <span class="frac"><span class="num">6</span><span class="den">12</span></span> + <span class="frac"><span class="num">5</span><span class="den">12</span></span><br/>(c) 5 <span class="frac"><span class="num">4</span><span class="den">9</span></span> + <span class="frac"><span class="num">2</span><span class="den">9</span></span></p><div class="journal-label">✏️ My answers in simplest form + the simplification step <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: Convert three improper to mixed" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-
 <div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Word problem — fabric.</strong> Hazel had a board that measured 2 <span class="frac"><span class="num">3</span><span class="den">8</span></span> feet. She added another piece that was <span class="frac"><span class="num">5</span><span class="den">8</span></span> feet long. How long is the combined board in simplest form?</p><div class="journal-label">✏️ My answers <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: Cake story with simplification" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
-
-
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#0E8A8C;"><div class="activity-head"><div class="activity-num" style="background:#0E8A8C;color:#fff;">🗺️</div><div><div class="activity-title">Connection Forward: Two Mixed Numbers</div><div class="activity-sub">What comes next in Unit 7</div></div></div><div class="activity-body"><p>You've compared and ordered fractions that all fit between 0 and 1.</p><p>Next lesson: <strong>Improper Fractions and Mixed Numbers.</strong> What if the top is BIGGER than the bottom? <span class="frac"><span class="num">8</span><span class="den">5</span></span> of a pie isn't just half — it's a WHOLE pie plus some extra. That's an improper fraction, and it can also be written as a mixed number (1 <span class="frac"><span class="num">3</span><span class="den">5</span></span>).</p><p>The big question opening 6.03: <em>How do you show a fraction that's more than 1 whole?</em></p></div></div></div></div>
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed all 6 problems above.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I labeled the regroup whenever the fraction sum was improper.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I finished every answer in simplest mixed-number form.</span></div></div></div>
@@ -1158,6 +1205,75 @@ document.addEventListener('DOMContentLoaded', function(){
 // Also init now in case DOMContentLoaded already fired
 setTimeout(function(){ for(const id in builders) builderRender(parseInt(id)); }, 0);
 
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Factor Pairs";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
 </script>
 </body>
 </html>

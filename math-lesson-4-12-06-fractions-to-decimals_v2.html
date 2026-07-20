@@ -329,6 +329,32 @@
 .cc-row strong{color:#1A6B8E;font-weight:900;font-family:Lora,Georgia,serif}
 .cc-row em{color:#7A88A8;font-style:italic;font-size:12px}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
@@ -356,7 +382,31 @@
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
-<div class="video-wrap" data-video-slot="4-12-06-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.12.06</div><div class="video-wrap-title">Fractions → decimals: rename to /10 or /100.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-12-06_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write 1/2 on the board. "Goal: get denominator 10 or 100." Multiply by 5/5: 5/10. "Decimal: 0.5." Then 3/4 → multiply by 25/25 → 75/100 → 0.75. Then 7/10 is already there → 0.7. Frame: <strong>Rename to /10 or /100; read off the decimal.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-welcome --></div></div></div></div>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Fact Families — All Four Operations</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">8 × 7</span><input autocomplete="off" class="fluency-input" data-answer="56" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">54 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="6" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">63 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="7" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × ___ = 48</span><input autocomplete="off" class="fluency-input" data-answer="8" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">___ × 7 = 77</span><input autocomplete="off" class="fluency-input" data-answer="11" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">12 × 6</span><input autocomplete="off" class="fluency-input" data-answer="72" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">64 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="8" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">81 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="9" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × ___ = 42</span><input autocomplete="off" class="fluency-input" data-answer="6" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">___ × 8 = 96</span><input autocomplete="off" class="fluency-input" data-answer="12" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Fact Families — All Four Operations)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
 <p>Hazel shows you the picture. Atlas names the parts (tenths). Felix multiplies and renames. Cora notices that 3/10 and 0.3 say the same thing two ways.</p>
 <div class="bubble-row">
@@ -372,7 +422,6 @@
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Match the Decimal</div><div class="activity-sub">Each fraction has a decimal equivalent.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>Three fractions. Pick the matching decimal.</p>
 <div style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:grid;gap:14px;">
-
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
 <div style="background:#fff;border:1.5px solid #D6F2FB;border-radius:10px;padding:10px;font-family:'Lora',Georgia,serif;font-size:22px;font-weight:900;color:#0E1C42;min-width:120px;text-align:center;"><span class="frac"><span class="num">1</span><span class="den">2</span></span></div>
 <div class="value-card-row" style="margin:0;">
@@ -381,7 +430,6 @@
 <button class="value-card" onclick="pickReadinessRound(this,1,'1.2')" style="min-width:70px;"><div class="big" style="font-size:16px;">1.2</div></button>
 </div>
 </div>
-
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
 <div style="background:#fff;border:1.5px solid #D6F2FB;border-radius:10px;padding:10px;font-family:'Lora',Georgia,serif;font-size:22px;font-weight:900;color:#0E1C42;min-width:120px;text-align:center;"><span class="frac"><span class="num">3</span><span class="den">4</span></span></div>
 <div class="value-card-row" style="margin:0;">
@@ -390,7 +438,6 @@
 <button class="value-card" onclick="pickReadinessRound(this,2,'0.4')" style="min-width:70px;"><div class="big" style="font-size:16px;">0.4</div></button>
 </div>
 </div>
-
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
 <div style="background:#fff;border:1.5px solid #D6F2FB;border-radius:10px;padding:10px;font-family:'Lora',Georgia,serif;font-size:22px;font-weight:900;color:#0E1C42;min-width:120px;text-align:center;"><span class="frac"><span class="num">2</span><span class="den">5</span></span></div>
 <div class="value-card-row" style="margin:0;">
@@ -399,13 +446,12 @@
 <button class="value-card" onclick="pickReadinessRound(this,3,'2.5')" style="min-width:70px;"><div class="big" style="font-size:16px;">2.5</div></button>
 </div>
 </div>
-
 </div>
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Equivalents:</strong> 1/2 × 5/5 = 5/10 = <strong>0.5</strong>. 3/4 × 25/25 = 75/100 = <strong>0.75</strong>. 2/5 × 2/2 = 4/10 = <strong>0.4</strong>. Pick the multiplier that gives denominator 10 or 100.</div>
-<div class="journal-label">✏️ Why multiply by 25/25 for 3/4 but only 2/2 for 2/5? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: fraction→decimal" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-12-06-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.12.06</div><div class="video-wrap-title">Rename to /10 or /100</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-12-06_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "The trick is the right multiplier. Halves need × 5. Fourths need × 25. Fifths need × 2. Then the new top becomes the decimal." Frame: <strong>Rename to /10 or /100; numerator → decimal.</strong></div><div class="video-placeholder-id"><!-- slot: lesson-readiness-feedback --></div></div></div></div>
+<div class="journal-label">✏️ Why multiply by 25/25 for 3/4 but only 2/2 for 2/5? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: fraction→decimal" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">A tricky one.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">📐</span><p>Write <strong>1/5</strong> as a decimal.</p></div>
 <div class="strategy-chip-row">
@@ -416,11 +462,10 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>Step 1.</strong> 1/5 × 2/2 = 2/10. <strong>Step 2.</strong> 2/10 = <strong>0.2</strong>.</p></div>
 <div class="journal-label">✏️ Why does multiplying 1/5 by 2/2 work to make a denominator of 10? <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think: 1/5 to decimal" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think: 1/5 to decimal" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">Now convert fractions yourself.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-12-06-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-12-06 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-12-06-concept --></div></div></div></div>
 <div aria-label="Daily vocabulary flash cards" class="vocab-section">
 <div class="vocab-section-head">
 <div class="vocab-section-icon">📚</div>
@@ -431,78 +476,74 @@
 </div>
 <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
 <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for rename. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🔁</div><div class="fc-word">rename a fraction</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">rename a fraction</div><div class="fc-def">multiply top and bottom by the same number to get an equivalent fraction with the denominator you want.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for multiplier. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">✖️</div><div class="fc-word">the right multiplier</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">multiplier</div><div class="fc-def">to get /10 from /2, multiply by 5. To get /100 from /4, multiply by 25. To get /10 from /5, multiply by 2.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for equivalent. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🟰</div><div class="fc-word">equivalent fraction</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">equivalent fraction</div><div class="fc-def">two fractions that name the same amount. 1/2 = 5/10 = 50/100. Multiply top and bottom by the same number — value stays the same.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for mixed number. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🔢</div><div class="fc-word">mixed → decimal</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">mixed → decimal</div><div class="fc-def">the whole stays as-is. Convert just the fraction part. 2 1/4 = 2 + 0.25 = 2.25.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div aria-label="Vocabulary card for rename. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🔁</div><div class="fc-word">rename a fraction</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">rename a fraction</div><div class="fc-def">multiply top and bottom by the same number to get an equivalent fraction with the denominator you want.</div><div class="fc-tap-back">tap to flip back</div></div>
 </div>
-<div class="video-wrap" data-video-slot="4-12-06-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.12.06</div><div class="video-wrap-title">Fractions to decimals: rename to /10 or /100.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-12-06_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Three renames. (1) 1/2 × 5/5 = 5/10 → 0.5. (2) 3/4 × 25/25 = 75/100 → 0.75. (3) 2/5 × 2/2 = 4/10 → 0.4. Frame: <strong>Pick the multiplier that gets denominator 10 or 100; read the new top as the decimal.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-concept --></div></div></div></div>
+</div>
+<div aria-label="Vocabulary card for multiplier. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">✖️</div><div class="fc-word">the right multiplier</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">multiplier</div><div class="fc-def">to get /10 from /2, multiply by 5. To get /100 from /4, multiply by 25. To get /10 from /5, multiply by 2.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for equivalent. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🟰</div><div class="fc-word">equivalent fraction</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">equivalent fraction</div><div class="fc-def">two fractions that name the same amount. 1/2 = 5/10 = 50/100. Multiply top and bottom by the same number — value stays the same.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for mixed number. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🔢</div><div class="fc-word">mixed → decimal</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">mixed → decimal</div><div class="fc-def">the whole stays as-is. Convert just the fraction part. 2 1/4 = 2 + 0.25 = 2.25.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
 <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Pick how many groups to SPLIT the bar into. Then click groups to TAKE them.</p></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#1A6B8E;">🔄</div><div><div class="activity-title">Fraction-to-Decimal Builder</div><div class="activity-sub">Pick a fraction. Watch it renamed with /10 or /100, then read the decimal.</div></div></div><div class="activity-body"><p>Three rounds. Halves, fourths, fifths.</p>
-
 <div class="fdb-card" data-id="1" style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 1 · Halves and fourths</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Multiply by 5/5 or 25/25.</div>
 <div style="text-align:center;font-size:11px;font-weight:900;color:#1A6B8E;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Pick a fraction</div>
-<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button onclick="fdbPick('1',1,2)" id="fdbBtn-1-1-2" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">1</span><span class="den">2</span></span></button><button onclick="fdbPick('1',1,4)" id="fdbBtn-1-1-4" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">1</span><span class="den">4</span></span></button><button onclick="fdbPick('1',3,4)" id="fdbBtn-1-3-4" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">3</span><span class="den">4</span></span></button></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button id="fdbBtn-1-1-2" onclick="fdbPick('1',1,2)" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">1</span><span class="den">2</span></span></button><button id="fdbBtn-1-1-4" onclick="fdbPick('1',1,4)" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">1</span><span class="den">4</span></span></button><button id="fdbBtn-1-3-4" onclick="fdbPick('1',3,4)" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">3</span><span class="den">4</span></span></button></div>
 <div id="fdbStage-1" style="background:#fff;border:2px solid #D6F2FB;border-radius:10px;padding:14px;margin-bottom:12px;min-height:120px;display:flex;justify-content:center;align-items:center;text-align:center;"></div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;" id="fdbReadout-1">Pick a fraction to begin.</div>
+<div id="fdbReadout-1" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;">Pick a fraction to begin.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="fdbStep('1')" id="fdbStepBtn-1" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Next Step</button>
+<button id="fdbStepBtn-1" onclick="fdbStep('1')" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Next Step</button>
 <button onclick="fdbReset('1')" style="background:#3D8DB0;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
 <div id="fdbStatus-1" style="background:#D6F2FB;border:2px solid #55C8E8;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E2A4A;font-weight:700;line-height:1.5;text-align:center;">Pick a fraction. Press Next Step to find the multiplier, then read the decimal.</div>
 </div>
-
 <div class="fdb-card" data-id="2" style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 2 · Fifths</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Multiply by 2/2 to get /10.</div>
 <div style="text-align:center;font-size:11px;font-weight:900;color:#1A6B8E;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Pick a fraction</div>
-<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button onclick="fdbPick('2',1,5)" id="fdbBtn-2-1-5" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">1</span><span class="den">5</span></span></button><button onclick="fdbPick('2',2,5)" id="fdbBtn-2-2-5" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">2</span><span class="den">5</span></span></button><button onclick="fdbPick('2',4,5)" id="fdbBtn-2-4-5" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">4</span><span class="den">5</span></span></button></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button id="fdbBtn-2-1-5" onclick="fdbPick('2',1,5)" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">1</span><span class="den">5</span></span></button><button id="fdbBtn-2-2-5" onclick="fdbPick('2',2,5)" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">2</span><span class="den">5</span></span></button><button id="fdbBtn-2-4-5" onclick="fdbPick('2',4,5)" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">4</span><span class="den">5</span></span></button></div>
 <div id="fdbStage-2" style="background:#fff;border:2px solid #D6F2FB;border-radius:10px;padding:14px;margin-bottom:12px;min-height:120px;display:flex;justify-content:center;align-items:center;text-align:center;"></div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;" id="fdbReadout-2">Pick a fraction to begin.</div>
+<div id="fdbReadout-2" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;">Pick a fraction to begin.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="fdbStep('2')" id="fdbStepBtn-2" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Next Step</button>
+<button id="fdbStepBtn-2" onclick="fdbStep('2')" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Next Step</button>
 <button onclick="fdbReset('2')" style="background:#3D8DB0;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
 <div id="fdbStatus-2" style="background:#D6F2FB;border:2px solid #55C8E8;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E2A4A;font-weight:700;line-height:1.5;text-align:center;">Pick a fraction. Press Next Step to find the multiplier, then read the decimal.</div>
 </div>
-
 <div class="fdb-card" data-id="3" style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 3 · Already there</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Already over 10 or 100.</div>
 <div style="text-align:center;font-size:11px;font-weight:900;color:#1A6B8E;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Pick a fraction</div>
-<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button onclick="fdbPick('3',3,10)" id="fdbBtn-3-3-10" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">3</span><span class="den">10</span></span></button><button onclick="fdbPick('3',7,10)" id="fdbBtn-3-7-10" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">7</span><span class="den">10</span></span></button><button onclick="fdbPick('3',47,100)" id="fdbBtn-3-47-100" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">47</span><span class="den">100</span></span></button></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button id="fdbBtn-3-3-10" onclick="fdbPick('3',3,10)" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">3</span><span class="den">10</span></span></button><button id="fdbBtn-3-7-10" onclick="fdbPick('3',7,10)" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">7</span><span class="den">10</span></span></button><button id="fdbBtn-3-47-100" onclick="fdbPick('3',47,100)" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">47</span><span class="den">100</span></span></button></div>
 <div id="fdbStage-3" style="background:#fff;border:2px solid #D6F2FB;border-radius:10px;padding:14px;margin-bottom:12px;min-height:120px;display:flex;justify-content:center;align-items:center;text-align:center;"></div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;" id="fdbReadout-3">Pick a fraction to begin.</div>
+<div id="fdbReadout-3" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;">Pick a fraction to begin.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="fdbStep('3')" id="fdbStepBtn-3" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Next Step</button>
+<button id="fdbStepBtn-3" onclick="fdbStep('3')" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Next Step</button>
 <button onclick="fdbReset('3')" style="background:#3D8DB0;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
 <div id="fdbStatus-3" style="background:#D6F2FB;border:2px solid #55C8E8;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E2A4A;font-weight:700;line-height:1.5;text-align:center;">Pick a fraction. Press Next Step to find the multiplier, then read the decimal.</div>
 </div>
-
 <div class="reveal-box" id="learnReveal"><strong>What you saw.</strong> Pick the multiplier that turns the denominator into 10 or 100. Once renamed, the numerator becomes the decimal digits directly.</div>
 </div></div>
 <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 The Multiplier Trick</div><p><strong>Goal:</strong> denominator 10 or 100. Then the numerator IS the decimal digits.</p><p><strong>Multipliers:</strong> /2 needs × 5. /4 needs × 25. /5 needs × 2. /20 needs × 5. /25 needs × 4. /50 needs × 2.</p><p>If the fraction is already /10 or /100, just write the decimal directly.</p></div>
@@ -528,7 +569,7 @@
 <textarea class="journal-box" data-label="Learn — Socratic: 1/3 doesn't convert" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: Imani's mixed number</div><div class="activity-sub">2 1/4 → decimal.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Imani measured a board: <strong>2 and 1/4</strong> feet long. Write the length as a decimal.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew:</p>
-<div class="video-wrap" data-video-slot="4-12-06-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.12.06</div><div class="video-wrap-title">2 1/4 = 2.25</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-12-06_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Hazel: "Whole stays. Just convert 1/4." Atlas: "1/4 × 25/25 = 25/100." Felix: "25/100 = 0.25." Cora: "Put it together: 2 + 0.25 = 2.25 ft." About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-12-06-example --></div></div></div></div>
+
 <div style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.9;font-size:16px;">
 <strong>Step 1.</strong> Whole part: 2 (stays as-is).<br/>
@@ -549,17 +590,16 @@
 <div class="callout callout-info"><span class="callout-icon">🔄</span><p>Three problems. Convert each fraction to a decimal.</p></div>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Method:</strong> Pick the multiplier that turns the denominator into 10 or 100. Then read off the decimal.</p></div>
 <div class="callout callout-tip"><span class="callout-icon">💡</span><p>For mixed numbers, just convert the fraction part. The whole stays the same.</p></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#1A6B8E;">1</div><div><div class="activity-title">Theo: halves and fourths</div><div class="activity-sub">The three to memorize.</div></div><span class="activity-time" style="background:#1A6B8E;">~5 min</span></div><div class="activity-body">
 <div class="fdb-card" data-id="p1" style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Practice: 1/2, 1/4, 3/4</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Each one converts cleanly.</div>
 <div style="text-align:center;font-size:11px;font-weight:900;color:#1A6B8E;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Pick a fraction</div>
-<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button onclick="fdbPick('p1',1,2)" id="fdbBtn-p1-1-2" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">1</span><span class="den">2</span></span></button><button onclick="fdbPick('p1',1,4)" id="fdbBtn-p1-1-4" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">1</span><span class="den">4</span></span></button><button onclick="fdbPick('p1',3,4)" id="fdbBtn-p1-3-4" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">3</span><span class="den">4</span></span></button></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button id="fdbBtn-p1-1-2" onclick="fdbPick('p1',1,2)" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">1</span><span class="den">2</span></span></button><button id="fdbBtn-p1-1-4" onclick="fdbPick('p1',1,4)" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">1</span><span class="den">4</span></span></button><button id="fdbBtn-p1-3-4" onclick="fdbPick('p1',3,4)" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">3</span><span class="den">4</span></span></button></div>
 <div id="fdbStage-p1" style="background:#fff;border:2px solid #D6F2FB;border-radius:10px;padding:14px;margin-bottom:12px;min-height:120px;display:flex;justify-content:center;align-items:center;text-align:center;"></div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;" id="fdbReadout-p1">Pick a fraction to begin.</div>
+<div id="fdbReadout-p1" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;">Pick a fraction to begin.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="fdbStep('p1')" id="fdbStepBtn-p1" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Next Step</button>
+<button id="fdbStepBtn-p1" onclick="fdbStep('p1')" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Next Step</button>
 <button onclick="fdbReset('p1')" style="background:#3D8DB0;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
 <div id="fdbStatus-p1" style="background:#D6F2FB;border:2px solid #55C8E8;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E2A4A;font-weight:700;line-height:1.5;text-align:center;">Pick a fraction. Press Next Step to find the multiplier, then read the decimal.</div>
@@ -567,17 +607,16 @@
 <div class="journal-label">✏️ Match: 1/2 = ___. 1/4 = ___. 3/4 = ___. <span class="saved-dot" id="dot-p1"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 1: three to know" id="journal-p1" oninput="autoSave(this,'dot-p1')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Wren: fifths</div><div class="activity-sub">Multiply by 2/2.</div></div></div><div class="activity-body">
 <div class="fdb-card" data-id="p2" style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Practice: 1/5, 2/5, 4/5</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Each becomes /10 with × 2/2.</div>
 <div style="text-align:center;font-size:11px;font-weight:900;color:#1A6B8E;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Pick a fraction</div>
-<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button onclick="fdbPick('p2',1,5)" id="fdbBtn-p2-1-5" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">1</span><span class="den">5</span></span></button><button onclick="fdbPick('p2',2,5)" id="fdbBtn-p2-2-5" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">2</span><span class="den">5</span></span></button><button onclick="fdbPick('p2',4,5)" id="fdbBtn-p2-4-5" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">4</span><span class="den">5</span></span></button></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button id="fdbBtn-p2-1-5" onclick="fdbPick('p2',1,5)" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">1</span><span class="den">5</span></span></button><button id="fdbBtn-p2-2-5" onclick="fdbPick('p2',2,5)" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">2</span><span class="den">5</span></span></button><button id="fdbBtn-p2-4-5" onclick="fdbPick('p2',4,5)" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:16px;color:#0E1C42;cursor:pointer;"><span class="frac"><span class="num">4</span><span class="den">5</span></span></button></div>
 <div id="fdbStage-p2" style="background:#fff;border:2px solid #D6F2FB;border-radius:10px;padding:14px;margin-bottom:12px;min-height:120px;display:flex;justify-content:center;align-items:center;text-align:center;"></div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;" id="fdbReadout-p2">Pick a fraction to begin.</div>
+<div id="fdbReadout-p2" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;">Pick a fraction to begin.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="fdbStep('p2')" id="fdbStepBtn-p2" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Next Step</button>
+<button id="fdbStepBtn-p2" onclick="fdbStep('p2')" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Next Step</button>
 <button onclick="fdbReset('p2')" style="background:#3D8DB0;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
 <div id="fdbStatus-p2" style="background:#D6F2FB;border:2px solid #55C8E8;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E2A4A;font-weight:700;line-height:1.5;text-align:center;">Pick a fraction. Press Next Step to find the multiplier, then read the decimal.</div>
@@ -585,7 +624,6 @@
 <div class="journal-label">✏️ 1/5 = ___. 2/5 = ___. 4/5 = ___. <span class="saved-dot" id="dot-p2"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 2: fifths" id="journal-p2" oninput="autoSave(this,'dot-p2')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#1A6B8E;">3</div><div><div class="activity-title">Mixed numbers — Maya's recipe</div><div class="activity-sub">Whole + fraction = decimal.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🪜</span><p><strong>Method:</strong> Whole stays. Convert the fraction part. Combine.</p></div>
 <div style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;color:#0E1C42;font-weight:700;margin-bottom:8px;">Maya's recipe needs these amounts. Write each as a decimal.</div>
@@ -597,18 +635,13 @@
 <div class="journal-label">✏️ Show your work for one of them. <span class="saved-dot" id="dot-p3"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 3: Maya recipe" id="journal-p3" oninput="autoSave(this,'dot-p3')" placeholder="" style="min-height:80px;"></textarea>
 </div></div>
-
 <div class="tab-next-wrap"><p class="tab-transition-voice">Three conversions done. Quick check time.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Two quick checks. Your full practice is in the Independent Practice PDF.</div></div></div><div class="activity-body"><p>If you got these, you're ready for the Independent Practice.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> How many tenths? Did I write BOTH the fraction and the decimal correctly?</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Quick check — fraction → decimal.</strong> Write 3/5 as a decimal.</p><div class="journal-label">✏️ 3/5 × ___ /___ = ___/10 = ___ <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-
 <div class="q-block"><p class="q-text"><span class="q-num">2</span><strong>Quick check — mixed number.</strong> Write 2 and 3/4 as a decimal.</p><div class="journal-label">✏️ Whole = ___. 3/4 = ___. Combined = ___ <span class="saved-dot" id="dot-a2"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 2" id="journal-a2" oninput="autoSave(this,'dot-a2')" placeholder=""></textarea></div>
-
-
-
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed both quick-check problems above.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I wrote each amount as a fraction AND as a decimal.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I can read 0.3 aloud as "three tenths" or "zero point three."</span></div></div></div>
 </div>
@@ -1313,7 +1346,74 @@ if(typeof window !== 'undefined'){
 
 
 </script>
-
-
 </div>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Fact Families — All Four Operations";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
+</script>
 </body></html>

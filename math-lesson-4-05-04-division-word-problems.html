@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Optima Academy Online — Grade 4 Math Lesson 4.05.04</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
@@ -306,25 +307,51 @@
 .bubble-text{font-size:14.5px;color:#0E1C42;line-height:1.5;font-weight:600;font-family:'Lora',Georgia,serif;font-style:italic}
 @media(max-width:620px){.bubble{flex:1 1 100%;max-width:100%}}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
 <div class="progress-wrap"><span class="progress-label">📐 Lesson Progress</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><span class="progress-pct" id="progressPct">0%</span></div>
 <div class="header">
-  <div class="header-brand">
-    <div class="header-logo">
-      <img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" />
-    </div>
-    <div>
-      <div class="header-org">Optima Academy Online</div>
-      <div class="header-sub">An Education Experience Company</div>
-    </div>
-  </div>
-  <div class="header-title"><em>Division Word Problems</em> — choose the operation, interpret the remainder</div>
-  <div class="header-badge">
-    <span class="header-badge-icon">🦉</span>
-    <span class="header-badge-text">Lesson 4.05.04</span>
-  </div>
+<div class="header-brand">
+<div class="header-logo">
+<img alt="Optima Academy" src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png"/>
+</div>
+<div>
+<div class="header-org">Optima Academy Online</div>
+<div class="header-sub">An Education Experience Company</div>
+</div>
+</div>
+<div class="header-title"><em>Division Word Problems</em> — choose the operation, interpret the remainder</div>
+<div class="header-badge">
+<span class="header-badge-icon">🦉</span>
+<span class="header-badge-text">Lesson 4.05.04</span>
+</div>
 </div>
 <div class="quote-strip"><div class="quote-strip-text">"Real stories. Pick the operation. Draw a bar. Do the math. Interpret the remainder — sometimes ignore it, sometimes round UP."</div><div class="quote-strip-attr">Division Estimation Big Idea</div></div>
 <div class="info-strip"><div class="info-cell"><div class="info-icon" style="background:#F0E8FF;">🧭</div><div><div class="info-label">Unit</div><div class="info-value">Unit 5</div><div class="info-detail">Division</div></div></div><div class="info-cell"><div class="info-icon" style="background:#E3F8ED;">📅</div><div><div class="info-label">Lesson</div><div class="info-value">4.05.04</div><div class="info-detail">U5 Fluency</div></div></div><div class="info-cell"><div class="info-icon" style="background:#EAF0FF;">📐</div><div><div class="info-label">Standard</div><div class="info-value">MA.4.NSO.2.3</div><div class="info-detail">Divide up to 4-digit by 1-digit</div></div></div><div class="info-cell"><div class="info-icon" style="background:#FFF8E6;">🔢</div><div><div class="info-label">Focus</div><div class="info-value">Bar models · remainders</div><div class="info-detail">MTR.5.1 · MTR.7.1</div></div></div></div>
@@ -332,22 +359,56 @@
 <div class="intro-2col"><div class="intro-card theme-question"><div class="intro-card-head"><div class="intro-card-head-icon">❓</div><div><div class="intro-card-head-label">Essential Question</div><div class="intro-card-head-title">If 2,560 eggs go into cartons of 6, do you need 426 cartons or 427? Why?</div></div></div><div class="intro-card-body"><p>2,560 ÷ 6 = 426 r 4. There are 426 FULL cartons. But the 4 leftover eggs still need a carton. So if you must ship every egg, you need 427 cartons.</p><p>The STORY decides whether to round up, ignore the remainder, or keep it as a remainder. Read carefully every time.</p></div></div><div class="intro-card theme-objectives"><div class="intro-card-head"><div class="intro-card-head-icon">🎯</div><div><div class="intro-card-head-label">Today's Objectives</div><div class="intro-card-head-title">You will…</div></div></div><div class="intro-card-body"><div class="obj-line"><span class="obj-icon">📏</span><span><strong>Draw a bar model</strong> for a division word problem (equal parts or how many groups).</span></div><div class="obj-line"><span class="obj-icon">📐</span><span><strong>Choose the right operation</strong> by reading the story — multiply, divide, or combine.</span></div><div class="obj-line"><span class="obj-icon">🎯</span><span><strong>Interpret the remainder</strong> in context — ignore, round up, or keep it.</span></div></div></div></div>
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
-
 <div class="tab-panel active" id="tab-warmup">
-  <div class="video-wrap" data-video-slot="4-05-04-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.05.04</div><div class="video-wrap-title">Bar models and remainders in real stories</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-05-04_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Tell two stories with the SAME division but DIFFERENT interpretations. <strong>Story 1:</strong> "A school packs 2,560 eggs into cartons of 6. How many FULL cartons can they fill?" Compute: 2,560 ÷ 6 = 426 r 4. Answer: 426 full cartons. The remainder is ignored — the question asked for FULL cartons only. <strong>Story 2:</strong> "A school must ship ALL 2,560 eggs in cartons of 6. How many cartons are needed?" Same division: 426 r 4. But now: those 4 leftover eggs still need a carton. Answer: 427 cartons. The remainder forces ROUND UP. <strong>Story 3:</strong> "A school packs 2,560 eggs into cartons of 6. How many eggs are LEFT OVER if every carton must be full?" Now the remainder IS the answer: 4 eggs left over. Pause. "Same division, three different answers depending on the STORY." Frame today: "Real division word problems require you to READ the story, DRAW the bar, CHOOSE the operation, COMPUTE, then INTERPRET the remainder in context. The remainder is never lost — it just shows up differently in each story." Tone: synthesizing, integrative — pulling Unit 5 together. (~2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-02-welcome --></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
-    <p>Unit 5 capstone. Every Math Crew member shows up — bar modeler, operation chooser, long divider, remainder interpreter.</p>
-    <div class="bubble-row">
-      <div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — names the operation</div><div class="bubble-text">"I read the story TWICE. First: what's happening? Second: am I splitting EQUALLY or finding HOW MANY GROUPS? That tells me to divide."</div></div></div>
-      <div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — does the division</div><div class="bubble-text">"Once Atlas names the operation, I compute. Mental tools for friendly dividends, long division for everything else."</div></div></div>
-    </div>
-    <div class="bubble-row">
-      <div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — draws the bar model</div><div class="bubble-text">"My bar model: one bar split into equal parts. If parts = ?, I divide to find each part. If groups = ?, I divide the total by the part size."</div></div></div>
-      <div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — divides to check</div><div class="bubble-text">"To check if a number IS a multiple of 4, I divide. 28 ÷ 4 = 7 with no remainder → yes, multiple. 30 ÷ 4 = 7 r 2 → no, not a multiple."</div></div></div>
-    </div>
-    <div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>Cora's rule: <em>the remainder isn't the answer — it's information.</em> The story tells you what to do with it.</p></div>
-  </div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Interpret the Remainder</div><div class="activity-sub">For each mini-story, decide what to do with the remainder of the division.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>Read each story carefully. The remainder behaves differently each time.</p>
+<div class="fluency-box" data-timed="true">
+<div class="fluency-head">
+<div class="fluency-head-icon">⏳</div>
+<div><div class="fluency-head-label">TIMED FLUENCY CHECK</div><div class="fluency-head-title">Mixed Multiplication &amp; Division — One-Minute Check</div></div>
+<div class="fluency-timer-ui"><span class="fluency-timer-display" id="fluencyTimerDisplay">60s</span><button class="fluency-start-btn" id="fluencyStartBtn" onclick="fluencyStart()">Start 1-Minute Check</button></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Unit check — Quarter 2 timed fluency. Click Start, then answer as many as you can in 60 seconds. Answers lock in automatically when time is up.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">8 × 7</span><input autocomplete="off" class="fluency-input" data-answer="56" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 6</span><input autocomplete="off" class="fluency-input" data-answer="54" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 7</span><input autocomplete="off" class="fluency-input" data-answer="49" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 9</span><input autocomplete="off" class="fluency-input" data-answer="54" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">11 × 6</span><input autocomplete="off" class="fluency-input" data-answer="66" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">12 × 7</span><input autocomplete="off" class="fluency-input" data-answer="84" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 9</span><input autocomplete="off" class="fluency-input" data-answer="72" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 9</span><input autocomplete="off" class="fluency-input" data-answer="81" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 8</span><input autocomplete="off" class="fluency-input" data-answer="56" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 7</span><input autocomplete="off" class="fluency-input" data-answer="42" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">63 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">56 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">72 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">81 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">48 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="6" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">96 ÷ 12</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">77 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="11" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">66 ÷ 11</span><input autocomplete="off" class="fluency-input" data-answer="6" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">88 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="11" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">54 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="6" disabled="" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" disabled="" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Mixed Multiplication &amp; Division — One-Minute Check)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
+<p>Unit 5 capstone. Every Math Crew member shows up — bar modeler, operation chooser, long divider, remainder interpreter.</p>
+<div class="bubble-row">
+<div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — names the operation</div><div class="bubble-text">"I read the story TWICE. First: what's happening? Second: am I splitting EQUALLY or finding HOW MANY GROUPS? That tells me to divide."</div></div></div>
+<div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — does the division</div><div class="bubble-text">"Once Atlas names the operation, I compute. Mental tools for friendly dividends, long division for everything else."</div></div></div>
+</div>
+<div class="bubble-row">
+<div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — draws the bar model</div><div class="bubble-text">"My bar model: one bar split into equal parts. If parts = ?, I divide to find each part. If groups = ?, I divide the total by the part size."</div></div></div>
+<div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — divides to check</div><div class="bubble-text">"To check if a number IS a multiple of 4, I divide. 28 ÷ 4 = 7 with no remainder → yes, multiple. 30 ÷ 4 = 7 r 2 → no, not a multiple."</div></div></div>
+</div>
+<div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>Cora's rule: <em>the remainder isn't the answer — it's information.</em> The story tells you what to do with it.</p></div>
+</div></div>
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Interpret the Remainder</div><div class="activity-sub">For each mini-story, decide what to do with the remainder of the division.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>Read each story carefully. The remainder behaves differently each time.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:grid;gap:14px;">
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
@@ -378,16 +439,16 @@
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Answers:</strong> Three remainders, three different jobs. <strong>Vans:</strong> 50 ÷ 12 = 4 r 2 — but 2 students need a van too, so round UP to <strong>5 vans</strong>. <strong>Cookies:</strong> 73 ÷ 8 = 9 r 1 — only FULL bags counted, so <strong>9 bags</strong> (ignore the 1 extra cookie). <strong>Pencils:</strong> 45 ÷ 6 = 7 r 3 — the question asks for the LEFTOVER, so the answer IS <strong>3</strong>.</div>
-<div class="journal-label">✏️ Pick one of the three stories above. Explain why the remainder behaves the way it does in that story. Use the actual numbers. <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: Three remainders, three different jobs" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-05-04-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.05.04</div><div class="video-wrap-title">The remainder's job depends on the story</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-05-04_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk each. <strong>1,948 × 3.</strong> "1,948 rounds to 2,000 (because 948 is more than 500). 2,000 × 3 = <strong>6,000</strong>. Used the ×10 pattern: 2 × 3 = 6, with three trailing zeros." <strong>412 × 5.</strong> "412 rounds to 400 (because 12 is less than 50). 400 × 5 = <strong>2,000</strong>." <strong>8,795 × 6.</strong> "8,795 rounds to 9,000. 9,000 × 6 = <strong>54,000</strong> (9 × 6 = 54, then three trailing zeros)." Pause. "Notice for the first one — 1,948 rounded UP to 2,000, so the estimate (6,000) will be slightly LARGER than the exact product. For the second — 412 rounded DOWN to 400, so the estimate (2,000) will be slightly SMALLER than the exact. Round-up = high estimate. Round-down = low estimate." Frame: "Estimating first sets a target. When you compute the exact answer, it should land near the estimate. Far off → carry mistake somewhere." (~1-2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-02-readiness-feedback --></div></div></div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
+<div class="journal-label">✏️ Pick one of the three stories above. Explain why the remainder behaves the way it does in that story. Use the actual numbers. <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: Three remainders, three different jobs" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">🚣</span><p>A school packs <strong>2,560 eggs</strong> into cartons of <strong>6 eggs</strong> each. Compute 2,560 ÷ 6, then answer THREE different questions: (a) how many full cartons? (b) how many eggs left over? (c) if every egg MUST be shipped, how many cartons are needed?</p></div>
 <div class="number-talk-visual">
 <div class="number-talk-prompt">2,560 ÷ 6 = 426 r 4. (a) Full cartons = 426 (ignore remainder). (b) Leftover eggs = 4 (the remainder IS the answer). (c) Total cartons needed = 427 (round up — those 4 eggs still need a carton).</div>
 <div class="visual-equation" style="font-size:22px;letter-spacing:1px;">Same division, three different jobs for the remainder.</div>
 <div class="notice-wonder-grid">
-<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" id="journal-notice" data-label="Warm-Up — Notice: What I notice about the egg-carton story" placeholder="" oninput="autoSave(this,'dot-notice')" style="min-height:60px;"></textarea></div>
-<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" id="journal-wonder" data-label="Warm-Up — Wonder: What I wonder about remainder interpretations" placeholder="" oninput="autoSave(this,'dot-wonder')" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" data-label="Warm-Up — Notice: What I notice about the egg-carton story" id="journal-notice" oninput="autoSave(this,'dot-notice')" placeholder="" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" data-label="Warm-Up — Wonder: What I wonder about remainder interpretations" id="journal-wonder" oninput="autoSave(this,'dot-wonder')" placeholder="" style="min-height:60px;"></textarea></div>
 </div>
 </div>
 <p><strong>Predict the carton count (every egg shipped):</strong> 2,560 ÷ 6 = 426 r 4. How many cartons are needed if NO egg can be left behind?</p>
@@ -399,50 +460,49 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>Before you predict, ask yourself:</strong> 426 full cartons + 1 extra for the 4 leftover eggs = 427 cartons total.</p></div>
 <div class="journal-label">✏️ My answer + reasoning: How many cartons are needed if all 2,560 eggs MUST ship? Why round up? <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think Prompt: Egg cartons with round-up remainder" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think Prompt: Egg cartons with round-up remainder" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">You decided when to round up. Now let's master the full word-problem method: read, draw, choose, compute, interpret.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
-  <div class="vocab-section" aria-label="Daily vocabulary flash cards">
-  <div class="vocab-section-head">
-    <div class="vocab-section-icon">📚</div>
-    <div>
-      <div class="vocab-section-label">Daily Vocabulary</div>
-      <div class="vocab-section-title">Tap to Build Today’s Math Language</div>
-    </div>
-  </div>
-  <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
-  <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for dividend. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">📥</div><div class="fc-word">dividend</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">dividend</div><div class="fc-def">the number being divided. In 743 ÷ 3 = 247 r 2, the 743 is the dividend.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for divisor. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">📤</div><div class="fc-word">divisor</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">divisor</div><div class="fc-def">the number you divide BY. In 743 ÷ 3 = 247 r 2, the 3 is the divisor.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for quotient. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🟰</div><div class="fc-word">quotient</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">quotient</div><div class="fc-def">the result of dividing. In 743 ÷ 3 = 247 r 2, the 247 is the quotient. (The 2 is the remainder — what's left over.)</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for remainder. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🔀</div><div class="fc-word">remainder</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">remainder</div><div class="fc-def">what's left over after dividing. 743 ÷ 3 = 247 r 2 because 247 × 3 = 741, and 743 − 741 = 2.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-05-04-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-05-04 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-05-04-concept --></div></div></div></div>
+<div aria-label="Daily vocabulary flash cards" class="vocab-section">
+<div class="vocab-section-head">
+<div class="vocab-section-icon">📚</div>
+<div>
+<div class="vocab-section-label">Daily Vocabulary</div>
+<div class="vocab-section-title">Tap to Build Today’s Math Language</div>
 </div>
-<div class="video-wrap" data-video-slot="4-05-04-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.05.04</div><div class="video-wrap-title">The five-step word-problem method</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-05-04_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk one story all the way through the five-step method. <strong>Story:</strong> "A bakery has 1,248 cupcakes. They want to put them into boxes of 8. How many full boxes can they make, and how many cupcakes are left over?" <strong>Step 1 — READ.</strong> Read twice. "1,248 total cupcakes. Box size = 8. We want HOW MANY GROUPS of 8 fit into 1,248 AND how many are left." <strong>Step 2 — DRAW.</strong> One bar = 1,248. Split into equal pieces of 8. The number of pieces is the quotient; whatever's left is the remainder. <strong>Step 3 — CHOOSE OPERATION.</strong> "How many groups of 8?" = DIVISION. 1,248 ÷ 8. <strong>Step 4 — COMPUTE.</strong> Lead-digit: 1 &lt; 8, so quotient has 3 digits. Estimate: 1,600 ÷ 8 = 200. Long division: 12 ÷ 8 = 1 r 4. Bring down 4 → 44 ÷ 8 = 5 r 4. Bring down 8 → 48 ÷ 8 = 6 r 0. Final: <strong>156</strong>. <strong>Step 5 — INTERPRET.</strong> The remainder is 0 — 1,248 divides cleanly. 156 FULL boxes, 0 left over. Now flip the story: "A bakery has 1,250 cupcakes (2 more) and packs in boxes of 8. How many full boxes and how many left?" Compute 1,250 ÷ 8 = 156 r 2. INTERPRET: 156 full boxes, 2 cupcakes left over. Frame: "Read, Draw, Choose, Compute, Interpret. Five steps. EVERY division word problem." Tone: methodical synthesis. (~2-3 min)</div><div class="video-placeholder-id"><!-- slot: 4-05-04-concept --></div></div></div></div>
-  <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Three stories below. For each, choose the operation. (One needs DIVISION + ROUND UP. One needs DIVISION + IGNORE remainder. One needs MULTIPLICATION.)</p></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🎯</div><div><div class="activity-title">Choose the Operation</div><div class="activity-sub">Three stories. Decide the operation and how to handle the remainder.</div></div></div><div class="activity-body"><p>For each story, pick the operation/remainder treatment that fits.</p>
+</div>
+<p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
+<div class="vocab-grid">
+<div aria-label="Vocabulary card for dividend. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">📥</div><div class="fc-word">dividend</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">dividend</div><div class="fc-def">the number being divided. In 743 ÷ 3 = 247 r 2, the 743 is the dividend.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for divisor. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">📤</div><div class="fc-word">divisor</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">divisor</div><div class="fc-def">the number you divide BY. In 743 ÷ 3 = 247 r 2, the 3 is the divisor.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for quotient. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🟰</div><div class="fc-word">quotient</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">quotient</div><div class="fc-def">the result of dividing. In 743 ÷ 3 = 247 r 2, the 247 is the quotient. (The 2 is the remainder — what's left over.)</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for remainder. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🔀</div><div class="fc-word">remainder</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">remainder</div><div class="fc-def">what's left over after dividing. 743 ÷ 3 = 247 r 2 because 247 × 3 = 741, and 743 − 741 = 2.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Three stories below. For each, choose the operation. (One needs DIVISION + ROUND UP. One needs DIVISION + IGNORE remainder. One needs MULTIPLICATION.)</p></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🎯</div><div><div class="activity-title">Choose the Operation</div><div class="activity-sub">Three stories. Decide the operation and how to handle the remainder.</div></div></div><div class="activity-body"><p>For each story, pick the operation/remainder treatment that fits.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:18px 14px;margin:12px 0;">
 <div style="margin-bottom:18px;">
 <div style="font-family:'Lora',Georgia,serif;font-size:15px;font-weight:700;color:#0E1C42;text-align:center;margin-bottom:8px;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.6;">Story 1: A teacher has <strong>147 students</strong> for a field trip. Each bus holds <strong>30 students</strong>. <strong>How many buses are needed?</strong></div>
@@ -472,8 +532,8 @@
 </div>
 <div class="reveal-box" id="learnReveal"><strong>Operations:</strong> Story 1 — <strong>Divide, round UP</strong>: 147 ÷ 30 = 4 r 27. The 27 leftover students still need a bus → 5 buses. Story 2 — <strong>Multiply</strong>: 235 × $12 = $2,820. (Total cost, not division.) Story 3 — <strong>Divide, ignore remainder</strong>: 500 ÷ 9 = 55 r 5. 55 FULL boxes (5 leftover candies don't make a full box).</div>
 </div></div>
-  <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 The Five-Step Word-Problem Method</div><p><strong>For ANY word problem:</strong></p><p>1. <strong>READ</strong> the story twice. What's happening? What's the question asking?</p><p>2. <strong>DRAW</strong> a bar model. Equal parts? Use one bar split into parts. Compare? Two bars stacked.</p><p>3. <strong>CHOOSE OPERATION</strong>: equal sharing or how-many-groups → DIVIDE. Combining identical groups → MULTIPLY. Combining different amounts → ADD. Finding a difference → SUBTRACT.</p><p>4. <strong>COMPUTE</strong>: estimate first, then use the right algorithm (mental, long division, etc.).</p><p>5. <strong>INTERPRET</strong>: in division, the REMAINDER's job depends on the story — round UP (still need it), IGNORE (only full groups), or KEEP IT (it IS the answer).</p></div>
-  <div class="activity bl-violet" style="margin-top:16px;"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">📊</div><div><div class="activity-title">Picture It: Bar Model for Division</div><div class="activity-sub">Equal sharing vs. how many groups.</div></div></div><div class="activity-body"><p>Hazel draws bar models two different ways for division.</p>
+<div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 The Five-Step Word-Problem Method</div><p><strong>For ANY word problem:</strong></p><p>1. <strong>READ</strong> the story twice. What's happening? What's the question asking?</p><p>2. <strong>DRAW</strong> a bar model. Equal parts? Use one bar split into parts. Compare? Two bars stacked.</p><p>3. <strong>CHOOSE OPERATION</strong>: equal sharing or how-many-groups → DIVIDE. Combining identical groups → MULTIPLY. Combining different amounts → ADD. Finding a difference → SUBTRACT.</p><p>4. <strong>COMPUTE</strong>: estimate first, then use the right algorithm (mental, long division, etc.).</p><p>5. <strong>INTERPRET</strong>: in division, the REMAINDER's job depends on the story — round UP (still need it), IGNORE (only full groups), or KEEP IT (it IS the answer).</p></div>
+<div class="activity bl-violet" style="margin-top:16px;"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">📊</div><div><div class="activity-title">Picture It: Bar Model for Division</div><div class="activity-sub">Equal sharing vs. how many groups.</div></div></div><div class="activity-body"><p>Hazel draws bar models two different ways for division.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:18px;margin:12px 0;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.7;">
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;text-align:center;">
 <div style="background:#F0E8FF;border:2px solid #D8CCF0;border-radius:12px;padding:14px;">
@@ -495,10 +555,10 @@
 </div>
 <div class="socratic-box"><div class="socratic-label">🧠 Socratic — Think Like a Mathematician</div><p class="socratic-q">For "24 ÷ 6 = 4", explain what the "4" MEANS in each of the two bar models. Why is it the same number but a different real-world thing?</p>
 <div class="journal-label">✏️ My thinking <span class="saved-dot" id="dot-soc"></span></div>
-<textarea class="journal-box" id="journal-soc" data-label="Learn — Socratic: What 24÷6=4 means in two different stories" placeholder="" oninput="autoSave(this,'dot-soc')"></textarea></div>
+<textarea class="journal-box" data-label="Learn — Socratic: What 24÷6=4 means in two different stories" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: 2,560 Eggs Story (Three Questions)</div><div class="activity-sub">Same division, three different remainder interpretations.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>A school packs <strong>2,560 eggs</strong> into cartons that hold <strong>6 eggs</strong> each. Answer three questions: (a) How many FULL cartons can they make? (b) How many eggs are LEFT OVER? (c) If every egg must be shipped (no eggs left behind), how many cartons are needed?</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
-<div class="video-wrap" data-video-slot="4-05-04-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.05.04</div><div class="video-wrap-title">One division, three remainder jobs</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-05-04_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Atlas reads. Cora estimates: 2,400 ÷ 6 = 400 (divisor-friendly). Felix does long division. 25 ÷ 6 = 4 r 1. 16 ÷ 6 = 2 r 4. 40 ÷ 6 = 6 r 4. Result: 2,560 ÷ 6 = <strong>426 r 4</strong>. Now Hazel walks the three remainder jobs. <strong>(a)</strong> "How many FULL cartons?" — IGNORE the remainder. Answer: <strong>426</strong>. <strong>(b)</strong> "How many eggs LEFT OVER?" — the remainder IS the answer. <strong>4</strong>. <strong>(c)</strong> "If every egg must ship?" — those 4 leftover eggs still need a carton. ROUND UP. Answer: <strong>427</strong>. Cora's check: 426 × 6 + 4 = 2,556 + 4 = 2,560. ✓ Frame: "One division. Three answers depending on the story. The remainder isn't lost — it just shows up in different ways. Read carefully every time." Tone: integrative — Unit 5 capstone. (~2 min)</div><div class="video-placeholder-id"><!-- slot: 4-05-04-example --></div></div></div></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: 2,560 Eggs Story (Three Questions)</div><div class="activity-sub">Same division, three different remainder interpretations.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>A school packs <strong>2,560 eggs</strong> into cartons that hold <strong>6 eggs</strong> each. Answer three questions: (a) How many FULL cartons can they make? (b) How many eggs are LEFT OVER? (c) If every egg must be shipped (no eggs left behind), how many cartons are needed?</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
+
 <div class="key-concept" style="margin-top:14px;"><div class="key-concept-label">⚖️ The Remainder's Three Jobs</div>
 <div style="background:#F0E8FF;border:2px solid #D8CCF0;border-radius:12px;padding:14px;margin-top:8px;font-family:'Lora',Georgia,serif;font-size:15px;color:#0E1C42;line-height:1.8;">
 <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;text-align:center;">
@@ -524,23 +584,22 @@
 </div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">Five steps. Three remainder jobs. Unit 5 capstone toolkit. Now practice.</p><button class="tab-next-btn" onclick="switchTab('practice')">Continue to 🧮 Practice →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-practice">
-  <div class="callout callout-info"><span class="callout-icon">🧭</span><p>Three word problems. Read, draw, choose, compute, interpret.</p></div>
-  <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> What's the bar shape? What's the operation? What's my answer — and does the remainder need to be ignored, kept, or rounded up?</p></div>
-  <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Re-read the question. The question word ("how many full?" vs "how many left over?" vs "how many do you need?") tells you the remainder's job.</p></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">Eggs in cartons (round UP)</div><div class="activity-sub">2,560 eggs, cartons of 6, every egg must ship.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>A school packs <strong>2,560 eggs</strong> into cartons of <strong>6</strong>. Every egg must ship. How many cartons?</p>
+<div class="callout callout-info"><span class="callout-icon">🧭</span><p>Three word problems. Read, draw, choose, compute, interpret.</p></div>
+<div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> What's the bar shape? What's the operation? What's my answer — and does the remainder need to be ignored, kept, or rounded up?</p></div>
+<div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Re-read the question. The question word ("how many full?" vs "how many left over?" vs "how many do you need?") tells you the remainder's job.</p></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">Eggs in cartons (round UP)</div><div class="activity-sub">2,560 eggs, cartons of 6, every egg must ship.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>A school packs <strong>2,560 eggs</strong> into cartons of <strong>6</strong>. Every egg must ship. How many cartons?</p>
 <div class="value-card-row" style="justify-content:center;">
 <button class="value-card" onclick="pickP1Round(this,'427')" style="min-width:90px;"><div class="big">427</div></button>
 <button class="value-card" onclick="pickP1Round(this,'426')" style="min-width:90px;"><div class="big">426</div></button>
 <button class="value-card" onclick="pickP1Round(this,'430')" style="min-width:90px;"><div class="big">430</div></button>
 </div>
 <div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Exactly.</strong> 2,560 ÷ 6 = 426 r 4. 426 full cartons + 1 extra carton for the 4 leftover eggs = <strong>427 cartons</strong>. Round UP because every egg must ship.
-<div class="video-wrap" data-video-slot="4-05-04-practice-1-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 1</div><div class="video-wrap-title">Round up when the remainder still needs a group</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-05-04_Practice-1_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "Round up: the remainder is 4 eggs. They still need a carton. So 426 + 1 = 427 cartons total." (~45 sec)</div><div class="video-placeholder-id"><!-- slot: 4-05-04-practice-1-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Look again.</strong> 2,560 ÷ 6 = 426 r 4. The 4 leftover eggs still need a carton. Round UP to one more.
 <div class="hint-callout">426 full cartons hold 2,556 eggs. 4 eggs left. Those 4 need an extra carton. Answer: 427.</div>
-<div class="video-wrap" data-video-slot="4-05-04-practice-1-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 1</div><div class="video-wrap-title">"Every one must ship" = round up</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-05-04_Practice-1_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the round-up rule. (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-05-04-practice-1-retry --></div></div></div></div></div></div></div>
-  <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three Stories — Three Remainder Jobs</div><div class="activity-sub">Read each carefully. Same division pattern, different jobs.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Three stories, same dividend (847) and divisor (5). But the question word changes what the remainder does.</p></div>
+</div></div></div>
+<div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three Stories — Three Remainder Jobs</div><div class="activity-sub">Read each carefully. Same division pattern, different jobs.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Three stories, same dividend (847) and divisor (5). But the question word changes what the remainder does.</p></div>
 <p>For each, pick the final answer.</p>
 <div style="display:grid;gap:14px;margin:14px 0;">
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:14px;">
@@ -569,15 +628,15 @@
 </div>
 </div>
 <div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ Three for three.</strong> 847 ÷ 5 = 169 r 2. 2a — <strong>169</strong> full boxes (ignore the 2). 2b — <strong>170</strong> boxes total (round up — last box partial). 2c — <strong>2</strong> muffins left over (remainder IS the answer).
-<div class="video-wrap" data-video-slot="4-05-04-practice-2-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 2</div><div class="video-wrap-title">One division, three remainder jobs</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-05-04_Practice-2_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Recap. Same division, three different jobs. The QUESTION decides. (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-05-04-practice-2-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Look again.</strong> 847 ÷ 5 = 169 r 2. Now read each question carefully — what's the question word asking for?
 <div class="hint-callout">2a "FULL boxes" → ignore remainder → 169. 2b "boxes total" → round up → 170. 2c "left over" → remainder IS the answer → 2.</div>
-<div class="video-wrap" data-video-slot="4-05-04-practice-2-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 2</div><div class="video-wrap-title">Read the question for the remainder's job</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-05-04_Practice-2_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the three remainder jobs with the muffin story. (~1-2 min)</div><div class="video-placeholder-id"><!-- slot: 4-05-04-practice-2-retry --></div></div></div></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Jana's Mistake — Wrong Remainder Job</div><div class="activity-sub">Jana ignored a remainder that should have been a round-up.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Jana computed the division correctly but picked the wrong remainder treatment.</p></div>
+</div></div></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Jana's Mistake — Wrong Remainder Job</div><div class="activity-sub">Jana ignored a remainder that should have been a round-up.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Jana computed the division correctly but picked the wrong remainder treatment.</p></div>
 <div class="task-box"><div class="task-label">Jana's Work</div>
 <p>Jana solved this problem: <strong>"A school needs to take 234 students on a field trip. Each bus holds 50 students. How many buses are needed?"</strong></p>
 <div style="background:#FFF8E6;border:2px solid #F5C518;border-radius:12px;padding:14px 16px;font-family:'Lora',Georgia,serif;font-size:17px;line-height:1.8;color:#5A4A3A;margin:10px 0;">
-"234 ÷ 50 = 4 r 34.<br>
+"234 ÷ 50 = 4 r 34.<br/>
 Answer: <strong>4 buses</strong>."
 </div>
 <p><strong>Your task:</strong> Tap every statement below that is true about Jana's reasoning.</p>
@@ -589,27 +648,23 @@ Answer: <strong>4 buses</strong>."
 </div>
 <button class="purple-btn" onclick="checkErrorAnalysis()">✓ Check My Picks</button>
 <div class="journal-label">✏️ Help Jana. Write a rule: when do you ROUND UP the quotient after a division? <span class="saved-dot" id="dot-ea"></span></div>
-<textarea class="journal-box" id="journal-ea" data-label="Practice 3 — Error Analysis: When to round up in word problems" placeholder="" oninput="autoSave(this,'dot-ea')"></textarea>
-<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Jana ignored a remainder that should have caused a round-up. 34 leftover students can't be left behind — they need a bus too. Correct answer: <strong>5 buses</strong>. Rule: when the question asks "how many do you NEED?" or "how many to FIT EVERYTHING?", round up.<div class="video-wrap" data-video-slot="4-05-04-practice-3-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 3</div><div class="video-wrap-title">"Needed" = round up</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-05-04_Practice-3_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "Re-read the question. If the leftover thing STILL needs a container — round up. People, eggs, books — they don't disappear." (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-05-04-practice-3-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">234 ÷ 50 = 4 r 34. Jana wrote 4 buses — but 34 students still need to go. They need an extra bus. Round up to 5.</div><div class="video-wrap" data-video-slot="4-05-04-practice-3-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 3</div><div class="video-wrap-title">Don't leave leftover people on the curb</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-05-04_Practice-3_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the round-up rule. (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-05-04-practice-3-retry --></div></div></div></div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
+<textarea class="journal-box" data-label="Practice 3 — Error Analysis: When to round up in word problems" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
+<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Jana ignored a remainder that should have caused a round-up. 34 leftover students can't be left behind — they need a bus too. Correct answer: <strong>5 buses</strong>. Rule: when the question asks "how many do you NEED?" or "how many to FIT EVERYTHING?", round up.</div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">234 ÷ 50 = 4 r 34. Jana wrote 4 buses — but 34 students still need to go. They need an extra bus. Round up to 5.</div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">Three remainder jobs mastered. Unit 5 capstone toolkit complete. Now show what you know.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-assignment">
-  <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Unit 5 capstone. Real word problems, every remainder job.</div></div></div><div class="activity-body"><p>Five-step method on every problem: READ → DRAW → CHOOSE → COMPUTE → INTERPRET.</p>
+<div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Unit 5 capstone. Real word problems, every remainder job.</div></div></div><div class="activity-body"><p>Five-step method on every problem: READ → DRAW → CHOOSE → COMPUTE → INTERPRET.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> What's the bar shape? What's the operation? What's the remainder's job — IGNORE, KEEP, or ROUND UP?</p></div>
-<div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>The egg-carton story.</strong> A school packs <strong>2,560 eggs</strong> into cartons of <strong>6</strong>. Compute 2,560 ÷ 6, then answer each question.<br>(a) How many FULL cartons can they make?<br>(b) How many eggs are LEFT OVER?<br>(c) If every egg must ship, how many cartons are NEEDED?</p><div class="journal-label">✏️ My answers + reasoning <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" id="journal-a1" data-label="Show What You Know — Problem 1: Egg cartons, three interpretations" placeholder="" oninput="autoSave(this,'dot-a1')"></textarea></div>
-
-<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Unit 5 reflection.</strong> Across Unit 5 you learned mental math for division (number bonds, ÷10 patterns), estimation (three estimates, divisor-friendly rounding), 4-digit long division with the lead-digit trick, and now word problems with three remainder jobs. In one paragraph, explain how all four pieces work together when you face a real division word problem.</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" id="journal-a6" data-label="Show What You Know — Problem 6: Unit 5 reflection" placeholder="" oninput="autoSave(this,'dot-a6')"></textarea></div>
-
-
+<div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>The egg-carton story.</strong> A school packs <strong>2,560 eggs</strong> into cartons of <strong>6</strong>. Compute 2,560 ÷ 6, then answer each question.<br/>(a) How many FULL cartons can they make?<br/>(b) How many eggs are LEFT OVER?<br/>(c) If every egg must ship, how many cartons are NEEDED?</p><div class="journal-label">✏️ My answers + reasoning <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: Egg cartons, three interpretations" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
+<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Unit 5 reflection.</strong> Across Unit 5 you learned mental math for division (number bonds, ÷10 patterns), estimation (three estimates, divisor-friendly rounding), 4-digit long division with the lead-digit trick, and now word problems with three remainder jobs. In one paragraph, explain how all four pieces work together when you face a real division word problem.</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: Unit 5 reflection" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#55C8E8;"><div class="activity-head"><div class="activity-num" style="background:#55C8E8;color:#0E1C42;">🗺️</div><div><div class="activity-title">Connection Forward: Beyond Unit 5</div><div class="activity-sub">What comes next</div></div></div><div class="activity-body"><p>You've closed the whole-number arithmetic tour — Units 1–5 covered place value, addition, subtraction, multiplication, and division. Plus all the multiplication families (multiples, factors, primes).</p><p>Up next: <strong>Fractions.</strong> A fraction is just a division you HAVEN'T computed yet. 3/4 = 3 ÷ 4. The remainder ideas you just learned come back hard — when you can't divide cleanly, the result is a FRACTION.</p><p>The big question opening the fractions unit: <em>What's the connection between division and a fraction?</em></p></div></div></div></div>
-<div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly>Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
-  <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
+<div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
+<div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
 </div>
 <div class="footer">
-  <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
-  <div class="footer-sub">Math · Grade 4 · 4.05.04</div>
-  <div class="footer-copy">© 2025 Optima Academy Online</div>
+<div class="footer-main">🏫 <span>Optima Academy Online</span></div>
+<div class="footer-sub">Math · Grade 4 · 4.05.04</div>
+<div class="footer-copy">© 2025 Optima Academy Online</div>
 </div>
 </div>
 <canvas id="confettiCanvas"></canvas>
@@ -1046,6 +1101,75 @@ async function loadVideoManifest(){try{let res=await fetch('video-manifest.md',{
 function parseManifest(txt){let map={};let lines=txt.split(/\r?\n/);let current=null,buf=[];function commit(){if(current&&buf.join('\n').trim())map[current]=buf.join('\n').trim();buf=[]}for(let line of lines){let m=line.match(/^([A-Za-z0-9-]+):\s*$/);if(m){commit();current=m[1]}else if(current){buf.push(line)}}commit();return map}
 function showPageFeedback(msg){var panel=document.querySelector('.tab-panel.active')||document.body;var box=panel.querySelector(':scope > .page-feedback');if(!box){box=document.createElement('div');box.className='page-feedback';panel.insertBefore(box,panel.firstChild);}box.className='page-feedback show warn';box.innerHTML=msg;}
 window.addEventListener('DOMContentLoaded',()=>{restoreJournals();updateProgress();loadVideoManifest()});
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = true;
+var FLUENCY_TITLE = "Mixed Multiplication & Division — One-Minute Check";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
 </script>
 </body>
 </html>

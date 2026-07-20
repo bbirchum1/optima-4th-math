@@ -314,6 +314,32 @@
 .frac.frac-lg{font-size:1.05em}
 .frac.frac-on-dark .num{border-bottom-color:#fff}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
@@ -341,7 +367,31 @@
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
-<div class="video-wrap" data-video-slot="4-06-03-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.06.03</div><div class="video-wrap-title">When the top number is bigger than the bottom — what does that mean?</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-03_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Hold up one pie cut into fifths. "5 slices. Each one is <span class="frac"><span class="num">1</span><span class="den">5</span></span> of a pie." Shade them all. "5 slices shaded = <span class="frac"><span class="num">5</span><span class="den">5</span></span> = 1 WHOLE pie." Now show a SECOND pie, also cut into fifths. Shade 3 of the 5. "3 more slices = <span class="frac"><span class="num">3</span><span class="den">5</span></span> more of a pie." Pause. "Together that's 5 + 3 = 8 slices of one-fifth. We can write that two different ways. Way 1: <span class="frac"><span class="num">8</span><span class="den">5</span></span> — that's an IMPROPER fraction, because the top is bigger than the bottom. Way 2: 1 <span class="frac"><span class="num">3</span><span class="den">5</span></span> — one WHOLE pie plus 3 more fifths. That's a MIXED NUMBER." Both mean the same thing. Same slices. Two ways to write the count. Then show <span class="frac"><span class="num">9</span><span class="den">4</span></span> — same approach. 4 slices is one pie, plus 4 more is another pie, plus 1 more = 2 wholes + <span class="frac"><span class="num">1</span><span class="den">4</span></span> = 2 1/4. Frame: "If the top is BIGGER than the bottom, you have more than 1 whole. You can write it improper (just one number on top, one on bottom) OR mixed (wholes + fraction). Today: read both. Next lessons: switch between them." Tone: warm, visual, calm. (~1-2 min)</div><div class="video-placeholder-id"><!-- slot: lesson-welcome --></div></div></div></div>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Partial Products</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">4 × 26</span><input autocomplete="off" class="fluency-input" data-answer="104" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">3 × 45</span><input autocomplete="off" class="fluency-input" data-answer="135" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 23</span><input autocomplete="off" class="fluency-input" data-answer="138" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">5 × 34</span><input autocomplete="off" class="fluency-input" data-answer="170" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 19</span><input autocomplete="off" class="fluency-input" data-answer="133" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 22</span><input autocomplete="off" class="fluency-input" data-answer="176" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">4 × 37</span><input autocomplete="off" class="fluency-input" data-answer="148" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">3 × 58</span><input autocomplete="off" class="fluency-input" data-answer="174" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 16</span><input autocomplete="off" class="fluency-input" data-answer="96" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 14</span><input autocomplete="off" class="fluency-input" data-answer="126" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Partial Products)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
 <p>Hazel keeps leading. Today she's lining up pies to count slices that go PAST one whole pie. The crew helps name what they see.</p>
 <div class="bubble-row">
@@ -395,7 +445,7 @@
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Answers:</strong> Row 1 — <strong><span class="frac"><span class="num">8</span><span class="den">5</span></span></strong> (5 + 3 = 8 fifths). Row 2 — <strong><span class="frac"><span class="num">9</span><span class="den">4</span></span></strong> (4 + 4 + 1 = 9 fourths). Row 3 — <strong><span class="frac"><span class="num">5</span><span class="den">3</span></span></strong> (3 + 2 = 5 thirds). All three are IMPROPER fractions — the top number is bigger than the bottom because there's more than one whole pie shaded.</div>
 <div class="journal-label">✏️ Pick one row. Show two ways to write it: as an improper fraction AND as a mixed number. (Example for Row 1: <span class="frac"><span class="num">8</span><span class="den">5</span></span> OR 1 3/5.) <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: Count slices, write improper" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
-<div class="video-wrap" data-video-slot="4-06-03-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.06.03</div><div class="video-wrap-title">Count every slice, even across more than one pie</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-03_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk each row. "Row 1: two pies, both cut into fifths. First pie all shaded — 5 slices. Second pie 3 shaded. Total shaded slices = 8. Each one is <span class="frac"><span class="num">1</span><span class="den">5</span></span> of a pie, so we have 8/5." Repeat for row 2 (4 + 4 + 1 = 9 fourths = <span class="frac"><span class="num">9</span><span class="den">4</span></span>) and row 3 (3 + 2 = 5 thirds = <span class="frac"><span class="num">5</span><span class="den">3</span></span>). "All three are improper. Top is bigger than bottom because the shaded slices add up to MORE than one full pie." Frame: "Improper isn't bad — it's just a fraction with more pieces than a whole. We'll write the same amounts as mixed numbers next."</div><div class="video-placeholder-id"><!-- slot: lesson-readiness-feedback --></div></div></div></div>
+
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">More than one whole pie. Two ways to write the amount.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">🥧</span><p>A baker shades the pies below. He has more than one full pie shaded. <strong>How would you write that amount — both as an improper fraction AND as a mixed number?</strong></p></div>
 <div class="number-talk-visual">
@@ -422,7 +472,7 @@
 <textarea class="journal-box" data-label="Warm-Up — Think Prompt: Three fourths pies → improper + mixed" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">You counted past one whole pie and wrote the amount two ways. Now learn the rule for any improper fraction or mixed number.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-<div class="tab-panel" id="tab-learn">
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-06-03-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-06-03 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-06-03-concept --></div></div></div></div>
 <div aria-label="Daily vocabulary flash cards" class="vocab-section">
 <div class="vocab-section-head">
 <div class="vocab-section-icon">📚</div>
@@ -459,7 +509,7 @@
 </div>
 </div>
 </div>
-<div class="video-wrap" data-video-slot="4-06-03-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.06.03</div><div class="video-wrap-title">Improper and mixed are the same amount, two ways to write it</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-03_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Start with 8 small slices, each a fifth of a pie. Line them up. Group the first 5 into a pie shape. "That's a whole pie — 5 fifths." The remaining 3 slices stay alone. "3 more fifths." Hold up the count two ways. "All 8 slices = <span class="frac"><span class="num">8</span><span class="den">5</span></span> — improper. One whole + 3 leftover slices = 1 <span class="frac"><span class="num">3</span><span class="den">5</span></span> — mixed." Same amount. Now flip it. Start with the mixed: 2 3/4. "Two whole pies + 3 more fourths." Cut each whole into 4 slices (so each whole = <span class="frac"><span class="num">4</span><span class="den">4</span></span>). Total slices = 4 + 4 + 3 = 11. Improper: 11/4. Show the rule both directions: "To make a mixed number from an improper: divide top by bottom. Quotient = whole number. Remainder = top of the fraction part. 11 ÷ 4 = 2 r 3 → 2 3/4." "To make an improper from a mixed: multiply the whole by the denominator, add the top. 2 × 4 + 3 = 11. Put it over the same denominator → 11/4." Frame: "Improper and mixed are NOT different amounts — they're different OUTFITS for the same amount. Today: read both. Tomorrow: convert improper → mixed. Day after: convert mixed → improper." Tone: clear, methodical, visual. (~2 min)</div><div class="video-placeholder-id"><!-- slot: lesson-concept --></div></div></div></div>
+
 <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Three rows of pies below. Count the slices and pick the matching improper fraction.</p></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#FF7A45;">🥧</div><div><div class="activity-title">Pie Counter</div><div class="activity-sub">Count the slices. Pick the matching improper fraction.</div></div></div><div class="activity-body"><p>Each row shows pies cut the same way. Count every shaded slice across ALL the pies, then pick the improper fraction.</p>
 <div style="background:#FFF8F0;border:2px solid #FFD0A8;border-radius:14px;padding:18px 14px;margin:12px 0;">
@@ -513,7 +563,7 @@
 <textarea class="journal-box" data-label="Learn — Socratic: Why same-over-same equals 1 whole" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: Read <span class="frac"><span class="num">11</span><span class="den">4</span></span> Two Ways</div><div class="activity-sub">Same amount. Improper AND mixed.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Show what <strong><span class="frac"><span class="num">11</span><span class="den">4</span></span></strong> looks like with pies. Write it as a mixed number. Place it on a number line.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
-<div class="video-wrap" data-video-slot="4-06-03-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.06.03</div><div class="video-wrap-title"><span class="frac"><span class="num">11</span><span class="den">4</span></span> as pies, as a mixed number, on a line</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-03_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Atlas reads. "11/4. Top is bigger than bottom — improper. There are 11 slices, each a fourth." Hazel: "I draw pies cut into fourths. Each whole pie holds 4 slices. 11 ÷ 4 = 2 r 3. So that's 2 FULL pies and 3 more slices of a third pie." Show the picture. Felix: "Mixed number: 2 3/4. Whole part is 2, fraction part is 3/4." Cora's check: "Count back. 2 wholes = 8 slices. Plus 3 more = 11. Matches the original 11/4. ✓" Number line: place at 2 <span class="frac"><span class="num">3</span><span class="den">4</span></span> — past 2, not yet at 3, with 3 of 4 small ticks past 2. Frame: "Improper and mixed are TRANSLATIONS of each other. Same value. Today we just read. Next lesson, we'll convert improper → mixed by long division. Then mixed → improper by composing." Tone: clear, deliberate. (~2 min)</div><div class="video-placeholder-id"><!-- slot: 4-06-03-example --></div></div></div></div>
+
 <div style="background:#FFF8F0;border:2px solid #FFD0A8;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:flex;justify-content:center;gap:14px;align-items:center;flex-wrap:wrap;">
 <svg height="86" style="vertical-align:middle;" viewbox="0 0 86 86" width="86"><path d="M43.0,43.0 L43.00,2.00 A41.0,41.0 0 0 1 84.00,43.00 Z" fill="#FF7A45" stroke="#0E1C42" stroke-width="1.2"></path><path d="M43.0,43.0 L84.00,43.00 A41.0,41.0 0 0 1 43.00,84.00 Z" fill="#FF7A45" stroke="#0E1C42" stroke-width="1.2"></path><path d="M43.0,43.0 L43.00,84.00 A41.0,41.0 0 0 1 2.00,43.00 Z" fill="#FF7A45" stroke="#0E1C42" stroke-width="1.2"></path><path d="M43.0,43.0 L2.00,43.00 A41.0,41.0 0 0 1 43.00,2.00 Z" fill="#FF7A45" stroke="#0E1C42" stroke-width="1.2"></path></svg>
@@ -568,10 +618,10 @@
 <button class="value-card" onclick="pickP1Round(this,'2/5')" style="min-width:90px;"><div class="big"><span class="frac"><span class="num">2</span><span class="den">5</span></span></div></button>
 </div>
 <div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Exactly.</strong> 5 + 5 + 2 = 12 fifths → <strong><span class="frac"><span class="num">12</span><span class="den">5</span></span></strong>. As a mixed number, that's 2 <span class="frac"><span class="num">2</span><span class="den">5</span></span> (two full pies + <span class="frac"><span class="num">2</span><span class="den">5</span></span>).
-<div class="video-wrap" data-video-slot="4-06-03-practice-1-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 1</div><div class="video-wrap-title">Count every slice — even across pies</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-03_Practice-1_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "5 + 5 + 2 = 12 fifths. Improper: 12/5. Mixed: 2 2/5. Same amount." (~45 sec)</div><div class="video-placeholder-id"><!-- slot: 4-06-03-practice-1-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Look again.</strong> Count every shaded slice across all three pies. They're all fifths.
 <div class="hint-callout">First pie: 5 shaded. Second pie: 5 shaded. Third pie: 2 shaded. 5 + 5 + 2 = 12. Each slice is a fifth, so the answer is 12/5.</div>
-<div class="video-wrap" data-video-slot="4-06-03-practice-1-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 1</div><div class="video-wrap-title">Count all the slices, ignore the pie boundaries</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-03_Practice-1_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach: improper = total slice count over denominator. (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-06-03-practice-1-retry --></div></div></div></div></div></div></div>
+</div></div></div>
 <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Match Improper to Mixed</div><div class="activity-sub">Same amount, two ways to write it.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>Strategy:</strong> Divide top by bottom. The quotient is the WHOLE part. The remainder is the new top of the fraction part.</p></div>
 <p>For each improper fraction, pick the matching mixed number.</p>
 <div style="display:grid;gap:14px;margin:14px 0;">
@@ -601,10 +651,10 @@
 </div>
 </div>
 <div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ Three for three.</strong> 2a — 7 ÷ 3 = 2 r 1 → <strong>2 <span class="frac"><span class="num">1</span><span class="den">3</span></span></strong>. 2b — 13 ÷ 4 = 3 r 1 → <strong>3 <span class="frac"><span class="num">1</span><span class="den">4</span></span></strong>. 2c — 9 ÷ 2 = 4 r 1 → <strong>4 <span class="frac"><span class="num">1</span><span class="den">2</span></span></strong>. Divide top by bottom — quotient is whole, remainder is new top.
-<div class="video-wrap" data-video-slot="4-06-03-practice-2-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 2</div><div class="video-wrap-title">Divide. Quotient + remainder = mixed.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-03_Practice-2_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk all three with quick long division. (~1-2 min)</div><div class="video-placeholder-id"><!-- slot: 4-06-03-practice-2-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Look again.</strong> Divide top by bottom. Quotient = whole. Remainder = top of fraction part.
 <div class="hint-callout">2a: 7 ÷ 3 = 2 r 1 → 2 1/3. 2b: 13 ÷ 4 = 3 r 1 → 3 1/4. 2c: 9 ÷ 2 = 4 r 1 → 4 1/2.</div>
-<div class="video-wrap" data-video-slot="4-06-03-practice-2-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 2</div><div class="video-wrap-title">Divide top by bottom</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-03_Practice-2_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach long division for mixed numbers. (~1-2 min)</div><div class="video-placeholder-id"><!-- slot: 4-06-03-practice-2-retry --></div></div></div></div></div></div></div>
+</div></div></div>
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#FF7A45;">3</div><div><div class="activity-title">Find Jana's Mistake — She Wrote a Bad Mixed Number</div><div class="activity-sub">A mixed number's fraction part has to be LESS than 1 whole.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Jana converted <span class="frac"><span class="num">11</span><span class="den">3</span></span> to a mixed number. She got the parts right but wrote the fraction part as <span class="frac"><span class="num">5</span><span class="den">3</span></span> — which is itself improper. That breaks the rule.</p></div>
 <div class="task-box"><div class="task-label">Jana's Work</div>
 <p>Jana was asked: <strong>"Write <span class="frac"><span class="num">11</span><span class="den">3</span></span> as a mixed number."</strong></p>
@@ -622,17 +672,14 @@ Answer: <strong>2 <span class="frac"><span class="num">5</span><span class="den"
 <button class="purple-btn" onclick="checkErrorAnalysis()">✓ Check My Picks</button>
 <div class="journal-label">✏️ Help Jana. Write a rule about the fraction part of a mixed number. <span class="saved-dot" id="dot-ea"></span></div>
 <textarea class="journal-box" data-label="Practice 3 — Error Analysis: Fraction part must be less than 1" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
-<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> A proper mixed number's fraction part must be LESS than 1 whole. Jana's <span class="frac"><span class="num">5</span><span class="den">3</span></span> is itself improper. Correct answer: <strong>3 <span class="frac"><span class="num">2</span><span class="den">3</span></span></strong>. <div class="video-wrap" data-video-slot="4-06-03-practice-3-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 3</div><div class="video-wrap-title">Fraction part &lt; 1 whole</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-03_Practice-3_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "Mixed number rule: the fraction part has to be a proper fraction. Top &lt; bottom." (~45 sec)</div><div class="video-placeholder-id"><!-- slot: 4-06-03-practice-3-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">2 <span class="frac"><span class="num">5</span><span class="den">3</span></span> is a value but not a proper mixed number. Convert <span class="frac"><span class="num">5</span><span class="den">3</span></span> to 1 <span class="frac"><span class="num">2</span><span class="den">3</span></span>, then add: 2 + 1 + <span class="frac"><span class="num">2</span><span class="den">3</span></span> = 3 2/3.</div><div class="video-wrap" data-video-slot="4-06-03-practice-3-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 3</div><div class="video-wrap-title">A mixed number's fraction part is proper</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-03_Practice-3_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the mixed number rule. (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-06-03-practice-3-retry --></div></div></div></div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
+<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> A proper mixed number's fraction part must be LESS than 1 whole. Jana's <span class="frac"><span class="num">5</span><span class="den">3</span></span> is itself improper. Correct answer: <strong>3 <span class="frac"><span class="num">2</span><span class="den">3</span></span></strong>. </div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">2 <span class="frac"><span class="num">5</span><span class="den">3</span></span> is a value but not a proper mixed number. Convert <span class="frac"><span class="num">5</span><span class="den">3</span></span> to 1 <span class="frac"><span class="num">2</span><span class="den">3</span></span>, then add: 2 + 1 + <span class="frac"><span class="num">2</span><span class="den">3</span></span> = 3 2/3.</div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">You can read improper and mixed both ways. Now show what you know.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Improper fractions and mixed numbers — read both forms and switch between them.</div></div></div><div class="activity-body"><p>Show the pie picture or the count for each. Two ways to write each amount — improper and mixed.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Do the denominators MATCH? Or do I need to rename one or both? Or is a benchmark (<span class="frac"><span class="num">1</span><span class="den">2</span></span>, 1) faster?</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Write the improper fraction.</strong> For each picture, count every shaded slice. The denominator is given.<br/>(a) Two full pies of fourths + 3 more fourths (denom 4)<br/>(b) One full pie of fifths + 4 more fifths (denom 5)<br/>(c) Three full pies of halves + 1 more half (denom 2)</p><div class="journal-label">✏️ My improper fractions (a), (b), (c) <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: Write improper from pies" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-
 <div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Story problem.</strong> A bakery cuts each pie into 6 slices. They sold 19 slices today. (a) How many WHOLE pies were sold? (b) How many extra slices were left from a partly-sold pie? (c) Write 19 slices total as both an improper fraction AND a mixed number.</p><div class="journal-label">✏️ My answers <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: Bakery slice story" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
-
-
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#FF7A45;"><div class="activity-head"><div class="activity-num" style="background:#FF7A45;color:#fff;">🗺️</div><div><div class="activity-title">Connection Forward: Converting Improper to Mixed</div><div class="activity-sub">What comes next</div></div></div><div class="activity-body"><p>You've compared and ordered fractions that all fit between 0 and 1.</p><p>Next lesson: <strong>Improper Fractions and Mixed Numbers.</strong> What if the top is BIGGER than the bottom? <span class="frac"><span class="num">8</span><span class="den">5</span></span> of a pie isn't just half — it's a WHOLE pie plus some extra. That's an improper fraction, and it can also be written as a mixed number (1 <span class="frac"><span class="num">3</span><span class="den">5</span></span>).</p><p>The big question opening 6.03: <em>How do you show a fraction that's more than 1 whole?</em></p></div></div></div></div>
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed all 6 problems above.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I wrote each amount BOTH as an improper fraction AND as a mixed number where asked.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I double-checked at least one problem by drawing the pies.</span></div></div></div>
@@ -1077,6 +1124,75 @@ async function loadVideoManifest(){try{let res=await fetch('video-manifest.md',{
 function parseManifest(txt){let map={};let lines=txt.split(/\r?\n/);let current=null,buf=[];function commit(){if(current&&buf.join('\n').trim())map[current]=buf.join('\n').trim();buf=[]}for(let line of lines){let m=line.match(/^([A-Za-z0-9-]+):\s*$/);if(m){commit();current=m[1]}else if(current){buf.push(line)}}commit();return map}
 function showPageFeedback(msg){var panel=document.querySelector('.tab-panel.active')||document.body;var box=panel.querySelector(':scope > .page-feedback');if(!box){box=document.createElement('div');box.className='page-feedback';panel.insertBefore(box,panel.firstChild);}box.className='page-feedback show warn';box.innerHTML=msg;}
 window.addEventListener('DOMContentLoaded',()=>{restoreJournals();updateProgress();loadVideoManifest()});
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Partial Products";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
 </script>
 </body>
 </html>

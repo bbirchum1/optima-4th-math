@@ -314,6 +314,32 @@
 .frac.frac-lg{font-size:1.05em}
 .frac.frac-on-dark .num{border-bottom-color:#fff}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
@@ -341,7 +367,31 @@
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
-<div class="video-wrap" data-video-slot="4-07-01-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.07.01</div><div class="video-wrap-title">Same denominator? Just count the slices.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-01_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Lay out two boards. "Board one is <span class="frac"><span class="num">5</span><span class="den">8</span></span> of a foot long. Board two is <span class="frac"><span class="num">7</span><span class="den">8</span></span> of a foot long. I want to put them end to end." Show two pies cut into eighths, one with 5 shaded, one with 7 shaded. "Each slice is one-eighth. When I push them together, I just count all the shaded slices. 5 + 7 = 12 eighths." Pause. "<span class="frac"><span class="num">12</span><span class="den">8</span></span> is improper. Convert: 12 ÷ 8 = 1 r 4 → 1 4/8. Simplify <span class="frac"><span class="num">4</span><span class="den">8</span></span> to 1/2. So the combined boards are 1 <span class="frac"><span class="num">1</span><span class="den">2</span></span> feet." Write the rule: <strong>Same denominator → add (or subtract) the numerators. Keep the denominator the same.</strong> Show one more: <span class="frac"><span class="num">9</span><span class="den">10</span></span> − <span class="frac"><span class="num">5</span><span class="den">10</span></span> = <span class="frac"><span class="num">4</span><span class="den">10</span></span> = 2/5. "Same idea for subtraction. Take away matching slices." Frame: "This is the easiest case — when the slices are the same SIZE. Next lesson handles different denominators." Tone: clean, measurement-themed, foundational. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-welcome --></div></div></div></div>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Division Connections</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">72 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="9" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">72 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="8" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">56 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="8" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">56 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="7" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">48 ÷ 6</span><input autocomplete="off" class="fluency-input" data-answer="8" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">48 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="6" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">63 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="9" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">63 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="7" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">81 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="9" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">96 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="12" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Division Connections)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
 <p>New unit, new lead. Atlas takes the chalk — fraction operations are about naming the procedure. Hazel still draws the model. Felix computes. Cora simplifies and writes the final form.</p>
 <div class="bubble-row">
@@ -386,7 +436,7 @@
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Answers:</strong> <span class="frac"><span class="num">3</span><span class="den">7</span></span> + <span class="frac"><span class="num">2</span><span class="den">7</span></span> = <strong><span class="frac"><span class="num">5</span><span class="den">7</span></span></strong> (same denominator, add tops). <span class="frac"><span class="num">9</span><span class="den">10</span></span> − <span class="frac"><span class="num">4</span><span class="den">10</span></span> = <strong><span class="frac"><span class="num">5</span><span class="den">10</span></span></strong> (can simplify to <span class="frac"><span class="num">1</span><span class="den">2</span></span>). <span class="frac"><span class="num">11</span><span class="den">13</span></span> − <span class="frac"><span class="num">4</span><span class="den">13</span></span> = <strong><span class="frac"><span class="num">7</span><span class="den">13</span></span></strong>. Same rule every time — bottom stays the same, tops add or subtract.</div>
 <div class="journal-label">✏️ Pick one. Write the rule in your own words: when the denominators are the SAME, what do you do with the numerators? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: Same denominator add/subtract" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
-<div class="video-wrap" data-video-slot="4-07-01-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.07.01</div><div class="video-wrap-title">Same denominator means same-size slices</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-01_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk all three. "<span class="frac"><span class="num">3</span><span class="den">7</span></span> + <span class="frac"><span class="num">2</span><span class="den">7</span></span>: same denominator 7, so just add the tops. 3 + 2 = 5. Answer: 5/7." Repeat for <span class="frac"><span class="num">9</span><span class="den">10</span></span> − <span class="frac"><span class="num">4</span><span class="den">10</span></span> = <span class="frac"><span class="num">5</span><span class="den">10</span></span> (note: can simplify to <span class="frac"><span class="num">1</span><span class="den">2</span></span>). And <span class="frac"><span class="num">11</span><span class="den">13</span></span> − <span class="frac"><span class="num">4</span><span class="den">13</span></span> = 7/13. Frame: "When slices are the same size, you can add them like counting cookies. Different sizes is what we do next lesson."</div><div class="video-placeholder-id"><!-- slot: lesson-readiness-feedback --></div></div></div></div>
+
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">When the answer is more than 1 whole.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">📏</span><p>A craftsperson cuts <strong><span class="frac"><span class="num">5</span><span class="den">8</span></span></strong> of a foot from a board and another <strong><span class="frac"><span class="num">7</span><span class="den">8</span></span></strong> of a foot from another board. Joined together, how long is the combined board?</p></div>
 <div class="number-talk-visual">
@@ -413,7 +463,7 @@
 <textarea class="journal-box" data-label="Warm-Up — Think Prompt: 5/8 + 7/8 boards" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">Same-size slices add directly. Now learn the rule and master the simplify step.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-<div class="tab-panel" id="tab-learn">
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-07-01-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-07-01 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-07-01-concept --></div></div></div></div>
 <div aria-label="Daily vocabulary flash cards" class="vocab-section">
 <div class="vocab-section-head">
 <div class="vocab-section-icon">📚</div>
@@ -450,7 +500,7 @@
 </div>
 </div>
 </div>
-<div class="video-wrap" data-video-slot="4-07-01-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.07.01</div><div class="video-wrap-title">Same denominator: add (or subtract) the tops, keep the bottom</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-01_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Three add/subtract examples, all same denominator. Example 1: <span class="frac"><span class="num">3</span><span class="den">8</span></span> + 4/8. "Same denominator 8 — same-size slices. Add tops: 3 + 4 = 7. Bottom stays 8. Answer: 7/8." Example 2: <span class="frac"><span class="num">11</span><span class="den">12</span></span> − 5/12. "Same denominator 12. Subtract tops: 11 − 5 = 6. Bottom stays 12. So 6/12. Simplify: GCF is 6 → 1/2." Example 3: <span class="frac"><span class="num">5</span><span class="den">6</span></span> + 5/6. "5 + 5 = 10 → 10/6. Improper — convert: 10 ÷ 6 = 1 r 4 → 1 4/6. Simplify <span class="frac"><span class="num">4</span><span class="den">6</span></span> = <span class="frac"><span class="num">2</span><span class="den">3</span></span> → 1 2/3." Frame the procedure: <strong>Add or subtract the numerators. Keep the denominator the same. Simplify or convert at the end.</strong> Tone: clear, rule-anchored. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-concept --></div></div></div></div>
+
 <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Three same-denominator problems below. Add or subtract the numerators and pick the simplest form.</p></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#0E8A8C;">➕</div><div><div class="activity-title">Slice Combiner</div><div class="activity-sub">Push the slices together. Same-size slices add directly.</div></div></div><div class="activity-body"><p>Each row shows two pies cut the same way. Add (or subtract) the slices and pick the simplest answer.</p>
 <div style="background:#F3F9F8;border:2px solid #A8D8D6;border-radius:14px;padding:18px 14px;margin:12px 0;">
@@ -534,7 +584,7 @@
 <textarea class="journal-box" data-label="Learn — Socratic: Why same denominator avoids renaming" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: <span class="frac"><span class="num">23</span><span class="den">30</span></span> − <span class="frac"><span class="num">17</span><span class="den">30</span></span></div><div class="activity-sub">Subtract, then simplify.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Find <strong><span class="frac"><span class="num">23</span><span class="den">30</span></span> − <span class="frac"><span class="num">17</span><span class="den">30</span></span></strong>. Express the answer in simplest form.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
-<div class="video-wrap" data-video-slot="4-07-01-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.07.01</div><div class="video-wrap-title"><span class="frac"><span class="num">23</span><span class="den">30</span></span> − <span class="frac"><span class="num">17</span><span class="den">30</span></span> = <span class="frac"><span class="num">6</span><span class="den">30</span></span> = <span class="frac"><span class="num">1</span><span class="den">5</span></span></div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-01_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Atlas reads. "<span class="frac"><span class="num">23</span><span class="den">30</span></span> minus 17/30. Same denominator — 30. So I can subtract the tops directly." Felix computes: "23 − 17 = 6. Same bottom 30. So 6/30." Cora simplifies: "GCF of 6 and 30 is 6. Divide both: 6 ÷ 6 = 1 and 30 ÷ 6 = 5. So <span class="frac"><span class="num">6</span><span class="den">30</span></span> = 1/5." Hazel pictures the check: "Think of 30 little slices, take 23 out, then take 17 away. 6 left. Out of 30, that's 1 in every 5. Picture matches." Frame: "Subtract the tops. Keep the denominator. Then ALWAYS check if you can simplify." Tone: clear, procedural, foundational. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-07-01-example --></div></div></div></div>
+
 <div style="background:#F3F9F8;border:2px solid #A8D8D6;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.8;font-size:15px;">
 <strong>Step 1 — Same denominator?</strong> Yes — both 30.<br/>
@@ -578,10 +628,10 @@
 <button class="value-card" onclick="pickP1Round(this,'9/8')" style="min-width:100px;"><div class="big"><span class="frac"><span class="num">9</span><span class="den">8</span></span></div></button>
 </div>
 <div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Exactly.</strong> 4 + 5 = 9 → 9/8. Improper. Convert: 9 ÷ 8 = 1 r 1 → <strong>1 <span class="frac"><span class="num">1</span><span class="den">8</span></span></strong>. (<span class="frac"><span class="num">1</span><span class="den">8</span></span> already simplest.)
-<div class="video-wrap" data-video-slot="4-07-01-practice-1-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 1</div><div class="video-wrap-title">Add tops, then convert</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-01_Practice-1_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "4 + 5 = 9 over 8. Past 1 whole — convert to 1 1/8. Done." About 45 sec.</div><div class="video-placeholder-id"><!-- slot: 4-07-01-practice-1-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Look again.</strong> Add the tops only. Keep the same denominator. Then convert if improper.
 <div class="hint-callout">4 + 5 = 9. Bottom stays 8. So 9/8. Convert: 9 ÷ 8 = 1 r 1 → 1 1/8.</div>
-<div class="video-wrap" data-video-slot="4-07-01-practice-1-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 1</div><div class="video-wrap-title">Just the tops add</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-01_Practice-1_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. About 1 min.</div><div class="video-placeholder-id"><!-- slot: 4-07-01-practice-1-retry --></div></div></div></div></div></div></div>
+</div></div></div>
 <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three More — Mix of Add and Subtract</div><div class="activity-sub">Watch for simplifying.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>Strategy:</strong> Operate on the tops. Keep the bottom. Then simplify (or convert) for the simplest form.</p></div>
 <p>For each, pick the simplest correct answer.</p>
 <div style="display:grid;gap:14px;margin:14px 0;">
@@ -611,10 +661,10 @@
 </div>
 </div>
 <div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ Three for three.</strong> 2a — 9 − 5 = 4 → 4/10. Simplify: GCF 2 → <strong><span class="frac"><span class="num">2</span><span class="den">5</span></span></strong>. (<span class="frac"><span class="num">1</span><span class="den">2</span></span> is also equivalent — wait, <span class="frac"><span class="num">4</span><span class="den">10</span></span> = <span class="frac"><span class="num">2</span><span class="den">5</span></span> not 1/2. Correct = 2/5.) 2b — 4 + 9 + 7 = 20 → 20/25. Simplify: GCF 5 → <strong><span class="frac"><span class="num">4</span><span class="den">5</span></span></strong>. 2c — 23 − 17 = 6 → 6/30. Simplify: GCF 6 → <strong><span class="frac"><span class="num">1</span><span class="den">5</span></span></strong>.
-<div class="video-wrap" data-video-slot="4-07-01-practice-2-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 2</div><div class="video-wrap-title">Three for three — operate, then simplify</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-01_Practice-2_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk all three. Highlight the simplify step. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-07-01-practice-2-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Look again.</strong> Operate on the tops. Then check simplify.
 <div class="hint-callout">2a: 9 − 5 = 4 → <span class="frac"><span class="num">4</span><span class="den">10</span></span> → simplify GCF 2 → 2/5. 2b: 4 + 9 + 7 = 20 → <span class="frac"><span class="num">20</span><span class="den">25</span></span> → simplify GCF 5 → 4/5. 2c: 23 − 17 = 6 → <span class="frac"><span class="num">6</span><span class="den">30</span></span> → simplify GCF 6 → 1/5.</div>
-<div class="video-wrap" data-video-slot="4-07-01-practice-2-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 2</div><div class="video-wrap-title">Always simplify</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-01_Practice-2_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-07-01-practice-2-retry --></div></div></div></div></div></div></div>
+</div></div></div>
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#0E8A8C;">3</div><div><div class="activity-title">Find Jana's Mistake — She Added the Bottoms</div><div class="activity-sub">The denominator stays the same. Don't add it.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Jana tried to add <span class="frac"><span class="num">3</span><span class="den">8</span></span> + 4/8. She added both the tops AND the bottoms. That changes the size of the slices — and gives the wrong answer.</p></div>
 <div class="task-box"><div class="task-label">Jana's Work</div>
 <p>Jana was asked: <strong>"Find <span class="frac"><span class="num">3</span><span class="den">8</span></span> + <span class="frac"><span class="num">4</span><span class="den">8</span></span> in simplest form."</strong></p>
@@ -631,17 +681,14 @@
 <button class="purple-btn" onclick="checkErrorAnalysis()">✓ Check My Picks</button>
 <div class="journal-label">✏️ Help Jana. Write a rule: when fractions have the same denominator, what do you do with the bottoms? <span class="saved-dot" id="dot-ea"></span></div>
 <textarea class="journal-box" data-label="Practice 3 — Error Analysis: Keep the denominator the same" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
-<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> The denominators stay the same — adding them changes the size of each slice. Correct answer: <span class="frac"><span class="num">3</span><span class="den">8</span></span> + <span class="frac"><span class="num">4</span><span class="den">8</span></span> = <strong><span class="frac"><span class="num">7</span><span class="den">8</span></span></strong>. <div class="video-wrap" data-video-slot="4-07-01-practice-3-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 3</div><div class="video-wrap-title">Bottom stays — top adds or subtracts</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-01_Practice-3_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Frame the rule clearly. About 45 sec.</div><div class="video-placeholder-id"><!-- slot: 4-07-01-practice-3-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">Rule: same denominator → add (or subtract) the TOPS only. The bottom stays the same. <span class="frac"><span class="num">3</span><span class="den">8</span></span> + <span class="frac"><span class="num">4</span><span class="den">8</span></span> = 7/8.</div><div class="video-wrap" data-video-slot="4-07-01-practice-3-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 3</div><div class="video-wrap-title">Bottoms stay</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-01_Practice-3_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. About 1 min.</div><div class="video-placeholder-id"><!-- slot: 4-07-01-practice-3-retry --></div></div></div></div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
+<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> The denominators stay the same — adding them changes the size of each slice. Correct answer: <span class="frac"><span class="num">3</span><span class="den">8</span></span> + <span class="frac"><span class="num">4</span><span class="den">8</span></span> = <strong><span class="frac"><span class="num">7</span><span class="den">8</span></span></strong>. </div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">Rule: same denominator → add (or subtract) the TOPS only. The bottom stays the same. <span class="frac"><span class="num">3</span><span class="den">8</span></span> + <span class="frac"><span class="num">4</span><span class="den">8</span></span> = 7/8.</div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">Same denominator? Just add or subtract the tops. Now practice.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Adding and subtracting fractions with the same denominator. Operate on tops, simplify, convert when needed.</div></div></div><div class="activity-body"><p>For each, show your work — operate on the tops, simplify or convert to mixed when needed.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Do the denominators MATCH? Or do I need to rename one or both? Or is a benchmark (<span class="frac"><span class="num">1</span><span class="den">2</span></span>, 1) faster?</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Add or subtract. Express the answer in the simplest form.</strong><br/>(a) <span class="frac"><span class="num">5</span><span class="den">8</span></span> + <span class="frac"><span class="num">7</span><span class="den">8</span></span><br/>(b) <span class="frac"><span class="num">7</span><span class="den">8</span></span> − <span class="frac"><span class="num">5</span><span class="den">8</span></span><br/>(c) <span class="frac"><span class="num">4</span><span class="den">8</span></span> + <span class="frac"><span class="num">5</span><span class="den">8</span></span></p><div class="journal-label">✏️ My answers in simplest form + the simplification step <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: Convert three improper to mixed" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-
 <div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Story problem.</strong> A bag of rice weighs <span class="frac"><span class="num">13</span><span class="den">16</span></span> pounds. A bag of wheat berries weighs <span class="frac"><span class="num">9</span><span class="den">16</span></span> pounds more than the bag of rice. What is the total weight of the rice and wheat berries bags?</p><div class="journal-label">✏️ My answers <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: Cake story with simplification" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
-
-
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#0E8A8C;"><div class="activity-head"><div class="activity-num" style="background:#0E8A8C;color:#fff;">🗺️</div><div><div class="activity-title">Connection Forward: Different Denominators</div><div class="activity-sub">What comes next in Unit 7</div></div></div><div class="activity-body"><p>You've compared and ordered fractions that all fit between 0 and 1.</p><p>Next lesson: <strong>Improper Fractions and Mixed Numbers.</strong> What if the top is BIGGER than the bottom? <span class="frac"><span class="num">8</span><span class="den">5</span></span> of a pie isn't just half — it's a WHOLE pie plus some extra. That's an improper fraction, and it can also be written as a mixed number (1 <span class="frac"><span class="num">3</span><span class="den">5</span></span>).</p><p>The big question opening 6.03: <em>How do you show a fraction that's more than 1 whole?</em></p></div></div></div></div>
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed all 6 problems above.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I added or subtracted only the numerators on every problem (denominators stayed the same).</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I checked every answer for simplifying AND converting to a mixed number when needed.</span></div></div></div>
@@ -1086,6 +1133,75 @@ async function loadVideoManifest(){try{let res=await fetch('video-manifest.md',{
 function parseManifest(txt){let map={};let lines=txt.split(/\r?\n/);let current=null,buf=[];function commit(){if(current&&buf.join('\n').trim())map[current]=buf.join('\n').trim();buf=[]}for(let line of lines){let m=line.match(/^([A-Za-z0-9-]+):\s*$/);if(m){commit();current=m[1]}else if(current){buf.push(line)}}commit();return map}
 function showPageFeedback(msg){var panel=document.querySelector('.tab-panel.active')||document.body;var box=panel.querySelector(':scope > .page-feedback');if(!box){box=document.createElement('div');box.className='page-feedback';panel.insertBefore(box,panel.firstChild);}box.className='page-feedback show warn';box.innerHTML=msg;}
 window.addEventListener('DOMContentLoaded',()=>{restoreJournals();updateProgress();loadVideoManifest()});
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Division Connections";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
 </script>
 </body>
 </html>

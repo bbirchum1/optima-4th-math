@@ -329,6 +329,32 @@
 .cc-row strong{color:#1A6B8E;font-weight:900;font-family:Lora,Georgia,serif}
 .cc-row em{color:#7A88A8;font-style:italic;font-size:12px}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
@@ -356,7 +382,42 @@
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
-<div class="video-wrap" data-video-slot="4-12-08-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.12.08</div><div class="video-wrap-title">Rounding decimals — find the closer neighbor.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-12-08_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write 6.26 on the board. "Round to the nearest tenth. Which two tenths is 6.26 between? 6.2 and 6.3." Draw a number line. Halfway mark: 6.25. "6.26 is just past halfway — closer to 6.3. Rounds to 6.3." Now round to the nearest whole: between 6 and 7, closer to 6 → 6. Frame: <strong>Find the two neighbors. Halfway always rounds UP.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-welcome --></div></div></div></div>
+<div class="fluency-box" data-timed="true">
+<div class="fluency-head">
+<div class="fluency-head-icon">⏳</div>
+<div><div class="fluency-head-label">TIMED FLUENCY CHECK</div><div class="fluency-head-title">Mixed All-Operations — One-Minute Check</div></div>
+<div class="fluency-timer-ui"><span class="fluency-timer-display" id="fluencyTimerDisplay">60s</span><button class="fluency-start-btn" id="fluencyStartBtn" onclick="fluencyStart()">Start 1-Minute Check</button></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Unit check — Quarter 4 timed fluency. Click Start, then answer as many as you can in 60 seconds. Answers lock in automatically when time is up.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">9 × 7</span><input autocomplete="off" class="fluency-input" data-answer="63" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 8</span><input autocomplete="off" class="fluency-input" data-answer="64" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 9</span><input autocomplete="off" class="fluency-input" data-answer="63" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 9</span><input autocomplete="off" class="fluency-input" data-answer="54" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">11 × 7</span><input autocomplete="off" class="fluency-input" data-answer="77" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">12 × 8</span><input autocomplete="off" class="fluency-input" data-answer="96" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 9</span><input autocomplete="off" class="fluency-input" data-answer="81" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 6</span><input autocomplete="off" class="fluency-input" data-answer="48" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 8</span><input autocomplete="off" class="fluency-input" data-answer="56" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 7</span><input autocomplete="off" class="fluency-input" data-answer="42" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">63 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">72 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">56 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="7" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">96 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="12" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">81 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">48 ÷ 6</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">88 ÷ 11</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">108 ÷ 12</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">64 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">77 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="11" disabled="" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" disabled="" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Mixed All-Operations — One-Minute Check)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
 <p>Hazel shows you the picture. Atlas names the parts (tenths). Felix multiplies and renames. Cora notices that 3/10 and 0.3 say the same thing two ways.</p>
 <div class="bubble-row">
@@ -372,7 +433,6 @@
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Closer to Which?</div><div class="activity-sub">Each decimal sits between two neighbors. Pick the closer one.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>Three decimals to round.</p>
 <div style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:grid;gap:14px;">
-
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
 <div style="background:#fff;border:1.5px solid #D6F2FB;border-radius:10px;padding:10px;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:700;color:#0E1C42;min-width:220px;text-align:center;">6.26 to nearest tenth (6.2 or 6.3?)</div>
 <div class="value-card-row" style="margin:0;">
@@ -380,7 +440,6 @@
 <button class="value-card" onclick="pickReadinessRound(this,1,'6.2')" style="min-width:70px;"><div class="big" style="font-size:16px;">6.2</div></button>
 </div>
 </div>
-
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
 <div style="background:#fff;border:1.5px solid #D6F2FB;border-radius:10px;padding:10px;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:700;color:#0E1C42;min-width:220px;text-align:center;">12.7 to nearest whole (12 or 13?)</div>
 <div class="value-card-row" style="margin:0;">
@@ -388,7 +447,6 @@
 <button class="value-card" onclick="pickReadinessRound(this,2,'12')" style="min-width:70px;"><div class="big" style="font-size:16px;">12</div></button>
 </div>
 </div>
-
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
 <div style="background:#fff;border:1.5px solid #D6F2FB;border-radius:10px;padding:10px;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:700;color:#0E1C42;min-width:220px;text-align:center;">1.55 to nearest tenth (halfway!)</div>
 <div class="value-card-row" style="margin:0;">
@@ -396,13 +454,12 @@
 <button class="value-card" onclick="pickReadinessRound(this,3,'1.5')" style="min-width:70px;"><div class="big" style="font-size:16px;">1.5</div></button>
 </div>
 </div>
-
 </div>
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Rounded:</strong> 6.26 → <strong>6.3</strong> (past halfway 6.25). 12.7 → <strong>13</strong> (past halfway 12.5). 1.55 → <strong>1.6</strong> (exactly halfway → round UP).</div>
-<div class="journal-label">✏️ How is 1.55 different from 6.26? Both round up — but for different reasons. <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: round to neighbor" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-12-08-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.12.08</div><div class="video-wrap-title">Closer neighbor wins</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-12-08_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "The closer neighbor always wins. Halfway is the only special case: round UP." Frame: <strong>Find the two neighbors. Compare to halfway. Pick the closer one.</strong></div><div class="video-placeholder-id"><!-- slot: lesson-readiness-feedback --></div></div></div></div>
+<div class="journal-label">✏️ How is 1.55 different from 6.26? Both round up — but for different reasons. <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: round to neighbor" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Two rounds, one number.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">📐</span><p>Round <strong>3.42</strong> two different ways:</p><p style="margin-top:6px;">(a) To the nearest <strong>tenth</strong> — neighbors are 3.4 and 3.5.<br/>(b) To the nearest <strong>whole</strong> — neighbors are 3 and 4.</p></div>
 <div class="strategy-chip-row">
@@ -413,11 +470,10 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>(a)</strong> Halfway between 3.4 and 3.5 is 3.45. 3.42 is BEFORE halfway → round DOWN → 3.4.<br/><strong>(b)</strong> Halfway between 3 and 4 is 3.5. 3.42 is BEFORE halfway → round DOWN → 3.</p></div>
 <div class="journal-label">✏️ Why does the rounding answer change depending on the PLACE? <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think: 3.42 two rounds" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think: 3.42 two rounds" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">Now round decimals yourself.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-12-08-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-12-08 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-12-08-concept --></div></div></div></div>
 <div aria-label="Daily vocabulary flash cards" class="vocab-section">
 <div class="vocab-section-head">
 <div class="vocab-section-icon">📚</div>
@@ -428,78 +484,74 @@
 </div>
 <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
 <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for round. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🎯</div><div class="fc-word">round</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">round</div><div class="fc-def">replace a decimal with the closest "nice" number (e.g., the nearest tenth or whole).</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for neighbors. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">↔️</div><div class="fc-word">neighbors</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">neighbors</div><div class="fc-def">the two "nice" numbers your decimal sits between. For 6.26 rounded to tenths: 6.2 and 6.3.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for halfway. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">⚖️</div><div class="fc-word">halfway point</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">halfway point</div><div class="fc-def">the exact midpoint between two neighbors. Between 6.2 and 6.3, halfway is 6.25.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for halfway-up. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">⬆️</div><div class="fc-word">halfway → UP</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">halfway-up rule</div><div class="fc-def">if a decimal sits exactly at the halfway point, ALWAYS round up. 1.55 to nearest tenth = 1.6.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div aria-label="Vocabulary card for round. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🎯</div><div class="fc-word">round</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">round</div><div class="fc-def">replace a decimal with the closest "nice" number (e.g., the nearest tenth or whole).</div><div class="fc-tap-back">tap to flip back</div></div>
 </div>
-<div class="video-wrap" data-video-slot="4-12-08-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.12.08</div><div class="video-wrap-title">Rounding decimals — find the closer neighbor.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-12-08_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Three roundings. (1) 6.26 to tenths: between 6.2 and 6.3 → 6.3. (2) 5.97 to tenths: between 5.9 and 6.0 → 6.0. (3) Halfway: 1.55 to tenths → 1.6 (round UP). Frame: <strong>Find neighbors. Compare to halfway. Closer wins (halfway always UP).</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-concept --></div></div></div></div>
+</div>
+<div aria-label="Vocabulary card for neighbors. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">↔️</div><div class="fc-word">neighbors</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">neighbors</div><div class="fc-def">the two "nice" numbers your decimal sits between. For 6.26 rounded to tenths: 6.2 and 6.3.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for halfway. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">⚖️</div><div class="fc-word">halfway point</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">halfway point</div><div class="fc-def">the exact midpoint between two neighbors. Between 6.2 and 6.3, halfway is 6.25.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for halfway-up. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">⬆️</div><div class="fc-word">halfway → UP</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">halfway-up rule</div><div class="fc-def">if a decimal sits exactly at the halfway point, ALWAYS round up. 1.55 to nearest tenth = 1.6.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
 <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Pick how many groups to SPLIT the bar into. Then click groups to TAKE them.</p></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#1A6B8E;">🎯</div><div><div class="activity-title">Halfway-Line Rounder</div><div class="activity-sub">Pick a decimal + place. The number line shows neighbors, halfway, and the rounded answer.</div></div></div><div class="activity-body"><p>Three rounds. Try the halfway-rule case in Round 3.</p>
-
 <div class="hlr-card" data-id="1" style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 1 · To the nearest tenth</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Find the two tenths it sits between.</div>
 <div style="text-align:center;font-size:11px;font-weight:900;color:#1A6B8E;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Pick a scenario</div>
-<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button onclick="hlrPick('1','6.26','tenth')" id="hlrBtn-1-0" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">6.26 → nearest tenth</button><button onclick="hlrPick('1','5.97','tenth')" id="hlrBtn-1-1" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">5.97 → nearest tenth</button><button onclick="hlrPick('1','3.42','tenth')" id="hlrBtn-1-2" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">3.42 → nearest tenth</button></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button id="hlrBtn-1-0" onclick="hlrPick('1','6.26','tenth')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">6.26 → nearest tenth</button><button id="hlrBtn-1-1" onclick="hlrPick('1','5.97','tenth')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">5.97 → nearest tenth</button><button id="hlrBtn-1-2" onclick="hlrPick('1','3.42','tenth')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">3.42 → nearest tenth</button></div>
 <div id="hlrStage-1" style="background:#fff;border:2px solid #D6F2FB;border-radius:10px;padding:14px;margin-bottom:12px;min-height:140px;display:flex;justify-content:center;align-items:center;text-align:center;"></div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;" id="hlrReadout-1">Pick a scenario to begin.</div>
+<div id="hlrReadout-1" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;">Pick a scenario to begin.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="hlrStep('1')" id="hlrStepBtn-1" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Step</button>
+<button id="hlrStepBtn-1" onclick="hlrStep('1')" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Step</button>
 <button onclick="hlrReset('1')" style="background:#3D8DB0;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
 <div id="hlrStatus-1" style="background:#D6F2FB;border:2px solid #55C8E8;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E2A4A;font-weight:700;line-height:1.5;text-align:center;">Pick a scenario. Step through: find neighbors, mark halfway, pick the closer one.</div>
 </div>
-
 <div class="hlr-card" data-id="2" style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 2 · To the nearest whole</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Find the two whole numbers it sits between.</div>
 <div style="text-align:center;font-size:11px;font-weight:900;color:#1A6B8E;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Pick a scenario</div>
-<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button onclick="hlrPick('2','6.26','whole')" id="hlrBtn-2-0" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">6.26 → nearest whole</button><button onclick="hlrPick('2','12.7','whole')" id="hlrBtn-2-1" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">12.7 → nearest whole</button><button onclick="hlrPick('2','3.42','whole')" id="hlrBtn-2-2" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">3.42 → nearest whole</button></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button id="hlrBtn-2-0" onclick="hlrPick('2','6.26','whole')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">6.26 → nearest whole</button><button id="hlrBtn-2-1" onclick="hlrPick('2','12.7','whole')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">12.7 → nearest whole</button><button id="hlrBtn-2-2" onclick="hlrPick('2','3.42','whole')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">3.42 → nearest whole</button></div>
 <div id="hlrStage-2" style="background:#fff;border:2px solid #D6F2FB;border-radius:10px;padding:14px;margin-bottom:12px;min-height:140px;display:flex;justify-content:center;align-items:center;text-align:center;"></div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;" id="hlrReadout-2">Pick a scenario to begin.</div>
+<div id="hlrReadout-2" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;">Pick a scenario to begin.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="hlrStep('2')" id="hlrStepBtn-2" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Step</button>
+<button id="hlrStepBtn-2" onclick="hlrStep('2')" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Step</button>
 <button onclick="hlrReset('2')" style="background:#3D8DB0;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
 <div id="hlrStatus-2" style="background:#D6F2FB;border:2px solid #55C8E8;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E2A4A;font-weight:700;line-height:1.5;text-align:center;">Pick a scenario. Step through: find neighbors, mark halfway, pick the closer one.</div>
 </div>
-
 <div class="hlr-card" data-id="3" style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 3 · Halfway rule</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Exactly halfway → round UP.</div>
 <div style="text-align:center;font-size:11px;font-weight:900;color:#1A6B8E;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Pick a scenario</div>
-<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button onclick="hlrPick('3','1.55','tenth')" id="hlrBtn-3-0" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">1.55 → nearest tenth</button><button onclick="hlrPick('3','4.5','whole')" id="hlrBtn-3-1" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">4.5 → nearest whole</button><button onclick="hlrPick('3','0.5','whole')" id="hlrBtn-3-2" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.5 → nearest whole</button></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button id="hlrBtn-3-0" onclick="hlrPick('3','1.55','tenth')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">1.55 → nearest tenth</button><button id="hlrBtn-3-1" onclick="hlrPick('3','4.5','whole')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">4.5 → nearest whole</button><button id="hlrBtn-3-2" onclick="hlrPick('3','0.5','whole')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.5 → nearest whole</button></div>
 <div id="hlrStage-3" style="background:#fff;border:2px solid #D6F2FB;border-radius:10px;padding:14px;margin-bottom:12px;min-height:140px;display:flex;justify-content:center;align-items:center;text-align:center;"></div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;" id="hlrReadout-3">Pick a scenario to begin.</div>
+<div id="hlrReadout-3" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;">Pick a scenario to begin.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="hlrStep('3')" id="hlrStepBtn-3" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Step</button>
+<button id="hlrStepBtn-3" onclick="hlrStep('3')" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Step</button>
 <button onclick="hlrReset('3')" style="background:#3D8DB0;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
 <div id="hlrStatus-3" style="background:#D6F2FB;border:2px solid #55C8E8;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E2A4A;font-weight:700;line-height:1.5;text-align:center;">Pick a scenario. Step through: find neighbors, mark halfway, pick the closer one.</div>
 </div>
-
 <div class="reveal-box" id="learnReveal"><strong>What you saw.</strong> Find the two neighbors. Find halfway between them. If your decimal is before halfway → round DOWN. After → round UP. Exactly halfway → round UP.</div>
 </div></div>
 <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 Rounding Steps</div><p><strong>1. Pick the place.</strong> Nearest tenth, nearest whole, nearest hundredth.</p><p><strong>2. Find the two neighbors.</strong> The "nice" numbers your decimal sits between at that place.</p><p><strong>3. Find halfway.</strong> Exactly between the neighbors.</p><p><strong>4. Pick the closer neighbor.</strong> Halfway always rounds UP.</p></div>
@@ -507,16 +559,16 @@
 <div style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:18px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:16px;color:#0E1C42;font-weight:700;margin-bottom:14px;">Round 6.26 to the nearest tenth.</div>
 <div style="display:flex;justify-content:center;margin:14px 0;">
-<svg width="360" height="80" viewBox="0 0 360 80" xmlns="http://www.w3.org/2000/svg" style="display:block;">
-<line x1="20" y1="40" x2="340" y2="40" stroke="#0E2A4A" stroke-width="2"/>
-<line x1="20" y1="30" x2="20" y2="50" stroke="#0E2A4A" stroke-width="2"/>
-<line x1="340" y1="30" x2="340" y2="50" stroke="#0E2A4A" stroke-width="2"/>
-<line x1="180" y1="32" x2="180" y2="48" stroke="#C56C3F" stroke-width="2" stroke-dasharray="4,2"/>
-<polygon points="244,30 240,22 248,22" fill="#1A6B8E"/>
-<text x="20" y="70" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="14" fill="#0E1C42" font-weight="900">6.2</text>
-<text x="180" y="70" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="12" fill="#C56C3F" font-weight="900">halfway (6.25)</text>
-<text x="340" y="70" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="14" fill="#0E1C42" font-weight="900">6.3</text>
-<text x="244" y="18" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="13" fill="#1A6B8E" font-weight="900">6.26</text>
+<svg height="80" style="display:block;" viewbox="0 0 360 80" width="360" xmlns="http://www.w3.org/2000/svg">
+<line stroke="#0E2A4A" stroke-width="2" x1="20" x2="340" y1="40" y2="40"></line>
+<line stroke="#0E2A4A" stroke-width="2" x1="20" x2="20" y1="30" y2="50"></line>
+<line stroke="#0E2A4A" stroke-width="2" x1="340" x2="340" y1="30" y2="50"></line>
+<line stroke="#C56C3F" stroke-dasharray="4,2" stroke-width="2" x1="180" x2="180" y1="32" y2="48"></line>
+<polygon fill="#1A6B8E" points="244,30 240,22 248,22"></polygon>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="14" font-weight="900" text-anchor="middle" x="20" y="70">6.2</text>
+<text fill="#C56C3F" font-family="Lora,Georgia,serif" font-size="12" font-weight="900" text-anchor="middle" x="180" y="70">halfway (6.25)</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="14" font-weight="900" text-anchor="middle" x="340" y="70">6.3</text>
+<text fill="#1A6B8E" font-family="Lora,Georgia,serif" font-size="13" font-weight="900" text-anchor="middle" x="244" y="18">6.26</text>
 </svg>
 </div>
 <div style="text-align:center;color:#0E1C42;font-size:15px;font-weight:700;margin-top:8px;">6.26 is PAST halfway (past 6.25) → closer to <span style="color:#1A6B8E;">6.3</span>.</div>
@@ -526,7 +578,7 @@
 <textarea class="journal-box" data-label="Learn — Socratic: halfway rule" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: Theo's plant</div><div class="activity-sub">23.78 cm — round two ways.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Theo measured a plant: <strong>23.78 cm</strong>. Round to (a) the nearest tenth, (b) the nearest whole.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew:</p>
-<div class="video-wrap" data-video-slot="4-12-08-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.12.08</div><div class="video-wrap-title">23.78 → 23.8 (tenth) → 24 (whole)</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-12-08_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Hazel: "Nearest tenth: between 23.7 and 23.8. Halfway = 23.75." Atlas: "23.78 is PAST 23.75 → round to 23.8." Felix: "Nearest whole: between 23 and 24. Halfway = 23.5. 23.78 is past → 24." Cora: "Both round UP because both decimals are past halfway." About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-12-08-example --></div></div></div></div>
+
 <div style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.9;font-size:16px;">
 <strong>(a) Nearest tenth:</strong> neighbors 23.7 and 23.8, halfway 23.75. 23.78 &gt; 23.75 → <span style="color:#1A6B8E;font-weight:900;">23.8</span>.<br/>
@@ -546,17 +598,16 @@
 <div class="callout callout-info"><span class="callout-icon">🎯</span><p>Three problems. Find neighbors, compare to halfway, pick the closer one.</p></div>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Steps:</strong> Pick the place. Find neighbors. Find halfway. Compare. Round.</p></div>
 <div class="callout callout-tip"><span class="callout-icon">💡</span><p>Halfway always rounds UP — no exceptions.</p></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#1A6B8E;">1</div><div><div class="activity-title">Round to nearest tenth</div><div class="activity-sub">Three decimals.</div></div><span class="activity-time" style="background:#1A6B8E;">~5 min</span></div><div class="activity-body">
 <div class="hlr-card" data-id="p1" style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round to tenths</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Each scenario rounds to nearest tenth.</div>
 <div style="text-align:center;font-size:11px;font-weight:900;color:#1A6B8E;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Pick a scenario</div>
-<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button onclick="hlrPick('p1','6.89','tenth')" id="hlrBtn-p1-0" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">6.89 → nearest tenth</button><button onclick="hlrPick('p1','4.32','tenth')" id="hlrBtn-p1-1" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">4.32 → nearest tenth</button><button onclick="hlrPick('p1','5.97','tenth')" id="hlrBtn-p1-2" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">5.97 → nearest tenth</button></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button id="hlrBtn-p1-0" onclick="hlrPick('p1','6.89','tenth')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">6.89 → nearest tenth</button><button id="hlrBtn-p1-1" onclick="hlrPick('p1','4.32','tenth')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">4.32 → nearest tenth</button><button id="hlrBtn-p1-2" onclick="hlrPick('p1','5.97','tenth')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">5.97 → nearest tenth</button></div>
 <div id="hlrStage-p1" style="background:#fff;border:2px solid #D6F2FB;border-radius:10px;padding:14px;margin-bottom:12px;min-height:140px;display:flex;justify-content:center;align-items:center;text-align:center;"></div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;" id="hlrReadout-p1">Pick a scenario to begin.</div>
+<div id="hlrReadout-p1" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;">Pick a scenario to begin.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="hlrStep('p1')" id="hlrStepBtn-p1" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Step</button>
+<button id="hlrStepBtn-p1" onclick="hlrStep('p1')" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Step</button>
 <button onclick="hlrReset('p1')" style="background:#3D8DB0;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
 <div id="hlrStatus-p1" style="background:#D6F2FB;border:2px solid #55C8E8;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E2A4A;font-weight:700;line-height:1.5;text-align:center;">Pick a scenario. Step through: find neighbors, mark halfway, pick the closer one.</div>
@@ -564,17 +615,16 @@
 <div class="journal-label">✏️ Show the halfway compare for each. <span class="saved-dot" id="dot-p1"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 1: tenths round" id="journal-p1" oninput="autoSave(this,'dot-p1')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Round to nearest whole</div><div class="activity-sub">Three more.</div></div></div><div class="activity-body">
 <div class="hlr-card" data-id="p2" style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round to wholes</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Each scenario rounds to nearest whole.</div>
 <div style="text-align:center;font-size:11px;font-weight:900;color:#1A6B8E;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Pick a scenario</div>
-<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button onclick="hlrPick('p2','6.89','whole')" id="hlrBtn-p2-0" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">6.89 → nearest whole</button><button onclick="hlrPick('p2','3.42','whole')" id="hlrBtn-p2-1" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">3.42 → nearest whole</button><button onclick="hlrPick('p2','12.7','whole')" id="hlrBtn-p2-2" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">12.7 → nearest whole</button></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button id="hlrBtn-p2-0" onclick="hlrPick('p2','6.89','whole')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">6.89 → nearest whole</button><button id="hlrBtn-p2-1" onclick="hlrPick('p2','3.42','whole')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">3.42 → nearest whole</button><button id="hlrBtn-p2-2" onclick="hlrPick('p2','12.7','whole')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">12.7 → nearest whole</button></div>
 <div id="hlrStage-p2" style="background:#fff;border:2px solid #D6F2FB;border-radius:10px;padding:14px;margin-bottom:12px;min-height:140px;display:flex;justify-content:center;align-items:center;text-align:center;"></div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;" id="hlrReadout-p2">Pick a scenario to begin.</div>
+<div id="hlrReadout-p2" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;">Pick a scenario to begin.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="hlrStep('p2')" id="hlrStepBtn-p2" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Step</button>
+<button id="hlrStepBtn-p2" onclick="hlrStep('p2')" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Step</button>
 <button onclick="hlrReset('p2')" style="background:#3D8DB0;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
 <div id="hlrStatus-p2" style="background:#D6F2FB;border:2px solid #55C8E8;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E2A4A;font-weight:700;line-height:1.5;text-align:center;">Pick a scenario. Step through: find neighbors, mark halfway, pick the closer one.</div>
@@ -582,7 +632,6 @@
 <div class="journal-label">✏️ For each, what was the halfway point? <span class="saved-dot" id="dot-p2"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 2: whole round" id="journal-p2" oninput="autoSave(this,'dot-p2')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#1A6B8E;">3</div><div><div class="activity-title">Word problem — Asher's race</div><div class="activity-sub">Round race times.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🪜</span><p><strong>Method:</strong> Pick the rounding place. Find neighbors and halfway. Round.</p></div>
 <div style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;color:#0E1C42;font-weight:700;margin-bottom:8px;">Asher's race time was 14.83 seconds.</div>
@@ -593,18 +642,13 @@
 <div class="journal-label">✏️ Both rounds + reasoning. <span class="saved-dot" id="dot-p3"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 3: Asher race" id="journal-p3" oninput="autoSave(this,'dot-p3')" placeholder="" style="min-height:80px;"></textarea>
 </div></div>
-
 <div class="tab-next-wrap"><p class="tab-transition-voice">Three rounds done. Quick check time.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Two quick checks. Your full practice is in the Independent Practice PDF.</div></div></div><div class="activity-body"><p>If you got these, you're ready for the Independent Practice.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> How many tenths? Did I write BOTH the fraction and the decimal correctly?</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Quick check — round to tenth.</strong> Round 6.89 to the nearest tenth.</p><div class="journal-label">✏️ Neighbors: ___ and ___. Halfway: ___. Answer: ___ <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-
 <div class="q-block"><p class="q-text"><span class="q-num">2</span><strong>Quick check — halfway rule.</strong> Round 4.5 to the nearest whole. (It sits exactly halfway between 4 and 5.)</p><div class="journal-label">✏️ Answer: ___. Explain why. <span class="saved-dot" id="dot-a2"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 2" id="journal-a2" oninput="autoSave(this,'dot-a2')" placeholder=""></textarea></div>
-
-
-
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed both quick-check problems above.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I wrote each amount as a fraction AND as a decimal.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I can read 0.3 aloud as "three tenths" or "zero point three."</span></div></div></div>
 </div>
@@ -1354,7 +1398,74 @@ if(typeof window !== 'undefined'){
 
 
 </script>
-
-
 </div>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = true;
+var FLUENCY_TITLE = "Mixed All-Operations — One-Minute Check";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
+</script>
 </body></html>

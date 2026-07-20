@@ -314,6 +314,32 @@
 .frac.frac-lg{font-size:1.05em}
 .frac.frac-on-dark .num{border-bottom-color:#fff}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
@@ -341,7 +367,42 @@
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
-<div class="video-wrap" data-video-slot="4-08-07-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.08.07</div><div class="video-wrap-title">Read carefully. Sketch a bar. Solve in either direction.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-08-07_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Sketch a bar for 30 cat teeth. Split into 5 piles of 6 each. Shade 2 piles → 12 incisors. The remaining 3 piles = 18 NOT incisors. Then switch: "Now we know 30 books are <span class="frac"><span class="num">2</span><span class="den">5</span></span> of Asimah's collection. Each pile = 15. So 5 piles = 75 books total." Frame: <strong>Read. Sketch. Label. Decide which direction.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-welcome --></div></div></div></div>
+<div class="fluency-box" data-timed="true">
+<div class="fluency-head">
+<div class="fluency-head-icon">⏳</div>
+<div><div class="fluency-head-label">TIMED FLUENCY CHECK</div><div class="fluency-head-title">Mixed Multiplication &amp; Division — One-Minute Check</div></div>
+<div class="fluency-timer-ui"><span class="fluency-timer-display" id="fluencyTimerDisplay">60s</span><button class="fluency-start-btn" id="fluencyStartBtn" onclick="fluencyStart()">Start 1-Minute Check</button></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Unit check — Quarter 3 timed fluency. Click Start, then answer as many as you can in 60 seconds. Answers lock in automatically when time is up.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">7 × 8</span><input autocomplete="off" class="fluency-input" data-answer="56" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 9</span><input autocomplete="off" class="fluency-input" data-answer="54" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 9</span><input autocomplete="off" class="fluency-input" data-answer="81" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 7</span><input autocomplete="off" class="fluency-input" data-answer="56" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">11 × 5</span><input autocomplete="off" class="fluency-input" data-answer="55" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">12 × 6</span><input autocomplete="off" class="fluency-input" data-answer="72" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 7</span><input autocomplete="off" class="fluency-input" data-answer="49" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 6</span><input autocomplete="off" class="fluency-input" data-answer="54" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 8</span><input autocomplete="off" class="fluency-input" data-answer="64" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 7</span><input autocomplete="off" class="fluency-input" data-answer="42" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">72 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">63 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="7" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">56 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">48 ÷ 6</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">81 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">96 ÷ 12</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">45 ÷ 5</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">64 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">88 ÷ 11</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">54 ÷ 6</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" disabled="" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Mixed Multiplication &amp; Division — One-Minute Check)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
 <p>Hazel takes lead — bar models are her thing, and every word problem starts with a bar. Atlas reads the story carefully. Felix computes. Cora checks reasonableness.</p>
 <div class="bubble-row">
@@ -383,8 +444,8 @@
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Story types:</strong> Story 1 = <strong>forward</strong> (whole given, find a part). Story 2 = <strong>inverse</strong> (part given, find the whole). Story 3 = <strong>other part</strong> (find whole minus <span class="frac"><span class="num">5</span><span class="den">8</span></span>).</div>
-<div class="journal-label">✏️ What clue tells you which type? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: Forward inverse other-part" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-08-07-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.08.07</div><div class="video-wrap-title">Three story types</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-08-07_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "Three types. FORWARD: you have the whole, find a part. INVERSE: you have a part, find the whole. OTHER PART: subtract from the whole. The bar model handles all three — it's the SAME picture, you just shade or label different parts." Frame: <strong>Read carefully. The bar shows what you know and what you need.</strong></div><div class="video-placeholder-id"><!-- slot: lesson-readiness-feedback --></div></div></div></div>
+<div class="journal-label">✏️ What clue tells you which type? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: Forward inverse other-part" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Same numbers, two different stories.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">📐</span><p><strong>Story A:</strong> A pool has 40 gallons. <span class="frac"><span class="num">3</span><span class="den">8</span></span> of the water is salt water. How many gallons of salt water?</p><p><strong>Story B:</strong> A pool contains 40 gallons of fresh water. <span class="frac"><span class="num">3</span><span class="den">8</span></span> of all the water (fresh + salt combined) is fresh water. How many gallons TOTAL?</p></div>
 <p>Which one is forward? Which one is inverse?</p>
@@ -395,11 +456,10 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>A is forward</strong> (whole = 40, find <span class="frac"><span class="num">3</span><span class="den">8</span></span> of it = 15 gal salt). <strong>B is inverse</strong> (40 = <span class="frac"><span class="num">3</span><span class="den">8</span></span> of whole, so each <span class="frac"><span class="num">1</span><span class="den">8</span></span> = 40÷3... wait, that does not divide evenly! So 40 gallons fresh water as <span class="frac"><span class="num">3</span><span class="den">8</span></span> of the whole means the whole is 40 ÷ <span class="frac"><span class="num">3</span><span class="den">8</span></span> = 40 × <span class="frac"><span class="num">8</span><span class="den">3</span></span> = 106 <span class="frac"><span class="num">2</span><span class="den">3</span></span> gallons. Story B leads to a fraction-answer pool.).</p></div>
 <div class="journal-label">✏️ Why does Story B give a fraction answer? <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think: Pool stories" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think: Pool stories" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">Now you read, sketch, and solve.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-08-07-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-08-07 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-08-07-concept --></div></div></div></div>
 <div aria-label="Daily vocabulary flash cards" class="vocab-section">
 <div class="vocab-section-head">
 <div class="vocab-section-icon">📚</div>
@@ -410,93 +470,89 @@
 </div>
 <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
 <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for forward problem. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">➡️</div><div class="fc-word">forward problem</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">forward problem</div><div class="fc-def">You know the whole. You find a part. "<span class="frac"><span class="num">2</span><span class="den">5</span></span> of 30 = ?"</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for inverse problem. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">⬅️</div><div class="fc-word">inverse problem</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">inverse problem</div><div class="fc-def">You know a part. You find the whole. "30 = <span class="frac"><span class="num">2</span><span class="den">5</span></span> of ?"</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for bar model. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">▮</div><div class="fc-word">bar model</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">bar model</div><div class="fc-def">a rectangle split into equal parts that shows the story. Label what you know; question-mark what you need.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for sense-check. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🔍</div><div class="fc-word">sense-check</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">sense-check</div><div class="fc-def">a quick test that your answer is reasonable. If the part should be smaller than the whole, your answer should be too.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div aria-label="Vocabulary card for forward problem. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">➡️</div><div class="fc-word">forward problem</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">forward problem</div><div class="fc-def">You know the whole. You find a part. "<span class="frac"><span class="num">2</span><span class="den">5</span></span> of 30 = ?"</div><div class="fc-tap-back">tap to flip back</div></div>
 </div>
-<div class="video-wrap" data-video-slot="4-08-07-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.08.07</div><div class="video-wrap-title">Read carefully. Sketch the bar. Solve.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-08-07_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Three story types worked end-to-end. (1) FORWARD: 30 cat teeth, <span class="frac"><span class="num">2</span><span class="den">5</span></span> incisors → 12 incisors. (2) OTHER PART: 24-mile trip, <span class="frac"><span class="num">5</span><span class="den">8</span></span> driven → 9 miles left. (3) INVERSE: 30 nonfiction books = <span class="frac"><span class="num">2</span><span class="den">5</span></span> of all → 75 total books. For each, sketch the bar first. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-concept --></div></div></div></div>
+</div>
+<div aria-label="Vocabulary card for inverse problem. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">⬅️</div><div class="fc-word">inverse problem</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">inverse problem</div><div class="fc-def">You know a part. You find the whole. "30 = <span class="frac"><span class="num">2</span><span class="den">5</span></span> of ?"</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for bar model. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">▮</div><div class="fc-word">bar model</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">bar model</div><div class="fc-def">a rectangle split into equal parts that shows the story. Label what you know; question-mark what you need.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for sense-check. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🔍</div><div class="fc-word">sense-check</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">sense-check</div><div class="fc-def">a quick test that your answer is reasonable. If the part should be smaller than the whole, your answer should be too.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
 <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Pick how many groups to SPLIT the bar into. Then click groups to TAKE them.</p></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#D97706;">📖</div><div><div class="activity-title">Bar-Model Word Solver</div><div class="activity-sub">Read each story. Pick the split. Click piles. Enter the answer.</div></div></div><div class="activity-body"><p>Three real stories. Each one needs a bar model first, then a number answer.</p>
-
 <!-- Story 1: FORWARD — 30 teeth, 2/5 incisors -->
-<div class="wp-card" data-id="1" data-type="forward" data-total="30" data-denom="5" data-numer="2" data-answer="12" style="background:#FFFBEB;border:2px solid #FCD34D;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="wp-card" data-answer="12" data-denom="5" data-id="1" data-numer="2" data-total="30" data-type="forward" style="background:#FFFBEB;border:2px solid #FCD34D;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="background:#fff;border-left:4px solid #D97706;padding:12px 14px;border-radius:8px;margin-bottom:14px;color:#0E1C42;font-family:'Lora',Georgia,serif;font-size:15px;line-height:1.6;">
 <strong>Story 1 · Forward problem.</strong> A cat has 30 teeth. <span class="frac"><span class="num">2</span><span class="den">5</span></span> of them are incisors. How many incisors does the cat have?
 </div>
 <div style="text-align:center;font-size:12px;color:#92400E;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 1 · Pick the split</div>
-<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;" id="wpSplitBtns-1"></div>
+<div id="wpSplitBtns-1" style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;"></div>
 <div style="text-align:center;font-size:12px;color:#92400E;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 2 · Click piles to TAKE the incisors</div>
 <div id="wpBar-1" style="display:flex;justify-content:center;margin-bottom:12px;min-height:60px;"></div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:900;color:#0E1C42;line-height:1.6;margin:8px 0;" id="wpReadout-1">Pick a split to start.</div>
+<div id="wpReadout-1" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:900;color:#0E1C42;line-height:1.6;margin:8px 0;">Pick a split to start.</div>
 <div style="text-align:center;font-size:12px;color:#92400E;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 3 · Type the answer (just the number)</div>
 <div style="display:flex;justify-content:center;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px;">
-<input type="number" id="wpAns-1" placeholder="?" style="border:2px solid #D6D6D6;border-radius:10px;padding:8px 12px;font-size:18px;font-weight:800;text-align:center;width:80px;font-family:'Lora',Georgia,serif;color:#0E1C42;" />
+<input id="wpAns-1" placeholder="?" style="border:2px solid #D6D6D6;border-radius:10px;padding:8px 12px;font-size:18px;font-weight:800;text-align:center;width:80px;font-family:'Lora',Georgia,serif;color:#0E1C42;" type="number"/>
 <button onclick="wpCheck(1)" style="background:#3A6B9A;color:#fff;border:none;border-radius:10px;padding:9px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">✓ Check</button>
 <button onclick="wpReset(1)" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
 <div id="wpStatus-1" style="background:#FDE68A;border:2px solid #FCD34D;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E1C42;font-weight:700;line-height:1.5;text-align:center;">Build the bar, then type how many incisors.</div>
 </div>
-
 <!-- Story 2: OTHER-PART — 24-mile trip, 5/8 driven → 9 left -->
-<div class="wp-card" data-id="2" data-type="other-part" data-total="24" data-denom="8" data-numer="5" data-answer="9" style="background:#FFFBEB;border:2px solid #FCD34D;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="wp-card" data-answer="9" data-denom="8" data-id="2" data-numer="5" data-total="24" data-type="other-part" style="background:#FFFBEB;border:2px solid #FCD34D;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="background:#fff;border-left:4px solid #D97706;padding:12px 14px;border-radius:8px;margin-bottom:14px;color:#0E1C42;font-family:'Lora',Georgia,serif;font-size:15px;line-height:1.6;">
 <strong>Story 2 · Other-part problem.</strong> A trip is 24 miles. Carlos has driven <span class="frac"><span class="num">5</span><span class="den">8</span></span> of it. How many miles does he have LEFT?
 </div>
 <div style="text-align:center;font-size:12px;color:#92400E;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 1 · Pick the split</div>
-<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;" id="wpSplitBtns-2"></div>
+<div id="wpSplitBtns-2" style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;"></div>
 <div style="text-align:center;font-size:12px;color:#92400E;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 2 · Click piles to TAKE the DRIVEN part</div>
 <div id="wpBar-2" style="display:flex;justify-content:center;margin-bottom:12px;min-height:60px;"></div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:900;color:#0E1C42;line-height:1.6;margin:8px 0;" id="wpReadout-2">Pick a split to start.</div>
+<div id="wpReadout-2" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:900;color:#0E1C42;line-height:1.6;margin:8px 0;">Pick a split to start.</div>
 <div style="text-align:center;font-size:12px;color:#92400E;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 3 · Type the miles LEFT</div>
 <div style="display:flex;justify-content:center;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px;">
-<input type="number" id="wpAns-2" placeholder="?" style="border:2px solid #D6D6D6;border-radius:10px;padding:8px 12px;font-size:18px;font-weight:800;text-align:center;width:80px;font-family:'Lora',Georgia,serif;color:#0E1C42;" />
+<input id="wpAns-2" placeholder="?" style="border:2px solid #D6D6D6;border-radius:10px;padding:8px 12px;font-size:18px;font-weight:800;text-align:center;width:80px;font-family:'Lora',Georgia,serif;color:#0E1C42;" type="number"/>
 <button onclick="wpCheck(2)" style="background:#3A6B9A;color:#fff;border:none;border-radius:10px;padding:9px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">✓ Check</button>
 <button onclick="wpReset(2)" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
 <div id="wpStatus-2" style="background:#FDE68A;border:2px solid #FCD34D;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E1C42;font-weight:700;line-height:1.5;text-align:center;">Shade what he drove. The remaining piles = miles left.</div>
 </div>
-
 <!-- Story 3: INVERSE — 30 nonfiction = 2/5 of total -->
-<div class="wp-card" data-id="3" data-type="inverse" data-part="30" data-denom="5" data-numer="2" data-answer="75" style="background:#FFFBEB;border:2px solid #FCD34D;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="wp-card" data-answer="75" data-denom="5" data-id="3" data-numer="2" data-part="30" data-type="inverse" style="background:#FFFBEB;border:2px solid #FCD34D;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="background:#fff;border-left:4px solid #D97706;padding:12px 14px;border-radius:8px;margin-bottom:14px;color:#0E1C42;font-family:'Lora',Georgia,serif;font-size:15px;line-height:1.6;">
 <strong>Story 3 · Inverse problem.</strong> 30 of Asimah's books are nonfiction. That is <span class="frac"><span class="num">2</span><span class="den">5</span></span> of her whole collection. How many books does she have IN ALL?
 </div>
 <div style="text-align:center;font-size:12px;color:#92400E;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 1 · Bar has 5 piles (denominator). 2 are labeled "30 books total"</div>
 <div id="wpBar-3" style="display:flex;justify-content:center;margin-bottom:12px;min-height:80px;"></div>
 <div style="text-align:center;font-size:12px;color:#92400E;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 2 · What is each pile worth? (30 ÷ 2 = ?)</div>
-<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:10px;" id="wpPerPileBtns-3"></div>
+<div id="wpPerPileBtns-3" style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:10px;"></div>
 <div id="wpPerPileFb-3" style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:10px;min-height:18px;"></div>
 <div style="text-align:center;font-size:12px;color:#92400E;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 3 · Type the TOTAL number of books</div>
 <div style="display:flex;justify-content:center;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px;">
-<input type="number" id="wpAns-3" placeholder="?" style="border:2px solid #D6D6D6;border-radius:10px;padding:8px 12px;font-size:18px;font-weight:800;text-align:center;width:80px;font-family:'Lora',Georgia,serif;color:#0E1C42;" />
+<input id="wpAns-3" placeholder="?" style="border:2px solid #D6D6D6;border-radius:10px;padding:8px 12px;font-size:18px;font-weight:800;text-align:center;width:80px;font-family:'Lora',Georgia,serif;color:#0E1C42;" type="number"/>
 <button onclick="wpCheck(3)" style="background:#3A6B9A;color:#fff;border:none;border-radius:10px;padding:9px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">✓ Check</button>
 <button onclick="wpReset(3)" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
 <div id="wpStatus-3" style="background:#FDE68A;border:2px solid #FCD34D;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E1C42;font-weight:700;line-height:1.5;text-align:center;">First find the per-pile value. Then multiply by 5 piles to find the whole.</div>
 </div>
-
 <div class="reveal-box" id="learnReveal"><strong>Stories solved:</strong> 30 cat teeth, <span class="frac"><span class="num">2</span><span class="den">5</span></span> incisors = <strong>12 incisors</strong>. 24-mile trip, <span class="frac"><span class="num">5</span><span class="den">8</span></span> driven = <strong>9 miles left</strong>. 30 nonfiction books = <span class="frac"><span class="num">2</span><span class="den">5</span></span> of total = <strong>75 books total</strong>.</div>
 </div></div>
 <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 Three Story Types</div><p><strong>Forward:</strong> whole given, find a part. Split into denominator-many piles, take numerator-many.</p><p><strong>Other part:</strong> whole given, find what is NOT taken. Total minus the part.</p><p><strong>Inverse:</strong> a part given, find the whole. Divide the part by the numerator to get one pile, then multiply by the denominator.</p></div>
@@ -504,19 +560,19 @@
 <div style="background:#FFFBEB;border:2px solid #FCD34D;border-radius:14px;padding:18px;margin:12px 0;">
 <div style="text-align:center;color:#3A4A6B;font-size:13px;margin-bottom:10px;">Bar is split into 5 piles (denominator). 2 piles shaded = nonfiction = 30 books.</div>
 <div style="display:flex;justify-content:center;margin:8px 0;">
-<svg width="500" height="80" viewBox="0 0 500 80" style="max-width:100%;">
-<rect x="10" y="20" width="92" height="40" fill="#D97706" stroke="#92400E" stroke-width="1.5" rx="3"/>
-<rect x="102" y="20" width="92" height="40" fill="#D97706" stroke="#92400E" stroke-width="1.5" rx="3"/>
-<rect x="200" y="20" width="92" height="40" fill="#FFE4B8" stroke="#92400E" stroke-width="1.5" rx="3"/>
-<rect x="292" y="20" width="92" height="40" fill="#FFE4B8" stroke="#92400E" stroke-width="1.5" rx="3"/>
-<rect x="384" y="20" width="92" height="40" fill="#FFE4B8" stroke="#92400E" stroke-width="1.5" rx="3"/>
-<text x="100" y="14" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="800" font-size="13" fill="#92400E">30 books (nonfiction)</text>
-<line x1="10" y1="6" x2="194" y2="6" stroke="#92400E" stroke-width="1.5"/>
-<text x="56" y="78" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="700" font-size="11" fill="#3A4A6B">pile</text>
-<text x="148" y="78" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="700" font-size="11" fill="#3A4A6B">pile</text>
-<text x="246" y="78" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="700" font-size="11" fill="#3A4A6B">?</text>
-<text x="338" y="78" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="700" font-size="11" fill="#3A4A6B">?</text>
-<text x="430" y="78" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="700" font-size="11" fill="#3A4A6B">?</text>
+<svg height="80" style="max-width:100%;" viewbox="0 0 500 80" width="500">
+<rect fill="#D97706" height="40" rx="3" stroke="#92400E" stroke-width="1.5" width="92" x="10" y="20"></rect>
+<rect fill="#D97706" height="40" rx="3" stroke="#92400E" stroke-width="1.5" width="92" x="102" y="20"></rect>
+<rect fill="#FFE4B8" height="40" rx="3" stroke="#92400E" stroke-width="1.5" width="92" x="200" y="20"></rect>
+<rect fill="#FFE4B8" height="40" rx="3" stroke="#92400E" stroke-width="1.5" width="92" x="292" y="20"></rect>
+<rect fill="#FFE4B8" height="40" rx="3" stroke="#92400E" stroke-width="1.5" width="92" x="384" y="20"></rect>
+<text fill="#92400E" font-family="Nunito,sans-serif" font-size="13" font-weight="800" text-anchor="middle" x="100" y="14">30 books (nonfiction)</text>
+<line stroke="#92400E" stroke-width="1.5" x1="10" x2="194" y1="6" y2="6"></line>
+<text fill="#3A4A6B" font-family="Nunito,sans-serif" font-size="11" font-weight="700" text-anchor="middle" x="56" y="78">pile</text>
+<text fill="#3A4A6B" font-family="Nunito,sans-serif" font-size="11" font-weight="700" text-anchor="middle" x="148" y="78">pile</text>
+<text fill="#3A4A6B" font-family="Nunito,sans-serif" font-size="11" font-weight="700" text-anchor="middle" x="246" y="78">?</text>
+<text fill="#3A4A6B" font-family="Nunito,sans-serif" font-size="11" font-weight="700" text-anchor="middle" x="338" y="78">?</text>
+<text fill="#3A4A6B" font-family="Nunito,sans-serif" font-size="11" font-weight="700" text-anchor="middle" x="430" y="78">?</text>
 </svg>
 </div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px;">
@@ -538,7 +594,7 @@
 <textarea class="journal-box" data-label="Learn — Socratic: inverse whole bigger" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: A Two-Step Story</div><div class="activity-sub">Mia's jug — pour, then ask what is left.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Mia's jug holds 4 liters of water. She pours 10 cups, and each cup holds <span class="frac"><span class="num">1</span><span class="den">3</span></span> liter. <strong>(a)</strong> How many liters did she pour? <strong>(b)</strong> How much water is LEFT in the jug?</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
-<div class="video-wrap" data-video-slot="4-08-07-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.08.07</div><div class="video-wrap-title">Pour, then subtract — what is left?</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-08-07_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Atlas reads. Hazel sketches: a bar showing 4 liters. Felix: 10 × <span class="frac"><span class="num">1</span><span class="den">3</span></span> = <span class="frac"><span class="num">10</span><span class="den">3</span></span> = 3 <span class="frac"><span class="num">1</span><span class="den">3</span></span> liters poured. Cora: 4 − 3 <span class="frac"><span class="num">1</span><span class="den">3</span></span> = <span class="frac"><span class="num">2</span><span class="den">3</span></span> liter left. Frame: <strong>Two steps: pour amount, then subtract from the whole.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-08-07-example --></div></div></div></div>
+
 <div style="background:#FFFBEB;border:2px solid #FCD34D;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.9;font-size:16px;">
 <strong>Step 1.</strong> Poured: 10 × <span class="frac"><span class="num">1</span><span class="den">3</span></span> = 10/3. Resolve: <span style="color:#D97706;font-weight:900;">3 <span class="frac"><span class="num">1</span><span class="den">3</span></span> liters</span>.<br/>
@@ -559,66 +615,59 @@
 <div class="callout callout-info"><span class="callout-icon">📖</span><p>Three more stories. Sketch each bar, then solve.</p></div>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Each round:</strong> Pick the right split. Click to model. Type the answer. Check.</p></div>
 <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Re-read the story. Ask: do I have the whole, or a part?</p></div>
-
 <!-- P1: forward — balloons -->
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#D97706;">1</div><div><div class="activity-title">Story 1 — Balloons</div><div class="activity-sub">Forward: whole given, find a part.</div></div><span class="activity-time" style="background:#D97706;">~5 min</span></div><div class="activity-body">
-<div class="wp-card" data-id="p1" data-type="forward" data-total="24" data-denom="6" data-numer="5" data-answer="20" style="background:#FFFBEB;border:2px solid #FCD34D;border-radius:14px;padding:14px;margin:14px 0;">
+<div class="wp-card" data-answer="20" data-denom="6" data-id="p1" data-numer="5" data-total="24" data-type="forward" style="background:#FFFBEB;border:2px solid #FCD34D;border-radius:14px;padding:14px;margin:14px 0;">
 <div style="background:#fff;border-left:4px solid #D97706;padding:12px 14px;border-radius:8px;margin-bottom:12px;color:#0E1C42;font-family:'Lora',Georgia,serif;font-size:14px;line-height:1.6;"><strong>Jo bought 24 balloons.</strong> <span class="frac"><span class="num">5</span><span class="den">6</span></span> of them were red. How many red balloons?</div>
-<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:10px;" id="wpSplitBtns-p1"></div>
+<div id="wpSplitBtns-p1" style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:10px;"></div>
 <div id="wpBar-p1" style="display:flex;justify-content:center;margin-bottom:12px;min-height:60px;"></div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:15px;font-weight:900;color:#0E1C42;margin:6px 0;" id="wpReadout-p1">Pick a split.</div>
+<div id="wpReadout-p1" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:15px;font-weight:900;color:#0E1C42;margin:6px 0;">Pick a split.</div>
 <div style="display:flex;justify-content:center;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px;">
-<input type="number" id="wpAns-p1" placeholder="?" style="border:2px solid #D6D6D6;border-radius:10px;padding:7px 10px;font-size:16px;font-weight:800;text-align:center;width:80px;font-family:'Lora',Georgia,serif;color:#0E1C42;" />
+<input id="wpAns-p1" placeholder="?" style="border:2px solid #D6D6D6;border-radius:10px;padding:7px 10px;font-size:16px;font-weight:800;text-align:center;width:80px;font-family:'Lora',Georgia,serif;color:#0E1C42;" type="number"/>
 <button onclick="wpCheck('p1')" style="background:#3A6B9A;color:#fff;border:none;border-radius:8px;padding:7px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;font-size:13px;">✓ Check</button>
 <button onclick="wpReset('p1')" style="background:#E07B39;color:#fff;border:none;border-radius:8px;padding:7px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;font-size:13px;">↺</button>
 </div>
 <div id="wpStatus-p1" style="background:#FDE68A;border:2px solid #FCD34D;border-radius:10px;padding:9px 12px;font-size:13px;color:#0E1C42;font-weight:700;text-align:center;">Sketch, then answer.</div>
 </div>
 </div></div>
-
 <!-- P2: other-part — chocolate -->
 <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Story 2 — Chocolate Bar</div><div class="activity-sub">Other-part: find what is left.</div></div></div><div class="activity-body">
-<div class="wp-card" data-id="p2" data-type="other-part" data-total="12" data-denom="4" data-numer="1" data-answer="9" style="background:#FFFBEB;border:2px solid #FCD34D;border-radius:14px;padding:14px;margin:14px 0;">
+<div class="wp-card" data-answer="9" data-denom="4" data-id="p2" data-numer="1" data-total="12" data-type="other-part" style="background:#FFFBEB;border:2px solid #FCD34D;border-radius:14px;padding:14px;margin:14px 0;">
 <div style="background:#fff;border-left:4px solid #D97706;padding:12px 14px;border-radius:8px;margin-bottom:12px;color:#0E1C42;font-family:'Lora',Georgia,serif;font-size:14px;line-height:1.6;"><strong>A 12-square chocolate bar.</strong> Mia ate <span class="frac"><span class="num">1</span><span class="den">4</span></span> of it. How many squares are LEFT?</div>
-<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:10px;" id="wpSplitBtns-p2"></div>
+<div id="wpSplitBtns-p2" style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:10px;"></div>
 <div id="wpBar-p2" style="display:flex;justify-content:center;margin-bottom:12px;min-height:60px;"></div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:15px;font-weight:900;color:#0E1C42;margin:6px 0;" id="wpReadout-p2">Pick a split.</div>
+<div id="wpReadout-p2" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:15px;font-weight:900;color:#0E1C42;margin:6px 0;">Pick a split.</div>
 <div style="display:flex;justify-content:center;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px;">
-<input type="number" id="wpAns-p2" placeholder="?" style="border:2px solid #D6D6D6;border-radius:10px;padding:7px 10px;font-size:16px;font-weight:800;text-align:center;width:80px;font-family:'Lora',Georgia,serif;color:#0E1C42;" />
+<input id="wpAns-p2" placeholder="?" style="border:2px solid #D6D6D6;border-radius:10px;padding:7px 10px;font-size:16px;font-weight:800;text-align:center;width:80px;font-family:'Lora',Georgia,serif;color:#0E1C42;" type="number"/>
 <button onclick="wpCheck('p2')" style="background:#3A6B9A;color:#fff;border:none;border-radius:8px;padding:7px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;font-size:13px;">✓ Check</button>
 <button onclick="wpReset('p2')" style="background:#E07B39;color:#fff;border:none;border-radius:8px;padding:7px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;font-size:13px;">↺</button>
 </div>
 <div id="wpStatus-p2" style="background:#FDE68A;border:2px solid #FCD34D;border-radius:10px;padding:9px 12px;font-size:13px;color:#0E1C42;font-weight:700;text-align:center;">Shade what she ate. Count what is left.</div>
 </div>
 </div></div>
-
 <!-- P3: inverse — gerbils -->
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#D97706;">3</div><div><div class="activity-title">Story 3 — Gerbils</div><div class="activity-sub">Inverse: part given, find the whole.</div></div></div><div class="activity-body">
-<div class="wp-card" data-id="p3" data-type="inverse" data-part="9" data-denom="4" data-numer="3" data-answer="12" style="background:#FFFBEB;border:2px solid #FCD34D;border-radius:14px;padding:14px;margin:14px 0;">
+<div class="wp-card" data-answer="12" data-denom="4" data-id="p3" data-numer="3" data-part="9" data-type="inverse" style="background:#FFFBEB;border:2px solid #FCD34D;border-radius:14px;padding:14px;margin:14px 0;">
 <div style="background:#fff;border-left:4px solid #D97706;padding:12px 14px;border-radius:8px;margin-bottom:12px;color:#0E1C42;font-family:'Lora',Georgia,serif;font-size:14px;line-height:1.6;"><strong>Sammy has 9 baby gerbils.</strong> They are <span class="frac"><span class="num">3</span><span class="den">4</span></span> of all the gerbils in the shop. How many gerbils are in the shop in all?</div>
 <div id="wpBar-p3" style="display:flex;justify-content:center;margin-bottom:12px;min-height:80px;"></div>
 <div style="text-align:center;font-size:12px;color:#92400E;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">What is each pile worth? (9 ÷ 3 = ?)</div>
-<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:10px;" id="wpPerPileBtns-p3"></div>
+<div id="wpPerPileBtns-p3" style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:10px;"></div>
 <div id="wpPerPileFb-p3" style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:10px;min-height:18px;"></div>
 <div style="display:flex;justify-content:center;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px;">
-<input type="number" id="wpAns-p3" placeholder="?" style="border:2px solid #D6D6D6;border-radius:10px;padding:7px 10px;font-size:16px;font-weight:800;text-align:center;width:80px;font-family:'Lora',Georgia,serif;color:#0E1C42;" />
+<input id="wpAns-p3" placeholder="?" style="border:2px solid #D6D6D6;border-radius:10px;padding:7px 10px;font-size:16px;font-weight:800;text-align:center;width:80px;font-family:'Lora',Georgia,serif;color:#0E1C42;" type="number"/>
 <button onclick="wpCheck('p3')" style="background:#3A6B9A;color:#fff;border:none;border-radius:8px;padding:7px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;font-size:13px;">✓ Check</button>
 <button onclick="wpReset('p3')" style="background:#E07B39;color:#fff;border:none;border-radius:8px;padding:7px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;font-size:13px;">↺</button>
 </div>
 <div id="wpStatus-p3" style="background:#FDE68A;border:2px solid #FCD34D;border-radius:10px;padding:9px 12px;font-size:13px;color:#0E1C42;font-weight:700;text-align:center;">Each pile = 9 ÷ 3 = 3. Then 4 piles total = ?</div>
 </div>
 </div></div>
-
 <div class="tab-next-wrap"><p class="tab-transition-voice">Three stories built. Now show it.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">For each story, sketch a bar model on scratch paper, then write your final answer.</div></div></div><div class="activity-body"><p>For each: sketch the bar, label what you know, decide forward / other-part / inverse, then solve.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Do the denominators MATCH? Or do I need to rename one or both? Or is a benchmark (<span class="frac"><span class="num">1</span><span class="den">2</span></span>, 1) faster?</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Forward stories.</strong> Whole given, find a part.<br/>(a) A class has 28 kids. <span class="frac"><span class="num">3</span><span class="den">4</span></span> ride the bus. How many ride?<br/>(b) Sammy collected 35 shells. <span class="frac"><span class="num">2</span><span class="den">5</span></span> are pink. How many pink?<br/>(c) Eli ran 18 miles this week. <span class="frac"><span class="num">5</span><span class="den">9</span></span> was on Saturday. How many Saturday miles?</p><div class="journal-label">✏️ My answers + my bar sketches in words <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: Forward stories" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-
 <div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Cat teeth — Unit 8 closer.</strong> A cat has 30 teeth. <span class="frac"><span class="num">2</span><span class="den">5</span></span> are incisors. The REST are canines and molars. (a) How many incisors? (b) How many are NOT incisors? (c) Sketch a bar model that shows both answers.</p><div class="journal-label">✏️ Both answers + bar sketch in words <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: Cat teeth" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
-
-
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#D97706;"><div class="activity-head"><div class="activity-num" style="background:#D97706;color:#fff;">🗺️</div><div><div class="activity-title">Unit 7 Complete — Where This Goes Next</div><div class="activity-sub">Looking ahead</div></div></div><div class="activity-body"><p>You've compared and ordered fractions that all fit between 0 and 1.</p><p>Next lesson: <strong>Improper Fractions and Mixed Numbers.</strong> What if the top is BIGGER than the bottom? <span class="frac"><span class="num">8</span><span class="den">5</span></span> of a pie isn't just half — it's a WHOLE pie plus some extra. That's an improper fraction, and it can also be written as a mixed number (1 <span class="frac"><span class="num">3</span><span class="den">5</span></span>).</p><p>The big question opening 6.03: <em>How do you show a fraction that's more than 1 whole?</em></p></div></div></div></div>
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed all 6 problems above.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed both column subtractions on every problem.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed the borrow step whenever the fraction column needed it and simplified at the end.</span></div></div></div>
@@ -1330,4 +1379,74 @@ if(typeof window !== 'undefined'){
     setTimeout(wpInitAll, 0);
   }
 }
-</script></body></html>
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = true;
+var FLUENCY_TITLE = "Mixed Multiplication & Division — One-Minute Check";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
+</script>
+</body></html>

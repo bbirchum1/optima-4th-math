@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Optima Academy Online — Grade 4 Math Lesson 4.04.05</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
@@ -306,25 +307,51 @@
 .bubble-text{font-size:14.5px;color:#0E1C42;line-height:1.5;font-weight:600;font-family:'Lora',Georgia,serif;font-style:italic}
 @media(max-width:620px){.bubble{flex:1 1 100%;max-width:100%}}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
 <div class="progress-wrap"><span class="progress-label">📐 Lesson Progress</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><span class="progress-pct" id="progressPct">0%</span></div>
 <div class="header">
-  <div class="header-brand">
-    <div class="header-logo">
-      <img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" />
-    </div>
-    <div>
-      <div class="header-org">Optima Academy Online</div>
-      <div class="header-sub">An Education Experience Company</div>
-    </div>
-  </div>
-  <div class="header-title"><em>Multiplying by a 2-Digit Number</em> — Part 1: partial products</div>
-  <div class="header-badge">
-    <span class="header-badge-icon">🦉</span>
-    <span class="header-badge-text">Lesson 4.04.05</span>
-  </div>
+<div class="header-brand">
+<div class="header-logo">
+<img alt="Optima Academy" src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png"/>
+</div>
+<div>
+<div class="header-org">Optima Academy Online</div>
+<div class="header-sub">An Education Experience Company</div>
+</div>
+</div>
+<div class="header-title"><em>Multiplying by a 2-Digit Number</em> — Part 1: partial products</div>
+<div class="header-badge">
+<span class="header-badge-icon">🦉</span>
+<span class="header-badge-text">Lesson 4.04.05</span>
+</div>
 </div>
 <div class="quote-strip"><div class="quote-strip-text">"537 × 28 = 537 × 20 + 537 × 8. Split the 2-digit factor into tens and ones, multiply each separately, then add. Partial products."</div><div class="quote-strip-attr">2-Digit Multiplication Big Idea</div></div>
 <div class="info-strip"><div class="info-cell"><div class="info-icon" style="background:#F0E8FF;">🧭</div><div><div class="info-label">Unit</div><div class="info-value">Unit 4</div><div class="info-detail">Multiplication</div></div></div><div class="info-cell"><div class="info-icon" style="background:#E3F8ED;">📅</div><div><div class="info-label">Lesson</div><div class="info-value">4.04.05</div><div class="info-detail">U4 Extend</div></div></div><div class="info-cell"><div class="info-icon" style="background:#EAF0FF;">📐</div><div><div class="info-label">Standard</div><div class="info-value">MA.4.NSO.2.3</div><div class="info-detail">Multiply by a 2-digit number</div></div></div><div class="info-cell"><div class="info-icon" style="background:#FFF8E6;">🔢</div><div><div class="info-label">Focus</div><div class="info-value">Partial products</div><div class="info-detail">MTR.2.1 · MTR.5.1</div></div></div></div>
@@ -332,22 +359,45 @@
 <div class="intro-2col"><div class="intro-card theme-question"><div class="intro-card-head"><div class="intro-card-head-icon">❓</div><div><div class="intro-card-head-label">Essential Question</div><div class="intro-card-head-title">How does multiplying by 28 break apart into TWO multiplications you already know how to do?</div></div></div><div class="intro-card-body"><p>28 = 20 + 8. So 537 × 28 = 537 × 20 + 537 × 8 = 10,740 + 4,296 = <strong>15,036</strong>.</p><p>Yesterday: × 20 (multiple of 10). Day before: × 8 (1-digit). Today: those two skills combine. Multiply by the tens piece, multiply by the ones piece, then ADD.</p></div></div><div class="intro-card theme-objectives"><div class="intro-card-head"><div class="intro-card-head-icon">🎯</div><div><div class="intro-card-head-label">Today's Objectives</div><div class="intro-card-head-title">You will…</div></div></div><div class="intro-card-body"><div class="obj-line"><span class="obj-icon">✂️</span><span><strong>Split</strong> a 2-digit factor into its tens and ones (28 = 20 + 8).</span></div><div class="obj-line"><span class="obj-icon">📐</span><span><strong>Find two partial products</strong> — one for the tens, one for the ones.</span></div><div class="obj-line"><span class="obj-icon">➕</span><span><strong>Add</strong> the partial products to get the final answer.</span></div></div></div></div>
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
-
 <div class="tab-panel active" id="tab-warmup">
-  <div class="video-wrap" data-video-slot="4-04-05-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.04.05</div><div class="video-wrap-title">Split 28 = 20 + 8. Multiply each. Add.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-04-05_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write <strong>537 × 28</strong>. "A 2-digit factor that's NOT a multiple of 10. Yesterday's trick won't work directly. But it works in PARTS." Split: "28 = 20 + 8. So 537 × 28 = 537 × 20 + 537 × 8." Compute each piece. <strong>Step 1 — multiply by the ones piece:</strong> 537 × 8. Walk it: 7×8=56 (write 6 carry 5), 3×8=24+5=29 (write 9 carry 2), 5×8=40+2=42. Answer: 4,296. Write below the line. <strong>Step 2 — multiply by the tens piece:</strong> 537 × 20. Use yesterday's trick: 537 × 2 = 1,074, then × 10 = 10,740. Write below 4,296 (or below the line — these are the two PARTIAL PRODUCTS). <strong>Step 3 — add:</strong> 4,296 + 10,740 = <strong>15,036</strong>. Frame: "The two partial products live one above the other — one for the ones, one for the tens. They both got their place values right (the tens product is bigger because it's really 537 × 20, not 537 × 2). Add to finish." Estimate-check: 500 × 30 = 15,000. Our 15,036 is right there. ✓ Tone: connective — bringing yesterday's ×10 trick into the bigger algorithm. (~2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-02-welcome --></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
-    <p>Today the crew chains two skills together: 1-digit × multi-digit (from L02/L03) and ×multiple-of-10 (from yesterday). Two partial products, added.</p>
-    <div class="bubble-row">
-      <div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — splits the 2-digit factor</div><div class="bubble-text">"My job: split 28 into 20 + 8 — the tens piece and the ones piece. Then I multiply by each piece separately."</div></div></div>
-      <div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — handles the ones partial product</div><div class="bubble-text">"I take care of the ONES piece: 537 × 8 = 4,296. Standard 1-digit times multi-digit. Carries and all."</div></div></div>
-    </div>
-    <div class="bubble-row">
-      <div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — handles the tens partial product</div><div class="bubble-text">"I take care of the TENS piece: 537 × 20 = 10,740. Yesterday's trick — multiply by 2, shift left."</div></div></div>
-      <div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — divides to check</div><div class="bubble-text">"To check if a number IS a multiple of 4, I divide. 28 ÷ 4 = 7 with no remainder → yes, multiple. 30 ÷ 4 = 7 r 2 → no, not a multiple."</div></div></div>
-    </div>
-    <div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>Cora's rule for partial products: <em>two pieces, two products, one sum. The TENS partial product is always bigger — make sure you wrote it in the right place.</em></p></div>
-  </div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Build the Partial Products</div><div class="activity-sub">Each problem asks for one piece of a 2-digit multiplication. Compute the piece.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>For each, compute one partial product. These are the building blocks for 2-digit multiplication.</p>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Two-Digit × One-Digit</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">24 × 6</span><input autocomplete="off" class="fluency-input" data-answer="144" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">35 × 8</span><input autocomplete="off" class="fluency-input" data-answer="280" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">46 × 7</span><input autocomplete="off" class="fluency-input" data-answer="322" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">52 × 9</span><input autocomplete="off" class="fluency-input" data-answer="468" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">38 × 4</span><input autocomplete="off" class="fluency-input" data-answer="152" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">27 × 6</span><input autocomplete="off" class="fluency-input" data-answer="162" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">63 × 5</span><input autocomplete="off" class="fluency-input" data-answer="315" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">74 × 3</span><input autocomplete="off" class="fluency-input" data-answer="222" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">48 × 7</span><input autocomplete="off" class="fluency-input" data-answer="336" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">56 × 9</span><input autocomplete="off" class="fluency-input" data-answer="504" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Two-Digit × One-Digit)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
+<p>Today the crew chains two skills together: 1-digit × multi-digit (from L02/L03) and ×multiple-of-10 (from yesterday). Two partial products, added.</p>
+<div class="bubble-row">
+<div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — splits the 2-digit factor</div><div class="bubble-text">"My job: split 28 into 20 + 8 — the tens piece and the ones piece. Then I multiply by each piece separately."</div></div></div>
+<div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — handles the ones partial product</div><div class="bubble-text">"I take care of the ONES piece: 537 × 8 = 4,296. Standard 1-digit times multi-digit. Carries and all."</div></div></div>
+</div>
+<div class="bubble-row">
+<div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — handles the tens partial product</div><div class="bubble-text">"I take care of the TENS piece: 537 × 20 = 10,740. Yesterday's trick — multiply by 2, shift left."</div></div></div>
+<div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — divides to check</div><div class="bubble-text">"To check if a number IS a multiple of 4, I divide. 28 ÷ 4 = 7 with no remainder → yes, multiple. 30 ÷ 4 = 7 r 2 → no, not a multiple."</div></div></div>
+</div>
+<div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>Cora's rule for partial products: <em>two pieces, two products, one sum. The TENS partial product is always bigger — make sure you wrote it in the right place.</em></p></div>
+</div></div>
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Build the Partial Products</div><div class="activity-sub">Each problem asks for one piece of a 2-digit multiplication. Compute the piece.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>For each, compute one partial product. These are the building blocks for 2-digit multiplication.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:grid;gap:14px;">
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
@@ -378,16 +428,16 @@
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Answers:</strong> 537 × 8 = <strong>4,296</strong> (ones partial). 537 × 20 = <strong>10,740</strong> (tens partial). Sum = <strong>15,036</strong>. These three numbers ARE the 2-digit multiplication 537 × 28. The whole product = ones partial + tens partial.</div>
-<div class="journal-label">✏️ Notice the three numbers above: 4,296 + 10,740 = 15,036. The first is 537 × 8 (ones). The second is 537 × 20 (tens). The sum is 537 × 28. Why does adding the ones-piece and tens-piece give the total product? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: Why two partial products add to the full product" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-04-05-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.04.05</div><div class="video-wrap-title">Two partials, one sum</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-04-05_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk each. <strong>537 × 8:</strong> Column algorithm. Ones 7×8=56 (carry 5), tens 3×8=24+5=29 (carry 2), hundreds 5×8=40+2=42. Answer: <strong>4,296</strong>. That's the ONES partial product for 537 × 28. <strong>537 × 20:</strong> Use yesterday's trick. 537 × 2 = 1,074. Then × 10 → <strong>10,740</strong>. That's the TENS partial product. <strong>4,296 + 10,740:</strong> Stack and add. Ones 6+0=6, tens 9+4=13 (carry 1), hundreds 2+7+1=10 (carry 1), thousands 4+0+1=5, ten-thousands 0+1=1. Sum: <strong>15,036</strong>. That's the full 537 × 28 product. Pause. "Why does this work? Because 28 = 20 + 8. Multiplying by 28 = multiplying by 20 AND by 8. So the answer is the sum of those two products." Tone: building the algorithm from its pieces. (~1-2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-02-readiness-feedback --></div></div></div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
+<div class="journal-label">✏️ Notice the three numbers above: 4,296 + 10,740 = 15,036. The first is 537 × 8 (ones). The second is 537 × 20 (tens). The sum is 537 × 28. Why does adding the ones-piece and tens-piece give the total product? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: Why two partial products add to the full product" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">🩹</span><p>A nurse uses <strong>275 bandages</strong> per shift. Over <strong>14 shifts</strong>, how many bandages does she use? (Hint: 14 = 10 + 4. So 275 × 14 = 275 × 10 + 275 × 4.)</p></div>
 <div class="number-talk-visual">
 <div class="number-talk-prompt">275 × 4 = 1,100 (ones partial). 275 × 10 = 2,750 (tens partial). Sum: 1,100 + 2,750 = 3,850.</div>
 <div class="visual-equation" style="font-size:22px;letter-spacing:1px;">275 × 14 = 275 × 10 + 275 × 4 = 2,750 + 1,100 = 3,850.</div>
 <div class="notice-wonder-grid">
-<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" id="journal-notice" data-label="Warm-Up — Notice: What I notice about the bandage problem" placeholder="" oninput="autoSave(this,'dot-notice')" style="min-height:60px;"></textarea></div>
-<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" id="journal-wonder" data-label="Warm-Up — Wonder: What I wonder about two partial products" placeholder="" oninput="autoSave(this,'dot-wonder')" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" data-label="Warm-Up — Notice: What I notice about the bandage problem" id="journal-notice" oninput="autoSave(this,'dot-notice')" placeholder="" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" data-label="Warm-Up — Wonder: What I wonder about two partial products" id="journal-wonder" oninput="autoSave(this,'dot-wonder')" placeholder="" style="min-height:60px;"></textarea></div>
 </div>
 </div>
 <p><strong>Predict:</strong> Without computing exactly, estimate 275 × 14. Round 14 to 10, multiply, then adjust. Pick the closest.</p>
@@ -397,52 +447,51 @@
 <button class="strategy-chip" onclick="this.classList.toggle('selected')">about 3,850</button>
 <button class="strategy-chip" onclick="this.classList.toggle('selected')">about 5,500</button>
 </div>
-<div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>Before you predict, ask yourself:</strong> 275 × 10 = 2,750. 275 × 14 will be a bit more — because 14 > 10. Specifically: 2,750 + (275 × 4) = 2,750 + 1,100 = 3,850.</p></div>
+<div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>Before you predict, ask yourself:</strong> 275 × 10 = 2,750. 275 × 14 will be a bit more — because 14 &gt; 10. Specifically: 2,750 + (275 × 4) = 2,750 + 1,100 = 3,850.</p></div>
 <div class="journal-label">✏️ My estimate and reasoning: I think 275 × 14 ≈ ___. Why? Show my partial-product setup. <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think Prompt: Estimate 275 × 14 with partial products" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think Prompt: Estimate 275 × 14 with partial products" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">You set up the partial products. Now let's see the full method — area model and the standard stacked algorithm side by side.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
-  <div class="vocab-section" aria-label="Daily vocabulary flash cards">
-  <div class="vocab-section-head">
-    <div class="vocab-section-icon">📚</div>
-    <div>
-      <div class="vocab-section-label">Daily Vocabulary</div>
-      <div class="vocab-section-title">Tap to Build Today’s Math Language</div>
-    </div>
-  </div>
-  <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
-  <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for partial product. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🧩</div><div class="fc-word">partial product</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">partial product</div><div class="fc-def">one of the two products created by splitting a 2-digit factor. For 537 × 28: ones partial = 537 × 8 = 4,296; tens partial = 537 × 20 = 10,740. Add them = full product.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for split factor. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">✂️</div><div class="fc-word">split factor</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">split factor</div><div class="fc-def">break a 2-digit factor into its tens and ones. 28 = 20 + 8. Now you can multiply each piece separately.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for ones partial. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">1️⃣</div><div class="fc-word">ones partial</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">ones partial product</div><div class="fc-def">the product of the multi-digit number × the ONES digit of the 2-digit factor. For 537 × 28: 537 × 8 = 4,296. Goes on the top row of the addition.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for tens partial. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🔟</div><div class="fc-word">tens partial</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">tens partial product</div><div class="fc-def">the product of the multi-digit number × the TENS piece of the 2-digit factor (the tens digit × 10). For 537 × 28: 537 × 20 = 10,740. Always shifted one place left.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-04-05-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-04-05 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-04-05-concept --></div></div></div></div>
+<div aria-label="Daily vocabulary flash cards" class="vocab-section">
+<div class="vocab-section-head">
+<div class="vocab-section-icon">📚</div>
+<div>
+<div class="vocab-section-label">Daily Vocabulary</div>
+<div class="vocab-section-title">Tap to Build Today’s Math Language</div>
 </div>
-<div class="video-wrap" data-video-slot="4-04-05-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.04.05</div><div class="video-wrap-title">Two partial products for any 2-digit multiplication</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-04-05_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Work <strong>537 × 28</strong> three ways: area model, partial products written out, and the standard stacked algorithm. <strong>Area model.</strong> Draw a rectangle. Across top: 500 + 30 + 7 (place pieces of 537). Down side: 20 + 8 (place pieces of 28). Six cells. Fill: 500×20=10,000. 30×20=600. 7×20=140. 500×8=4,000. 30×8=240. 7×8=56. Sum: 10,000 + 600 + 140 + 4,000 + 240 + 56 = <strong>15,036</strong>. "Six pieces add to the product. The area model SHOWS you everything that happens." <strong>Partial products method (simpler).</strong> Stack 537 over 28. Multiply by ones first: 537 × 8 = 4,296. Write below. Multiply by tens: 537 × 20 = 10,740. Write below. Add: 15,036. "Two partial products. One sum. Same answer as the area model — just compacted." <strong>Standard algorithm.</strong> Same stack. "Ones row: 537 × 8 = 4,296. Tens row: 537 × 2 = 1,074 — but written SHIFTED one place left (because we're really doing × 20). Add the two rows: 4,296 + 10,740 = 15,036." Identical to partial products. Pause. "The shift-left of the second row IS the × 10 from yesterday. The standard algorithm hides it by just shifting the digits." Estimate check: 500 × 30 = 15,000. Our answer 15,036 is right there. ✓ Tone: connective — three views of the same product, building from yesterday's tools. (~3 min)</div><div class="video-placeholder-id"><!-- slot: 4-04-05-concept --></div></div></div></div>
-  <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Three 2-digit products. Compute each via partial products. The estimate is given.</p></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🎯</div><div><div class="activity-title">Partial Products Picker</div><div class="activity-sub">Two partial products per problem, then sum.</div></div></div><div class="activity-body"><p>For each, find the product using partial products. Estimate first to predict the range.</p>
+</div>
+<p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
+<div class="vocab-grid">
+<div aria-label="Vocabulary card for partial product. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🧩</div><div class="fc-word">partial product</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">partial product</div><div class="fc-def">one of the two products created by splitting a 2-digit factor. For 537 × 28: ones partial = 537 × 8 = 4,296; tens partial = 537 × 20 = 10,740. Add them = full product.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for split factor. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">✂️</div><div class="fc-word">split factor</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">split factor</div><div class="fc-def">break a 2-digit factor into its tens and ones. 28 = 20 + 8. Now you can multiply each piece separately.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for ones partial. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">1️⃣</div><div class="fc-word">ones partial</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">ones partial product</div><div class="fc-def">the product of the multi-digit number × the ONES digit of the 2-digit factor. For 537 × 28: 537 × 8 = 4,296. Goes on the top row of the addition.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for tens partial. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🔟</div><div class="fc-word">tens partial</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">tens partial product</div><div class="fc-def">the product of the multi-digit number × the TENS piece of the 2-digit factor (the tens digit × 10). For 537 × 28: 537 × 20 = 10,740. Always shifted one place left.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Three 2-digit products. Compute each via partial products. The estimate is given.</p></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🎯</div><div><div class="activity-title">Partial Products Picker</div><div class="activity-sub">Two partial products per problem, then sum.</div></div></div><div class="activity-body"><p>For each, find the product using partial products. Estimate first to predict the range.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:18px 14px;margin:12px 0;">
 <div style="margin-bottom:18px;">
 <div style="font-family:'Lora',Georgia,serif;font-size:22px;font-weight:900;color:#0E1C42;text-align:center;margin-bottom:8px;"><strong>649 × 15</strong></div>
@@ -475,8 +524,8 @@
 </div>
 <div class="reveal-box" id="learnReveal"><strong>Products:</strong> 649 × 15 = <strong>9,735</strong> (649×5=3,245; 649×10=6,490; sum 9,735). 512 × 72 = <strong>36,864</strong> (512×2=1,024; 512×70=35,840; sum 36,864). 845 × 62 = <strong>52,390</strong> (845×2=1,690; 845×60=50,700; sum 52,390). Always: ones partial + tens partial = full product.</div>
 </div></div>
-  <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 The Partial Products Method</div><p><strong>To multiply by any 2-digit factor:</strong></p><p>1. <strong>Split</strong> the 2-digit factor into its tens piece and ones piece. (28 = 20 + 8. 72 = 70 + 2.)</p><p>2. <strong>Multiply by the ONES piece</strong> first. This gives the ONES partial product. (537 × 8 = 4,296.)</p><p>3. <strong>Multiply by the TENS piece</strong>. Use yesterday's ×10 shift. This gives the TENS partial product, which is always BIGGER than the ones partial. (537 × 20 = 10,740.)</p><p>4. <strong>Add</strong> the two partial products. (4,296 + 10,740 = 15,036.) Done.</p></div>
-  <div class="activity bl-violet" style="margin-top:16px;"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">▭</div><div><div class="activity-title">Picture It: Area Model for 537 × 28</div><div class="activity-sub">Six cells. Two row groups. One product.</div></div></div><div class="activity-body"><p>The area model shows EVERY piece of 537 × 28. The bottom row of cells (×20) is the tens partial. The top row (×8) is the ones partial. Add all six cells to get the full product.</p>
+<div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 The Partial Products Method</div><p><strong>To multiply by any 2-digit factor:</strong></p><p>1. <strong>Split</strong> the 2-digit factor into its tens piece and ones piece. (28 = 20 + 8. 72 = 70 + 2.)</p><p>2. <strong>Multiply by the ONES piece</strong> first. This gives the ONES partial product. (537 × 8 = 4,296.)</p><p>3. <strong>Multiply by the TENS piece</strong>. Use yesterday's ×10 shift. This gives the TENS partial product, which is always BIGGER than the ones partial. (537 × 20 = 10,740.)</p><p>4. <strong>Add</strong> the two partial products. (4,296 + 10,740 = 15,036.) Done.</p></div>
+<div class="activity bl-violet" style="margin-top:16px;"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">▭</div><div><div class="activity-title">Picture It: Area Model for 537 × 28</div><div class="activity-sub">Six cells. Two row groups. One product.</div></div></div><div class="activity-body"><p>The area model shows EVERY piece of 537 × 28. The bottom row of cells (×20) is the tens partial. The top row (×8) is the ones partial. Add all six cells to get the full product.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:18px;margin:12px 0;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.7;">
 <p style="margin-bottom:12px;text-align:center;font-weight:800;">537 × 28 = 6 cells, grouped by row</p>
 <div style="display:grid;grid-template-columns:1.3fr 0.7fr 0.4fr;gap:6px;text-align:center;font-size:14px;font-weight:900;margin-bottom:6px;">
@@ -496,14 +545,14 @@
 <div style="background:#F0E8FF;border:2px solid #6B3FA0;border-radius:8px;padding:14px 4px;">56</div>
 </div>
 <div style="font-size:11px;color:#6B3FA0;text-align:right;margin-top:2px;font-weight:700;">↑ ×8 (ones row)</div>
-<div style="text-align:center;margin-top:14px;font-size:18px;font-weight:900;color:#2DB87A;">Tens row sum: 10,000 + 600 + 140 = <strong>10,740</strong><br>Ones row sum: 4,000 + 240 + 56 = <strong>4,296</strong><br>Total: <strong>15,036</strong></div>
+<div style="text-align:center;margin-top:14px;font-size:18px;font-weight:900;color:#2DB87A;">Tens row sum: 10,000 + 600 + 140 = <strong>10,740</strong><br/>Ones row sum: 4,000 + 240 + 56 = <strong>4,296</strong><br/>Total: <strong>15,036</strong></div>
 </div>
 <div class="socratic-box"><div class="socratic-label">🧠 Socratic — Think Like a Mathematician</div><p class="socratic-q">Why is the TENS partial product (10,740) always bigger than the ones partial product (4,296) when both factors are positive? What does this tell you about checking your work?</p>
 <div class="journal-label">✏️ My thinking <span class="saved-dot" id="dot-soc"></span></div>
-<textarea class="journal-box" id="journal-soc" data-label="Learn — Socratic: Why tens partial is always bigger" placeholder="" oninput="autoSave(this,'dot-soc')"></textarea></div>
+<textarea class="journal-box" data-label="Learn — Socratic: Why tens partial is always bigger" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: 638 × 48</div><div class="activity-sub">Estimate, partial products, add.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Find <strong>638 × 48</strong> using partial products. Estimate first (round both factors), then compute exact.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
-<div class="video-wrap" data-video-slot="4-04-05-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.04.05</div><div class="video-wrap-title">Two partials add to the full 2-digit product</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-04-05_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Cora estimates: "638 ≈ 600. 48 ≈ 50. 600 × 50 = 30,000." Atlas splits: "48 = 40 + 8." Felix does the ones partial: "638 × 8. Ones 8×8=64 (carry 6), tens 3×8=24+6=30 (carry 3), hundreds 6×8=48+3=51. Answer: 5,104." Hazel does the tens partial: "638 × 40 = 638 × 4 × 10. 638 × 4 = 2,552. × 10 = 25,520." Cora stacks and adds: "5,104 + 25,520 = 30,624." Final: <strong>638 × 48 = 30,624</strong>. Compare estimate (30,000) — right there ✓. Frame: "Two partials. Add. One answer. The bigger your 2-digit factor, the more important it is to keep the partials neat and aligned." (~2 min)</div><div class="video-placeholder-id"><!-- slot: 4-04-05-example --></div></div></div></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: 638 × 48</div><div class="activity-sub">Estimate, partial products, add.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Find <strong>638 × 48</strong> using partial products. Estimate first (round both factors), then compute exact.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
+
 <div class="key-concept" style="margin-top:14px;"><div class="key-concept-label">⚖️ Step by Step: 638 × 48</div>
 <div style="background:#F0E8FF;border:2px solid #D8CCF0;border-radius:12px;padding:14px;margin-top:8px;font-family:'Lora',Georgia,serif;font-size:15px;color:#0E1C42;line-height:1.8;">
 <div><strong>Split:</strong> 48 = 40 + 8.</div>
@@ -516,23 +565,22 @@
 </div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">Two partials, one sum. The 2-digit method is yours. Practice it.</p><button class="tab-next-btn" onclick="switchTab('practice')">Continue to 🧮 Practice →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-practice">
-  <div class="callout callout-info"><span class="callout-icon">🧭</span><p>Three 2-digit products. Split, multiply each partial, add.</p></div>
-  <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> What's the ones piece? What's the tens piece? What's my estimate?</p></div>
-  <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Stack the two partial products one above the other. The TENS partial has an extra zero (because it's really ×20, ×30, etc.) — that puts it in the right place when you add.</p></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">537 × 28</div><div class="activity-sub">The example from today's Welcome — now you compute it.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>Split 28 = 20 + 8. Compute ones partial (537 × 8) and tens partial (537 × 20). Add.</p>
+<div class="callout callout-info"><span class="callout-icon">🧭</span><p>Three 2-digit products. Split, multiply each partial, add.</p></div>
+<div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> What's the ones piece? What's the tens piece? What's my estimate?</p></div>
+<div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Stack the two partial products one above the other. The TENS partial has an extra zero (because it's really ×20, ×30, etc.) — that puts it in the right place when you add.</p></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">537 × 28</div><div class="activity-sub">The example from today's Welcome — now you compute it.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>Split 28 = 20 + 8. Compute ones partial (537 × 8) and tens partial (537 × 20). Add.</p>
 <div class="value-card-row" style="justify-content:center;">
 <button class="value-card" onclick="pickP1Round(this,'15036')" style="min-width:100px;"><div class="big">15,036</div></button>
 <button class="value-card" onclick="pickP1Round(this,'14936')" style="min-width:100px;"><div class="big">14,936</div></button>
 <button class="value-card" onclick="pickP1Round(this,'15136')" style="min-width:100px;"><div class="big">15,136</div></button>
 </div>
 <div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Exactly.</strong> 537 × 8 = 4,296 (ones partial). 537 × 20 = 10,740 (tens partial). Sum: <strong>15,036</strong>. Estimate 15,000 ✓.
-<div class="video-wrap" data-video-slot="4-04-05-practice-1-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 1</div><div class="video-wrap-title">Two partials, one sum</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-04-05_Practice-1_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Recap. "Two partials. Two prior skills. One addition. 15,036 is the full product." (~45 sec)</div><div class="video-placeholder-id"><!-- slot: 4-04-05-practice-1-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Look again.</strong> Compute each partial separately, then ADD them.
 <div class="hint-callout">Ones: 537 × 8 = 4,296. Tens: 537 × 20 = 10,740. Sum: 4,296 + 10,740 = 15,036.</div>
-<div class="video-wrap" data-video-slot="4-04-05-practice-1-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 1</div><div class="video-wrap-title">Each partial, then add</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-04-05_Practice-1_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk both partials and the addition slowly. (~1-2 min)</div><div class="video-placeholder-id"><!-- slot: 4-04-05-practice-1-retry --></div></div></div></div></div></div></div>
-  <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three 2-Digit Products</div><div class="activity-sub">Set up partials, then add.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Three different 2-digit factors. Each needs its own ones partial AND tens partial.</p></div>
+</div></div></div>
+<div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three 2-Digit Products</div><div class="activity-sub">Set up partials, then add.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Three different 2-digit factors. Each needs its own ones partial AND tens partial.</p></div>
 <p>For each, find the full product.</p>
 <div style="display:grid;gap:14px;margin:14px 0;">
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:14px;">
@@ -564,17 +612,17 @@
 </div>
 </div>
 <div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ Three for three.</strong> 2a — 638 × 48 = <strong>30,624</strong>. 2b — 821 × 58 = <strong>47,618</strong>. 2c — 763 × 65 = <strong>49,595</strong>. All near their estimates.
-<div class="video-wrap" data-video-slot="4-04-05-practice-2-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 2</div><div class="video-wrap-title">Three 2-digit products mastered</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-04-05_Practice-2_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Recap. "Each product = ones partial + tens partial. The method scales — bigger factors just mean bigger partials." (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-04-05-practice-2-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Look again.</strong> Compute each partial fully, then add. Estimates help catch a missed carry.
 <div class="hint-callout">2a: 638×8 = 5,104; 638×40 = 25,520; sum 30,624. 2b: 821×8 = 6,568; 821×50 = 41,050; sum 47,618. 2c: 763×5 = 3,815; 763×60 = 45,780; sum 49,595.</div>
-<div class="video-wrap" data-video-slot="4-04-05-practice-2-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 2</div><div class="video-wrap-title">Compute each partial, then add</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-04-05_Practice-2_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. Walk all three with both partials shown. (~2 min)</div><div class="video-placeholder-id"><!-- slot: 4-04-05-practice-2-retry --></div></div></div></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Sam's Mistake — Forgot the Place Value Shift</div><div class="activity-sub">Sam wrote his tens partial wrong.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Sam computed the ones partial correctly, but forgot to shift his tens partial.</p></div>
+</div></div></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Sam's Mistake — Forgot the Place Value Shift</div><div class="activity-sub">Sam wrote his tens partial wrong.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Sam computed the ones partial correctly, but forgot to shift his tens partial.</p></div>
 <div class="task-box"><div class="task-label">Sam's Work</div>
 <p>Sam was asked to find <strong>649 × 15</strong>. He wrote:</p>
 <div style="background:#FFF8E6;border:2px solid #F5C518;border-radius:12px;padding:14px 16px;font-family:'Lora',Georgia,serif;font-size:17px;line-height:1.8;color:#5A4A3A;margin:10px 0;">
-"15 = 10 + 5.<br>
-Ones partial: 649 × 5 = 3,245.<br>
-Tens partial: 649 × 1 = 649.<br>
+"15 = 10 + 5.<br/>
+Ones partial: 649 × 5 = 3,245.<br/>
+Tens partial: 649 × 1 = 649.<br/>
 Sum: 3,245 + 649 = <strong>3,894</strong>."
 </div>
 <p><strong>Your task:</strong> Tap every statement below that is true.</p>
@@ -586,27 +634,23 @@ Sum: 3,245 + 649 = <strong>3,894</strong>."
 </div>
 <button class="purple-btn" onclick="checkErrorAnalysis()">✓ Check My Picks</button>
 <div class="journal-label">✏️ Write the rule that catches this mistake: when you split a 2-digit factor like 15, the tens piece isn't just "1" — it's "10". <span class="saved-dot" id="dot-ea"></span></div>
-<textarea class="journal-box" id="journal-ea" data-label="Practice 3 — Error Analysis: The tens partial uses ×10, not ×1" placeholder="" oninput="autoSave(this,'dot-ea')"></textarea>
-<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> When you split 15 into "tens piece + ones piece", the tens piece is 10 (not 1). So the tens partial is 649 × 10, not 649 × 1. Correct answer: 9,735.<div class="video-wrap" data-video-slot="4-04-05-practice-3-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 3</div><div class="video-wrap-title">The tens piece has place value</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-04-05_Practice-3_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "When you see a 1 in the tens place, it MEANS 10 — not 1. The tens partial gets the ×10 shift built in." (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-04-05-practice-3-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">The 1 in 15 represents 10, not 1. So tens partial = 649 × 10 = 6,490 (not 649). Add: 3,245 + 6,490 = 9,735.</div><div class="video-wrap" data-video-slot="4-04-05-practice-3-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 3</div><div class="video-wrap-title">A digit in tens place means ×10</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-04-05_Practice-3_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach with the place-value emphasis. (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-04-05-practice-3-retry --></div></div></div></div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
+<textarea class="journal-box" data-label="Practice 3 — Error Analysis: The tens partial uses ×10, not ×1" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
+<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> When you split 15 into "tens piece + ones piece", the tens piece is 10 (not 1). So the tens partial is 649 × 10, not 649 × 1. Correct answer: 9,735.</div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">The 1 in 15 represents 10, not 1. So tens partial = 649 × 10 = 6,490 (not 649). Add: 3,245 + 6,490 = 9,735.</div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">Two partials, one sum, every time. Now show what you know.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-assignment">
-  <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Two partials. One sum. Done.</div></div></div><div class="activity-body"><p>Every 2-digit multiplication today is: ones partial + tens partial = full product. Show both partials for each.</p>
+<div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Two partials. One sum. Done.</div></div></div><div class="activity-body"><p>Every 2-digit multiplication today is: ones partial + tens partial = full product. Show both partials for each.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> What's the ones piece × the multi-digit number? What's the tens piece × the multi-digit number? Did I shift the tens partial?</p></div>
-<div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Set up partial products.</strong> For 537 × 28:<br>(a) Split 28 = ___ + ___<br>(b) Ones partial: 537 × 8 = ___<br>(c) Tens partial: 537 × 20 = ___<br>(d) Sum: ___</p><div class="journal-label">✏️ My work <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" id="journal-a1" data-label="Show What You Know — Problem 1: 537 × 28 step-by-step partials" placeholder="" oninput="autoSave(this,'dot-a1')"></textarea></div>
-
-<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> Why does splitting 28 into 20 + 8 work for 537 × 28? Use the distributive property of multiplication over addition: a × (b + c) = a × b + a × c. Explain in your own words.</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" id="journal-a6" data-label="Show What You Know — Problem 6: Why partial products work (distributive property)" placeholder="" oninput="autoSave(this,'dot-a6')"></textarea></div>
-
-
+<div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Set up partial products.</strong> For 537 × 28:<br/>(a) Split 28 = ___ + ___<br/>(b) Ones partial: 537 × 8 = ___<br/>(c) Tens partial: 537 × 20 = ___<br/>(d) Sum: ___</p><div class="journal-label">✏️ My work <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: 537 × 28 step-by-step partials" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
+<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> Why does splitting 28 into 20 + 8 work for 537 × 28? Use the distributive property of multiplication over addition: a × (b + c) = a × b + a × c. Explain in your own words.</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: Why partial products work (distributive property)" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#55C8E8;"><div class="activity-head"><div class="activity-num" style="background:#55C8E8;color:#0E1C42;">🗺️</div><div><div class="activity-title">Connection Forward: What Comes Next</div><div class="activity-sub">Preview Lesson 4.04.06 — Multiplying by 2-Digit Pt 2 (Fluency)</div></div></div><div class="activity-body"><p>You know the method. Tomorrow: speed and confidence. Bigger numbers, more carries, more word problems. Plus the COMPACT standard algorithm — same math as partial products, just hidden inside two shifted rows of digits.</p><p>The big question next time: <em>The standard algorithm just stacks the two partial products as shifted rows. Why does that shift land each row in the right place value?</em></p></div></div></div></div>
-<div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly>Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
-  <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
+<div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
+<div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
 </div>
 <div class="footer">
-  <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
-  <div class="footer-sub">Math · Grade 4 · 4.04.05</div>
-  <div class="footer-copy">© 2025 Optima Academy Online</div>
+<div class="footer-main">🏫 <span>Optima Academy Online</span></div>
+<div class="footer-sub">Math · Grade 4 · 4.04.05</div>
+<div class="footer-copy">© 2025 Optima Academy Online</div>
 </div>
 </div>
 <canvas id="confettiCanvas"></canvas>
@@ -1043,6 +1087,75 @@ async function loadVideoManifest(){try{let res=await fetch('video-manifest.md',{
 function parseManifest(txt){let map={};let lines=txt.split(/\r?\n/);let current=null,buf=[];function commit(){if(current&&buf.join('\n').trim())map[current]=buf.join('\n').trim();buf=[]}for(let line of lines){let m=line.match(/^([A-Za-z0-9-]+):\s*$/);if(m){commit();current=m[1]}else if(current){buf.push(line)}}commit();return map}
 function showPageFeedback(msg){var panel=document.querySelector('.tab-panel.active')||document.body;var box=panel.querySelector(':scope > .page-feedback');if(!box){box=document.createElement('div');box.className='page-feedback';panel.insertBefore(box,panel.firstChild);}box.className='page-feedback show warn';box.innerHTML=msg;}
 window.addEventListener('DOMContentLoaded',()=>{restoreJournals();updateProgress();loadVideoManifest()});
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Two-Digit × One-Digit";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
 </script>
 </body>
 </html>

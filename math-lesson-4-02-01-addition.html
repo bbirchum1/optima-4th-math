@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Optima Academy Online — Grade 4 Math Lesson 4.02.01</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
@@ -306,25 +307,51 @@
 .bubble-text{font-size:14.5px;color:#0E1C42;line-height:1.5;font-weight:600;font-family:'Lora',Georgia,serif;font-style:italic}
 @media(max-width:620px){.bubble{flex:1 1 100%;max-width:100%}}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
 <div class="progress-wrap"><span class="progress-label">📐 Lesson Progress</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><span class="progress-pct" id="progressPct">0%</span></div>
 <div class="header">
-  <div class="header-brand">
-    <div class="header-logo">
-      <img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" />
-    </div>
-    <div>
-      <div class="header-org">Optima Academy Online</div>
-      <div class="header-sub">An Education Experience Company</div>
-    </div>
-  </div>
-  <div class="header-title"><em>Addition</em></div>
-  <div class="header-badge">
-    <span class="header-badge-icon">🦉</span>
-    <span class="header-badge-text">Lesson 4.02.01</span>
-  </div>
+<div class="header-brand">
+<div class="header-logo">
+<img alt="Optima Academy" src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png"/>
+</div>
+<div>
+<div class="header-org">Optima Academy Online</div>
+<div class="header-sub">An Education Experience Company</div>
+</div>
+</div>
+<div class="header-title"><em>Addition</em></div>
+<div class="header-badge">
+<span class="header-badge-icon">🦉</span>
+<span class="header-badge-text">Lesson 4.02.01</span>
+</div>
 </div>
 <div class="quote-strip"><div class="quote-strip-text">"Stack by place. Add the ones first. Carry when ten is too much for one place."</div><div class="quote-strip-attr">Addition Big Idea</div></div>
 <div class="info-strip"><div class="info-cell"><div class="info-icon" style="background:#F0E8FF;">🧭</div><div><div class="info-label">Unit</div><div class="info-value">Unit 2</div><div class="info-detail">Addition and Subtraction</div></div></div><div class="info-cell"><div class="info-icon" style="background:#E3F8ED;">📅</div><div><div class="info-label">Lesson</div><div class="info-value">4.02.01</div><div class="info-detail">U1 Anchor</div></div></div><div class="info-cell"><div class="info-icon" style="background:#EAF0FF;">📐</div><div><div class="info-label">Standard</div><div class="info-value">MA.4.NSO.2.7</div><div class="info-detail">Add multi-digit whole numbers</div></div></div><div class="info-cell"><div class="info-icon" style="background:#FFF8E6;">🔢</div><div><div class="info-label">Focus</div><div class="info-value">Standard Algorithm</div><div class="info-detail">MTR.2.1 · MTR.5.1</div></div></div></div>
@@ -332,22 +359,45 @@
 <div class="intro-2col"><div class="intro-card theme-question"><div class="intro-card-head"><div class="intro-card-head-icon">❓</div><div><div class="intro-card-head-label">Essential Question</div><div class="intro-card-head-title">Why does adding place by place — starting from the ones — actually work?</div></div></div><div class="intro-card-body"><p>You added by place once in Unit 1 and the answer matched your estimate. Today you'll learn the same move as a full algorithm — the way a mathematician writes it down.</p><p>The trick: stack the digits by place. Add each column. When a column sum reaches 10 or more, carry the extra to the next place. That's it. The carry is just place value's quiet rule: ten of any place equals one of the next place over.</p></div></div><div class="intro-card theme-objectives"><div class="intro-card-head"><div class="intro-card-head-icon">🎯</div><div><div class="intro-card-head-label">Today's Objectives</div><div class="intro-card-head-title">You will…</div></div></div><div class="intro-card-body"><div class="obj-line"><span class="obj-icon">🧮</span><span><strong>Add</strong> multi-digit whole numbers using the standard algorithm.</span></div><div class="obj-line"><span class="obj-icon">🔄</span><span><strong>Regroup</strong> (carry) when a column sum is 10 or more.</span></div><div class="obj-line"><span class="obj-icon">💬</span><span><strong>Use a bar model</strong> to set up an addition word problem, then solve it.</span></div></div></div></div>
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
-
 <div class="tab-panel active" id="tab-warmup">
-  <div class="video-wrap" data-video-slot="4-02-01-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.02.01</div><div class="video-wrap-title">The algorithm, written down once and for all</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-01_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Open with this on the board: <strong>34,587 + 18,259</strong>. Say: "Last unit, you started 'adding by place.' This week, we're going to use that idea every single day — so we're going to write it down properly." Stack the numbers vertically with all digits lined up by place: <br>&nbsp;&nbsp;3 4, 5 8 7 <br>+ 1 8, 2 5 9 <br>Draw a line beneath. Point to the ones column. "Start at the right — the ONES. Seven plus nine is sixteen. Sixteen is one ten and six ones. Write the 6 in the ones place. Carry the 1 to the tens." Write a small 1 above the tens column. Continue: tens 1+8+5 = 14 (write 4, carry 1). Hundreds 1+5+2=8. Thousands 4+8=12 (write 2, carry 1). Ten-thousands 1+3+1=5. Final answer: 52,846. Now estimate-check: 35,000 + 18,000 = 53,000. "Our exact 52,846 is right next to 53,000. Good." Frame the unit: "Unit 1 taught you to read numbers. Unit 2 teaches you to MOVE them — add and subtract them fluently. The algorithm is just place value doing the math, one column at a time." Tone: foundational, methodical. This is a tool they'll use forever. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-01-welcome --></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
-    <p>Adding multi-digit numbers turns into a routine. The crew runs it together — same roles you've seen all year, now applied to a fresh job.</p>
-    <div class="bubble-row">
-      <div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — stacks by place</div><div class="bubble-text">"I write the second number directly under the first, lined up by place. Ones under ones. Tens under tens. No drifting."</div></div></div>
-      <div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — adds column by column</div><div class="bubble-text">"Start at the ones. Add the column. If it's ten or more, write the right digit and carry the left digit. Move left to the next column."</div></div></div>
-    </div>
-    <div class="bubble-row">
-      <div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — bar model for stories</div><div class="bubble-text">"When the problem is a word problem, I draw two bars first. Two bars joining together means add. The bar model tells me what the math should do."</div></div></div>
-      <div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — estimates to check</div><div class="bubble-text">"After I write the answer, I do a quick rounded estimate in my head. If the two are far apart, I check my carries."</div></div></div>
-    </div>
-    <div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>The order matters: Hazel draws first (if it's a word problem), Atlas stacks, Felix adds, Cora checks. Skip the check and small mistakes slip through.</p></div>
-  </div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Add Two Columns at a Time</div><div class="activity-sub">Quick sums to warm up your "add by place" muscle.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>Two quick checks. Your full practice is in the Independent Practice PDF.</p>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Related Division Facts</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">56 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="8" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">56 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="7" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">72 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="9" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">72 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="8" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">63 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="9" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">48 ÷ 6</span><input autocomplete="off" class="fluency-input" data-answer="8" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">81 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="9" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">64 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="8" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">42 ÷ 6</span><input autocomplete="off" class="fluency-input" data-answer="7" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">36 ÷ 4</span><input autocomplete="off" class="fluency-input" data-answer="9" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Related Division Facts)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
+<p>Adding multi-digit numbers turns into a routine. The crew runs it together — same roles you've seen all year, now applied to a fresh job.</p>
+<div class="bubble-row">
+<div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — stacks by place</div><div class="bubble-text">"I write the second number directly under the first, lined up by place. Ones under ones. Tens under tens. No drifting."</div></div></div>
+<div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — adds column by column</div><div class="bubble-text">"Start at the ones. Add the column. If it's ten or more, write the right digit and carry the left digit. Move left to the next column."</div></div></div>
+</div>
+<div class="bubble-row">
+<div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — bar model for stories</div><div class="bubble-text">"When the problem is a word problem, I draw two bars first. Two bars joining together means add. The bar model tells me what the math should do."</div></div></div>
+<div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — estimates to check</div><div class="bubble-text">"After I write the answer, I do a quick rounded estimate in my head. If the two are far apart, I check my carries."</div></div></div>
+</div>
+<div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>The order matters: Hazel draws first (if it's a word problem), Atlas stacks, Felix adds, Cora checks. Skip the check and small mistakes slip through.</p></div>
+</div></div>
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Add Two Columns at a Time</div><div class="activity-sub">Quick sums to warm up your "add by place" muscle.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>Two quick checks. Your full practice is in the Independent Practice PDF.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:grid;gap:14px;">
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
@@ -378,16 +428,16 @@
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Answers:</strong> 342 + 156 = <strong>498</strong> (no carries). 247 + 158 = <strong>405</strong> (carries from ones AND tens). 1,486 + 2,759 = <strong>4,245</strong> (carries from ones, tens, AND hundreds). Today, we use this same procedure on much bigger numbers — and write down the carries as we go.</div>
-<div class="journal-label">✏️ Of the three problems above, which ones needed a carry? In your own words, what does it mean to "carry" in addition? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: What does carrying mean?" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-02-01-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.02.01</div><div class="video-wrap-title">Left to right finds the answer fastest</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-01_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk through each, calling out the carries. <strong>342 + 156:</strong> Stack vertically. Ones 2+6=8. Tens 4+5=9. Hundreds 3+1=4. Answer 498 — no carries needed. <strong>247 + 158:</strong> Ones 7+8=15. "Fifteen is one ten and five ones. Write 5 in ones, carry 1 to tens." Tens 1+4+5=10. "Ten in tens means one hundred and zero tens. Write 0, carry 1." Hundreds 1+2+1=4. Answer 405. "Two carries — the algorithm handles them in order." <strong>1,486 + 2,759:</strong> Ones 6+9=15 (write 5, carry 1). Tens 1+8+5=14 (write 4, carry 1). Hundreds 1+4+7=12 (write 2, carry 1). Thousands 1+1+2=4. Answer 4,245. "Three carries in a row. The procedure stays the same — one column at a time, write the right digit and carry the left digit." Connect to today: "Same procedure, bigger numbers." (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-01-readiness-feedback --></div></div></div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
+<div class="journal-label">✏️ Of the three problems above, which ones needed a carry? In your own words, what does it mean to "carry" in addition? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: What does carrying mean?" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">🏟️</span><p>Two big games this season had different crowds. <strong>Friday: 34,587 fans. Saturday: 18,259 fans.</strong> The stadium operations team needs the exact combined attendance for the weekend — a number they'll publish, share with vendors, and use to plan next time. How would you add them?</p></div>
 <div class="number-talk-visual">
 <div class="number-talk-prompt">Look at the two numbers carefully. What's a good estimate? What do you predict will be tricky about the exact answer?</div>
-<div class="visual-equation" style="font-size:22px;letter-spacing:1px;">34,587 &nbsp;+&nbsp; 18,259 &nbsp;=&nbsp; ?</div>
+<div class="visual-equation" style="font-size:22px;letter-spacing:1px;">34,587  +  18,259  =  ?</div>
 <div class="notice-wonder-grid">
-<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" id="journal-notice" data-label="Warm-Up — Notice: What I notice about 34,587 + 18,259" placeholder="" oninput="autoSave(this,'dot-notice')" style="min-height:60px;"></textarea></div>
-<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" id="journal-wonder" data-label="Warm-Up — Wonder: What I wonder about adding these two" placeholder="" oninput="autoSave(this,'dot-wonder')" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" data-label="Warm-Up — Notice: What I notice about 34,587 + 18,259" id="journal-notice" oninput="autoSave(this,'dot-notice')" placeholder="" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" data-label="Warm-Up — Wonder: What I wonder about adding these two" id="journal-wonder" oninput="autoSave(this,'dot-wonder')" placeholder="" style="min-height:60px;"></textarea></div>
 </div>
 </div>
 <p><strong>Estimate first:</strong> Round each to the nearest 1,000 in your head, then add. What's your estimate?</p>
@@ -399,50 +449,49 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>Before you predict, ask yourself:</strong> When you stack 34,587 and 18,259 by place — which columns will have a carry? (Look at each column from the ones up.) That tells you what to watch for in the algorithm.</p></div>
 <div class="journal-label">✏️ My estimate AND prediction: What's your estimate (rounded to nearest 1,000)? Which columns will need a carry when you add the exact numbers? <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think Prompt: Estimate 34,587 + 18,259 and predict carries" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think Prompt: Estimate 34,587 + 18,259 and predict carries" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">You estimated. Now let's walk through the algorithm — column by column — and see exactly where the carries land.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
-  <div class="vocab-section" aria-label="Daily vocabulary flash cards">
-  <div class="vocab-section-head">
-    <div class="vocab-section-icon">📚</div>
-    <div>
-      <div class="vocab-section-label">Daily Vocabulary</div>
-      <div class="vocab-section-title">Tap to Build Today’s Math Language</div>
-    </div>
-  </div>
-  <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
-  <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for addend. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">➕</div><div class="fc-word">addend</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">addend</div><div class="fc-def">a number being added. In 34,587 + 18,259, both 34,587 and 18,259 are addends.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for sum. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🟰</div><div class="fc-word">sum</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">sum</div><div class="fc-def">the total — the answer when you add two or more numbers together.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for regroup. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🔄</div><div class="fc-word">regroup</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">regroup (carry)</div><div class="fc-def">to trade 10 of one place for 1 of the next place left. When a column sum is 10 or more, the extra 1 carries.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for algorithm. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">📋</div><div class="fc-word">algorithm</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">algorithm</div><div class="fc-def">a step-by-step procedure that works the same way every time. Adding column by column from the ones is an algorithm.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-02-01-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-02-01 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-02-01-concept --></div></div></div></div>
+<div aria-label="Daily vocabulary flash cards" class="vocab-section">
+<div class="vocab-section-head">
+<div class="vocab-section-icon">📚</div>
+<div>
+<div class="vocab-section-label">Daily Vocabulary</div>
+<div class="vocab-section-title">Tap to Build Today’s Math Language</div>
 </div>
-<div class="video-wrap" data-video-slot="4-02-01-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.02.01</div><div class="video-wrap-title">The algorithm, column by column</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-01_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk through the full algorithm on the warm-up problem: <strong>34,587 + 18,259</strong>. Stack the numbers vertically, perfectly aligned by place: <br>&nbsp;&nbsp;3 4, 5 8 7 <br>+ 1 8, 2 5 9 <br>Draw a line beneath. Move column by column from the ONES, narrating each step. <strong>Ones:</strong> 7 + 9 = 16. "Sixteen is one ten and six ones. Write 6 in the ones place. Carry the 1 to the tens column." Write a small 1 above the tens digits. <strong>Tens:</strong> 1 + 8 + 5 = 14. "Fourteen is one hundred and four tens. Write 4 in tens. Carry the 1 to hundreds." <strong>Hundreds:</strong> 1 + 5 + 2 = 8. "No carry this time." <strong>Thousands:</strong> 4 + 8 = 12. "Twelve is one ten-thousand and two thousands. Write 2 in thousands, carry 1 to ten-thousands." <strong>Ten-thousands:</strong> 1 + 3 + 1 = 5. Write 5. Final answer: 52,846. Estimate-check: 35,000 + 18,000 = 53,000. "Right next to our exact answer." Now name the procedure: "This is the standard algorithm for addition. Three rules: stack by place, start from ones, carry when you hit ten or more. That's it." Tone: methodical. The point is to show that the algorithm IS just place value organized into a routine. (~2–3 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-01-concept --></div></div></div></div>
-  <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Use the Step-Through Adder below. Click "Next column" to walk through 34,587 + 18,259 one column at a time. Watch where the carries land. Then come back to read what the algorithm says.</p></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🧮</div><div><div class="activity-title">Step-Through Adder: 34,587 + 18,259</div><div class="activity-sub">Walk through the algorithm one column at a time. Watch the carries.</div></div></div><div class="activity-body"><p>The two numbers are already stacked by place. Tap <strong>Next Column</strong> to add the next place. When a column sum reaches 10, you'll see the carry appear above the next column.</p><div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:18px 14px;margin:12px 0;">
+</div>
+<p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
+<div class="vocab-grid">
+<div aria-label="Vocabulary card for addend. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">➕</div><div class="fc-word">addend</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">addend</div><div class="fc-def">a number being added. In 34,587 + 18,259, both 34,587 and 18,259 are addends.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for sum. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🟰</div><div class="fc-word">sum</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">sum</div><div class="fc-def">the total — the answer when you add two or more numbers together.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for regroup. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🔄</div><div class="fc-word">regroup</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">regroup (carry)</div><div class="fc-def">to trade 10 of one place for 1 of the next place left. When a column sum is 10 or more, the extra 1 carries.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for algorithm. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">📋</div><div class="fc-word">algorithm</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">algorithm</div><div class="fc-def">a step-by-step procedure that works the same way every time. Adding column by column from the ones is an algorithm.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Use the Step-Through Adder below. Click "Next column" to walk through 34,587 + 18,259 one column at a time. Watch where the carries land. Then come back to read what the algorithm says.</p></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🧮</div><div><div class="activity-title">Step-Through Adder: 34,587 + 18,259</div><div class="activity-sub">Walk through the algorithm one column at a time. Watch the carries.</div></div></div><div class="activity-body"><p>The two numbers are already stacked by place. Tap <strong>Next Column</strong> to add the next place. When a column sum reaches 10, you'll see the carry appear above the next column.</p><div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:18px 14px;margin:12px 0;">
 <!-- Carry row -->
 <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;font-family:'Lora',Georgia,serif;font-size:14px;font-weight:900;color:#E07B39;text-align:center;height:24px;margin-bottom:4px;">
 <div id="addCarry0"></div><div id="addCarry1"></div><div id="addCarry2"></div><div id="addCarry3"></div><div id="addCarry4"></div>
@@ -468,7 +517,7 @@
 <div style="text-align:center;margin-top:12px;"><button class="purple-btn" onclick="stepAddition()">▶ Next Column</button> <button class="orange-btn" onclick="resetAddition()" style="margin-left:8px;">↩ Reset</button></div>
 </div>
 <div class="reveal-box" id="learnReveal"><strong>You walked through the algorithm.</strong> 34,587 + 18,259 = <strong>52,846</strong>. The carries landed in ones→tens, tens→hundreds, and thousands→ten-thousands. Three carries total. The estimate (53,000) sits right next to the answer — the algorithm worked.</div>
-  <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 What You Just Saw</div><p><strong>The standard algorithm for addition.</strong></p><p>Step 1 — <strong>Stack</strong> the addends by place. Ones under ones. Tens under tens. Always line them up.</p><p>Step 2 — <strong>Add</strong> each column, starting from the ones and moving left. Write the sum below.</p><p>Step 3 — <strong>Carry</strong> when a column sum is 10 or more. The ones digit of the sum goes in that place. The tens digit (the 1) gets added into the next column to the left.</p><p>That's the whole procedure. The carry is just place value's quiet rule — ten ones make one ten, ten tens make one hundred, and so on. The algorithm respects that rule automatically.</p></div>
+<div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 What You Just Saw</div><p><strong>The standard algorithm for addition.</strong></p><p>Step 1 — <strong>Stack</strong> the addends by place. Ones under ones. Tens under tens. Always line them up.</p><p>Step 2 — <strong>Add</strong> each column, starting from the ones and moving left. Write the sum below.</p><p>Step 3 — <strong>Carry</strong> when a column sum is 10 or more. The ones digit of the sum goes in that place. The tens digit (the 1) gets added into the next column to the left.</p><p>That's the whole procedure. The carry is just place value's quiet rule — ten ones make one ten, ten tens make one hundred, and so on. The algorithm respects that rule automatically.</p></div>
 <div style="margin-top:16px;">
 <div class="key-concept"><div class="key-concept-label">🔗 The Algorithm, Column by Column</div>
 <p>Here's every column of <strong>34,587 + 18,259</strong>. Each row shows the column sum, what gets written, and whether a carry happens.</p>
@@ -512,7 +561,7 @@
 </div>
 </div>
 </div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">🧮</div><div><div class="activity-title">Add by Place</div><div class="activity-sub">Place by place. Carry when you must.</div></div></div><div class="activity-body"><p>Atlas's strategy: stack the two numbers by place, then add one column at a time, starting from the ones. Tap each column's answer below.</p>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">🧮</div><div><div class="activity-title">Add by Place</div><div class="activity-sub">Place by place. Carry when you must.</div></div></div><div class="activity-body"><p>Atlas's strategy: stack the two numbers by place, then add one column at a time, starting from the ones. Tap each column's answer below.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:14px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:22px;font-weight:900;color:#0E1C42;line-height:1.6;margin-bottom:14px;">
 <div>235,418</div>
@@ -544,13 +593,13 @@
 </div>
 </div>
 </div>
-<div id="addByPlaceFb" class="inline-feedback" style="margin-top:14px;"></div>
+<div class="inline-feedback" id="addByPlaceFb" style="margin-top:14px;"></div>
 </div>
-<div class="journal-label">✏️ Why do we always start with the ONES place when adding by place — instead of starting at the leftmost place? <span class="saved-dot" id="dot-digit"></span></div><textarea class="journal-box" id="journal-digit" data-label="Learn — Add by Place: Why start at ones?" placeholder="" oninput="autoSave(this,'dot-digit')"></textarea></div></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: Combined Weekend Attendance</div><div class="activity-sub">Draw a bar model. Estimate. Then add by place.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Friday's game drew <strong>47,536 fans</strong>. Saturday's game drew <strong>38,829 fans</strong>. What was the combined weekend attendance? Use a bar model first, then estimate, then add exactly.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
+<div class="journal-label">✏️ Why do we always start with the ONES place when adding by place — instead of starting at the leftmost place? <span class="saved-dot" id="dot-digit"></span></div><textarea class="journal-box" data-label="Learn — Add by Place: Why start at ones?" id="journal-digit" oninput="autoSave(this,'dot-digit')" placeholder=""></textarea></div></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: Combined Weekend Attendance</div><div class="activity-sub">Draw a bar model. Estimate. Then add by place.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Friday's game drew <strong>47,536 fans</strong>. Saturday's game drew <strong>38,829 fans</strong>. What was the combined weekend attendance? Use a bar model first, then estimate, then add exactly.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
 <div class="bubble-row">
-  <div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — draws the bar model</div><div class="bubble-text">"Two bars joined end-to-end. One bar is 47,536 (Friday). The next bar is 38,829 (Saturday). The whole thing is the unknown — the combined total. Two bars together means ADD."</div></div></div>
-  <div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — estimates</div><div class="bubble-text">"Round each to the nearest 1,000. 47,536 → 48,000. 38,829 → 39,000. 48,000 + 39,000 = 87,000. So the total should be about 87,000."</div></div></div>
+<div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — draws the bar model</div><div class="bubble-text">"Two bars joined end-to-end. One bar is 47,536 (Friday). The next bar is 38,829 (Saturday). The whole thing is the unknown — the combined total. Two bars together means ADD."</div></div></div>
+<div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — estimates</div><div class="bubble-text">"Round each to the nearest 1,000. 47,536 → 48,000. 38,829 → 39,000. 48,000 + 39,000 = 87,000. So the total should be about 87,000."</div></div></div>
 </div>
 <!-- Bar model visual -->
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:12px;padding:14px;margin:12px 0;">
@@ -563,36 +612,35 @@
 </div>
 <p style="font-family:'Lora',Georgia,serif;background:#FAFBFF;border:2px solid #E2E8F4;border-radius:12px;padding:10px;text-align:center;font-size:18px;font-weight:800;">47,536 + 38,829 = 86,365</p>
 <div class="bubble-row">
-  <div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — adds by place</div><div class="bubble-text">"Stack them. Ones 6+9=15 (write 5, carry 1). Tens 1+3+2=6. Hundreds 5+8=13 (write 3, carry 1). Thousands 1+7+8=16 (write 6, carry 1). Ten-thousands 1+4+3=8. Total: 86,365."</div></div></div>
-  <div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — checks against the estimate</div><div class="bubble-text">"Felix said about 87,000. Atlas's answer is 86,365 — 635 less than the estimate. Within rounding error. The answer is reasonable. Trust it."</div></div></div>
+<div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — adds by place</div><div class="bubble-text">"Stack them. Ones 6+9=15 (write 5, carry 1). Tens 1+3+2=6. Hundreds 5+8=13 (write 3, carry 1). Thousands 1+7+8=16 (write 6, carry 1). Ten-thousands 1+4+3=8. Total: 86,365."</div></div></div>
+<div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — checks against the estimate</div><div class="bubble-text">"Felix said about 87,000. Atlas's answer is 86,365 — 635 less than the estimate. Within rounding error. The answer is reasonable. Trust it."</div></div></div>
 </div>
 <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>The whole routine in one problem:</strong> Hazel's bar model showed it was an ADD problem (two bars joining). Felix's estimate gave the target. Atlas's algorithm produced the exact answer. Cora compared and confirmed. Each crew member did one job — and the answer is trustworthy because all four agree.</p></div></div></div>
-  <div class="video-wrap" data-video-slot="4-02-01-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.02.01</div><div class="video-wrap-title">Bar model, estimate, algorithm, check</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-01_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk through all four steps end to end. <strong>Step 1 — Bar model.</strong> Draw a long bar split into two parts. Label the parts 47,536 (Friday) and 38,829 (Saturday). Brace the whole bar and label it "total — unknown." Say: "Two parts joining means add." <strong>Step 2 — Estimate.</strong> Round each to nearest 1,000: 47,536 → 48,000, 38,829 → 39,000. Add: 87,000. "Estimate: about 87,000." <strong>Step 3 — Algorithm.</strong> Stack vertically. Ones 6+9=15 (write 5, carry 1). Tens 1+3+2=6 (no carry — note that the 1 in tens was already there from regrouping). Hundreds 5+8=13 (write 3, carry 1). Thousands 1+7+8=16 (write 6, carry 1). Ten-thousands 1+4+3=8. Final answer: 86,365. <strong>Step 4 — Check.</strong> Compare 86,365 to estimate 87,000. "Off by 635 — well within rounding error. The answer matches." Tone: this is the unit's bread and butter routine. Methodical. (~2–3 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-01-example --></div></div></div></div>
-  <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">⚖️</div><div><div class="activity-title">Algorithm vs Partial Sums</div><div class="activity-sub">Two ways to add 24,683 + 17,259. Same answer, different journey.</div></div></div><div class="activity-body">
+
+<div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">⚖️</div><div><div class="activity-title">Algorithm vs Partial Sums</div><div class="activity-sub">Two ways to add 24,683 + 17,259. Same answer, different journey.</div></div></div><div class="activity-body">
 <p>Two students added the same two numbers. One used the standard algorithm. The other broke each number apart by place first, then added the parts.</p>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0;">
 <div style="background:#EAF8FD;border:2px solid #D6F2FB;border-radius:14px;padding:14px;">
 <div style="font-size:12px;color:#1A6B8E;font-weight:900;margin-bottom:6px;">STUDENT A — Standard Algorithm</div>
-<div style="font-family:'Lora',Georgia,serif;font-size:14px;color:#0E1C42;line-height:1.6;margin-top:8px;">"Stack and add column by column from ones.<br>Ones 3+9=12 (write 2, carry 1).<br>Tens 1+8+5=14 (write 4, carry 1).<br>Hundreds 1+6+2=9.<br>Thousands 4+7=11 (write 1, carry 1).<br>Ten-thousands 1+2+1=4.<br>Answer: <strong>41,942</strong>."</div>
+<div style="font-family:'Lora',Georgia,serif;font-size:14px;color:#0E1C42;line-height:1.6;margin-top:8px;">"Stack and add column by column from ones.<br/>Ones 3+9=12 (write 2, carry 1).<br/>Tens 1+8+5=14 (write 4, carry 1).<br/>Hundreds 1+6+2=9.<br/>Thousands 4+7=11 (write 1, carry 1).<br/>Ten-thousands 1+2+1=4.<br/>Answer: <strong>41,942</strong>."</div>
 </div>
 <div style="background:#FFF8E6;border:2px solid #F5E6C8;border-radius:14px;padding:14px;">
 <div style="font-size:12px;color:#8A6D2B;font-weight:900;margin-bottom:6px;">STUDENT B — Partial Sums</div>
-<div style="font-family:'Lora',Georgia,serif;font-size:14px;color:#0E1C42;line-height:1.6;margin-top:8px;">"Break each by place.<br>20,000 + 10,000 = 30,000<br>4,000 + 7,000 = 11,000<br>600 + 200 = 800<br>80 + 50 = 130<br>3 + 9 = 12<br>Add them all: 30,000 + 11,000 + 800 + 130 + 12 = <strong>41,942</strong>."</div>
+<div style="font-family:'Lora',Georgia,serif;font-size:14px;color:#0E1C42;line-height:1.6;margin-top:8px;">"Break each by place.<br/>20,000 + 10,000 = 30,000<br/>4,000 + 7,000 = 11,000<br/>600 + 200 = 800<br/>80 + 50 = 130<br/>3 + 9 = 12<br/>Add them all: 30,000 + 11,000 + 800 + 130 + 12 = <strong>41,942</strong>."</div>
 </div>
 </div>
 <div class="callout callout-info"><span class="callout-icon">🧐</span><p>Same answer. Student A's algorithm is faster once you trust it. Student B's partial sums show WHY the algorithm works — every column sum is just the partial sum at that place. The algorithm is partial sums, organized neatly.</p></div>
 <div class="journal-label">✏️ Which strategy makes the addition feel more obvious to YOU? When might partial sums (Student B's way) help you spot a mistake? <span class="saved-dot" id="dot-compare"></span></div>
-<textarea class="journal-box" id="journal-compare" data-label="Learn — Strategy Comparison: Algorithm vs Partial Sums" placeholder="" oninput="autoSave(this,'dot-compare')"></textarea>
+<textarea class="journal-box" data-label="Learn — Strategy Comparison: Algorithm vs Partial Sums" id="journal-compare" oninput="autoSave(this,'dot-compare')" placeholder=""></textarea>
 </div></div>
-  <div class="socratic-box"><div class="socratic-label">🔮 Think Like a Mathematician</div><p class="socratic-q">Why does the addition algorithm start from the ONES column instead of from the leftmost (biggest) place? Try imagining you started from the ten-thousands. What would go wrong when a column needs a carry? Use a real example to defend your answer.</p><div class="journal-label">✏️ My reasoning <span class="saved-dot" id="dot-soc1"></span></div><textarea class="journal-box" id="journal-soc1" data-label="Learn — Socratic: Why start the algorithm from the ones?" placeholder="" oninput="autoSave(this,'dot-soc1')"></textarea></div>
-  <div class="tab-next-wrap"><p class="tab-transition-voice">You walked through the algorithm, used a bar model for a word problem, and saw why partial sums and the standard algorithm are really the same idea. Time to try a few.</p><button class="tab-next-btn" onclick="switchTab('practice')">Continue to 🧮 Practice →</button></div>
+<div class="socratic-box"><div class="socratic-label">🔮 Think Like a Mathematician</div><p class="socratic-q">Why does the addition algorithm start from the ONES column instead of from the leftmost (biggest) place? Try imagining you started from the ten-thousands. What would go wrong when a column needs a carry? Use a real example to defend your answer.</p><div class="journal-label">✏️ My reasoning <span class="saved-dot" id="dot-soc1"></span></div><textarea class="journal-box" data-label="Learn — Socratic: Why start the algorithm from the ones?" id="journal-soc1" oninput="autoSave(this,'dot-soc1')" placeholder=""></textarea></div>
+<div class="tab-next-wrap"><p class="tab-transition-voice">You walked through the algorithm, used a bar model for a word problem, and saw why partial sums and the standard algorithm are really the same idea. Time to try a few.</p><button class="tab-next-btn" onclick="switchTab('practice')">Continue to 🧮 Practice →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-practice">
-  <div class="callout callout-info"><span class="callout-icon">🧭</span><p>You built 472,830 in Learn. The Practice numbers are all six digits — but each one changes <strong>one thing</strong>. Pay attention to what is different. That is where the new thinking lives.</p></div>
-  <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask yourself:</strong> Which place is the leftmost digit in? What does the comma tell me about how to read this?</p></div>
-  <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Go back to the Learn tab. The "Four Ways" panel for 472,830 and the Worked Example for 1,000,000 are still there. Re-read your own notes.</p></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">Add 38,547 + 24,968</div><div class="activity-sub">Three carries to watch for.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>Use the standard algorithm. Estimate first (in your head) to know what range the answer should be in.</p>
+<div class="callout callout-info"><span class="callout-icon">🧭</span><p>You built 472,830 in Learn. The Practice numbers are all six digits — but each one changes <strong>one thing</strong>. Pay attention to what is different. That is where the new thinking lives.</p></div>
+<div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask yourself:</strong> Which place is the leftmost digit in? What does the comma tell me about how to read this?</p></div>
+<div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Go back to the Learn tab. The "Four Ways" panel for 472,830 and the Worked Example for 1,000,000 are still there. Re-read your own notes.</p></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">Add 38,547 + 24,968</div><div class="activity-sub">Three carries to watch for.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>Use the standard algorithm. Estimate first (in your head) to know what range the answer should be in.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:24px;font-weight:900;color:#0E1C42;margin-bottom:14px;">38,547 + 24,968</div>
 <p style="text-align:center;font-size:13px;color:#3A4A6B;font-weight:700;margin-bottom:10px;">Pick the exact sum:</p>
@@ -604,8 +652,8 @@
 </div>
 <p style="text-align:center;font-size:13px;color:#3A4A6B;font-weight:700;margin-top:14px;">Hint: estimate first. 39,000 + 25,000 ≈ 64,000. The exact answer should land near 64,000.</p>
 </div>
-<div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Yes.</strong> 38,547 + 24,968 = <strong>63,515</strong>. Three carries: ones 7+8=15 (carry 1), tens 1+4+6=11 (carry 1), hundreds 1+5+9=15 (carry 1). Thousands 1+8+4=13 (carry 1). Ten-thousands 1+3+2=6. Estimate ≈ 64,000 — answer is right next to it.<div class="video-wrap" data-video-slot="4-02-01-practice-1-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 1</div><div class="video-wrap-title">Estimate matched the truth</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-01_Practice-1_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Show the estimate: 36,000 + 29,000 = 65,000. Then add the exact numbers stacked vertically: 36,420 + 28,750. Ones 0+0=0. Tens 2+5=7. Hundreds 4+7=11 (write 1, carry 1). Thousands 6+8+1=15 (write 5, carry 1). Ten-thousands 3+2+1=6. Answer: 65,170. "Estimate said about 65,000. Exact says 65,170. Off by 170 — well within rounding error. We can trust 65,170." Close: "The estimate didn't tell us the exact answer — it told us what range the answer should be IN. When the exact answer falls in that range, we know we did the math right." (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-01-practice-1-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Use the estimate.</strong><div class="hint-callout">36,000 + 29,000 ≈ 65,000. The exact answer should be CLOSE to 65,000 — not 5,000, not 75,000, and definitely not 650,000.</div><div class="video-wrap" data-video-slot="4-02-01-practice-1-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 1</div><div class="video-wrap-title">Estimate is your check</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-01_Practice-1_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the estimate-as-check idea. Write 36,420 ≈ 36,000 and 28,750 ≈ 29,000. Add to get 65,000. Say: "Whatever the exact answer is, it should be CLOSE to 65,000 — give or take a thousand or so." Now show the answer choices. "55,170 is 10,000 low — too far. 74,170 is 9,000 high — too far. 650,170 is TEN TIMES too big. 65,170 is the only one in the right neighborhood." Concept being retaught: using a rough estimate to eliminate unreasonable choices before doing exact math. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-01-practice-1-retry --></div></div></div></div><button class="orange-btn" onclick="resetP1Round()">↩ Reset and Try Again</button></div></div></div>
-  <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three Sums — No Carry, One Carry, Many Carries</div><div class="activity-sub">Use the algorithm. Watch where the carries are.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Three sums of increasing difficulty. Problem 1 has no carries. Problem 2 has one. Problem 3 has carries in every column.</p></div>
+<div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Yes.</strong> 38,547 + 24,968 = <strong>63,515</strong>. Three carries: ones 7+8=15 (carry 1), tens 1+4+6=11 (carry 1), hundreds 1+5+9=15 (carry 1). Thousands 1+8+4=13 (carry 1). Ten-thousands 1+3+2=6. Estimate ≈ 64,000 — answer is right next to it.</div><div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Use the estimate.</strong><div class="hint-callout">36,000 + 29,000 ≈ 65,000. The exact answer should be CLOSE to 65,000 — not 5,000, not 75,000, and definitely not 650,000.</div><button class="orange-btn" onclick="resetP1Round()">↩ Reset and Try Again</button></div></div></div>
+<div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three Sums — No Carry, One Carry, Many Carries</div><div class="activity-sub">Use the algorithm. Watch where the carries are.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Three sums of increasing difficulty. Problem 1 has no carries. Problem 2 has one. Problem 3 has carries in every column.</p></div>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:grid;gap:16px;">
 <div>
@@ -638,16 +686,16 @@
 </div>
 <div style="text-align:center;margin-top:14px;"><button class="orange-btn" onclick="resetP2Round()" style="margin:0;">↩ Reset</button></div>
 </div>
-<div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ All three!</strong> 45,300 + 22,900 = <strong>68,200</strong> (estimate said about 70,000 — match). 78,500 − 31,200 = <strong>47,300</strong> (estimate said about 50,000 — match). 156,700 + 84,300 = <strong>241,000</strong> (estimate said about 240,000 — match). Each estimate kept you in the right neighborhood; each exact answer was checked against it.<div class="video-wrap" data-video-slot="4-02-01-practice-2-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 2</div><div class="video-wrap-title">Halfway rounds UP</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-01_Practice-2_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write 84,562. For each round, identify the decider. <strong>Nearest 100:</strong> Decider is tens (6). 6 ≥ 5, round up. 84,562 → 84,600. <strong>Nearest 1,000:</strong> Decider is hundreds (5). "Exactly 5! That's halfway between 84,000 and 85,000. The rule says round UP." Show a number line: 84,000 ←→ 85,000, halfway 84,500. Place 84,562 just to the right of halfway. "Yes, past halfway. Round up to 85,000." <strong>Nearest 10,000:</strong> Decider is thousands (4). 4 ≤ 4, round down. 84,562 → 80,000. Stack the three: 84,600 / 85,000 / 80,000. "Watch how the same number rounds DIFFERENTLY depending on the zoom level. All correct." (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-01-practice-2-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Find the decider digit for each round.</strong><div class="hint-callout">Nearest 100 → decider is tens (6). Nearest 1,000 → decider is hundreds (5). Nearest 10,000 → decider is thousands (4). Apply: 5 or higher rounds UP, 4 or lower rounds DOWN. Note: a decider of exactly 5 still rounds UP.</div><div class="video-wrap" data-video-slot="4-02-01-practice-2-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 2</div><div class="video-wrap-title">The halfway rule: 5 rounds up</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-01_Practice-2_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach especially the halfway case. Write 84,562 with each place labeled. Walk through the 1,000-round case slowly: "I'm rounding to thousands. The decider is hundreds — that's 5. <em>Exactly 5</em>. The rule says 5 or higher rounds up. So we round UP — thousands 4 becomes 5, everything to the right becomes 0. Answer: 85,000." Draw a number line 84,000 ←→ 85,000, halfway 84,500. Place 84,562 a tiny bit to the right of 84,500. "See? It's past halfway. The rule and the number line agree." Concept being retaught: the convention that 5 rounds UP even at halfway. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-01-practice-2-retry --></div></div></div></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Maya's Mistake — Did She Carry?</div><div class="activity-sub">Walk through her work and spot the missing carry.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Read Maya's work column by column. The answer is close but not right — find where she went wrong.</p></div>
+<div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ All three!</strong> 45,300 + 22,900 = <strong>68,200</strong> (estimate said about 70,000 — match). 78,500 − 31,200 = <strong>47,300</strong> (estimate said about 50,000 — match). 156,700 + 84,300 = <strong>241,000</strong> (estimate said about 240,000 — match). Each estimate kept you in the right neighborhood; each exact answer was checked against it.</div><div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Find the decider digit for each round.</strong><div class="hint-callout">Nearest 100 → decider is tens (6). Nearest 1,000 → decider is hundreds (5). Nearest 10,000 → decider is thousands (4). Apply: 5 or higher rounds UP, 4 or lower rounds DOWN. Note: a decider of exactly 5 still rounds UP.</div></div></div></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Maya's Mistake — Did She Carry?</div><div class="activity-sub">Walk through her work and spot the missing carry.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Read Maya's work column by column. The answer is close but not right — find where she went wrong.</p></div>
 <div class="task-box"><div class="task-label">Maya's Work</div>
 <p>Maya was asked to add <strong>57,469 + 28,254</strong>. She lined them up correctly and wrote:</p>
 <div style="background:#FFF0E6;border:2px solid #F5C8A0;border-radius:12px;padding:14px 16px;font-family:'Lora',Georgia,serif;font-size:16px;color:#0E1C42;line-height:1.7;margin-top:8px;">
-"Ones: 9 + 4 = 13 (write 3, carry 1).<br>
-Tens: 1 + 6 + 5 = 12 (write 2, carry 1).<br>
-Hundreds: 4 + 2 = <strong>6</strong> (write 6, no carry).<br>
-Thousands: 7 + 8 = 15 (write 5, carry 1).<br>
-Ten-thousands: 1 + 5 + 2 = 8.<br>
+"Ones: 9 + 4 = 13 (write 3, carry 1).<br/>
+Tens: 1 + 6 + 5 = 12 (write 2, carry 1).<br/>
+Hundreds: 4 + 2 = <strong>6</strong> (write 6, no carry).<br/>
+Thousands: 7 + 8 = 15 (write 5, carry 1).<br/>
+Ten-thousands: 1 + 5 + 2 = 8.<br/>
 Answer: <strong>85,623</strong>."
 </div>
 </div>
@@ -661,30 +709,26 @@ Answer: <strong>85,623</strong>."
 </div>
 <button class="check-btn" onclick="checkErrorAnalysis()">Check My Answers ✓</button>
 <div class="journal-label">✏️ Maya's mistake is sneaky — her answer is close to the estimate, so an estimate-check wouldn't catch it. What's a SECOND way to check addition that WOULD catch a missing carry? <span class="saved-dot" id="dot-ea"></span></div>
-<textarea class="journal-box" id="journal-ea" data-label="Practice 3 — Error Analysis: A second check that catches a missing carry" placeholder="" oninput="autoSave(this,'dot-ea')"></textarea>
-<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Maya forgot to add her carry of 1 (from the tens column) into the hundreds column. Hundreds should have been 1 + 4 + 2 = 7, not 6. Missing the carry cost her exactly 100. Correct answer: 85,723. An estimate doesn't catch errors this small — but redoing the column-by-column work, OR using partial sums, would.<div class="video-wrap" data-video-slot="4-02-01-practice-3-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 3</div><div class="video-wrap-title">Following a carry all the way through</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-01_Practice-3_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write 199,500 with each digit labeled by place: HT-TT-Th-H-T-O = 1-9-9-5-0-0. Round to nearest 1,000. Underline hundreds (5). "Decider is 5. Halfway rounds UP." Add 1 to thousands: 9 + 1 = 10. Pause. "Ten can't sit in one place. Write 0 in thousands and carry the 1 to ten-thousands." Ten-thousands 9 + 1 = 10. "Carry again. 0 in ten-thousands, carry to hundred-thousands." Hundred-thousands 1 + 1 = 2. Write 200,000. Now show Priya's wrong answer (190,000): "Priya wrote 0 in thousands but never carried. She left ten-thousands as 9. That's how she got 190,000 — exactly 10,000 too small." End: "Most rounds don't carry. But when the rounding place is 9 and you round UP, slow down and follow the ripple." (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-01-practice-3-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">When 9 + 1 = 10 in a place, that 1 has to ripple to the next place. If THAT place is also 9, ripple again. Don't stop early.</div><div class="video-wrap" data-video-slot="4-02-01-practice-3-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 3</div><div class="video-wrap-title">Carry the 1 every time it hits 10</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-01_Practice-3_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the carry chain. Slowly: "9 + 1 = 10. We write 0 and carry the 1. That 1 has to LAND somewhere — and it lands one place to the left. If THAT place becomes 10 too, we carry again. Keep going until you don't need to carry anymore." Walk through 199,500 step by step. Concept being retaught: the carry isn't optional. Whenever a digit + 1 equals 10, the 1 must ripple to the next place. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-01-practice-3-retry --></div></div></div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
-  <div class="socratic-box"><div class="socratic-label">🔮 Think Like a Mathematician</div><p class="socratic-q">A carry "spends" 10 of one place and "earns" 1 of the next place. Why is that a fair trade? Use 10 tens = 1 hundred to explain why a carry from tens to hundreds doesn't change the total value of the sum — just how it's written.</p><div class="journal-label">✏️ My reasoning <span class="saved-dot" id="dot-soc2"></span></div><textarea class="journal-box" id="journal-soc2" data-label="Practice — Socratic: Why is a carry a fair trade?" placeholder="" oninput="autoSave(this,'dot-soc2')"></textarea></div>
-  <div class="tab-next-wrap"><p class="tab-transition-voice">You added 5-digit numbers with carries, sorted them by difficulty, and caught a missing-carry mistake. Now show what you know.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
+<textarea class="journal-box" data-label="Practice 3 — Error Analysis: A second check that catches a missing carry" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
+<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Maya forgot to add her carry of 1 (from the tens column) into the hundreds column. Hundreds should have been 1 + 4 + 2 = 7, not 6. Missing the carry cost her exactly 100. Correct answer: 85,723. An estimate doesn't catch errors this small — but redoing the column-by-column work, OR using partial sums, would.</div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">When 9 + 1 = 10 in a place, that 1 has to ripple to the next place. If THAT place is also 9, ripple again. Don't stop early.</div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
+<div class="socratic-box"><div class="socratic-label">🔮 Think Like a Mathematician</div><p class="socratic-q">A carry "spends" 10 of one place and "earns" 1 of the next place. Why is that a fair trade? Use 10 tens = 1 hundred to explain why a carry from tens to hundreds doesn't change the total value of the sum — just how it's written.</p><div class="journal-label">✏️ My reasoning <span class="saved-dot" id="dot-soc2"></span></div><textarea class="journal-box" data-label="Practice — Socratic: Why is a carry a fair trade?" id="journal-soc2" oninput="autoSave(this,'dot-soc2')" placeholder=""></textarea></div>
+<div class="tab-next-wrap"><p class="tab-transition-voice">You added 5-digit numbers with carries, sorted them by difficulty, and caught a missing-carry mistake. Now show what you know.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-assignment">
-  <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Use the chart, expanded form, or words — whichever helps you think.</div></div></div><div class="activity-body"><p>You met a new place today and built numbers that climb past ten thousand. These problems give you a chance to put it all together. Use any strategy from Learn — the chart, the discs, expanded form, or word form.</p>
+<div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Use the chart, expanded form, or words — whichever helps you think.</div></div></div><div class="activity-body"><p>You met a new place today and built numbers that climb past ten thousand. These problems give you a chance to put it all together. Use any strategy from Learn — the chart, the discs, expanded form, or word form.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask yourself:</strong> Which place is each digit in? Which tool will help me see that fastest?</p></div>
-<div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Find each sum.</strong> Show your column work (the carries especially). Then write a quick estimate to check.<br>(a) <strong>42,756 + 18,392</strong><br>(b) <strong>30,485 + 67,219</strong></p><div class="journal-label">✏️ My answer <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" id="journal-a1" data-label="Show What You Know — Problem 1: Two 5-digit sums with carries" placeholder="" oninput="autoSave(this,'dot-a1')"></textarea></div>
-
-<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> The "carry" is the trickiest part of the algorithm. In your own words, explain what a carry IS, what causes it, and why it's a fair trade (no value is lost or added). Use a real example from this lesson.</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" id="journal-a6" data-label="Show What You Know — Problem 6: What is a carry?" placeholder="" oninput="autoSave(this,'dot-a6')"></textarea></div>
-
-
+<div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Find each sum.</strong> Show your column work (the carries especially). Then write a quick estimate to check.<br/>(a) <strong>42,756 + 18,392</strong><br/>(b) <strong>30,485 + 67,219</strong></p><div class="journal-label">✏️ My answer <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: Two 5-digit sums with carries" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
+<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> The "carry" is the trickiest part of the algorithm. In your own words, explain what a carry IS, what causes it, and why it's a fair trade (no value is lost or added). Use a real example from this lesson.</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: What is a carry?" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#55C8E8;"><div class="activity-head"><div class="activity-num" style="background:#55C8E8;color:#0E1C42;">🗺️</div><div><div class="activity-title">Connection Forward: What Comes Next</div><div class="activity-sub">Preview Lesson 4.02.02 — Subtraction</div></div></div><div class="activity-body"><p>Today you learned to ADD multi-digit numbers by place — column by column, with carries when a column reaches 10. The chart never went away; the algorithm just organized place value into a routine.</p><p>Next lesson, we'll do the same thing in REVERSE. Subtraction undoes addition. You'll line numbers up the same way, but now when a column doesn't have enough to subtract from, you'll <strong>regroup</strong> from the next place — borrow 1 hundred and turn it into 10 tens, for example. Same chart, same place value, new direction.</p><p>The big question next time: <em>If carrying gave us 10 of a smaller place when a column overflowed, what's the move when a column doesn't have enough?</em></p></div></div>
 </div></div>
-  <div class="video-wrap" data-video-slot="4-02-01-assignment-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Show What You Know Feedback · Lesson 4.02.01</div><div class="video-wrap-title">The two trickiest problems</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-01_SWYK-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk through Problem 4 and Problem 5. <strong>Problem 4 (find the small mistake):</strong> Write 23,847 + 16,538 on the board. Estimate: 24,000 + 17,000 = 41,000. "The student wrote 39,375 — that's about 1,600 too small. Doesn't quite match the estimate. Let's redo the algorithm." Stack and add: ones 7+8=15 (5, carry 1). Tens 1+4+3=8. Hundreds 8+5=13 (3, carry 1). Thousands 1+3+6=10 (0, carry 1). Ten-thousands 1+2+1=4. Sum: 40,385. "The correct answer is 40,385 — the student forgot a carry somewhere. Always re-do the columns when the estimate doesn't match." <strong>Problem 5 (three-addend sums):</strong> 14,275 + 22,840 + 9,615. Estimate: 14,000 + 23,000 + 10,000 = 47,000. Stack three numbers vertically (line up by place). Add ones 5+0+5=10 (0, carry 1). Tens 1+7+4+1=13 (3, carry 1). Hundreds 1+2+8+6=17 (7, carry 1). Thousands 1+4+2+9=16 (6, carry 1). Ten-thousands 1+1+2+0=4. Sum: 46,730. "The same algorithm scales to three numbers — just add what's in the column, plus any carry. Off by 270 from estimate (47,000) — well within range." End: "Next lesson reverses everything — subtraction." (~2–3 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-01-assignment-feedback --></div></div></div></div>
-  <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly>Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
-  <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
+
+<div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
+<div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
 </div>
 <div class="footer">
-  <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
-  <div class="footer-sub">Math · Grade 4 · 4.02.01</div>
-  <div class="footer-copy">© 2025 Optima Academy Online</div>
+<div class="footer-main">🏫 <span>Optima Academy Online</span></div>
+<div class="footer-sub">Math · Grade 4 · 4.02.01</div>
+<div class="footer-copy">© 2025 Optima Academy Online</div>
 </div>
 </div>
 <canvas id="confettiCanvas"></canvas>
@@ -1143,6 +1187,75 @@ async function loadVideoManifest(){try{let res=await fetch('video-manifest.md',{
 function parseManifest(txt){let map={};let lines=txt.split(/\r?\n/);let current=null,buf=[];function commit(){if(current&&buf.join('\n').trim())map[current]=buf.join('\n').trim();buf=[]}for(let line of lines){let m=line.match(/^([A-Za-z0-9-]+):\s*$/);if(m){commit();current=m[1]}else if(current){buf.push(line)}}commit();return map}
 function showPageFeedback(msg){var panel=document.querySelector('.tab-panel.active')||document.body;var box=panel.querySelector(':scope > .page-feedback');if(!box){box=document.createElement('div');box.className='page-feedback';panel.insertBefore(box,panel.firstChild);}box.className='page-feedback show warn';box.innerHTML=msg;}
 window.addEventListener('DOMContentLoaded',()=>{restoreJournals();updateProgress();loadVideoManifest()});
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Related Division Facts";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
 </script>
 </body>
 </html>

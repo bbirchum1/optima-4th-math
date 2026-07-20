@@ -314,6 +314,32 @@
 .frac.frac-lg{font-size:1.05em}
 .frac.frac-on-dark .num{border-bottom-color:#fff}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
@@ -341,7 +367,31 @@
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
-<div class="video-wrap" data-video-slot="4-07-02-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.07.02</div><div class="video-wrap-title">Different denominators? Rename first, then add.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-02_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Hold up a measuring cup. "<span class="frac"><span class="num">3</span><span class="den">4</span></span> cup of flour plus <span class="frac"><span class="num">7</span><span class="den">12</span></span> cup of cornmeal. Different bottoms — 4 and 12. The slices aren't the same size, so I can't just add the tops." Show two pies: <span class="frac"><span class="num">3</span><span class="den">4</span></span> (cut in 4ths, 3 shaded) and <span class="frac"><span class="num">7</span><span class="den">12</span></span> (cut in 12ths, 7 shaded). "Notice 12 is a multiple of 4 — 4 × 3 = 12. That means I can rename <span class="frac"><span class="num">3</span><span class="den">4</span></span> with denominator 12 using ×n/n." Walk it: <span class="frac"><span class="num">3</span><span class="den">4</span></span> × <span class="frac"><span class="num">3</span><span class="den">3</span></span> = 9/12. "Now I have <span class="frac"><span class="num">9</span><span class="den">12</span></span> + <span class="frac"><span class="num">7</span><span class="den">12</span></span> — same denominator. Add tops: 9 + 7 = 16. So 16/12." Convert: 16 ÷ 12 = 1 r 4 → 1 4/12. Simplify <span class="frac"><span class="num">4</span><span class="den">12</span></span> = <span class="frac"><span class="num">1</span><span class="den">3</span></span> → <strong>1 <span class="frac"><span class="num">1</span><span class="den">3</span></span> cups total</strong>. Frame: "Three steps. Find a common denominator. Rename. Add the tops (like 7.01). Simplify or convert at the end. Tone: clear, recipe-themed. About 1-2 min."</div><div class="video-placeholder-id"><!-- slot: lesson-welcome --></div></div></div></div>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Multi-Digit Division (basic)</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">96 ÷ 4</span><input autocomplete="off" class="fluency-input" data-answer="24" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">144 ÷ 6</span><input autocomplete="off" class="fluency-input" data-answer="24" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">250 ÷ 5</span><input autocomplete="off" class="fluency-input" data-answer="50" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">126 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="18" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">184 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="23" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">207 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="23" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">168 ÷ 6</span><input autocomplete="off" class="fluency-input" data-answer="28" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">192 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="24" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">315 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="45" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">288 ÷ 4</span><input autocomplete="off" class="fluency-input" data-answer="72" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Multi-Digit Division (basic))" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
 <p>Atlas stays lead. Today's move adds a step: rename first. Felix still computes the new numerator. Hazel still draws the pies to prove it. Cora still simplifies.</p>
 <div class="bubble-row">
@@ -386,7 +436,7 @@
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Answers:</strong> <span class="frac"><span class="num">1</span><span class="den">3</span></span> = <strong>4</strong>/12 (×4/4). <span class="frac"><span class="num">3</span><span class="den">4</span></span> = <strong>9</strong>/12 (×3/3). <span class="frac"><span class="num">2</span><span class="den">5</span></span> = <strong>4</strong>/10 (×2/2). Each uses ×n/n — multiply top AND bottom by the same n. This is the move you'll use today to give two fractions a common denominator.</div>
 <div class="journal-label">✏️ Pick one. Show the ×n/n move that built the equivalent. <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: Build equivalents with ×n/n" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
-<div class="video-wrap" data-video-slot="4-07-02-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.07.02</div><div class="video-wrap-title">Building equivalents — the renaming move</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-02_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk each equivalence. "<span class="frac"><span class="num">1</span><span class="den">3</span></span> = ?/12: bottom goes from 3 to 12 — that's ×4. So top also ×4: 1 × 4 = 4. Answer 4/12." Repeat for <span class="frac"><span class="num">3</span><span class="den">4</span></span> = <span class="frac"><span class="num">9</span><span class="den">12</span></span> (×3) and <span class="frac"><span class="num">2</span><span class="den">5</span></span> = <span class="frac"><span class="num">4</span><span class="den">10</span></span> (×2). Frame: "This renaming move IS the first step today. Once both fractions share a denominator, the rest is Lesson 7.01."</div><div class="video-placeholder-id"><!-- slot: lesson-readiness-feedback --></div></div></div></div>
+
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">When the slices are different sizes.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">🍳</span><p>A pancake recipe calls for <strong><span class="frac"><span class="num">3</span><span class="den">4</span></span> cup of flour</strong> and <strong><span class="frac"><span class="num">7</span><span class="den">12</span></span> cup of cornmeal</strong>. <strong>What's the total amount of dry ingredients?</strong></p></div>
 <div class="number-talk-visual">
@@ -413,7 +463,7 @@
 <textarea class="journal-box" data-label="Warm-Up — Think Prompt: 3/4 + 7/12 recipe" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">Rename first, then add. Now learn how to find a common denominator every time.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-<div class="tab-panel" id="tab-learn">
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-07-02-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-07-02 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-07-02-concept --></div></div></div></div>
 <div aria-label="Daily vocabulary flash cards" class="vocab-section">
 <div class="vocab-section-head">
 <div class="vocab-section-icon">📚</div>
@@ -450,7 +500,7 @@
 </div>
 </div>
 </div>
-<div class="video-wrap" data-video-slot="4-07-02-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.07.02</div><div class="video-wrap-title">Rename one fraction first — then add normally</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-02_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Three examples, one routine. Example 1: <span class="frac"><span class="num">1</span><span class="den">2</span></span> + 3/8. "Different bottoms — 2 and 8. Is 2 a factor of 8? Yes — 2 × 4 = 8. Use 8. Rename <span class="frac"><span class="num">1</span><span class="den">2</span></span> × <span class="frac"><span class="num">4</span><span class="den">4</span></span> = 4/8. Now <span class="frac"><span class="num">4</span><span class="den">8</span></span> + <span class="frac"><span class="num">3</span><span class="den">8</span></span> = 7/8." Example 2: <span class="frac"><span class="num">2</span><span class="den">3</span></span> + 5/6. "3 and 6 — 3 × 2 = 6. Rename <span class="frac"><span class="num">2</span><span class="den">3</span></span> × <span class="frac"><span class="num">2</span><span class="den">2</span></span> = 4/6. <span class="frac"><span class="num">4</span><span class="den">6</span></span> + <span class="frac"><span class="num">5</span><span class="den">6</span></span> = <span class="frac"><span class="num">9</span><span class="den">6</span></span> = <span class="frac"><span class="num">3</span><span class="den">2</span></span> = 1 1/2." Example 3 (subtraction): <span class="frac"><span class="num">11</span><span class="den">12</span></span> − 1/3. "Rename <span class="frac"><span class="num">1</span><span class="den">3</span></span> × <span class="frac"><span class="num">4</span><span class="den">4</span></span> = 4/12. <span class="frac"><span class="num">11</span><span class="den">12</span></span> − <span class="frac"><span class="num">4</span><span class="den">12</span></span> = 7/12." Frame: "Same routine. Step 1 — find a common denom (use the bigger one if the smaller divides into it). Step 2 — rename with ×n/n. Step 3 — apply the same-denominator rule. Step 4 — simplify or convert." Tone: clear, procedural. About 2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-concept --></div></div></div></div>
+
 <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Three different-denominator problems below. Rename, then add or subtract, then simplify.</p></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#0E8A8C;">🔄</div><div><div class="activity-title">Common-Denominator Builder</div><div class="activity-sub">Pick the common denom. Rename. Combine.</div></div></div><div class="activity-body"><p>Each problem has unlike fractions. First decide the common denominator. Then pick the matching answer (after rename + add/subtract + simplify).</p>
 <div style="background:#F3F9F8;border:2px solid #A8D8D6;border-radius:14px;padding:18px 14px;margin:12px 0;">
@@ -522,7 +572,7 @@
 <textarea class="journal-box" data-label="Learn — Socratic: Renaming preserves value" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: <span class="frac"><span class="num">13</span><span class="den">100</span></span> + <span class="frac"><span class="num">2</span><span class="den">10</span></span></div><div class="activity-sub">A useful renaming — tenths and hundredths.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Find <strong><span class="frac"><span class="num">13</span><span class="den">100</span></span> + <span class="frac"><span class="num">2</span><span class="den">10</span></span></strong>. Express the answer in simplest form.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
-<div class="video-wrap" data-video-slot="4-07-02-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.07.02</div><div class="video-wrap-title"><span class="frac"><span class="num">13</span><span class="den">100</span></span> + <span class="frac"><span class="num">20</span><span class="den">100</span></span> = <span class="frac"><span class="num">33</span><span class="den">100</span></span></div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-02_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Atlas reads. "<span class="frac"><span class="num">13</span><span class="den">100</span></span> + 2/10. Different denominators — 100 and 10. Is 10 a factor of 100? Yes — 10 × 10 = 100." Hazel pictures: 10 strips of tenths versus 100 strips of hundredths. "If I re-cut each tenth into 10 hundredths, <span class="frac"><span class="num">2</span><span class="den">10</span></span> becomes 20/100." Felix renames: "<span class="frac"><span class="num">2</span><span class="den">10</span></span> × <span class="frac"><span class="num">10</span><span class="den">10</span></span> = 20/100." Then adds: "<span class="frac"><span class="num">13</span><span class="den">100</span></span> + <span class="frac"><span class="num">20</span><span class="den">100</span></span> = 33/100." Cora simplifies: "GCF of 33 and 100? 33 = 3 × 11. 100 = 4 × 25. No common factors. Already simplest." Final: <strong><span class="frac"><span class="num">33</span><span class="den">100</span></span></strong>. Frame: "Tenths and hundredths come up a lot in money and decimals. Always rename tenths to hundredths first." Tone: clean, procedural. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-07-02-example --></div></div></div></div>
+
 <div style="background:#F3F9F8;border:2px solid #A8D8D6;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.8;font-size:15px;">
 <strong>Step 1 — Common denominator?</strong> 10 × 10 = 100. Use 100.<br/>
@@ -562,10 +612,10 @@
 <button class="value-card" onclick="pickP1Round(this,'10/12')" style="min-width:100px;"><div class="big"><span class="frac"><span class="num">10</span><span class="den">12</span></span></div></button>
 </div>
 <div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Exactly.</strong> Rename <span class="frac"><span class="num">3</span><span class="den">4</span></span> × <span class="frac"><span class="num">3</span><span class="den">3</span></span> = 9/12. Then <span class="frac"><span class="num">9</span><span class="den">12</span></span> + <span class="frac"><span class="num">7</span><span class="den">12</span></span> = 16/12. Convert: 16 ÷ 12 = 1 r 4 → 1 4/12. Simplify <span class="frac"><span class="num">4</span><span class="den">12</span></span> = <span class="frac"><span class="num">1</span><span class="den">3</span></span> → <strong>1 <span class="frac"><span class="num">1</span><span class="den">3</span></span></strong>.
-<div class="video-wrap" data-video-slot="4-07-02-practice-1-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 1</div><div class="video-wrap-title">Rename, add, simplify</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-02_Practice-1_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk through all four steps. About 45 sec.</div><div class="video-placeholder-id"><!-- slot: 4-07-02-practice-1-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Look again.</strong> 4 and 12 — which is a multiple? 12 = 4 × 3. So use 12.
 <div class="hint-callout">Rename <span class="frac"><span class="num">3</span><span class="den">4</span></span> × <span class="frac"><span class="num">3</span><span class="den">3</span></span> = 9/12. Then <span class="frac"><span class="num">9</span><span class="den">12</span></span> + <span class="frac"><span class="num">7</span><span class="den">12</span></span> = <span class="frac"><span class="num">16</span><span class="den">12</span></span> = 1 <span class="frac"><span class="num">4</span><span class="den">12</span></span> = 1 1/3.</div>
-<div class="video-wrap" data-video-slot="4-07-02-practice-1-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 1</div><div class="video-wrap-title">Use the bigger denominator</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-02_Practice-1_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. About 1 min.</div><div class="video-placeholder-id"><!-- slot: 4-07-02-practice-1-retry --></div></div></div></div></div></div></div>
+</div></div></div>
 <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three More — Different Denominators</div><div class="activity-sub">Find the common denom, rename, then add or subtract.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>Strategy:</strong> Look for the larger denom as a multiple of the smaller. Rename using ×n/n. Then same-denominator rule.</p></div>
 <p>Pick the simplest correct answer.</p>
 <div style="display:grid;gap:14px;margin:14px 0;">
@@ -595,10 +645,10 @@
 </div>
 </div>
 <div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ Three for three.</strong> 2a — rename <span class="frac"><span class="num">1</span><span class="den">2</span></span> = 7/14. <span class="frac"><span class="num">7</span><span class="den">14</span></span> + <span class="frac"><span class="num">3</span><span class="den">14</span></span> = <span class="frac"><span class="num">10</span><span class="den">14</span></span> = <strong><span class="frac"><span class="num">5</span><span class="den">7</span></span></strong>. 2b — rename <span class="frac"><span class="num">4</span><span class="den">7</span></span> = 8/14. <span class="frac"><span class="num">11</span><span class="den">14</span></span> − <span class="frac"><span class="num">8</span><span class="den">14</span></span> = <strong><span class="frac"><span class="num">3</span><span class="den">14</span></span></strong>. 2c — rename <span class="frac"><span class="num">9</span><span class="den">8</span></span> = 27/24. <span class="frac"><span class="num">27</span><span class="den">24</span></span> + <span class="frac"><span class="num">11</span><span class="den">24</span></span> = <span class="frac"><span class="num">38</span><span class="den">24</span></span> = 1 <span class="frac"><span class="num">14</span><span class="den">24</span></span> → simplify <span class="frac"><span class="num">14</span><span class="den">24</span></span> = <span class="frac"><span class="num">7</span><span class="den">12</span></span> → <strong>1 <span class="frac"><span class="num">7</span><span class="den">12</span></span></strong>.
-<div class="video-wrap" data-video-slot="4-07-02-practice-2-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 2</div><div class="video-wrap-title">Rename, then operate</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-02_Practice-2_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk all three. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-07-02-practice-2-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Look again.</strong> Find the common denom, rename, then add or subtract. Watch the simplify step.
 <div class="hint-callout">2a: <span class="frac"><span class="num">1</span><span class="den">2</span></span> = <span class="frac"><span class="num">7</span><span class="den">14</span></span>, 7+3=10 → <span class="frac"><span class="num">10</span><span class="den">14</span></span> → 5/7. 2b: <span class="frac"><span class="num">4</span><span class="den">7</span></span> = <span class="frac"><span class="num">8</span><span class="den">14</span></span>, 11−8=3 → 3/14. 2c: <span class="frac"><span class="num">9</span><span class="den">8</span></span> = <span class="frac"><span class="num">27</span><span class="den">24</span></span>, 27+11=38 → <span class="frac"><span class="num">38</span><span class="den">24</span></span> = 1 <span class="frac"><span class="num">14</span><span class="den">24</span></span> → 1 7/12.</div>
-<div class="video-wrap" data-video-slot="4-07-02-practice-2-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 2</div><div class="video-wrap-title">Rename then operate</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-02_Practice-2_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-07-02-practice-2-retry --></div></div></div></div></div></div></div>
+</div></div></div>
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#0E8A8C;">3</div><div><div class="activity-title">Find Jana's Mistake — She Forgot to Rename</div><div class="activity-sub">She added unlike fractions directly. The bottoms must match first.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Jana tried to add <span class="frac"><span class="num">2</span><span class="den">3</span></span> + 1/6. She added the tops AND the bottoms instead of renaming first.</p></div>
 <div class="task-box"><div class="task-label">Jana's Work</div>
 <p>Jana was asked: <strong>"Find <span class="frac"><span class="num">2</span><span class="den">3</span></span> + <span class="frac"><span class="num">1</span><span class="den">6</span></span> in simplest form."</strong></p>
@@ -615,17 +665,14 @@
 <button class="purple-btn" onclick="checkErrorAnalysis()">✓ Check My Picks</button>
 <div class="journal-label">✏️ Help Jana. Write a rule: what do you do FIRST when the denominators are different? <span class="saved-dot" id="dot-ea"></span></div>
 <textarea class="journal-box" data-label="Practice 3 — Error Analysis: Must rename first" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
-<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Different denominators = rename FIRST. <span class="frac"><span class="num">2</span><span class="den">3</span></span> = 4/6. Then <span class="frac"><span class="num">4</span><span class="den">6</span></span> + <span class="frac"><span class="num">1</span><span class="den">6</span></span> = <strong><span class="frac"><span class="num">5</span><span class="den">6</span></span></strong>. <div class="video-wrap" data-video-slot="4-07-02-practice-3-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 3</div><div class="video-wrap-title">Rename, then 7.01 rule</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-02_Practice-3_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Frame the rule. About 45 sec.</div><div class="video-placeholder-id"><!-- slot: 4-07-02-practice-3-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout"><span class="frac"><span class="num">2</span><span class="den">3</span></span> + <span class="frac"><span class="num">1</span><span class="den">6</span></span> = ? Rename <span class="frac"><span class="num">2</span><span class="den">3</span></span> with denom 6: <span class="frac"><span class="num">2</span><span class="den">3</span></span> × <span class="frac"><span class="num">2</span><span class="den">2</span></span> = 4/6. Then <span class="frac"><span class="num">4</span><span class="den">6</span></span> + <span class="frac"><span class="num">1</span><span class="den">6</span></span> = 5/6.</div><div class="video-wrap" data-video-slot="4-07-02-practice-3-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 3</div><div class="video-wrap-title">Rename FIRST</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-02_Practice-3_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. About 1 min.</div><div class="video-placeholder-id"><!-- slot: 4-07-02-practice-3-retry --></div></div></div></div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
+<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Different denominators = rename FIRST. <span class="frac"><span class="num">2</span><span class="den">3</span></span> = 4/6. Then <span class="frac"><span class="num">4</span><span class="den">6</span></span> + <span class="frac"><span class="num">1</span><span class="den">6</span></span> = <strong><span class="frac"><span class="num">5</span><span class="den">6</span></span></strong>. </div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout"><span class="frac"><span class="num">2</span><span class="den">3</span></span> + <span class="frac"><span class="num">1</span><span class="den">6</span></span> = ? Rename <span class="frac"><span class="num">2</span><span class="den">3</span></span> with denom 6: <span class="frac"><span class="num">2</span><span class="den">3</span></span> × <span class="frac"><span class="num">2</span><span class="den">2</span></span> = 4/6. Then <span class="frac"><span class="num">4</span><span class="den">6</span></span> + <span class="frac"><span class="num">1</span><span class="den">6</span></span> = 5/6.</div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">Rename one fraction, then apply same-denom rule. Now practice.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Adding and subtracting fractions with different denominators. Rename, operate, simplify.</div></div></div><div class="activity-body"><p>For each, show your work — rename to a common denominator first, then operate, then simplify or convert.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Do the denominators MATCH? Or do I need to rename one or both? Or is a benchmark (<span class="frac"><span class="num">1</span><span class="den">2</span></span>, 1) faster?</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Find the common denominator and compute.</strong> Express in simplest form.<br/>(a) <span class="frac"><span class="num">3</span><span class="den">4</span></span> + <span class="frac"><span class="num">7</span><span class="den">12</span></span><br/>(b) <span class="frac"><span class="num">5</span><span class="den">6</span></span> + <span class="frac"><span class="num">2</span><span class="den">3</span></span><br/>(c) <span class="frac"><span class="num">1</span><span class="den">2</span></span> + <span class="frac"><span class="num">3</span><span class="den">14</span></span></p><div class="journal-label">✏️ My answers in simplest form + the simplification step <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: Convert three improper to mixed" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-
 <div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Story problem.</strong> A pole is painted: <span class="frac"><span class="num">3</span><span class="den">10</span></span> red, <span class="frac"><span class="num">1</span><span class="den">5</span></span> yellow. The rest is blue. What fraction of the pole is painted blue?</p><div class="journal-label">✏️ My answers <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: Cake story with simplification" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
-
-
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#0E8A8C;"><div class="activity-head"><div class="activity-num" style="background:#0E8A8C;color:#fff;">🗺️</div><div><div class="activity-title">Connection Forward: Adding Mixed Numbers</div><div class="activity-sub">What comes next in Unit 7</div></div></div><div class="activity-body"><p>You've compared and ordered fractions that all fit between 0 and 1.</p><p>Next lesson: <strong>Improper Fractions and Mixed Numbers.</strong> What if the top is BIGGER than the bottom? <span class="frac"><span class="num">8</span><span class="den">5</span></span> of a pie isn't just half — it's a WHOLE pie plus some extra. That's an improper fraction, and it can also be written as a mixed number (1 <span class="frac"><span class="num">3</span><span class="den">5</span></span>).</p><p>The big question opening 6.03: <em>How do you show a fraction that's more than 1 whole?</em></p></div></div></div></div>
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed all 6 problems above.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed the renaming step on every problem with unlike denominators.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I simplified my final answers and converted any improper fractions to mixed numbers.</span></div></div></div>
@@ -1070,6 +1117,75 @@ async function loadVideoManifest(){try{let res=await fetch('video-manifest.md',{
 function parseManifest(txt){let map={};let lines=txt.split(/\r?\n/);let current=null,buf=[];function commit(){if(current&&buf.join('\n').trim())map[current]=buf.join('\n').trim();buf=[]}for(let line of lines){let m=line.match(/^([A-Za-z0-9-]+):\s*$/);if(m){commit();current=m[1]}else if(current){buf.push(line)}}commit();return map}
 function showPageFeedback(msg){var panel=document.querySelector('.tab-panel.active')||document.body;var box=panel.querySelector(':scope > .page-feedback');if(!box){box=document.createElement('div');box.className='page-feedback';panel.insertBefore(box,panel.firstChild);}box.className='page-feedback show warn';box.innerHTML=msg;}
 window.addEventListener('DOMContentLoaded',()=>{restoreJournals();updateProgress();loadVideoManifest()});
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Multi-Digit Division (basic)";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
 </script>
 </body>
 </html>

@@ -329,6 +329,32 @@
 .cc-row strong{color:#1A6B8E;font-weight:900;font-family:Lora,Georgia,serif}
 .cc-row em{color:#7A88A8;font-style:italic;font-size:12px}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
@@ -356,7 +382,31 @@
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
-<div class="video-wrap" data-video-slot="4-12-07-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.12.07</div><div class="video-wrap-title">Compare decimals by walking the places.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-12-07_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write 0.7 and 0.65 side by side. "Which is bigger?" Pad: 0.70 vs 0.65. "Tenths place: 7 vs 6. 7 > 6. So 0.70 > 0.65 → 0.7 > 0.65." Show that 7 of 10 IS bigger than 65 of 100 with grids. Frame: <strong>Walk the places. First difference decides.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-welcome --></div></div></div></div>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Mixed All-Operations Facts — Maintenance</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">9 × 7</span><input autocomplete="off" class="fluency-input" data-answer="63" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">56 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="7" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 8</span><input autocomplete="off" class="fluency-input" data-answer="64" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">63 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="7" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 9</span><input autocomplete="off" class="fluency-input" data-answer="54" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">72 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="9" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">11 × 6</span><input autocomplete="off" class="fluency-input" data-answer="66" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">96 ÷ 12</span><input autocomplete="off" class="fluency-input" data-answer="8" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 7</span><input autocomplete="off" class="fluency-input" data-answer="49" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">48 ÷ 6</span><input autocomplete="off" class="fluency-input" data-answer="8" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Mixed All-Operations Facts — Maintenance)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
 <p>Hazel shows you the picture. Atlas names the parts (tenths). Felix multiplies and renames. Cora notices that 3/10 and 0.3 say the same thing two ways.</p>
 <div class="bubble-row">
@@ -369,43 +419,39 @@
 </div>
 <div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>Crew rule: <em>Align the points (Hazel). Pad with zeros (Atlas). Walk left to right (Felix). Find first difference (Cora).</em></p></div>
 </div></div>
-<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Greater or Less?</div><div class="activity-sub">Compare each pair with > or &lt;.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>Pick the correct comparison symbol.</p>
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Greater or Less?</div><div class="activity-sub">Compare each pair with &gt; or &lt;.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>Pick the correct comparison symbol.</p>
 <div style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:grid;gap:14px;">
-
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
 <div style="background:#fff;border:1.5px solid #D6F2FB;border-radius:10px;padding:10px;font-family:'Lora',Georgia,serif;font-size:20px;font-weight:900;color:#0E1C42;min-width:160px;text-align:center;">0.7 __ 0.5</div>
 <div class="value-card-row" style="margin:0;">
-<button class="value-card" onclick="pickReadinessRound(this,1,'>')" style="min-width:60px;"><div class="big" style="font-size:18px;">&gt;</div></button>
-<button class="value-card" onclick="pickReadinessRound(this,1,'<')" style="min-width:60px;"><div class="big" style="font-size:18px;">&lt;</div></button>
+<button class="value-card" onclick="pickReadinessRound(this,1,'&gt;')" style="min-width:60px;"><div class="big" style="font-size:18px;">&gt;</div></button>
+<button class="value-card" onclick="pickReadinessRound(this,1,'&lt;')" style="min-width:60px;"><div class="big" style="font-size:18px;">&lt;</div></button>
 <button class="value-card" onclick="pickReadinessRound(this,1,'=')" style="min-width:60px;"><div class="big" style="font-size:18px;">=</div></button>
 </div>
 </div>
-
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
 <div style="background:#fff;border:1.5px solid #D6F2FB;border-radius:10px;padding:10px;font-family:'Lora',Georgia,serif;font-size:20px;font-weight:900;color:#0E1C42;min-width:160px;text-align:center;">0.23 __ 0.32</div>
 <div class="value-card-row" style="margin:0;">
-<button class="value-card" onclick="pickReadinessRound(this,2,'>')" style="min-width:60px;"><div class="big" style="font-size:18px;">&gt;</div></button>
-<button class="value-card" onclick="pickReadinessRound(this,2,'<')" style="min-width:60px;"><div class="big" style="font-size:18px;">&lt;</div></button>
+<button class="value-card" onclick="pickReadinessRound(this,2,'&gt;')" style="min-width:60px;"><div class="big" style="font-size:18px;">&gt;</div></button>
+<button class="value-card" onclick="pickReadinessRound(this,2,'&lt;')" style="min-width:60px;"><div class="big" style="font-size:18px;">&lt;</div></button>
 <button class="value-card" onclick="pickReadinessRound(this,2,'=')" style="min-width:60px;"><div class="big" style="font-size:18px;">=</div></button>
 </div>
 </div>
-
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
 <div style="background:#fff;border:1.5px solid #D6F2FB;border-radius:10px;padding:10px;font-family:'Lora',Georgia,serif;font-size:20px;font-weight:900;color:#0E1C42;min-width:160px;text-align:center;">1.40 __ 1.4</div>
 <div class="value-card-row" style="margin:0;">
 <button class="value-card" onclick="pickReadinessRound(this,3,'=')" style="min-width:60px;"><div class="big" style="font-size:18px;">=</div></button>
-<button class="value-card" onclick="pickReadinessRound(this,3,'>')" style="min-width:60px;"><div class="big" style="font-size:18px;">&gt;</div></button>
-<button class="value-card" onclick="pickReadinessRound(this,3,'<')" style="min-width:60px;"><div class="big" style="font-size:18px;">&lt;</div></button>
+<button class="value-card" onclick="pickReadinessRound(this,3,'&gt;')" style="min-width:60px;"><div class="big" style="font-size:18px;">&gt;</div></button>
+<button class="value-card" onclick="pickReadinessRound(this,3,'&lt;')" style="min-width:60px;"><div class="big" style="font-size:18px;">&lt;</div></button>
 </div>
 </div>
-
 </div>
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
-<div class="reveal-box" id="readinessReveal"><strong>Compares:</strong> 0.7 <strong>></strong> 0.5 (tenths: 7 > 5). 0.23 <strong>&lt;</strong> 0.32 (tenths: 2 &lt; 3, first difference). 1.40 <strong>=</strong> 1.4 (trailing zero doesn't change value).</div>
-<div class="journal-label">✏️ Why is 0.23 less than 0.32 even though 23 looks bigger than 32 backward? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: > < =" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-12-07-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.12.07</div><div class="video-wrap-title">First arguing place wins</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-12-07_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "Look at the tenths place first. If tenths are equal, look at the hundredths. The FIRST place where they differ tells you which is bigger." Frame: <strong>Walk left to right. First arguing place decides.</strong></div><div class="video-placeholder-id"><!-- slot: lesson-readiness-feedback --></div></div></div></div>
+<div class="reveal-box" id="readinessReveal"><strong>Compares:</strong> 0.7 <strong>&gt;</strong> 0.5 (tenths: 7 &gt; 5). 0.23 <strong>&lt;</strong> 0.32 (tenths: 2 &lt; 3, first difference). 1.40 <strong>=</strong> 1.4 (trailing zero doesn't change value).</div>
+<div class="journal-label">✏️ Why is 0.23 less than 0.32 even though 23 looks bigger than 32 backward? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: &gt; &lt; =" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">A tricky comparison.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">📐</span><p>Which is bigger: <strong>0.7</strong> or <strong>0.65</strong>?</p></div>
 <div class="strategy-chip-row">
@@ -415,11 +461,10 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>Pad:</strong> 0.7 = 0.70. Now compare: 0.70 vs 0.65. Tenths: 7 vs 6 → 7 wins. <strong>0.7 &gt; 0.65</strong>.</p></div>
 <div class="journal-label">✏️ Without padding, why would the comparison feel confusing? <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think: 0.7 vs 0.65" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think: 0.7 vs 0.65" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">Now compare decimals yourself.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-12-07-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-12-07 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-12-07-concept --></div></div></div></div>
 <div aria-label="Daily vocabulary flash cards" class="vocab-section">
 <div class="vocab-section-head">
 <div class="vocab-section-icon">📚</div>
@@ -430,78 +475,74 @@
 </div>
 <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
 <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for compare. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">⚖️</div><div class="fc-word">compare</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">compare</div><div class="fc-def">to decide which of two numbers is bigger using &gt;, &lt;, or = symbols.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for align. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">📐</div><div class="fc-word">align the points</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">align the points</div><div class="fc-def">write two decimals one above the other, lining up the decimal points exactly.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for trailing zero. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">0️⃣</div><div class="fc-word">trailing zero</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">trailing zero</div><div class="fc-def">a zero at the END of a decimal (after the last non-zero digit). 0.7 = 0.70 = 0.700. The trailing zero doesn't change the value.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for order. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">📊</div><div class="fc-word">order</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">order</div><div class="fc-def">arrange a list of numbers from least to greatest (or greatest to least). Pad decimals to the same length first.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div aria-label="Vocabulary card for compare. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">⚖️</div><div class="fc-word">compare</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">compare</div><div class="fc-def">to decide which of two numbers is bigger using &gt;, &lt;, or = symbols.</div><div class="fc-tap-back">tap to flip back</div></div>
 </div>
-<div class="video-wrap" data-video-slot="4-12-07-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.12.07</div><div class="video-wrap-title">Comparing decimals — first arguing place wins.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-12-07_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Three compares. (1) 0.7 vs 0.65 → pad → 0.70 vs 0.65 → 0.7 > 0.65. (2) 0.23 vs 0.32 → tenths differ → 0.32 > 0.23. (3) 1.40 vs 1.4 → equal. Frame: <strong>Pad with zeros. Walk left to right. First arguing place wins.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-concept --></div></div></div></div>
+</div>
+<div aria-label="Vocabulary card for align. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">📐</div><div class="fc-word">align the points</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">align the points</div><div class="fc-def">write two decimals one above the other, lining up the decimal points exactly.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for trailing zero. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">0️⃣</div><div class="fc-word">trailing zero</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">trailing zero</div><div class="fc-def">a zero at the END of a decimal (after the last non-zero digit). 0.7 = 0.70 = 0.700. The trailing zero doesn't change the value.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for order. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">📊</div><div class="fc-word">order</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">order</div><div class="fc-def">arrange a list of numbers from least to greatest (or greatest to least). Pad decimals to the same length first.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
 <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Pick how many groups to SPLIT the bar into. Then click groups to TAKE them.</p></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#1A6B8E;">⚖️</div><div><div class="activity-title">Decimal Comparator</div><div class="activity-sub">Two decimals stacked. Step right through the places; the first arguing place wins.</div></div></div><div class="activity-body"><p>Three pair sets. Notice the padding rule in Round 1.</p>
-
 <div class="dc-card" data-id="1" style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 1 · Different lengths</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Pad with trailing zeros first.</div>
 <div style="text-align:center;font-size:11px;font-weight:900;color:#1A6B8E;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Pick a pair</div>
-<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button onclick="dcPick('1','0.7','0.65')" id="dcBtn-1-0" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.7 vs 0.65</button><button onclick="dcPick('1','0.3','0.30')" id="dcBtn-1-1" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.3 vs 0.30</button><button onclick="dcPick('1','1.8','1.85')" id="dcBtn-1-2" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">1.8 vs 1.85</button></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button id="dcBtn-1-0" onclick="dcPick('1','0.7','0.65')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.7 vs 0.65</button><button id="dcBtn-1-1" onclick="dcPick('1','0.3','0.30')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.3 vs 0.30</button><button id="dcBtn-1-2" onclick="dcPick('1','1.8','1.85')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">1.8 vs 1.85</button></div>
 <div id="dcStage-1" style="background:#fff;border:2px solid #D6F2FB;border-radius:10px;padding:14px;margin-bottom:12px;min-height:140px;display:flex;justify-content:center;align-items:center;text-align:center;"></div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;" id="dcReadout-1">Pick a pair to begin.</div>
+<div id="dcReadout-1" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;">Pick a pair to begin.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="dcStep('1')" id="dcStepBtn-1" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Step Right</button>
+<button id="dcStepBtn-1" onclick="dcStep('1')" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Step Right</button>
 <button onclick="dcReset('1')" style="background:#3D8DB0;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
 <div id="dcStatus-1" style="background:#D6F2FB;border:2px solid #55C8E8;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E2A4A;font-weight:700;line-height:1.5;text-align:center;">Pick a pair. Step right to walk the places. The first arguing place wins.</div>
 </div>
-
 <div class="dc-card" data-id="2" style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 2 · Same lengths</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Walk the places.</div>
 <div style="text-align:center;font-size:11px;font-weight:900;color:#1A6B8E;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Pick a pair</div>
-<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button onclick="dcPick('2','0.7','0.5')" id="dcBtn-2-0" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.7 vs 0.5</button><button onclick="dcPick('2','0.23','0.32')" id="dcBtn-2-1" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.23 vs 0.32</button><button onclick="dcPick('2','2.05','2.5')" id="dcBtn-2-2" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">2.05 vs 2.5</button></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button id="dcBtn-2-0" onclick="dcPick('2','0.7','0.5')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.7 vs 0.5</button><button id="dcBtn-2-1" onclick="dcPick('2','0.23','0.32')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.23 vs 0.32</button><button id="dcBtn-2-2" onclick="dcPick('2','2.05','2.5')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">2.05 vs 2.5</button></div>
 <div id="dcStage-2" style="background:#fff;border:2px solid #D6F2FB;border-radius:10px;padding:14px;margin-bottom:12px;min-height:140px;display:flex;justify-content:center;align-items:center;text-align:center;"></div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;" id="dcReadout-2">Pick a pair to begin.</div>
+<div id="dcReadout-2" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;">Pick a pair to begin.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="dcStep('2')" id="dcStepBtn-2" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Step Right</button>
+<button id="dcStepBtn-2" onclick="dcStep('2')" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Step Right</button>
 <button onclick="dcReset('2')" style="background:#3D8DB0;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
 <div id="dcStatus-2" style="background:#D6F2FB;border:2px solid #55C8E8;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E2A4A;font-weight:700;line-height:1.5;text-align:center;">Pick a pair. Step right to walk the places. The first arguing place wins.</div>
 </div>
-
 <div class="dc-card" data-id="3" style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 3 · Tricky digits</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Do not be fooled — first arguing place wins.</div>
 <div style="text-align:center;font-size:11px;font-weight:900;color:#1A6B8E;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Pick a pair</div>
-<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button onclick="dcPick('3','0.41','0.4')" id="dcBtn-3-0" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.41 vs 0.4</button><button onclick="dcPick('3','0.95','1.05')" id="dcBtn-3-1" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.95 vs 1.05</button><button onclick="dcPick('3','0.50','0.5')" id="dcBtn-3-2" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.50 vs 0.5</button></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button id="dcBtn-3-0" onclick="dcPick('3','0.41','0.4')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.41 vs 0.4</button><button id="dcBtn-3-1" onclick="dcPick('3','0.95','1.05')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.95 vs 1.05</button><button id="dcBtn-3-2" onclick="dcPick('3','0.50','0.5')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.50 vs 0.5</button></div>
 <div id="dcStage-3" style="background:#fff;border:2px solid #D6F2FB;border-radius:10px;padding:14px;margin-bottom:12px;min-height:140px;display:flex;justify-content:center;align-items:center;text-align:center;"></div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;" id="dcReadout-3">Pick a pair to begin.</div>
+<div id="dcReadout-3" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;">Pick a pair to begin.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="dcStep('3')" id="dcStepBtn-3" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Step Right</button>
+<button id="dcStepBtn-3" onclick="dcStep('3')" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Step Right</button>
 <button onclick="dcReset('3')" style="background:#3D8DB0;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
 <div id="dcStatus-3" style="background:#D6F2FB;border:2px solid #55C8E8;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E2A4A;font-weight:700;line-height:1.5;text-align:center;">Pick a pair. Step right to walk the places. The first arguing place wins.</div>
 </div>
-
 <div class="reveal-box" id="learnReveal"><strong>What you saw.</strong> Pad to same length. Walk left to right. As soon as two digits differ, you have your answer. Trailing zeros and leading digits past the first difference do not matter.</div>
 </div></div>
 <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 Three Comparison Rules</div><p><strong>1. Pad with trailing zeros</strong> if the decimals have different lengths. 0.7 = 0.70.</p><p><strong>2. Walk left to right.</strong> Compare digit by digit, starting at the place left of the decimal point.</p><p><strong>3. First arguing place wins.</strong> As soon as digits differ, that comparison decides the whole number.</p></div>
@@ -532,11 +573,11 @@
 <textarea class="journal-box" data-label="Learn — Socratic: longer vs shorter decimals" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: Race times</div><div class="activity-sub">Order three runners from fastest to slowest.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Three friends ran a race. Their times (in seconds): <strong>Wren: 14.7. Theo: 14.07. Imani: 14.70.</strong> Order them from fastest (lowest time) to slowest. Did anyone tie?</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew:</p>
-<div class="video-wrap" data-video-slot="4-12-07-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.12.07</div><div class="video-wrap-title">14.07 &lt; 14.70 = 14.7</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-12-07_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Atlas: "Pad to same length. 14.7 → 14.70. So Wren = 14.70 and Imani = 14.70. They tied!" Hazel: "Theo = 14.07. Tenths: 0 vs 7 → Theo is the fastest." Felix: "Order: Theo (14.07), then Wren/Imani tied at 14.70." About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-12-07-example --></div></div></div></div>
+
 <div style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.9;font-size:16px;">
 <strong>Step 1.</strong> Pad: Wren 14.70, Theo 14.07, Imani 14.70.<br/>
-<strong>Step 2.</strong> Compare. Tens & ones: all 14. Tenths: <span style="color:#1A6B8E;font-weight:900;">Theo has 0; others have 7</span>. So Theo is smallest.<br/>
+<strong>Step 2.</strong> Compare. Tens &amp; ones: all 14. Tenths: <span style="color:#1A6B8E;font-weight:900;">Theo has 0; others have 7</span>. So Theo is smallest.<br/>
 <strong>Step 3.</strong> Order: <span style="color:#1A6B8E;font-weight:900;">Theo (14.07) → Wren = Imani (14.70)</span>. Wren and Imani tied.
 </div>
 </div>
@@ -553,17 +594,16 @@
 <div class="callout callout-info"><span class="callout-icon">⚖️</span><p>Three problems. Compare and order decimals using place value.</p></div>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Method:</strong> Pad to same length. Walk left to right. First arguing place wins.</p></div>
 <div class="callout callout-tip"><span class="callout-icon">💡</span><p>Equivalent decimals (0.5 = 0.50) get the = sign, not &gt; or &lt;.</p></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#1A6B8E;">1</div><div><div class="activity-title">Theo: compare tenths</div><div class="activity-sub">Same number of decimal places.</div></div><span class="activity-time" style="background:#1A6B8E;">~5 min</span></div><div class="activity-body">
 <div class="dc-card" data-id="p1" style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Compare tenths</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Tenths-place comparison.</div>
 <div style="text-align:center;font-size:11px;font-weight:900;color:#1A6B8E;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Pick a pair</div>
-<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button onclick="dcPick('p1','0.8','0.5')" id="dcBtn-p1-0" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.8 vs 0.5</button><button onclick="dcPick('p1','0.4','0.9')" id="dcBtn-p1-1" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.4 vs 0.9</button><button onclick="dcPick('p1','0.3','0.3')" id="dcBtn-p1-2" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.3 vs 0.3</button></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button id="dcBtn-p1-0" onclick="dcPick('p1','0.8','0.5')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.8 vs 0.5</button><button id="dcBtn-p1-1" onclick="dcPick('p1','0.4','0.9')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.4 vs 0.9</button><button id="dcBtn-p1-2" onclick="dcPick('p1','0.3','0.3')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.3 vs 0.3</button></div>
 <div id="dcStage-p1" style="background:#fff;border:2px solid #D6F2FB;border-radius:10px;padding:14px;margin-bottom:12px;min-height:140px;display:flex;justify-content:center;align-items:center;text-align:center;"></div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;" id="dcReadout-p1">Pick a pair to begin.</div>
+<div id="dcReadout-p1" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;">Pick a pair to begin.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="dcStep('p1')" id="dcStepBtn-p1" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Step Right</button>
+<button id="dcStepBtn-p1" onclick="dcStep('p1')" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Step Right</button>
 <button onclick="dcReset('p1')" style="background:#3D8DB0;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
 <div id="dcStatus-p1" style="background:#D6F2FB;border:2px solid #55C8E8;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E2A4A;font-weight:700;line-height:1.5;text-align:center;">Pick a pair. Step right to walk the places. The first arguing place wins.</div>
@@ -571,17 +611,16 @@
 <div class="journal-label">✏️ Symbol for each pair (&gt; &lt; or =). <span class="saved-dot" id="dot-p1"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 1: tenths compare" id="journal-p1" oninput="autoSave(this,'dot-p1')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Imani: different lengths</div><div class="activity-sub">Pad before you compare.</div></div></div><div class="activity-body">
 <div class="dc-card" data-id="p2" style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Pad and compare</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Different decimal places.</div>
 <div style="text-align:center;font-size:11px;font-weight:900;color:#1A6B8E;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Pick a pair</div>
-<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button onclick="dcPick('p2','0.7','0.65')" id="dcBtn-p2-0" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.7 vs 0.65</button><button onclick="dcPick('p2','0.3','0.30')" id="dcBtn-p2-1" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.3 vs 0.30</button><button onclick="dcPick('p2','1.8','1.85')" id="dcBtn-p2-2" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">1.8 vs 1.85</button></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px;"><button id="dcBtn-p2-0" onclick="dcPick('p2','0.7','0.65')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.7 vs 0.65</button><button id="dcBtn-p2-1" onclick="dcPick('p2','0.3','0.30')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">0.3 vs 0.30</button><button id="dcBtn-p2-2" onclick="dcPick('p2','1.8','1.85')" style="background:#fff;border:2px solid #55C8E8;border-radius:10px;padding:9px 14px;font-family:Lora,Georgia,serif;font-weight:800;font-size:14px;color:#0E1C42;cursor:pointer;">1.8 vs 1.85</button></div>
 <div id="dcStage-p2" style="background:#fff;border:2px solid #D6F2FB;border-radius:10px;padding:14px;margin-bottom:12px;min-height:140px;display:flex;justify-content:center;align-items:center;text-align:center;"></div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;" id="dcReadout-p2">Pick a pair to begin.</div>
+<div id="dcReadout-p2" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;">Pick a pair to begin.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="dcStep('p2')" id="dcStepBtn-p2" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Step Right</button>
+<button id="dcStepBtn-p2" onclick="dcStep('p2')" style="background:#1A6B8E;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Step Right</button>
 <button onclick="dcReset('p2')" style="background:#3D8DB0;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
 <div id="dcStatus-p2" style="background:#D6F2FB;border:2px solid #55C8E8;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E2A4A;font-weight:700;line-height:1.5;text-align:center;">Pick a pair. Step right to walk the places. The first arguing place wins.</div>
@@ -589,7 +628,6 @@
 <div class="journal-label">✏️ Show the padding step for each. <span class="saved-dot" id="dot-p2"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 2: pad and compare" id="journal-p2" oninput="autoSave(this,'dot-p2')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#1A6B8E;">3</div><div><div class="activity-title">Wren: order four numbers</div><div class="activity-sub">From least to greatest.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🪜</span><p><strong>Method:</strong> Pad all to same length. Then compare pairs to find smallest, next-smallest, and so on.</p></div>
 <div style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;color:#0E1C42;font-weight:700;margin-bottom:8px;">Order from least to greatest.</div>
@@ -600,18 +638,13 @@
 <div class="journal-label">✏️ Show one ordering with all your work. <span class="saved-dot" id="dot-p3"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 3: order four" id="journal-p3" oninput="autoSave(this,'dot-p3')" placeholder="" style="min-height:80px;"></textarea>
 </div></div>
-
 <div class="tab-next-wrap"><p class="tab-transition-voice">Three compare-orders done. Quick check time.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Two quick checks. Your full practice is in the Independent Practice PDF.</div></div></div><div class="activity-body"><p>If you got these, you're ready for the Independent Practice.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> How many tenths? Did I write BOTH the fraction and the decimal correctly?</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Quick check — compare.</strong> Fill in &gt; or &lt; or =: 0.6 ___ 0.55</p><div class="journal-label">✏️ Pad first (0.60 vs 0.55). Then compare tenths. <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-
 <div class="q-block"><p class="q-text"><span class="q-num">2</span><strong>Quick check — order.</strong> Put these in order from least to greatest: 0.5, 0.05, 0.55, 0.50</p><div class="journal-label">✏️ Order: ___, ___, ___, ___ <span class="saved-dot" id="dot-a2"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 2" id="journal-a2" oninput="autoSave(this,'dot-a2')" placeholder=""></textarea></div>
-
-
-
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed both quick-check problems above.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I wrote each amount as a fraction AND as a decimal.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I can read 0.3 aloud as "three tenths" or "zero point three."</span></div></div></div>
 </div>
@@ -1368,7 +1401,74 @@ if(typeof window !== 'undefined'){
 
 
 </script>
-
-
 </div>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Mixed All-Operations Facts — Maintenance";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
+</script>
 </body></html>

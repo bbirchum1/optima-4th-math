@@ -314,6 +314,32 @@
 .frac.frac-lg{font-size:1.05em}
 .frac.frac-on-dark .num{border-bottom-color:#fff}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
@@ -341,7 +367,31 @@
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
-<div class="video-wrap" data-video-slot="4-09-01-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.09.01</div><div class="video-wrap-title">Three measures of a data set — mode, median, and range.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-09-01_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Show the data set 4, 3, 5, 4, 3, 2 (Mrs. Pérez's group sizes). "First: sort them — 2, 3, 3, 4, 4, 5. MODE: 3 and 4 both appear twice (bimodal). MEDIAN: with 6 numbers, take the middle two (3 and 4) and average — but for now, name both 3 and 4 as middle. RANGE: 5 minus 2 = 3." Frame: <strong>Sort first. Then answer the three questions.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-welcome --></div></div></div></div>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Multiples Reasoning</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">Is 36 a multiple of 4?</span><input autocomplete="off" class="fluency-input" data-answer="Yes" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">Is 42 a multiple of 5?</span><input autocomplete="off" class="fluency-input" data-answer="No" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">What is the next multiple of 7 after 42?</span><input autocomplete="off" class="fluency-input" data-answer="49" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">What is the next multiple of 6 after 30?</span><input autocomplete="off" class="fluency-input" data-answer="36" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">Is 54 a multiple of 9?</span><input autocomplete="off" class="fluency-input" data-answer="Yes" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">Is 40 a multiple of 6?</span><input autocomplete="off" class="fluency-input" data-answer="No" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">What is the next multiple of 8 after 40?</span><input autocomplete="off" class="fluency-input" data-answer="48" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">Is 63 a multiple of 7?</span><input autocomplete="off" class="fluency-input" data-answer="Yes" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">What is the next multiple of 9 after 45?</span><input autocomplete="off" class="fluency-input" data-answer="54" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">Is 50 a multiple of 8?</span><input autocomplete="off" class="fluency-input" data-answer="No" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Multiples Reasoning)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
 <p>Hazel leads — data analysis is all about seeing the picture. Atlas names the three measures. Felix sorts and computes. Cora double-checks.</p>
 <div class="bubble-row">
@@ -385,8 +435,8 @@
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Answers:</strong> Mode of 4,3,5,4,3,2 = <strong>3 and 4</strong> (both appear twice). Median of 7,3,9,5,11 sorted = 3,5,7,9,11 → middle is <strong>7</strong>. Range of 8,2,15,4,10 → largest 15 − smallest 2 = <strong>13</strong>.</div>
-<div class="journal-label">✏️ Which measure feels easiest to find? Which is trickiest? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: Three measures" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-09-01-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.09.01</div><div class="video-wrap-title">Three measures, one habit</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-09-01_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "Same habit for all three: SORT FIRST. Sorting makes the mode pop out (look for repeats), the median sit in the middle, and the range obvious (last minus first)." Frame: <strong>Sort, then read off all three measures.</strong></div><div class="video-placeholder-id"><!-- slot: lesson-readiness-feedback --></div></div></div></div>
+<div class="journal-label">✏️ Which measure feels easiest to find? Which is trickiest? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: Three measures" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">A small data set with all three measures hiding inside.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">📊</span><p><strong>Data:</strong> 2, 3, 9, 2, 5, 14, 2, 8, 9, 0, 2, 9</p><p>What do you notice? What is the mode? Median? Range?</p></div>
 <div class="strategy-chip-row">
@@ -397,11 +447,10 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>Sorted:</strong> 0, 2, 2, 2, 2, 3, 5, 8, 9, 9, 9, 14. <strong>Mode = 2</strong> (four times). <strong>Median = 4</strong> (average of 3 and 5, the middle two). <strong>Range = 14 − 0 = 14</strong>.</p></div>
 <div class="journal-label">✏️ Why is sorting the data the FIRST move every time? <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think: Sort first" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think: Sort first" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">Now drag the numbers into order yourself.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-09-01-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-09-01 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-09-01-concept --></div></div></div></div>
 <div aria-label="Daily vocabulary flash cards" class="vocab-section">
 <div class="vocab-section-head">
 <div class="vocab-section-icon">📚</div>
@@ -412,46 +461,42 @@
 </div>
 <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
 <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for mode. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🎯</div><div class="fc-word">mode</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">mode</div><div class="fc-def">the number that shows up MOST often in a data set. A set can have one mode, two modes, or no mode.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for median. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🪜</div><div class="fc-word">median</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">median</div><div class="fc-def">the MIDDLE number once the data is sorted. With two middles, take the value halfway between them.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for range. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">📏</div><div class="fc-word">range</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">range</div><div class="fc-def">largest value minus smallest value. Tells you how spread out the data is.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for data set. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🔢</div><div class="fc-word">data set</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">data set</div><div class="fc-def">a collection of numbers you are studying. "Mrs. Pérez has groups of 4, 3, 5, 4, 3, 2 students" is a data set.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div aria-label="Vocabulary card for mode. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🎯</div><div class="fc-word">mode</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">mode</div><div class="fc-def">the number that shows up MOST often in a data set. A set can have one mode, two modes, or no mode.</div><div class="fc-tap-back">tap to flip back</div></div>
 </div>
-<div class="video-wrap" data-video-slot="4-09-01-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.09.01</div><div class="video-wrap-title">Sort first. Then read off all three measures.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-09-01_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk three data sets. (1) 4,3,5,4,3,2 → sort → 2,3,3,4,4,5. Mode: 3 and 4. Median: between 3 and 4 → 3.5. Range: 3. (2) 7,3,9,5,11 → sort → 3,5,7,9,11. Mode: none (no repeats). Median: 7. Range: 8. (3) From a line plot of homework hours: read off the mode (tallest stack), median (count to middle), range (last tick − first tick). About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-concept --></div></div></div></div>
+</div>
+<div aria-label="Vocabulary card for median. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🪜</div><div class="fc-word">median</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">median</div><div class="fc-def">the MIDDLE number once the data is sorted. With two middles, take the value halfway between them.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for range. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">📏</div><div class="fc-word">range</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">range</div><div class="fc-def">largest value minus smallest value. Tells you how spread out the data is.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for data set. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🔢</div><div class="fc-word">data set</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">data set</div><div class="fc-def">a collection of numbers you are studying. "Mrs. Pérez has groups of 4, 3, 5, 4, 3, 2 students" is a data set.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
 <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Pick how many groups to SPLIT the bar into. Then click groups to TAKE them.</p></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#1E5F9E;">📊</div><div><div class="activity-title">Data Sorter</div><div class="activity-sub">Click numbers in order — smallest first. Watch the three measures emerge.</div></div></div><div class="activity-body"><p>Three data sets. Sort each one. Once sorted, the panel shows the mode, median, and range.</p>
-
 <div class="ds-mat" data-id="1" data-values="4,3,5,4,3,2" style="background:#F5FBFE;border:2px solid #BFE3F2;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 1 · Mrs. Pérez's groups</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:10px;">6 numbers. Click them in order: smallest first.</div>
-
 <div style="text-align:center;font-size:11px;font-weight:900;color:#0D3D6B;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Data (click to add to sorted row)</div>
 <div id="dsPool-1" style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px;min-height:48px;"></div>
-
 <div style="text-align:center;font-size:11px;font-weight:900;color:#0D3D6B;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Sorted (smallest → largest)</div>
 <div id="dsSorted-1" style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;min-height:48px;margin-bottom:14px;padding:8px;border:2px dashed #BFE3F2;border-radius:10px;background:#fff;"></div>
-
 <div id="dsMeasures-1" style="display:none;background:#fff;border:2px solid #4FB3D9;border-radius:12px;padding:14px;margin-bottom:14px;">
 <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;text-align:center;">
 <div style="background:#F5FBFE;border:1.5px solid #BFE3F2;border-radius:10px;padding:10px;">
@@ -468,7 +513,6 @@
 </div>
 </div>
 </div>
-
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
 <button onclick="dsReset('1')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
@@ -477,13 +521,10 @@
 <div class="ds-mat" data-id="2" data-values="7,3,9,5,11" style="background:#F5FBFE;border:2px solid #BFE3F2;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 2 · A quick set</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:10px;">5 numbers, no repeats. The middle one is the median.</div>
-
 <div style="text-align:center;font-size:11px;font-weight:900;color:#0D3D6B;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Data (click to add to sorted row)</div>
 <div id="dsPool-2" style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px;min-height:48px;"></div>
-
 <div style="text-align:center;font-size:11px;font-weight:900;color:#0D3D6B;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Sorted (smallest → largest)</div>
 <div id="dsSorted-2" style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;min-height:48px;margin-bottom:14px;padding:8px;border:2px dashed #BFE3F2;border-radius:10px;background:#fff;"></div>
-
 <div id="dsMeasures-2" style="display:none;background:#fff;border:2px solid #4FB3D9;border-radius:12px;padding:14px;margin-bottom:14px;">
 <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;text-align:center;">
 <div style="background:#F5FBFE;border:1.5px solid #BFE3F2;border-radius:10px;padding:10px;">
@@ -500,7 +541,6 @@
 </div>
 </div>
 </div>
-
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
 <button onclick="dsReset('2')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
@@ -509,13 +549,10 @@
 <div class="ds-mat" data-id="3" data-values="2,3,9,2,5,14,2,8,9,0,2,9" style="background:#F5FBFE;border:2px solid #BFE3F2;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 3 · A bigger set</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:10px;">12 numbers with repeats. Sort them all to find every measure.</div>
-
 <div style="text-align:center;font-size:11px;font-weight:900;color:#0D3D6B;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Data (click to add to sorted row)</div>
 <div id="dsPool-3" style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px;min-height:48px;"></div>
-
 <div style="text-align:center;font-size:11px;font-weight:900;color:#0D3D6B;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Sorted (smallest → largest)</div>
 <div id="dsSorted-3" style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;min-height:48px;margin-bottom:14px;padding:8px;border:2px dashed #BFE3F2;border-radius:10px;background:#fff;"></div>
-
 <div id="dsMeasures-3" style="display:none;background:#fff;border:2px solid #4FB3D9;border-radius:12px;padding:14px;margin-bottom:14px;">
 <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;text-align:center;">
 <div style="background:#F5FBFE;border:1.5px solid #BFE3F2;border-radius:10px;padding:10px;">
@@ -532,19 +569,17 @@
 </div>
 </div>
 </div>
-
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
 <button onclick="dsReset('3')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
 <div id="dsStatus-3" style="background:#D6ECF7;border:2px solid #BFE3F2;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E1C42;font-weight:700;line-height:1.5;text-align:center;">Click the smallest number first, then the next smallest, and so on.</div>
 </div>
-
 <div class="reveal-box" id="learnReveal"><strong>Sorted results:</strong> Set 1 sorted = 2,3,3,4,4,5 → modes 3 &amp; 4, median between 3 and 4 (3.5), range 3. Set 2 sorted = 3,5,7,9,11 → no mode, median 7, range 8. Set 3 sorted = 0,2,2,2,2,3,5,8,9,9,9,14 → mode 2, median 4 (avg of 3 and 5), range 14.</div>
 </div></div>
 <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 The Three Measures</div><p><strong>Mode:</strong> the number that appears MOST often. There can be one, two, or none.</p><p><strong>Median:</strong> the MIDDLE number when sorted. With an even count, average the two middle numbers.</p><p><strong>Range:</strong> largest value minus smallest value.</p></div>
 <div class="activity bl-violet" style="margin-top:16px;"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">📐</div><div><div class="activity-title">Picture It: Reading a Line Plot</div><div class="activity-sub">Mr. Helfer's class — hours dedicated to homework.</div></div></div><div class="activity-body">
 <div style="background:#F5FBFE;border:2px solid #BFE3F2;border-radius:14px;padding:18px;margin:12px 0;">
-<div style="display:flex;justify-content:center;margin:6px 0;"><svg width="380" height="175" viewBox="0 0 380 175" style="max-width:100%;"><line x1="30" y1="120" x2="350" y2="120" stroke="#0E1C42" stroke-width="2"/><polygon points="24,120 30,115 30,125" fill="#0E1C42"/><polygon points="356,120 350,115 350,125" fill="#0E1C42"/><line x1="30.0" y1="113" x2="30.0" y2="127" stroke="#0E1C42" stroke-width="2"/><text x="30.0" y="143" text-anchor="middle" font-family="Lora,Georgia,serif" font-weight="800" font-size="13" fill="#0E1C42">0</text><circle cx="30.0" cy="105" r="5" fill="#1E5F9E" stroke="#0D3D6B" stroke-width="1.5"/><line x1="94.0" y1="113" x2="94.0" y2="127" stroke="#0E1C42" stroke-width="2"/><text x="94.0" y="143" text-anchor="middle" font-family="Lora,Georgia,serif" font-weight="800" font-size="13" fill="#0E1C42">1</text><circle cx="94.0" cy="105" r="5" fill="#1E5F9E" stroke="#0D3D6B" stroke-width="1.5"/><circle cx="94.0" cy="91" r="5" fill="#1E5F9E" stroke="#0D3D6B" stroke-width="1.5"/><circle cx="94.0" cy="77" r="5" fill="#1E5F9E" stroke="#0D3D6B" stroke-width="1.5"/><line x1="158.0" y1="113" x2="158.0" y2="127" stroke="#0E1C42" stroke-width="2"/><text x="158.0" y="143" text-anchor="middle" font-family="Lora,Georgia,serif" font-weight="800" font-size="13" fill="#0E1C42">2</text><circle cx="158.0" cy="105" r="5" fill="#1E5F9E" stroke="#0D3D6B" stroke-width="1.5"/><circle cx="158.0" cy="91" r="5" fill="#1E5F9E" stroke="#0D3D6B" stroke-width="1.5"/><line x1="222.0" y1="113" x2="222.0" y2="127" stroke="#0E1C42" stroke-width="2"/><text x="222.0" y="143" text-anchor="middle" font-family="Lora,Georgia,serif" font-weight="800" font-size="13" fill="#0E1C42">3</text><circle cx="222.0" cy="105" r="5" fill="#1E5F9E" stroke="#0D3D6B" stroke-width="1.5"/><circle cx="222.0" cy="91" r="5" fill="#1E5F9E" stroke="#0D3D6B" stroke-width="1.5"/><circle cx="222.0" cy="77" r="5" fill="#1E5F9E" stroke="#0D3D6B" stroke-width="1.5"/><circle cx="222.0" cy="63" r="5" fill="#1E5F9E" stroke="#0D3D6B" stroke-width="1.5"/><line x1="286.0" y1="113" x2="286.0" y2="127" stroke="#0E1C42" stroke-width="2"/><text x="286.0" y="143" text-anchor="middle" font-family="Lora,Georgia,serif" font-weight="800" font-size="13" fill="#0E1C42">4</text><circle cx="286.0" cy="105" r="5" fill="#1E5F9E" stroke="#0D3D6B" stroke-width="1.5"/><line x1="350.0" y1="113" x2="350.0" y2="127" stroke="#0E1C42" stroke-width="2"/><text x="350.0" y="143" text-anchor="middle" font-family="Lora,Georgia,serif" font-weight="800" font-size="13" fill="#0E1C42">5</text><circle cx="350.0" cy="105" r="5" fill="#1E5F9E" stroke="#0D3D6B" stroke-width="1.5"/><text x="190.0" y="165" text-anchor="middle" font-family="Lora,Georgia,serif" font-weight="700" font-size="14" fill="#0E1C42" font-style="italic">Hours Dedicated to Homework</text></svg></div>
+<div style="display:flex;justify-content:center;margin:6px 0;"><svg height="175" style="max-width:100%;" viewbox="0 0 380 175" width="380"><line stroke="#0E1C42" stroke-width="2" x1="30" x2="350" y1="120" y2="120"></line><polygon fill="#0E1C42" points="24,120 30,115 30,125"></polygon><polygon fill="#0E1C42" points="356,120 350,115 350,125"></polygon><line stroke="#0E1C42" stroke-width="2" x1="30.0" x2="30.0" y1="113" y2="127"></line><text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="13" font-weight="800" text-anchor="middle" x="30.0" y="143">0</text><circle cx="30.0" cy="105" fill="#1E5F9E" r="5" stroke="#0D3D6B" stroke-width="1.5"></circle><line stroke="#0E1C42" stroke-width="2" x1="94.0" x2="94.0" y1="113" y2="127"></line><text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="13" font-weight="800" text-anchor="middle" x="94.0" y="143">1</text><circle cx="94.0" cy="105" fill="#1E5F9E" r="5" stroke="#0D3D6B" stroke-width="1.5"></circle><circle cx="94.0" cy="91" fill="#1E5F9E" r="5" stroke="#0D3D6B" stroke-width="1.5"></circle><circle cx="94.0" cy="77" fill="#1E5F9E" r="5" stroke="#0D3D6B" stroke-width="1.5"></circle><line stroke="#0E1C42" stroke-width="2" x1="158.0" x2="158.0" y1="113" y2="127"></line><text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="13" font-weight="800" text-anchor="middle" x="158.0" y="143">2</text><circle cx="158.0" cy="105" fill="#1E5F9E" r="5" stroke="#0D3D6B" stroke-width="1.5"></circle><circle cx="158.0" cy="91" fill="#1E5F9E" r="5" stroke="#0D3D6B" stroke-width="1.5"></circle><line stroke="#0E1C42" stroke-width="2" x1="222.0" x2="222.0" y1="113" y2="127"></line><text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="13" font-weight="800" text-anchor="middle" x="222.0" y="143">3</text><circle cx="222.0" cy="105" fill="#1E5F9E" r="5" stroke="#0D3D6B" stroke-width="1.5"></circle><circle cx="222.0" cy="91" fill="#1E5F9E" r="5" stroke="#0D3D6B" stroke-width="1.5"></circle><circle cx="222.0" cy="77" fill="#1E5F9E" r="5" stroke="#0D3D6B" stroke-width="1.5"></circle><circle cx="222.0" cy="63" fill="#1E5F9E" r="5" stroke="#0D3D6B" stroke-width="1.5"></circle><line stroke="#0E1C42" stroke-width="2" x1="286.0" x2="286.0" y1="113" y2="127"></line><text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="13" font-weight="800" text-anchor="middle" x="286.0" y="143">4</text><circle cx="286.0" cy="105" fill="#1E5F9E" r="5" stroke="#0D3D6B" stroke-width="1.5"></circle><line stroke="#0E1C42" stroke-width="2" x1="350.0" x2="350.0" y1="113" y2="127"></line><text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="13" font-weight="800" text-anchor="middle" x="350.0" y="143">5</text><circle cx="350.0" cy="105" fill="#1E5F9E" r="5" stroke="#0D3D6B" stroke-width="1.5"></circle><text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="14" font-style="italic" font-weight="700" text-anchor="middle" x="190.0" y="165">Hours Dedicated to Homework</text></svg></div>
 <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:14px;">
 <div style="background:#fff;border:1.5px solid #BFE3F2;border-radius:10px;padding:10px;text-align:center;">
 <div style="font-size:11px;font-weight:900;color:#0D3D6B;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">MODE</div>
@@ -568,7 +603,7 @@
 <textarea class="journal-box" data-label="Learn — Socratic: line plot sorting" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: A Messy Data Set</div><div class="activity-sub">2, 3, 9, 2, 5, 14, 2, 8, 9, 0, 2, 9 — all three measures.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>For the data set <strong>2, 3, 9, 2, 5, 14, 2, 8, 9, 0, 2, 9</strong>, find the mode, median, and range.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
-<div class="video-wrap" data-video-slot="4-09-01-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.09.01</div><div class="video-wrap-title">Sort → name mode → find middle → subtract for range</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-09-01_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Felix sorts: 0, 2, 2, 2, 2, 3, 5, 8, 9, 9, 9, 14. Atlas: "MODE — what appears most? 2 appears four times. So mode = 2." Hazel: "MEDIAN — 12 numbers, middle is between the 6th and 7th. That is 3 and 5. Average = 4." Felix: "RANGE — last minus first = 14 − 0 = 14." About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-09-01-example --></div></div></div></div>
+
 <div style="background:#F5FBFE;border:2px solid #BFE3F2;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.9;font-size:16px;margin-bottom:14px;">
 <strong>Sorted:</strong> 0, 2, 2, 2, 2, 3, 5, 8, 9, 9, 9, 14
@@ -604,18 +639,14 @@
 <div class="callout callout-info"><span class="callout-icon">📊</span><p>Three more data sets to sort.</p></div>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Each round:</strong> Click smallest first, then in order, until sorted. The measures auto-fill.</p></div>
 <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Find the smallest number first. Click it. Then the next smallest. Repeat.</p></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#1E5F9E;">1</div><div><div class="activity-title">Sort: Class Sizes</div><div class="activity-sub">7 classes, each a number of students.</div></div><span class="activity-time" style="background:#1E5F9E;">~5 min</span></div><div class="activity-body">
 <div class="ds-mat" data-id="p1" data-values="21,18,24,22,18,25,20" style="background:#F5FBFE;border:2px solid #BFE3F2;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Class sizes: 21, 18, 24, 22, 18, 25, 20</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:10px;">Sort, then read mode, median, range.</div>
-
 <div style="text-align:center;font-size:11px;font-weight:900;color:#0D3D6B;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Data (click to add to sorted row)</div>
 <div id="dsPool-p1" style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px;min-height:48px;"></div>
-
 <div style="text-align:center;font-size:11px;font-weight:900;color:#0D3D6B;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Sorted (smallest → largest)</div>
 <div id="dsSorted-p1" style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;min-height:48px;margin-bottom:14px;padding:8px;border:2px dashed #BFE3F2;border-radius:10px;background:#fff;"></div>
-
 <div id="dsMeasures-p1" style="display:none;background:#fff;border:2px solid #4FB3D9;border-radius:12px;padding:14px;margin-bottom:14px;">
 <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;text-align:center;">
 <div style="background:#F5FBFE;border:1.5px solid #BFE3F2;border-radius:10px;padding:10px;">
@@ -632,7 +663,6 @@
 </div>
 </div>
 </div>
-
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
 <button onclick="dsReset('p1')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
@@ -641,18 +671,14 @@
 <div class="journal-label">✏️ My three measures <span class="saved-dot" id="dot-p1"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 1: class sizes" id="journal-p1" oninput="autoSave(this,'dot-p1')" placeholder="Mode: ___    Median: ___    Range: ___" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Sort: Test Scores</div><div class="activity-sub">8 students, scores out of 10.</div></div></div><div class="activity-body">
 <div class="ds-mat" data-id="p2" data-values="8,10,7,9,8,6,10,8" style="background:#F5FBFE;border:2px solid #BFE3F2;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Scores: 8, 10, 7, 9, 8, 6, 10, 8</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:10px;">8 scores. The mode should pop out — one number appears three times.</div>
-
 <div style="text-align:center;font-size:11px;font-weight:900;color:#0D3D6B;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Data (click to add to sorted row)</div>
 <div id="dsPool-p2" style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px;min-height:48px;"></div>
-
 <div style="text-align:center;font-size:11px;font-weight:900;color:#0D3D6B;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Sorted (smallest → largest)</div>
 <div id="dsSorted-p2" style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;min-height:48px;margin-bottom:14px;padding:8px;border:2px dashed #BFE3F2;border-radius:10px;background:#fff;"></div>
-
 <div id="dsMeasures-p2" style="display:none;background:#fff;border:2px solid #4FB3D9;border-radius:12px;padding:14px;margin-bottom:14px;">
 <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;text-align:center;">
 <div style="background:#F5FBFE;border:1.5px solid #BFE3F2;border-radius:10px;padding:10px;">
@@ -669,7 +695,6 @@
 </div>
 </div>
 </div>
-
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
 <button onclick="dsReset('p2')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
@@ -678,18 +703,14 @@
 <div class="journal-label">✏️ My three measures <span class="saved-dot" id="dot-p2"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 2: test scores" id="journal-p2" oninput="autoSave(this,'dot-p2')" placeholder="Mode: ___    Median: ___    Range: ___" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#1E5F9E;">3</div><div><div class="activity-title">Sort: Sammy's Gerbil Litter Sizes</div><div class="activity-sub">Each litter has a different number of baby gerbils.</div></div></div><div class="activity-body">
 <div class="ds-mat" data-id="p3" data-values="5,7,5,8,11,6,5,9,7" style="background:#F5FBFE;border:2px solid #BFE3F2;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Litter sizes: 5, 7, 5, 8, 11, 6, 5, 9, 7</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:10px;">9 numbers. Sort them all to find every measure.</div>
-
 <div style="text-align:center;font-size:11px;font-weight:900;color:#0D3D6B;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Data (click to add to sorted row)</div>
 <div id="dsPool-p3" style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px;min-height:48px;"></div>
-
 <div style="text-align:center;font-size:11px;font-weight:900;color:#0D3D6B;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Sorted (smallest → largest)</div>
 <div id="dsSorted-p3" style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;min-height:48px;margin-bottom:14px;padding:8px;border:2px dashed #BFE3F2;border-radius:10px;background:#fff;"></div>
-
 <div id="dsMeasures-p3" style="display:none;background:#fff;border:2px solid #4FB3D9;border-radius:12px;padding:14px;margin-bottom:14px;">
 <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;text-align:center;">
 <div style="background:#F5FBFE;border:1.5px solid #BFE3F2;border-radius:10px;padding:10px;">
@@ -706,7 +727,6 @@
 </div>
 </div>
 </div>
-
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
 <button onclick="dsReset('p3')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
@@ -715,17 +735,13 @@
 <div class="journal-label">✏️ My three measures + which litter size was most common <span class="saved-dot" id="dot-p3"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 3: gerbil litters" id="journal-p3" oninput="autoSave(this,'dot-p3')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="tab-next-wrap"><p class="tab-transition-voice">Sorted, measured, done. Now show it.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">For each data set, sort then write the mode, median, and range.</div></div></div><div class="activity-body"><p>For each: sort the data, then find all three measures.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Do the denominators MATCH? Or do I need to rename one or both? Or is a benchmark (<span class="frac"><span class="num">1</span><span class="den">2</span></span>, 1) faster?</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Three small sets.</strong> Find mode, median, range for each.<br/>(a) 6, 4, 8, 4, 5<br/>(b) 12, 9, 15, 9, 12, 9<br/>(c) 3, 7, 5, 8, 7, 4, 7, 2</p><div class="journal-label">✏️ All three measures for (a), (b), (c) <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: three small sets" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-
 <div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Make up your own.</strong> Make a data set of 7 numbers where the median is 6 and the range is 8. Write your data set, then verify mode, median, and range.</p><div class="journal-label">✏️ My made-up set + check <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: design a data set" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
-
-
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#1E5F9E;"><div class="activity-head"><div class="activity-num" style="background:#1E5F9E;color:#fff;">🗺️</div><div><div class="activity-title">Unit 7 Complete — Where This Goes Next</div><div class="activity-sub">Looking ahead</div></div></div><div class="activity-body"><p>You've compared and ordered fractions that all fit between 0 and 1.</p><p>Next lesson: <strong>Improper Fractions and Mixed Numbers.</strong> What if the top is BIGGER than the bottom? <span class="frac"><span class="num">8</span><span class="den">5</span></span> of a pie isn't just half — it's a WHOLE pie plus some extra. That's an improper fraction, and it can also be written as a mixed number (1 <span class="frac"><span class="num">3</span><span class="den">5</span></span>).</p><p>The big question opening 6.03: <em>How do you show a fraction that's more than 1 whole?</em></p></div></div></div></div>
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed all 6 problems above.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed both column subtractions on every problem.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed the borrow step whenever the fraction column needed it and simplified at the end.</span></div></div></div>
@@ -1352,4 +1368,74 @@ if(typeof window !== 'undefined'){
     setTimeout(dsInitAll, 0);
   }
 }
-</script></body></html>
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Multiples Reasoning";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
+</script>
+</body></html>

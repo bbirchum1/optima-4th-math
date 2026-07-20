@@ -329,6 +329,32 @@
 .cc-row strong{color:#C56C3F;font-weight:900;font-family:Lora,Georgia,serif}
 .cc-row em{color:#7A88A8;font-style:italic;font-size:12px}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
@@ -356,7 +382,31 @@
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
-<div class="video-wrap" data-video-slot="4-10-02-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.10.02</div><div class="video-wrap-title">Customary length — stack inches, feet, yards.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-10-02_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Hold up a ruler. "Twelve inches make a foot." Stack 3 ruler-feet end to end. "Three feet make a yard." Then map a mile: 5,280 feet — a long walk! For 5 ft 4 in: "5 stacks of 12 = 60 inches, plus 4 more = 64 inches." Frame: <strong>Multiply by 12 to convert feet to inches. Multiply by 3 for yards to feet.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-welcome --></div></div></div></div>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Mixed Division Facts — Maintenance</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">72 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="8" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">56 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="7" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">64 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="8" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">81 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="9" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">96 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="12" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">108 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="12" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">77 ÷ 11</span><input autocomplete="off" class="fluency-input" data-answer="7" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">84 ÷ 12</span><input autocomplete="off" class="fluency-input" data-answer="7" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">48 ÷ 6</span><input autocomplete="off" class="fluency-input" data-answer="8" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">63 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="9" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Mixed Division Facts — Maintenance)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
 <p>Atlas takes the lead — measurement is about naming units and applying conversion rules. Felix multiplies. Hazel builds the picture. Cora checks units.</p>
 <div class="bubble-row">
@@ -400,8 +450,8 @@
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Customary length facts:</strong> 1 ft = <strong>12</strong> in. 1 yd = <strong>3</strong> ft = <strong>36</strong> in. 1 mi = <strong>5,280</strong> ft.</div>
-<div class="journal-label">✏️ Why do you think customary units use ODD factors like 12 and 3, but metric uses powers of 10? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: customary chart" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-10-02-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.10.02</div><div class="video-wrap-title">Customary chart facts</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-10-02_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "Customary length needs four facts. 12 inches in a foot. 3 feet in a yard. 36 inches in a yard. 5,280 feet in a mile. Memorize those — then it's just multiply or divide." Frame: <strong>Four facts unlock customary length.</strong></div><div class="video-placeholder-id"><!-- slot: lesson-readiness-feedback --></div></div></div></div>
+<div class="journal-label">✏️ Why do you think customary units use ODD factors like 12 and 3, but metric uses powers of 10? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: customary chart" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">A composite length.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">📏</span><p>Convert <strong>5 ft 4 in</strong> into inches.</p></div>
 <div class="strategy-chip-row">
@@ -412,11 +462,10 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>5 ft × 12 = 60 in. Then add the 4 in:</strong> 60 + 4 = <strong>64 in</strong>.</p></div>
 <div class="journal-label">✏️ Why do we MULTIPLY when going from feet to inches? <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think: 5 ft 4 in" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think: 5 ft 4 in" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">Now stack inch-tiles to build a foot — then a yard.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-10-02-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-10-02 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-10-02-concept --></div></div></div></div>
 <div aria-label="Daily vocabulary flash cards" class="vocab-section">
 <div class="vocab-section-head">
 <div class="vocab-section-icon">📚</div>
@@ -427,40 +476,38 @@
 </div>
 <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
 <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for inch. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">📏</div><div class="fc-word">inch (in)</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">inch (in)</div><div class="fc-def">smallest common length unit in customary. 12 inches make 1 foot. About the width of a thumb.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for foot. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🦶</div><div class="fc-word">foot (ft)</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">foot (ft)</div><div class="fc-def">1 ft = 12 in. Three feet make a yard.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for yard. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">📐</div><div class="fc-word">yard (yd)</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">yard (yd)</div><div class="fc-def">1 yd = 3 ft = 36 in. About one big step.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for mile. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🛣️</div><div class="fc-word">mile (mi)</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">mile (mi)</div><div class="fc-def">1 mi = 5,280 ft. About 20 minutes of walking.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div aria-label="Vocabulary card for inch. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">📏</div><div class="fc-word">inch (in)</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">inch (in)</div><div class="fc-def">smallest common length unit in customary. 12 inches make 1 foot. About the width of a thumb.</div><div class="fc-tap-back">tap to flip back</div></div>
 </div>
-<div class="video-wrap" data-video-slot="4-10-02-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.10.02</div><div class="video-wrap-title">Stack inches into feet, feet into yards.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-10-02_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Three converts. (1) 4 ft → in. 4 × 12 = 48 in. (2) 5 ft 4 in → in. 5 × 12 + 4 = 64 in. (3) 15 yd 2 ft → ft. 15 × 3 + 2 = 47 ft. Frame: <strong>Multiply the big unit by its factor, then add the leftover small unit.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-concept --></div></div></div></div>
+</div>
+<div aria-label="Vocabulary card for foot. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🦶</div><div class="fc-word">foot (ft)</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">foot (ft)</div><div class="fc-def">1 ft = 12 in. Three feet make a yard.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for yard. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">📐</div><div class="fc-word">yard (yd)</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">yard (yd)</div><div class="fc-def">1 yd = 3 ft = 36 in. About one big step.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for mile. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🛣️</div><div class="fc-word">mile (mi)</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">mile (mi)</div><div class="fc-def">1 mi = 5,280 ft. About 20 minutes of walking.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
 <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Pick how many groups to SPLIT the bar into. Then click groups to TAKE them.</p></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#C56C3F;">📏</div><div><div class="activity-title">Ruler Stacker</div><div class="activity-sub">Stack inch-tiles. Watch them combine into feet. Stack feet into a yard.</div></div></div><div class="activity-body"><p>Three rounds. Click to add tiles. The bigger unit unlocks every time you complete it.</p>
-
-<div class="rs-card" data-id="1" data-small-unit="in" data-big-unit="ft" data-factor="12" data-target-big="1" data-target-extra="0" data-target-small="12" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="rs-card" data-big-unit="ft" data-factor="12" data-id="1" data-small-unit="in" data-target-big="1" data-target-extra="0" data-target-small="12" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 1 · Build 1 foot</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">12 inches fill 1 foot. Click +1 in 12 times — or jump ahead with +1 ft.</div>
-
 <div style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:14px;margin-bottom:12px;">
 <div style="text-align:center;font-size:11px;font-weight:900;color:#5B2E10;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;">Stack tiles · 1 tile = 1 in</div>
 <div id="rsRuler-1" style="display:flex;justify-content:flex-start;align-items:center;gap:0;min-height:60px;background:#F5D4BC;border:2px solid #C56C3F;border-radius:8px;padding:4px;overflow-x:auto;"></div>
@@ -468,20 +515,16 @@
 Stacked: <span id="rsCount-1">0</span> in = <span id="rsBig-1" style="color:#C56C3F;">0 ft</span>
 </div>
 </div>
-
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="rsAddSmall('1')" id="rsAddBtn-1" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 in</button>
-<button onclick="rsAddBig('1')" id="rsAddBigBtn-1" style="background:#E89A6B;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 ft (12 in)</button>
+<button id="rsAddBtn-1" onclick="rsAddSmall('1')" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 in</button>
+<button id="rsAddBigBtn-1" onclick="rsAddBig('1')" style="background:#E89A6B;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 ft (12 in)</button>
 <button onclick="rsReset('1')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="rsStatus-1" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Click +1 in or +1 ft to start stacking.</div>
 </div>
-
-<div class="rs-card" data-id="2" data-small-unit="ft" data-big-unit="yd" data-factor="3" data-target-big="1" data-target-extra="0" data-target-small="3" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="rs-card" data-big-unit="yd" data-factor="3" data-id="2" data-small-unit="ft" data-target-big="1" data-target-extra="0" data-target-small="3" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 2 · Build 1 yard</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">3 feet fill 1 yard.</div>
-
 <div style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:14px;margin-bottom:12px;">
 <div style="text-align:center;font-size:11px;font-weight:900;color:#5B2E10;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;">Stack tiles · 1 tile = 1 ft</div>
 <div id="rsRuler-2" style="display:flex;justify-content:flex-start;align-items:center;gap:0;min-height:60px;background:#F5D4BC;border:2px solid #C56C3F;border-radius:8px;padding:4px;overflow-x:auto;"></div>
@@ -489,20 +532,16 @@ Stacked: <span id="rsCount-1">0</span> in = <span id="rsBig-1" style="color:#C56
 Stacked: <span id="rsCount-2">0</span> ft = <span id="rsBig-2" style="color:#C56C3F;">0 yd</span>
 </div>
 </div>
-
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="rsAddSmall('2')" id="rsAddBtn-2" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 ft</button>
-<button onclick="rsAddBig('2')" id="rsAddBigBtn-2" style="background:#E89A6B;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 yd (3 ft)</button>
+<button id="rsAddBtn-2" onclick="rsAddSmall('2')" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 ft</button>
+<button id="rsAddBigBtn-2" onclick="rsAddBig('2')" style="background:#E89A6B;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 yd (3 ft)</button>
 <button onclick="rsReset('2')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="rsStatus-2" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Click +1 ft or +1 yd to start stacking.</div>
 </div>
-
-<div class="rs-card" data-id="3" data-small-unit="in" data-big-unit="ft" data-factor="12" data-target-big="5" data-target-extra="4" data-target-small="64" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="rs-card" data-big-unit="ft" data-factor="12" data-id="3" data-small-unit="in" data-target-big="5" data-target-extra="4" data-target-small="64" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 3 · Build 5 ft 4 in</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Stack until you have 5 feet AND 4 leftover inches. Total: 64 inches.</div>
-
 <div style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:14px;margin-bottom:12px;">
 <div style="text-align:center;font-size:11px;font-weight:900;color:#5B2E10;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;">Stack tiles · 1 tile = 1 in</div>
 <div id="rsRuler-3" style="display:flex;justify-content:flex-start;align-items:center;gap:0;min-height:60px;background:#F5D4BC;border:2px solid #C56C3F;border-radius:8px;padding:4px;overflow-x:auto;"></div>
@@ -510,16 +549,13 @@ Stacked: <span id="rsCount-2">0</span> ft = <span id="rsBig-2" style="color:#C56
 Stacked: <span id="rsCount-3">0</span> in = <span id="rsBig-3" style="color:#C56C3F;">0 ft</span>
 </div>
 </div>
-
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="rsAddSmall('3')" id="rsAddBtn-3" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 in</button>
-<button onclick="rsAddBig('3')" id="rsAddBigBtn-3" style="background:#E89A6B;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 ft (12 in)</button>
+<button id="rsAddBtn-3" onclick="rsAddSmall('3')" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 in</button>
+<button id="rsAddBigBtn-3" onclick="rsAddBig('3')" style="background:#E89A6B;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 ft (12 in)</button>
 <button onclick="rsReset('3')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="rsStatus-3" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Click +1 in or +1 ft to start stacking.</div>
 </div>
-
 <div class="reveal-box" id="learnReveal"><strong>Stacked.</strong> 12 in = 1 ft. 3 ft = 1 yd. Composite measurements like 5 ft 4 in are just the big unit times its factor plus the extras.</div>
 </div></div>
 <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 The Customary Length Chart</div><p><strong>1 foot = 12 inches.</strong></p><p><strong>1 yard = 3 feet = 36 inches.</strong></p><p><strong>1 mile = 5,280 feet.</strong></p><p>To convert big → small, multiply by the factor. Small → big, divide.</p></div>
@@ -541,7 +577,7 @@ Stacked: <span id="rsCount-3">0</span> in = <span id="rsBig-3" style="color:#C56
 <textarea class="journal-box" data-label="Learn — Socratic: 2 yd 1 ft 5 in" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: Track Lap</div><div class="activity-sub">Divide a mile into 4 equal laps.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>1 mile = 5,280 ft. 4 laps around a track = 1 mile. What is the length of 1 lap?</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it:</p>
-<div class="video-wrap" data-video-slot="4-10-02-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.10.02</div><div class="video-wrap-title">5,280 ft ÷ 4 laps = 1,320 ft per lap</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-10-02_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Atlas: "1 mile = 5,280 ft. 4 laps share the mile." Felix: "5,280 ÷ 4 = 1,320 ft per lap." Cora: "Check: 4 × 1,320 = 5,280 ✓." About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-10-02-example --></div></div></div></div>
+
 <div style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.9;font-size:16px;">
 <strong>Step 1.</strong> 1 mile = <span style="color:#C56C3F;font-weight:900;">5,280 ft</span>.<br/>
@@ -562,12 +598,10 @@ Stacked: <span id="rsCount-3">0</span> in = <span id="rsBig-3" style="color:#C56
 <div class="callout callout-info"><span class="callout-icon">📏</span><p>Three more stacks: a yard, a tricky composite, and an arithmetic problem.</p></div>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Tip:</strong> Use +1 yd or +1 ft to jump ahead — you do not have to click every inch.</p></div>
 <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Pattern:</strong> Big × factor + extra = total in small unit.</p></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#C56C3F;">1</div><div><div class="activity-title">Build 4 ft</div><div class="activity-sub">Pure feet to inches.</div></div><span class="activity-time" style="background:#C56C3F;">~5 min</span></div><div class="activity-body">
-<div class="rs-card" data-id="p1" data-small-unit="in" data-big-unit="ft" data-factor="12" data-target-big="4" data-target-extra="0" data-target-small="48" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="rs-card" data-big-unit="ft" data-factor="12" data-id="p1" data-small-unit="in" data-target-big="4" data-target-extra="0" data-target-small="48" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Stack to 4 ft</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">How many inches? Multiply 4 × 12.</div>
-
 <div style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:14px;margin-bottom:12px;">
 <div style="text-align:center;font-size:11px;font-weight:900;color:#5B2E10;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;">Stack tiles · 1 tile = 1 in</div>
 <div id="rsRuler-p1" style="display:flex;justify-content:flex-start;align-items:center;gap:0;min-height:60px;background:#F5D4BC;border:2px solid #C56C3F;border-radius:8px;padding:4px;overflow-x:auto;"></div>
@@ -575,24 +609,20 @@ Stacked: <span id="rsCount-3">0</span> in = <span id="rsBig-3" style="color:#C56
 Stacked: <span id="rsCount-p1">0</span> in = <span id="rsBig-p1" style="color:#C56C3F;">0 ft</span>
 </div>
 </div>
-
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="rsAddSmall('p1')" id="rsAddBtn-p1" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 in</button>
-<button onclick="rsAddBig('p1')" id="rsAddBigBtn-p1" style="background:#E89A6B;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 ft (12 in)</button>
+<button id="rsAddBtn-p1" onclick="rsAddSmall('p1')" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 in</button>
+<button id="rsAddBigBtn-p1" onclick="rsAddBig('p1')" style="background:#E89A6B;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 ft (12 in)</button>
 <button onclick="rsReset('p1')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="rsStatus-p1" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Click +1 in or +1 ft to start stacking.</div>
 </div>
 <div class="journal-label">✏️ How many inches is 4 ft? Show your multiplication. <span class="saved-dot" id="dot-p1"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 1: 4 ft to inches" id="journal-p1" oninput="autoSave(this,'dot-p1')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Build 15 yd 2 ft</div><div class="activity-sub">Composite — yards plus extra feet.</div></div></div><div class="activity-body">
-<div class="rs-card" data-id="p2" data-small-unit="ft" data-big-unit="yd" data-factor="3" data-target-big="15" data-target-extra="2" data-target-small="47" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="rs-card" data-big-unit="yd" data-factor="3" data-id="p2" data-small-unit="ft" data-target-big="15" data-target-extra="2" data-target-small="47" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Stack to 15 yd 2 ft</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">15 yards plus 2 feet. Total in feet?</div>
-
 <div style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:14px;margin-bottom:12px;">
 <div style="text-align:center;font-size:11px;font-weight:900;color:#5B2E10;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;">Stack tiles · 1 tile = 1 ft</div>
 <div id="rsRuler-p2" style="display:flex;justify-content:flex-start;align-items:center;gap:0;min-height:60px;background:#F5D4BC;border:2px solid #C56C3F;border-radius:8px;padding:4px;overflow-x:auto;"></div>
@@ -600,19 +630,16 @@ Stacked: <span id="rsCount-p1">0</span> in = <span id="rsBig-p1" style="color:#C
 Stacked: <span id="rsCount-p2">0</span> ft = <span id="rsBig-p2" style="color:#C56C3F;">0 yd</span>
 </div>
 </div>
-
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="rsAddSmall('p2')" id="rsAddBtn-p2" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 ft</button>
-<button onclick="rsAddBig('p2')" id="rsAddBigBtn-p2" style="background:#E89A6B;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 yd (3 ft)</button>
+<button id="rsAddBtn-p2" onclick="rsAddSmall('p2')" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 ft</button>
+<button id="rsAddBigBtn-p2" onclick="rsAddBig('p2')" style="background:#E89A6B;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 yd (3 ft)</button>
 <button onclick="rsReset('p2')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="rsStatus-p2" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Click +1 ft or +1 yd to start stacking.</div>
 </div>
 <div class="journal-label">✏️ How many feet? Show 15 × 3 + 2. <span class="saved-dot" id="dot-p2"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 2: 15 yd 2 ft" id="journal-p2" oninput="autoSave(this,'dot-p2')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#C56C3F;">3</div><div><div class="activity-title">Add: 4 ft 7 in + 6 ft 8 in</div><div class="activity-sub">Mixed-unit addition.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">➕</span><p><strong>Add separately, then regroup:</strong> add the feet, add the inches; if inches ≥ 12, regroup into more feet.</p></div>
 <div style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;color:#0E1C42;font-weight:700;margin-bottom:8px;">4 ft 7 in + 6 ft 8 in</div>
@@ -632,17 +659,13 @@ Stacked: <span id="rsCount-p2">0</span> ft = <span id="rsBig-p2" style="color:#C
 <div class="journal-label">✏️ Try 9 ft 3 in − 7 ft 5 in. (Hint: borrow 12 inches from the feet column.) <span class="saved-dot" id="dot-p3"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 3: subtract with borrow" id="journal-p3" oninput="autoSave(this,'dot-p3')" placeholder="9 ft 3 in − 7 ft 5 in = ? ft ? in" style="min-height:80px;"></textarea>
 </div></div>
-
 <div class="tab-next-wrap"><p class="tab-transition-voice">Three stacks. Three different conversions. Now show it.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">For each problem, convert between customary units of length. Show your work.</div></div></div><div class="activity-body"><p>Use the chart: 12 in = 1 ft, 3 ft = 1 yd, 36 in = 1 yd, 5,280 ft = 1 mi.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Do the denominators MATCH? Or do I need to rename one or both? Or is a benchmark (<span class="frac"><span class="num">1</span><span class="den">2</span></span>, 1) faster?</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Single conversions.</strong><br/>(a) 1 ft = ___ in<br/>(b) 1 yd = ___ ft<br/>(c) 1 yd = ___ in<br/>(d) 4 ft = ___ in<br/>(e) 5 ft = ___ in</p><div class="journal-label">✏️ All five answers <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: single conversions" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-
 <div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Word problem — track lap.</strong> 1 mile = 5,280 ft. 4 laps around a school track = 1 mile. (a) How many feet is one lap? (b) Show your division and a check.</p><div class="journal-label">✏️ My answer + check <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: track lap" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
-
-
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#C56C3F;"><div class="activity-head"><div class="activity-num" style="background:#C56C3F;color:#fff;">🗺️</div><div><div class="activity-title">Unit 7 Complete — Where This Goes Next</div><div class="activity-sub">Looking ahead</div></div></div><div class="activity-body"><p>You've compared and ordered fractions that all fit between 0 and 1.</p><p>Next lesson: <strong>Improper Fractions and Mixed Numbers.</strong> What if the top is BIGGER than the bottom? <span class="frac"><span class="num">8</span><span class="den">5</span></span> of a pie isn't just half — it's a WHOLE pie plus some extra. That's an improper fraction, and it can also be written as a mixed number (1 <span class="frac"><span class="num">3</span><span class="den">5</span></span>).</p><p>The big question opening 6.03: <em>How do you show a fraction that's more than 1 whole?</em></p></div></div></div></div>
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed all 6 problems above.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed both column subtractions on every problem.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed the borrow step whenever the fraction column needed it and simplified at the end.</span></div></div></div>
@@ -1256,12 +1279,12 @@ function ccOpen(){ var o = document.getElementById('ccOverlay'); if(o) o.classLi
 function ccClose(){ var o = document.getElementById('ccOverlay'); if(o) o.classList.remove('show'); }
 
 </script>
-<button class="cc-fab" onclick="ccOpen()" aria-label="Open conversion chart" title="Conversion Chart">📋 Conversion Chart</button>
+<button aria-label="Open conversion chart" class="cc-fab" onclick="ccOpen()" title="Conversion Chart">📋 Conversion Chart</button>
 <div class="cc-overlay" id="ccOverlay" onclick="if(event.target.id==='ccOverlay')ccClose()">
 <div class="cc-modal">
 <div class="cc-modal-head">
 <div class="cc-modal-title">📋 Conversion Chart</div>
-<button class="cc-close" onclick="ccClose()" aria-label="Close">×</button>
+<button aria-label="Close" class="cc-close" onclick="ccClose()">×</button>
 </div>
 <div class="cc-section">
 <div class="cc-section-head">Metric · Length</div>
@@ -1301,4 +1324,73 @@ function ccClose(){ var o = document.getElementById('ccOverlay'); if(o) o.classL
 </div>
 </div>
 </div>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Mixed Division Facts — Maintenance";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
+</script>
 </body></html>

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Optima Academy Online — Grade 4 Math Lesson 4.01.03</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
@@ -306,25 +307,51 @@
 .bubble-text{font-size:14.5px;color:#0E1C42;line-height:1.5;font-weight:600;font-family:'Lora',Georgia,serif;font-style:italic}
 @media(max-width:620px){.bubble{flex:1 1 100%;max-width:100%}}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
 <div class="progress-wrap"><span class="progress-label">📐 Lesson Progress</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><span class="progress-pct" id="progressPct">0%</span></div>
 <div class="header">
-  <div class="header-brand">
-    <div class="header-logo">
-      <img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" />
-    </div>
-    <div>
-      <div class="header-org">Optima Academy Online</div>
-      <div class="header-sub">An Education Experience Company</div>
-    </div>
-  </div>
-  <div class="header-title"><em>Number Patterns</em></div>
-  <div class="header-badge">
-    <span class="header-badge-icon">🦉</span>
-    <span class="header-badge-text">Lesson 4.01.03</span>
-  </div>
+<div class="header-brand">
+<div class="header-logo">
+<img alt="Optima Academy" src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png"/>
+</div>
+<div>
+<div class="header-org">Optima Academy Online</div>
+<div class="header-sub">An Education Experience Company</div>
+</div>
+</div>
+<div class="header-title"><em>Number Patterns</em></div>
+<div class="header-badge">
+<span class="header-badge-icon">🦉</span>
+<span class="header-badge-text">Lesson 4.01.03</span>
+</div>
 </div>
 <div class="quote-strip"><div class="quote-strip-text">"Patterns aren't lucky. They follow place value."</div><div class="quote-strip-attr">Patterns Big Idea</div></div>
 <div class="info-strip"><div class="info-cell"><div class="info-icon" style="background:#F0E8FF;">🧭</div><div><div class="info-label">Unit</div><div class="info-value">Unit 1</div><div class="info-detail">Numbers to 1,000,000</div></div></div><div class="info-cell"><div class="info-icon" style="background:#E3F8ED;">📅</div><div><div class="info-label">Lesson</div><div class="info-value">4.01.03</div><div class="info-detail">U3 Apply</div></div></div><div class="info-cell"><div class="info-icon" style="background:#EAF0FF;">📐</div><div><div class="info-label">Standard</div><div class="info-value">MA.4.AR.3.2</div><div class="info-detail">Generate and extend patterns</div></div></div><div class="info-cell"><div class="info-icon" style="background:#FFF8E6;">🔢</div><div><div class="info-label">Focus</div><div class="info-value">Patterns</div><div class="info-detail">MTR.5.1 · MTR.6.1</div></div></div></div>
@@ -332,22 +359,45 @@
 <div class="intro-2col"><div class="intro-card theme-question"><div class="intro-card-head"><div class="intro-card-head-icon">❓</div><div><div class="intro-card-head-label">Essential Question</div><div class="intro-card-head-title">When a number grows by a steady amount, which digits change — and which ones stay still?</div></div></div><div class="intro-card-body"><p>If you start at 27,400 and add 1,000 every step, what part of the number actually moves? What part stays the same?</p><p>The place-value chart can tell you the answer before you do any of the work.</p></div></div><div class="intro-card theme-objectives"><div class="intro-card-head"><div class="intro-card-head-icon">🎯</div><div><div class="intro-card-head-label">Today's Objectives</div><div class="intro-card-head-title">You will…</div></div></div><div class="intro-card-body"><div class="obj-line"><span class="obj-icon">🔁</span><span><strong>Describe</strong> the rule that connects each number in a pattern to the next.</span></div><div class="obj-line"><span class="obj-icon">➡️</span><span><strong>Extend</strong> a number pattern forward — and run it backward, too.</span></div><div class="obj-line"><span class="obj-icon">💬</span><span><strong>Explain</strong> which place-value digits change and which stay still when a pattern grows by a steady amount.</span></div></div></div></div>
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
-
 <div class="tab-panel active" id="tab-warmup">
-  <div class="video-wrap" data-video-slot="4-01-03-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.01.03</div><div class="video-wrap-title">Where do number patterns come from?</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-03_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Open with three numbers on the board: <strong>27,400 · 28,400 · 29,400</strong>. Don't say what they mean yet. Ask: "What's the next number?" Pause. "How do you know?" Let students sit with it. Then point to each pair: "From 27,400 to 28,400 — what changed? Only the thousands digit. From 28,400 to 29,400 — same thing. Only the thousands digit moved." Now name the pattern: "Each step adds 1,000. That's a number pattern — a list of numbers that follow a rule." Connect back to the unit: "You already know how place value works. Today, you'll see that place value <em>predicts</em> patterns. If a pattern adds 1,000, the thousands place is the one doing the work." Promise where it goes: stadiums where attendance grows each week, predicting how big the crowd will be next month. Tone: investigative, almost like a detective story. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-03-welcome --></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
-    <p>The Math Crew thinks about patterns four different ways. Each strategy will help you when the numbers get tricky.</p>
-    <div class="bubble-row">
-      <div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — the builder</div><div class="bubble-text">"I write each number under the last. Lining up the places shows me what changes."</div></div></div>
-      <div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — the diagrammer</div><div class="bubble-text">"I draw an arrow between each pair of numbers and label it with the jump — like '+1,000'."</div></div></div>
-    </div>
-    <div class="bubble-row">
-      <div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — the shortcutter</div><div class="bubble-text">"I subtract the first two terms. That gives me the rule in one move."</div></div></div>
-      <div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — the checker</div><div class="bubble-text">"I check the rule against the next pair. If the jump matches every time, the rule is right."</div></div></div>
-    </div>
-    <div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>For patterns, the most useful trick is Cora's: test the rule on more than one pair. One match could be a coincidence. Three matches means it's the rule.</p></div>
-  </div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Skip-Count by 100</div><div class="activity-sub">A tiny pattern to wake up your brain.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>Start at 1,250. Count up by <strong>100</strong> each step. Tap the value cards in order to fill in the next four numbers in the pattern. (Hint: only one digit will change at first.)</p><div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:16px;margin:12px 0;">
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Known-Fact Bridges: ×3 and ×6</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">3 × 4</span><input autocomplete="off" class="fluency-input" data-answer="12" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 4</span><input autocomplete="off" class="fluency-input" data-answer="24" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">3 × 7</span><input autocomplete="off" class="fluency-input" data-answer="21" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 5</span><input autocomplete="off" class="fluency-input" data-answer="30" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">3 × 8</span><input autocomplete="off" class="fluency-input" data-answer="24" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 6</span><input autocomplete="off" class="fluency-input" data-answer="36" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">3 × 9</span><input autocomplete="off" class="fluency-input" data-answer="27" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 7</span><input autocomplete="off" class="fluency-input" data-answer="42" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">3 × 6</span><input autocomplete="off" class="fluency-input" data-answer="18" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 9</span><input autocomplete="off" class="fluency-input" data-answer="54" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Known-Fact Bridges: ×3 and ×6)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
+<p>The Math Crew thinks about patterns four different ways. Each strategy will help you when the numbers get tricky.</p>
+<div class="bubble-row">
+<div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — the builder</div><div class="bubble-text">"I write each number under the last. Lining up the places shows me what changes."</div></div></div>
+<div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — the diagrammer</div><div class="bubble-text">"I draw an arrow between each pair of numbers and label it with the jump — like '+1,000'."</div></div></div>
+</div>
+<div class="bubble-row">
+<div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — the shortcutter</div><div class="bubble-text">"I subtract the first two terms. That gives me the rule in one move."</div></div></div>
+<div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — the checker</div><div class="bubble-text">"I check the rule against the next pair. If the jump matches every time, the rule is right."</div></div></div>
+</div>
+<div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>For patterns, the most useful trick is Cora's: test the rule on more than one pair. One match could be a coincidence. Three matches means it's the rule.</p></div>
+</div></div>
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Skip-Count by 100</div><div class="activity-sub">A tiny pattern to wake up your brain.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>Start at 1,250. Count up by <strong>100</strong> each step. Tap the value cards in order to fill in the next four numbers in the pattern. (Hint: only one digit will change at first.)</p><div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;font-family:'Lora',Georgia,serif;font-size:20px;font-weight:800;color:#0E1C42;">
 <span style="background:#E3F8ED;border:2px solid #B8E8CF;border-radius:10px;padding:8px 14px;">1,250</span>
 <span style="color:#7A88A8;font-size:14px;">+100→</span>
@@ -371,16 +421,16 @@
 <div class="inline-feedback" id="rPatternFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>1,250 → 1,350 → 1,450 → 1,550 → 1,650.</strong> Each step adds 100. The <em>hundreds</em> digit ticks up: 2, 3, 4, 5, 6. Everything else stays the same — until the hundreds reach 10 and we'd have to carry. (You'll see that in Learn.)</div>
-<div class="journal-label">✏️ Which place-value digit changed every step in this pattern? Which digit changed last lesson when you added 10,000? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: Which digit changes when you add 100?" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-01-03-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.01.03</div><div class="video-wrap-title">Place value tells you what changes</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-03_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write 1,250 → 1,350 → 1,450 → 1,550 → 1,650 stacked vertically on the board, lining up the digits in their places. Point to each column. "Thousands stays 1. Hundreds — 2, 3, 4, 5, 6 — it counts up by 1 every step. Tens stays 5. Ones stays 0." Circle the hundreds column. "When we add 100, the hundreds digit is the one doing the work. That's the rule." Now hint at what's coming: "What would happen if we kept going? 1,750, 1,850, 1,950, then… what? When the hundreds digit hits 10, it can't stay there — so we carry to thousands. We'll watch that happen in Learn." Tone: matter-of-fact, but inviting curiosity. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-03-readiness-feedback --></div></div></div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
+<div class="journal-label">✏️ Which place-value digit changed every step in this pattern? Which digit changed last lesson when you added 10,000? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: Which digit changes when you add 100?" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">🏟️</span><p>The stadium tracks weekly attendance. Week 1: <strong>27,400</strong> fans. Week 2: <strong>28,400</strong>. Week 3: <strong>29,400</strong>. The team is gaining fans every week. What is the rule? And what number will Week 6 hit?</p></div>
 <div class="number-talk-visual">
 <div class="number-talk-prompt">Look at the three numbers carefully before you predict. What do you notice? What do you wonder?</div>
 <div class="visual-equation" style="font-size:22px;letter-spacing:1px;">27,400 · 28,400 · 29,400</div>
 <div class="notice-wonder-grid">
-<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" id="journal-notice" data-label="Warm-Up — Notice: What I notice about 27,400 · 28,400 · 29,400" placeholder="" oninput="autoSave(this,'dot-notice')" style="min-height:60px;"></textarea></div>
-<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" id="journal-wonder" data-label="Warm-Up — Wonder: What I wonder about the pattern" placeholder="" oninput="autoSave(this,'dot-wonder')" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" data-label="Warm-Up — Notice: What I notice about 27,400 · 28,400 · 29,400" id="journal-notice" oninput="autoSave(this,'dot-notice')" placeholder="" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" data-label="Warm-Up — Wonder: What I wonder about the pattern" id="journal-wonder" oninput="autoSave(this,'dot-wonder')" placeholder="" style="min-height:60px;"></textarea></div>
 </div>
 </div>
 <p><strong>Predict first:</strong> Without doing the math, what do you think Week 4 will be? Tap your best guess.</p>
@@ -392,57 +442,56 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>Before you predict, ask yourself:</strong> How did each number change? Which place-value digit moved? Did anything stay exactly the same?</p></div>
 <div class="journal-label">✏️ My prediction: What is the rule for this pattern, and what number will Week 6 hit? Show your thinking. <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think Prompt: Rule and Week 6 prediction for 27,400 · 28,400 · 29,400" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think Prompt: Rule and Week 6 prediction for 27,400 · 28,400 · 29,400" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">You spotted a jump of 1,000. Now let's see why it works — and what happens when the pattern gets bigger jumps.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
-  <div class="vocab-section" aria-label="Daily vocabulary flash cards">
-  <div class="vocab-section-head">
-    <div class="vocab-section-icon">📚</div>
-    <div>
-      <div class="vocab-section-label">Daily Vocabulary</div>
-      <div class="vocab-section-title">Tap to Build Today’s Math Language</div>
-    </div>
-  </div>
-  <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
-  <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for pattern. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🔁</div><div class="fc-word">pattern</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">pattern</div><div class="fc-def">a list of numbers that follow a rule — each number gives you a way to find the next one.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for rule. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">📏</div><div class="fc-word">rule</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">rule</div><div class="fc-def">the action that gets you from one term to the next, like "add 1,000" or "subtract 50."</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for term. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🔢</div><div class="fc-word">term</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">term</div><div class="fc-def">one number in a pattern. In 27,400 · 28,400 · 29,400, each number is a term.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for extend. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">➡️</div><div class="fc-word">extend</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">extend</div><div class="fc-def">to use the rule to find the next term (or several next terms) in a pattern.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-01-03-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-01-03 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-01-03-concept --></div></div></div></div>
+<div aria-label="Daily vocabulary flash cards" class="vocab-section">
+<div class="vocab-section-head">
+<div class="vocab-section-icon">📚</div>
+<div>
+<div class="vocab-section-label">Daily Vocabulary</div>
+<div class="vocab-section-title">Tap to Build Today’s Math Language</div>
 </div>
-<div class="video-wrap" data-video-slot="4-01-03-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.01.03</div><div class="video-wrap-title">The rule lives in one place at a time</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-03_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write four patterns side by side on the board, each starting from 24,536: <strong>(A)</strong> +10: 24,536; 24,546; 24,556. <strong>(B)</strong> +100: 24,536; 24,636; 24,736. <strong>(C)</strong> +1,000: 24,536; 25,536; 26,536. <strong>(D)</strong> +10,000: 24,536; 34,536; 44,536. For each, circle the digit that changed. Say each one aloud: "Pattern A — only the tens digit moves. Pattern B — only the hundreds digit moves." Build the rule: "When you add an amount, the place that matches that amount is the one that ticks up. Add 100 — hundreds ticks up. Add 1,000 — thousands ticks up." Now show what happens at a "boundary." Continue pattern B: 24,736 → 24,836 → 24,936 → and now? "We hit nine hundreds. Adding 100 more means ten hundreds, but the chart can only show one digit per place. So one ten-thousand carries up to thousands. 24,936 + 100 = 25,036. Two digits changed this time — but it's still the same rule." Tone: investigative, like solving a small mystery. (~2–3 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-03-concept --></div></div></div></div>
-  <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Before reading the Key Concept below, use the Pattern Extender to walk through 27,400; 28,400; 29,400 and beyond. Watch which digit ticks. Then come back and see what the math says.</p></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">➡️</div><div><div class="activity-title">Pattern Extender: Week by Week</div><div class="activity-sub">The rule is +1,000. Step through three more weeks.</div></div></div><div class="activity-body"><p>Here are the first three weeks of attendance from your warm-up. The rule is <strong>+1,000</strong>. Tap <em>Step Forward</em> three times to fill in Weeks 4, 5, and 6. Watch which digit changes each time.</p><div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:16px;margin:12px 0;">
+</div>
+<p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
+<div class="vocab-grid">
+<div aria-label="Vocabulary card for pattern. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🔁</div><div class="fc-word">pattern</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">pattern</div><div class="fc-def">a list of numbers that follow a rule — each number gives you a way to find the next one.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for rule. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">📏</div><div class="fc-word">rule</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">rule</div><div class="fc-def">the action that gets you from one term to the next, like "add 1,000" or "subtract 50."</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for term. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🔢</div><div class="fc-word">term</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">term</div><div class="fc-def">one number in a pattern. In 27,400 · 28,400 · 29,400, each number is a term.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for extend. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">➡️</div><div class="fc-word">extend</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">extend</div><div class="fc-def">to use the rule to find the next term (or several next terms) in a pattern.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Before reading the Key Concept below, use the Pattern Extender to walk through 27,400; 28,400; 29,400 and beyond. Watch which digit ticks. Then come back and see what the math says.</p></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">➡️</div><div><div class="activity-title">Pattern Extender: Week by Week</div><div class="activity-sub">The rule is +1,000. Step through three more weeks.</div></div></div><div class="activity-body"><p>Here are the first three weeks of attendance from your warm-up. The rule is <strong>+1,000</strong>. Tap <em>Step Forward</em> three times to fill in Weeks 4, 5, and 6. Watch which digit changes each time.</p><div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:16px;margin:12px 0;">
 <div id="patternSequence" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;font-family:'Lora',Georgia,serif;font-size:20px;font-weight:800;color:#0E1C42;"></div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-top:10px;font-weight:700;">Rule: <span style="background:#F0E8FF;border:2px solid #D8CCF0;border-radius:10px;padding:4px 10px;color:#6B3FA0;">+1,000</span></div>
 <div style="text-align:center;margin-top:14px;"><button class="purple-btn" onclick="stepLearnPattern()">▶ Step Forward</button> <button class="orange-btn" onclick="resetLearnPattern()" style="margin-left:8px;">↩ Reset</button></div>
 <div id="learnChangeIndicator" style="background:#FFF8E6;border:2px solid #F5E6C8;border-radius:10px;padding:10px 12px;margin-top:14px;font-size:13px;color:#5A4A3A;font-weight:700;text-align:center;display:none;"></div>
 </div>
 <div class="reveal-box" id="learnReveal"><strong>You filled in the whole pattern.</strong> Week 4: 30,400. Week 5: 31,400. Week 6: 32,400. The thousands digit ticked up by 1 each step: 7 → 8 → 9 → <strong>30</strong> (carried) → 31 → 32. Every other digit stayed exactly the same.</div>
-  <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 What You Just Saw</div><p><strong>The rule lives in one place at a time.</strong> When the rule is "add 1,000," the thousands digit is the one doing the work. Hundreds, tens, and ones don't move at all.</p><p>But pay attention to Week 4. The number went from <strong>29,400</strong> to <strong>30,400</strong>. <em>Two</em> digits changed that time — the 9 in thousands became 0, and the 2 in ten-thousands became 3. That is what happens when a place hits 10: it carries one to the place on its left, just like place value taught you. The rule is still "+1,000." It always was.</p></div>
+<div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 What You Just Saw</div><p><strong>The rule lives in one place at a time.</strong> When the rule is "add 1,000," the thousands digit is the one doing the work. Hundreds, tens, and ones don't move at all.</p><p>But pay attention to Week 4. The number went from <strong>29,400</strong> to <strong>30,400</strong>. <em>Two</em> digits changed that time — the 9 in thousands became 0, and the 2 in ten-thousands became 3. That is what happens when a place hits 10: it carries one to the place on its left, just like place value taught you. The rule is still "+1,000." It always was.</p></div>
 <div style="margin-top:16px;">
 <div class="key-concept"><div class="key-concept-label">🔗 The Place That Changes</div>
 <p>Here's the rule in one table. Each row starts from <strong>24,536</strong> and adds a different amount. Watch which digit ticks up.</p>
@@ -486,20 +535,20 @@
 </div>
 </div>
 </div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👆</div><div><div class="activity-title">Try the Rule: Tap a Jump</div><div class="activity-sub">Start at 36,182. Pick a jump. Watch where it lands.</div></div></div><div class="activity-body"><p>You're on <strong>36,182</strong>. Tap any rule below and the number jumps once. Tap another rule — it jumps again from wherever it landed. Reset to start over.</p><div style="background:#0E1C42;color:#fff;border-radius:14px;padding:14px;text-align:center;margin:12px 0;"><div style="font-family:'Lora',Georgia,serif;font-size:32px;font-weight:800;letter-spacing:3px;" id="incrementDisplay">36,182</div><div style="font-size:13px;color:#F5C518;font-weight:800;margin-top:6px;" id="incrementLast">Tap a rule to begin.</div></div><div class="digit-strip" style="gap:10px;flex-wrap:wrap;"><button class="value-card" onclick="applyIncrement(10)" style="min-width:80px;cursor:pointer;"><div class="big" style="font-size:18px;">+10</div></button><button class="value-card" onclick="applyIncrement(100)" style="min-width:80px;cursor:pointer;"><div class="big" style="font-size:18px;">+100</div></button><button class="value-card" onclick="applyIncrement(1000)" style="min-width:80px;cursor:pointer;"><div class="big" style="font-size:18px;">+1,000</div></button><button class="value-card" onclick="applyIncrement(10000)" style="min-width:80px;cursor:pointer;"><div class="big" style="font-size:18px;">+10,000</div></button><button class="value-card" onclick="applyIncrement(100000)" style="min-width:80px;cursor:pointer;"><div class="big" style="font-size:18px;">+100,000</div></button><button class="orange-btn" onclick="resetIncrement()" style="margin:0;">↩ Reset</button></div><div class="journal-label">✏️ Try +100 four times in a row, then +10,000 once. Which digits changed each time? Which digit changed the most often, and which barely changed at all? <span class="saved-dot" id="dot-digit"></span></div><textarea class="journal-box" id="journal-digit" data-label="Learn — Try the Rule: Which digit changes most often?" placeholder="" oninput="autoSave(this,'dot-digit')"></textarea></div></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: Season Ticket Sales</div><div class="activity-sub">Find the rule. Predict five weeks out.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>The team sells season tickets in batches each Monday. Week 1: <strong>12,300</strong> sold. Week 2: <strong>14,300</strong>. Week 3: <strong>16,300</strong>. (a) What is the rule? (b) How many tickets will be sold by Week 5? (c) Which place-value digit is doing the changing?</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch how the Math Crew works through this one:</p>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👆</div><div><div class="activity-title">Try the Rule: Tap a Jump</div><div class="activity-sub">Start at 36,182. Pick a jump. Watch where it lands.</div></div></div><div class="activity-body"><p>You're on <strong>36,182</strong>. Tap any rule below and the number jumps once. Tap another rule — it jumps again from wherever it landed. Reset to start over.</p><div style="background:#0E1C42;color:#fff;border-radius:14px;padding:14px;text-align:center;margin:12px 0;"><div id="incrementDisplay" style="font-family:'Lora',Georgia,serif;font-size:32px;font-weight:800;letter-spacing:3px;">36,182</div><div id="incrementLast" style="font-size:13px;color:#F5C518;font-weight:800;margin-top:6px;">Tap a rule to begin.</div></div><div class="digit-strip" style="gap:10px;flex-wrap:wrap;"><button class="value-card" onclick="applyIncrement(10)" style="min-width:80px;cursor:pointer;"><div class="big" style="font-size:18px;">+10</div></button><button class="value-card" onclick="applyIncrement(100)" style="min-width:80px;cursor:pointer;"><div class="big" style="font-size:18px;">+100</div></button><button class="value-card" onclick="applyIncrement(1000)" style="min-width:80px;cursor:pointer;"><div class="big" style="font-size:18px;">+1,000</div></button><button class="value-card" onclick="applyIncrement(10000)" style="min-width:80px;cursor:pointer;"><div class="big" style="font-size:18px;">+10,000</div></button><button class="value-card" onclick="applyIncrement(100000)" style="min-width:80px;cursor:pointer;"><div class="big" style="font-size:18px;">+100,000</div></button><button class="orange-btn" onclick="resetIncrement()" style="margin:0;">↩ Reset</button></div><div class="journal-label">✏️ Try +100 four times in a row, then +10,000 once. Which digits changed each time? Which digit changed the most often, and which barely changed at all? <span class="saved-dot" id="dot-digit"></span></div><textarea class="journal-box" data-label="Learn — Try the Rule: Which digit changes most often?" id="journal-digit" oninput="autoSave(this,'dot-digit')" placeholder=""></textarea></div></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: Season Ticket Sales</div><div class="activity-sub">Find the rule. Predict five weeks out.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>The team sells season tickets in batches each Monday. Week 1: <strong>12,300</strong> sold. Week 2: <strong>14,300</strong>. Week 3: <strong>16,300</strong>. (a) What is the rule? (b) How many tickets will be sold by Week 5? (c) Which place-value digit is doing the changing?</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch how the Math Crew works through this one:</p>
 <div class="bubble-row">
-  <div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — concrete</div><div class="bubble-text">"I line up the numbers vertically. 12,300 / 14,300 / 16,300. The thousands digit goes 2 → 4 → 6. Steady jump of 2,000."</div></div></div>
-  <div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — pictorial</div><div class="bubble-text">"I draw an arrow between Week 1 and Week 2 and label it +2,000. Then I check the next arrow — also +2,000. Same rule both times."</div></div></div>
+<div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — concrete</div><div class="bubble-text">"I line up the numbers vertically. 12,300 / 14,300 / 16,300. The thousands digit goes 2 → 4 → 6. Steady jump of 2,000."</div></div></div>
+<div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — pictorial</div><div class="bubble-text">"I draw an arrow between Week 1 and Week 2 and label it +2,000. Then I check the next arrow — also +2,000. Same rule both times."</div></div></div>
 </div>
 <p style="font-family:'Lora',Georgia,serif;background:#FAFBFF;border:2px solid #E2E8F4;border-radius:12px;padding:10px;text-align:center;font-size:18px;font-weight:800;">12,300 → 14,300 → 16,300 → 18,300 → 20,300</p>
 <div class="bubble-row">
-  <div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — shortcut</div><div class="bubble-text">"Subtract: 14,300 − 12,300 = 2,000. The rule is +2,000. To find Week 5, I add 2,000 four times — or jump straight: 12,300 + 4×2,000 = 12,300 + 8,000 = 20,300."</div></div></div>
-  <div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — checking</div><div class="bubble-text">"Week 5 should be 20,300. Watch what happened from Week 4 to Week 5: 18,300 → 20,300. <em>Two</em> digits changed! The 8 in thousands hit 10, so it carried up. That's how patterns cross over."</div></div></div>
+<div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — shortcut</div><div class="bubble-text">"Subtract: 14,300 − 12,300 = 2,000. The rule is +2,000. To find Week 5, I add 2,000 four times — or jump straight: 12,300 + 4×2,000 = 12,300 + 8,000 = 20,300."</div></div></div>
+<div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — checking</div><div class="bubble-text">"Week 5 should be 20,300. Watch what happened from Week 4 to Week 5: 18,300 → 20,300. <em>Two</em> digits changed! The 8 in thousands hit 10, so it carried up. That's how patterns cross over."</div></div></div>
 </div>
 <div class="callout callout-tip"><span class="callout-icon">⚠️</span><p><strong>About that carry:</strong> When the thousands digit hits 10, it rolls over to 0 and adds 1 to ten-thousands. From 18,300 + 2,000, we'd get "1<strong>10</strong>,300" — but that's not how numbers work, so the 10 thousands become 1 ten-thousand. 18,300 + 2,000 = 20,300. The rule is still +2,000; the chart just had to do extra work.</p></div></div></div>
-  <div class="video-wrap" data-video-slot="4-01-03-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.01.03</div><div class="video-wrap-title">12,300 → 20,300 — and a small carry along the way</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-03_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write the three given terms in a vertical column on the board, aligning the digits: <br>12,300 <br>14,300 <br>16,300 <br>Circle the thousands column and read down: 2, 4, 6. "Each step adds 2 thousands. The rule is +2,000." Continue the pattern: 18,300 (8 in thousands). Now pause at the boundary: 18,300 + 2,000 = ? Walk through carefully. "8 thousands plus 2 thousands is 10 thousands. We can't write 10 in a single place — so we carry: 1 ten-thousand, 0 thousands. The number becomes 20,300." Write it out. Read aloud: "twenty thousand, three hundred." Point back to the rule. "The rule is still +2,000. The boundary just made the number look like a bigger change happened — but the rule didn't change. Carrying happens because place value only allows one digit per column." End: "Next lesson, you'll use what you know about reading and writing big numbers to compare them. Which is bigger? Why?" (~2–3 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-03-example --></div></div></div></div>
-  <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">⚖️</div><div><div class="activity-title">Run It Backward</div><div class="activity-sub">Patterns go both ways.</div></div></div><div class="activity-body">
+
+<div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">⚖️</div><div><div class="activity-title">Run It Backward</div><div class="activity-sub">Patterns go both ways.</div></div></div><div class="activity-body">
 <p>The team also tracks who turned in tickets <em>back</em> — like for refunds or transfers. The pattern shrinks instead of growing. Two students described the same backward pattern in different ways.</p>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0;">
 <div style="background:#EAF8FD;border:2px solid #D6F2FB;border-radius:14px;padding:14px;">
@@ -513,17 +562,16 @@
 </div>
 <div class="callout callout-info"><span class="callout-icon">🧐</span><p>Both students get the same four numbers. Student A names the rule directly (subtract). Student B uses what they already know about adding and runs the list backward. Both work — they're different ways to think about the same pattern.</p></div>
 <div class="journal-label">✏️ Which strategy would you use first if a pattern was shrinking? Why? Use 8,400 → 7,900 → 7,400 to explain how the hundreds digit moves. <span class="saved-dot" id="dot-compare"></span></div>
-<textarea class="journal-box" id="journal-compare" data-label="Learn — Strategy Comparison: Subtraction vs Reverse for −500 pattern" placeholder="" oninput="autoSave(this,'dot-compare')"></textarea>
+<textarea class="journal-box" data-label="Learn — Strategy Comparison: Subtraction vs Reverse for −500 pattern" id="journal-compare" oninput="autoSave(this,'dot-compare')" placeholder=""></textarea>
 </div></div>
-  <div class="socratic-box"><div class="socratic-label">🔮 Think Like a Mathematician</div><p class="socratic-q">In a +100 pattern starting at 1,250, the hundreds digit changes every step — until it doesn't. What happens at 1,950 + 100? Why do <em>two</em> digits change when a place hits 10? And what does that tell you about how place value and patterns work together?</p><div class="journal-label">✏️ My reasoning <span class="saved-dot" id="dot-soc1"></span></div><textarea class="journal-box" id="journal-soc1" data-label="Learn — Socratic: Why two digits change at the carry boundary" placeholder="" oninput="autoSave(this,'dot-soc1')"></textarea></div>
-  <div class="tab-next-wrap"><p class="tab-transition-voice">You found a rule, extended a pattern, and watched what happens at the carry boundary. Time to try a few on your own.</p><button class="tab-next-btn" onclick="switchTab('practice')">Continue to 🧮 Practice →</button></div>
+<div class="socratic-box"><div class="socratic-label">🔮 Think Like a Mathematician</div><p class="socratic-q">In a +100 pattern starting at 1,250, the hundreds digit changes every step — until it doesn't. What happens at 1,950 + 100? Why do <em>two</em> digits change when a place hits 10? And what does that tell you about how place value and patterns work together?</p><div class="journal-label">✏️ My reasoning <span class="saved-dot" id="dot-soc1"></span></div><textarea class="journal-box" data-label="Learn — Socratic: Why two digits change at the carry boundary" id="journal-soc1" oninput="autoSave(this,'dot-soc1')" placeholder=""></textarea></div>
+<div class="tab-next-wrap"><p class="tab-transition-voice">You found a rule, extended a pattern, and watched what happens at the carry boundary. Time to try a few on your own.</p><button class="tab-next-btn" onclick="switchTab('practice')">Continue to 🧮 Practice →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-practice">
-  <div class="callout callout-info"><span class="callout-icon">🧭</span><p>You watched the +1,000 pattern in Learn. Each Practice problem changes <strong>one thing</strong> — the rule, the starting number, or what gets asked. Pay attention to what's different.</p></div>
-  <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask yourself:</strong> What's the rule? Which place-value digit will it move? And — will the pattern hit a carry boundary?</p></div>
-  <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Go back to the Learn tab. The "Place That Changes" table and the Worked Example for 12,300 → 20,300 are still there. Use them.</p></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">Extend the Pattern: +100 with a Carry</div><div class="activity-sub">Start at 4,650. Add 100 each step. There's a carry coming.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>The pattern starts at 4,650 and grows by 100 each step. The first three terms are already filled in. Tap the value cards <strong>in order</strong> to fill in the last three terms.</p><div class="callout callout-tip" style="margin-bottom:10px;"><span class="callout-icon">🧐</span><p><strong>What's the same as Learn?</strong> Steady rule. <strong>What's new?</strong> One of the jumps will cross a boundary — the hundreds digit hits 10 and carries to thousands. Predict which jump.</p></div>
+<div class="callout callout-info"><span class="callout-icon">🧭</span><p>You watched the +1,000 pattern in Learn. Each Practice problem changes <strong>one thing</strong> — the rule, the starting number, or what gets asked. Pay attention to what's different.</p></div>
+<div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask yourself:</strong> What's the rule? Which place-value digit will it move? And — will the pattern hit a carry boundary?</p></div>
+<div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Go back to the Learn tab. The "Place That Changes" table and the Worked Example for 12,300 → 20,300 are still there. Use them.</p></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">Extend the Pattern: +100 with a Carry</div><div class="activity-sub">Start at 4,650. Add 100 each step. There's a carry coming.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>The pattern starts at 4,650 and grows by 100 each step. The first three terms are already filled in. Tap the value cards <strong>in order</strong> to fill in the last three terms.</p><div class="callout callout-tip" style="margin-bottom:10px;"><span class="callout-icon">🧐</span><p><strong>What's the same as Learn?</strong> Steady rule. <strong>What's new?</strong> One of the jumps will cross a boundary — the hundreds digit hits 10 and carries to thousands. Predict which jump.</p></div>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:800;color:#0E1C42;">
 <span style="background:#E3F8ED;border:2px solid #B8E8CF;border-radius:10px;padding:6px 12px;">4,650</span>
@@ -549,8 +597,8 @@
 </div>
 <div style="text-align:center;margin-top:10px;"><button class="orange-btn" onclick="resetP1()" style="margin:0;">↩ Reset</button></div>
 </div>
-<div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Got the pattern.</strong> 4,650 → 4,750 → 4,850 → 4,950 → <strong>5,050</strong> → 5,150. Did you see the carry? Going from 4,950 to 5,050 changed <em>two</em> digits — the hundreds 9 rolled to 0 and the thousands 4 ticked to 5. Same rule the whole time: +100.<div class="video-wrap" data-video-slot="4-01-03-practice-1-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 1</div><div class="video-wrap-title">The carry in action</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-03_Practice-1_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write the full pattern: 4,650 → 4,750 → 4,850 → 4,950 → 5,050 → 5,150. Stack them vertically so the digits line up. Read the hundreds column down: 6, 7, 8, 9, 0, 1. Pause at the 9 → 0 jump. "When hundreds went from 9 to 0, the thousands had to go up by 1. That's the carry. It happens because place value only allows ONE digit per place." Then close: "The rule never changed. Always +100." (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-03-practice-1-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Reset and try again. Look for what changes when you add 100.</strong><div class="hint-callout">Start: 4,850 + 100. The hundreds digit goes 8 → 9. So the next term is 4,9_ _ — what's left? Same tens and ones.</div><div class="video-wrap" data-video-slot="4-01-03-practice-1-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 1</div><div class="video-wrap-title">Add 100 one step at a time</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-03_Practice-1_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk through one step at a time. Write 4,850. Say: "Add 100. The hundreds digit moves: 8 → 9. So 4,850 + 100 = 4,950." Repeat: "Add 100. Hundreds: 9 → ??? Hundreds can't be 10 — so we carry. 4,950 + 100 = 5,050." Repeat: "5,050 + 100 = 5,150." Concept being retaught: stepping through a +100 pattern term by term, and recognizing the carry point. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-03-practice-1-retry --></div></div></div></div></div></div></div>
-  <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Find the Rule</div><div class="activity-sub">Five terms are given. What is the steady jump?</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What's different from Problem 1?</strong> No blanks to fill. You're given the whole pattern. Your job is to figure out the rule — and to check that it works between every pair.</p></div>
+<div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Got the pattern.</strong> 4,650 → 4,750 → 4,850 → 4,950 → <strong>5,050</strong> → 5,150. Did you see the carry? Going from 4,950 to 5,050 changed <em>two</em> digits — the hundreds 9 rolled to 0 and the thousands 4 ticked to 5. Same rule the whole time: +100.</div><div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Reset and try again. Look for what changes when you add 100.</strong><div class="hint-callout">Start: 4,850 + 100. The hundreds digit goes 8 → 9. So the next term is 4,9_ _ — what's left? Same tens and ones.</div></div></div></div>
+<div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Find the Rule</div><div class="activity-sub">Five terms are given. What is the steady jump?</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What's different from Problem 1?</strong> No blanks to fill. You're given the whole pattern. Your job is to figure out the rule — and to check that it works between every pair.</p></div>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:8px;font-weight:700;">Five weeks of season ticket totals:</div>
 <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;font-family:'Lora',Georgia,serif;font-size:20px;font-weight:800;color:#0E1C42;">
@@ -572,8 +620,8 @@
 <div class="value-card" onclick="pickP2Rule(this,'+5,000')"><div class="big">+5,000</div></div>
 </div>
 </div>
-<div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ Yes!</strong> The rule is <strong>+500</strong>. Check it on every pair: 13,200 + 500 = 13,700 ✓. 13,700 + 500 = 14,200 ✓. 14,200 + 500 = 14,700 ✓. 14,700 + 500 = 15,200 ✓. Four matches — that's the rule. Notice that the hundreds digit changed each time (2 → 7 → 2 → 7 → 2) AND sometimes thousands ticked up too — that's the carry happening at the 5+5=10 boundary.<div class="video-wrap" data-video-slot="4-01-03-practice-2-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 2</div><div class="video-wrap-title">Two ways to find the rule</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-03_Practice-2_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Show two ways to find the rule. <strong>Way 1 (subtract first two):</strong> 13,700 − 13,200 = 500. Write "Rule guess: +500." <strong>Way 2 (check between every pair):</strong> 14,200 − 13,700 = 500 ✓. 14,700 − 14,200 = 500 ✓. 15,200 − 14,700 = 500 ✓. "Four pairs, all +500. That confirms the rule." Now point out the carry: from 13,700 to 14,200, the hundreds 7 + 5 = 12 — so hundreds rolled to 2 and thousands ticked up by 1. "Cora's tip wins again: check more than one pair. One match could be luck. Four matches is the rule." (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-03-practice-2-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Not quite. Subtract the first two terms to find the rule.</strong><div class="hint-callout">13,700 − 13,200 = ? That's how big each jump is.</div><div class="video-wrap" data-video-slot="4-01-03-practice-2-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 2</div><div class="video-wrap-title">Subtract any two next-door terms</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-03_Practice-2_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach Felix's shortcut: subtraction. "If the pattern adds a steady amount, I can find that amount by subtracting one term from the next. 13,700 − 13,200. Line them up: 13,700 minus 13,200 is 500." Then verify on another pair: 14,200 − 13,700 = 500. Same. "That's the rule: +500." Concept being retaught: using subtraction between consecutive terms to find the rule of a pattern. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-03-practice-2-retry --></div></div></div></div><button class="orange-btn" onclick="resetP2Rule()">↩ Reset and Try Again</button></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Riley's Mistake</div><div class="activity-sub">Read another student's reasoning — and find the error.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What's different?</strong> No more extending. This time you read someone else's reasoning and decide what's right and what's wrong about it.</p></div>
+<div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ Yes!</strong> The rule is <strong>+500</strong>. Check it on every pair: 13,200 + 500 = 13,700 ✓. 13,700 + 500 = 14,200 ✓. 14,200 + 500 = 14,700 ✓. 14,700 + 500 = 15,200 ✓. Four matches — that's the rule. Notice that the hundreds digit changed each time (2 → 7 → 2 → 7 → 2) AND sometimes thousands ticked up too — that's the carry happening at the 5+5=10 boundary.</div><div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Not quite. Subtract the first two terms to find the rule.</strong><div class="hint-callout">13,700 − 13,200 = ? That's how big each jump is.</div><button class="orange-btn" onclick="resetP2Rule()">↩ Reset and Try Again</button></div></div></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Riley's Mistake</div><div class="activity-sub">Read another student's reasoning — and find the error.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What's different?</strong> No more extending. This time you read someone else's reasoning and decide what's right and what's wrong about it.</p></div>
 <div class="task-box"><div class="task-label">Riley's Work</div>
 <p>Riley sees this pattern:</p>
 <p style="font-family:'Lora',Georgia,serif;font-size:18px;font-weight:800;text-align:center;background:#FAFBFF;border:2px solid #E2E8F4;border-radius:10px;padding:10px;">8,560 · 8,570 · 8,580 · 8,590 · 8,600</p>
@@ -592,30 +640,26 @@
 </div>
 <button class="check-btn" onclick="checkErrorAnalysis()">Check My Answers ✓</button>
 <div class="journal-label">✏️ In your own words, explain to Riley why the jump from 8,590 to 8,600 is still +10 — even though two digits changed. <span class="saved-dot" id="dot-ea"></span></div>
-<textarea class="journal-box" id="journal-ea" data-label="Practice 3 — Error Analysis: Explain to Riley why 8,590 → 8,600 is still +10" placeholder="" oninput="autoSave(this,'dot-ea')"></textarea>
-<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> The rule didn't switch — the carry just made the change <em>look</em> bigger. 8,590 + 10 = 8,600. The tens digit went 9 → 0, and one ten-thousand worth of value carried to hundreds. The rule is +10 every step. The chart just had to do extra work.<div class="video-wrap" data-video-slot="4-01-03-practice-3-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 3</div><div class="video-wrap-title">A carry isn't a rule change</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-03_Practice-3_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write the pattern vertically, aligning digits. Walk down the tens column: 6, 7, 8, 9, 0. Pause at 9 → 0. "Yes, that looks like a jump. But check: 8,590 + 10 = 8,600. We added 10. The tens digit can't be 10, so it became 0 and the hundreds digit ticked up by 1." Now write Riley's mistake: "Riley thought the rule changed because <em>two</em> digits changed. But that's the carry, not a new rule. The rule is the amount you add — and we added 10 every single time." Close: "Always verify the rule by subtraction. 8,600 − 8,590 = 10. Same rule." (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-03-practice-3-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">Subtract: 8,600 − 8,590 = ? That tells you the real rule.</div><div class="video-wrap" data-video-slot="4-01-03-practice-3-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 3</div><div class="video-wrap-title">Subtract to find the rule</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-03_Practice-3_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach: subtract neighboring terms. 8,570 − 8,560 = 10. 8,580 − 8,570 = 10. 8,590 − 8,580 = 10. 8,600 − 8,590 = 10. "Every single pair gives +10. The rule is +10. The reason Riley got confused: at the last step, the tens digit hit 10 and carried into hundreds. Two digits changed — but the amount we added is still 10. Carrying is what place value does; it does NOT mean the rule changed." Concept being retaught: that a carry can make a +10 step look like a +100 step, but the rule is still +10. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-03-practice-3-retry --></div></div></div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
-  <div class="socratic-box"><div class="socratic-label">🔮 Think Like a Mathematician</div><p class="socratic-q">When you count up by 1,000 from 27,000, the thousands digit ticks every step. But after enough steps, ten-thousands ticks too. What is the relationship between the size of the jump and how often the bigger places change? Use place value in your answer.</p><div class="journal-label">✏️ My reasoning <span class="saved-dot" id="dot-soc2"></span></div><textarea class="journal-box" id="journal-soc2" data-label="Practice — Socratic: Why bigger places change less often than smaller places" placeholder="" oninput="autoSave(this,'dot-soc2')"></textarea></div>
-  <div class="tab-next-wrap"><p class="tab-transition-voice">You extended a pattern through a carry, named a rule from five terms, and corrected a misread. Time to show what you know.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
+<textarea class="journal-box" data-label="Practice 3 — Error Analysis: Explain to Riley why 8,590 → 8,600 is still +10" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
+<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> The rule didn't switch — the carry just made the change <em>look</em> bigger. 8,590 + 10 = 8,600. The tens digit went 9 → 0, and one ten-thousand worth of value carried to hundreds. The rule is +10 every step. The chart just had to do extra work.</div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">Subtract: 8,600 − 8,590 = ? That tells you the real rule.</div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
+<div class="socratic-box"><div class="socratic-label">🔮 Think Like a Mathematician</div><p class="socratic-q">When you count up by 1,000 from 27,000, the thousands digit ticks every step. But after enough steps, ten-thousands ticks too. What is the relationship between the size of the jump and how often the bigger places change? Use place value in your answer.</p><div class="journal-label">✏️ My reasoning <span class="saved-dot" id="dot-soc2"></span></div><textarea class="journal-box" data-label="Practice — Socratic: Why bigger places change less often than smaller places" id="journal-soc2" oninput="autoSave(this,'dot-soc2')" placeholder=""></textarea></div>
+<div class="tab-next-wrap"><p class="tab-transition-voice">You extended a pattern through a carry, named a rule from five terms, and corrected a misread. Time to show what you know.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-assignment">
-  <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Use the chart, expanded form, or words — whichever helps you think.</div></div></div><div class="activity-body"><p>You met a new place today and built numbers that climb past ten thousand. These problems give you a chance to put it all together. Use any strategy from Learn — the chart, the discs, expanded form, or word form.</p>
+<div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Use the chart, expanded form, or words — whichever helps you think.</div></div></div><div class="activity-body"><p>You met a new place today and built numbers that climb past ten thousand. These problems give you a chance to put it all together. Use any strategy from Learn — the chart, the discs, expanded form, or word form.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask yourself:</strong> Which place is each digit in? Which tool will help me see that fastest?</p></div>
-<div class="q-block"><p class="q-text"><span class="q-num">1</span>Extend the pattern by writing the next <strong>three</strong> terms. State the rule.<br><strong>14,200 · 14,700 · 15,200 · ___ · ___ · ___</strong></p><div class="journal-label">✏️ My answer (rule + three terms) <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" id="journal-a1" data-label="Show What You Know — Problem 1: Extend +500 pattern from 14,200" placeholder="" oninput="autoSave(this,'dot-a1')"></textarea></div>
-
-<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> If a pattern's rule is +1, only the ones digit changes — sometimes. If the rule is +10, only the tens digit changes — sometimes. Why does that word "sometimes" keep showing up? What forces a different digit to change?</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" id="journal-a6" data-label="Show What You Know — Problem 6: Reflection on the role of carrying in patterns" placeholder="" oninput="autoSave(this,'dot-a6')"></textarea></div>
-
-
+<div class="q-block"><p class="q-text"><span class="q-num">1</span>Extend the pattern by writing the next <strong>three</strong> terms. State the rule.<br/><strong>14,200 · 14,700 · 15,200 · ___ · ___ · ___</strong></p><div class="journal-label">✏️ My answer (rule + three terms) <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: Extend +500 pattern from 14,200" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
+<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> If a pattern's rule is +1, only the ones digit changes — sometimes. If the rule is +10, only the tens digit changes — sometimes. Why does that word "sometimes" keep showing up? What forces a different digit to change?</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: Reflection on the role of carrying in patterns" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#55C8E8;"><div class="activity-head"><div class="activity-num" style="background:#55C8E8;color:#0E1C42;">🗺️</div><div><div class="activity-title">Connection Forward: What Comes Next</div><div class="activity-sub">Preview Lesson 4.01.04 — Comparing and Ordering Numbers</div></div></div><div class="activity-body"><p>Today you used place value to find the rule behind a number pattern. You watched which digits ticked, you watched the carry kick in, and you saw that the rule never really changed — only the chart did extra work.</p><p>Next lesson, we'll use the same place-value thinking for a new job: <strong>comparing</strong> numbers. Which is bigger — 487,290 or 478,920? The trick is to look at the leftmost place where the two numbers <em>differ</em>. Place value still does the heavy lifting.</p><p>The big question next time: <em>When two big numbers look almost the same, how do you decide which one is bigger?</em></p></div></div>
 </div></div>
-  <div class="video-wrap" data-video-slot="4-01-03-assignment-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Show What You Know Feedback · Lesson 4.01.03</div><div class="video-wrap-title">The two trickiest problems</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-03_SWYK-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk through Problem 4 and Problem 5 — the two problems most worth re-teaching. <strong>Problem 4 (find and fix):</strong> Show the pattern 7,250 · 7,260 · 7,270 · 7,280 · 7,300 on the board. "The student said the rule is +10, then switched to +20 for the last jump. But check: 7,280 + 10 = 7,290, not 7,300. So the last jump is actually +20 — meaning this isn't a single steady-rule pattern at all, OR the student wrote the wrong term. If we replaced 7,300 with 7,290, the rule would be +10 all the way through. A pattern can't have two different rules — that's not a number pattern, that's two patterns." <strong>Problem 5 (stadium):</strong> "28,400 → 30,900 → 33,400 → 35,900. Subtract: 30,900 − 28,400 = 2,500. Check: 33,400 − 30,900 = 2,500 ✓. Rule = +2,500. Week 5: 35,900 + 2,500 = 38,400. Week 6: 38,400 + 2,500 = 40,900. The thousands and ten-thousands digits do most of the changing, hundreds shifts at the carry, tens and ones don't move at all." Close: "Next lesson, you'll use these big numbers to compare and order — which is bigger, and how do you know?" (~2–3 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-03-assignment-feedback --></div></div></div></div>
-  <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly>Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
-  <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
+
+<div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
+<div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
 </div>
 <div class="footer">
-  <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
-  <div class="footer-sub">Math · Grade 4 · 4.01.03</div>
-  <div class="footer-copy">© 2025 Optima Academy Online</div>
+<div class="footer-main">🏫 <span>Optima Academy Online</span></div>
+<div class="footer-sub">Math · Grade 4 · 4.01.03</div>
+<div class="footer-copy">© 2025 Optima Academy Online</div>
 </div>
 </div>
 <canvas id="confettiCanvas"></canvas>
@@ -830,6 +874,75 @@ function parseManifest(txt){let map={};let lines=txt.split(/\r?\n/);let current=
 window.addEventListener('DOMContentLoaded',()=>{renderLearnPattern();resetIncrement();restoreJournals();updateProgress();loadVideoManifest()});
 
 function flipVocabCard(card){card.classList.toggle('flipped');}
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Known-Fact Bridges: ×3 and ×6";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
 </script>
 </body>
 </html>

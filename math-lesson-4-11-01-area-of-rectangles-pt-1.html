@@ -329,6 +329,32 @@
 .cc-row strong{color:#4A8A4A;font-weight:900;font-family:Lora,Georgia,serif}
 .cc-row em{color:#7A88A8;font-style:italic;font-size:12px}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
@@ -343,7 +369,7 @@
 <div class="header-sub">An Education Experience Company</div>
 </div>
 </div>
-<div class="header-title"><em>Area of Rectangles &mdash; Part 1</em></div>
+<div class="header-title"><em>Area of Rectangles — Part 1</em></div>
 <div class="header-badge">
 <span class="header-badge-icon">🦉</span>
 <span class="header-badge-text">Lesson 4.11.01</span>
@@ -356,7 +382,31 @@
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
-<div class="video-wrap" data-video-slot="4-11-01-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.11.01</div><div class="video-wrap-title">Area &mdash; the inside of a rectangle, measured in unit squares.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-11-01_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Place a sheet of graph paper. "Each tiny square is one unit square. Pick any rectangle." Outline a 5-by-3. "Count: 1, 2, 3... 15 squares. Or: 3 rows of 5. That's 3 × 5 = 15." Show both. Then a 6-by-4 (24). Frame: <strong>Area = length × width. Always in SQUARE units.</strong> Mixed units coming next lesson. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-welcome --></div></div></div></div>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Mental Math — Efficient Strategies</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">49 × 6</span><input autocomplete="off" class="fluency-input" data-answer="294" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">48 × 5</span><input autocomplete="off" class="fluency-input" data-answer="240" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">24 × 25</span><input autocomplete="off" class="fluency-input" data-answer="600" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">19 × 7</span><input autocomplete="off" class="fluency-input" data-answer="133" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">29 × 4</span><input autocomplete="off" class="fluency-input" data-answer="116" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">15 × 15</span><input autocomplete="off" class="fluency-input" data-answer="225" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">38 × 5</span><input autocomplete="off" class="fluency-input" data-answer="190" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">21 × 9</span><input autocomplete="off" class="fluency-input" data-answer="189" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">16 × 25</span><input autocomplete="off" class="fluency-input" data-answer="400" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">45 × 4</span><input autocomplete="off" class="fluency-input" data-answer="180" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Mental Math — Efficient Strategies)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
 <p>Atlas takes the lead — measurement is about naming units and applying conversion rules. Felix multiplies. Hazel builds the picture. Cora checks units.</p>
 <div class="bubble-row">
@@ -372,16 +422,15 @@
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Count the Unit Squares</div><div class="activity-sub">Each tiny square in the grid is one square unit. Count them.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>Three rectangles tiled with unit squares. Pick the matching area.</p>
 <div style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:grid;gap:18px;">
-
 <div style="display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;">
 <div style="background:#fff;border:1.5px solid #C9E4C9;border-radius:10px;padding:8px;">
-<svg width="120" height="90" viewBox="0 0 120 90" xmlns="http://www.w3.org/2000/svg" style="display:block;">
-<g stroke="#2D5A2D" stroke-width="1.5" fill="#7CB87C" fill-opacity="0.4">
-<rect x="5" y="5" width="20" height="20"/><rect x="25" y="5" width="20" height="20"/><rect x="45" y="5" width="20" height="20"/><rect x="65" y="5" width="20" height="20"/>
-<rect x="5" y="25" width="20" height="20"/><rect x="25" y="25" width="20" height="20"/><rect x="45" y="25" width="20" height="20"/><rect x="65" y="25" width="20" height="20"/>
-<rect x="5" y="45" width="20" height="20"/><rect x="25" y="45" width="20" height="20"/><rect x="45" y="45" width="20" height="20"/><rect x="65" y="45" width="20" height="20"/>
+<svg height="90" style="display:block;" viewbox="0 0 120 90" width="120" xmlns="http://www.w3.org/2000/svg">
+<g fill="#7CB87C" fill-opacity="0.4" stroke="#2D5A2D" stroke-width="1.5">
+<rect height="20" width="20" x="5" y="5"></rect><rect height="20" width="20" x="25" y="5"></rect><rect height="20" width="20" x="45" y="5"></rect><rect height="20" width="20" x="65" y="5"></rect>
+<rect height="20" width="20" x="5" y="25"></rect><rect height="20" width="20" x="25" y="25"></rect><rect height="20" width="20" x="45" y="25"></rect><rect height="20" width="20" x="65" y="25"></rect>
+<rect height="20" width="20" x="5" y="45"></rect><rect height="20" width="20" x="25" y="45"></rect><rect height="20" width="20" x="45" y="45"></rect><rect height="20" width="20" x="65" y="45"></rect>
 </g>
-<text x="42" y="80" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="11" fill="#2D5A2D">4 wide × 3 tall</text>
+<text fill="#2D5A2D" font-family="Lora,Georgia,serif" font-size="11" text-anchor="middle" x="42" y="80">4 wide × 3 tall</text>
 </svg>
 </div>
 <div class="value-card-row" style="margin:0;">
@@ -390,17 +439,16 @@
 <button class="value-card" onclick="pickReadinessRound(this,1,'24 square units')" style="min-width:90px;"><div class="big" style="font-size:14px;">24 sq units</div></button>
 </div>
 </div>
-
 <div style="display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;">
 <div style="background:#fff;border:1.5px solid #C9E4C9;border-radius:10px;padding:8px;">
-<svg width="120" height="110" viewBox="0 0 120 110" xmlns="http://www.w3.org/2000/svg" style="display:block;">
-<g stroke="#2D5A2D" stroke-width="1.5" fill="#7CB87C" fill-opacity="0.4">
-<rect x="5" y="5" width="20" height="20"/><rect x="25" y="5" width="20" height="20"/><rect x="45" y="5" width="20" height="20"/>
-<rect x="5" y="25" width="20" height="20"/><rect x="25" y="25" width="20" height="20"/><rect x="45" y="25" width="20" height="20"/>
-<rect x="5" y="45" width="20" height="20"/><rect x="25" y="45" width="20" height="20"/><rect x="45" y="45" width="20" height="20"/>
-<rect x="5" y="65" width="20" height="20"/><rect x="25" y="65" width="20" height="20"/><rect x="45" y="65" width="20" height="20"/>
+<svg height="110" style="display:block;" viewbox="0 0 120 110" width="120" xmlns="http://www.w3.org/2000/svg">
+<g fill="#7CB87C" fill-opacity="0.4" stroke="#2D5A2D" stroke-width="1.5">
+<rect height="20" width="20" x="5" y="5"></rect><rect height="20" width="20" x="25" y="5"></rect><rect height="20" width="20" x="45" y="5"></rect>
+<rect height="20" width="20" x="5" y="25"></rect><rect height="20" width="20" x="25" y="25"></rect><rect height="20" width="20" x="45" y="25"></rect>
+<rect height="20" width="20" x="5" y="45"></rect><rect height="20" width="20" x="25" y="45"></rect><rect height="20" width="20" x="45" y="45"></rect>
+<rect height="20" width="20" x="5" y="65"></rect><rect height="20" width="20" x="25" y="65"></rect><rect height="20" width="20" x="45" y="65"></rect>
 </g>
-<text x="35" y="100" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="11" fill="#2D5A2D">3 wide × 4 tall</text>
+<text fill="#2D5A2D" font-family="Lora,Georgia,serif" font-size="11" text-anchor="middle" x="35" y="100">3 wide × 4 tall</text>
 </svg>
 </div>
 <div class="value-card-row" style="margin:0;">
@@ -409,15 +457,14 @@
 <button class="value-card" onclick="pickReadinessRound(this,2,'14 square units')" style="min-width:90px;"><div class="big" style="font-size:14px;">14 sq units</div></button>
 </div>
 </div>
-
 <div style="display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;">
 <div style="background:#fff;border:1.5px solid #C9E4C9;border-radius:10px;padding:8px;">
-<svg width="140" height="80" viewBox="0 0 140 80" xmlns="http://www.w3.org/2000/svg" style="display:block;">
-<g stroke="#2D5A2D" stroke-width="1.5" fill="#7CB87C" fill-opacity="0.4">
-<rect x="5" y="5" width="20" height="20"/><rect x="25" y="5" width="20" height="20"/><rect x="45" y="5" width="20" height="20"/><rect x="65" y="5" width="20" height="20"/><rect x="85" y="5" width="20" height="20"/><rect x="105" y="5" width="20" height="20"/>
-<rect x="5" y="25" width="20" height="20"/><rect x="25" y="25" width="20" height="20"/><rect x="45" y="25" width="20" height="20"/><rect x="65" y="25" width="20" height="20"/><rect x="85" y="25" width="20" height="20"/><rect x="105" y="25" width="20" height="20"/>
+<svg height="80" style="display:block;" viewbox="0 0 140 80" width="140" xmlns="http://www.w3.org/2000/svg">
+<g fill="#7CB87C" fill-opacity="0.4" stroke="#2D5A2D" stroke-width="1.5">
+<rect height="20" width="20" x="5" y="5"></rect><rect height="20" width="20" x="25" y="5"></rect><rect height="20" width="20" x="45" y="5"></rect><rect height="20" width="20" x="65" y="5"></rect><rect height="20" width="20" x="85" y="5"></rect><rect height="20" width="20" x="105" y="5"></rect>
+<rect height="20" width="20" x="5" y="25"></rect><rect height="20" width="20" x="25" y="25"></rect><rect height="20" width="20" x="45" y="25"></rect><rect height="20" width="20" x="65" y="25"></rect><rect height="20" width="20" x="85" y="25"></rect><rect height="20" width="20" x="105" y="25"></rect>
 </g>
-<text x="65" y="65" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="11" fill="#2D5A2D">6 wide × 2 tall</text>
+<text fill="#2D5A2D" font-family="Lora,Georgia,serif" font-size="11" text-anchor="middle" x="65" y="65">6 wide × 2 tall</text>
 </svg>
 </div>
 <div class="value-card-row" style="margin:0;">
@@ -426,13 +473,12 @@
 <button class="value-card" onclick="pickReadinessRound(this,3,'14 square units')" style="min-width:90px;"><div class="big" style="font-size:14px;">14 sq units</div></button>
 </div>
 </div>
-
 </div>
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Counted:</strong> 4×3=<strong>12</strong>. 3×4=<strong>12</strong>. 6×2=<strong>12</strong>. All three rectangles have the same area — just shaped differently. Multiplying rows × columns shortcuts the counting.</div>
-<div class="journal-label">✏️ All three rectangles had the same area. Why does 4×3 give the same answer as 6×2? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: count unit squares" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-11-01-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.11.01</div><div class="video-wrap-title">Count squares; rows × cols</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-11-01_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "Three rectangles, same area, different shapes. 4 by 3, 3 by 4, 6 by 2 — all 12. The answer is in SQUARE units because we count squares." Frame: <strong>Area = rows × columns = length × width.</strong></div><div class="video-placeholder-id"><!-- slot: lesson-readiness-feedback --></div></div></div></div>
+<div class="journal-label">✏️ All three rectangles had the same area. Why does 4×3 give the same answer as 6×2? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: count unit squares" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Watch out for the units.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">📐</span><p>A rectangle is <strong>2 feet</strong> long and <strong>8 inches</strong> wide. Maya wants the area in square inches.</p></div>
 <div class="strategy-chip-row">
@@ -443,11 +489,10 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>Two units, one rule:</strong> Both sides must match. Convert 2 ft → 24 in. Then 24 × 8 = <strong>192 square inches</strong>.</p></div>
 <div class="journal-label">✏️ What happens if you forget to convert and just multiply 2 × 8? <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think: 2 ft × 8 in rectangle" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think: 2 ft × 8 in rectangle" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">Now tile a rectangle yourself.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-11-01-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-11-01 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-11-01-concept --></div></div></div></div>
 <div aria-label="Daily vocabulary flash cards" class="vocab-section">
 <div class="vocab-section-head">
 <div class="vocab-section-icon">📚</div>
@@ -458,40 +503,38 @@
 </div>
 <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
 <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for area. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">📐</div><div class="fc-word">area</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">area</div><div class="fc-def">the number of unit squares that cover a flat shape. Measured in square units.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for unit square. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🟩</div><div class="fc-word">unit square</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">unit square</div><div class="fc-def">a square with side length 1. The basic building block of area.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for length. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">📏</div><div class="fc-word">length × width</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">length × width</div><div class="fc-def">the formula for the area of a rectangle. Same as rows × columns.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for square units. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">✖️</div><div class="fc-word">square units</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">square units</div><div class="fc-def">the units area is always measured in. Square inches, square feet, square centimeters — written like 12 in² or 12 sq in.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div aria-label="Vocabulary card for area. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">📐</div><div class="fc-word">area</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">area</div><div class="fc-def">the number of unit squares that cover a flat shape. Measured in square units.</div><div class="fc-tap-back">tap to flip back</div></div>
 </div>
-<div class="video-wrap" data-video-slot="4-11-01-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.11.01</div><div class="video-wrap-title">Tile a rectangle. Count squares. Multiply length × width.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-11-01_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Three rectangles. (1) 5 in × 3 in: tile, then 5 × 3 = 15 sq in. (2) 8 cm × 4 cm = 32 sq cm. (3) Mixed: 2 ft × 8 in — convert first (24 in × 8 in), then 192 sq in. Frame: <strong>SAME units on both sides. Answer in SQUARE units.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-concept --></div></div></div></div>
+</div>
+<div aria-label="Vocabulary card for unit square. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🟩</div><div class="fc-word">unit square</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">unit square</div><div class="fc-def">a square with side length 1. The basic building block of area.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for length. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">📏</div><div class="fc-word">length × width</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">length × width</div><div class="fc-def">the formula for the area of a rectangle. Same as rows × columns.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for square units. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">✖️</div><div class="fc-word">square units</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">square units</div><div class="fc-def">the units area is always measured in. Square inches, square feet, square centimeters — written like 12 in² or 12 sq in.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
 <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Pick how many groups to SPLIT the bar into. Then click groups to TAKE them.</p></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#4A8A4A;">🟩</div><div><div class="activity-title">Grid Tiler</div><div class="activity-sub">Set length and width. Watch the rectangle fill with unit squares. The area updates live.</div></div></div><div class="activity-body"><p>Three rounds. Try to predict the area BEFORE you read the readout.</p>
-
-<div class="gt-card" data-id="1" data-unit="in" data-max-rows="6" data-max-cols="8" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="gt-card" data-id="1" data-max-cols="8" data-max-rows="6" data-unit="in" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 1 · Tile a small rectangle (inches)</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Try 4 × 3. Then change length to 5. What happens?</div>
-
 <div style="display:grid;grid-template-columns:auto auto;gap:14px;justify-content:center;align-items:center;margin-bottom:14px;">
 <div style="text-align:center;">
 <div style="font-size:11px;font-weight:900;color:#2D5A2D;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Length (in)</div>
@@ -510,22 +553,16 @@
 </div>
 </div>
 </div>
-
 <div id="gtGrid-1" style="background:#fff;border:2px solid #C9E4C9;border-radius:10px;padding:14px;margin-bottom:12px;min-height:180px;display:flex;justify-content:center;align-items:center;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:20px;font-weight:900;color:#0E1C42;margin-bottom:8px;" id="gtReadout-1">&mdash;</div>
-
+<div id="gtReadout-1" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:20px;font-weight:900;color:#0E1C42;margin-bottom:8px;">—</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
 <button onclick="gtReset('1')" style="background:#6BA56B;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="gtStatus-1" style="background:#9BC89B;border:2px solid #7CB87C;border-radius:10px;padding:10px 14px;font-size:14px;color:#2D5A2D;font-weight:700;line-height:1.5;text-align:center;">Use the + and − buttons to change length and width. Watch the area count.</div>
 </div>
-
-<div class="gt-card" data-id="2" data-unit="cm" data-max-rows="8" data-max-cols="10" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="gt-card" data-id="2" data-max-cols="10" data-max-rows="8" data-unit="cm" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 2 · Bigger rectangle (centimeters)</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Try 6 × 4. Then 8 × 3. Notice — same area, different shape.</div>
-
 <div style="display:grid;grid-template-columns:auto auto;gap:14px;justify-content:center;align-items:center;margin-bottom:14px;">
 <div style="text-align:center;">
 <div style="font-size:11px;font-weight:900;color:#2D5A2D;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Length (cm)</div>
@@ -544,22 +581,16 @@
 </div>
 </div>
 </div>
-
 <div id="gtGrid-2" style="background:#fff;border:2px solid #C9E4C9;border-radius:10px;padding:14px;margin-bottom:12px;min-height:180px;display:flex;justify-content:center;align-items:center;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:20px;font-weight:900;color:#0E1C42;margin-bottom:8px;" id="gtReadout-2">&mdash;</div>
-
+<div id="gtReadout-2" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:20px;font-weight:900;color:#0E1C42;margin-bottom:8px;">—</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
 <button onclick="gtReset('2')" style="background:#6BA56B;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="gtStatus-2" style="background:#9BC89B;border:2px solid #7CB87C;border-radius:10px;padding:10px 14px;font-size:14px;color:#2D5A2D;font-weight:700;line-height:1.5;text-align:center;">Use the + and − buttons to change length and width. Watch the area count.</div>
 </div>
-
-<div class="gt-card" data-id="3" data-unit="ft" data-max-rows="8" data-max-cols="8" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="gt-card" data-id="3" data-max-cols="8" data-max-rows="8" data-unit="ft" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 3 · Square shapes (feet)</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Try 5 by 5. What is special about a square?</div>
-
 <div style="display:grid;grid-template-columns:auto auto;gap:14px;justify-content:center;align-items:center;margin-bottom:14px;">
 <div style="text-align:center;">
 <div style="font-size:11px;font-weight:900;color:#2D5A2D;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Length (ft)</div>
@@ -578,18 +609,13 @@
 </div>
 </div>
 </div>
-
 <div id="gtGrid-3" style="background:#fff;border:2px solid #C9E4C9;border-radius:10px;padding:14px;margin-bottom:12px;min-height:180px;display:flex;justify-content:center;align-items:center;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:20px;font-weight:900;color:#0E1C42;margin-bottom:8px;" id="gtReadout-3">&mdash;</div>
-
+<div id="gtReadout-3" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:20px;font-weight:900;color:#0E1C42;margin-bottom:8px;">—</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
 <button onclick="gtReset('3')" style="background:#6BA56B;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="gtStatus-3" style="background:#9BC89B;border:2px solid #7CB87C;border-radius:10px;padding:10px 14px;font-size:14px;color:#2D5A2D;font-weight:700;line-height:1.5;text-align:center;">Use the + and − buttons to change length and width. Watch the area count.</div>
 </div>
-
 <div class="reveal-box" id="learnReveal"><strong>What you saw.</strong> Length × Width = Area. Rows × Columns = Area. Same thing — just two ways to say it. Area is always in SQUARE units.</div>
 </div></div>
 <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 What You Just Saw</div><p><strong>Area of a rectangle = length × width.</strong> Both sides must be in the SAME unit. The answer is in SQUARE units (sq in, sq cm, in², cm²).</p><p>If the sides come in different units (feet AND inches, meters AND centimeters), <strong>convert one side first</strong> so they match.</p></div>
@@ -597,33 +623,33 @@
 <div style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px;margin:12px 0;">
 <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:12px;max-width:560px;margin:14px auto;align-items:end;justify-items:center;">
 <div style="text-align:center;">
-<svg width="120" height="100" viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" style="display:block;">
-<g stroke="#2D5A2D" stroke-width="1.5" fill="#7CB87C" fill-opacity="0.5">
-<rect x="5" y="5" width="20" height="20"/><rect x="25" y="5" width="20" height="20"/><rect x="45" y="5" width="20" height="20"/><rect x="65" y="5" width="20" height="20"/>
-<rect x="5" y="25" width="20" height="20"/><rect x="25" y="25" width="20" height="20"/><rect x="45" y="25" width="20" height="20"/><rect x="65" y="25" width="20" height="20"/>
-<rect x="5" y="45" width="20" height="20"/><rect x="25" y="45" width="20" height="20"/><rect x="45" y="45" width="20" height="20"/><rect x="65" y="45" width="20" height="20"/>
+<svg height="100" style="display:block;" viewbox="0 0 120 100" width="120" xmlns="http://www.w3.org/2000/svg">
+<g fill="#7CB87C" fill-opacity="0.5" stroke="#2D5A2D" stroke-width="1.5">
+<rect height="20" width="20" x="5" y="5"></rect><rect height="20" width="20" x="25" y="5"></rect><rect height="20" width="20" x="45" y="5"></rect><rect height="20" width="20" x="65" y="5"></rect>
+<rect height="20" width="20" x="5" y="25"></rect><rect height="20" width="20" x="25" y="25"></rect><rect height="20" width="20" x="45" y="25"></rect><rect height="20" width="20" x="65" y="25"></rect>
+<rect height="20" width="20" x="5" y="45"></rect><rect height="20" width="20" x="25" y="45"></rect><rect height="20" width="20" x="45" y="45"></rect><rect height="20" width="20" x="65" y="45"></rect>
 </g>
 </svg>
 <div style="font-family:'Lora',Georgia,serif;font-weight:900;color:#4A8A4A;margin-top:6px;">4 × 3 = 12</div>
 <div style="font-size:11px;color:#3A4A6B;">12 sq units</div>
 </div>
 <div style="text-align:center;">
-<svg width="80" height="120" viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg" style="display:block;">
-<g stroke="#2D5A2D" stroke-width="1.5" fill="#7CB87C" fill-opacity="0.5">
-<rect x="5" y="5" width="20" height="20"/><rect x="25" y="5" width="20" height="20"/><rect x="45" y="5" width="20" height="20"/>
-<rect x="5" y="25" width="20" height="20"/><rect x="25" y="25" width="20" height="20"/><rect x="45" y="25" width="20" height="20"/>
-<rect x="5" y="45" width="20" height="20"/><rect x="25" y="45" width="20" height="20"/><rect x="45" y="45" width="20" height="20"/>
-<rect x="5" y="65" width="20" height="20"/><rect x="25" y="65" width="20" height="20"/><rect x="45" y="65" width="20" height="20"/>
+<svg height="120" style="display:block;" viewbox="0 0 80 120" width="80" xmlns="http://www.w3.org/2000/svg">
+<g fill="#7CB87C" fill-opacity="0.5" stroke="#2D5A2D" stroke-width="1.5">
+<rect height="20" width="20" x="5" y="5"></rect><rect height="20" width="20" x="25" y="5"></rect><rect height="20" width="20" x="45" y="5"></rect>
+<rect height="20" width="20" x="5" y="25"></rect><rect height="20" width="20" x="25" y="25"></rect><rect height="20" width="20" x="45" y="25"></rect>
+<rect height="20" width="20" x="5" y="45"></rect><rect height="20" width="20" x="25" y="45"></rect><rect height="20" width="20" x="45" y="45"></rect>
+<rect height="20" width="20" x="5" y="65"></rect><rect height="20" width="20" x="25" y="65"></rect><rect height="20" width="20" x="45" y="65"></rect>
 </g>
 </svg>
 <div style="font-family:'Lora',Georgia,serif;font-weight:900;color:#4A8A4A;margin-top:6px;">3 × 4 = 12</div>
 <div style="font-size:11px;color:#3A4A6B;">12 sq units</div>
 </div>
 <div style="text-align:center;">
-<svg width="140" height="60" viewBox="0 0 140 60" xmlns="http://www.w3.org/2000/svg" style="display:block;">
-<g stroke="#2D5A2D" stroke-width="1.5" fill="#7CB87C" fill-opacity="0.5">
-<rect x="5" y="5" width="20" height="20"/><rect x="25" y="5" width="20" height="20"/><rect x="45" y="5" width="20" height="20"/><rect x="65" y="5" width="20" height="20"/><rect x="85" y="5" width="20" height="20"/><rect x="105" y="5" width="20" height="20"/>
-<rect x="5" y="25" width="20" height="20"/><rect x="25" y="25" width="20" height="20"/><rect x="45" y="25" width="20" height="20"/><rect x="65" y="25" width="20" height="20"/><rect x="85" y="25" width="20" height="20"/><rect x="105" y="25" width="20" height="20"/>
+<svg height="60" style="display:block;" viewbox="0 0 140 60" width="140" xmlns="http://www.w3.org/2000/svg">
+<g fill="#7CB87C" fill-opacity="0.5" stroke="#2D5A2D" stroke-width="1.5">
+<rect height="20" width="20" x="5" y="5"></rect><rect height="20" width="20" x="25" y="5"></rect><rect height="20" width="20" x="45" y="5"></rect><rect height="20" width="20" x="65" y="5"></rect><rect height="20" width="20" x="85" y="5"></rect><rect height="20" width="20" x="105" y="5"></rect>
+<rect height="20" width="20" x="5" y="25"></rect><rect height="20" width="20" x="25" y="25"></rect><rect height="20" width="20" x="45" y="25"></rect><rect height="20" width="20" x="65" y="25"></rect><rect height="20" width="20" x="85" y="25"></rect><rect height="20" width="20" x="105" y="25"></rect>
 </g>
 </svg>
 <div style="font-family:'Lora',Georgia,serif;font-weight:900;color:#4A8A4A;margin-top:6px;">6 × 2 = 12</div>
@@ -637,7 +663,7 @@
 <textarea class="journal-box" data-label="Learn — Socratic: same area different shape" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: Maya's 2 ft × 8 in rectangle</div><div class="activity-sub">Convert first when units don't match.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Maya is sewing a rectangular cloth that is <strong>2 feet</strong> long and <strong>8 inches</strong> wide. Find the area in <strong>square inches</strong>.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew:</p>
-<div class="video-wrap" data-video-slot="4-11-01-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.11.01</div><div class="video-wrap-title">2 ft × 8 in: convert, then multiply</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-11-01_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Cora: "Units don't match — feet and inches." Atlas: "Convert 2 ft to inches. 2 × 12 = 24 in." Felix: "Now 24 × 8 = 192 sq in." About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-11-01-example --></div></div></div></div>
+
 <div style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.9;font-size:16px;">
 <strong>Step 1.</strong> Units don't match. Convert <span style="color:#4A8A4A;font-weight:900;">2 ft = 24 in</span>.<br/>
@@ -658,12 +684,10 @@
 <div class="callout callout-info"><span class="callout-icon">🟩</span><p>Three problems. Build the rectangle, count, multiply.</p></div>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Two rules:</strong> Area = length × width. Units must match before you multiply.</p></div>
 <div class="callout callout-tip"><span class="callout-icon">💡</span><p>For mixed-unit problems, convert one side first so both sides match.</p></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#4A8A4A;">1</div><div><div class="activity-title">Theo's patio</div><div class="activity-sub">Tile a 7 in × 5 in rectangle.</div></div><span class="activity-time" style="background:#4A8A4A;">~5 min</span></div><div class="activity-body">
-<div class="gt-card" data-id="p1" data-unit="in" data-max-rows="8" data-max-cols="10" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="gt-card" data-id="p1" data-max-cols="10" data-max-rows="8" data-unit="in" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Set length to 7, width to 5</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Build a 7 × 5 rectangle. Predict the area BEFORE you finish.</div>
-
 <div style="display:grid;grid-template-columns:auto auto;gap:14px;justify-content:center;align-items:center;margin-bottom:14px;">
 <div style="text-align:center;">
 <div style="font-size:11px;font-weight:900;color:#2D5A2D;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Length (in)</div>
@@ -682,26 +706,20 @@
 </div>
 </div>
 </div>
-
 <div id="gtGrid-p1" style="background:#fff;border:2px solid #C9E4C9;border-radius:10px;padding:14px;margin-bottom:12px;min-height:180px;display:flex;justify-content:center;align-items:center;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:20px;font-weight:900;color:#0E1C42;margin-bottom:8px;" id="gtReadout-p1">&mdash;</div>
-
+<div id="gtReadout-p1" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:20px;font-weight:900;color:#0E1C42;margin-bottom:8px;">—</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
 <button onclick="gtReset('p1')" style="background:#6BA56B;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="gtStatus-p1" style="background:#9BC89B;border:2px solid #7CB87C;border-radius:10px;padding:10px 14px;font-size:14px;color:#2D5A2D;font-weight:700;line-height:1.5;text-align:center;">Use the + and − buttons to change length and width. Watch the area count.</div>
 </div>
 <div class="journal-label">✏️ What was the area? Did you predict correctly? <span class="saved-dot" id="dot-p1"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 1: 7 × 5" id="journal-p1" oninput="autoSave(this,'dot-p1')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Imani's rug — guess and check</div><div class="activity-sub">Set length to 9 cm, width to 4 cm.</div></div></div><div class="activity-body">
-<div class="gt-card" data-id="p2" data-unit="cm" data-max-rows="10" data-max-cols="10" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="gt-card" data-id="p2" data-max-cols="10" data-max-rows="10" data-unit="cm" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Build to 9 × 4</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Predict the area first, then verify.</div>
-
 <div style="display:grid;grid-template-columns:auto auto;gap:14px;justify-content:center;align-items:center;margin-bottom:14px;">
 <div style="text-align:center;">
 <div style="font-size:11px;font-weight:900;color:#2D5A2D;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Length (cm)</div>
@@ -720,21 +738,16 @@
 </div>
 </div>
 </div>
-
 <div id="gtGrid-p2" style="background:#fff;border:2px solid #C9E4C9;border-radius:10px;padding:14px;margin-bottom:12px;min-height:180px;display:flex;justify-content:center;align-items:center;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:20px;font-weight:900;color:#0E1C42;margin-bottom:8px;" id="gtReadout-p2">&mdash;</div>
-
+<div id="gtReadout-p2" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:20px;font-weight:900;color:#0E1C42;margin-bottom:8px;">—</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
 <button onclick="gtReset('p2')" style="background:#6BA56B;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="gtStatus-p2" style="background:#9BC89B;border:2px solid #7CB87C;border-radius:10px;padding:10px 14px;font-size:14px;color:#2D5A2D;font-weight:700;line-height:1.5;text-align:center;">Use the + and − buttons to change length and width. Watch the area count.</div>
 </div>
 <div class="journal-label">✏️ Your prediction = ___. Actual = ___. <span class="saved-dot" id="dot-p2"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 2: 9 × 4" id="journal-p2" oninput="autoSave(this,'dot-p2')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#4A8A4A;">3</div><div><div class="activity-title">Mixed units — Priya's shelf</div><div class="activity-sub">Convert before you multiply.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🪜</span><p><strong>Steps:</strong> Convert feet → inches. Then multiply by the inches side.</p></div>
 <div style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;color:#0E1C42;font-weight:700;margin-bottom:8px;">Priya's shelf is 3 ft long and 11 in wide.</div>
@@ -745,18 +758,13 @@
 <div class="journal-label">✏️ Show both steps. <span class="saved-dot" id="dot-p3"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 3: mixed units" id="journal-p3" oninput="autoSave(this,'dot-p3')" placeholder="Step 1: 3 × 12 = ___ in. Step 2: ___ × 11 = ___ sq in." style="min-height:80px;"></textarea>
 </div></div>
-
 <div class="tab-next-wrap"><p class="tab-transition-voice">Two builds and one mixed-unit problem. Now show it.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Two quick checks. Your full practice is in the Independent Practice PDF.</div></div></div><div class="activity-body"><p>If you got these, you're ready for the Independent Practice.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Do the denominators MATCH? Or do I need to rename one or both? Or is a benchmark (<span class="frac"><span class="num">1</span><span class="den">2</span></span>, 1) faster?</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Quick check — same units.</strong> A rectangle is 7 cm long and 5 cm wide. Find the area.</p><div class="journal-label">✏️ Area = ___ sq cm <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-
 <div class="q-block"><p class="q-text"><span class="q-num">2</span><strong>Quick check — mixed units.</strong> A rectangle is 2 ft long and 9 in wide. Find the area in square inches. (Convert first: 2 ft = 24 in.)</p><div class="journal-label">✏️ Area = ___ sq in <span class="saved-dot" id="dot-a2"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 2" id="journal-a2" oninput="autoSave(this,'dot-a2')" placeholder=""></textarea></div>
-
-
-
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed all 6 problems above.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed both column subtractions on every problem.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed the borrow step whenever the fraction column needed it and simplified at the end.</span></div></div></div>
 </div>
@@ -1344,8 +1352,75 @@ if(typeof window !== 'undefined'){
 
 
 </script>
-
-
 </div>
 </div>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Mental Math — Efficient Strategies";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
+</script>
 </body></html>

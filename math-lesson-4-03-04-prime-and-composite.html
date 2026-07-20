@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Optima Academy Online — Grade 4 Math Lesson 4.03.04</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
@@ -306,48 +307,97 @@
 .bubble-text{font-size:14.5px;color:#0E1C42;line-height:1.5;font-weight:600;font-family:'Lora',Georgia,serif;font-style:italic}
 @media(max-width:620px){.bubble{flex:1 1 100%;max-width:100%}}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
 <div class="progress-wrap"><span class="progress-label">📐 Lesson Progress</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><span class="progress-pct" id="progressPct">0%</span></div>
 <div class="header">
-  <div class="header-brand">
-    <div class="header-logo">
-      <img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" />
-    </div>
-    <div>
-      <div class="header-org">Optima Academy Online</div>
-      <div class="header-sub">An Education Experience Company</div>
-    </div>
-  </div>
-  <div class="header-title"><em>Prime and Composite</em> — two kinds of whole numbers</div>
-  <div class="header-badge">
-    <span class="header-badge-icon">🦉</span>
-    <span class="header-badge-text">Lesson 4.03.04</span>
-  </div>
+<div class="header-brand">
+<div class="header-logo">
+<img alt="Optima Academy" src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png"/>
 </div>
-<div class="quote-strip"><div class="quote-strip-text">"Prime numbers have exactly TWO factors — 1 and themselves. Every other whole number has more. That's the dividing line."</div><div class="quote-strip-attr">Prime & Composite Big Idea</div></div>
+<div>
+<div class="header-org">Optima Academy Online</div>
+<div class="header-sub">An Education Experience Company</div>
+</div>
+</div>
+<div class="header-title"><em>Prime and Composite</em> — two kinds of whole numbers</div>
+<div class="header-badge">
+<span class="header-badge-icon">🦉</span>
+<span class="header-badge-text">Lesson 4.03.04</span>
+</div>
+</div>
+<div class="quote-strip"><div class="quote-strip-text">"Prime numbers have exactly TWO factors — 1 and themselves. Every other whole number has more. That's the dividing line."</div><div class="quote-strip-attr">Prime &amp; Composite Big Idea</div></div>
 <div class="info-strip"><div class="info-cell"><div class="info-icon" style="background:#F0E8FF;">🧭</div><div><div class="info-label">Unit</div><div class="info-value">Unit 3</div><div class="info-detail">Multiples and Factors</div></div></div><div class="info-cell"><div class="info-icon" style="background:#E3F8ED;">📅</div><div><div class="info-label">Lesson</div><div class="info-value">4.03.04</div><div class="info-detail">U4 Extend</div></div></div><div class="info-cell"><div class="info-icon" style="background:#EAF0FF;">📐</div><div><div class="info-label">Standard</div><div class="info-value">MA.4.AR.3.2</div><div class="info-detail">Identify prime and composite</div></div></div><div class="info-cell"><div class="info-icon" style="background:#FFF8E6;">🔢</div><div><div class="info-label">Focus</div><div class="info-value">Prime · Composite</div><div class="info-detail">MTR.5.1 · MTR.6.1</div></div></div></div>
 <div class="explorer-strip"><span class="explorer-compass">🧭</span><div><div class="explorer-mission-label">Today's Mission</div><div class="explorer-mission-text">All numbers have factors. Some have exactly TWO (only 1 and themselves) — these are PRIME. Others have MORE than two — these are COMPOSITE. Today you'll learn the rule and find the first 25 primes.</div></div></div>
 <div class="intro-2col"><div class="intro-card theme-question"><div class="intro-card-head"><div class="intro-card-head-icon">❓</div><div><div class="intro-card-head-label">Essential Question</div><div class="intro-card-head-title">Why does a "shortest possible factor list" make some numbers special?</div></div></div><div class="intro-card-body"><p>Most numbers have several factors. 12 has six. 24 has eight. 36 has nine. But some numbers — like 7, 11, 13 — have ONLY TWO factors: 1 and themselves. Nothing else divides them evenly.</p><p>These short-list numbers are <strong>prime</strong>. They're the atoms of multiplication — they can't be broken into smaller factor pairs. Every other whole number (except 1) is <strong>composite</strong> — built from prime pieces.</p></div></div><div class="intro-card theme-objectives"><div class="intro-card-head"><div class="intro-card-head-icon">🎯</div><div><div class="intro-card-head-label">Today's Objectives</div><div class="intro-card-head-title">You will…</div></div></div><div class="intro-card-body"><div class="obj-line"><span class="obj-icon">🪨</span><span><strong>Define</strong> prime (exactly 2 factors) and composite (more than 2 factors).</span></div><div class="obj-line"><span class="obj-icon">🔍</span><span><strong>Test</strong> any number under 100 to decide whether it's prime or composite.</span></div><div class="obj-line"><span class="obj-icon">🧠</span><span><strong>Explain</strong> why 1 is treated as its own special case — neither prime nor composite.</span></div></div></div></div>
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
-
 <div class="tab-panel active" id="tab-warmup">
-  <div class="video-wrap" data-video-slot="4-03-04-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.03.04</div><div class="video-wrap-title">Prime: factors of ONLY 1 and itself</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-04_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write two numbers on the board: <strong>7</strong> and <strong>12</strong>. "Both whole numbers. Both bigger than 1. But they live in different worlds — watch." For 7, try every factor pair. "7 ÷ 1 = 7. 7 ÷ 2 = 3 r 1. 7 ÷ 3 = 2 r 1. 7 ÷ 4 = 1 r 3. 7 ÷ 5 = 1 r 2. 7 ÷ 6 = 1 r 1." Stop. "Only 1 and 7 work as divisors. The only factor pair for 7 is 1 × 7. So 7 has just TWO factors total: 1 and 7." For 12, recall yesterday: factor list is 1, 2, 3, 4, 6, 12 — six factors. Pause. "Two factors — that's the special category. We call those PRIME. More than two — we call those COMPOSITE. 7 is prime. 12 is composite." Show Hazel's rectangle view: for 7, the ONLY rectangle is 1 × 7. You can't make a 2-by-anything or 3-by-anything. For 12, there are three rectangles. "Prime numbers are stubborn — they can't be rearranged into rectangles wider than 1." List the first few primes: 2, 3, 5, 7, 11, 13, 17, 19, 23. Note 1: "What about 1? 1 has only ONE factor (just itself). Not two. So 1 isn't prime. It's also not composite. Mathematicians treat 1 as its own thing — neither category." Frame: "Today you'll learn the prime/composite rule, test numbers, and meet the first 25 primes. These primes are the multiplication 'atoms' — every composite number breaks down into them." Tone: introducing a deep idea — special category. (~2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-02-welcome --></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
-    <p>The crew applies yesterday's factor skill to a yes/no test — does this number have exactly 2 factors, or more?</p>
-    <div class="bubble-row">
-      <div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — counts the factors</div><div class="bubble-text">"My job: list all the factors of a number. If there are exactly 2 — prime. If more — composite. I count carefully."</div></div></div>
-      <div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — fast-test pro</div><div class="bubble-text">"For small numbers, I just remember: 2, 3, 5, 7, 11, 13 are prime. For bigger ones, I check divisibility by 2, 3, 5, 7 — if none work, it's probably prime."</div></div></div>
-    </div>
-    <div class="bubble-row">
-      <div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — one rectangle or many?</div><div class="bubble-text">"A prime number can only make ONE rectangle (1 × itself). A composite makes more than one. The picture decides for me."</div></div></div>
-      <div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — divides to check</div><div class="bubble-text">"To check if a number IS a multiple of 4, I divide. 28 ÷ 4 = 7 with no remainder → yes, multiple. 30 ÷ 4 = 7 r 2 → no, not a multiple."</div></div></div>
-    </div>
-    <div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>Cora's remember-list for primes: <em>1 is neither. 2 is the only even prime. All other primes are odd. Memorize 2, 3, 5, 7, 11, 13, 17, 19, 23, 29.</em></p></div>
-  </div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Prime or Composite?</div><div class="activity-sub">For each number, decide whether it is PRIME (exactly 2 factors) or COMPOSITE (more than 2).</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>List the factors in your head. Two factors → prime. More → composite.</p>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">×11 and ×12</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">11 × 2</span><input autocomplete="off" class="fluency-input" data-answer="22" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">11 × 3</span><input autocomplete="off" class="fluency-input" data-answer="33" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">11 × 4</span><input autocomplete="off" class="fluency-input" data-answer="44" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">11 × 5</span><input autocomplete="off" class="fluency-input" data-answer="55" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">11 × 6</span><input autocomplete="off" class="fluency-input" data-answer="66" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">12 × 2</span><input autocomplete="off" class="fluency-input" data-answer="24" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">12 × 3</span><input autocomplete="off" class="fluency-input" data-answer="36" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">12 × 7</span><input autocomplete="off" class="fluency-input" data-answer="84" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">12 × 8</span><input autocomplete="off" class="fluency-input" data-answer="96" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">12 × 9</span><input autocomplete="off" class="fluency-input" data-answer="108" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (×11 and ×12)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
+<p>The crew applies yesterday's factor skill to a yes/no test — does this number have exactly 2 factors, or more?</p>
+<div class="bubble-row">
+<div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — counts the factors</div><div class="bubble-text">"My job: list all the factors of a number. If there are exactly 2 — prime. If more — composite. I count carefully."</div></div></div>
+<div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — fast-test pro</div><div class="bubble-text">"For small numbers, I just remember: 2, 3, 5, 7, 11, 13 are prime. For bigger ones, I check divisibility by 2, 3, 5, 7 — if none work, it's probably prime."</div></div></div>
+</div>
+<div class="bubble-row">
+<div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — one rectangle or many?</div><div class="bubble-text">"A prime number can only make ONE rectangle (1 × itself). A composite makes more than one. The picture decides for me."</div></div></div>
+<div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — divides to check</div><div class="bubble-text">"To check if a number IS a multiple of 4, I divide. 28 ÷ 4 = 7 with no remainder → yes, multiple. 30 ÷ 4 = 7 r 2 → no, not a multiple."</div></div></div>
+</div>
+<div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>Cora's remember-list for primes: <em>1 is neither. 2 is the only even prime. All other primes are odd. Memorize 2, 3, 5, 7, 11, 13, 17, 19, 23, 29.</em></p></div>
+</div></div>
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Prime or Composite?</div><div class="activity-sub">For each number, decide whether it is PRIME (exactly 2 factors) or COMPOSITE (more than 2).</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>List the factors in your head. Two factors → prime. More → composite.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:grid;gap:14px;">
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
@@ -375,16 +425,16 @@
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Answers:</strong> 11 is <strong>prime</strong> (factors: 1, 11 — exactly two). 15 is <strong>composite</strong> (factors: 1, 3, 5, 15 — more than two). 17 is <strong>prime</strong> (factors: 1, 17 — exactly two). Two factors means prime. More than two means composite.</div>
-<div class="journal-label">✏️ Each of 11, 15, and 17 — list the factors and explain why it's prime or composite. (Hint: for 15, try dividing by 2, 3, 5.) <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: Prime vs Composite reasoning for 11, 15, 17" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-03-04-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.03.04</div><div class="video-wrap-title">Count the factors — 2 means prime</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-04_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk each. <strong>11:</strong> "Try 2 — 11 ÷ 2 = 5 r 1. Try 3 — 11 ÷ 3 = 3 r 2. Try 4, 5, 6, 7, 8, 9, 10 — none divide evenly. Only 1 and 11 work. Two factors. <strong>PRIME</strong>." <strong>15:</strong> "Try 3 — 15 ÷ 3 = 5, no remainder. So 3 and 5 are both factors. The list is 1, 3, 5, 15 — FOUR factors. <strong>COMPOSITE</strong>." <strong>17:</strong> "Try 2 — odd, no. Try 3 — 17 ÷ 3 = 5 r 2. Try 4, 5, 6, 7, 8 — none divide. Only 1 and 17. Two factors. <strong>PRIME</strong>." Stop. "The test is the count. Exactly 2 factors → prime. More than 2 → composite. Notice — to test whether a number is prime, you only need to try divisors up to its half (or square root). If none work, it's prime." (~1-2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-02-readiness-feedback --></div></div></div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
+<div class="journal-label">✏️ Each of 11, 15, and 17 — list the factors and explain why it's prime or composite. (Hint: for 15, try dividing by 2, 3, 5.) <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: Prime vs Composite reasoning for 11, 15, 17" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">🧱</span><p>You have <strong>23 cubes</strong> and need to arrange them in a perfect rectangle (longer than 1 cube wide). Can you do it? Now try the same with <strong>24 cubes</strong>. What's different? (Hint: think factors.)</p></div>
 <div class="number-talk-visual">
 <div class="number-talk-prompt">Test every divisor for 23: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 — does any divide evenly? Now test 24 the same way. What does the difference reveal?</div>
 <div class="visual-equation" style="font-size:22px;letter-spacing:1px;">A rectangle (more than 1 wide) needs a factor pair besides 1 × itself.</div>
 <div class="notice-wonder-grid">
-<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" id="journal-notice" data-label="Warm-Up — Notice: What I notice about 23 vs 24 cubes" placeholder="" oninput="autoSave(this,'dot-notice')" style="min-height:60px;"></textarea></div>
-<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" id="journal-wonder" data-label="Warm-Up — Wonder: What I wonder about prime numbers as rectangles" placeholder="" oninput="autoSave(this,'dot-wonder')" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" data-label="Warm-Up — Notice: What I notice about 23 vs 24 cubes" id="journal-notice" oninput="autoSave(this,'dot-notice')" placeholder="" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" data-label="Warm-Up — Wonder: What I wonder about prime numbers as rectangles" id="journal-wonder" oninput="autoSave(this,'dot-wonder')" placeholder="" style="min-height:60px;"></textarea></div>
 </div>
 </div>
 <p><strong>Predict:</strong> Which of these numbers do you think are PRIME (only 1 and itself as factors)? Pick all that fit.</p>
@@ -396,50 +446,49 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>Before you predict, ask yourself:</strong> For each number, can you find a divisor besides 1 and itself? 13 — try 2, 3, 5, 7… 21 — try 3 (yes!). 29 — try 2, 3, 5, 7… 33 — try 3 (yes!).</p></div>
 <div class="journal-label">✏️ My prediction and reasoning: Which of 13, 21, 29, 33 are prime? For each, show the test divisor that decided it. <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think Prompt: Which of 13, 21, 29, 33 are prime?" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think Prompt: Which of 13, 21, 29, 33 are prime?" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">You predicted which are prime. Now let's build the official prime/composite test and meet the first 25 prime numbers.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
-  <div class="vocab-section" aria-label="Daily vocabulary flash cards">
-  <div class="vocab-section-head">
-    <div class="vocab-section-icon">📚</div>
-    <div>
-      <div class="vocab-section-label">Daily Vocabulary</div>
-      <div class="vocab-section-title">Tap to Build Today’s Math Language</div>
-    </div>
-  </div>
-  <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
-  <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for prime. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🪨</div><div class="fc-word">prime</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">prime number</div><div class="fc-def">a whole number bigger than 1 with EXACTLY 2 factors — 1 and itself. Examples: 2, 3, 5, 7, 11, 13, 17, 19, 23.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for composite. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🧱</div><div class="fc-word">composite</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">composite number</div><div class="fc-def">a whole number bigger than 1 with MORE than 2 factors. Examples: 4 (1,2,4), 6 (1,2,3,6), 9 (1,3,9), 12, 15, 18.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for neither. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">⚪</div><div class="fc-word">neither</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">1 is neither</div><div class="fc-def">1 has only ONE factor (itself). It does not have exactly 2, so it's not prime. And it doesn't have MORE than 2, so it's not composite. 1 is its own special case.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for divisibility rule. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">⚡</div><div class="fc-word">divisibility rule</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">divisibility rule</div><div class="fc-def">a shortcut to check if a number divides evenly. Even number → divisible by 2. Digits add to multiple of 3 → divisible by 3. Ends in 0 or 5 → divisible by 5.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-03-04-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-03-04 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-03-04-concept --></div></div></div></div>
+<div aria-label="Daily vocabulary flash cards" class="vocab-section">
+<div class="vocab-section-head">
+<div class="vocab-section-icon">📚</div>
+<div>
+<div class="vocab-section-label">Daily Vocabulary</div>
+<div class="vocab-section-title">Tap to Build Today’s Math Language</div>
 </div>
-<div class="video-wrap" data-video-slot="4-03-04-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.03.04</div><div class="video-wrap-title">The prime/composite rule and the first 25 primes</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-04_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Frame the rule. "Count the factors. Exactly 2 → prime. More than 2 → composite. 0 or 1 (which is what 1 has) → neither." Now build the prime list together. Start at 2. "2 — factors are 1, 2. Two factors. <strong>PRIME</strong>. Also: 2 is the ONLY even prime — every other even number has 2 as a factor, so they're composite." Move to 3. "Factors: 1, 3. Two. PRIME." Move to 4. "Factors: 1, 2, 4. Three. COMPOSITE." 5. "1, 5. PRIME." 6. "1, 2, 3, 6. COMPOSITE." 7. "1, 7. PRIME." 8, 9, 10. "All composite — 8 even, 9 = 3×3, 10 = 2×5." 11. "PRIME." 12. "COMPOSITE." 13. "PRIME." 14, 15, 16. "Composite." 17, 19, 23. "All prime." Pause. Introduce divisibility shortcuts: "To test 27 — is it divisible by 2? No (odd). By 3? Digits 2+7=9, yes. So 27 is composite (3 × 9). No need to keep testing." Show the divisibility tricks: divisible by 2 if last digit is even. By 3 if digit sum is divisible by 3. By 5 if ends in 0 or 5. Then introduce a tip: "If a number under 100 isn't divisible by 2, 3, 5, or 7 — it's prime." Write the first 25 primes: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97. Frame: "These are the multiplication atoms. Every composite number is built from prime pieces. We'll learn to break them down in 5th grade. For now: memorize the primes under 30." Tone: exciting — introducing a famous mathematical idea. (~2-3 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-04-concept --></div></div></div></div>
-  <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Three numbers below. For each, decide whether it's PRIME or COMPOSITE. Use Cora's divisibility shortcuts.</p></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🎯</div><div><div class="activity-title">Prime/Composite Checker</div><div class="activity-sub">Three quick decisions. Use divisibility tricks.</div></div></div><div class="activity-body"><p>For each number, decide PRIME (exactly 2 factors) or COMPOSITE (more than 2).</p>
+</div>
+<p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
+<div class="vocab-grid">
+<div aria-label="Vocabulary card for prime. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🪨</div><div class="fc-word">prime</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">prime number</div><div class="fc-def">a whole number bigger than 1 with EXACTLY 2 factors — 1 and itself. Examples: 2, 3, 5, 7, 11, 13, 17, 19, 23.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for composite. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🧱</div><div class="fc-word">composite</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">composite number</div><div class="fc-def">a whole number bigger than 1 with MORE than 2 factors. Examples: 4 (1,2,4), 6 (1,2,3,6), 9 (1,3,9), 12, 15, 18.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for neither. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">⚪</div><div class="fc-word">neither</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">1 is neither</div><div class="fc-def">1 has only ONE factor (itself). It does not have exactly 2, so it's not prime. And it doesn't have MORE than 2, so it's not composite. 1 is its own special case.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for divisibility rule. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">⚡</div><div class="fc-word">divisibility rule</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">divisibility rule</div><div class="fc-def">a shortcut to check if a number divides evenly. Even number → divisible by 2. Digits add to multiple of 3 → divisible by 3. Ends in 0 or 5 → divisible by 5.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Three numbers below. For each, decide whether it's PRIME or COMPOSITE. Use Cora's divisibility shortcuts.</p></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🎯</div><div><div class="activity-title">Prime/Composite Checker</div><div class="activity-sub">Three quick decisions. Use divisibility tricks.</div></div></div><div class="activity-body"><p>For each number, decide PRIME (exactly 2 factors) or COMPOSITE (more than 2).</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:18px 14px;margin:12px 0;">
 <div style="margin-bottom:18px;">
 <div style="font-family:'Lora',Georgia,serif;font-size:24px;font-weight:900;color:#0E1C42;text-align:center;margin-bottom:10px;"><strong>19</strong></div>
@@ -466,8 +515,8 @@
 </div>
 <div class="reveal-box" id="learnReveal"><strong>Prime / Composite / Prime.</strong> 19 is PRIME (try 2, 3, 5, 7 — none divide). 27 is COMPOSITE (digits 2+7=9, divisible by 3 → 27 = 3 × 9). 29 is PRIME (try 2, 3, 5, 7 — none divide; 29 only divides by 1 and 29). Once you find ANY divisor besides 1 and itself, you're done — composite. If none exist under the square root, it's prime.</div>
 </div></div>
-  <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 What You Just Saw</div><p><strong>The prime/composite definitions and how to test fast.</strong></p><p>1. <strong>Prime:</strong> exactly 2 factors (1 and itself). Examples: 2, 3, 5, 7, 11, 13, 17, 19, 23.</p><p>2. <strong>Composite:</strong> more than 2 factors. Examples: 4, 6, 8, 9, 10, 12, 14, 15, 16, 18.</p><p>3. <strong>1 is neither.</strong> Only one factor (itself). Not "exactly 2" → not prime. Not "more than 2" → not composite.</p><p><strong>Quick tests (divisibility):</strong> divisible by 2 if even; by 3 if digit sum divides by 3; by 5 if ends in 0 or 5. To test a number under 100, check 2, 3, 5, and 7. None divide → prime.</p></div>
-  <div class="activity bl-violet" style="margin-top:16px;"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">🌟</div><div><div class="activity-title">Picture It: The First 25 Primes</div><div class="activity-sub">A handy reference for the rest of the unit.</div></div></div><div class="activity-body"><p>Here's the prime number list under 100. Memorize the ones under 30 (the first 10). The rest you'll learn to test for as you go.</p>
+<div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 What You Just Saw</div><p><strong>The prime/composite definitions and how to test fast.</strong></p><p>1. <strong>Prime:</strong> exactly 2 factors (1 and itself). Examples: 2, 3, 5, 7, 11, 13, 17, 19, 23.</p><p>2. <strong>Composite:</strong> more than 2 factors. Examples: 4, 6, 8, 9, 10, 12, 14, 15, 16, 18.</p><p>3. <strong>1 is neither.</strong> Only one factor (itself). Not "exactly 2" → not prime. Not "more than 2" → not composite.</p><p><strong>Quick tests (divisibility):</strong> divisible by 2 if even; by 3 if digit sum divides by 3; by 5 if ends in 0 or 5. To test a number under 100, check 2, 3, 5, and 7. None divide → prime.</p></div>
+<div class="activity bl-violet" style="margin-top:16px;"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">🌟</div><div><div class="activity-title">Picture It: The First 25 Primes</div><div class="activity-sub">A handy reference for the rest of the unit.</div></div></div><div class="activity-body"><p>Here's the prime number list under 100. Memorize the ones under 30 (the first 10). The rest you'll learn to test for as you go.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:18px;margin:12px 0;font-family:'Lora',Georgia,serif;color:#0E1C42;">
 <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;text-align:center;">
 <div style="background:#F0E8FF;border:2px solid #D8CCF0;border-radius:10px;padding:10px;font-weight:900;font-size:20px;">2</div>
@@ -500,10 +549,10 @@
 </div>
 <div class="socratic-box"><div class="socratic-label">🧠 Socratic — Think Like a Mathematician</div><p class="socratic-q">Why is 2 the ONLY even prime? Could there ever be another even prime number — like 100 or 1,000,000?</p>
 <div class="journal-label">✏️ My thinking <span class="saved-dot" id="dot-soc"></span></div>
-<textarea class="journal-box" id="journal-soc" data-label="Learn — Socratic: Why 2 is the only even prime" placeholder="" oninput="autoSave(this,'dot-soc')"></textarea></div>
+<textarea class="journal-box" data-label="Learn — Socratic: Why 2 is the only even prime" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: Is 51 Prime?</div><div class="activity-sub">Looks prime — but test carefully.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Is 51 a prime number or composite? Test step by step. Show your reasoning.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
-<div class="video-wrap" data-video-slot="4-03-04-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.03.04</div><div class="video-wrap-title">A sneaky composite — 51 looks prime but isn't</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-04_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "51 doesn't look like a typical composite. It's odd. It doesn't end in 5 or 0. But let's test." Cora: "Try 2 — odd, no. Try 3 — digit sum 5 + 1 = 6, and 6 IS divisible by 3. So 51 IS divisible by 3." Compute: 51 ÷ 3 = 17. Atlas: "Found a factor besides 1 and itself! 51 = 3 × 17. So 51 is <strong>COMPOSITE</strong>." Felix: "The full factor list of 51 is 1, 3, 17, 51 — four factors total, more than 2." Hazel: "And 17 is itself a prime. So 51 breaks down into the prime pieces 3 and 17." Then a contrast: "Test 53. Try 2 — odd, no. Try 3 — digits 5+3=8, not divisible by 3. Try 5 — ends in 3, no. Try 7 — 53 ÷ 7 = 7 r 4, no. None divide. 53 is PRIME." Stop. "Big trap to avoid: don't assume odd numbers are prime. 9 is odd and composite. 15 is odd and composite. 21, 25, 27, 33, 35, 39, 45, 49, 51, 55, 57 — all odd, all composite. Always test 3 and 5 first." Tone: cautionary — odd numbers can be sneaky composites. (~2 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-04-example --></div></div></div></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: Is 51 Prime?</div><div class="activity-sub">Looks prime — but test carefully.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Is 51 a prime number or composite? Test step by step. Show your reasoning.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
+
 <div class="key-concept" style="margin-top:14px;"><div class="key-concept-label">⚠️ Sneaky Composites (Look Prime, Aren't)</div>
 <div style="background:#FFF0E6;border:2px solid #F5C8A0;border-radius:12px;padding:14px;margin-top:8px;font-family:'Lora',Georgia,serif;font-size:15px;color:#0E1C42;line-height:1.7;">
 <p style="margin-bottom:8px;">These numbers are ODD (so they look prime) but are actually COMPOSITE. Memorize them.</p>
@@ -527,23 +576,22 @@
 </div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">Two categories. One test. Now apply it to a stack of numbers.</p><button class="tab-next-btn" onclick="switchTab('practice')">Continue to 🧮 Practice →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-practice">
-  <div class="callout callout-info"><span class="callout-icon">🧭</span><p>Three problems on prime and composite numbers. Test, decide, explain.</p></div>
-  <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Does this number divide by 2, 3, 5, or 7? If yes — composite. If none — prime.</p></div>
-  <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Watch out for sneaky composites like 9, 15, 21, 25, 27, 33, 35, 39, 49, 51. Memorize the prime list under 30: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29.</p></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">Count the Primes Under 20</div><div class="activity-sub">List them; count how many there are.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>The first ten primes are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. How many of those primes are LESS THAN 20?</p>
+<div class="callout callout-info"><span class="callout-icon">🧭</span><p>Three problems on prime and composite numbers. Test, decide, explain.</p></div>
+<div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Does this number divide by 2, 3, 5, or 7? If yes — composite. If none — prime.</p></div>
+<div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Watch out for sneaky composites like 9, 15, 21, 25, 27, 33, 35, 39, 49, 51. Memorize the prime list under 30: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29.</p></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">Count the Primes Under 20</div><div class="activity-sub">List them; count how many there are.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>The first ten primes are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. How many of those primes are LESS THAN 20?</p>
 <div class="value-card-row" style="justify-content:center;">
 <button class="value-card" onclick="pickP1Round(this,'8')" style="min-width:90px;"><div class="big">8</div></button>
 <button class="value-card" onclick="pickP1Round(this,'7')" style="min-width:90px;"><div class="big">7</div></button>
 <button class="value-card" onclick="pickP1Round(this,'9')" style="min-width:90px;"><div class="big">9</div></button>
 </div>
 <div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Exactly.</strong> The primes under 20 are <strong>2, 3, 5, 7, 11, 13, 17, 19</strong> — that's <strong>8 primes</strong>. (23 and 29 are over 20, so they don't count.) These eight numbers are the building blocks for every composite number under 20.
-<div class="video-wrap" data-video-slot="4-03-04-practice-1-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 1</div><div class="video-wrap-title">Eight primes under 20</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-04_Practice-1_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Celebrate. "2, 3, 5, 7, 11, 13, 17, 19 — eight prime numbers under 20. Notice the spacing thins out as you go higher. Primes get rarer, but they never run out — there are infinitely many." (~45 sec)</div><div class="video-placeholder-id"><!-- slot: 4-03-04-practice-1-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Look again.</strong> List the primes one by one: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Stop at 19 (the last one under 20). Count those.
 <div class="hint-callout">Don't include 23 — it's over 20. And don't include 1 — 1 isn't prime.</div>
-<div class="video-wrap" data-video-slot="4-03-04-practice-1-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 1</div><div class="video-wrap-title">Count carefully — 8 primes under 20</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-04_Practice-1_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk through the list 2, 3, 5, 7, 11, 13, 17, 19, counting each one. Confirm 8 total. (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-04-practice-1-retry --></div></div></div></div></div></div></div>
-  <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three Tests — Prime or Composite?</div><div class="activity-sub">Use divisibility rules to decide each.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Three different numbers. One is prime. Two are composite. Watch for sneaky odd composites.</p></div>
+</div></div></div>
+<div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three Tests — Prime or Composite?</div><div class="activity-sub">Use divisibility rules to decide each.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Three different numbers. One is prime. Two are composite. Watch for sneaky odd composites.</p></div>
 <p>For each, decide PRIME or COMPOSITE.</p>
 <div style="display:grid;gap:14px;margin:14px 0;">
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:14px;">
@@ -569,17 +617,17 @@
 </div>
 </div>
 <div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ Three for three.</strong> 2a — <strong>23 is PRIME</strong> (try 2, 3, 5, 7: none divide). 2b — <strong>35 is COMPOSITE</strong> (35 = 5 × 7; ends in 5 → divisible by 5). 2c — <strong>39 is COMPOSITE</strong> (digits 3+9=12, divisible by 3 → 39 = 3 × 13). Cora's rule: any divisor besides 1 and itself → composite.
-<div class="video-wrap" data-video-slot="4-03-04-practice-2-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 2</div><div class="video-wrap-title">Watch for sneaky composites like 35 and 39</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-04_Practice-2_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Recap. "23 is genuinely prime. 35 and 39 LOOK prime because they're odd — but they're sneaky composites. Always test 3 and 5 (and 7) before deciding." (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-04-practice-2-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Look again.</strong> Test each: is it divisible by 2, 3, 5, or 7? Even one "yes" means composite.
 <div class="hint-callout">23 — try 2 (no, odd), 3 (digits sum 5, no), 5 (no), 7 (no). Prime. 35 — ends in 5, divisible by 5 → composite. 39 — digits sum 12, divisible by 3 → composite.</div>
-<div class="video-wrap" data-video-slot="4-03-04-practice-2-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 2</div><div class="video-wrap-title">Don't assume odd means prime</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-04_Practice-2_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach divisibility shortcuts (2, 3, 5, 7). Walk all three numbers slowly. (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-04-practice-2-retry --></div></div></div></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Riley's Mistake — She Called 1 Prime</div><div class="activity-sub">Walk through Riley's reasoning and spot the gotcha.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Riley thought 1 was prime because "nothing divides it except itself." But that's not the full rule.</p></div>
+</div></div></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Riley's Mistake — She Called 1 Prime</div><div class="activity-sub">Walk through Riley's reasoning and spot the gotcha.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Riley thought 1 was prime because "nothing divides it except itself." But that's not the full rule.</p></div>
 <div class="task-box"><div class="task-label">Riley's Work</div>
 <p>Riley was asked: <strong>"Is 1 prime?"</strong> She wrote:</p>
 <div style="background:#FFF8E6;border:2px solid #F5C518;border-radius:12px;padding:14px 16px;font-family:'Lora',Georgia,serif;font-size:17px;line-height:1.8;color:#5A4A3A;margin:10px 0;">
-"Nothing divides 1 except itself.<br>
-And primes have factors only 1 and themselves.<br>
-So 1 must be prime.<br>
+"Nothing divides 1 except itself.<br/>
+And primes have factors only 1 and themselves.<br/>
+So 1 must be prime.<br/>
 Answer: <strong>Yes, 1 is prime.</strong>"
 </div>
 <p><strong>Your task:</strong> Tap every statement below that is true about Riley's reasoning.</p>
@@ -591,27 +639,23 @@ Answer: <strong>Yes, 1 is prime.</strong>"
 </div>
 <button class="purple-btn" onclick="checkErrorAnalysis()">✓ Check My Picks</button>
 <div class="journal-label">✏️ Help Riley. Write the EXACT prime rule in your own words, using a sentence with the word "exactly". <span class="saved-dot" id="dot-ea"></span></div>
-<textarea class="journal-box" id="journal-ea" data-label="Practice 3 — Error Analysis: Why 1 is neither prime nor composite" placeholder="" oninput="autoSave(this,'dot-ea')"></textarea>
-<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> The rule is "EXACTLY 2 factors" — not "1 and itself only." 1 has only ONE factor (1 itself). So it doesn't satisfy the exactly-2 rule. And it doesn't have MORE than 2, either. So 1 is in its own category — neither prime nor composite.<div class="video-wrap" data-video-slot="4-03-04-practice-3-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 3</div><div class="video-wrap-title">Exactly 2 — the magic count</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-04_Practice-3_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "Mathematicians chose this rule on purpose. If 1 were prime, the famous 'every number breaks into primes uniquely' rule would break. So we exclude 1 from both categories. It's the special case that makes everything else work cleanly." (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-04-practice-3-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">The prime rule says EXACTLY 2 factors. 1 has only ONE factor (itself). One isn't "exactly 2," so 1 isn't prime. And 1 doesn't have MORE than 2 factors either, so it's not composite. It's its own special case.</div><div class="video-wrap" data-video-slot="4-03-04-practice-3-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 3</div><div class="video-wrap-title">"Exactly 2" — emphasis on the count</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-04_Practice-3_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. Count the factors of 1 (just one). Count the factors of 2 (two: 1 and 2 — first prime). 1 doesn't have exactly 2, so not prime. (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-04-practice-3-retry --></div></div></div></div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
+<textarea class="journal-box" data-label="Practice 3 — Error Analysis: Why 1 is neither prime nor composite" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
+<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> The rule is "EXACTLY 2 factors" — not "1 and itself only." 1 has only ONE factor (1 itself). So it doesn't satisfy the exactly-2 rule. And it doesn't have MORE than 2, either. So 1 is in its own category — neither prime nor composite.</div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">The prime rule says EXACTLY 2 factors. 1 has only ONE factor (itself). One isn't "exactly 2," so 1 isn't prime. And 1 doesn't have MORE than 2 factors either, so it's not composite. It's its own special case.</div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">You counted primes, tested numbers, caught the "1 is prime" trap. Now show what you know.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-assignment">
-  <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Test, classify, defend.</div></div></div><div class="activity-body"><p>Each problem asks you to apply the prime/composite rule. Show your divisibility tests where it's asked.</p>
+<div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Test, classify, defend.</div></div></div><div class="activity-body"><p>Each problem asks you to apply the prime/composite rule. Show your divisibility tests where it's asked.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Have I tested 2, 3, 5, and 7? If a number under 100 isn't divisible by any of those, it's prime.</p></div>
-<div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Prime or composite?</strong> For each, decide. Show your test divisor.<br>(a) 41<br>(b) 49<br>(c) 57<br>(d) 73</p><div class="journal-label">✏️ My answers + reasoning <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" id="journal-a1" data-label="Show What You Know — Problem 1: Classify 41, 49, 57, 73" placeholder="" oninput="autoSave(this,'dot-a1')"></textarea></div>
-
-<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> Why are prime numbers sometimes called the "atoms" of multiplication? Pick a composite number like 30 and show how it can be broken into PRIME pieces. (Hint: 30 = 2 × 3 × 5 — all three of those are primes.)</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" id="journal-a6" data-label="Show What You Know — Problem 6: Primes as multiplication atoms" placeholder="" oninput="autoSave(this,'dot-a6')"></textarea></div>
-
-
-<div class="activity bl-slate" style="margin-top:18px;border-left-color:#55C8E8;"><div class="activity-head"><div class="activity-num" style="background:#55C8E8;color:#0E1C42;">🗺️</div><div><div class="activity-title">Connection Forward: What Comes Next</div><div class="activity-sub">Preview Lesson 4.03.05 — Common Factors</div></div></div><div class="activity-body"><p>Earlier this week you found common MULTIPLES (numbers in two skip-count lists). Tomorrow you'll find common FACTORS — numbers that divide BOTH of two given numbers evenly.</p><p>Factors of 12: 1, 2, 3, 4, 6, 12.<br>Factors of 18: 1, 2, 3, 6, 9, 18.<br>Common to BOTH: 1, 2, 3, 6. The greatest of these — the <strong>Greatest Common Factor (GCF)</strong> — is 6.</p><p>Tomorrow's big question: <em>Why does the GCF matter when simplifying fractions or splitting things into equal groups?</em></p></div></div></div></div>
-<div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly>Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
-  <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
+<div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Prime or composite?</strong> For each, decide. Show your test divisor.<br/>(a) 41<br/>(b) 49<br/>(c) 57<br/>(d) 73</p><div class="journal-label">✏️ My answers + reasoning <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: Classify 41, 49, 57, 73" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
+<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> Why are prime numbers sometimes called the "atoms" of multiplication? Pick a composite number like 30 and show how it can be broken into PRIME pieces. (Hint: 30 = 2 × 3 × 5 — all three of those are primes.)</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: Primes as multiplication atoms" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
+<div class="activity bl-slate" style="margin-top:18px;border-left-color:#55C8E8;"><div class="activity-head"><div class="activity-num" style="background:#55C8E8;color:#0E1C42;">🗺️</div><div><div class="activity-title">Connection Forward: What Comes Next</div><div class="activity-sub">Preview Lesson 4.03.05 — Common Factors</div></div></div><div class="activity-body"><p>Earlier this week you found common MULTIPLES (numbers in two skip-count lists). Tomorrow you'll find common FACTORS — numbers that divide BOTH of two given numbers evenly.</p><p>Factors of 12: 1, 2, 3, 4, 6, 12.<br/>Factors of 18: 1, 2, 3, 6, 9, 18.<br/>Common to BOTH: 1, 2, 3, 6. The greatest of these — the <strong>Greatest Common Factor (GCF)</strong> — is 6.</p><p>Tomorrow's big question: <em>Why does the GCF matter when simplifying fractions or splitting things into equal groups?</em></p></div></div></div></div>
+<div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
+<div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
 </div>
 <div class="footer">
-  <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
-  <div class="footer-sub">Math · Grade 4 · 4.03.04</div>
-  <div class="footer-copy">© 2025 Optima Academy Online</div>
+<div class="footer-main">🏫 <span>Optima Academy Online</span></div>
+<div class="footer-sub">Math · Grade 4 · 4.03.04</div>
+<div class="footer-copy">© 2025 Optima Academy Online</div>
 </div>
 </div>
 <canvas id="confettiCanvas"></canvas>
@@ -1048,6 +1092,75 @@ async function loadVideoManifest(){try{let res=await fetch('video-manifest.md',{
 function parseManifest(txt){let map={};let lines=txt.split(/\r?\n/);let current=null,buf=[];function commit(){if(current&&buf.join('\n').trim())map[current]=buf.join('\n').trim();buf=[]}for(let line of lines){let m=line.match(/^([A-Za-z0-9-]+):\s*$/);if(m){commit();current=m[1]}else if(current){buf.push(line)}}commit();return map}
 function showPageFeedback(msg){var panel=document.querySelector('.tab-panel.active')||document.body;var box=panel.querySelector(':scope > .page-feedback');if(!box){box=document.createElement('div');box.className='page-feedback';panel.insertBefore(box,panel.firstChild);}box.className='page-feedback show warn';box.innerHTML=msg;}
 window.addEventListener('DOMContentLoaded',()=>{restoreJournals();updateProgress();loadVideoManifest()});
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "×11 and ×12";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
 </script>
 </body>
 </html>

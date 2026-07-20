@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Optima Academy Online — Grade 4 Math Lesson 4.01.06</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
@@ -306,25 +307,51 @@
 .bubble-text{font-size:14.5px;color:#0E1C42;line-height:1.5;font-weight:600;font-family:'Lora',Georgia,serif;font-style:italic}
 @media(max-width:620px){.bubble{flex:1 1 100%;max-width:100%}}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
 <div class="progress-wrap"><span class="progress-label">📐 Lesson Progress</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><span class="progress-pct" id="progressPct">0%</span></div>
 <div class="header">
-  <div class="header-brand">
-    <div class="header-logo">
-      <img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" />
-    </div>
-    <div>
-      <div class="header-org">Optima Academy Online</div>
-      <div class="header-sub">An Education Experience Company</div>
-    </div>
-  </div>
-  <div class="header-title"><em>Rounding 6-Digit Numbers</em></div>
-  <div class="header-badge">
-    <span class="header-badge-icon">🦉</span>
-    <span class="header-badge-text">Lesson 4.01.06</span>
-  </div>
+<div class="header-brand">
+<div class="header-logo">
+<img alt="Optima Academy" src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png"/>
+</div>
+<div>
+<div class="header-org">Optima Academy Online</div>
+<div class="header-sub">An Education Experience Company</div>
+</div>
+</div>
+<div class="header-title"><em>Rounding 6-Digit Numbers</em></div>
+<div class="header-badge">
+<span class="header-badge-icon">🦉</span>
+<span class="header-badge-text">Lesson 4.01.06</span>
+</div>
 </div>
 <div class="quote-strip"><div class="quote-strip-text">"Same rule. Bigger number. One more place to round to."</div><div class="quote-strip-attr">Rounding Big Idea</div></div>
 <div class="info-strip"><div class="info-cell"><div class="info-icon" style="background:#F0E8FF;">🧭</div><div><div class="info-label">Unit</div><div class="info-value">Unit 1</div><div class="info-detail">Numbers to 1,000,000</div></div></div><div class="info-cell"><div class="info-icon" style="background:#E3F8ED;">📅</div><div><div class="info-label">Lesson</div><div class="info-value">4.01.06</div><div class="info-detail">U4 Extend</div></div></div><div class="info-cell"><div class="info-icon" style="background:#EAF0FF;">📐</div><div><div class="info-label">Standard</div><div class="info-value">MA.4.NSO.1.3</div><div class="info-detail">Round multi-digit whole numbers</div></div></div><div class="info-cell"><div class="info-icon" style="background:#FFF8E6;">🔢</div><div><div class="info-label">Focus</div><div class="info-value">Nearest 100,000</div><div class="info-detail">MTR.5.1 · MTR.6.1</div></div></div></div>
@@ -332,22 +359,45 @@
 <div class="intro-2col"><div class="intro-card theme-question"><div class="intro-card-head"><div class="intro-card-head-icon">❓</div><div><div class="intro-card-head-label">Essential Question</div><div class="intro-card-head-title">Does the rounding rule change for bigger numbers?</div></div></div><div class="intro-card-body"><p>Last lesson, you rounded 5-digit numbers like 23,847. Today the numbers are bigger — <strong>6-digit season totals</strong> like 487,290.</p><p>Good news: the rule doesn't change. Find the decider digit. 5 or higher rounds up. 4 or lower rounds down. You just have a new place to aim for — <strong>nearest 100,000</strong>.</p></div></div><div class="intro-card theme-objectives"><div class="intro-card-head"><div class="intro-card-head-icon">🎯</div><div><div class="intro-card-head-label">Today's Objectives</div><div class="intro-card-head-title">You will…</div></div></div><div class="intro-card-body"><div class="obj-line"><span class="obj-icon">🎯</span><span><strong>Round</strong> a 6-digit number to the nearest 10, 100, 1,000, 10,000, or <strong>100,000</strong>.</span></div><div class="obj-line"><span class="obj-icon">📏</span><span><strong>Apply</strong> the decider-digit rule to a number with one more place.</span></div><div class="obj-line"><span class="obj-icon">💬</span><span><strong>Explain</strong> what happens when rounding up causes a ripple across more than one place.</span></div></div></div></div>
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
-
 <div class="tab-panel active" id="tab-warmup">
-  <div class="video-wrap" data-video-slot="4-01-06-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.01.06</div><div class="video-wrap-title">Same rule. Bigger number.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-06_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Open with last lesson's example on the board: 23,847 → 24,000 (nearest 1,000). Say: "Last lesson, you rounded numbers like this. Today's numbers are bigger — but the rule is exactly the same." Write a new number underneath: <strong>487,290</strong>. "This is a SEASON total — fans across all eight home games. Six digits. The newspaper wants to round it." Pause. "Which digit decides if we round 487,290 to the nearest 1,000?" Underline the hundreds digit (2). "Same rule. The decider lives one place to the right of where you're rounding. 2 is less than 5 — round DOWN. 487,290 → 487,000." Now extend: "What if we want to round to a NEW place — the nearest hundred-thousand? The decider moves one step left, to the ten-thousands place." Underline the 8. "8 is 5 or higher — round UP. 487,290 → 500,000. That's a big jump." Connect to the lesson: "Today, you'll round 6-digit numbers the same way you rounded 5-digit ones. And you'll learn what happens when rounding up makes more than one digit change." Tone: confident, building. Students don't need a new rule — they need to see the old rule still works. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-06-welcome --></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
-    <p>The crew is back with the same strategies — just applied to bigger numbers today.</p>
-    <div class="bubble-row">
-      <div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — the number-line drawer</div><div class="bubble-text">"Even at 6 digits, I still draw the line. The neighbors get bigger, but the picture is the same."</div></div></div>
-      <div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — the digit-rule shortcutter</div><div class="bubble-text">"Same rule. Same decider. Just sitting in a different spot on the number."</div></div></div>
-    </div>
-    <div class="bubble-row">
-      <div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — the builder</div><div class="bubble-text">"I circle the rounding place and underline the decider. Always one place apart. Works for any size number."</div></div></div>
-      <div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — the checker</div><div class="bubble-text">"I watch for the carry. When the rounding place is 9 and we round UP, the carry can ripple two or three places."</div></div></div>
-    </div>
-    <div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>The crew's strategies haven't changed. But Cora's job matters more today — bigger numbers mean bigger carries. Watch for them.</p></div>
-  </div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Round 5-Digit Numbers (Review)</div><div class="activity-sub">A quick check-in on last lesson's rule before we go bigger.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>Pick the correct rounded number for each. Find the decider digit before you tap.</p>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">×11 and ×12</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">11 × 2</span><input autocomplete="off" class="fluency-input" data-answer="22" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">11 × 3</span><input autocomplete="off" class="fluency-input" data-answer="33" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">11 × 4</span><input autocomplete="off" class="fluency-input" data-answer="44" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">11 × 5</span><input autocomplete="off" class="fluency-input" data-answer="55" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">11 × 6</span><input autocomplete="off" class="fluency-input" data-answer="66" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">12 × 2</span><input autocomplete="off" class="fluency-input" data-answer="24" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">12 × 3</span><input autocomplete="off" class="fluency-input" data-answer="36" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">12 × 7</span><input autocomplete="off" class="fluency-input" data-answer="84" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">12 × 8</span><input autocomplete="off" class="fluency-input" data-answer="96" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">12 × 9</span><input autocomplete="off" class="fluency-input" data-answer="108" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (×11 and ×12)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
+<p>The crew is back with the same strategies — just applied to bigger numbers today.</p>
+<div class="bubble-row">
+<div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — the number-line drawer</div><div class="bubble-text">"Even at 6 digits, I still draw the line. The neighbors get bigger, but the picture is the same."</div></div></div>
+<div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — the digit-rule shortcutter</div><div class="bubble-text">"Same rule. Same decider. Just sitting in a different spot on the number."</div></div></div>
+</div>
+<div class="bubble-row">
+<div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — the builder</div><div class="bubble-text">"I circle the rounding place and underline the decider. Always one place apart. Works for any size number."</div></div></div>
+<div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — the checker</div><div class="bubble-text">"I watch for the carry. When the rounding place is 9 and we round UP, the carry can ripple two or three places."</div></div></div>
+</div>
+<div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>The crew's strategies haven't changed. But Cora's job matters more today — bigger numbers mean bigger carries. Watch for them.</p></div>
+</div></div>
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Round 5-Digit Numbers (Review)</div><div class="activity-sub">A quick check-in on last lesson's rule before we go bigger.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>Pick the correct rounded number for each. Find the decider digit before you tap.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:grid;gap:14px;">
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
@@ -378,16 +428,16 @@
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Answers:</strong> 34,620 → <strong>35,000</strong> (decider is hundreds: 6 → round up). 58,375 → <strong>58,400</strong> (decider is tens: 7 → round up). 72,490 → <strong>70,000</strong> (decider is thousands: 2 → round down). Same rule you used last lesson. Today we'll use it on bigger numbers.</div>
-<div class="journal-label">✏️ For each problem, name the decider digit and tell whether it rounded up or down. <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: Name the decider digit for each round" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-01-06-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.01.06</div><div class="video-wrap-title">Left to right finds the answer fastest</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-06_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Confirm each answer by naming the decider digit. <strong>34,620 → nearest 1,000:</strong> Decider is hundreds (6). 6 is 5 or higher — round UP. 34,620 → 35,000. <strong>58,375 → nearest 100:</strong> Decider is tens (7). 7 is 5 or higher — round UP. 58,375 → 58,400. <strong>72,490 → nearest 10,000:</strong> Decider is thousands (2). 2 is 4 or lower — round DOWN. 72,490 → 70,000. Connect to the lesson: "Same rule every time. Find the decider digit one place to the right of where you're rounding. 5 or higher rounds UP; 4 or lower rounds DOWN. Today, the numbers will have one more place — and we'll add one new rounding goal: the nearest hundred-thousand." (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-06-readiness-feedback --></div></div></div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
+<div class="journal-label">✏️ For each problem, name the decider digit and tell whether it rounded up or down. <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: Name the decider digit for each round" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">🏟️</span><p>The team's season total just came in: <strong>487,290 fans</strong> across all eight home games. The yearbook editor needs a single round number to print under the season photo. What round-number choice gives readers the truest sense of the crowd?</p></div>
 <div class="number-talk-visual">
 <div class="number-talk-prompt">Look at 487,290 carefully before you predict. What do you notice? What do you wonder?</div>
 <div class="visual-equation" style="font-size:24px;letter-spacing:1px;">487,290</div>
 <div class="notice-wonder-grid">
-<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" id="journal-notice" data-label="Warm-Up — Notice: What I notice about 487,290" placeholder="" oninput="autoSave(this,'dot-notice')" style="min-height:60px;"></textarea></div>
-<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" id="journal-wonder" data-label="Warm-Up — Wonder: What I wonder about rounding 487,290" placeholder="" oninput="autoSave(this,'dot-wonder')" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" data-label="Warm-Up — Notice: What I notice about 487,290" id="journal-notice" oninput="autoSave(this,'dot-notice')" placeholder="" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" data-label="Warm-Up — Wonder: What I wonder about rounding 487,290" id="journal-wonder" oninput="autoSave(this,'dot-wonder')" placeholder="" style="min-height:60px;"></textarea></div>
 </div>
 </div>
 <p><strong>Predict first:</strong> If the editor rounds 487,290 to the nearest <strong>hundred-thousand</strong> (the new place today), which round number will the yearbook print?</p>
@@ -399,50 +449,49 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>Before you predict, ask yourself:</strong> What are the two nearest "round-hundred-thousands" to 487,290? Which place-value digit is the decider this time? Last lesson it was the hundreds digit for rounding to thousands — what's it this time?</p></div>
 <div class="journal-label">✏️ My prediction: What round-hundred-thousand should the editor pick — and which digit is the decider? <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think Prompt: Round 487,290 to nearest 100,000" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think Prompt: Round 487,290 to nearest 100,000" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">Hundred-thousands is the new round-place. Let's see where 487,290 lands on the line — and then apply the same rule to four more zoom levels.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
-  <div class="vocab-section" aria-label="Daily vocabulary flash cards">
-  <div class="vocab-section-head">
-    <div class="vocab-section-icon">📚</div>
-    <div>
-      <div class="vocab-section-label">Daily Vocabulary</div>
-      <div class="vocab-section-title">Tap to Build Today’s Math Language</div>
-    </div>
-  </div>
-  <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
-  <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for decider digit. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">👉</div><div class="fc-word">decider digit</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">decider digit</div><div class="fc-def">the digit just to the right of the place you're rounding to. It decides up (5 or higher) or down (4 or lower).</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for hundred thousands. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">💯</div><div class="fc-word">hundred thousands</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">hundred thousands</div><div class="fc-def">the place worth 100,000. Today's new rounding goal — the nearest hundred-thousand.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for halfway. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">⚖️</div><div class="fc-word">halfway</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">halfway</div><div class="fc-def">the point exactly between two round neighbors. When a number lands on or past halfway, round UP.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for carry. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🔄</div><div class="fc-word">carry</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">carry</div><div class="fc-def">when rounding up makes a digit hit 10, the 1 ripples to the next place left. 9 → 0 + carry the 1.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-01-06-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-01-06 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-01-06-concept --></div></div></div></div>
+<div aria-label="Daily vocabulary flash cards" class="vocab-section">
+<div class="vocab-section-head">
+<div class="vocab-section-icon">📚</div>
+<div>
+<div class="vocab-section-label">Daily Vocabulary</div>
+<div class="vocab-section-title">Tap to Build Today’s Math Language</div>
 </div>
-<div class="video-wrap" data-video-slot="4-01-06-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.01.06</div><div class="video-wrap-title">One more rounding place: nearest 100,000</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-06_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write <strong>487,290</strong> on the board with each digit labeled by place. Start with what students already know. <strong>Nearest 1,000 (review):</strong> Decider = hundreds = 2. 2 is 4 or lower. Round down. 487,290 → 487,000. Now extend. <strong>Nearest 10,000:</strong> Decider = thousands = 7. 7 is 5 or higher. Round UP. 487,290 → 490,000. Then introduce the new one. <strong>Nearest 100,000:</strong> The decider moves one MORE step to the left. "If I'm rounding to hundred-thousands, the decider is the ten-thousands digit. In 487,290 that's 8." 8 is 5 or higher. Round UP. 487,290 → 500,000. Draw a number line: 400,000 on the left, 500,000 on the right, halfway at 450,000. Place 487,290 closer to the 500,000 end. "Yes, past halfway. Closer to 500,000." Now warn about carrying. Write a different number: <strong>599,500</strong>. Round to nearest 1,000. Decider = hundreds = 5. Round UP. "9 in thousands becomes 10 — but a place can only hold one digit. So 9 rolls to 0 and the hundred-thousands ticks from 5 to 6. 599,500 → 600,000. THREE digits changed at once. That's a carry rippling across places." Pace it. End: "Same rule. One more place to round to. Watch for the carry." (~2–3 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-06-concept --></div></div></div></div>
-  <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Use the Rounding Lab below to round 487,290 to all five places — 10, 100, 1,000, 10,000, and the new 100,000. Watch the number line zoom out further each time. Notice how the answer shifts.</p></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🎯</div><div><div class="activity-title">Rounding Lab: 487,290</div><div class="activity-sub">Five round-places. Same rule. Watch the number line zoom way out for the last one.</div></div></div><div class="activity-body"><p>The exact season total is <strong>487,290</strong>. Tap a "round to" button below. The number line shows the two round-neighbors, the halfway mark, and where 487,290 lands. Then tap <strong>Reveal Answer</strong>.</p><div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:14px;margin:12px 0;">
+</div>
+<p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
+<div class="vocab-grid">
+<div aria-label="Vocabulary card for decider digit. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">👉</div><div class="fc-word">decider digit</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">decider digit</div><div class="fc-def">the digit just to the right of the place you're rounding to. It decides up (5 or higher) or down (4 or lower).</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for hundred thousands. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">💯</div><div class="fc-word">hundred thousands</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">hundred thousands</div><div class="fc-def">the place worth 100,000. Today's new rounding goal — the nearest hundred-thousand.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for halfway. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">⚖️</div><div class="fc-word">halfway</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">halfway</div><div class="fc-def">the point exactly between two round neighbors. When a number lands on or past halfway, round UP.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for carry. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🔄</div><div class="fc-word">carry</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">carry</div><div class="fc-def">when rounding up makes a digit hit 10, the 1 ripples to the next place left. 9 → 0 + carry the 1.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Use the Rounding Lab below to round 487,290 to all five places — 10, 100, 1,000, 10,000, and the new 100,000. Watch the number line zoom out further each time. Notice how the answer shifts.</p></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🎯</div><div><div class="activity-title">Rounding Lab: 487,290</div><div class="activity-sub">Five round-places. Same rule. Watch the number line zoom way out for the last one.</div></div></div><div class="activity-body"><p>The exact season total is <strong>487,290</strong>. Tap a "round to" button below. The number line shows the two round-neighbors, the halfway mark, and where 487,290 lands. Then tap <strong>Reveal Answer</strong>.</p><div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:14px;margin:12px 0;">
 <!-- Rounding Lab -->
 <div style="text-align:center;font-size:13px;color:#3A4A6B;font-weight:700;margin-bottom:10px;">Round 487,290 to the nearest:</div>
 <div class="value-card-row" id="roundPlaceBank" style="justify-content:center;margin-bottom:14px;flex-wrap:wrap;">
@@ -469,7 +518,7 @@
 <div style="text-align:center;margin-top:12px;"><button class="purple-btn" onclick="revealRoundingAnswer()">Reveal Answer</button> <button class="orange-btn" onclick="resetRounding()" style="margin-left:8px;">↩ Reset</button></div>
 </div>
 <div class="reveal-box" id="learnReveal"><strong>You watched the number line zoom.</strong> Same 487,290, five different rounded answers. Nearest 10: <strong>487,290</strong> (already at a multiple of 10). Nearest 100: <strong>487,300</strong>. Nearest 1,000: <strong>487,000</strong>. Nearest 10,000: <strong>490,000</strong>. Nearest 100,000: <strong>500,000</strong>. The further you zoom out, the bigger the round-step.</div>
-  <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 What You Just Saw</div><p><strong>The rule didn't change — only the size of the number did.</strong></p><p>For ANY size number, the decider digit lives one place to the right of the place you're rounding to. 5 or higher rounds UP. 4 or lower rounds DOWN.</p><p>Rounding 487,290 to the nearest 100,000? The decider is the ten-thousands digit (8). Up it goes — to 500,000.</p><p>Watch for the carry: when the rounding-place digit is 9 and we round UP, it rolls to 0 and the next place ticks up. Sometimes that carry ripples across two or three places.</p></div>
+<div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 What You Just Saw</div><p><strong>The rule didn't change — only the size of the number did.</strong></p><p>For ANY size number, the decider digit lives one place to the right of the place you're rounding to. 5 or higher rounds UP. 4 or lower rounds DOWN.</p><p>Rounding 487,290 to the nearest 100,000? The decider is the ten-thousands digit (8). Up it goes — to 500,000.</p><p>Watch for the carry: when the rounding-place digit is 9 and we round UP, it rolls to 0 and the next place ticks up. Sometimes that carry ripples across two or three places.</p></div>
 <div style="margin-top:16px;">
 <div class="key-concept"><div class="key-concept-label">🔗 The Rule in One Table</div>
 <p>Same number — <strong>487,290</strong>. Five different rounding goals. Same rule every time.</p>
@@ -508,9 +557,9 @@
 </div>
 </div>
 </div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👆</div><div><div class="activity-title">Spot the Decider Digit — 6-Digit Edition</div><div class="activity-sub">Tap the digit that decides "up or down" for each rounding goal.</div></div></div><div class="activity-body"><p>The number is <strong>362,475</strong>. For each rounding goal below, tap the digit that decides whether to round up or down. (It's always one place to the RIGHT of where you're rounding.)</p>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👆</div><div><div class="activity-title">Spot the Decider Digit — 6-Digit Edition</div><div class="activity-sub">Tap the digit that decides "up or down" for each rounding goal.</div></div></div><div class="activity-body"><p>The number is <strong>362,475</strong>. For each rounding goal below, tap the digit that decides whether to round up or down. (It's always one place to the RIGHT of where you're rounding.)</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:14px;margin:12px 0;">
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:32px;font-weight:900;color:#0E1C42;letter-spacing:5px;margin-bottom:14px;">3&nbsp;6&nbsp;2,&nbsp;4&nbsp;7&nbsp;5</div>
+<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:32px;font-weight:900;color:#0E1C42;letter-spacing:5px;margin-bottom:14px;">3 6 2, 4 7 5</div>
 <div style="display:grid;gap:14px;">
 <div style="text-align:center;">
 <div style="font-size:14px;color:#3A4A6B;font-weight:700;margin-bottom:6px;">Rounding to the nearest <strong>1,000</strong> — tap the decider:</div>
@@ -535,22 +584,22 @@
 </div>
 </div>
 </div>
-<div id="deciderFb" class="inline-feedback" style="margin-top:14px;"></div>
+<div class="inline-feedback" id="deciderFb" style="margin-top:14px;"></div>
 </div>
-<div class="journal-label">✏️ For the new "nearest 100,000" goal — which place is the decider in, and why? <span class="saved-dot" id="dot-digit"></span></div><textarea class="journal-box" id="journal-digit" data-label="Learn — Decider Digit: Where it lives for nearest 100,000" placeholder="" oninput="autoSave(this,'dot-digit')"></textarea></div></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: The Carry Case (599,500)</div><div class="activity-sub">When rounding UP makes more than one digit change.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>A multi-team festival reported exactly <strong>599,500</strong> total attendees. Round it to the nearest <strong>1,000</strong>. Watch what happens — the answer is going to surprise you a little.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew work through it:</p>
+<div class="journal-label">✏️ For the new "nearest 100,000" goal — which place is the decider in, and why? <span class="saved-dot" id="dot-digit"></span></div><textarea class="journal-box" data-label="Learn — Decider Digit: Where it lives for nearest 100,000" id="journal-digit" oninput="autoSave(this,'dot-digit')" placeholder=""></textarea></div></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: The Carry Case (599,500)</div><div class="activity-sub">When rounding UP makes more than one digit change.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>A multi-team festival reported exactly <strong>599,500</strong> total attendees. Round it to the nearest <strong>1,000</strong>. Watch what happens — the answer is going to surprise you a little.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew work through it:</p>
 <div class="bubble-row">
-  <div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — apply the rule</div><div class="bubble-text">"Rounding to thousands. Decider is the hundreds digit — that's 5. Exactly 5. Halfway rounds UP. So thousands 9 should become… 10?"</div></div></div>
-  <div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — handle the overflow</div><div class="bubble-text">"A place can only hold ONE digit. So the 10 thousands becomes 1 ten-thousand and 0 thousands. But ten-thousands was already 9 — so THAT becomes 10 too, which means 1 hundred-thousand. The 5 in hundred-thousands ticks up to 6."</div></div></div>
+<div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — apply the rule</div><div class="bubble-text">"Rounding to thousands. Decider is the hundreds digit — that's 5. Exactly 5. Halfway rounds UP. So thousands 9 should become… 10?"</div></div></div>
+<div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — handle the overflow</div><div class="bubble-text">"A place can only hold ONE digit. So the 10 thousands becomes 1 ten-thousand and 0 thousands. But ten-thousands was already 9 — so THAT becomes 10 too, which means 1 hundred-thousand. The 5 in hundred-thousands ticks up to 6."</div></div></div>
 </div>
 <p style="font-family:'Lora',Georgia,serif;background:#FAFBFF;border:2px solid #E2E8F4;border-radius:12px;padding:10px;text-align:center;font-size:18px;font-weight:800;">599,500 → 600,000</p>
 <div class="bubble-row">
-  <div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — verify on the line</div><div class="bubble-text">"Two neighbors are 599,000 and 600,000. Halfway is 599,500. The number IS at halfway, so we round up. The line agrees with the rule — 600,000 wins."</div></div></div>
-  <div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — count what changed</div><div class="bubble-text">"Look at how many digits changed: 599,500 → 600,000. The thousands, ten-thousands, AND hundred-thousands all moved. The carry rippled all the way through. Same rule — just a bigger chain reaction."</div></div></div>
+<div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — verify on the line</div><div class="bubble-text">"Two neighbors are 599,000 and 600,000. Halfway is 599,500. The number IS at halfway, so we round up. The line agrees with the rule — 600,000 wins."</div></div></div>
+<div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — count what changed</div><div class="bubble-text">"Look at how many digits changed: 599,500 → 600,000. The thousands, ten-thousands, AND hundred-thousands all moved. The carry rippled all the way through. Same rule — just a bigger chain reaction."</div></div></div>
 </div>
 <div class="callout callout-tip"><span class="callout-icon">⚠️</span><p><strong>About the carry chain:</strong> Most rounds change only ONE place to the left of the rounding place (or none at all if rounding down). But when the digit at the rounding place is 9 and we round UP, it spills over. That spill can keep going if the next place is ALSO 9. The rule never changes — it's just place value doing its job.</p></div></div></div>
-  <div class="video-wrap" data-video-slot="4-01-06-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.01.06</div><div class="video-wrap-title">When the carry ripples all the way across</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-06_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write <strong>599,500</strong> on the board with each digit labeled by place: HT-TT-Th-H-T-O = 5-9-9-5-0-0. Rounding to nearest 1,000. Underline the hundreds digit (5). "Decider is 5. Halfway rounds UP. So thousands 9 becomes 10." Pause. "But 10 can't sit in one place. So thousands becomes 0 and 1 carries to ten-thousands. But ten-thousands was already 9 — so now it's 10. Carry again. 0 in ten-thousands, 1 to hundred-thousands. Hundred-thousands was 5, now 6." Write each step: 599,500 → 599,5+500 = 600,000. Draw a number line: 599,000 on left, 600,000 on right, halfway 599,500. Place the dot right at halfway. "Yes — at halfway exactly. Round up. 600,000." Tone: methodical. The carry is the lesson — show it ripple, one place at a time. Then close: "Most rounds don't carry. But when you see a 9 in the rounding place and need to round UP — slow down. Watch the ripple." (~2–3 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-06-example --></div></div></div></div>
-  <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">⚖️</div><div><div class="activity-title">Round Up vs Round Down — Same Decider Place</div><div class="activity-sub">Two numbers, same rounding goal, two different directions.</div></div></div><div class="activity-body">
+
+<div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">⚖️</div><div><div class="activity-title">Round Up vs Round Down — Same Decider Place</div><div class="activity-sub">Two numbers, same rounding goal, two different directions.</div></div></div><div class="activity-body">
 <p>Both numbers below are being rounded to the nearest <strong>10,000</strong>. The decider digit is the <strong>thousands</strong> digit in each. Watch what's different.</p>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0;">
 <div style="background:#EAF8FD;border:2px solid #D6F2FB;border-radius:14px;padding:14px;">
@@ -564,17 +613,16 @@
 </div>
 <div class="callout callout-info"><span class="callout-icon">🧐</span><p>Same decider place. Same rounding goal. Just <strong>3 thousand more</strong> separating the two numbers — and that's enough to flip the answer by 10,000. Rounding magnifies small differences at the decider place.</p></div>
 <div class="journal-label">✏️ What's the SMALLEST change you could make to 384,200 that would change its rounded answer (to nearest 10,000) from 380,000 to 390,000? Use place value to defend your answer. <span class="saved-dot" id="dot-compare"></span></div>
-<textarea class="journal-box" id="journal-compare" data-label="Learn — Strategy Comparison: Smallest change to flip the rounded answer" placeholder="" oninput="autoSave(this,'dot-compare')"></textarea>
+<textarea class="journal-box" data-label="Learn — Strategy Comparison: Smallest change to flip the rounded answer" id="journal-compare" oninput="autoSave(this,'dot-compare')" placeholder=""></textarea>
 </div></div>
-  <div class="socratic-box"><div class="socratic-label">🔮 Think Like a Mathematician</div><p class="socratic-q">The rounding rule worked the same way for 2-digit numbers (back in 3rd grade) as it does for 6-digit numbers today. Why does the same rule work for any size number? What is it about place value that lets the rule keep working — no matter how many digits you add?</p><div class="journal-label">✏️ My reasoning <span class="saved-dot" id="dot-soc1"></span></div><textarea class="journal-box" id="journal-soc1" data-label="Learn — Socratic: Why does the same rule work for any size number?" placeholder="" oninput="autoSave(this,'dot-soc1')"></textarea></div>
-  <div class="tab-next-wrap"><p class="tab-transition-voice">You stretched the rule to a sixth digit and watched a carry ripple all the way across. Time to try a few on your own.</p><button class="tab-next-btn" onclick="switchTab('practice')">Continue to 🧮 Practice →</button></div>
+<div class="socratic-box"><div class="socratic-label">🔮 Think Like a Mathematician</div><p class="socratic-q">The rounding rule worked the same way for 2-digit numbers (back in 3rd grade) as it does for 6-digit numbers today. Why does the same rule work for any size number? What is it about place value that lets the rule keep working — no matter how many digits you add?</p><div class="journal-label">✏️ My reasoning <span class="saved-dot" id="dot-soc1"></span></div><textarea class="journal-box" data-label="Learn — Socratic: Why does the same rule work for any size number?" id="journal-soc1" oninput="autoSave(this,'dot-soc1')" placeholder=""></textarea></div>
+<div class="tab-next-wrap"><p class="tab-transition-voice">You stretched the rule to a sixth digit and watched a carry ripple all the way across. Time to try a few on your own.</p><button class="tab-next-btn" onclick="switchTab('practice')">Continue to 🧮 Practice →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-practice">
-  <div class="callout callout-info"><span class="callout-icon">🧭</span><p>You built 472,830 in Learn. The Practice numbers are all six digits — but each one changes <strong>one thing</strong>. Pay attention to what is different. That is where the new thinking lives.</p></div>
-  <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask yourself:</strong> Which place is the leftmost digit in? What does the comma tell me about how to read this?</p></div>
-  <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Go back to the Learn tab. The "Four Ways" panel for 472,830 and the Worked Example for 1,000,000 are still there. Re-read your own notes.</p></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">Round 246,178 to the Nearest 10,000</div><div class="activity-sub">Same rule. Bigger number. Decider is the thousands digit.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>Pick the correct rounded answer for <strong>246,178</strong> to the nearest <strong>10,000</strong>.</p>
+<div class="callout callout-info"><span class="callout-icon">🧭</span><p>You built 472,830 in Learn. The Practice numbers are all six digits — but each one changes <strong>one thing</strong>. Pay attention to what is different. That is where the new thinking lives.</p></div>
+<div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask yourself:</strong> Which place is the leftmost digit in? What does the comma tell me about how to read this?</p></div>
+<div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Go back to the Learn tab. The "Four Ways" panel for 472,830 and the Worked Example for 1,000,000 are still there. Re-read your own notes.</p></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">Round 246,178 to the Nearest 10,000</div><div class="activity-sub">Same rule. Bigger number. Decider is the thousands digit.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>Pick the correct rounded answer for <strong>246,178</strong> to the nearest <strong>10,000</strong>.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:32px;font-weight:900;color:#0E1C42;letter-spacing:4px;margin-bottom:14px;">246,178</div>
 <p style="text-align:center;font-size:13px;color:#3A4A6B;font-weight:700;margin-bottom:10px;">Round to the nearest 10,000:</p>
@@ -586,8 +634,8 @@
 </div>
 <p style="text-align:center;font-size:13px;color:#3A4A6B;font-weight:700;margin-top:14px;">Hint: find the decider digit (thousands place). Is it 5 or higher? Or 4 or lower?</p>
 </div>
-<div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Yes.</strong> 246,178 rounds to <strong>250,000</strong>. Decider is the thousands digit: <strong>6</strong>. Six is 5 or higher, so round UP. Ten-thousands ticks from 4 to 5; everything to its right becomes 0.<div class="video-wrap" data-video-slot="4-01-06-practice-1-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 1</div><div class="video-wrap-title">The decider rule scales with the number</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-06_Practice-1_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write 246,178 with each place labeled. Underline the thousands digit (6). "Rounding to ten-thousands. Decider lives one place to the right — that's THOUSANDS. The thousands digit is 6. Six is 5 or higher, so round UP. Ten-thousands 4 ticks to 5; everything after becomes 0. Answer: 250,000." Draw a number line: 240,000 ←→ 250,000, halfway 245,000. Place 246,178 just past halfway. "Yes — past halfway, closer to 250,000. Digit rule and number line both win." Close: "Six digits feels bigger, but the rule moves the same way." (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-06-practice-1-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Find the decider for ten-thousands.</strong><div class="hint-callout">Rounding to ten-thousands means the decider lives in the THOUSANDS place. In 246,178, the thousands digit is 6 — and 6 is 5 or higher.</div><div class="video-wrap" data-video-slot="4-01-06-practice-1-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 1</div><div class="video-wrap-title">Locate the decider for bigger numbers</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-06_Practice-1_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the decider rule for 6-digit numbers. Write 246,178 with each place labeled: HT-TT-Th-H-T-O. Say: "We're rounding to ten-thousands. The decider sits one place to the right — that's thousands. The thousands digit is 6." Pause. "6 is 5 or higher, so we round UP. Ten-thousands ticks from 4 to 5; everything to its right becomes 0. Answer: 250,000." Concept being retaught: even at 6 digits, the decider's position depends on the rounding place — always one step to the right. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-06-practice-1-retry --></div></div></div></div><button class="orange-btn" onclick="resetP1Round()">↩ Reset and Try Again</button></div></div></div>
-  <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Round 583,425 — Three Different Places</div><div class="activity-sub">Includes the new "nearest 100,000."</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> A 6-digit number, three rounds in a row — and one of them is to the new <strong>nearest 100,000</strong>.</p></div>
+<div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Yes.</strong> 246,178 rounds to <strong>250,000</strong>. Decider is the thousands digit: <strong>6</strong>. Six is 5 or higher, so round UP. Ten-thousands ticks from 4 to 5; everything to its right becomes 0.</div><div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Find the decider for ten-thousands.</strong><div class="hint-callout">Rounding to ten-thousands means the decider lives in the THOUSANDS place. In 246,178, the thousands digit is 6 — and 6 is 5 or higher.</div><button class="orange-btn" onclick="resetP1Round()">↩ Reset and Try Again</button></div></div></div>
+<div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Round 583,425 — Three Different Places</div><div class="activity-sub">Includes the new "nearest 100,000."</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> A 6-digit number, three rounds in a row — and one of them is to the new <strong>nearest 100,000</strong>.</p></div>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:32px;font-weight:900;color:#0E1C42;letter-spacing:4px;margin-bottom:18px;">583,425</div>
 <div style="display:grid;gap:14px;">
@@ -618,12 +666,12 @@
 </div>
 <div style="text-align:center;margin-top:14px;"><button class="orange-btn" onclick="resetP2Round()" style="margin:0;">↩ Reset</button></div>
 </div>
-<div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ All three!</strong> 583,425 → <strong>583,000</strong> (nearest 1,000, hundreds 4 rounds down), <strong>580,000</strong> (nearest 10,000, thousands 3 rounds down), <strong>600,000</strong> (nearest 100,000, ten-thousands 8 rounds up). Same number, three answers. Each correct at its own zoom — and they don't all agree on the same direction.<div class="video-wrap" data-video-slot="4-01-06-practice-2-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 2</div><div class="video-wrap-title">Halfway rounds UP</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-06_Practice-2_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write 84,562. For each round, identify the decider. <strong>Nearest 100:</strong> Decider is tens (6). 6 ≥ 5, round up. 84,562 → 84,600. <strong>Nearest 1,000:</strong> Decider is hundreds (5). "Exactly 5! That's halfway between 84,000 and 85,000. The rule says round UP." Show a number line: 84,000 ←→ 85,000, halfway 84,500. Place 84,562 just to the right of halfway. "Yes, past halfway. Round up to 85,000." <strong>Nearest 10,000:</strong> Decider is thousands (4). 4 ≤ 4, round down. 84,562 → 80,000. Stack the three: 84,600 / 85,000 / 80,000. "Watch how the same number rounds DIFFERENTLY depending on the zoom level. All correct." (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-06-practice-2-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Find the decider digit for each round.</strong><div class="hint-callout">Nearest 100 → decider is tens (6). Nearest 1,000 → decider is hundreds (5). Nearest 10,000 → decider is thousands (4). Apply: 5 or higher rounds UP, 4 or lower rounds DOWN. Note: a decider of exactly 5 still rounds UP.</div><div class="video-wrap" data-video-slot="4-01-06-practice-2-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 2</div><div class="video-wrap-title">The halfway rule: 5 rounds up</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-06_Practice-2_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach especially the halfway case. Write 84,562 with each place labeled. Walk through the 1,000-round case slowly: "I'm rounding to thousands. The decider is hundreds — that's 5. <em>Exactly 5</em>. The rule says 5 or higher rounds up. So we round UP — thousands 4 becomes 5, everything to the right becomes 0. Answer: 85,000." Draw a number line 84,000 ←→ 85,000, halfway 84,500. Place 84,562 a tiny bit to the right of 84,500. "See? It's past halfway. The rule and the number line agree." Concept being retaught: the convention that 5 rounds UP even at halfway. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-06-practice-2-retry --></div></div></div></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Priya's Mistake</div><div class="activity-sub">A carry case — and what happens when you forget to ripple.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> A bigger number, a carry case, and a student who applied the rule halfway through. Read carefully.</p></div>
+<div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ All three!</strong> 583,425 → <strong>583,000</strong> (nearest 1,000, hundreds 4 rounds down), <strong>580,000</strong> (nearest 10,000, thousands 3 rounds down), <strong>600,000</strong> (nearest 100,000, ten-thousands 8 rounds up). Same number, three answers. Each correct at its own zoom — and they don't all agree on the same direction.</div><div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Find the decider digit for each round.</strong><div class="hint-callout">Nearest 100 → decider is tens (6). Nearest 1,000 → decider is hundreds (5). Nearest 10,000 → decider is thousands (4). Apply: 5 or higher rounds UP, 4 or lower rounds DOWN. Note: a decider of exactly 5 still rounds UP.</div></div></div></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Priya's Mistake</div><div class="activity-sub">A carry case — and what happens when you forget to ripple.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> A bigger number, a carry case, and a student who applied the rule halfway through. Read carefully.</p></div>
 <div class="task-box"><div class="task-label">Priya's Work</div>
 <p>Priya was asked to round <strong>199,500</strong> to the nearest <strong>1,000</strong>. Priya wrote:</p>
 <div style="background:#FFF0E6;border:2px solid #F5C8A0;border-radius:12px;padding:14px 16px;font-family:'Lora',Georgia,serif;font-size:16px;color:#0E1C42;line-height:1.7;margin-top:8px;">
-"<strong>199,500 rounds to 190,000.</strong>"<br>
+"<strong>199,500 rounds to 190,000.</strong>"<br/>
 "The decider is the hundreds digit — 5. So I rounded UP. The thousands digit was 9, so 9 + 1 = 10. I wrote 0 in the thousands place and zeroed out the digits to the right."
 </div>
 </div>
@@ -637,30 +685,26 @@
 </div>
 <button class="check-btn" onclick="checkErrorAnalysis()">Check My Answers ✓</button>
 <div class="journal-label">✏️ Walk through the carry one place at a time. Start with thousands 9 + 1 = 10. What happens next? Where does the ripple stop? <span class="saved-dot" id="dot-ea"></span></div>
-<textarea class="journal-box" id="journal-ea" data-label="Practice 3 — Error Analysis: Walk through the carry on 199,500" placeholder="" oninput="autoSave(this,'dot-ea')"></textarea>
-<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Priya applied the rule but stopped the carry too early. 9 + 1 = 10 means "0 in this place, carry the 1." Ten-thousands was 9 too, so 9 + 1 = 10 again — carry again. Hundred-thousands 1 + 1 = 2. Final answer: 200,000. The rule didn't break. The carry just had to ripple through three places.<div class="video-wrap" data-video-slot="4-01-06-practice-3-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 3</div><div class="video-wrap-title">Following a carry all the way through</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-06_Practice-3_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write 199,500 with each digit labeled by place: HT-TT-Th-H-T-O = 1-9-9-5-0-0. Round to nearest 1,000. Underline hundreds (5). "Decider is 5. Halfway rounds UP." Add 1 to thousands: 9 + 1 = 10. Pause. "Ten can't sit in one place. Write 0 in thousands and carry the 1 to ten-thousands." Ten-thousands 9 + 1 = 10. "Carry again. 0 in ten-thousands, carry to hundred-thousands." Hundred-thousands 1 + 1 = 2. Write 200,000. Now show Priya's wrong answer (190,000): "Priya wrote 0 in thousands but never carried. She left ten-thousands as 9. That's how she got 190,000 — exactly 10,000 too small." End: "Most rounds don't carry. But when the rounding place is 9 and you round UP, slow down and follow the ripple." (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-06-practice-3-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">When 9 + 1 = 10 in a place, that 1 has to ripple to the next place. If THAT place is also 9, ripple again. Don't stop early.</div><div class="video-wrap" data-video-slot="4-01-06-practice-3-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 3</div><div class="video-wrap-title">Carry the 1 every time it hits 10</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-06_Practice-3_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the carry chain. Slowly: "9 + 1 = 10. We write 0 and carry the 1. That 1 has to LAND somewhere — and it lands one place to the left. If THAT place becomes 10 too, we carry again. Keep going until you don't need to carry anymore." Walk through 199,500 step by step. Concept being retaught: the carry isn't optional. Whenever a digit + 1 equals 10, the 1 must ripple to the next place. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-06-practice-3-retry --></div></div></div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
-  <div class="socratic-box"><div class="socratic-label">🔮 Think Like a Mathematician</div><p class="socratic-q">Two numbers round to the SAME answer at one zoom level but DIFFERENT answers at another. For example: 347,200 and 351,800 both round to 350,000 at the nearest 10,000 — but they round differently at the nearest 100,000. Find one of those zoom-level disagreements yourself. What does this tell you about how rounding "hides" information?</p><div class="journal-label">✏️ My reasoning <span class="saved-dot" id="dot-soc2"></span></div><textarea class="journal-box" id="journal-soc2" data-label="Practice — Socratic: Numbers that round same at one zoom but differ at another" placeholder="" oninput="autoSave(this,'dot-soc2')"></textarea></div>
-  <div class="tab-next-wrap"><p class="tab-transition-voice">You stretched the rule to a sixth digit, watched a carry ripple, and caught a mistake born from skipping the ripple. Now show what you know.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
+<textarea class="journal-box" data-label="Practice 3 — Error Analysis: Walk through the carry on 199,500" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
+<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Priya applied the rule but stopped the carry too early. 9 + 1 = 10 means "0 in this place, carry the 1." Ten-thousands was 9 too, so 9 + 1 = 10 again — carry again. Hundred-thousands 1 + 1 = 2. Final answer: 200,000. The rule didn't break. The carry just had to ripple through three places.</div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">When 9 + 1 = 10 in a place, that 1 has to ripple to the next place. If THAT place is also 9, ripple again. Don't stop early.</div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
+<div class="socratic-box"><div class="socratic-label">🔮 Think Like a Mathematician</div><p class="socratic-q">Two numbers round to the SAME answer at one zoom level but DIFFERENT answers at another. For example: 347,200 and 351,800 both round to 350,000 at the nearest 10,000 — but they round differently at the nearest 100,000. Find one of those zoom-level disagreements yourself. What does this tell you about how rounding "hides" information?</p><div class="journal-label">✏️ My reasoning <span class="saved-dot" id="dot-soc2"></span></div><textarea class="journal-box" data-label="Practice — Socratic: Numbers that round same at one zoom but differ at another" id="journal-soc2" oninput="autoSave(this,'dot-soc2')" placeholder=""></textarea></div>
+<div class="tab-next-wrap"><p class="tab-transition-voice">You stretched the rule to a sixth digit, watched a carry ripple, and caught a mistake born from skipping the ripple. Now show what you know.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-assignment">
-  <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Use the chart, expanded form, or words — whichever helps you think.</div></div></div><div class="activity-body"><p>You met a new place today and built numbers that climb past ten thousand. These problems give you a chance to put it all together. Use any strategy from Learn — the chart, the discs, expanded form, or word form.</p>
+<div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Use the chart, expanded form, or words — whichever helps you think.</div></div></div><div class="activity-body"><p>You met a new place today and built numbers that climb past ten thousand. These problems give you a chance to put it all together. Use any strategy from Learn — the chart, the discs, expanded form, or word form.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask yourself:</strong> Which place is each digit in? Which tool will help me see that fastest?</p></div>
-<div class="q-block"><p class="q-text"><span class="q-num">1</span>Round each 6-digit number. State the decider digit and the direction.<br>(a) <strong>372,840</strong> to the nearest <strong>1,000</strong><br>(b) <strong>815,500</strong> to the nearest <strong>10,000</strong><br>(c) <strong>249,378</strong> to the nearest <strong>100,000</strong></p><div class="journal-label">✏️ My answer <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" id="journal-a1" data-label="Show What You Know — Problem 1: Three 6-digit rounds with decider + direction" placeholder="" oninput="autoSave(this,'dot-a1')"></textarea></div>
-
-<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> Why is the SAME rounding rule used for 5-digit numbers AND 6-digit numbers AND (eventually) numbers in the millions? What part of place value makes the rule work at every size?</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" id="journal-a6" data-label="Show What You Know — Problem 6: Why the same rule works at every size" placeholder="" oninput="autoSave(this,'dot-a6')"></textarea></div>
-
-
+<div class="q-block"><p class="q-text"><span class="q-num">1</span>Round each 6-digit number. State the decider digit and the direction.<br/>(a) <strong>372,840</strong> to the nearest <strong>1,000</strong><br/>(b) <strong>815,500</strong> to the nearest <strong>10,000</strong><br/>(c) <strong>249,378</strong> to the nearest <strong>100,000</strong></p><div class="journal-label">✏️ My answer <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: Three 6-digit rounds with decider + direction" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
+<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> Why is the SAME rounding rule used for 5-digit numbers AND 6-digit numbers AND (eventually) numbers in the millions? What part of place value makes the rule work at every size?</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: Why the same rule works at every size" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#55C8E8;"><div class="activity-head"><div class="activity-num" style="background:#55C8E8;color:#0E1C42;">🗺️</div><div><div class="activity-title">Connection Forward: What Comes Next</div><div class="activity-sub">Preview Lesson 4.01.07 — Calculations and Place Value</div></div></div><div class="activity-body"><p>Across this unit, you built place-value charts up to a million, found patterns, compared numbers, and rounded to every place you've met.</p><p>Next lesson, we'll <strong>use</strong> all of it. You'll add and subtract big numbers by place. You'll use rounding to ESTIMATE answers before you compute them. And you'll check whether your final answer makes sense — using place value as your honesty-checker.</p><p>The big question next time: <em>How can place value make calculations faster — and how does rounding help you check that your answer is even reasonable?</em></p></div></div>
 </div></div>
-  <div class="video-wrap" data-video-slot="4-01-06-assignment-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Show What You Know Feedback · Lesson 4.01.06</div><div class="video-wrap-title">The two trickiest problems</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-06_SWYK-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk through Problem 4 and Problem 5 — the two problems most worth re-teaching. <strong>Problem 4 (find and fix 469,500 → nearest 10,000):</strong> "The student looked at the wrong decider. Rounding to ten-thousands means the decider is the THOUSANDS digit (9 in 469,500), not the hundreds digit. So decider is 9 — which IS 5 or higher, so we round UP. But up from 460,000 (the lower neighbor). 469,500 → 470,000. The student's answer happened to match — but only by accident of arithmetic. Always check WHICH place you're checking before you check the digit." <strong>Problem 5 (three teams at nearest 100,000):</strong> Gators 654,200 → 700,000 (decider is ten-thousands = 5, round up). Seminoles 488,300 → 500,000 (decider ten-thousands = 8, round up). Hurricanes 545,100 → 500,000 (decider ten-thousands = 4, round DOWN). "Seminoles and Hurricanes BOTH round to 500,000 — even though their exact totals differ by 57,200 fans. That's the rounded answer hiding a real difference. The rounded answer says they tied; the exact numbers say Hurricanes had more. Rounding traded detail for simplicity." End: "Next lesson — putting all this place-value work to use in calculations and estimation." (~2–3 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-06-assignment-feedback --></div></div></div></div>
-  <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly>Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
-  <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
+
+<div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
+<div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
 </div>
 <div class="footer">
-  <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
-  <div class="footer-sub">Math · Grade 4 · 4.01.06</div>
-  <div class="footer-copy">© 2025 Optima Academy Online</div>
+<div class="footer-main">🏫 <span>Optima Academy Online</span></div>
+<div class="footer-sub">Math · Grade 4 · 4.01.06</div>
+<div class="footer-copy">© 2025 Optima Academy Online</div>
 </div>
 </div>
 <canvas id="confettiCanvas"></canvas>
@@ -1010,6 +1054,75 @@ async function loadVideoManifest(){try{let res=await fetch('video-manifest.md',{
 function parseManifest(txt){let map={};let lines=txt.split(/\r?\n/);let current=null,buf=[];function commit(){if(current&&buf.join('\n').trim())map[current]=buf.join('\n').trim();buf=[]}for(let line of lines){let m=line.match(/^([A-Za-z0-9-]+):\s*$/);if(m){commit();current=m[1]}else if(current){buf.push(line)}}commit();return map}
 function showPageFeedback(msg){var panel=document.querySelector('.tab-panel.active')||document.body;var box=panel.querySelector(':scope > .page-feedback');if(!box){box=document.createElement('div');box.className='page-feedback';panel.insertBefore(box,panel.firstChild);}box.className='page-feedback show warn';box.innerHTML=msg;}
 window.addEventListener('DOMContentLoaded',()=>{restoreJournals();updateProgress();loadVideoManifest()});
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "×11 and ×12";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
 </script>
 </body>
 </html>

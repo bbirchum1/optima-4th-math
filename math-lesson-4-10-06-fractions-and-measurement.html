@@ -329,6 +329,32 @@
 .cc-row strong{color:#C56C3F;font-weight:900;font-family:Lora,Georgia,serif}
 .cc-row em{color:#7A88A8;font-style:italic;font-size:12px}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
@@ -356,7 +382,42 @@
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
-<div class="video-wrap" data-video-slot="4-10-06-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.10.06</div><div class="video-wrap-title">Fractions of measurement units — slices of feet, pounds, hours.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-10-06_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Show a 12-inch ruler. "1 foot has 12 inches. What is 1/4 of a foot?" Cover 3/4 of the ruler with paper. "The visible part is 1/4. Count the inches showing — three. So 1/4 foot = 3 inches." Then 3/4 lb: "1 pound = 16 ounces. 3/4 × 16 = 12 oz." Reverse: "8 oz is what fraction of a pound? 8 out of 16 = 8/16 = 1/2 lb." Frame: <strong>Multiply the fraction by the unit factor — or simplify the part-over-whole.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-welcome --></div></div></div></div>
+<div class="fluency-box" data-timed="true">
+<div class="fluency-head">
+<div class="fluency-head-icon">⏳</div>
+<div><div class="fluency-head-label">TIMED FLUENCY CHECK</div><div class="fluency-head-title">Mixed All-Operations — One-Minute Check</div></div>
+<div class="fluency-timer-ui"><span class="fluency-timer-display" id="fluencyTimerDisplay">60s</span><button class="fluency-start-btn" id="fluencyStartBtn" onclick="fluencyStart()">Start 1-Minute Check</button></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Unit check — Quarter 4 timed fluency. Click Start, then answer as many as you can in 60 seconds. Answers lock in automatically when time is up.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">9 × 7</span><input autocomplete="off" class="fluency-input" data-answer="63" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 8</span><input autocomplete="off" class="fluency-input" data-answer="64" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 9</span><input autocomplete="off" class="fluency-input" data-answer="63" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 9</span><input autocomplete="off" class="fluency-input" data-answer="54" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">11 × 7</span><input autocomplete="off" class="fluency-input" data-answer="77" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">12 × 8</span><input autocomplete="off" class="fluency-input" data-answer="96" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 9</span><input autocomplete="off" class="fluency-input" data-answer="81" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 6</span><input autocomplete="off" class="fluency-input" data-answer="48" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 8</span><input autocomplete="off" class="fluency-input" data-answer="56" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 7</span><input autocomplete="off" class="fluency-input" data-answer="42" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">63 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">72 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">56 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="7" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">96 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="12" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">81 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">48 ÷ 6</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">88 ÷ 11</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">108 ÷ 12</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">64 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">77 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="11" disabled="" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" disabled="" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Mixed All-Operations — One-Minute Check)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
 <p>Atlas takes the lead — measurement is about naming units and applying conversion rules. Felix multiplies. Hazel builds the picture. Cora checks units.</p>
 <div class="bubble-row">
@@ -400,8 +461,8 @@
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Matches:</strong> 1/2 × 12 in = <strong>6 inches</strong>. 1/4 × 16 oz = <strong>4 ounces</strong>. 1/3 × 60 min = <strong>20 minutes</strong>. Multiply the fraction by the unit's factor.</div>
-<div class="journal-label">✏️ Why does the SAME fraction give different amounts depending on the unit? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: fraction of unit" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-10-06-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.10.06</div><div class="video-wrap-title">Fraction × factor</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-10-06_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "Same fraction, different units, different amounts. 1/2 of a foot = 6 inches. 1/2 of a pound = 8 ounces. 1/2 of an hour = 30 minutes. The fraction stays the same; the factor changes." Frame: <strong>Multiply the fraction by the unit's factor.</strong></div><div class="video-placeholder-id"><!-- slot: lesson-readiness-feedback --></div></div></div></div>
+<div class="journal-label">✏️ Why does the SAME fraction give different amounts depending on the unit? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: fraction of unit" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Reverse direction.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">📏</span><p>If a stick is <strong>8 inches</strong> long, what fraction of a foot is it? Express in simplest form.</p></div>
 <div class="strategy-chip-row">
@@ -412,11 +473,10 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>Part over whole:</strong> 8 inches out of 12 = 8/12. <strong>Simplify:</strong> 8/12 ÷ 4/4 = <strong>2/3 ft</strong>.</p></div>
 <div class="journal-label">✏️ How is this DIFFERENT from finding 2/3 of a foot? <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think: 8 inches as fraction" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think: 8 inches as fraction" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">Now slice a unit into the fraction you want.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-10-06-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-10-06 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-10-06-concept --></div></div></div></div>
 <div aria-label="Daily vocabulary flash cards" class="vocab-section">
 <div class="vocab-section-head">
 <div class="vocab-section-icon">📚</div>
@@ -427,93 +487,74 @@
 </div>
 <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
 <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for fraction of a unit. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🧩</div><div class="fc-word">fraction of a unit</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">fraction of a unit</div><div class="fc-def">a part of one measurement unit. 1/2 of a foot, 3/4 of a pound, 1/3 of an hour.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for conversion factor. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🔢</div><div class="fc-word">conversion factor</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">conversion factor</div><div class="fc-def">how many small units fit in one big unit. 12 (in per ft), 16 (oz per lb), 60 (min per hr).</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for part over whole. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">📊</div><div class="fc-word">part over whole</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">part over whole</div><div class="fc-def">the way to write any partial amount as a fraction. 8 in = 8/12 ft. Simplify if possible.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for simplest form. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">✨</div><div class="fc-word">simplest form</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">simplest form</div><div class="fc-def">a fraction where the numerator and denominator share no common factor. 8/16 = 1/2.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div aria-label="Vocabulary card for fraction of a unit. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🧩</div><div class="fc-word">fraction of a unit</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">fraction of a unit</div><div class="fc-def">a part of one measurement unit. 1/2 of a foot, 3/4 of a pound, 1/3 of an hour.</div><div class="fc-tap-back">tap to flip back</div></div>
 </div>
-<div class="video-wrap" data-video-slot="4-10-06-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.10.06</div><div class="video-wrap-title">Fractions and measurement — partial units both directions.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-10-06_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Three converts. (1) 3/4 lb = 3/4 × 16 = 12 oz. (2) 5/12 hr = 5/12 × 60 = 25 min. (3) Reverse: 450 m = 450/1000 = 9/20 km (simplify). Frame: <strong>Multiply fraction × factor for forward. Part-over-whole + simplify for reverse.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-concept --></div></div></div></div>
+</div>
+<div aria-label="Vocabulary card for conversion factor. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🔢</div><div class="fc-word">conversion factor</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">conversion factor</div><div class="fc-def">how many small units fit in one big unit. 12 (in per ft), 16 (oz per lb), 60 (min per hr).</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for part over whole. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">📊</div><div class="fc-word">part over whole</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">part over whole</div><div class="fc-def">the way to write any partial amount as a fraction. 8 in = 8/12 ft. Simplify if possible.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for simplest form. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">✨</div><div class="fc-word">simplest form</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">simplest form</div><div class="fc-def">a fraction where the numerator and denominator share no common factor. 8/16 = 1/2.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
 <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Pick how many groups to SPLIT the bar into. Then click groups to TAKE them.</p></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#C56C3F;">🧩</div><div><div class="activity-title">Fraction-of-a-Unit Mat</div><div class="activity-sub">Pick a fraction chip. Watch the bar shade that portion of the unit. Live readout shows the measurement.</div></div></div><div class="activity-body"><p>Three rounds, each with a different base unit. The same fraction gives a different amount depending on the unit's factor.</p>
-
-<div class="fm-card" data-id="1" data-big-unit="foot" data-big-label="1 foot" data-small-unit="inches" data-factor="12" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="fm-card" data-big-label="1 foot" data-big-unit="foot" data-factor="12" data-id="1" data-small-unit="inches" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 1 · Fraction of a foot</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">1 foot = 12 inches. Try different fractions.</div>
-
 <div style="text-align:center;font-size:11px;font-weight:900;color:#5B2E10;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 1 · Pick a fraction</div>
-<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px;"><button onclick="fmPick('1',1,4)" id="fmChip-1-1-4" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/4</button><button onclick="fmPick('1',1,3)" id="fmChip-1-1-3" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/3</button><button onclick="fmPick('1',1,2)" id="fmChip-1-1-2" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/2</button><button onclick="fmPick('1',2,3)" id="fmChip-1-2-3" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">2/3</button><button onclick="fmPick('1',3,4)" id="fmChip-1-3-4" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">3/4</button></div>
-
+<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px;"><button id="fmChip-1-1-4" onclick="fmPick('1',1,4)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/4</button><button id="fmChip-1-1-3" onclick="fmPick('1',1,3)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/3</button><button id="fmChip-1-1-2" onclick="fmPick('1',1,2)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/2</button><button id="fmChip-1-2-3" onclick="fmPick('1',2,3)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">2/3</button><button id="fmChip-1-3-4" onclick="fmPick('1',3,4)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">3/4</button></div>
 <div style="text-align:center;font-size:11px;font-weight:900;color:#5B2E10;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">1 foot = 12 inches</div>
 <div id="fmBar-1" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:14px;margin-bottom:12px;min-height:80px;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;" id="fmReadout-1">Pick a fraction chip above.</div>
-
+<div id="fmReadout-1" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;">Pick a fraction chip above.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
 <button onclick="fmReset('1')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="fmStatus-1" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Click any fraction chip to shade that part of 1 foot.</div>
 </div>
-
-<div class="fm-card" data-id="2" data-big-unit="pound" data-big-label="1 pound" data-small-unit="ounces" data-factor="16" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="fm-card" data-big-label="1 pound" data-big-unit="pound" data-factor="16" data-id="2" data-small-unit="ounces" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 2 · Fraction of a pound</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">1 pound = 16 ounces. Watch how the answer doubles each step.</div>
-
 <div style="text-align:center;font-size:11px;font-weight:900;color:#5B2E10;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 1 · Pick a fraction</div>
-<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px;"><button onclick="fmPick('2',1,4)" id="fmChip-2-1-4" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/4</button><button onclick="fmPick('2',1,2)" id="fmChip-2-1-2" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/2</button><button onclick="fmPick('2',3,4)" id="fmChip-2-3-4" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">3/4</button><button onclick="fmPick('2',5,8)" id="fmChip-2-5-8" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">5/8</button><button onclick="fmPick('2',7,8)" id="fmChip-2-7-8" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">7/8</button></div>
-
+<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px;"><button id="fmChip-2-1-4" onclick="fmPick('2',1,4)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/4</button><button id="fmChip-2-1-2" onclick="fmPick('2',1,2)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/2</button><button id="fmChip-2-3-4" onclick="fmPick('2',3,4)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">3/4</button><button id="fmChip-2-5-8" onclick="fmPick('2',5,8)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">5/8</button><button id="fmChip-2-7-8" onclick="fmPick('2',7,8)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">7/8</button></div>
 <div style="text-align:center;font-size:11px;font-weight:900;color:#5B2E10;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">1 pound = 16 ounces</div>
 <div id="fmBar-2" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:14px;margin-bottom:12px;min-height:80px;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;" id="fmReadout-2">Pick a fraction chip above.</div>
-
+<div id="fmReadout-2" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;">Pick a fraction chip above.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
 <button onclick="fmReset('2')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="fmStatus-2" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Click any fraction chip to shade that part of 1 pound.</div>
 </div>
-
-<div class="fm-card" data-id="3" data-big-unit="hour" data-big-label="1 hour" data-small-unit="minutes" data-factor="60" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="fm-card" data-big-label="1 hour" data-big-unit="hour" data-factor="60" data-id="3" data-small-unit="minutes" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 3 · Fraction of an hour</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">1 hour = 60 minutes. Tricky fraction: 5/12 of an hour = ?</div>
-
 <div style="text-align:center;font-size:11px;font-weight:900;color:#5B2E10;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 1 · Pick a fraction</div>
-<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px;"><button onclick="fmPick('3',1,4)" id="fmChip-3-1-4" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/4</button><button onclick="fmPick('3',1,3)" id="fmChip-3-1-3" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/3</button><button onclick="fmPick('3',5,12)" id="fmChip-3-5-12" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">5/12</button><button onclick="fmPick('3',1,2)" id="fmChip-3-1-2" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/2</button><button onclick="fmPick('3',2,3)" id="fmChip-3-2-3" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">2/3</button><button onclick="fmPick('3',3,4)" id="fmChip-3-3-4" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">3/4</button></div>
-
+<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px;"><button id="fmChip-3-1-4" onclick="fmPick('3',1,4)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/4</button><button id="fmChip-3-1-3" onclick="fmPick('3',1,3)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/3</button><button id="fmChip-3-5-12" onclick="fmPick('3',5,12)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">5/12</button><button id="fmChip-3-1-2" onclick="fmPick('3',1,2)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/2</button><button id="fmChip-3-2-3" onclick="fmPick('3',2,3)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">2/3</button><button id="fmChip-3-3-4" onclick="fmPick('3',3,4)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">3/4</button></div>
 <div style="text-align:center;font-size:11px;font-weight:900;color:#5B2E10;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">1 hour = 60 minutes</div>
 <div id="fmBar-3" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:14px;margin-bottom:12px;min-height:80px;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;" id="fmReadout-3">Pick a fraction chip above.</div>
-
+<div id="fmReadout-3" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;">Pick a fraction chip above.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
 <button onclick="fmReset('3')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="fmStatus-3" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Click any fraction chip to shade that part of 1 hour.</div>
 </div>
-
 <div class="reveal-box" id="learnReveal"><strong>Examples.</strong> 1/4 ft = 3 in. 3/4 lb = 12 oz. 5/12 hr = 25 min. <strong>Rule:</strong> fraction × unit's factor = partial amount.</div>
 </div></div>
 <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 The Two Rules</div><p><strong>Forward (fraction of a unit):</strong> Multiply the fraction by the unit's conversion factor. 3/4 lb × 16 = 12 oz.</p><p><strong>Reverse (measurement as a fraction):</strong> Write part over whole, then simplify. 8 in = 8/12 ft = 2/3 ft.</p></div>
@@ -549,7 +590,7 @@
 <textarea class="journal-box" data-label="Learn — Socratic: 1/2 across units" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: 8 oz as a Fraction of 1 lb</div><div class="activity-sub">Reverse direction. Part-over-whole, then simplify.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Express <strong>8 ounces</strong> as a fraction of a pound. Write the answer in simplest form.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew:</p>
-<div class="video-wrap" data-video-slot="4-10-06-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.10.06</div><div class="video-wrap-title">8 oz = 8/16 lb = 1/2 lb</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-10-06_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Atlas: "1 pound = 16 ounces." Felix: "Write part-over-whole: 8/16." Cora: "Simplify: 8/16 ÷ 8/8 = 1/2. So 8 oz = 1/2 lb." About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-10-06-example --></div></div></div></div>
+
 <div style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.9;font-size:16px;">
 <strong>Step 1.</strong> 1 pound = 16 ounces. Write 8 ounces as <span style="color:#C56C3F;font-weight:900;">8/16</span>.<br/>
@@ -570,53 +611,40 @@
 <div class="callout callout-info"><span class="callout-icon">🧩</span><p>Two more forward fractions and a reverse-direction problem.</p></div>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Forward:</strong> multiply fraction × factor. <strong>Reverse:</strong> part-over-whole, then simplify.</p></div>
 <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Click the conversion chart button</strong> any time you forget a factor.</p></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#C56C3F;">1</div><div><div class="activity-title">Slice a liter</div><div class="activity-sub">1 liter = 1,000 mL.</div></div><span class="activity-time" style="background:#C56C3F;">~5 min</span></div><div class="activity-body">
-<div class="fm-card" data-id="p1" data-big-unit="liter" data-big-label="1 liter" data-small-unit="milliliters" data-factor="1000" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="fm-card" data-big-label="1 liter" data-big-unit="liter" data-factor="1000" data-id="p1" data-small-unit="milliliters" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Pick fractions of a liter</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Each click shows the mL amount.</div>
-
 <div style="text-align:center;font-size:11px;font-weight:900;color:#5B2E10;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 1 · Pick a fraction</div>
-<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px;"><button onclick="fmPick('p1',1,5)" id="fmChip-p1-1-5" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/5</button><button onclick="fmPick('p1',1,4)" id="fmChip-p1-1-4" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/4</button><button onclick="fmPick('p1',2,5)" id="fmChip-p1-2-5" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">2/5</button><button onclick="fmPick('p1',1,2)" id="fmChip-p1-1-2" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/2</button><button onclick="fmPick('p1',4,5)" id="fmChip-p1-4-5" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">4/5</button></div>
-
+<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px;"><button id="fmChip-p1-1-5" onclick="fmPick('p1',1,5)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/5</button><button id="fmChip-p1-1-4" onclick="fmPick('p1',1,4)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/4</button><button id="fmChip-p1-2-5" onclick="fmPick('p1',2,5)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">2/5</button><button id="fmChip-p1-1-2" onclick="fmPick('p1',1,2)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/2</button><button id="fmChip-p1-4-5" onclick="fmPick('p1',4,5)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">4/5</button></div>
 <div style="text-align:center;font-size:11px;font-weight:900;color:#5B2E10;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">1 liter = 1000 milliliters</div>
 <div id="fmBar-p1" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:14px;margin-bottom:12px;min-height:80px;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;" id="fmReadout-p1">Pick a fraction chip above.</div>
-
+<div id="fmReadout-p1" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;">Pick a fraction chip above.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
 <button onclick="fmReset('p1')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="fmStatus-p1" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Click any fraction chip to shade that part of 1 liter.</div>
 </div>
 <div class="journal-label">✏️ What is 4/5 of a liter in mL? Show your work. <span class="saved-dot" id="dot-p1"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 1: liter" id="journal-p1" oninput="autoSave(this,'dot-p1')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Slice a meter</div><div class="activity-sub">1 meter = 100 cm.</div></div></div><div class="activity-body">
-<div class="fm-card" data-id="p2" data-big-unit="meter" data-big-label="1 meter" data-small-unit="centimeters" data-factor="100" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="fm-card" data-big-label="1 meter" data-big-unit="meter" data-factor="100" data-id="p2" data-small-unit="centimeters" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Pick fractions of a meter</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Try 3/5 — that one is in the inspiration pdf.</div>
-
 <div style="text-align:center;font-size:11px;font-weight:900;color:#5B2E10;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 1 · Pick a fraction</div>
-<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px;"><button onclick="fmPick('p2',1,4)" id="fmChip-p2-1-4" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/4</button><button onclick="fmPick('p2',1,5)" id="fmChip-p2-1-5" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/5</button><button onclick="fmPick('p2',2,5)" id="fmChip-p2-2-5" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">2/5</button><button onclick="fmPick('p2',1,2)" id="fmChip-p2-1-2" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/2</button><button onclick="fmPick('p2',3,5)" id="fmChip-p2-3-5" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">3/5</button><button onclick="fmPick('p2',3,4)" id="fmChip-p2-3-4" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">3/4</button></div>
-
+<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px;"><button id="fmChip-p2-1-4" onclick="fmPick('p2',1,4)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/4</button><button id="fmChip-p2-1-5" onclick="fmPick('p2',1,5)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/5</button><button id="fmChip-p2-2-5" onclick="fmPick('p2',2,5)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">2/5</button><button id="fmChip-p2-1-2" onclick="fmPick('p2',1,2)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">1/2</button><button id="fmChip-p2-3-5" onclick="fmPick('p2',3,5)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">3/5</button><button id="fmChip-p2-3-4" onclick="fmPick('p2',3,4)" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:8px 14px;font-family:Lora,Georgia,serif;font-size:16px;font-weight:800;cursor:pointer;color:#0E1C42;min-width:60px;">3/4</button></div>
 <div style="text-align:center;font-size:11px;font-weight:900;color:#5B2E10;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">1 meter = 100 centimeters</div>
 <div id="fmBar-p2" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:14px;margin-bottom:12px;min-height:80px;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;" id="fmReadout-p2">Pick a fraction chip above.</div>
-
+<div id="fmReadout-p2" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;">Pick a fraction chip above.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
 <button onclick="fmReset('p2')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="fmStatus-p2" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Click any fraction chip to shade that part of 1 meter.</div>
 </div>
 <div class="journal-label">✏️ 3/5 of a meter in centimeters? <span class="saved-dot" id="dot-p2"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 2: meter" id="journal-p2" oninput="autoSave(this,'dot-p2')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#C56C3F;">3</div><div><div class="activity-title">Reverse: 40 min as a fraction of an hour</div><div class="activity-sub">Part over whole. Then simplify.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔁</span><p><strong>Reverse method:</strong> Write the small unit over the conversion factor, then simplify.</p></div>
 <div style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;color:#0E1C42;font-weight:700;margin-bottom:8px;">40 min = ? of an hour</div>
@@ -627,17 +655,13 @@
 <div class="journal-label">✏️ Show your simplification. Also try: 450 m as a fraction of a km. <span class="saved-dot" id="dot-p3"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 3: reverse direction" id="journal-p3" oninput="autoSave(this,'dot-p3')" placeholder="40/60 ÷ ___ = ___/___. 450/1000 ÷ ___ = ___/___" style="min-height:80px;"></textarea>
 </div></div>
-
 <div class="tab-next-wrap"><p class="tab-transition-voice">Two slicers and a reverse. Now show it.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">For each problem, find the fraction of a unit (or express a measurement as a fraction).</div></div></div><div class="activity-body"><p>If you got these, you're ready for the Independent Practice.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Do the denominators MATCH? Or do I need to rename one or both? Or is a benchmark (<span class="frac"><span class="num">1</span><span class="den">2</span></span>, 1) faster?</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Forward: fraction × factor.</strong><br/>(a) 1/4 foot = ___ inches<br/>(b) 3/4 foot = ___ inches<br/>(c) 3/4 lb = ___ oz<br/>(d) 5/12 hr = ___ min<br/>(e) 4/5 L = ___ mL</p><div class="journal-label">✏️ Show each multiplication <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: forward" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-
 <div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Unit 10 closer.</strong> Wren has a ribbon that is 9 inches long. (a) What fraction of a foot is the ribbon? Express in simplest form. (b) If Wren cuts the ribbon in half, what fraction of a foot is each piece?</p><div class="journal-label">✏️ Both parts <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: ribbon" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
-
-
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#C56C3F;"><div class="activity-head"><div class="activity-num" style="background:#C56C3F;color:#fff;">🗺️</div><div><div class="activity-title">Unit 7 Complete — Where This Goes Next</div><div class="activity-sub">Looking ahead</div></div></div><div class="activity-body"><p>You've compared and ordered fractions that all fit between 0 and 1.</p><p>Next lesson: <strong>Improper Fractions and Mixed Numbers.</strong> What if the top is BIGGER than the bottom? <span class="frac"><span class="num">8</span><span class="den">5</span></span> of a pie isn't just half — it's a WHOLE pie plus some extra. That's an improper fraction, and it can also be written as a mixed number (1 <span class="frac"><span class="num">3</span><span class="den">5</span></span>).</p><p>The big question opening 6.03: <em>How do you show a fraction that's more than 1 whole?</em></p></div></div></div></div>
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed all 6 problems above.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed both column subtractions on every problem.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed the borrow step whenever the fraction column needed it and simplified at the end.</span></div></div></div>
@@ -1250,12 +1274,12 @@ function ccOpen(){ var o = document.getElementById('ccOverlay'); if(o) o.classLi
 function ccClose(){ var o = document.getElementById('ccOverlay'); if(o) o.classList.remove('show'); }
 
 </script>
-<button class="cc-fab" onclick="ccOpen()" aria-label="Open conversion chart" title="Conversion Chart">📋 Conversion Chart</button>
+<button aria-label="Open conversion chart" class="cc-fab" onclick="ccOpen()" title="Conversion Chart">📋 Conversion Chart</button>
 <div class="cc-overlay" id="ccOverlay" onclick="if(event.target.id==='ccOverlay')ccClose()">
 <div class="cc-modal">
 <div class="cc-modal-head">
 <div class="cc-modal-title">📋 Conversion Chart</div>
-<button class="cc-close" onclick="ccClose()" aria-label="Close">×</button>
+<button aria-label="Close" class="cc-close" onclick="ccClose()">×</button>
 </div>
 <div class="cc-section">
 <div class="cc-section-head">Metric · Length</div>
@@ -1295,4 +1319,73 @@ function ccClose(){ var o = document.getElementById('ccOverlay'); if(o) o.classL
 </div>
 </div>
 </div>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = true;
+var FLUENCY_TITLE = "Mixed All-Operations — One-Minute Check";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
+</script>
 </body></html>

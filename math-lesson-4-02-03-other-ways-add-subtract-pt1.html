@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Optima Academy Online — Grade 4 Math Lesson 4.02.03</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
@@ -306,25 +307,51 @@
 .bubble-text{font-size:14.5px;color:#0E1C42;line-height:1.5;font-weight:600;font-family:'Lora',Georgia,serif;font-style:italic}
 @media(max-width:620px){.bubble{flex:1 1 100%;max-width:100%}}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
 <div class="progress-wrap"><span class="progress-label">📐 Lesson Progress</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><span class="progress-pct" id="progressPct">0%</span></div>
 <div class="header">
-  <div class="header-brand">
-    <div class="header-logo">
-      <img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" />
-    </div>
-    <div>
-      <div class="header-org">Optima Academy Online</div>
-      <div class="header-sub">An Education Experience Company</div>
-    </div>
-  </div>
-  <div class="header-title"><em>Other Ways to Add and Subtract</em> — Part 1</div>
-  <div class="header-badge">
-    <span class="header-badge-icon">🦉</span>
-    <span class="header-badge-text">Lesson 4.02.03</span>
-  </div>
+<div class="header-brand">
+<div class="header-logo">
+<img alt="Optima Academy" src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png"/>
+</div>
+<div>
+<div class="header-org">Optima Academy Online</div>
+<div class="header-sub">An Education Experience Company</div>
+</div>
+</div>
+<div class="header-title"><em>Other Ways to Add and Subtract</em> — Part 1</div>
+<div class="header-badge">
+<span class="header-badge-icon">🦉</span>
+<span class="header-badge-text">Lesson 4.02.03</span>
+</div>
 </div>
 <div class="quote-strip"><div class="quote-strip-text">"When a number is close to a friendly one, take the shortcut. The algorithm always works — mental math just works faster."</div><div class="quote-strip-attr">Mental Math Big Idea</div></div>
 <div class="info-strip"><div class="info-cell"><div class="info-icon" style="background:#F0E8FF;">🧭</div><div><div class="info-label">Unit</div><div class="info-value">Unit 2</div><div class="info-detail">Addition and Subtraction</div></div></div><div class="info-cell"><div class="info-icon" style="background:#E3F8ED;">📅</div><div><div class="info-label">Lesson</div><div class="info-value">4.02.03</div><div class="info-detail">U3 Apply</div></div></div><div class="info-cell"><div class="info-icon" style="background:#EAF0FF;">📐</div><div><div class="info-label">Standard</div><div class="info-value">MA.4.NSO.2.1</div><div class="info-detail">Mental strategies for + and −</div></div></div><div class="info-cell"><div class="info-icon" style="background:#FFF8E6;">🔢</div><div><div class="info-label">Focus</div><div class="info-value">Compensation</div><div class="info-detail">MTR.2.1 · MTR.5.1</div></div></div></div>
@@ -332,22 +359,45 @@
 <div class="intro-2col"><div class="intro-card theme-question"><div class="intro-card-head"><div class="intro-card-head-icon">❓</div><div><div class="intro-card-head-label">Essential Question</div><div class="intro-card-head-title">When does the standard algorithm win, and when does a mental strategy win?</div></div></div><div class="intro-card-body"><p>The standard algorithm <strong>always</strong> works. But it is not always the <strong>fastest</strong>. When a number is close to a friendly number — 200, 1,000, 5,000 — there is usually a quicker mental move.</p><p>Smart math is not just knowing one way. It is looking at the numbers first, then choosing.</p></div></div><div class="intro-card theme-objectives"><div class="intro-card-head"><div class="intro-card-head-icon">🎯</div><div><div class="intro-card-head-label">Today's Objectives</div><div class="intro-card-head-title">You will…</div></div></div><div class="intro-card-body"><div class="obj-line"><span class="obj-icon">🎯</span><span><strong>Make a friendly number</strong> by rounding one addend up or down, then adjusting.</span></div><div class="obj-line"><span class="obj-icon">⚖️</span><span><strong>Use compensation</strong> — add a little extra to make the math easier, then take it back.</span></div><div class="obj-line"><span class="obj-icon">🧠</span><span><strong>Choose</strong> the best strategy for the numbers in front of you — algorithm, mental, or break-apart.</span></div></div></div></div>
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
-
 <div class="tab-panel active" id="tab-warmup">
-  <div class="video-wrap" data-video-slot="4-02-03-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.02.03</div><div class="video-wrap-title">When the algorithm is NOT the fastest path</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-03_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write <strong>1,998 + 3,475</strong>. "Stadium ticket sales. Friday: 1,998. Saturday: 3,475. The algorithm would work — but watch what happens to 1,998 if I bump it up just 2." Cross out 1,998 and write 2,000 above it. "Now my problem is 2,000 + 3,475. That is <em>easy</em>. 5,475." Pause. "But I added 2 extra. So I owe 2 back. 5,475 − 2 = <strong>5,473</strong>. Done. No carries. No stack." Show side-by-side: the algorithm (would take 3 carries) and the mental move (one bump and one take-back). "Same answer. Way faster — because 1,998 was so close to a friendly number, the algorithm was working too hard." Frame: "Today and tomorrow you will learn three strategies for adding and subtracting <em>without</em> the algorithm. The algorithm always works. These mental strategies work when the numbers cooperate — and you need to know how to spot it." Tone: this is leveling up. Not replacing the algorithm — adding to your toolkit. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-02-welcome --></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
-    <p>Today the crew gets a new tool: choosing. Each member looks at the numbers FIRST, then picks a strategy.</p>
-    <div class="bubble-row">
-      <div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — pauses before stacking</div><div class="bubble-text">"I don't reach for the algorithm right away anymore. I look at the numbers first. Is one close to a friendly number? Then I might NOT need to stack."</div></div></div>
-      <div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — the strategy chooser</div><div class="bubble-text">"My favorite move is <em>compensate</em>. Bump one number up to friendly, do the easy math, then take the bump back at the end."</div></div></div>
-    </div>
-    <div class="bubble-row">
-      <div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — breaks numbers apart</div><div class="bubble-text">"I split numbers by place value. 3,400 + 2,500 is really 3,000 + 2,000 + 400 + 500. The thousands add. The hundreds add. Done."</div></div></div>
-      <div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — checks with estimation</div><div class="bubble-text">"Mental tricks can go wrong. I always estimate first — if my mental answer is wildly different from my estimate, I know I lost track somewhere."</div></div></div>
-    </div>
-    <div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>Cora's rule: estimate FIRST, then do the mental move. If the two answers are close, you stayed on track. If they're far apart, slow down.</p></div>
-  </div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Find the Friendly Number</div><div class="activity-sub">Round each number to a nearby "friendly" number — a clean 10, 100, or 1,000.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>For each number, choose the closest friendly number — the clean round number that's easiest to work with mentally.</p>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Facts of 0, 1, 2, 5, 10</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">0 × 7</span><input autocomplete="off" class="fluency-input" data-answer="0" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">1 × 8</span><input autocomplete="off" class="fluency-input" data-answer="8" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">2 × 6</span><input autocomplete="off" class="fluency-input" data-answer="12" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">5 × 4</span><input autocomplete="off" class="fluency-input" data-answer="20" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">10 × 3</span><input autocomplete="off" class="fluency-input" data-answer="30" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">2 × 9</span><input autocomplete="off" class="fluency-input" data-answer="18" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">5 × 7</span><input autocomplete="off" class="fluency-input" data-answer="35" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">10 × 6</span><input autocomplete="off" class="fluency-input" data-answer="60" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">0 × 9</span><input autocomplete="off" class="fluency-input" data-answer="0" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">1 × 5</span><input autocomplete="off" class="fluency-input" data-answer="5" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Facts of 0, 1, 2, 5, 10)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
+<p>Today the crew gets a new tool: choosing. Each member looks at the numbers FIRST, then picks a strategy.</p>
+<div class="bubble-row">
+<div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — pauses before stacking</div><div class="bubble-text">"I don't reach for the algorithm right away anymore. I look at the numbers first. Is one close to a friendly number? Then I might NOT need to stack."</div></div></div>
+<div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — the strategy chooser</div><div class="bubble-text">"My favorite move is <em>compensate</em>. Bump one number up to friendly, do the easy math, then take the bump back at the end."</div></div></div>
+</div>
+<div class="bubble-row">
+<div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — breaks numbers apart</div><div class="bubble-text">"I split numbers by place value. 3,400 + 2,500 is really 3,000 + 2,000 + 400 + 500. The thousands add. The hundreds add. Done."</div></div></div>
+<div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — checks with estimation</div><div class="bubble-text">"Mental tricks can go wrong. I always estimate first — if my mental answer is wildly different from my estimate, I know I lost track somewhere."</div></div></div>
+</div>
+<div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>Cora's rule: estimate FIRST, then do the mental move. If the two answers are close, you stayed on track. If they're far apart, slow down.</p></div>
+</div></div>
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Find the Friendly Number</div><div class="activity-sub">Round each number to a nearby "friendly" number — a clean 10, 100, or 1,000.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>For each number, choose the closest friendly number — the clean round number that's easiest to work with mentally.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:grid;gap:14px;">
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
@@ -378,16 +428,16 @@
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Answers:</strong> 198 → <strong>200</strong> (just +2 away). 4,003 → <strong>4,000</strong> (just −3 away). 2,997 → <strong>3,000</strong> (just +3 away). Today, when you see a number this close to a friendly one, you bump it to the friendly value and adjust the answer at the end. Way faster than stacking and carrying.</div>
-<div class="journal-label">✏️ When you bumped 198 up to 200, you added 2 extra. If you then used 200 in an addition problem, what would you need to do to the answer at the very end to be exact? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: Adjusting after using a friendly number" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-02-03-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.02.03</div><div class="video-wrap-title">How far each number lives from "friendly"</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-03_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk each one. <strong>198 → 200.</strong> "198 is two away from 200. Two hundred is clean. So 198's friendly buddy is 200, and the gap is +2." <strong>4,003 → 4,000.</strong> "4,003 is three above 4,000. 4,000 is clean — easier to add or subtract. The gap is −3. We added 3 too many, so 4,003's friendly buddy is 4,000 and we owe 3 back." <strong>2,997 → 3,000.</strong> "Three more would get us to 3,000. The gap is +3. We need to add 3 to make it friendly — so at the end we take 3 back." Stop. "Here's the pattern. A friendly number is a clean round number close by. The gap is how far you traveled. At the end of the problem, you adjust by the SAME gap in the OPPOSITE direction. Bumped up 3? Take 3 back. Bumped down 5? Add 5 back. That trade is what we call compensation." (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-02-readiness-feedback --></div></div></div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
+<div class="journal-label">✏️ When you bumped 198 up to 200, you added 2 extra. If you then used 200 in an addition problem, what would you need to do to the answer at the very end to be exact? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: Adjusting after using a friendly number" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">🏟️</span><p>The Friday Mile Race had <strong>1,998 runners</strong>. The Saturday Mile Race had <strong>3,475 runners</strong>. The Race Director wants to know the total. You COULD stack and carry. But look at 1,998 — it's so close to 2,000. Watch what happens.</p></div>
 <div class="number-talk-visual">
 <div class="number-talk-prompt">Look at 1,998 carefully. How far is it from 2,000? What would happen to the problem if we used 2,000 instead?</div>
-<div class="visual-equation" style="font-size:22px;letter-spacing:1px;">1,998 &nbsp;+&nbsp; 3,475 &nbsp;=&nbsp; ?</div>
+<div class="visual-equation" style="font-size:22px;letter-spacing:1px;">1,998  +  3,475  =  ?</div>
 <div class="notice-wonder-grid">
-<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" id="journal-notice" data-label="Warm-Up — Notice: What I notice about 1,998 + 3,475" placeholder="" oninput="autoSave(this,'dot-notice')" style="min-height:60px;"></textarea></div>
-<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" id="journal-wonder" data-label="Warm-Up — Wonder: What I wonder about using 2,000 instead of 1,998" placeholder="" oninput="autoSave(this,'dot-wonder')" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" data-label="Warm-Up — Notice: What I notice about 1,998 + 3,475" id="journal-notice" oninput="autoSave(this,'dot-notice')" placeholder="" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" data-label="Warm-Up — Wonder: What I wonder about using 2,000 instead of 1,998" id="journal-wonder" oninput="autoSave(this,'dot-wonder')" placeholder="" style="min-height:60px;"></textarea></div>
 </div>
 </div>
 <p><strong>Estimate first:</strong> Round each to the nearest 1,000 in your head, then add. What's your estimate?</p>
@@ -399,50 +449,49 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>Before you predict, ask yourself:</strong> 1,998 is only 2 away from 2,000. If you replaced 1,998 with 2,000, the addition becomes trivial. Then what would you have to do at the END to make the answer exact?</p></div>
 <div class="journal-label">✏️ My estimate AND prediction: What's your estimate (rounded to nearest 1,000)? If you swap 1,998 for 2,000, what does the SUM become — and what do you owe back? <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think Prompt: Estimate 1,998 + 3,475 and predict the friendly-number swap" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think Prompt: Estimate 1,998 + 3,475 and predict the friendly-number swap" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">You estimated and predicted. Now let's open the toolbox — three strategies, side by side, so you can SEE when each one wins.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
-  <div class="vocab-section" aria-label="Daily vocabulary flash cards">
-  <div class="vocab-section-head">
-    <div class="vocab-section-icon">📚</div>
-    <div>
-      <div class="vocab-section-label">Daily Vocabulary</div>
-      <div class="vocab-section-title">Tap to Build Today’s Math Language</div>
-    </div>
-  </div>
-  <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
-  <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for friendly number. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🎯</div><div class="fc-word">friendly number</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">friendly number</div><div class="fc-def">a clean, round number close to the actual one — like 200, 1,000, or 5,000. Easier to work with mentally.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for compensate. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">⚖️</div><div class="fc-word">compensate</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">compensate</div><div class="fc-def">to add a little extra to one number to make it friendly — then take the same amount back at the end to keep the answer exact.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for mental math. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🧠</div><div class="fc-word">mental math</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">mental math</div><div class="fc-def">math you do in your head — no paper, no algorithm. Works best when the numbers are close to friendly ones.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for decompose. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🧩</div><div class="fc-word">decompose</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">decompose</div><div class="fc-def">to break a number apart by place value. 3,475 decomposed is 3,000 + 400 + 70 + 5. Sometimes called "expanded form."</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-02-03-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-02-03 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-02-03-concept --></div></div></div></div>
+<div aria-label="Daily vocabulary flash cards" class="vocab-section">
+<div class="vocab-section-head">
+<div class="vocab-section-icon">📚</div>
+<div>
+<div class="vocab-section-label">Daily Vocabulary</div>
+<div class="vocab-section-title">Tap to Build Today’s Math Language</div>
 </div>
-<div class="video-wrap" data-video-slot="4-02-03-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.02.03</div><div class="video-wrap-title">Three strategies for adding without the algorithm</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-03_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Open with three side-by-side problems on the board. <strong>(1)</strong> 1,998 + 3,475. <strong>(2)</strong> 3,400 + 2,500. <strong>(3)</strong> 4,738 + 2,159. Say: "All three are addition. All three could use the algorithm. But each one has a different best strategy. Watch." <strong>Problem 1 — Make a Friendly Number.</strong> "1,998 is just 2 below 2,000. Bump it: 2,000 + 3,475 = 5,475. Then take back the 2: 5,473." Write: 1,998 + 3,475 = (2,000 + 3,475) − 2 = 5,473. <strong>Problem 2 — Decompose by Place.</strong> "Look at the numbers — 3,400 has hundreds and thousands, 2,500 has hundreds and thousands. Break them apart: 3,000 + 2,000 = 5,000. 400 + 500 = 900. Add those: 5,900. No algorithm needed." Write: 3,400 + 2,500 = (3,000+2,000) + (400+500) = 5,000 + 900 = 5,900. <strong>Problem 3 — Algorithm.</strong> "4,738 and 2,159. Neither is close to a friendly number. Neither breaks apart easily. This is the algorithm's job." Stack and add: answer 6,897. Pull it all together: "Three problems, three winners. Strategy 1 — Make Friendly — works when one number is close to a clean 100, 1,000, or 5,000. Strategy 2 — Decompose by Place — works when numbers have clean place values like 3,400 or 2,500. Strategy 3 — the Algorithm — is the always-works backup. Smart math = look first, then choose." Tone: this is your toolbox now. (~2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-03-concept --></div></div></div></div>
-  <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Three problems below. For each, pick the strategy you think fits best — Make Friendly, Decompose, or Algorithm. Don't worry about getting it "right" yet. Just notice WHICH numbers feel friendly and WHICH don't.</p></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🧮</div><div><div class="activity-title">Strategy Picker: Choose the Best Tool</div><div class="activity-sub">Three problems. Three strategies. Pick the strategy that fits each problem.</div></div></div><div class="activity-body"><p>For each addition, tap the strategy that fits best. There's a clear "best fit" for each one — but the Algorithm always works, so it's never WRONG, just sometimes slower.</p>
+</div>
+<p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
+<div class="vocab-grid">
+<div aria-label="Vocabulary card for friendly number. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🎯</div><div class="fc-word">friendly number</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">friendly number</div><div class="fc-def">a clean, round number close to the actual one — like 200, 1,000, or 5,000. Easier to work with mentally.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for compensate. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">⚖️</div><div class="fc-word">compensate</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">compensate</div><div class="fc-def">to add a little extra to one number to make it friendly — then take the same amount back at the end to keep the answer exact.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for mental math. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🧠</div><div class="fc-word">mental math</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">mental math</div><div class="fc-def">math you do in your head — no paper, no algorithm. Works best when the numbers are close to friendly ones.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for decompose. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🧩</div><div class="fc-word">decompose</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">decompose</div><div class="fc-def">to break a number apart by place value. 3,475 decomposed is 3,000 + 400 + 70 + 5. Sometimes called "expanded form."</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Three problems below. For each, pick the strategy you think fits best — Make Friendly, Decompose, or Algorithm. Don't worry about getting it "right" yet. Just notice WHICH numbers feel friendly and WHICH don't.</p></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🧮</div><div><div class="activity-title">Strategy Picker: Choose the Best Tool</div><div class="activity-sub">Three problems. Three strategies. Pick the strategy that fits each problem.</div></div></div><div class="activity-body"><p>For each addition, tap the strategy that fits best. There's a clear "best fit" for each one — but the Algorithm always works, so it's never WRONG, just sometimes slower.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:18px 14px;margin:12px 0;">
 <div style="margin-bottom:18px;">
 <div style="font-family:'Lora',Georgia,serif;font-size:22px;font-weight:900;color:#0E1C42;text-align:center;margin-bottom:10px;">Problem 1: <strong>1,998 + 3,475</strong></div>
@@ -472,8 +521,8 @@
 </div>
 </div></div>
 <div class="reveal-box" id="learnReveal"><strong>Strategy match-ups:</strong> Problem 1 — <strong>Make Friendly</strong> (1,998 is 2 away from 2,000 → 5,473). Problem 2 — <strong>Decompose</strong> (the place values are clean: 3,000 + 2,000 = 5,000, 400 + 500 = 900, sum = 5,900). Problem 3 — <strong>Algorithm</strong> (no friendly anchor, no clean place values, so just stack and carry → 6,897). The big idea: look at the numbers FIRST, then choose.</div>
-  <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 What You Just Saw</div><p><strong>Three strategies for adding multi-digit numbers.</strong></p><p>1. <strong>Make a Friendly Number.</strong> Bump one addend up or down to a clean 100, 1,000, or 5,000. Do the easy addition. At the end, take back what you added (or add back what you took away). Best when one number is within 5 of a friendly value.</p><p>2. <strong>Decompose by Place.</strong> Split each number into thousands, hundreds, tens, ones. Add place by place. Best when the place values are already clean (lots of zeros).</p><p>3. <strong>Standard Algorithm.</strong> Stack, add, carry. Always works. Use when the other two don't fit.</p><p>Cora's rule: estimate FIRST. Then check that your strategy's answer is close to your estimate. If they're far apart, you lost track somewhere.</p></div>
-  <div class="activity bl-violet" style="margin-top:16px;"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">🎯</div><div><div class="activity-title">Watch a Friendly Bump Live: 2,997 + 4,128</div><div class="activity-sub">Step through Felix's compensation move.</div></div></div><div class="activity-body"><p>Felix says 2,997 is "screaming for a bump." Walk through his move and watch what happens to the answer.</p>
+<div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 What You Just Saw</div><p><strong>Three strategies for adding multi-digit numbers.</strong></p><p>1. <strong>Make a Friendly Number.</strong> Bump one addend up or down to a clean 100, 1,000, or 5,000. Do the easy addition. At the end, take back what you added (or add back what you took away). Best when one number is within 5 of a friendly value.</p><p>2. <strong>Decompose by Place.</strong> Split each number into thousands, hundreds, tens, ones. Add place by place. Best when the place values are already clean (lots of zeros).</p><p>3. <strong>Standard Algorithm.</strong> Stack, add, carry. Always works. Use when the other two don't fit.</p><p>Cora's rule: estimate FIRST. Then check that your strategy's answer is close to your estimate. If they're far apart, you lost track somewhere.</p></div>
+<div class="activity bl-violet" style="margin-top:16px;"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">🎯</div><div><div class="activity-title">Watch a Friendly Bump Live: 2,997 + 4,128</div><div class="activity-sub">Step through Felix's compensation move.</div></div></div><div class="activity-body"><p>Felix says 2,997 is "screaming for a bump." Walk through his move and watch what happens to the answer.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:18px 14px;margin:12px 0;font-family:'Lora',Georgia,serif;font-size:18px;color:#0E1C42;line-height:1.8;">
 <div><strong>Original:</strong> 2,997 + 4,128 = ?</div>
 <div style="color:#6B3FA0;"><strong>Step 1.</strong> Bump 2,997 up to 3,000 (added <strong>+3</strong>).</div>
@@ -483,18 +532,18 @@
 </div>
 <div class="socratic-box"><div class="socratic-label">🧠 Socratic — Think Like a Mathematician</div><p class="socratic-q">When you bumped 2,997 UP by 3, why did you have to SUBTRACT 3 at the end? Why not add 3 again — or leave the answer alone?</p>
 <div class="journal-label">✏️ My thinking <span class="saved-dot" id="dot-soc"></span></div>
-<textarea class="journal-box" id="journal-soc" data-label="Learn — Socratic: Why subtract 3 at the end after bumping up?" placeholder="" oninput="autoSave(this,'dot-soc')"></textarea></div>
+<textarea class="journal-box" data-label="Learn — Socratic: Why subtract 3 at the end after bumping up?" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: Friendly vs Algorithm Head-to-Head</div><div class="activity-sub">Same problem. Two strategies. Time them in your head.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>The cross-country meet had <strong>4,998 runners</strong> in the morning and <strong>2,375 runners</strong> in the afternoon. How many total? Solve it TWO ways — Make Friendly and Algorithm — then decide which was faster.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it both ways:</p>
-<div class="video-wrap" data-video-slot="4-02-03-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.02.03</div><div class="video-wrap-title">Make Friendly vs. Algorithm — same answer, different speed</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-03_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write 4,998 + 2,375. <strong>Strategy A — Make Friendly.</strong> "4,998 is 2 below 5,000. Bump it up." Write: 5,000 + 2,375 = 7,375. "Now take back the 2." 7,375 − 2 = <strong>7,373</strong>. Three written lines, done in seconds. <strong>Strategy B — Algorithm.</strong> Stack vertically. Ones 8+5 = 13, write 3 carry 1. Tens 9+7+1 = 17, write 7 carry 1. Hundreds 9+3+1 = 13, write 3 carry 1. Thousands 4+2+1 = 7. Final: <strong>7,373</strong>. Three carries — slower. "Same answer. But Strategy A finished in two steps. Strategy B took five steps with three carries. When a number is THIS close to friendly, the algorithm is doing more work than it needs to." Pause. "Then estimate: 5,000 + 2,000 = 7,000. Our answer 7,373 is right there. Both strategies pass the check." (~2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-03-example --></div></div></div></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: Friendly vs Algorithm Head-to-Head</div><div class="activity-sub">Same problem. Two strategies. Time them in your head.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>The cross-country meet had <strong>4,998 runners</strong> in the morning and <strong>2,375 runners</strong> in the afternoon. How many total? Solve it TWO ways — Make Friendly and Algorithm — then decide which was faster.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it both ways:</p>
+
 <div class="key-concept" style="margin-top:14px;"><div class="key-concept-label">⚖️ Head-to-Head Comparison</div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px;">
 <div style="background:#F0E8FF;border:2px solid #D8CCF0;border-radius:12px;padding:12px 14px;">
 <div style="font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:#6B3FA0;font-weight:900;margin-bottom:6px;">🎯 MAKE FRIENDLY</div>
 <div style="font-family:'Lora',Georgia,serif;font-size:16px;line-height:1.7;color:#0E1C42;">
-4,998 + 2,375<br>
-= (5,000 + 2,375) − 2<br>
-= 7,375 − 2<br>
+4,998 + 2,375<br/>
+= (5,000 + 2,375) − 2<br/>
+= 7,375 − 2<br/>
 = <strong>7,373</strong>
 </div>
 <div style="margin-top:6px;font-size:12px;font-weight:800;color:#2DB87A;">3 steps · 0 carries</div>
@@ -502,7 +551,7 @@
 <div style="background:#EAF0FF;border:2px solid #D6E0F8;border-radius:12px;padding:12px 14px;">
 <div style="font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:#3A6B9A;font-weight:900;margin-bottom:6px;">📐 ALGORITHM</div>
 <div style="font-family:'Lora',Georgia,serif;font-size:16px;line-height:1.7;color:#0E1C42;">
-&nbsp;&nbsp;4,998<br>+ 2,375<br>━━━━━<br>&nbsp;&nbsp;<strong>7,373</strong>
+  4,998<br/>+ 2,375<br/>━━━━━<br/>  <strong>7,373</strong>
 </div>
 <div style="margin-top:6px;font-size:12px;font-weight:800;color:#E07B39;">5 steps · 3 carries</div>
 </div>
@@ -511,23 +560,22 @@
 </div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">Three strategies. One toolbox. Time to pick the right tool for each problem.</p><button class="tab-next-btn" onclick="switchTab('practice')">Continue to 🧮 Practice →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-practice">
-  <div class="callout callout-info"><span class="callout-icon">🧭</span><p>Three problems. Each one calls for a different strategy. Look at the numbers first, choose your move, then solve.</p></div>
-  <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask yourself:</strong> Is one number close to a friendly value? Are the place values clean and easy to split? Or do I just need to stack and carry?</p></div>
-  <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Go back to the Learn tab. The Strategy Picker and the Head-to-Head comparison are still there. Estimate first, then choose.</p></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">Make Friendly: 1,997 + 4,265</div><div class="activity-sub">One number is screaming for a bump. Hear it.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>Use the Make-Friendly strategy. Bump 1,997 up to 2,000 (you added 3). Do the easy add. Take back the 3 at the end. Then pick your answer below.</p>
+<div class="callout callout-info"><span class="callout-icon">🧭</span><p>Three problems. Each one calls for a different strategy. Look at the numbers first, choose your move, then solve.</p></div>
+<div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask yourself:</strong> Is one number close to a friendly value? Are the place values clean and easy to split? Or do I just need to stack and carry?</p></div>
+<div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Go back to the Learn tab. The Strategy Picker and the Head-to-Head comparison are still there. Estimate first, then choose.</p></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">Make Friendly: 1,997 + 4,265</div><div class="activity-sub">One number is screaming for a bump. Hear it.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>Use the Make-Friendly strategy. Bump 1,997 up to 2,000 (you added 3). Do the easy add. Take back the 3 at the end. Then pick your answer below.</p>
 <div class="value-card-row" style="justify-content:center;">
 <button class="value-card" onclick="pickP1Round(this,'6,262')" style="min-width:90px;"><div class="big">6,262</div></button>
 <button class="value-card" onclick="pickP1Round(this,'6,265')" style="min-width:90px;"><div class="big">6,265</div></button>
 <button class="value-card" onclick="pickP1Round(this,'6,268')" style="min-width:90px;"><div class="big">6,268</div></button>
 </div>
 <div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Exactly.</strong> 1,997 + 3 = 2,000. Then 2,000 + 4,265 = 6,265. Then take back the 3 you added: 6,265 − 3 = <strong>6,262</strong>. Estimate check: 2,000 + 4,000 = 6,000. ✓
-<div class="video-wrap" data-video-slot="4-02-03-practice-1-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 1</div><div class="video-wrap-title">The bump-and-take-back move</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-03_Practice-1_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Celebrate. "You spotted that 1,997 was begging to be 2,000. The bump was +3, so the take-back is −3. That trade-off — add to one number, subtract from the answer — is what keeps the math exact." Restate the move once: bump → easy add → take back. Then connect: "The bigger the carry-chain you avoided, the bigger the win. 1,997 + 4,265 would have meant carry, carry, carry. You did it in three lines." (~45 sec)</div><div class="video-placeholder-id"><!-- slot: 4-02-03-practice-1-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Not quite.</strong> The bump tricked you. Remember — if you ADD to one of the numbers to make it friendly, you have to SUBTRACT the same amount from the final answer to keep it exact.
 <div class="hint-callout">1,997 + 3 = 2,000. 2,000 + 4,265 = 6,265. You added 3 EXTRA to the problem — so subtract 3 from 6,265 to get the real answer.</div>
-<div class="video-wrap" data-video-slot="4-02-03-practice-1-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 1</div><div class="video-wrap-title">Add to make friendly → subtract back at the end</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-03_Practice-1_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach compensation. "When we bump UP, the friendly number is bigger than the original. That means we added too much to the problem. So at the end, the answer is too big — by exactly how much we bumped. Subtract that back." Walk through 1,997 + 4,265 step by step. Concept being retaught: the direction of compensation. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-03-practice-1-retry --></div></div></div></div></div></div></div>
-  <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Choose Your Strategy — Three Sums</div><div class="activity-sub">Each problem has a best strategy. Round-and-add — same problem set, different best move.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Three different sums. One wants Make Friendly. One wants Decompose. One wants the Algorithm. Read the numbers before you reach for a strategy.</p></div>
+</div></div></div>
+<div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Choose Your Strategy — Three Sums</div><div class="activity-sub">Each problem has a best strategy. Round-and-add — same problem set, different best move.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Three different sums. One wants Make Friendly. One wants Decompose. One wants the Algorithm. Read the numbers before you reach for a strategy.</p></div>
 <p>For each sum, pick the answer. Use whichever strategy fits.</p>
 <div style="display:grid;gap:14px;margin:14px 0;">
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:14px;">
@@ -559,16 +607,16 @@
 </div>
 </div>
 <div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ Three for three.</strong> 2a — 5,003 + 2,148 = <strong>7,151</strong> (bump 5,003 down by 3, add easy, add 3 back). 2b — 4,200 + 3,600 = <strong>7,800</strong> (thousands: 7,000. hundreds: 800. done). 2c — 6,357 + 2,486 = <strong>8,843</strong> (algorithm — two carries, but unavoidable). The strategy you pick should match what the numbers offer.
-<div class="video-wrap" data-video-slot="4-02-03-practice-2-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 2</div><div class="video-wrap-title">Matching the strategy to the numbers</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-03_Practice-2_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Celebrate the strategy-matching. Recap each: Make Friendly works for 2a because 5,003 is almost-5,000. Decompose works for 2b because both numbers split cleanly by place. The Algorithm wins for 2c because there's no shortcut. "When you look at the numbers first, you pick the right tool. That's the move of a thoughtful mathematician." (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-03-practice-2-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Some were tricky.</strong> Re-read each problem. Ask: Is one number close to a friendly value? Are the place values clean? If both no — algorithm it is.
 <div class="hint-callout">2a — 5,003 is just 3 ABOVE 5,000. Bump DOWN to 5,000, add, then ADD 3 BACK. 2b — both numbers have only hundreds and thousands. 2c — no shortcut.</div>
-<div class="video-wrap" data-video-slot="4-02-03-practice-2-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 2</div><div class="video-wrap-title">Reading the numbers before reaching for a tool</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-03_Practice-2_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the strategy-choice habit. "Before you start, read the numbers like Cora does. Eyes on the digits. Is anything close to 1,000? 5,000? 10,000? Are there lots of zeros? If yes, you've got a mental-math option. If no, just stack." Walk each of the three problems slowly. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-03-practice-2-retry --></div></div></div></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Maya's Mistake — Did She Take Back?</div><div class="activity-sub">Walk through her compensation move and spot the missed adjustment.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Maya tried the Make Friendly strategy on 3,997 + 5,128 but forgot a step. Read her work and find the error.</p></div>
+</div></div></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Maya's Mistake — Did She Take Back?</div><div class="activity-sub">Walk through her compensation move and spot the missed adjustment.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Maya tried the Make Friendly strategy on 3,997 + 5,128 but forgot a step. Read her work and find the error.</p></div>
 <div class="task-box"><div class="task-label">Maya's Work</div>
 <p>Maya was asked to find <strong>3,997 + 5,128</strong>. She wrote:</p>
 <div style="background:#FFF8E6;border:2px solid #F5C518;border-radius:12px;padding:14px 16px;font-family:'Lora',Georgia,serif;font-size:17px;line-height:1.8;color:#5A4A3A;margin:10px 0;">
-"3,997 is just 3 away from 4,000.<br>
-So I'll bump it up: 4,000 + 5,128 = 9,128.<br>
+"3,997 is just 3 away from 4,000.<br/>
+So I'll bump it up: 4,000 + 5,128 = 9,128.<br/>
 Answer: <strong>9,128</strong>."
 </div>
 <p><strong>Your task:</strong> Tap every statement below that is true about Maya's reasoning.</p>
@@ -580,27 +628,23 @@ Answer: <strong>9,128</strong>."
 </div>
 <button class="purple-btn" onclick="checkErrorAnalysis()">✓ Check My Picks</button>
 <div class="journal-label">✏️ In your own words, write down the rule for "taking back" after bumping up to a friendly number. Use 3,997 + 5,128 as your example. <span class="saved-dot" id="dot-ea"></span></div>
-<textarea class="journal-box" id="journal-ea" data-label="Practice 3 — Error Analysis: Why Maya's friendly-number trick failed" placeholder="" oninput="autoSave(this,'dot-ea')"></textarea>
-<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Maya bumped 3,997 up to 4,000 (added 3 EXTRA). But she never took the 3 back. So her answer (9,128) is 3 too big. Correct answer: <strong>9,125</strong>. The Make Friendly strategy IS a great choice for 3,997 + 5,128 — Maya just skipped the last step.<div class="video-wrap" data-video-slot="4-02-03-practice-3-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 3</div><div class="video-wrap-title">Catching the missing take-back</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-03_Practice-3_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "Compensation works because you put extra IN the problem — then you have to take that extra OUT of the answer. Maya did the first half and skipped the second. Estimate alone won't catch a 3-off mistake. The take-back is the safety net." (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-03-practice-3-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">Maya bumped 3,997 → 4,000 (added 3). Then 4,000 + 5,128 = 9,128. But where did she ever subtract that 3? She didn't.</div><div class="video-wrap" data-video-slot="4-02-03-practice-3-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 3</div><div class="video-wrap-title">Compensation has TWO halves — don't skip the second</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-03_Practice-3_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the take-back. "Bump up means you ADDED to the problem. To get the real answer, you SUBTRACT the same amount. Skip that — you overshoot." Walk through 3,997 + 5,128 fully, showing the take-back explicitly. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-03-practice-3-retry --></div></div></div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div></div>
+<textarea class="journal-box" data-label="Practice 3 — Error Analysis: Why Maya's friendly-number trick failed" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
+<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Maya bumped 3,997 up to 4,000 (added 3 EXTRA). But she never took the 3 back. So her answer (9,128) is 3 too big. Correct answer: <strong>9,125</strong>. The Make Friendly strategy IS a great choice for 3,997 + 5,128 — Maya just skipped the last step.</div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">Maya bumped 3,997 → 4,000 (added 3). Then 4,000 + 5,128 = 9,128. But where did she ever subtract that 3? She didn't.</div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">You matched strategies, picked answers, and caught a missing take-back. Now show what you know.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-assignment">
-  <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Use Make Friendly, Decompose, or the Algorithm — whichever fits the numbers.</div></div></div><div class="activity-body"><p>You built three strategies today. Now use them. For each problem, read the numbers first — then pick the strategy that fits. The algorithm is always a safe choice, but mental moves are faster when the numbers cooperate.</p>
+<div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Use Make Friendly, Decompose, or the Algorithm — whichever fits the numbers.</div></div></div><div class="activity-body"><p>You built three strategies today. Now use them. For each problem, read the numbers first — then pick the strategy that fits. The algorithm is always a safe choice, but mental moves are faster when the numbers cooperate.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Is one number close to a friendly value (within 5)? Are the place values clean and easy to split? If yes — use the mental move. If no — stack and carry.</p></div>
-<div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Make Friendly drill.</strong> Use the Make Friendly strategy on each. Show your bump (what you added or subtracted to make a friendly number), the easy addition, and the take-back step.<br>(a) <strong>1,996 + 4,237</strong><br>(b) <strong>5,003 + 2,468</strong><br>(c) <strong>2,998 + 6,415</strong></p><div class="journal-label">✏️ My work <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" id="journal-a1" data-label="Show What You Know — Problem 1: Three Make-Friendly sums" placeholder="" oninput="autoSave(this,'dot-a1')"></textarea></div>
-
-<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> The standard algorithm works EVERY time. So why did we spend a whole lesson learning Make Friendly and Decompose? In your own words, explain when a mental strategy WINS over the algorithm — and when it doesn't.</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" id="journal-a6" data-label="Show What You Know — Problem 6: When mental math wins over the algorithm" placeholder="" oninput="autoSave(this,'dot-a6')"></textarea></div>
-
-
+<div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Make Friendly drill.</strong> Use the Make Friendly strategy on each. Show your bump (what you added or subtracted to make a friendly number), the easy addition, and the take-back step.<br/>(a) <strong>1,996 + 4,237</strong><br/>(b) <strong>5,003 + 2,468</strong><br/>(c) <strong>2,998 + 6,415</strong></p><div class="journal-label">✏️ My work <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: Three Make-Friendly sums" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
+<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> The standard algorithm works EVERY time. So why did we spend a whole lesson learning Make Friendly and Decompose? In your own words, explain when a mental strategy WINS over the algorithm — and when it doesn't.</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: When mental math wins over the algorithm" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#55C8E8;"><div class="activity-head"><div class="activity-num" style="background:#55C8E8;color:#0E1C42;">🗺️</div><div><div class="activity-title">Connection Forward: What Comes Next</div><div class="activity-sub">Preview Lesson 4.02.04 — Other Ways to Add and Subtract Part 2</div></div></div><div class="activity-body"><p>Today's mental strategies all worked for ADDITION. But subtraction has its own tricks — especially when regrouping across zeros gets ugly.</p><p>Next lesson, you'll meet <strong>count-up</strong> (start at the smaller number and count up to the bigger one), and <strong>equal-change</strong> (add the same amount to both numbers — the difference stays the same). When 4,002 − 1,998 turns into 4,004 − 2,000, the answer falls out instantly.</p><p>The big question next time: <em>If adding the same amount to BOTH numbers in a subtraction doesn't change the difference, why is that true?</em></p></div></div></div></div>
-<div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly>Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
-  <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
+<div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
+<div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
 </div>
 <div class="footer">
-  <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
-  <div class="footer-sub">Math · Grade 4 · 4.02.03</div>
-  <div class="footer-copy">© 2025 Optima Academy Online</div>
+<div class="footer-main">🏫 <span>Optima Academy Online</span></div>
+<div class="footer-sub">Math · Grade 4 · 4.02.03</div>
+<div class="footer-copy">© 2025 Optima Academy Online</div>
 </div>
 </div>
 <canvas id="confettiCanvas"></canvas>
@@ -1042,6 +1086,75 @@ async function loadVideoManifest(){try{let res=await fetch('video-manifest.md',{
 function parseManifest(txt){let map={};let lines=txt.split(/\r?\n/);let current=null,buf=[];function commit(){if(current&&buf.join('\n').trim())map[current]=buf.join('\n').trim();buf=[]}for(let line of lines){let m=line.match(/^([A-Za-z0-9-]+):\s*$/);if(m){commit();current=m[1]}else if(current){buf.push(line)}}commit();return map}
 function showPageFeedback(msg){var panel=document.querySelector('.tab-panel.active')||document.body;var box=panel.querySelector(':scope > .page-feedback');if(!box){box=document.createElement('div');box.className='page-feedback';panel.insertBefore(box,panel.firstChild);}box.className='page-feedback show warn';box.innerHTML=msg;}
 window.addEventListener('DOMContentLoaded',()=>{restoreJournals();updateProgress();loadVideoManifest()});
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Facts of 0, 1, 2, 5, 10";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
 </script>
 </body>
 </html>

@@ -329,6 +329,32 @@
 .cc-row strong{color:#4A8A4A;font-weight:900;font-family:Lora,Georgia,serif}
 .cc-row em{color:#7A88A8;font-style:italic;font-size:12px}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
@@ -343,7 +369,7 @@
 <div class="header-sub">An Education Experience Company</div>
 </div>
 </div>
-<div class="header-title"><em>Perimeter &mdash; Part 1</em></div>
+<div class="header-title"><em>Perimeter — Part 1</em></div>
 <div class="header-badge">
 <span class="header-badge-icon">🦉</span>
 <span class="header-badge-text">Lesson 4.11.04</span>
@@ -356,7 +382,31 @@
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
-<div class="video-wrap" data-video-slot="4-11-04-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.11.04</div><div class="video-wrap-title">Perimeter &mdash; the distance around a shape.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-11-04_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Trace a finger around the edge of a 5 × 3 rectangle drawn on graph paper. "Five steps. Three. Five. Three. Total: 16 — that's the perimeter." Then: "Or use 2 × (5 + 3) = 16." Frame: <strong>Perimeter = distance around. Add all sides OR 2 × (L + W).</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-welcome --></div></div></div></div>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Mixed Multiplication Facts — Maintenance</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">8 × 9</span><input autocomplete="off" class="fluency-input" data-answer="72" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 6</span><input autocomplete="off" class="fluency-input" data-answer="42" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 8</span><input autocomplete="off" class="fluency-input" data-answer="72" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 9</span><input autocomplete="off" class="fluency-input" data-answer="54" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">11 × 8</span><input autocomplete="off" class="fluency-input" data-answer="88" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">12 × 6</span><input autocomplete="off" class="fluency-input" data-answer="72" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 7</span><input autocomplete="off" class="fluency-input" data-answer="49" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 6</span><input autocomplete="off" class="fluency-input" data-answer="48" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 9</span><input autocomplete="off" class="fluency-input" data-answer="81" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 8</span><input autocomplete="off" class="fluency-input" data-answer="48" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Mixed Multiplication Facts — Maintenance)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
 <p>Atlas takes the lead — measurement is about naming units and applying conversion rules. Felix multiplies. Hazel builds the picture. Cora checks units.</p>
 <div class="bubble-row">
@@ -372,15 +422,14 @@
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Walk Around the Edge</div><div class="activity-sub">Add all four sides. Pick the perimeter.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>Three rectangles with side lengths shown. Add to find the perimeter.</p>
 <div style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:grid;gap:18px;">
-
 <div style="display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;">
 <div style="background:#fff;border:1.5px solid #C9E4C9;border-radius:10px;padding:10px;">
-<svg width="160" height="100" viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg" style="display:block;">
-<rect x="20" y="20" width="120" height="60" fill="#7CB87C" fill-opacity="0.3" stroke="#2D5A2D" stroke-width="2"/>
-<text x="80" y="14" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="13" fill="#0E1C42" font-weight="700">12 cm</text>
-<text x="80" y="95" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="13" fill="#0E1C42" font-weight="700">12 cm</text>
-<text x="14" y="55" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="13" fill="#0E1C42" font-weight="700" transform="rotate(-90,14,55)">6 cm</text>
-<text x="148" y="55" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="13" fill="#0E1C42" font-weight="700" transform="rotate(90,148,55)">6 cm</text>
+<svg height="100" style="display:block;" viewbox="0 0 160 100" width="160" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#7CB87C" fill-opacity="0.3" height="60" stroke="#2D5A2D" stroke-width="2" width="120" x="20" y="20"></rect>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="13" font-weight="700" text-anchor="middle" x="80" y="14">12 cm</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="13" font-weight="700" text-anchor="middle" x="80" y="95">12 cm</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="13" font-weight="700" text-anchor="middle" transform="rotate(-90,14,55)" x="14" y="55">6 cm</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="13" font-weight="700" text-anchor="middle" transform="rotate(90,148,55)" x="148" y="55">6 cm</text>
 </svg>
 </div>
 <div class="value-card-row" style="margin:0;">
@@ -389,15 +438,14 @@
 <button class="value-card" onclick="pickReadinessRound(this,1,'18 cm')" style="min-width:90px;"><div class="big" style="font-size:14px;">18 cm</div></button>
 </div>
 </div>
-
 <div style="display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;">
 <div style="background:#fff;border:1.5px solid #C9E4C9;border-radius:10px;padding:10px;">
-<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" style="display:block;">
-<rect x="20" y="20" width="80" height="80" fill="#9BC89B" fill-opacity="0.3" stroke="#2D5A2D" stroke-width="2"/>
-<text x="60" y="14" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="13" fill="#0E1C42" font-weight="700">8 m</text>
-<text x="60" y="115" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="13" fill="#0E1C42" font-weight="700">8 m</text>
-<text x="14" y="65" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="13" fill="#0E1C42" font-weight="700" transform="rotate(-90,14,65)">8 m</text>
-<text x="108" y="65" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="13" fill="#0E1C42" font-weight="700" transform="rotate(90,108,65)">8 m</text>
+<svg height="120" style="display:block;" viewbox="0 0 120 120" width="120" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#9BC89B" fill-opacity="0.3" height="80" stroke="#2D5A2D" stroke-width="2" width="80" x="20" y="20"></rect>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="13" font-weight="700" text-anchor="middle" x="60" y="14">8 m</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="13" font-weight="700" text-anchor="middle" x="60" y="115">8 m</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="13" font-weight="700" text-anchor="middle" transform="rotate(-90,14,65)" x="14" y="65">8 m</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="13" font-weight="700" text-anchor="middle" transform="rotate(90,108,65)" x="108" y="65">8 m</text>
 </svg>
 </div>
 <div class="value-card-row" style="margin:0;">
@@ -406,15 +454,14 @@
 <button class="value-card" onclick="pickReadinessRound(this,2,'16 m')" style="min-width:90px;"><div class="big" style="font-size:14px;">16 m</div></button>
 </div>
 </div>
-
 <div style="display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;">
 <div style="background:#fff;border:1.5px solid #C9E4C9;border-radius:10px;padding:10px;">
-<svg width="180" height="100" viewBox="0 0 180 100" xmlns="http://www.w3.org/2000/svg" style="display:block;">
-<rect x="20" y="20" width="140" height="60" fill="#7CB87C" fill-opacity="0.3" stroke="#2D5A2D" stroke-width="2"/>
-<text x="90" y="14" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="13" fill="#0E1C42" font-weight="700">15 ft</text>
-<text x="90" y="95" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="13" fill="#0E1C42" font-weight="700">15 ft</text>
-<text x="14" y="55" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="13" fill="#0E1C42" font-weight="700" transform="rotate(-90,14,55)">7 ft</text>
-<text x="168" y="55" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="13" fill="#0E1C42" font-weight="700" transform="rotate(90,168,55)">7 ft</text>
+<svg height="100" style="display:block;" viewbox="0 0 180 100" width="180" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#7CB87C" fill-opacity="0.3" height="60" stroke="#2D5A2D" stroke-width="2" width="140" x="20" y="20"></rect>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="13" font-weight="700" text-anchor="middle" x="90" y="14">15 ft</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="13" font-weight="700" text-anchor="middle" x="90" y="95">15 ft</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="13" font-weight="700" text-anchor="middle" transform="rotate(-90,14,55)" x="14" y="55">7 ft</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="13" font-weight="700" text-anchor="middle" transform="rotate(90,168,55)" x="168" y="55">7 ft</text>
 </svg>
 </div>
 <div class="value-card-row" style="margin:0;">
@@ -423,13 +470,12 @@
 <button class="value-card" onclick="pickReadinessRound(this,3,'105 sq ft')" style="min-width:90px;"><div class="big" style="font-size:14px;">105 sq ft</div></button>
 </div>
 </div>
-
 </div>
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Perimeters:</strong> 12+6+12+6 = <strong>36</strong>. 8+8+8+8 = <strong>32</strong>. 15+7+15+7 = <strong>44</strong>. Add every side once. Answer in linear units, NOT square units.</div>
-<div class="journal-label">✏️ Why isn't perimeter in SQUARE units? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: perimeter sums" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-11-04-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.11.04</div><div class="video-wrap-title">Walk the edge, add the sides</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-11-04_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "Perimeter adds the EDGES. Area counts the INSIDE. Different things, different units. A square 8 × 8 has perimeter 32 and area 64." Frame: <strong>Add all four sides for perimeter. Linear units, not square.</strong></div><div class="video-placeholder-id"><!-- slot: lesson-readiness-feedback --></div></div></div></div>
+<div class="journal-label">✏️ Why isn't perimeter in SQUARE units? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: perimeter sums" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Find a missing side.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">📐</span><p>A rectangle has perimeter <strong>40 cm</strong>. One side is <strong>7 cm</strong>. What is the other side?</p></div>
 <div class="strategy-chip-row">
@@ -440,11 +486,10 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>Method:</strong> Two sides are 7 cm (= 14 cm total). The other TWO sides share 40 − 14 = 26 cm. Each is 26 ÷ 2 = <strong>13 cm</strong>.</p></div>
 <div class="journal-label">✏️ Show the steps to find a missing side from perimeter. <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think: missing side from perimeter" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think: missing side from perimeter" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">Now walk a perimeter yourself.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-11-04-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-11-04 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-11-04-concept --></div></div></div></div>
 <div aria-label="Daily vocabulary flash cards" class="vocab-section">
 <div class="vocab-section-head">
 <div class="vocab-section-icon">📚</div>
@@ -455,40 +500,38 @@
 </div>
 <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
 <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for perimeter. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">📏</div><div class="fc-word">perimeter</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">perimeter</div><div class="fc-def">the distance all the way around a shape. Add the length of every side.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for opposite sides. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🔁</div><div class="fc-word">opposite sides</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">opposite sides</div><div class="fc-def">in a rectangle, the two sides facing each other have the same length. The top equals the bottom; left equals right.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for shortcut formula. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">⚡</div><div class="fc-word">P = 2 × (L + W)</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">P = 2 × (L + W)</div><div class="fc-def">the shortcut for rectangle perimeter. Add length and width, then double.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for linear units. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">📐</div><div class="fc-word">linear units</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">linear units</div><div class="fc-def">the units perimeter is measured in: cm, m, in, ft. NOT square units (that's area).</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div aria-label="Vocabulary card for perimeter. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">📏</div><div class="fc-word">perimeter</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">perimeter</div><div class="fc-def">the distance all the way around a shape. Add the length of every side.</div><div class="fc-tap-back">tap to flip back</div></div>
 </div>
-<div class="video-wrap" data-video-slot="4-11-04-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.11.04</div><div class="video-wrap-title">Walk every side. Add. Or use the rectangle shortcut.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-11-04_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Three perimeters. (1) 5 × 3: 5 + 3 + 5 + 3 = 16 OR 2 × 8 = 16. (2) Square 6 × 6: 6 × 4 = 24. (3) Missing side: perimeter 30, one side 7. Other = (30 − 14) ÷ 2 = 8. Frame: <strong>Add or use 2 × (L + W). Always in LINEAR units.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-concept --></div></div></div></div>
+</div>
+<div aria-label="Vocabulary card for opposite sides. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🔁</div><div class="fc-word">opposite sides</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">opposite sides</div><div class="fc-def">in a rectangle, the two sides facing each other have the same length. The top equals the bottom; left equals right.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for shortcut formula. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">⚡</div><div class="fc-word">P = 2 × (L + W)</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">P = 2 × (L + W)</div><div class="fc-def">the shortcut for rectangle perimeter. Add length and width, then double.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for linear units. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">📐</div><div class="fc-word">linear units</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">linear units</div><div class="fc-def">the units perimeter is measured in: cm, m, in, ft. NOT square units (that's area).</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
 <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Pick how many groups to SPLIT the bar into. Then click groups to TAKE them.</p></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#4A8A4A;">🚶</div><div><div class="activity-title">Perimeter Walker</div><div class="activity-sub">Set the rectangle. Click Walk to trace each side. The counter ticks up by that side's length.</div></div></div><div class="activity-body"><p>Three rectangles. Notice the pattern: opposite sides add the same amount.</p>
-
-<div class="pw-card" data-id="1" data-unit="cm" data-max-l="8" data-max-w="6" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="pw-card" data-id="1" data-max-l="8" data-max-w="6" data-unit="cm" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 1 · Small rectangle (cm)</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Try 5 × 3. Then 6 × 4.</div>
-
 <div style="display:grid;grid-template-columns:auto auto;gap:14px;justify-content:center;align-items:center;margin-bottom:14px;">
 <div style="text-align:center;">
 <div style="font-size:11px;font-weight:900;color:#2D5A2D;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Length (cm)</div>
@@ -507,23 +550,17 @@
 </div>
 </div>
 </div>
-
 <div id="pwStage-1" style="background:#fff;border:2px solid #C9E4C9;border-radius:10px;padding:14px;margin-bottom:12px;min-height:200px;display:flex;justify-content:center;align-items:center;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;font-weight:900;color:#0E1C42;margin-bottom:8px;" id="pwReadout-1">&mdash;</div>
-
+<div id="pwReadout-1" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;font-weight:900;color:#0E1C42;margin-bottom:8px;">—</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="pwStep('1')" id="pwStepBtn-1" style="background:#4A8A4A;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">🚶 Walk one side</button>
+<button id="pwStepBtn-1" onclick="pwStep('1')" style="background:#4A8A4A;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">🚶 Walk one side</button>
 <button onclick="pwReset('1')" style="background:#6BA56B;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="pwStatus-1" style="background:#9BC89B;border:2px solid #7CB87C;border-radius:10px;padding:10px 14px;font-size:14px;color:#2D5A2D;font-weight:700;line-height:1.5;text-align:center;">Set length and width. Then click Walk to trace each side.</div>
 </div>
-
-<div class="pw-card" data-id="2" data-unit="m" data-max-l="8" data-max-w="8" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="pw-card" data-id="2" data-max-l="8" data-max-w="8" data-unit="m" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 2 · Square (m)</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Set length = width. What pattern do you see in the perimeter?</div>
-
 <div style="display:grid;grid-template-columns:auto auto;gap:14px;justify-content:center;align-items:center;margin-bottom:14px;">
 <div style="text-align:center;">
 <div style="font-size:11px;font-weight:900;color:#2D5A2D;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Length (m)</div>
@@ -542,23 +579,17 @@
 </div>
 </div>
 </div>
-
 <div id="pwStage-2" style="background:#fff;border:2px solid #C9E4C9;border-radius:10px;padding:14px;margin-bottom:12px;min-height:200px;display:flex;justify-content:center;align-items:center;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;font-weight:900;color:#0E1C42;margin-bottom:8px;" id="pwReadout-2">&mdash;</div>
-
+<div id="pwReadout-2" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;font-weight:900;color:#0E1C42;margin-bottom:8px;">—</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="pwStep('2')" id="pwStepBtn-2" style="background:#4A8A4A;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">🚶 Walk one side</button>
+<button id="pwStepBtn-2" onclick="pwStep('2')" style="background:#4A8A4A;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">🚶 Walk one side</button>
 <button onclick="pwReset('2')" style="background:#6BA56B;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="pwStatus-2" style="background:#9BC89B;border:2px solid #7CB87C;border-radius:10px;padding:10px 14px;font-size:14px;color:#2D5A2D;font-weight:700;line-height:1.5;text-align:center;">Set length and width. Then click Walk to trace each side.</div>
 </div>
-
-<div class="pw-card" data-id="3" data-unit="ft" data-max-l="15" data-max-w="10" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="pw-card" data-id="3" data-max-l="15" data-max-w="10" data-unit="ft" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 3 · Wider rectangle (ft)</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Try 12 × 5. Perimeter is the same in any walking direction.</div>
-
 <div style="display:grid;grid-template-columns:auto auto;gap:14px;justify-content:center;align-items:center;margin-bottom:14px;">
 <div style="text-align:center;">
 <div style="font-size:11px;font-weight:900;color:#2D5A2D;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Length (ft)</div>
@@ -577,19 +608,14 @@
 </div>
 </div>
 </div>
-
 <div id="pwStage-3" style="background:#fff;border:2px solid #C9E4C9;border-radius:10px;padding:14px;margin-bottom:12px;min-height:200px;display:flex;justify-content:center;align-items:center;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;font-weight:900;color:#0E1C42;margin-bottom:8px;" id="pwReadout-3">&mdash;</div>
-
+<div id="pwReadout-3" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;font-weight:900;color:#0E1C42;margin-bottom:8px;">—</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="pwStep('3')" id="pwStepBtn-3" style="background:#4A8A4A;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">🚶 Walk one side</button>
+<button id="pwStepBtn-3" onclick="pwStep('3')" style="background:#4A8A4A;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">🚶 Walk one side</button>
 <button onclick="pwReset('3')" style="background:#6BA56B;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="pwStatus-3" style="background:#9BC89B;border:2px solid #7CB87C;border-radius:10px;padding:10px 14px;font-size:14px;color:#2D5A2D;font-weight:700;line-height:1.5;text-align:center;">Set length and width. Then click Walk to trace each side.</div>
 </div>
-
 <div class="reveal-box" id="learnReveal"><strong>What you saw.</strong> Perimeter = length + width + length + width = 2 × (length + width). The walker hits each side once. Answer in linear units (not square).</div>
 </div></div>
 <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 The Two Rules</div><p><strong>Perimeter = add every side once</strong> = length + width + length + width.</p><p><strong>Shortcut for rectangles: P = 2 × (L + W).</strong></p><p>For a SQUARE: P = 4 × side. Answer is in LINEAR units (cm, m, ft, in) — not square units.</p></div>
@@ -597,13 +623,13 @@
 <div style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:16px;color:#0E1C42;font-weight:700;margin-bottom:14px;">Perimeter = 40 cm. One side = 7 cm. Find the other side.</div>
 <div style="display:flex;justify-content:center;margin:12px 0;">
-<svg width="280" height="160" viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
-<rect x="40" y="40" width="200" height="80" fill="#7CB87C" fill-opacity="0.3" stroke="#2D5A2D" stroke-width="2"/>
-<text x="140" y="34" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="16" font-weight="900" fill="#C56C3F">? cm</text>
-<text x="140" y="135" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="16" font-weight="900" fill="#C56C3F">? cm</text>
-<text x="34" y="80" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="14" font-weight="700" fill="#0E1C42" transform="rotate(-90,34,80)">7 cm</text>
-<text x="248" y="80" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="14" font-weight="700" fill="#0E1C42" transform="rotate(90,248,80)">7 cm</text>
-<text x="140" y="155" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="12" fill="#3A4A6B">Perimeter = 40 cm</text>
+<svg height="160" viewbox="0 0 280 160" width="280" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#7CB87C" fill-opacity="0.3" height="80" stroke="#2D5A2D" stroke-width="2" width="200" x="40" y="40"></rect>
+<text fill="#C56C3F" font-family="Lora,Georgia,serif" font-size="16" font-weight="900" text-anchor="middle" x="140" y="34">? cm</text>
+<text fill="#C56C3F" font-family="Lora,Georgia,serif" font-size="16" font-weight="900" text-anchor="middle" x="140" y="135">? cm</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="14" font-weight="700" text-anchor="middle" transform="rotate(-90,34,80)" x="34" y="80">7 cm</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="14" font-weight="700" text-anchor="middle" transform="rotate(90,248,80)" x="248" y="80">7 cm</text>
+<text fill="#3A4A6B" font-family="Lora,Georgia,serif" font-size="12" text-anchor="middle" x="140" y="155">Perimeter = 40 cm</text>
 </svg>
 </div>
 <div style="display:grid;gap:8px;max-width:480px;margin:14px auto;">
@@ -617,7 +643,7 @@
 <textarea class="journal-box" data-label="Learn — Socratic: square perimeter 36" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: Theo's dog pen</div><div class="activity-sub">Perimeter 136 cm, square shape. Find one side.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Theo is building a SQUARE dog pen with a perimeter of <strong>136 cm</strong>. How long is one side?</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew:</p>
-<div class="video-wrap" data-video-slot="4-11-04-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.11.04</div><div class="video-wrap-title">Square perimeter ÷ 4 = side</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-11-04_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Cora: "Square — all four sides equal." Atlas: "4 × side = 136." Felix: "side = 136 ÷ 4 = 34 cm." Hazel: "Check: 4 × 34 = 136 ✓." About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-11-04-example --></div></div></div></div>
+
 <div style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.9;font-size:16px;">
 <strong>Step 1.</strong> A square has 4 equal sides: 4 × side = 136.<br/>
@@ -638,12 +664,10 @@
 <div class="callout callout-info"><span class="callout-icon">🚶</span><p>Three problems. Walk it. Compute. Watch the units.</p></div>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Two rules:</strong> P = 2 × (L + W) for a rectangle. P = 4 × side for a square.</p></div>
 <div class="callout callout-tip"><span class="callout-icon">💡</span><p>For a missing side: subtract the known sides from the perimeter, then divide by how many sides are left.</p></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#4A8A4A;">1</div><div><div class="activity-title">Walk Imani garden</div><div class="activity-sub">8 m long, 5 m wide. Find the perimeter.</div></div><span class="activity-time" style="background:#4A8A4A;">~5 min</span></div><div class="activity-body">
-<div class="pw-card" data-id="p1" data-unit="m" data-max-l="12" data-max-w="8" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="pw-card" data-id="p1" data-max-l="12" data-max-w="8" data-unit="m" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Set length 8, width 5 — then walk</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Predict the perimeter before you walk.</div>
-
 <div style="display:grid;grid-template-columns:auto auto;gap:14px;justify-content:center;align-items:center;margin-bottom:14px;">
 <div style="text-align:center;">
 <div style="font-size:11px;font-weight:900;color:#2D5A2D;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Length (m)</div>
@@ -662,27 +686,21 @@
 </div>
 </div>
 </div>
-
 <div id="pwStage-p1" style="background:#fff;border:2px solid #C9E4C9;border-radius:10px;padding:14px;margin-bottom:12px;min-height:200px;display:flex;justify-content:center;align-items:center;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;font-weight:900;color:#0E1C42;margin-bottom:8px;" id="pwReadout-p1">&mdash;</div>
-
+<div id="pwReadout-p1" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;font-weight:900;color:#0E1C42;margin-bottom:8px;">—</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="pwStep('p1')" id="pwStepBtn-p1" style="background:#4A8A4A;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">🚶 Walk one side</button>
+<button id="pwStepBtn-p1" onclick="pwStep('p1')" style="background:#4A8A4A;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">🚶 Walk one side</button>
 <button onclick="pwReset('p1')" style="background:#6BA56B;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="pwStatus-p1" style="background:#9BC89B;border:2px solid #7CB87C;border-radius:10px;padding:10px 14px;font-size:14px;color:#2D5A2D;font-weight:700;line-height:1.5;text-align:center;">Set length and width. Then click Walk to trace each side.</div>
 </div>
 <div class="journal-label">✏️ Predicted = ___. Actual perimeter = ___ m. <span class="saved-dot" id="dot-p1"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 1: 8x5 walk" id="journal-p1" oninput="autoSave(this,'dot-p1')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Wren square — both sides equal</div><div class="activity-sub">Try a 7 × 7 square.</div></div></div><div class="activity-body">
-<div class="pw-card" data-id="p2" data-unit="ft" data-max-l="10" data-max-w="10" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="pw-card" data-id="p2" data-max-l="10" data-max-w="10" data-unit="ft" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Walk a square (7 × 7)</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Notice: 4 equal sides means perimeter is 4 × side.</div>
-
 <div style="display:grid;grid-template-columns:auto auto;gap:14px;justify-content:center;align-items:center;margin-bottom:14px;">
 <div style="text-align:center;">
 <div style="font-size:11px;font-weight:900;color:#2D5A2D;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Length (ft)</div>
@@ -701,22 +719,17 @@
 </div>
 </div>
 </div>
-
 <div id="pwStage-p2" style="background:#fff;border:2px solid #C9E4C9;border-radius:10px;padding:14px;margin-bottom:12px;min-height:200px;display:flex;justify-content:center;align-items:center;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;font-weight:900;color:#0E1C42;margin-bottom:8px;" id="pwReadout-p2">&mdash;</div>
-
+<div id="pwReadout-p2" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;font-weight:900;color:#0E1C42;margin-bottom:8px;">—</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="pwStep('p2')" id="pwStepBtn-p2" style="background:#4A8A4A;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">🚶 Walk one side</button>
+<button id="pwStepBtn-p2" onclick="pwStep('p2')" style="background:#4A8A4A;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">🚶 Walk one side</button>
 <button onclick="pwReset('p2')" style="background:#6BA56B;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="pwStatus-p2" style="background:#9BC89B;border:2px solid #7CB87C;border-radius:10px;padding:10px 14px;font-size:14px;color:#2D5A2D;font-weight:700;line-height:1.5;text-align:center;">Set length and width. Then click Walk to trace each side.</div>
 </div>
 <div class="journal-label">✏️ Perimeter = ___ ft. How is a square different from a rectangle? <span class="saved-dot" id="dot-p2"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 2: square" id="journal-p2" oninput="autoSave(this,'dot-p2')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#4A8A4A;">3</div><div><div class="activity-title">Missing side — Priya yard</div><div class="activity-sub">Perimeter = 160 cm. One side = 45 cm.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🪜</span><p><strong>Steps:</strong> Two sides of 45 cm = 90 cm. Subtract from 160: 70 cm. Two missing sides share that. Divide by 2.</p></div>
 <div style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;color:#0E1C42;font-weight:700;margin-bottom:8px;">Priya rectangular yard.</div>
@@ -728,18 +741,13 @@
 <div class="journal-label">✏️ Show every step. <span class="saved-dot" id="dot-p3"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 3: missing side" id="journal-p3" oninput="autoSave(this,'dot-p3')" placeholder="Step 1: ___. Step 2: ___. Step 3: ___. Other side: ___ cm." style="min-height:80px;"></textarea>
 </div></div>
-
 <div class="tab-next-wrap"><p class="tab-transition-voice">Two walks and a missing side. Quick check time.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Two quick checks. Your full practice is in the Independent Practice PDF.</div></div></div><div class="activity-body"><p>If you got these, you're ready for the Independent Practice.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Do the denominators MATCH? Or do I need to rename one or both? Or is a benchmark (<span class="frac"><span class="num">1</span><span class="den">2</span></span>, 1) faster?</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Quick check — find the perimeter.</strong> A rectangle is 9 cm long and 4 cm wide. What is the perimeter?</p><div class="journal-label">✏️ Perimeter = ___ cm. Show 2 × (___ + ___). <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-
 <div class="q-block"><p class="q-text"><span class="q-num">2</span><strong>Quick check — missing side.</strong> A rectangle has perimeter 30 m. One side is 7 m. What is the other side?</p><div class="journal-label">✏️ Other side = ___ m. Show your steps. <span class="saved-dot" id="dot-a2"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 2" id="journal-a2" oninput="autoSave(this,'dot-a2')" placeholder=""></textarea></div>
-
-
-
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed all 6 problems above.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed both column subtractions on every problem.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed the borrow step whenever the fraction column needed it and simplified at the end.</span></div></div></div>
 </div>
@@ -1387,8 +1395,75 @@ if(typeof window !== 'undefined'){
 
 
 </script>
-
-
 </div>
 </div>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Mixed Multiplication Facts — Maintenance";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
+</script>
 </body></html>

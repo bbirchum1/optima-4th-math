@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Optima Academy Online — Grade 4 Math Lesson 4.04.03</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
@@ -306,25 +307,51 @@
 .bubble-text{font-size:14.5px;color:#0E1C42;line-height:1.5;font-weight:600;font-family:'Lora',Georgia,serif;font-style:italic}
 @media(max-width:620px){.bubble{flex:1 1 100%;max-width:100%}}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
 <div class="progress-wrap"><span class="progress-label">📐 Lesson Progress</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><span class="progress-pct" id="progressPct">0%</span></div>
 <div class="header">
-  <div class="header-brand">
-    <div class="header-logo">
-      <img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" />
-    </div>
-    <div>
-      <div class="header-org">Optima Academy Online</div>
-      <div class="header-sub">An Education Experience Company</div>
-    </div>
-  </div>
-  <div class="header-title"><em>Multiplying by a 1-Digit Number</em> — Part 2: bigger numbers, sharper estimates</div>
-  <div class="header-badge">
-    <span class="header-badge-icon">🦉</span>
-    <span class="header-badge-text">Lesson 4.04.03</span>
-  </div>
+<div class="header-brand">
+<div class="header-logo">
+<img alt="Optima Academy" src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png"/>
+</div>
+<div>
+<div class="header-org">Optima Academy Online</div>
+<div class="header-sub">An Education Experience Company</div>
+</div>
+</div>
+<div class="header-title"><em>Multiplying by a 1-Digit Number</em> — Part 2: bigger numbers, sharper estimates</div>
+<div class="header-badge">
+<span class="header-badge-icon">🦉</span>
+<span class="header-badge-text">Lesson 4.04.03</span>
+</div>
 </div>
 <div class="quote-strip"><div class="quote-strip-text">"Same algorithm. Bigger numbers. Now estimates do more work — they pin the answer down to a tight range before you ever multiply."</div><div class="quote-strip-attr">Multiplication Big Idea</div></div>
 <div class="info-strip"><div class="info-cell"><div class="info-icon" style="background:#F0E8FF;">🧭</div><div><div class="info-label">Unit</div><div class="info-value">Unit 4</div><div class="info-detail">Multiplication</div></div></div><div class="info-cell"><div class="info-icon" style="background:#E3F8ED;">📅</div><div><div class="info-label">Lesson</div><div class="info-value">4.04.03</div><div class="info-detail">U3 Apply</div></div></div><div class="info-cell"><div class="info-icon" style="background:#EAF0FF;">📐</div><div><div class="info-label">Standard</div><div class="info-value">MA.4.NSO.2.3</div><div class="info-detail">Multiply up to 5-digit × 1-digit</div></div></div><div class="info-cell"><div class="info-icon" style="background:#FFF8E6;">🔢</div><div><div class="info-label">Focus</div><div class="info-value">Estimation precision</div><div class="info-detail">MTR.2.1 · MTR.6.1</div></div></div></div>
@@ -332,22 +359,45 @@
 <div class="intro-2col"><div class="intro-card theme-question"><div class="intro-card-head"><div class="intro-card-head-icon">❓</div><div><div class="intro-card-head-label">Essential Question</div><div class="intro-card-head-title">When TWO different estimates of the same product disagree, which one is closer — and how do you know?</div></div></div><div class="intro-card-body"><p>Alex estimated 52,891 × 4 ≈ 200,000. Sofia estimated 212,000. The exact answer is 211,564. <strong>Sofia's estimate was closer.</strong></p><p>Why? Alex rounded to the nearest TEN-THOUSAND (50,000). Sofia rounded to the nearest THOUSAND (53,000). Smaller-place rounding keeps more precision.</p></div></div><div class="intro-card theme-objectives"><div class="intro-card-head"><div class="intro-card-head-icon">🎯</div><div><div class="intro-card-head-label">Today's Objectives</div><div class="intro-card-head-title">You will…</div></div></div><div class="intro-card-body"><div class="obj-line"><span class="obj-icon">🎯</span><span><strong>Choose</strong> the right rounding place for the estimate you need (rough vs. tight).</span></div><div class="obj-line"><span class="obj-icon">📐</span><span><strong>Multiply</strong> 5-digit numbers by a 1-digit factor using the column algorithm.</span></div><div class="obj-line"><span class="obj-icon">🧠</span><span><strong>Reason</strong> about whether an estimate is closer to a multiple of 10,000 (or 100,000) — before computing.</span></div></div></div></div>
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
-
 <div class="tab-panel active" id="tab-warmup">
-  <div class="video-wrap" data-video-slot="4-04-03-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.04.03</div><div class="video-wrap-title">Bigger numbers, tighter estimates</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-04-03_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write <strong>52,891 × 4</strong> on the board. "Five-digit factor today. Same algorithm — bigger workspace." Show two students estimating side by side. "Alex rounds 52,891 to 50,000 (nearest ten-thousand). 50,000 × 4 = 200,000. Sofia rounds to 53,000 (nearest thousand). 53,000 × 4 = 212,000." Compute the exact: stack 52,891 over 4. Walk right to left. "1 × 4 = 4. 9 × 4 = 36 — write 6, carry 3. 8 × 4 = 32, plus 3 = 35 — write 5, carry 3. 2 × 4 = 8, plus 3 = 11 — write 1, carry 1. 5 × 4 = 20, plus 1 = 21." Final: <strong>211,564</strong>. Compare: Alex's 200,000 was off by 11,564. Sofia's 212,000 was off by only 436. <strong>Sofia's estimate is way closer.</strong> Why? "Sofia rounded to a SMALLER place — thousand vs Alex's ten-thousand. The smaller you round to, the more precision you keep." Show the area model for the same product as visual proof: 50,000 × 4 = 200,000. 2,000 × 4 = 8,000. 800 × 4 = 3,200. 90 × 4 = 360. 1 × 4 = 4. Sum: 211,564. ✓ Frame: "Today: bigger numbers, AND we get sharper about WHICH estimate to use. Rough estimates are fine for sanity-checks. Tighter estimates are needed when the answer must be precise." Tone: deeper, more strategic — Unit 4's Apply lesson. (~2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-02-welcome --></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
-    <p>Same crew. Bigger problems. Stronger estimate-precision habits.</p>
-    <div class="bubble-row">
-      <div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — stacks 5-digit factors too</div><div class="bubble-text">"Five-digit factor on top, one-digit factor below. The stack gets longer — but the rule never changes. Multiply right to left."</div></div></div>
-      <div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — chained carries</div><div class="bubble-text">"With 5-digit numbers, carries can chain across MANY columns. Watch each one: write the digit, carry the rest. Add the carry to the NEXT column's product."</div></div></div>
-    </div>
-    <div class="bubble-row">
-      <div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — five-column area model</div><div class="bubble-text">"For five-digit factors I draw five cells: ten-thousands, thousands, hundreds, tens, ones. Each times the one-digit factor is one cell. Sum the cells."</div></div></div>
-      <div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — divides to check</div><div class="bubble-text">"To check if a number IS a multiple of 4, I divide. 28 ÷ 4 = 7 with no remainder → yes, multiple. 30 ÷ 4 = 7 r 2 → no, not a multiple."</div></div></div>
-    </div>
-    <div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>Cora's sharper rule: <em>match the rounding place to your need. Sanity check → round to a big place. Tight estimate → round to a small place.</em></p></div>
-  </div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Closer to Which Multiple?</div><div class="activity-sub">For each, decide which round number the product is CLOSER to. Estimate by rounding before you check.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>Pick the closer round number for each product.</p>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Partial Products</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">4 × 26</span><input autocomplete="off" class="fluency-input" data-answer="104" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">3 × 45</span><input autocomplete="off" class="fluency-input" data-answer="135" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 23</span><input autocomplete="off" class="fluency-input" data-answer="138" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">5 × 34</span><input autocomplete="off" class="fluency-input" data-answer="170" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 19</span><input autocomplete="off" class="fluency-input" data-answer="133" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 22</span><input autocomplete="off" class="fluency-input" data-answer="176" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">4 × 37</span><input autocomplete="off" class="fluency-input" data-answer="148" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">3 × 58</span><input autocomplete="off" class="fluency-input" data-answer="174" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 16</span><input autocomplete="off" class="fluency-input" data-answer="96" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 14</span><input autocomplete="off" class="fluency-input" data-answer="126" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Partial Products)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
+<p>Same crew. Bigger problems. Stronger estimate-precision habits.</p>
+<div class="bubble-row">
+<div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — stacks 5-digit factors too</div><div class="bubble-text">"Five-digit factor on top, one-digit factor below. The stack gets longer — but the rule never changes. Multiply right to left."</div></div></div>
+<div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — chained carries</div><div class="bubble-text">"With 5-digit numbers, carries can chain across MANY columns. Watch each one: write the digit, carry the rest. Add the carry to the NEXT column's product."</div></div></div>
+</div>
+<div class="bubble-row">
+<div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — five-column area model</div><div class="bubble-text">"For five-digit factors I draw five cells: ten-thousands, thousands, hundreds, tens, ones. Each times the one-digit factor is one cell. Sum the cells."</div></div></div>
+<div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — divides to check</div><div class="bubble-text">"To check if a number IS a multiple of 4, I divide. 28 ÷ 4 = 7 with no remainder → yes, multiple. 30 ÷ 4 = 7 r 2 → no, not a multiple."</div></div></div>
+</div>
+<div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>Cora's sharper rule: <em>match the rounding place to your need. Sanity check → round to a big place. Tight estimate → round to a small place.</em></p></div>
+</div></div>
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Closer to Which Multiple?</div><div class="activity-sub">For each, decide which round number the product is CLOSER to. Estimate by rounding before you check.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>Pick the closer round number for each product.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:grid;gap:14px;">
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
@@ -378,16 +428,16 @@
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Answers:</strong> 4,962 × 8 ≈ 5,000 × 8 = 40,000 → closer to <strong>40,000</strong>. 84,984 × 5 ≈ 85,000 × 5 = 425,000 → closer to <strong>400,000</strong>. For the greatest product: 5,673 × 9 ≈ 6,000 × 9 = 54,000 — the biggest. 6,953 × 6 ≈ 42,000. 5,235 × 8 ≈ 40,000. So <strong>5,673 × 9</strong> wins (actual = 51,057).</div>
-<div class="journal-label">✏️ Pick the GREATEST-product problem above. Why does estimating let you compare three products WITHOUT computing each exactly? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: Comparing products by estimate" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-04-03-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.04.03</div><div class="video-wrap-title">Estimates compare products — fast</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-04-03_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk each. <strong>4,962 × 8:</strong> "4,962 rounds to 5,000. 5,000 × 8 = 40,000. So the exact is right around 40,000 — closer to 40,000 than to 50,000." <strong>84,984 × 5:</strong> "84,984 rounds to 85,000. 85,000 × 5 = 425,000. So the exact is around 425,000 — that's between 400,000 and 500,000, but closer to 400,000." <strong>Greatest product:</strong> "Three products. Estimate each: 6,953 × 6 ≈ 7,000 × 6 = 42,000. 5,235 × 8 ≈ 5,000 × 8 = 40,000. 5,673 × 9 ≈ 6,000 × 9 = 54,000. Biggest estimate? 5,673 × 9. So it wins — without computing exact." Pause. "This is the SUPERPOWER of estimation. You can RANK products by estimating, then compute exact for only the one you need." (~1-2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-02-readiness-feedback --></div></div></div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
+<div class="journal-label">✏️ Pick the GREATEST-product problem above. Why does estimating let you compare three products WITHOUT computing each exactly? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: Comparing products by estimate" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">🏟️</span><p>A stadium hosts <strong>52,891 fans</strong> at each home game. Find the total over <strong>4 home games</strong>. Make TWO estimates: round 52,891 to the nearest <strong>ten-thousand</strong>, then again to the nearest <strong>thousand</strong>. Which estimate is closer to the exact?</p></div>
 <div class="number-talk-visual">
 <div class="number-talk-prompt">Round 52,891 to nearest ten-thousand → 50,000; 50,000 × 4 = 200,000. Round to nearest thousand → 53,000; 53,000 × 4 = 212,000. The thousand estimate is closer because it keeps more precision.</div>
 <div class="visual-equation" style="font-size:22px;letter-spacing:1px;">Smaller-place rounding → less lost precision → closer estimate.</div>
 <div class="notice-wonder-grid">
-<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" id="journal-notice" data-label="Warm-Up — Notice: 5-digit factor estimates compared" placeholder="" oninput="autoSave(this,'dot-notice')" style="min-height:60px;"></textarea></div>
-<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" id="journal-wonder" data-label="Warm-Up — Wonder: When does an estimate need more precision" placeholder="" oninput="autoSave(this,'dot-wonder')" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" data-label="Warm-Up — Notice: 5-digit factor estimates compared" id="journal-notice" oninput="autoSave(this,'dot-notice')" placeholder="" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" data-label="Warm-Up — Wonder: When does an estimate need more precision" id="journal-wonder" oninput="autoSave(this,'dot-wonder')" placeholder="" style="min-height:60px;"></textarea></div>
 </div>
 </div>
 <p><strong>Predict the exact:</strong> Your two estimates are 200,000 and 212,000. The exact answer is between them. Pick where you think it lands.</p>
@@ -399,50 +449,49 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>Before you predict, ask yourself:</strong> 52,891 is BETWEEN 50,000 and 53,000, but much closer to 53,000. So the exact 52,891 × 4 will be much closer to 212,000 than to 200,000.</p></div>
 <div class="journal-label">✏️ My estimates and prediction: My two estimates were 200,000 and 212,000. Where do I think the exact answer falls, and why? <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think Prompt: Predict 52,891 × 4 between two estimates" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think Prompt: Predict 52,891 × 4 between two estimates" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">You estimated two ways and predicted the exact. Now let's run the column algorithm with chained carries.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
-  <div class="vocab-section" aria-label="Daily vocabulary flash cards">
-  <div class="vocab-section-head">
-    <div class="vocab-section-icon">📚</div>
-    <div>
-      <div class="vocab-section-label">Daily Vocabulary</div>
-      <div class="vocab-section-title">Tap to Build Today’s Math Language</div>
-    </div>
-  </div>
-  <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
-  <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for estimate. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">📏</div><div class="fc-word">estimate</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">estimate</div><div class="fc-def">a quick, rounded answer. Round one factor to a friendly number and multiply. Estimates aren't exact — they set a target range for the exact answer.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for area model. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">▭</div><div class="fc-word">area model</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">area model</div><div class="fc-def">a rectangle split into place columns. Each column × the one-digit factor is a cell. Add the cells = product. Shows the decomposition visually.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for column algorithm. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">📐</div><div class="fc-word">column algorithm</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">column algorithm</div><div class="fc-def">stack the multi-digit number on top, the one-digit on bottom. Multiply right to left — ones, tens, hundreds — carrying when a column product is 10 or more.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for carry. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">⏫</div><div class="fc-word">carry</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">carry (in multiplication)</div><div class="fc-def">when a column product is 10 or more, write the ones digit and CARRY the tens digit to the next column. Add the carry to that column's product.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-04-03-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-04-03 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-04-03-concept --></div></div></div></div>
+<div aria-label="Daily vocabulary flash cards" class="vocab-section">
+<div class="vocab-section-head">
+<div class="vocab-section-icon">📚</div>
+<div>
+<div class="vocab-section-label">Daily Vocabulary</div>
+<div class="vocab-section-title">Tap to Build Today’s Math Language</div>
 </div>
-<div class="video-wrap" data-video-slot="4-04-03-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.04.03</div><div class="video-wrap-title">Carries that chain across many columns</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-04-03_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Work <strong>52,891 × 4</strong> end to end. <strong>Estimate first.</strong> "Two estimates. Round to ten-thousand: 50,000 × 4 = 200,000. Round to thousand: 53,000 × 4 = 212,000. Exact lives between." Now compute exact. Stack 52,891 over 4. Walk slowly. "Ones: 1 × 4 = 4. Tens: 9 × 4 = 36 — write 6, carry 3. Hundreds: 8 × 4 = 32, plus 3 = 35 — write 5, carry 3. Thousands: 2 × 4 = 8, plus 3 = 11 — write 1, carry 1. Ten-thousands: 5 × 4 = 20, plus 1 = 21 — write 21." Final answer: <strong>211,564</strong>. "Four carries chained — each one added to the next column's product. The trick: write the carry small ABOVE the next column so you don't forget it." Compare estimates: 211,564 sits right next to 212,000 (Sofia's tight estimate) and pretty far from 200,000 (Alex's rough estimate). "Tight estimate wins for precision. Rough estimate is fine for a fast sanity-check." Tone: methodical, building algorithm fluency. (~2-3 min)</div><div class="video-placeholder-id"><!-- slot: 4-04-03-concept --></div></div></div></div>
-  <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Three big products. Estimate first (use the given anchor), then pick the exact.</p></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🎯</div><div><div class="activity-title">Column Algorithm — Big Numbers</div><div class="activity-sub">Estimate set the range. Now compute.</div></div></div><div class="activity-body"><p>For each, estimate first (a hint is given), then run the column algorithm.</p>
+</div>
+<p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
+<div class="vocab-grid">
+<div aria-label="Vocabulary card for estimate. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">📏</div><div class="fc-word">estimate</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">estimate</div><div class="fc-def">a quick, rounded answer. Round one factor to a friendly number and multiply. Estimates aren't exact — they set a target range for the exact answer.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for area model. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">▭</div><div class="fc-word">area model</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">area model</div><div class="fc-def">a rectangle split into place columns. Each column × the one-digit factor is a cell. Add the cells = product. Shows the decomposition visually.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for column algorithm. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">📐</div><div class="fc-word">column algorithm</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">column algorithm</div><div class="fc-def">stack the multi-digit number on top, the one-digit on bottom. Multiply right to left — ones, tens, hundreds — carrying when a column product is 10 or more.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for carry. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">⏫</div><div class="fc-word">carry</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">carry (in multiplication)</div><div class="fc-def">when a column product is 10 or more, write the ones digit and CARRY the tens digit to the next column. Add the carry to that column's product.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Three big products. Estimate first (use the given anchor), then pick the exact.</p></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🎯</div><div><div class="activity-title">Column Algorithm — Big Numbers</div><div class="activity-sub">Estimate set the range. Now compute.</div></div></div><div class="activity-body"><p>For each, estimate first (a hint is given), then run the column algorithm.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:18px 14px;margin:12px 0;">
 <div style="margin-bottom:18px;">
 <div style="font-family:'Lora',Georgia,serif;font-size:22px;font-weight:900;color:#0E1C42;text-align:center;margin-bottom:8px;"><strong>11,771 × 6</strong></div>
@@ -475,25 +524,25 @@
 </div>
 <div class="reveal-box" id="learnReveal"><strong>Products:</strong> 11,771 × 6 = <strong>70,626</strong> (carries at tens, hundreds, thousands). 7,884 × 4 = <strong>31,536</strong> (carries at every column except thousands). 27,448 × 6 = <strong>164,688</strong> (four carries chain across). Each lands within a few thousand of its estimate.</div>
 </div></div>
-  <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 Chained Carries — Stay Organized</div><p><strong>When carries chain across many columns:</strong></p><p>1. <strong>Write each carry SMALL above the next column.</strong> Use a different color or just a tiny number. Don't skip this — chained carries get lost fast.</p><p>2. <strong>ADD the carry to the next column's product.</strong> Compute the bottom × top first, THEN add the carry.</p><p>3. <strong>Cross out each carry once you use it.</strong> So you don't add it twice.</p><p>4. <strong>Sanity-check with the estimate.</strong> If your exact is way off your estimate, slow down and find the missed (or doubled) carry.</p></div>
-  <div class="activity bl-violet" style="margin-top:16px;"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">📏</div><div><div class="activity-title">Rough vs. Tight Estimates</div><div class="activity-sub">When to use each kind.</div></div></div><div class="activity-body"><p>Some questions need a rough estimate ("is the answer over 100,000?"). Others need a tight one ("is it closer to 211,000 or 213,000?"). Match the rounding to the question.</p>
+<div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 Chained Carries — Stay Organized</div><p><strong>When carries chain across many columns:</strong></p><p>1. <strong>Write each carry SMALL above the next column.</strong> Use a different color or just a tiny number. Don't skip this — chained carries get lost fast.</p><p>2. <strong>ADD the carry to the next column's product.</strong> Compute the bottom × top first, THEN add the carry.</p><p>3. <strong>Cross out each carry once you use it.</strong> So you don't add it twice.</p><p>4. <strong>Sanity-check with the estimate.</strong> If your exact is way off your estimate, slow down and find the missed (or doubled) carry.</p></div>
+<div class="activity bl-violet" style="margin-top:16px;"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">📏</div><div><div class="activity-title">Rough vs. Tight Estimates</div><div class="activity-sub">When to use each kind.</div></div></div><div class="activity-body"><p>Some questions need a rough estimate ("is the answer over 100,000?"). Others need a tight one ("is it closer to 211,000 or 213,000?"). Match the rounding to the question.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:18px;margin:12px 0;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.7;">
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
 <div style="background:#FFF8E6;border:2px solid #F5C518;border-radius:12px;padding:14px;">
 <div style="font-size:13px;color:#8A6D2B;text-transform:uppercase;letter-spacing:.5px;font-weight:900;margin-bottom:6px;">🔍 Rough — round to BIGGEST place</div>
 <div style="font-size:14px;line-height:1.7;">
-For 52,891 × 4:<br>
-Round 52,891 → 50,000.<br>
-50,000 × 4 = <strong>200,000</strong><br>
+For 52,891 × 4:<br/>
+Round 52,891 → 50,000.<br/>
+50,000 × 4 = <strong>200,000</strong><br/>
 <span style="color:#A04A00;">Use when:</span> sanity-check, "ballpark" answer
 </div>
 </div>
 <div style="background:#E3F8ED;border:2px solid #2DB87A;border-radius:12px;padding:14px;">
 <div style="font-size:13px;color:#1A8A5A;text-transform:uppercase;letter-spacing:.5px;font-weight:900;margin-bottom:6px;">🎯 Tight — round to SMALLER place</div>
 <div style="font-size:14px;line-height:1.7;">
-For 52,891 × 4:<br>
-Round 52,891 → 53,000.<br>
-53,000 × 4 = <strong>212,000</strong><br>
+For 52,891 × 4:<br/>
+Round 52,891 → 53,000.<br/>
+53,000 × 4 = <strong>212,000</strong><br/>
 <span style="color:#1A8A5A;">Use when:</span> close decision, comparison
 </div>
 </div>
@@ -502,15 +551,15 @@ Round 52,891 → 53,000.<br>
 </div>
 <div class="socratic-box"><div class="socratic-label">🧠 Socratic — Think Like a Mathematician</div><p class="socratic-q">Why would anyone ever WANT a rough estimate? If tight is more accurate, why not always round to the smallest place?</p>
 <div class="journal-label">✏️ My thinking <span class="saved-dot" id="dot-soc"></span></div>
-<textarea class="journal-box" id="journal-soc" data-label="Learn — Socratic: When rough estimates are actually better" placeholder="" oninput="autoSave(this,'dot-soc')"></textarea></div>
+<textarea class="journal-box" data-label="Learn — Socratic: When rough estimates are actually better" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: 9,183 × 3 — Above or Below 25,000?</div><div class="activity-sub">Use an estimate to answer BEFORE computing exact.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Is the product of <strong>9,183 × 3</strong> greater than or less than 25,000? Use an estimate to defend your answer. Then compute the exact to verify.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
-<div class="video-wrap" data-video-slot="4-04-03-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.04.03</div><div class="video-wrap-title">Reasoning by estimate before computing</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-04-03_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Cora reads. "Is 9,183 × 3 above or below 25,000?" Atlas estimates: "9,183 rounds to 9,000. 9,000 × 3 = 27,000. That's ABOVE 25,000." Felix double-checks: "9,183 is less than 9,000? No — 9,183 is GREATER than 9,000. So the exact will be even higher than 27,000. Definitely above 25,000." Compute exact. "Ones: 3 × 3 = 9. Tens: 8 × 3 = 24 — write 4, carry 2. Hundreds: 1 × 3 = 3, plus 2 = 5. Thousands: 9 × 3 = 27." Final: <strong>27,549</strong>. "27,549 is well above 25,000." Hazel summarizes: "We answered the question BEFORE computing exact. Estimates aren't just sanity checks — they let you REASON about size. Sometimes that's all the question needs." (~2 min)</div><div class="video-placeholder-id"><!-- slot: 4-04-03-example --></div></div></div></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: 9,183 × 3 — Above or Below 25,000?</div><div class="activity-sub">Use an estimate to answer BEFORE computing exact.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Is the product of <strong>9,183 × 3</strong> greater than or less than 25,000? Use an estimate to defend your answer. Then compute the exact to verify.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
+
 <div class="key-concept" style="margin-top:14px;"><div class="key-concept-label">⚖️ Estimate-Driven Reasoning</div>
 <div style="background:#F0E8FF;border:2px solid #D8CCF0;border-radius:12px;padding:14px;margin-top:8px;font-family:'Lora',Georgia,serif;font-size:15px;color:#0E1C42;line-height:1.8;">
 <div><strong>Question:</strong> Is 9,183 × 3 above or below 25,000?</div>
 <div style="color:#6B3FA0;"><strong>Estimate:</strong> 9,000 × 3 = 27,000.</div>
-<div style="color:#6B3FA0;"><strong>Reasoning:</strong> 9,183 > 9,000, so 9,183 × 3 > 27,000 > 25,000.</div>
+<div style="color:#6B3FA0;"><strong>Reasoning:</strong> 9,183 &gt; 9,000, so 9,183 × 3 &gt; 27,000 &gt; 25,000.</div>
 <div style="color:#2DB87A;"><strong>Verified:</strong> 9,183 × 3 = 27,549. ✓ Above 25,000.</div>
 <p style="margin-top:10px;font-size:13px;color:#3A4A6B;">When a question asks "above or below?", you usually don't need the exact answer — a careful estimate gives you the decision.</p>
 </div>
@@ -518,23 +567,22 @@ Round 52,891 → 53,000.<br>
 </div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">Bigger numbers handled. Estimate strategy locked. Time to practice.</p><button class="tab-next-btn" onclick="switchTab('practice')">Continue to 🧮 Practice →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-practice">
-  <div class="callout callout-info"><span class="callout-icon">🧭</span><p>Bigger products. Sharper estimates. Carries that chain.</p></div>
-  <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> What's my estimate? Where will the carries land? Does my exact answer match the estimate range?</p></div>
-  <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Write each carry SMALL above the next column. Cross it out once you've added it.</p></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">52,891 × 4</div><div class="activity-sub">Five-digit factor, four chained carries.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>Estimate first (round to nearest thousand: 53,000 × 4 = 212,000). Then compute exact with the column algorithm.</p>
+<div class="callout callout-info"><span class="callout-icon">🧭</span><p>Bigger products. Sharper estimates. Carries that chain.</p></div>
+<div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> What's my estimate? Where will the carries land? Does my exact answer match the estimate range?</p></div>
+<div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Write each carry SMALL above the next column. Cross it out once you've added it.</p></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">52,891 × 4</div><div class="activity-sub">Five-digit factor, four chained carries.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>Estimate first (round to nearest thousand: 53,000 × 4 = 212,000). Then compute exact with the column algorithm.</p>
 <div class="value-card-row" style="justify-content:center;">
 <button class="value-card" onclick="pickP1Round(this,'211564')" style="min-width:100px;"><div class="big">211,564</div></button>
 <button class="value-card" onclick="pickP1Round(this,'212564')" style="min-width:100px;"><div class="big">212,564</div></button>
 <button class="value-card" onclick="pickP1Round(this,'210564')" style="min-width:100px;"><div class="big">210,564</div></button>
 </div>
 <div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Exactly.</strong> 1×4=4, 9×4=36 (write 6 carry 3), 8×4=32+3=35 (write 5 carry 3), 2×4=8+3=11 (write 1 carry 1), 5×4=20+1=21. Answer: <strong>211,564</strong>. Tight estimate (212,000) was off by 436 — well-aligned.
-<div class="video-wrap" data-video-slot="4-04-03-practice-1-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 1</div><div class="video-wrap-title">Four chained carries managed</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-04-03_Practice-1_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk the carries. Tens column has carry 3, hundreds adds it back. Hundreds has carry 3, thousands adds it. Thousands has carry 1, ten-thousands adds it. Four carries — chained. (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-04-03-practice-1-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Look again.</strong> Write each carry small above the next column. Add it to the next column's product BEFORE moving on.
 <div class="hint-callout">Tens 9×4=36 → carry 3. Hundreds 8×4=32+3=35 → carry 3. Thousands 2×4=8+3=11 → carry 1. Ten-thousands 5×4=20+1=21. Final answer: 211,564.</div>
-<div class="video-wrap" data-video-slot="4-04-03-practice-1-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 1</div><div class="video-wrap-title">Track each carry</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-04-03_Practice-1_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the chained carries. Write the carry above each column with a small "+3" notation. (~1-2 min)</div><div class="video-placeholder-id"><!-- slot: 4-04-03-practice-1-retry --></div></div></div></div></div></div></div>
-  <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Choose Your Estimate (Then Compute)</div><div class="activity-sub">For each, pick the estimate that fits the question, then find the exact.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Three products. Each has a particular reasoning question — rough estimate is enough for some, tight estimate for others.</p></div>
+</div></div></div>
+<div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Choose Your Estimate (Then Compute)</div><div class="activity-sub">For each, pick the estimate that fits the question, then find the exact.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Three products. Each has a particular reasoning question — rough estimate is enough for some, tight estimate for others.</p></div>
 <p>Find each exact product. Use whichever estimate level the question needs.</p>
 <div style="display:grid;gap:14px;margin:14px 0;">
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:14px;">
@@ -566,16 +614,16 @@ Round 52,891 → 53,000.<br>
 </div>
 </div>
 <div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ Three for three.</strong> 2a — 6,953 × 6 = <strong>41,718</strong>. 2b — 5,235 × 8 = <strong>41,880</strong>. 2c — 5,673 × 9 = <strong>51,057</strong>. Comparison: 5,673 × 9 gives the GREATEST product (51,057), matching the estimate prediction.
-<div class="video-wrap" data-video-slot="4-04-03-practice-2-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 2</div><div class="video-wrap-title">Three products, the biggest one is 5,673 × 9</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-04-03_Practice-2_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Recap. "All three were close to their estimates. 5,673 × 9 = 51,057 — the biggest of the three, matching the estimate ranking (54,000 > 42,000 > 40,000)." (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-04-03-practice-2-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Look again.</strong> Walk right to left for each. Track every carry.
 <div class="hint-callout">2a — 6,953 × 6: ones 3×6=18 (carry 1), tens 5×6=30+1=31 (carry 3), hundreds 9×6=54+3=57 (carry 5), thousands 6×6=36+5=41. Answer 41,718. 2b — 5,235 × 8: ones 5×8=40 (carry 4), tens 3×8=24+4=28 (carry 2), hundreds 2×8=16+2=18 (carry 1), thousands 5×8=40+1=41. Answer 41,880. 2c — 5,673 × 9: ones 3×9=27 (carry 2), tens 7×9=63+2=65 (carry 6), hundreds 6×9=54+6=60 (carry 6), thousands 5×9=45+6=51. Answer 51,057.</div>
-<div class="video-wrap" data-video-slot="4-04-03-practice-2-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 2</div><div class="video-wrap-title">Track every carry — they chain</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-04-03_Practice-2_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk all three with carries written above each column. (~2 min)</div><div class="video-placeholder-id"><!-- slot: 4-04-03-practice-2-retry --></div></div></div></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Alex vs. Sofia — Whose Estimate Was Closer?</div><div class="activity-sub">Two students estimate the same product differently.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Two estimates, two different rounding choices. Decide whose was tighter.</p></div>
+</div></div></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Alex vs. Sofia — Whose Estimate Was Closer?</div><div class="activity-sub">Two students estimate the same product differently.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Two estimates, two different rounding choices. Decide whose was tighter.</p></div>
 <div class="task-box"><div class="task-label">The Problem</div>
 <p>The product is <strong>52,891 × 4</strong> (from today's Welcome video).</p>
 <div style="background:#FFF8E6;border:2px solid #F5C518;border-radius:12px;padding:14px 16px;font-family:'Lora',Georgia,serif;font-size:17px;line-height:1.8;color:#5A4A3A;margin:10px 0;">
-"<strong>Alex</strong> estimated the product to be <strong>200,000</strong>.<br>
-<strong>Sofia</strong> estimated the product to be <strong>212,000</strong>.<br>
+"<strong>Alex</strong> estimated the product to be <strong>200,000</strong>.<br/>
+<strong>Sofia</strong> estimated the product to be <strong>212,000</strong>.<br/>
 The exact product is <strong>211,564</strong>."
 </div>
 <p><strong>Your task:</strong> Tap every statement below that is true.</p>
@@ -587,27 +635,23 @@ The exact product is <strong>211,564</strong>."
 </div>
 <button class="purple-btn" onclick="checkErrorAnalysis()">✓ Check My Picks</button>
 <div class="journal-label">✏️ Explain when you'd use Alex's style (rough) and when you'd use Sofia's (tight). Pick a real situation for each. <span class="saved-dot" id="dot-ea"></span></div>
-<textarea class="journal-box" id="journal-ea" data-label="Practice 3 — Error Analysis: When to use rough vs tight estimates" placeholder="" oninput="autoSave(this,'dot-ea')"></textarea>
-<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Alex rounded to a BIG place (ten-thousand), losing 2,891 of precision. Sofia rounded to a SMALLER place (thousand), losing only 109. The smaller the rounding place, the tighter the estimate. Alex's answer wasn't WRONG — just rough. Sofia's was sharper.<div class="video-wrap" data-video-slot="4-04-03-practice-3-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 3</div><div class="video-wrap-title">Rough is fast; tight is precise</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-04-03_Practice-3_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "Both Alex AND Sofia were correct ESTIMATORS — neither computed exact. Their estimates differed in PRECISION. Match the precision to the question." (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-04-03-practice-3-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">Compute the difference each estimate is off by. Alex: 211,564 − 200,000 = 11,564. Sofia: 212,000 − 211,564 = 436. Sofia is way closer.</div><div class="video-wrap" data-video-slot="4-04-03-practice-3-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 3</div><div class="video-wrap-title">Smaller-place rounding = closer estimate</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-04-03_Practice-3_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach with the difference computation. Show 11,564 vs 436 explicitly. (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-04-03-practice-3-retry --></div></div></div></div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
+<textarea class="journal-box" data-label="Practice 3 — Error Analysis: When to use rough vs tight estimates" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
+<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Alex rounded to a BIG place (ten-thousand), losing 2,891 of precision. Sofia rounded to a SMALLER place (thousand), losing only 109. The smaller the rounding place, the tighter the estimate. Alex's answer wasn't WRONG — just rough. Sofia's was sharper.</div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">Compute the difference each estimate is off by. Alex: 211,564 − 200,000 = 11,564. Sofia: 212,000 − 211,564 = 436. Sofia is way closer.</div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">5-digit products mastered. Now show what you know on the full toolkit.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-assignment">
-  <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Estimate. Compute. Reason. Compare.</div></div></div><div class="activity-body"><p>Today: bigger products, sharper estimates, deeper reasoning. Estimate first every time.</p>
+<div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Estimate. Compute. Reason. Compare.</div></div></div><div class="activity-body"><p>Today: bigger products, sharper estimates, deeper reasoning. Estimate first every time.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> What's my estimate? Where will carries chain? Does my exact match the estimate range?</p></div>
-<div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Estimate two ways and compute exact.</strong> For 52,891 × 4:<br>(a) Round to the nearest TEN-THOUSAND, then multiply.<br>(b) Round to the nearest THOUSAND, then multiply.<br>(c) Compute the exact product.<br>(d) Which estimate is closer? Why?</p><div class="journal-label">✏️ My estimates + exact + comparison <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" id="journal-a1" data-label="Show What You Know — Problem 1: Two estimates compared for 5-digit" placeholder="" oninput="autoSave(this,'dot-a1')"></textarea></div>
-
-<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> Today you learned that estimates can be ROUGH or TIGHT. Give one situation where you'd use a rough estimate (and explain why rough is good enough), and one where you'd need a tight estimate (and explain why precision matters).</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" id="journal-a6" data-label="Show What You Know — Problem 6: When to use rough vs tight estimates" placeholder="" oninput="autoSave(this,'dot-a6')"></textarea></div>
-
-
+<div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Estimate two ways and compute exact.</strong> For 52,891 × 4:<br/>(a) Round to the nearest TEN-THOUSAND, then multiply.<br/>(b) Round to the nearest THOUSAND, then multiply.<br/>(c) Compute the exact product.<br/>(d) Which estimate is closer? Why?</p><div class="journal-label">✏️ My estimates + exact + comparison <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: Two estimates compared for 5-digit" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
+<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> Today you learned that estimates can be ROUGH or TIGHT. Give one situation where you'd use a rough estimate (and explain why rough is good enough), and one where you'd need a tight estimate (and explain why precision matters).</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: When to use rough vs tight estimates" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#55C8E8;"><div class="activity-head"><div class="activity-num" style="background:#55C8E8;color:#0E1C42;">🗺️</div><div><div class="activity-title">Connection Forward: What Comes Next</div><div class="activity-sub">Preview Lesson 4.04.04 — Multiplying by a Multiple of 10</div></div></div><div class="activity-body"><p>So far: any multi-digit number × a single 1-digit factor. Next lesson: multiplying by 20, 30, 40, 50… (any one-digit number with a 0 attached). The pattern is short — multiply by the digit, then shift the answer one place left.</p><p>The big question next time: <em>Why does multiplying by 40 just give you the same answer as multiplying by 4, but with a zero stuck on the end?</em></p></div></div></div></div>
-<div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly>Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
-  <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
+<div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
+<div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
 </div>
 <div class="footer">
-  <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
-  <div class="footer-sub">Math · Grade 4 · 4.04.03</div>
-  <div class="footer-copy">© 2025 Optima Academy Online</div>
+<div class="footer-main">🏫 <span>Optima Academy Online</span></div>
+<div class="footer-sub">Math · Grade 4 · 4.04.03</div>
+<div class="footer-copy">© 2025 Optima Academy Online</div>
 </div>
 </div>
 <canvas id="confettiCanvas"></canvas>
@@ -1044,6 +1088,75 @@ async function loadVideoManifest(){try{let res=await fetch('video-manifest.md',{
 function parseManifest(txt){let map={};let lines=txt.split(/\r?\n/);let current=null,buf=[];function commit(){if(current&&buf.join('\n').trim())map[current]=buf.join('\n').trim();buf=[]}for(let line of lines){let m=line.match(/^([A-Za-z0-9-]+):\s*$/);if(m){commit();current=m[1]}else if(current){buf.push(line)}}commit();return map}
 function showPageFeedback(msg){var panel=document.querySelector('.tab-panel.active')||document.body;var box=panel.querySelector(':scope > .page-feedback');if(!box){box=document.createElement('div');box.className='page-feedback';panel.insertBefore(box,panel.firstChild);}box.className='page-feedback show warn';box.innerHTML=msg;}
 window.addEventListener('DOMContentLoaded',()=>{restoreJournals();updateProgress();loadVideoManifest()});
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Partial Products";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
 </script>
 </body>
 </html>

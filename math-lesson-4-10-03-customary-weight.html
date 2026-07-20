@@ -329,6 +329,32 @@
 .cc-row strong{color:#C56C3F;font-weight:900;font-family:Lora,Georgia,serif}
 .cc-row em{color:#7A88A8;font-style:italic;font-size:12px}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
@@ -356,7 +382,31 @@
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
-<div class="video-wrap" data-video-slot="4-10-03-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.10.03</div><div class="video-wrap-title">Balance ounces and pounds on a scale.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-10-03_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Hold up a kitchen scale or two-pan balance. "16 ounces equal 1 pound. Picture a balance — one pound on one side, sixteen 1-ounce weights on the other. They balance." For 3 lb 7 oz: "3 pounds = 48 oz. Plus 7 more = 55 oz total." For 36 oz: "Each 16 makes a pound. 36 ÷ 16 = 2 pounds with 4 left = 2 lb 4 oz." Frame: <strong>Multiply by 16 to convert pounds to ounces.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-welcome --></div></div></div></div>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Estimation — Choose the Best Estimate</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">Best estimate for 398 × 21: 800, 8,000, or 80,000?</span><input autocomplete="off" class="fluency-input" data-answer="8,000" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">Best estimate for 612 × 9: 60, 600, or 6,000?</span><input autocomplete="off" class="fluency-input" data-answer="6,000" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">Best estimate for 289 × 4: 120, 1,200, or 12,000?</span><input autocomplete="off" class="fluency-input" data-answer="1,200" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">Best estimate for 512 × 6: 300, 3,000, or 30,000?</span><input autocomplete="off" class="fluency-input" data-answer="3,000" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">Best estimate for 198 × 5: 100, 1,000, or 10,000?</span><input autocomplete="off" class="fluency-input" data-answer="1,000" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">Best estimate for 703 × 8: 560, 5,600, or 56,000?</span><input autocomplete="off" class="fluency-input" data-answer="5,600" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">Best estimate for 411 × 3: 120, 1,200, or 12,000?</span><input autocomplete="off" class="fluency-input" data-answer="1,200" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">Best estimate for 895 × 2: 180, 1,800, or 18,000?</span><input autocomplete="off" class="fluency-input" data-answer="1,800" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">Best estimate for 312 × 7: 210, 2,100, or 21,000?</span><input autocomplete="off" class="fluency-input" data-answer="2,100" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">Best estimate for 498 × 9: 450, 4,500, or 45,000?</span><input autocomplete="off" class="fluency-input" data-answer="4,500" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Estimation — Choose the Best Estimate)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
 <p>Atlas takes the lead — measurement is about naming units and applying conversion rules. Felix multiplies. Hazel builds the picture. Cora checks units.</p>
 <div class="bubble-row">
@@ -373,7 +423,7 @@
 <div style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:grid;gap:14px;">
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
-<div style="background:#fff;border:1.5px solid #F5D4BC;border-radius:10px;padding:10px;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:#0E1C42;min-width:200px;text-align:center;">1 lb&nbsp;&nbsp;⚖️&nbsp;&nbsp;15 oz</div>
+<div style="background:#fff;border:1.5px solid #F5D4BC;border-radius:10px;padding:10px;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:#0E1C42;min-width:200px;text-align:center;">1 lb  ⚖️  15 oz</div>
 <div class="value-card-row" style="margin:0;">
 <button class="value-card" onclick="pickReadinessRound(this,1,'1 lb heavier')" style="min-width:110px;"><div class="big" style="font-size:13px;">1 lb heavier</div></button>
 <button class="value-card" onclick="pickReadinessRound(this,1,'15 oz heavier')" style="min-width:110px;"><div class="big" style="font-size:13px;">15 oz heavier</div></button>
@@ -381,7 +431,7 @@
 </div>
 </div>
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
-<div style="background:#fff;border:1.5px solid #F5D4BC;border-radius:10px;padding:10px;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:#0E1C42;min-width:200px;text-align:center;">2 lb&nbsp;&nbsp;⚖️&nbsp;&nbsp;32 oz</div>
+<div style="background:#fff;border:1.5px solid #F5D4BC;border-radius:10px;padding:10px;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:#0E1C42;min-width:200px;text-align:center;">2 lb  ⚖️  32 oz</div>
 <div class="value-card-row" style="margin:0;">
 <button class="value-card" onclick="pickReadinessRound(this,2,'equal')" style="min-width:110px;"><div class="big" style="font-size:13px;">equal</div></button>
 <button class="value-card" onclick="pickReadinessRound(this,2,'2 lb heavier')" style="min-width:110px;"><div class="big" style="font-size:13px;">2 lb heavier</div></button>
@@ -389,7 +439,7 @@
 </div>
 </div>
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
-<div style="background:#fff;border:1.5px solid #F5D4BC;border-radius:10px;padding:10px;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:#0E1C42;min-width:200px;text-align:center;">1 ton&nbsp;&nbsp;⚖️&nbsp;&nbsp;1,500 lb</div>
+<div style="background:#fff;border:1.5px solid #F5D4BC;border-radius:10px;padding:10px;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:#0E1C42;min-width:200px;text-align:center;">1 ton  ⚖️  1,500 lb</div>
 <div class="value-card-row" style="margin:0;">
 <button class="value-card" onclick="pickReadinessRound(this,3,'1 ton heavier')" style="min-width:110px;"><div class="big" style="font-size:13px;">1 ton heavier</div></button>
 <button class="value-card" onclick="pickReadinessRound(this,3,'1,500 lb heavier')" style="min-width:110px;"><div class="big" style="font-size:13px;">1,500 lb heavier</div></button>
@@ -400,8 +450,8 @@
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Balances:</strong> 1 lb = 16 oz, so <strong>1 lb &gt; 15 oz</strong>. 2 lb = 32 oz, so <strong>equal</strong>. 1 ton = 2,000 lb, so <strong>1 ton &gt; 1,500 lb</strong>.</div>
-<div class="journal-label">✏️ Which one was tricky? Why? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: weight comparison" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-10-03-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.10.03</div><div class="video-wrap-title">Two-factor weight comparison</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-10-03_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "Customary weight needs two facts. 16 ounces equal 1 pound. 2,000 pounds equal 1 ton. To compare weights in different units, convert to the SAME unit first, then check the balance scale in your head." Frame: <strong>Convert to the same unit, then compare.</strong></div><div class="video-placeholder-id"><!-- slot: lesson-readiness-feedback --></div></div></div></div>
+<div class="journal-label">✏️ Which one was tricky? Why? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: weight comparison" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Composite weight to single unit.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">⚖️</span><p>Convert <strong>3 lb 7 oz</strong> into ounces.</p></div>
 <div class="strategy-chip-row">
@@ -412,11 +462,10 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>3 × 16 = 48 oz. Then add the 7 oz:</strong> 48 + 7 = <strong>55 oz</strong>.</p></div>
 <div class="journal-label">✏️ Why do we MULTIPLY by 16 (not just add)? <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think: 3 lb 7 oz" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think: 3 lb 7 oz" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">Now build weights on a balance scale.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-10-03-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-10-03 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-10-03-concept --></div></div></div></div>
 <div aria-label="Daily vocabulary flash cards" class="vocab-section">
 <div class="vocab-section-head">
 <div class="vocab-section-icon">📚</div>
@@ -427,36 +476,35 @@
 </div>
 <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
 <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for ounce. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">⚖️</div><div class="fc-word">ounce (oz)</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">ounce (oz)</div><div class="fc-def">smallest common weight unit. 16 oz = 1 lb. About the weight of a slice of bread.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for pound. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">📦</div><div class="fc-word">pound (lb)</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">pound (lb)</div><div class="fc-def">1 lb = 16 oz. About the weight of a loaf of bread.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for ton. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🚛</div><div class="fc-word">ton</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">ton</div><div class="fc-def">1 ton = 2,000 lb. About the weight of a small car.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for balance. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">⚖️</div><div class="fc-word">balance</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">balance</div><div class="fc-def">a scale that compares two weights. Two sides match when the weights are equal.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div aria-label="Vocabulary card for ounce. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">⚖️</div><div class="fc-word">ounce (oz)</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">ounce (oz)</div><div class="fc-def">smallest common weight unit. 16 oz = 1 lb. About the weight of a slice of bread.</div><div class="fc-tap-back">tap to flip back</div></div>
 </div>
-<div class="video-wrap" data-video-slot="4-10-03-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.10.03</div><div class="video-wrap-title">Balance ounces against pounds.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-10-03_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Three converts. (1) 3 lb 7 oz → oz. 3 × 16 + 7 = 55 oz. (2) 36 oz → lb oz. 36 ÷ 16 = 2 R 4 → 2 lb 4 oz. (3) Add 3 lb 7 oz + 2 lb 9 oz. Add columns: 5 lb 16 oz. Regroup 16 oz = 1 lb → 6 lb 0 oz. Frame: <strong>Multiply lb by 16. Divide oz by 16. Regroup 16 oz into a pound.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-concept --></div></div></div></div>
+</div>
+<div aria-label="Vocabulary card for pound. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">📦</div><div class="fc-word">pound (lb)</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">pound (lb)</div><div class="fc-def">1 lb = 16 oz. About the weight of a loaf of bread.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for ton. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🚛</div><div class="fc-word">ton</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">ton</div><div class="fc-def">1 ton = 2,000 lb. About the weight of a small car.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for balance. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">⚖️</div><div class="fc-word">balance</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">balance</div><div class="fc-def">a scale that compares two weights. Two sides match when the weights are equal.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
 <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Pick how many groups to SPLIT the bar into. Then click groups to TAKE them.</p></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#C56C3F;">⚖️</div><div><div class="activity-title">Balance Scale</div><div class="activity-sub">Stack ounces and pounds on the right pan until the scale balances.</div></div></div><div class="activity-body"><p>The left pan holds the target weight. Click weights onto the right pan. The beam tilts until both sides match.</p>
-
 <div class="bs-card" data-id="1" data-target-oz="23" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 1 · A boot weighs 23 oz</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Balance to 23 oz. Click 23 ounces — or use +1 lb (16 oz) to jump ahead.</div>
@@ -468,21 +516,16 @@
 <div style="font-family:'Lora',Georgia,serif;font-size:18px;color:#0E1C42;line-height:1.5;">Make the right pan weigh <strong style="color:#C56C3F;font-size:22px;">23 oz</strong>. <span style="color:#3A4A6B;font-size:14px;">That is the same as <strong>1 pound</strong> + <strong>7 ounces</strong>.</span></div>
 <div style="background:#FDF3EC;border-left:3px solid #E89A6B;padding:8px 12px;margin-top:10px;border-radius:6px;font-family:'Nunito',sans-serif;font-size:13px;color:#5B2E10;"><strong>💡 Try this:</strong> Click <strong>+1 lb</strong> 1 time (that adds 16 oz), then <strong>+1 oz</strong> 7 times. The scale will balance.</div>
 </div>
-
 <div id="bsScale-1" style="display:flex;justify-content:center;margin-bottom:12px;min-height:220px;background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:10px;"></div>
-
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:900;color:#0E1C42;margin-bottom:12px;">
-Right pan: <span id="bsRightDisp-1">0 oz</span> &nbsp; · &nbsp; Target: <span style="color:#C56C3F;">23 oz</span>
+Right pan: <span id="bsRightDisp-1">0 oz</span>   ·   Target: <span style="color:#C56C3F;">23 oz</span>
 </div>
-
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="bsAddOz('1')" id="bsOzBtn-1" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;">+1 oz</button><button onclick="bsAddLb('1')" id="bsLbBtn-1" style="background:#E89A6B;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;">+1 lb (16 oz)</button>
+<button id="bsOzBtn-1" onclick="bsAddOz('1')" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;">+1 oz</button><button id="bsLbBtn-1" onclick="bsAddLb('1')" style="background:#E89A6B;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;">+1 lb (16 oz)</button>
 <button onclick="bsReset('1')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="bsStatus-1" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Follow the suggestion above, or experiment. The scale tilts toward the heavier side.</div>
 </div>
-
 <div class="bs-card" data-id="2" data-target-oz="55" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 2 · 3 lb 7 oz of mixed weight</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Target: 55 oz total (3 × 16 + 7).</div>
@@ -494,21 +537,16 @@ Right pan: <span id="bsRightDisp-1">0 oz</span> &nbsp; · &nbsp; Target: <span s
 <div style="font-family:'Lora',Georgia,serif;font-size:18px;color:#0E1C42;line-height:1.5;">Make the right pan weigh <strong style="color:#C56C3F;font-size:22px;">55 oz</strong>. <span style="color:#3A4A6B;font-size:14px;">That is the same as <strong>3 pounds</strong> + <strong>7 ounces</strong>.</span></div>
 <div style="background:#FDF3EC;border-left:3px solid #E89A6B;padding:8px 12px;margin-top:10px;border-radius:6px;font-family:'Nunito',sans-serif;font-size:13px;color:#5B2E10;"><strong>💡 Try this:</strong> Click <strong>+1 lb</strong> 3 times (that adds 48 oz), then <strong>+1 oz</strong> 7 times. The scale will balance.</div>
 </div>
-
 <div id="bsScale-2" style="display:flex;justify-content:center;margin-bottom:12px;min-height:220px;background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:10px;"></div>
-
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:900;color:#0E1C42;margin-bottom:12px;">
-Right pan: <span id="bsRightDisp-2">0 oz</span> &nbsp; · &nbsp; Target: <span style="color:#C56C3F;">55 oz</span>
+Right pan: <span id="bsRightDisp-2">0 oz</span>   ·   Target: <span style="color:#C56C3F;">55 oz</span>
 </div>
-
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="bsAddOz('2')" id="bsOzBtn-2" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;">+1 oz</button><button onclick="bsAddLb('2')" id="bsLbBtn-2" style="background:#E89A6B;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;">+1 lb (16 oz)</button>
+<button id="bsOzBtn-2" onclick="bsAddOz('2')" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;">+1 oz</button><button id="bsLbBtn-2" onclick="bsAddLb('2')" style="background:#E89A6B;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;">+1 lb (16 oz)</button>
 <button onclick="bsReset('2')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="bsStatus-2" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Follow the suggestion above, or experiment. The scale tilts toward the heavier side.</div>
 </div>
-
 <div class="bs-card" data-id="3" data-target-oz="66" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 3 · A pumpkin weighs 66 oz</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Balance to 66 oz. How many pounds and ounces is that?</div>
@@ -520,21 +558,16 @@ Right pan: <span id="bsRightDisp-2">0 oz</span> &nbsp; · &nbsp; Target: <span s
 <div style="font-family:'Lora',Georgia,serif;font-size:18px;color:#0E1C42;line-height:1.5;">Make the right pan weigh <strong style="color:#C56C3F;font-size:22px;">66 oz</strong>. <span style="color:#3A4A6B;font-size:14px;">That is the same as <strong>4 pounds</strong> + <strong>2 ounces</strong>.</span></div>
 <div style="background:#FDF3EC;border-left:3px solid #E89A6B;padding:8px 12px;margin-top:10px;border-radius:6px;font-family:'Nunito',sans-serif;font-size:13px;color:#5B2E10;"><strong>💡 Try this:</strong> Click <strong>+1 lb</strong> 4 times (that adds 64 oz), then <strong>+1 oz</strong> 2 times. The scale will balance.</div>
 </div>
-
 <div id="bsScale-3" style="display:flex;justify-content:center;margin-bottom:12px;min-height:220px;background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:10px;"></div>
-
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:900;color:#0E1C42;margin-bottom:12px;">
-Right pan: <span id="bsRightDisp-3">0 oz</span> &nbsp; · &nbsp; Target: <span style="color:#C56C3F;">66 oz</span>
+Right pan: <span id="bsRightDisp-3">0 oz</span>   ·   Target: <span style="color:#C56C3F;">66 oz</span>
 </div>
-
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="bsAddOz('3')" id="bsOzBtn-3" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;">+1 oz</button><button onclick="bsAddLb('3')" id="bsLbBtn-3" style="background:#E89A6B;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;">+1 lb (16 oz)</button>
+<button id="bsOzBtn-3" onclick="bsAddOz('3')" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;">+1 oz</button><button id="bsLbBtn-3" onclick="bsAddLb('3')" style="background:#E89A6B;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;">+1 lb (16 oz)</button>
 <button onclick="bsReset('3')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="bsStatus-3" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Follow the suggestion above, or experiment. The scale tilts toward the heavier side.</div>
 </div>
-
 <div class="reveal-box" id="learnReveal"><strong>Balanced.</strong> A 23 oz boot = 1 lb 7 oz. A 55 oz weight = 3 lb 7 oz. A 66 oz pumpkin = 4 lb 2 oz.</div>
 </div></div>
 <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 The Weight Facts</div><p><strong>1 pound (lb) = 16 ounces (oz).</strong></p><p><strong>1 ton = 2,000 pounds.</strong></p><p>Big → small: multiply (lb × 16 = oz). Small → big: divide and check the remainder.</p></div>
@@ -553,7 +586,7 @@ Right pan: <span id="bsRightDisp-3">0 oz</span> &nbsp; · &nbsp; Target: <span s
 <textarea class="journal-box" data-label="Learn — Socratic: 36 oz" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: 6 lb 2 oz − 4 lb 9 oz</div><div class="activity-sub">Borrow a pound to get more ounces.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Find <strong>6 lb 2 oz − 4 lb 9 oz</strong>.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it:</p>
-<div class="video-wrap" data-video-slot="4-10-03-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.10.03</div><div class="video-wrap-title">Borrow 1 lb = 16 oz to subtract</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-10-03_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Atlas: "2 oz is less than 9 oz — we need to borrow." Felix: "Take 1 lb from the 6, add 16 oz to the 2: now it's 5 lb 18 oz." Subtract: 18 − 9 = 9 oz. 5 − 4 = 1 lb. Result: 1 lb 9 oz. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-10-03-example --></div></div></div></div>
+
 <div style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.9;font-size:16px;">
 <strong>Step 1.</strong> 2 oz &lt; 9 oz, so BORROW 1 lb from 6.<br/>
@@ -574,7 +607,6 @@ Right pan: <span id="bsRightDisp-3">0 oz</span> &nbsp; · &nbsp; Target: <span s
 <div class="callout callout-info"><span class="callout-icon">⚖️</span><p>Three more balances — composite weights and arithmetic with borrowing.</p></div>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Strategy:</strong> Use +1 lb to add 16 oz at a time. Use +1 oz for the leftover.</p></div>
 <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Pattern:</strong> Composite weight × 16 + leftover oz = total oz.</p></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#C56C3F;">1</div><div><div class="activity-title">Balance a 3 lb 14 oz Bottle of Ketchup</div><div class="activity-sub">Target: 62 oz total (3 × 16 + 14).</div></div><span class="activity-time" style="background:#C56C3F;">~5 min</span></div><div class="activity-body">
 <div class="bs-card" data-id="p1" data-target-oz="62" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Bottle of ketchup</div>
@@ -587,24 +619,19 @@ Right pan: <span id="bsRightDisp-3">0 oz</span> &nbsp; · &nbsp; Target: <span s
 <div style="font-family:'Lora',Georgia,serif;font-size:18px;color:#0E1C42;line-height:1.5;">Make the right pan weigh <strong style="color:#C56C3F;font-size:22px;">62 oz</strong>. <span style="color:#3A4A6B;font-size:14px;">That is the same as <strong>3 pounds</strong> + <strong>14 ounces</strong>.</span></div>
 <div style="background:#FDF3EC;border-left:3px solid #E89A6B;padding:8px 12px;margin-top:10px;border-radius:6px;font-family:'Nunito',sans-serif;font-size:13px;color:#5B2E10;"><strong>💡 Try this:</strong> Click <strong>+1 lb</strong> 3 times (that adds 48 oz), then <strong>+1 oz</strong> 14 times. The scale will balance.</div>
 </div>
-
 <div id="bsScale-p1" style="display:flex;justify-content:center;margin-bottom:12px;min-height:220px;background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:10px;"></div>
-
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:900;color:#0E1C42;margin-bottom:12px;">
-Right pan: <span id="bsRightDisp-p1">0 oz</span> &nbsp; · &nbsp; Target: <span style="color:#C56C3F;">62 oz</span>
+Right pan: <span id="bsRightDisp-p1">0 oz</span>   ·   Target: <span style="color:#C56C3F;">62 oz</span>
 </div>
-
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="bsAddOz('p1')" id="bsOzBtn-p1" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;">+1 oz</button><button onclick="bsAddLb('p1')" id="bsLbBtn-p1" style="background:#E89A6B;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;">+1 lb (16 oz)</button>
+<button id="bsOzBtn-p1" onclick="bsAddOz('p1')" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;">+1 oz</button><button id="bsLbBtn-p1" onclick="bsAddLb('p1')" style="background:#E89A6B;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;">+1 lb (16 oz)</button>
 <button onclick="bsReset('p1')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="bsStatus-p1" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Follow the suggestion above, or experiment. The scale tilts toward the heavier side.</div>
 </div>
 <div class="journal-label">✏️ How many ounces is 3 lb 14 oz? Show 3 × 16 + 14. <span class="saved-dot" id="dot-p1"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 1: ketchup" id="journal-p1" oninput="autoSave(this,'dot-p1')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Balance a 2 lb 1 oz Book</div><div class="activity-sub">Target: 33 oz.</div></div></div><div class="activity-body">
 <div class="bs-card" data-id="p2" data-target-oz="33" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Book</div>
@@ -617,24 +644,19 @@ Right pan: <span id="bsRightDisp-p1">0 oz</span> &nbsp; · &nbsp; Target: <span 
 <div style="font-family:'Lora',Georgia,serif;font-size:18px;color:#0E1C42;line-height:1.5;">Make the right pan weigh <strong style="color:#C56C3F;font-size:22px;">33 oz</strong>. <span style="color:#3A4A6B;font-size:14px;">That is the same as <strong>2 pounds</strong> + <strong>1 ounce</strong>.</span></div>
 <div style="background:#FDF3EC;border-left:3px solid #E89A6B;padding:8px 12px;margin-top:10px;border-radius:6px;font-family:'Nunito',sans-serif;font-size:13px;color:#5B2E10;"><strong>💡 Try this:</strong> Click <strong>+1 lb</strong> 2 times (that adds 32 oz), then <strong>+1 oz</strong> 1 time. The scale will balance.</div>
 </div>
-
 <div id="bsScale-p2" style="display:flex;justify-content:center;margin-bottom:12px;min-height:220px;background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:10px;"></div>
-
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:900;color:#0E1C42;margin-bottom:12px;">
-Right pan: <span id="bsRightDisp-p2">0 oz</span> &nbsp; · &nbsp; Target: <span style="color:#C56C3F;">33 oz</span>
+Right pan: <span id="bsRightDisp-p2">0 oz</span>   ·   Target: <span style="color:#C56C3F;">33 oz</span>
 </div>
-
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="bsAddOz('p2')" id="bsOzBtn-p2" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;">+1 oz</button><button onclick="bsAddLb('p2')" id="bsLbBtn-p2" style="background:#E89A6B;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;">+1 lb (16 oz)</button>
+<button id="bsOzBtn-p2" onclick="bsAddOz('p2')" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;">+1 oz</button><button id="bsLbBtn-p2" onclick="bsAddLb('p2')" style="background:#E89A6B;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;">+1 lb (16 oz)</button>
 <button onclick="bsReset('p2')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="bsStatus-p2" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Follow the suggestion above, or experiment. The scale tilts toward the heavier side.</div>
 </div>
 <div class="journal-label">✏️ Show your work: 2 × 16 + 1 = ? <span class="saved-dot" id="dot-p2"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 2: book" id="journal-p2" oninput="autoSave(this,'dot-p2')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#C56C3F;">3</div><div><div class="activity-title">Add: 3 lb 7 oz + 2 lb 9 oz</div><div class="activity-sub">Watch for the regroup.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">➕</span><p><strong>Add columns:</strong> ounces + ounces, pounds + pounds. If oz ≥ 16, regroup 16 oz into 1 lb.</p></div>
 <div style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;color:#0E1C42;font-weight:700;margin-bottom:8px;">3 lb 7 oz + 2 lb 9 oz</div>
@@ -654,17 +676,13 @@ Right pan: <span id="bsRightDisp-p2">0 oz</span> &nbsp; · &nbsp; Target: <span 
 <div class="journal-label">✏️ Try 1 lb 7 oz + 4 lb 2 oz. Does the ounces column need regrouping? <span class="saved-dot" id="dot-p3"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 3: add 1 lb 7 oz + 4 lb 2 oz" id="journal-p3" oninput="autoSave(this,'dot-p3')" placeholder="1 lb 7 oz + 4 lb 2 oz = ? lb ? oz" style="min-height:80px;"></textarea>
 </div></div>
-
 <div class="tab-next-wrap"><p class="tab-transition-voice">Three balances and an addition. Now show it.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">For each problem, convert between customary units of weight. Show your work.</div></div></div><div class="activity-body"><p>Use the chart: 16 oz = 1 lb, 2,000 lb = 1 ton.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Do the denominators MATCH? Or do I need to rename one or both? Or is a benchmark (<span class="frac"><span class="num">1</span><span class="den">2</span></span>, 1) faster?</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Composite to ounces.</strong><br/>(a) 3 lb 7 oz = ___ oz<br/>(b) 3 lb 14 oz = ___ oz<br/>(c) 2 lb 1 oz = ___ oz</p><div class="journal-label">✏️ Show 3 × 16 + 7, 3 × 16 + 14, 2 × 16 + 1 <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: composite to oz" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-
 <div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Word problem — produce stand.</strong> A farmer's pumpkin weighs 66 oz. Her watermelon weighs 4 lb 8 oz. (a) Which is heavier? (b) By how many ounces?</p><div class="journal-label">✏️ My comparison and difference <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: produce" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
-
-
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#C56C3F;"><div class="activity-head"><div class="activity-num" style="background:#C56C3F;color:#fff;">🗺️</div><div><div class="activity-title">Unit 7 Complete — Where This Goes Next</div><div class="activity-sub">Looking ahead</div></div></div><div class="activity-body"><p>You've compared and ordered fractions that all fit between 0 and 1.</p><p>Next lesson: <strong>Improper Fractions and Mixed Numbers.</strong> What if the top is BIGGER than the bottom? <span class="frac"><span class="num">8</span><span class="den">5</span></span> of a pie isn't just half — it's a WHOLE pie plus some extra. That's an improper fraction, and it can also be written as a mixed number (1 <span class="frac"><span class="num">3</span><span class="den">5</span></span>).</p><p>The big question opening 6.03: <em>How do you show a fraction that's more than 1 whole?</em></p></div></div></div></div>
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed all 6 problems above.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed both column subtractions on every problem.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed the borrow step whenever the fraction column needed it and simplified at the end.</span></div></div></div>
@@ -1311,12 +1329,12 @@ function ccOpen(){ var o = document.getElementById('ccOverlay'); if(o) o.classLi
 function ccClose(){ var o = document.getElementById('ccOverlay'); if(o) o.classList.remove('show'); }
 
 </script>
-<button class="cc-fab" onclick="ccOpen()" aria-label="Open conversion chart" title="Conversion Chart">📋 Conversion Chart</button>
+<button aria-label="Open conversion chart" class="cc-fab" onclick="ccOpen()" title="Conversion Chart">📋 Conversion Chart</button>
 <div class="cc-overlay" id="ccOverlay" onclick="if(event.target.id==='ccOverlay')ccClose()">
 <div class="cc-modal">
 <div class="cc-modal-head">
 <div class="cc-modal-title">📋 Conversion Chart</div>
-<button class="cc-close" onclick="ccClose()" aria-label="Close">×</button>
+<button aria-label="Close" class="cc-close" onclick="ccClose()">×</button>
 </div>
 <div class="cc-section">
 <div class="cc-section-head">Metric · Length</div>
@@ -1356,4 +1374,73 @@ function ccClose(){ var o = document.getElementById('ccOverlay'); if(o) o.classL
 </div>
 </div>
 </div>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Estimation — Choose the Best Estimate";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
+</script>
 </body></html>

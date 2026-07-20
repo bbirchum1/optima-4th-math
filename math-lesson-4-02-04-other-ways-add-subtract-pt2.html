@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Optima Academy Online — Grade 4 Math Lesson 4.02.04</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
@@ -306,25 +307,51 @@
 .bubble-text{font-size:14.5px;color:#0E1C42;line-height:1.5;font-weight:600;font-family:'Lora',Georgia,serif;font-style:italic}
 @media(max-width:620px){.bubble{flex:1 1 100%;max-width:100%}}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
 <div class="progress-wrap"><span class="progress-label">📐 Lesson Progress</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><span class="progress-pct" id="progressPct">0%</span></div>
 <div class="header">
-  <div class="header-brand">
-    <div class="header-logo">
-      <img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" />
-    </div>
-    <div>
-      <div class="header-org">Optima Academy Online</div>
-      <div class="header-sub">An Education Experience Company</div>
-    </div>
-  </div>
-  <div class="header-title"><em>Other Ways to Add and Subtract</em> — Part 2</div>
-  <div class="header-badge">
-    <span class="header-badge-icon">🦉</span>
-    <span class="header-badge-text">Lesson 4.02.04</span>
-  </div>
+<div class="header-brand">
+<div class="header-logo">
+<img alt="Optima Academy" src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png"/>
+</div>
+<div>
+<div class="header-org">Optima Academy Online</div>
+<div class="header-sub">An Education Experience Company</div>
+</div>
+</div>
+<div class="header-title"><em>Other Ways to Add and Subtract</em> — Part 2</div>
+<div class="header-badge">
+<span class="header-badge-icon">🦉</span>
+<span class="header-badge-text">Lesson 4.02.04</span>
+</div>
 </div>
 <div class="quote-strip"><div class="quote-strip-text">"When subtraction means regrouping across zeros — there is almost always a faster way. Equal change. Count up. Take the shortcut."</div><div class="quote-strip-attr">Mental Subtraction Big Idea</div></div>
 <div class="info-strip"><div class="info-cell"><div class="info-icon" style="background:#F0E8FF;">🧭</div><div><div class="info-label">Unit</div><div class="info-value">Unit 2</div><div class="info-detail">Addition and Subtraction</div></div></div><div class="info-cell"><div class="info-icon" style="background:#E3F8ED;">📅</div><div><div class="info-label">Lesson</div><div class="info-value">4.02.04</div><div class="info-detail">U4 Extend</div></div></div><div class="info-cell"><div class="info-icon" style="background:#EAF0FF;">📐</div><div><div class="info-label">Standard</div><div class="info-value">MA.4.NSO.2.1</div><div class="info-detail">Mental strategies for + and −</div></div></div><div class="info-cell"><div class="info-icon" style="background:#FFF8E6;">🔢</div><div><div class="info-label">Focus</div><div class="info-value">Count up · Equal change</div><div class="info-detail">MTR.2.1 · MTR.5.1</div></div></div></div>
@@ -332,22 +359,45 @@
 <div class="intro-2col"><div class="intro-card theme-question"><div class="intro-card-head"><div class="intro-card-head-icon">❓</div><div><div class="intro-card-head-label">Essential Question</div><div class="intro-card-head-title">If adding the same amount to BOTH numbers in a subtraction doesn't change the difference, why is that true?</div></div></div><div class="intro-card-body"><p>4,002 − 1,998 is hard with the algorithm — three regroupings across zeros. But 4,004 − 2,000 = 2,004 in your head. <strong>Same difference. Different problem.</strong></p><p>Today's big idea: if you add the same amount to BOTH numbers in a subtraction, the difference doesn't change. So shift them to friendlier numbers — and skip the regrouping headache.</p></div></div><div class="intro-card theme-objectives"><div class="intro-card-head"><div class="intro-card-head-icon">🎯</div><div><div class="intro-card-head-label">Today's Objectives</div><div class="intro-card-head-title">You will…</div></div></div><div class="intro-card-body"><div class="obj-line"><span class="obj-icon">⬆️</span><span><strong>Count up</strong> from the smaller number to the bigger one — the difference is what you counted.</span></div><div class="obj-line"><span class="obj-icon">⚖️</span><span><strong>Use equal change</strong> — add (or subtract) the same amount to BOTH numbers to dodge regrouping.</span></div><div class="obj-line"><span class="obj-icon">🧠</span><span><strong>Choose</strong> the best subtraction strategy — algorithm, count up, or equal change — by reading the numbers first.</span></div></div></div></div>
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
-
 <div class="tab-panel active" id="tab-warmup">
-  <div class="video-wrap" data-video-slot="4-02-04-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.02.04</div><div class="video-wrap-title">Dodging the regrouping headache</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-04_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write <strong>4,002 − 1,998</strong>. "Yesterday we learned to dodge addition's algorithm. Today we dodge subtraction's." Set up the algorithm side: stack 4,002 over 1,998. Walk one column. "Ones: 2 − 8 — can't. Need to regroup. Tens is 0 — can't borrow there. Hundreds is 0 — can't borrow there either. Thousands is 4 — take from there. Watch how many places this borrow has to travel..." Pause for groans. Then erase. "Or… we shift BOTH numbers by 2 — keeping the difference exactly the same." Write 4,002 + 2 = 4,004. Below: 1,998 + 2 = 2,000. New problem: <strong>4,004 − 2,000 = 2,004</strong>. "Same answer. No regrouping. Done in your head." Frame the magic: "When you add the same amount to BOTH numbers in a subtraction, the difference stays exactly the same. We call this <em>equal change</em>." Show a second move: "Or — count UP from 1,998. 1,998 + 2 = 2,000. 2,000 + 2,000 = 4,000. 4,000 + 2 = 4,002. Total counted: 2 + 2,000 + 2 = 2,004." Frame: "Today, two new strategies — equal change and count up. Both dodge the regrouping. Both work best when the numbers cooperate." Tone: this is freedom from the algorithm. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-02-welcome --></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
-    <p>Yesterday the crew picked strategies for addition. Today they pick for subtraction — count up, equal change, or algorithm.</p>
-    <div class="bubble-row">
-      <div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — looks for the regrouping trap</div><div class="bubble-text">"Before I stack, I check: does this have zeros across the top? If yes, I bail on the algorithm. Equal change is way faster than regrouping across three zeros."</div></div></div>
-      <div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — counts up</div><div class="bubble-text">"My favorite move. Start at the small number. Count up to the big one — friendly numbers first. Whatever I counted IS the difference."</div></div></div>
-    </div>
-    <div class="bubble-row">
-      <div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — equal change</div><div class="bubble-text">"If I add 2 to both numbers, the gap between them does not change. So I shift both to friendly numbers — and the subtraction gets simple."</div></div></div>
-      <div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — checks by adding back</div><div class="bubble-text">"Whichever strategy you use, the check is the same. Difference plus the smaller number should equal the bigger number. If it does, you stayed exact."</div></div></div>
-    </div>
-    <div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>Cora's check still works for every strategy: <em>difference + smaller number = bigger number</em>. Mental tricks can wander — this check brings them home.</p></div>
-  </div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Count Up to the Friendly Number</div><div class="activity-sub">Count up from each number to the next clean friendly number. How far is the jump?</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>For each starting number, count up to the next clean 100, 1,000, or 10,000. Pick how many you counted.</p>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Doubling: ×4 and ×8</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">4 × 3</span><input autocomplete="off" class="fluency-input" data-answer="12" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 3</span><input autocomplete="off" class="fluency-input" data-answer="24" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">4 × 6</span><input autocomplete="off" class="fluency-input" data-answer="24" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 5</span><input autocomplete="off" class="fluency-input" data-answer="40" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">4 × 7</span><input autocomplete="off" class="fluency-input" data-answer="28" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 6</span><input autocomplete="off" class="fluency-input" data-answer="48" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">4 × 9</span><input autocomplete="off" class="fluency-input" data-answer="36" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 7</span><input autocomplete="off" class="fluency-input" data-answer="56" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">4 × 5</span><input autocomplete="off" class="fluency-input" data-answer="20" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 4</span><input autocomplete="off" class="fluency-input" data-answer="32" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Doubling: ×4 and ×8)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
+<p>Yesterday the crew picked strategies for addition. Today they pick for subtraction — count up, equal change, or algorithm.</p>
+<div class="bubble-row">
+<div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — looks for the regrouping trap</div><div class="bubble-text">"Before I stack, I check: does this have zeros across the top? If yes, I bail on the algorithm. Equal change is way faster than regrouping across three zeros."</div></div></div>
+<div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — counts up</div><div class="bubble-text">"My favorite move. Start at the small number. Count up to the big one — friendly numbers first. Whatever I counted IS the difference."</div></div></div>
+</div>
+<div class="bubble-row">
+<div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — equal change</div><div class="bubble-text">"If I add 2 to both numbers, the gap between them does not change. So I shift both to friendly numbers — and the subtraction gets simple."</div></div></div>
+<div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — checks by adding back</div><div class="bubble-text">"Whichever strategy you use, the check is the same. Difference plus the smaller number should equal the bigger number. If it does, you stayed exact."</div></div></div>
+</div>
+<div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>Cora's check still works for every strategy: <em>difference + smaller number = bigger number</em>. Mental tricks can wander — this check brings them home.</p></div>
+</div></div>
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Count Up to the Friendly Number</div><div class="activity-sub">Count up from each number to the next clean friendly number. How far is the jump?</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>For each starting number, count up to the next clean 100, 1,000, or 10,000. Pick how many you counted.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:grid;gap:14px;">
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
@@ -378,16 +428,16 @@
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Answers:</strong> 197 → 200 is <strong>+3</strong>. 1,998 → 2,000 is <strong>+2</strong>. 3,995 → 4,000 is <strong>+5</strong>. The number you counted is how far the original is from friendly. Today, you'll use this "count up" idea to do entire subtractions in your head — no algorithm, no regrouping.</div>
-<div class="journal-label">✏️ When you count up from a near-friendly number like 1,998 to 2,000, you are doing the FIRST jump of a count-up subtraction. What might the SECOND jump be — say, if you were finding 4,002 − 1,998? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: Count-up jumps to friendly numbers" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-02-04-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.02.04</div><div class="video-wrap-title">First jump: from the small number to friendly</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-04_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk each. <strong>197 → 200</strong>: "197 + 3 = 200. Counted 3." <strong>1,998 → 2,000</strong>: "1,998 + 2 = 2,000. Counted 2." <strong>3,995 → 4,000</strong>: "3,995 + 5 = 4,000. Counted 5." Stop. "These small jumps are the FIRST move of count-up subtraction. If you were doing 4,002 − 1,998, you'd start at 1,998, jump +2 to land on 2,000 (friendly), then jump +2,000 to 4,000, then +2 to 4,002. Total jumped = 2 + 2,000 + 2 = 2,004. That's the difference." Show with a number line. Frame: "Counting up turns a hard subtraction into easy jumps to friendly numbers. The total of your jumps IS the answer." (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-02-readiness-feedback --></div></div></div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
+<div class="journal-label">✏️ When you count up from a near-friendly number like 1,998 to 2,000, you are doing the FIRST jump of a count-up subtraction. What might the SECOND jump be — say, if you were finding 4,002 − 1,998? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: Count-up jumps to friendly numbers" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">🏟️</span><p>The stadium had <strong>4,002 fans</strong> at the morning game. By the evening game, only <strong>1,998 fans</strong> stayed. How many left? The algorithm would mean regrouping across three places. Watch what equal change does instead.</p></div>
 <div class="number-talk-visual">
 <div class="number-talk-prompt">Look at 4,002 and 1,998. What if you added 2 to BOTH numbers? What would the new problem be? Why would the difference stay the same?</div>
-<div class="visual-equation" style="font-size:22px;letter-spacing:1px;">4,002 &nbsp;−&nbsp; 1,998 &nbsp;=&nbsp; ?</div>
+<div class="visual-equation" style="font-size:22px;letter-spacing:1px;">4,002  −  1,998  =  ?</div>
 <div class="notice-wonder-grid">
-<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" id="journal-notice" data-label="Warm-Up — Notice: What I notice about 4,002 − 1,998" placeholder="" oninput="autoSave(this,'dot-notice')" style="min-height:60px;"></textarea></div>
-<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" id="journal-wonder" data-label="Warm-Up — Wonder: What I wonder about shifting both numbers by 2" placeholder="" oninput="autoSave(this,'dot-wonder')" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" data-label="Warm-Up — Notice: What I notice about 4,002 − 1,998" id="journal-notice" oninput="autoSave(this,'dot-notice')" placeholder="" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" data-label="Warm-Up — Wonder: What I wonder about shifting both numbers by 2" id="journal-wonder" oninput="autoSave(this,'dot-wonder')" placeholder="" style="min-height:60px;"></textarea></div>
 </div>
 </div>
 <p><strong>Estimate first:</strong> Round each to the nearest 1,000 in your head, then subtract. What's your estimate?</p>
@@ -399,50 +449,49 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>Before you predict, ask yourself:</strong> If you add 2 to both 4,002 and 1,998, what do they BECOME? Is the new subtraction easier? Why?</p></div>
 <div class="journal-label">✏️ My estimate AND prediction: What's your estimate? If both numbers shifted by +2, what does the new problem look like? What would the answer be? <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think Prompt: Estimate 4,002 − 1,998 using equal change" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think Prompt: Estimate 4,002 − 1,998 using equal change" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">You estimated and predicted. Now let's see the two new strategies — count up and equal change — side by side.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
-  <div class="vocab-section" aria-label="Daily vocabulary flash cards">
-  <div class="vocab-section-head">
-    <div class="vocab-section-icon">📚</div>
-    <div>
-      <div class="vocab-section-label">Daily Vocabulary</div>
-      <div class="vocab-section-title">Tap to Build Today’s Math Language</div>
-    </div>
-  </div>
-  <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
-  <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for count up. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">⬆️</div><div class="fc-word">count up</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">count up</div><div class="fc-def">a subtraction strategy. Start at the smaller number, count up to the bigger one — friendly numbers first. The total you counted IS the difference.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for equal change. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">⚖️</div><div class="fc-word">equal change</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">equal change</div><div class="fc-def">add (or subtract) the same amount to BOTH numbers in a subtraction. The difference does not change — but the math becomes friendlier.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for difference. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">↔️</div><div class="fc-word">difference</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">difference</div><div class="fc-def">the answer to a subtraction — the GAP between two numbers. Shift both numbers the same amount, and the gap stays the same.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for strategy. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🧰</div><div class="fc-word">strategy</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">strategy</div><div class="fc-def">a chosen way to solve a problem. Today: algorithm, count up, or equal change. Smart math = look at the numbers first, then choose.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-02-04-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-02-04 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-02-04-concept --></div></div></div></div>
+<div aria-label="Daily vocabulary flash cards" class="vocab-section">
+<div class="vocab-section-head">
+<div class="vocab-section-icon">📚</div>
+<div>
+<div class="vocab-section-label">Daily Vocabulary</div>
+<div class="vocab-section-title">Tap to Build Today’s Math Language</div>
 </div>
-<div class="video-wrap" data-video-slot="4-02-04-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.02.04</div><div class="video-wrap-title">Count up and equal change — two mental subtraction moves</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-04_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Three problems side by side. <strong>(1)</strong> 5,003 − 1,998. <strong>(2)</strong> 8,500 − 3,500. <strong>(3)</strong> 7,432 − 4,189. "Same as yesterday. Three subtractions, three winning strategies." <strong>Problem 1 — Equal Change.</strong> "5,003 − 1,998. Both numbers want to be friendlier. Add 2 to both: 5,005 − 2,000 = 3,005. The DIFFERENCE didn't change — but the math just got trivial." Walk it on a number line: 1,998 and 5,003 are both arrows on a line, shift both right by 2, the gap between them is unchanged. <strong>Problem 2 — Count Up.</strong> "8,500 − 3,500. Same hundreds (both 500), same tens, same ones. So subtract the thousands: 8 − 3 = 5. Difference = 5,000. Or: start at 3,500, count up — +5,000 to 8,500. Same answer." Write both ways. <strong>Problem 3 — Algorithm.</strong> "7,432 − 4,189. No zeros to dodge. No friendly anchors. Just stack and regroup like 4.02.02 taught you." Stack and walk through: ones 2−9 → regroup; tens 2−8 → regroup; etc. Answer 3,243. Pull together: "Three subtractions, three strategies. Equal change wins when one number is JUST above or below friendly. Count up wins when the numbers are close in size or there's a clean gap. Algorithm wins when nothing else fits." Tone: same idea as yesterday, leveled up for subtraction. (~2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-04-concept --></div></div></div></div>
-  <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Three subtractions below. Pick the strategy that fits each one. Look at the numbers first — equal change for almost-friendly subtrahends, count up for close pairs, algorithm for everything else.</p></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🧮</div><div><div class="activity-title">Strategy Picker: Subtract Without the Algorithm</div><div class="activity-sub">Three subtractions. Three strategies. Pick the strategy that fits each.</div></div></div><div class="activity-body"><p>For each subtraction, tap the strategy that fits best. As yesterday, the Algorithm always works — but Count Up and Equal Change can be much faster when the numbers cooperate.</p>
+</div>
+<p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
+<div class="vocab-grid">
+<div aria-label="Vocabulary card for count up. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">⬆️</div><div class="fc-word">count up</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">count up</div><div class="fc-def">a subtraction strategy. Start at the smaller number, count up to the bigger one — friendly numbers first. The total you counted IS the difference.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for equal change. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">⚖️</div><div class="fc-word">equal change</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">equal change</div><div class="fc-def">add (or subtract) the same amount to BOTH numbers in a subtraction. The difference does not change — but the math becomes friendlier.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for difference. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">↔️</div><div class="fc-word">difference</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">difference</div><div class="fc-def">the answer to a subtraction — the GAP between two numbers. Shift both numbers the same amount, and the gap stays the same.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for strategy. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🧰</div><div class="fc-word">strategy</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">strategy</div><div class="fc-def">a chosen way to solve a problem. Today: algorithm, count up, or equal change. Smart math = look at the numbers first, then choose.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Three subtractions below. Pick the strategy that fits each one. Look at the numbers first — equal change for almost-friendly subtrahends, count up for close pairs, algorithm for everything else.</p></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🧮</div><div><div class="activity-title">Strategy Picker: Subtract Without the Algorithm</div><div class="activity-sub">Three subtractions. Three strategies. Pick the strategy that fits each.</div></div></div><div class="activity-body"><p>For each subtraction, tap the strategy that fits best. As yesterday, the Algorithm always works — but Count Up and Equal Change can be much faster when the numbers cooperate.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:18px 14px;margin:12px 0;">
 <div style="margin-bottom:18px;">
 <div style="font-family:'Lora',Georgia,serif;font-size:22px;font-weight:900;color:#0E1C42;text-align:center;margin-bottom:10px;">Problem 1: <strong>5,003 − 1,998</strong></div>
@@ -472,8 +521,8 @@
 </div>
 </div></div>
 <div class="reveal-box" id="learnReveal"><strong>Strategy match-ups:</strong> Problem 1 — <strong>Equal Change</strong> (1,998 is screaming for +2 to both → 5,005 − 2,000 = 3,005). Problem 2 — <strong>Count Up</strong> (3,500 → 8,500 is one clean jump of 5,000). Problem 3 — <strong>Algorithm</strong> (no shortcut → answer 3,243). Look at the numbers BEFORE you choose.</div>
-  <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 What You Just Saw</div><p><strong>Three strategies for subtracting multi-digit numbers.</strong></p><p>1. <strong>Equal Change.</strong> Add (or subtract) the same amount to BOTH numbers. The difference doesn't change. Best when the subtrahend (the bottom number) is close to a friendly value.</p><p>2. <strong>Count Up.</strong> Start at the smaller number. Count up — friendly jumps first — to the bigger number. The total you counted is the difference. Best when there's a clean route between the numbers.</p><p>3. <strong>Standard Algorithm.</strong> Stack, regroup, subtract. Always works. Use when the other two don't fit.</p><p><strong>Why equal change works:</strong> a subtraction is a GAP between two numbers. If you slide BOTH numbers the same distance, the gap doesn't move.</p></div>
-  <div class="activity bl-violet" style="margin-top:16px;"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">⬆️</div><div><div class="activity-title">Watch a Count-Up Live: 5,003 − 1,998</div><div class="activity-sub">Step through Felix's jumps to friendly numbers.</div></div></div><div class="activity-body"><p>Felix counts up. Start at 1,998. Make the first jump small (just to friendly). Then make the next jump big. Add the jumps — that's the answer.</p>
+<div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 What You Just Saw</div><p><strong>Three strategies for subtracting multi-digit numbers.</strong></p><p>1. <strong>Equal Change.</strong> Add (or subtract) the same amount to BOTH numbers. The difference doesn't change. Best when the subtrahend (the bottom number) is close to a friendly value.</p><p>2. <strong>Count Up.</strong> Start at the smaller number. Count up — friendly jumps first — to the bigger number. The total you counted is the difference. Best when there's a clean route between the numbers.</p><p>3. <strong>Standard Algorithm.</strong> Stack, regroup, subtract. Always works. Use when the other two don't fit.</p><p><strong>Why equal change works:</strong> a subtraction is a GAP between two numbers. If you slide BOTH numbers the same distance, the gap doesn't move.</p></div>
+<div class="activity bl-violet" style="margin-top:16px;"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">⬆️</div><div><div class="activity-title">Watch a Count-Up Live: 5,003 − 1,998</div><div class="activity-sub">Step through Felix's jumps to friendly numbers.</div></div></div><div class="activity-body"><p>Felix counts up. Start at 1,998. Make the first jump small (just to friendly). Then make the next jump big. Add the jumps — that's the answer.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:18px 14px;margin:12px 0;font-family:'Lora',Georgia,serif;font-size:18px;color:#0E1C42;line-height:1.8;">
 <div><strong>Original:</strong> 5,003 − 1,998 = ?</div>
 <div style="color:#6B3FA0;"><strong>Jump 1.</strong> Start at 1,998. Jump <strong>+2</strong> to land on 2,000.</div>
@@ -483,18 +532,18 @@
 </div>
 <div class="socratic-box"><div class="socratic-label">🧠 Socratic — Think Like a Mathematician</div><p class="socratic-q">Why does counting up from the smaller number to the bigger one give you the difference? What does the total of all your jumps actually MEAN?</p>
 <div class="journal-label">✏️ My thinking <span class="saved-dot" id="dot-soc"></span></div>
-<textarea class="journal-box" id="journal-soc" data-label="Learn — Socratic: Why does counting up give you the difference?" placeholder="" oninput="autoSave(this,'dot-soc')"></textarea></div>
+<textarea class="journal-box" data-label="Learn — Socratic: Why does counting up give you the difference?" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: Equal Change vs Algorithm</div><div class="activity-sub">Same problem. Two strategies. See the difference in steps.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>The morning attendance was <strong>6,005 fans</strong>. The evening attendance was <strong>2,997 fans</strong>. How many more in the morning? Solve TWO ways — Equal Change and Algorithm — then decide which was faster.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it both ways:</p>
-<div class="video-wrap" data-video-slot="4-02-04-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.02.04</div><div class="video-wrap-title">Equal Change vs. Algorithm — when regrouping hurts</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-04_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write 6,005 − 2,997. <strong>Strategy A — Equal Change.</strong> "2,997 wants to be 3,000. Add 3 to BOTH: 6,008 − 3,000 = <strong>3,008</strong>." Three written lines, done. Highlight: "Notice — the difference didn't move. Both bars on a number line just slid right by 3." <strong>Strategy B — Algorithm.</strong> Stack vertically. Ones 5 − 7 → regroup (tens 0 → 9 wait, tens is 0 too! → regroup from hundreds — also 0! → finally borrow from thousands: thousands 6 → 5, hundreds 0 → 9, tens 0 → 9, ones 5 → 15). 15 − 7 = 8. Tens 9 − 9 = 0. Hundreds 9 − 9 = 0. Thousands 5 − 2 = 3. Final: <strong>3,008</strong>. Same answer — but THREE regroupings across zeros. "Borrowing across zeros is the slowest, hardest part of the algorithm. Equal change just dodges the whole pile." Estimate: 6,000 − 3,000 = 3,000. Both answers check. (~2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-04-example --></div></div></div></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: Equal Change vs Algorithm</div><div class="activity-sub">Same problem. Two strategies. See the difference in steps.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>The morning attendance was <strong>6,005 fans</strong>. The evening attendance was <strong>2,997 fans</strong>. How many more in the morning? Solve TWO ways — Equal Change and Algorithm — then decide which was faster.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it both ways:</p>
+
 <div class="key-concept" style="margin-top:14px;"><div class="key-concept-label">⚖️ Head-to-Head Comparison</div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px;">
 <div style="background:#F0E8FF;border:2px solid #D8CCF0;border-radius:12px;padding:12px 14px;">
 <div style="font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:#6B3FA0;font-weight:900;margin-bottom:6px;">⚖️ EQUAL CHANGE</div>
 <div style="font-family:'Lora',Georgia,serif;font-size:16px;line-height:1.7;color:#0E1C42;">
-6,005 − 2,997<br>
-add 3 to both<br>
-= 6,008 − 3,000<br>
+6,005 − 2,997<br/>
+add 3 to both<br/>
+= 6,008 − 3,000<br/>
 = <strong>3,008</strong>
 </div>
 <div style="margin-top:6px;font-size:12px;font-weight:800;color:#2DB87A;">3 steps · 0 regroups</div>
@@ -502,7 +551,7 @@ add 3 to both<br>
 <div style="background:#EAF0FF;border:2px solid #D6E0F8;border-radius:12px;padding:12px 14px;">
 <div style="font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:#3A6B9A;font-weight:900;margin-bottom:6px;">📐 ALGORITHM</div>
 <div style="font-family:'Lora',Georgia,serif;font-size:16px;line-height:1.7;color:#0E1C42;">
-&nbsp;&nbsp;6,005<br>− 2,997<br>━━━━━<br>&nbsp;&nbsp;<strong>3,008</strong>
+  6,005<br/>− 2,997<br/>━━━━━<br/>  <strong>3,008</strong>
 </div>
 <div style="margin-top:6px;font-size:12px;font-weight:800;color:#E07B39;">5+ steps · 3 regroups (across zeros!)</div>
 </div>
@@ -511,23 +560,22 @@ add 3 to both<br>
 </div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">Two new strategies. Your toolbox just got bigger. Now apply them.</p><button class="tab-next-btn" onclick="switchTab('practice')">Continue to 🧮 Practice →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-practice">
-  <div class="callout callout-info"><span class="callout-icon">🧭</span><p>Three subtractions. Each one rewards a different strategy. Read the numbers first, choose your move, then solve.</p></div>
-  <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask yourself:</strong> Is the subtrahend just below or above a friendly value? Could I count up in clean jumps? Or does this need the algorithm?</p></div>
-  <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Go back to the Learn tab. The Strategy Picker and Head-to-Head comparison are still there.</p></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">Equal Change: 5,001 − 1,997</div><div class="activity-sub">Both numbers want to be friendlier. Shift both at once.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>Use Equal Change. Add 3 to BOTH numbers. The new problem becomes <strong>5,004 − 2,000</strong>. Now subtract — should be easy in your head. Then pick your answer below.</p>
+<div class="callout callout-info"><span class="callout-icon">🧭</span><p>Three subtractions. Each one rewards a different strategy. Read the numbers first, choose your move, then solve.</p></div>
+<div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask yourself:</strong> Is the subtrahend just below or above a friendly value? Could I count up in clean jumps? Or does this need the algorithm?</p></div>
+<div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Go back to the Learn tab. The Strategy Picker and Head-to-Head comparison are still there.</p></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">Equal Change: 5,001 − 1,997</div><div class="activity-sub">Both numbers want to be friendlier. Shift both at once.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>Use Equal Change. Add 3 to BOTH numbers. The new problem becomes <strong>5,004 − 2,000</strong>. Now subtract — should be easy in your head. Then pick your answer below.</p>
 <div class="value-card-row" style="justify-content:center;">
 <button class="value-card" onclick="pickP1Round(this,'3,004')" style="min-width:90px;"><div class="big">3,004</div></button>
 <button class="value-card" onclick="pickP1Round(this,'3,001')" style="min-width:90px;"><div class="big">3,001</div></button>
 <button class="value-card" onclick="pickP1Round(this,'3,007')" style="min-width:90px;"><div class="big">3,007</div></button>
 </div>
 <div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Exactly.</strong> 5,001 + 3 = 5,004. 1,997 + 3 = 2,000. 5,004 − 2,000 = <strong>3,004</strong>. The difference between 5,001 and 1,997 is the SAME as the difference between 5,004 and 2,000 — equal change doesn't move the gap, it just relocates it.
-<div class="video-wrap" data-video-slot="4-02-04-practice-1-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 1</div><div class="video-wrap-title">Sliding both numbers to easier ground</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-04_Practice-1_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Celebrate. "You moved BOTH numbers by 3. That kept the gap the same — but the new problem (5,004 − 2,000) has zero regrouping. The trick works because subtraction measures a GAP, and a gap doesn't change when both endpoints slide the same direction the same distance." Show a number line briefly to drive it home. (~45 sec)</div><div class="video-placeholder-id"><!-- slot: 4-02-04-practice-1-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Look again.</strong> Add 3 to BOTH 5,001 and 1,997. Then subtract the new (much easier) numbers.
 <div class="hint-callout">5,001 + 3 = 5,004. 1,997 + 3 = 2,000. Now: 5,004 − 2,000 = ?</div>
-<div class="video-wrap" data-video-slot="4-02-04-practice-1-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 1</div><div class="video-wrap-title">Equal change: shift BOTH, not just one</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-04_Practice-1_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. "Equal change ONLY works if you change BOTH numbers by the SAME amount. Change one, and the difference moves. Change both equally, and the difference stays." Demonstrate slowly on 5,001 − 1,997. (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-04-practice-1-retry --></div></div></div></div></div></div></div>
-  <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Choose Your Strategy — Three Differences</div><div class="activity-sub">Each problem has a best strategy. Same set, three different best moves.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Three subtractions. One wants Equal Change. One wants Count Up. One wants the Algorithm. Read the numbers before reaching for a strategy.</p></div>
+</div></div></div>
+<div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Choose Your Strategy — Three Differences</div><div class="activity-sub">Each problem has a best strategy. Same set, three different best moves.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Three subtractions. One wants Equal Change. One wants Count Up. One wants the Algorithm. Read the numbers before reaching for a strategy.</p></div>
 <p>Two quick checks. Your full practice is in the Independent Practice PDF.</p>
 <div style="display:grid;gap:14px;margin:14px 0;">
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:14px;">
@@ -559,16 +607,16 @@ add 3 to both<br>
 </div>
 </div>
 <div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ Three for three.</strong> 2a — 7,002 − 1,998 = <strong>5,004</strong> (add 2 to both → 7,004 − 2,000). 2b — 4,800 − 2,800 = <strong>2,000</strong> (count up from 2,800: +2,000 → 4,800). 2c — 6,453 − 2,178 = <strong>4,275</strong> (algorithm — two regroups, unavoidable). Match the move to the numbers.
-<div class="video-wrap" data-video-slot="4-02-04-practice-2-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 2</div><div class="video-wrap-title">Matching the strategy to the subtraction</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-04_Practice-2_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Recap each. 2a: equal change because 1,998 was right next to 2,000. 2b: count up because the gap was clean (one jump of +2,000). 2c: algorithm because no shortcut. "Reading the numbers first IS the strategy. Choosing well saves time." (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-04-practice-2-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Some were tricky.</strong> Look at each subtraction. Is the subtrahend close to friendly? Is the gap a clean jump? If neither, algorithm.
 <div class="hint-callout">2a — 1,998 is JUST below 2,000 → equal change. 2b — both numbers end in 800 → count up the thousands. 2c — no shortcut → stack and regroup.</div>
-<div class="video-wrap" data-video-slot="4-02-04-practice-2-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 2</div><div class="video-wrap-title">Reading the numbers before picking a tool</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-04_Practice-2_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the eyes-first habit. "Before you start any subtraction, scan: Is one number RIGHT next to a friendly value? Is the gap between them clean? Either yes — mental move. Both no — algorithm." Walk all three slowly. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-04-practice-2-retry --></div></div></div></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Sam's Mistake — Equal Change, Wrong Way</div><div class="activity-sub">Walk through Sam's work and spot the broken move.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Sam tried Equal Change on 8,003 − 2,996 but only changed ONE number. Read his work and find the error.</p></div>
+</div></div></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Sam's Mistake — Equal Change, Wrong Way</div><div class="activity-sub">Walk through Sam's work and spot the broken move.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Sam tried Equal Change on 8,003 − 2,996 but only changed ONE number. Read his work and find the error.</p></div>
 <div class="task-box"><div class="task-label">Sam's Work</div>
 <p>Sam was asked to find <strong>8,003 − 2,996</strong>. He wrote:</p>
 <div style="background:#FFF8E6;border:2px solid #F5C518;border-radius:12px;padding:14px 16px;font-family:'Lora',Georgia,serif;font-size:17px;line-height:1.8;color:#5A4A3A;margin:10px 0;">
-"2,996 is close to 3,000. I'll add 4 to make it friendly.<br>
-So now my problem is 8,003 − 3,000 = 5,003.<br>
+"2,996 is close to 3,000. I'll add 4 to make it friendly.<br/>
+So now my problem is 8,003 − 3,000 = 5,003.<br/>
 Answer: <strong>5,003</strong>."
 </div>
 <p><strong>Your task:</strong> Tap every statement below that is true about Sam's reasoning.</p>
@@ -580,27 +628,23 @@ Answer: <strong>5,003</strong>."
 </div>
 <button class="purple-btn" onclick="checkErrorAnalysis()">✓ Check My Picks</button>
 <div class="journal-label">✏️ In your own words, explain to Sam the rule for Equal Change. Use 8,003 − 2,996 as your example. <span class="saved-dot" id="dot-ea"></span></div>
-<textarea class="journal-box" id="journal-ea" data-label="Practice 3 — Error Analysis: Why Sam's equal-change move failed" placeholder="" oninput="autoSave(this,'dot-ea')"></textarea>
-<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Equal Change is "equal" because BOTH numbers move the same amount. Sam moved one number 4 but left the other alone — so the difference shrank by 4. The fix: 8,003 + 4 = 8,007; 2,996 + 4 = 3,000; 8,007 − 3,000 = <strong>5,007</strong>. The strategy was right — Sam just forgot the "equal" part.<div class="video-wrap" data-video-slot="4-02-04-practice-3-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 3</div><div class="video-wrap-title">Why "equal" change matters</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-04_Practice-3_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "Subtraction is a GAP. If you slide one endpoint and not the other, the gap changes. If you slide BOTH the same amount and same direction, the gap is unchanged. That's why it's 'equal' change — both move equally." Visual: draw two arrows on a number line. Slide both right by 4. Gap unchanged. (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-04-practice-3-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">Sam added 4 to 2,996 to make 3,000. But did he add 4 to 8,003? No. So the gap shrank by exactly 4 — and his answer is exactly 4 too small.</div><div class="video-wrap" data-video-slot="4-02-04-practice-3-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 3</div><div class="video-wrap-title">Both numbers must move by the same amount</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-02-04_Practice-3_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the rule. "Move ONE = answer changes by the same amount. Move BOTH = answer unchanged. The word EQUAL in equal change is the whole rule." Walk through 8,003 − 2,996 with both numbers moved. (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-04-practice-3-retry --></div></div></div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div></div>
+<textarea class="journal-box" data-label="Practice 3 — Error Analysis: Why Sam's equal-change move failed" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
+<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Equal Change is "equal" because BOTH numbers move the same amount. Sam moved one number 4 but left the other alone — so the difference shrank by 4. The fix: 8,003 + 4 = 8,007; 2,996 + 4 = 3,000; 8,007 − 3,000 = <strong>5,007</strong>. The strategy was right — Sam just forgot the "equal" part.</div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">Sam added 4 to 2,996 to make 3,000. But did he add 4 to 8,003? No. So the gap shrank by exactly 4 — and his answer is exactly 4 too small.</div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">You spotted a shift mistake and matched strategies. Now show what you know.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-assignment">
-  <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Pick Equal Change, Count Up, or the Algorithm — match the strategy to the numbers.</div></div></div><div class="activity-body"><p>You built two new subtraction strategies today — Equal Change and Count Up. Now use them. Read the numbers first, then choose your move.</p>
+<div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Pick Equal Change, Count Up, or the Algorithm — match the strategy to the numbers.</div></div></div><div class="activity-body"><p>You built two new subtraction strategies today — Equal Change and Count Up. Now use them. Read the numbers first, then choose your move.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Is the subtrahend just above or below a friendly value? Is the gap clean enough to count up in one or two jumps? If neither, stack and regroup.</p></div>
-<div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Equal Change drill.</strong> Use Equal Change on each. Show how you shifted BOTH numbers, the new easier problem, and the answer.<br>(a) <strong>6,002 − 1,996</strong><br>(b) <strong>9,001 − 2,997</strong><br>(c) <strong>5,003 − 3,998</strong></p><div class="journal-label">✏️ My work <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" id="journal-a1" data-label="Show What You Know — Problem 1: Three Equal-Change subtractions" placeholder="" oninput="autoSave(this,'dot-a1')"></textarea></div>
-
-<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> Why does Equal Change work? If you add 5 to BOTH numbers in a subtraction, why does the answer stay exactly the same? Explain in your own words, using a number line or example to help.</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" id="journal-a6" data-label="Show What You Know — Problem 6: Why Equal Change preserves the difference" placeholder="" oninput="autoSave(this,'dot-a6')"></textarea></div>
-
-
+<div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Equal Change drill.</strong> Use Equal Change on each. Show how you shifted BOTH numbers, the new easier problem, and the answer.<br/>(a) <strong>6,002 − 1,996</strong><br/>(b) <strong>9,001 − 2,997</strong><br/>(c) <strong>5,003 − 3,998</strong></p><div class="journal-label">✏️ My work <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: Three Equal-Change subtractions" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
+<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> Why does Equal Change work? If you add 5 to BOTH numbers in a subtraction, why does the answer stay exactly the same? Explain in your own words, using a number line or example to help.</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: Why Equal Change preserves the difference" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#55C8E8;"><div class="activity-head"><div class="activity-num" style="background:#55C8E8;color:#0E1C42;">🗺️</div><div><div class="activity-title">Connection Forward: What Comes Next</div><div class="activity-sub">Preview Lesson 4.02.05 — Word Problems</div></div></div><div class="activity-body"><p>You now have a full set of addition and subtraction tools — the standard algorithm AND four mental shortcuts (Make Friendly, Decompose, Count Up, Equal Change). That's enough to handle any whole-number computation up to 1,000,000.</p><p>Next lesson, those tools meet <strong>real word problems</strong>. The math is the same — but you'll have to figure out which operation to use from a story. Hazel's bar models make a big return — to set up "more than," "less than," and "left over" stories.</p><p>The big question next time: <em>When a word problem doesn't tell you which operation to use, how do you decide?</em></p></div></div></div></div>
-<div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly>Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
-  <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
+<div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
+<div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
 </div>
 <div class="footer">
-  <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
-  <div class="footer-sub">Math · Grade 4 · 4.02.04</div>
-  <div class="footer-copy">© 2025 Optima Academy Online</div>
+<div class="footer-main">🏫 <span>Optima Academy Online</span></div>
+<div class="footer-sub">Math · Grade 4 · 4.02.04</div>
+<div class="footer-copy">© 2025 Optima Academy Online</div>
 </div>
 </div>
 <canvas id="confettiCanvas"></canvas>
@@ -1037,6 +1081,75 @@ async function loadVideoManifest(){try{let res=await fetch('video-manifest.md',{
 function parseManifest(txt){let map={};let lines=txt.split(/\r?\n/);let current=null,buf=[];function commit(){if(current&&buf.join('\n').trim())map[current]=buf.join('\n').trim();buf=[]}for(let line of lines){let m=line.match(/^([A-Za-z0-9-]+):\s*$/);if(m){commit();current=m[1]}else if(current){buf.push(line)}}commit();return map}
 function showPageFeedback(msg){var panel=document.querySelector('.tab-panel.active')||document.body;var box=panel.querySelector(':scope > .page-feedback');if(!box){box=document.createElement('div');box.className='page-feedback';panel.insertBefore(box,panel.firstChild);}box.className='page-feedback show warn';box.innerHTML=msg;}
 window.addEventListener('DOMContentLoaded',()=>{restoreJournals();updateProgress();loadVideoManifest()});
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Doubling: ×4 and ×8";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
 </script>
 </body>
 </html>

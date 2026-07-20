@@ -329,6 +329,32 @@
 .cc-row strong{color:#C56C3F;font-weight:900;font-family:Lora,Georgia,serif}
 .cc-row em{color:#7A88A8;font-style:italic;font-size:12px}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
@@ -356,7 +382,31 @@
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
-<div class="video-wrap" data-video-slot="4-10-01-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.10.01</div><div class="video-wrap-title">Metric units stack — small pieces build big ones.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-10-01_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Hold up a ruler. "Each tiny tick is a millimeter. 10 of them make 1 centimeter. 100 centimeters make 1 meter. 1,000 meters make 1 kilometer." Show the same pattern for mass (1,000 g = 1 kg) and volume (1,000 mL = 1 L). Then convert: "5,000 mL = how many liters? Group into chunks of 1,000. Five chunks = 5 L." Frame: <strong>Build the bigger unit from the smaller pieces.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-welcome --></div></div></div></div>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Mixed Multiplication Facts — Maintenance</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">8 × 9</span><input autocomplete="off" class="fluency-input" data-answer="72" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 6</span><input autocomplete="off" class="fluency-input" data-answer="42" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 8</span><input autocomplete="off" class="fluency-input" data-answer="72" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 9</span><input autocomplete="off" class="fluency-input" data-answer="54" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">11 × 8</span><input autocomplete="off" class="fluency-input" data-answer="88" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">12 × 6</span><input autocomplete="off" class="fluency-input" data-answer="72" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 7</span><input autocomplete="off" class="fluency-input" data-answer="49" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 6</span><input autocomplete="off" class="fluency-input" data-answer="48" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 9</span><input autocomplete="off" class="fluency-input" data-answer="81" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 8</span><input autocomplete="off" class="fluency-input" data-answer="48" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Mixed Multiplication Facts — Maintenance)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
 <p>Atlas takes the lead — measurement is about naming units and applying conversion rules. Felix multiplies. Hazel builds the picture. Cora checks units.</p>
 <div class="bubble-row">
@@ -375,11 +425,11 @@
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
 <div style="background:#fff;border:1.5px solid #F5D4BC;border-radius:10px;padding:8px 10px;min-width:200px;text-align:center;">
 <div style="font-size:11px;color:#5B2E10;font-weight:800;text-transform:uppercase;letter-spacing:.4px;margin-bottom:6px;">cm vs. m</div>
-<svg width="190" height="62" viewBox="0 0 190 62" style="max-width:100%;">
-<rect x="2" y="4" width="8" height="18" fill="#E89A6B" stroke="#5B2E10" stroke-width="1.2" rx="1"/>
-<text x="6" y="36" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="800" font-size="9" fill="#5B2E10">1 cm</text>
-<rect x="22" y="4" width="166" height="18" fill="#C56C3F" stroke="#5B2E10" stroke-width="1.2" rx="2"/><line x1="23.66" y1="4" x2="23.66" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="25.32" y1="4" x2="25.32" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="26.98" y1="4" x2="26.98" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="28.64" y1="4" x2="28.64" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="30.299999999999997" y1="4" x2="30.299999999999997" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="31.96" y1="4" x2="31.96" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="33.62" y1="4" x2="33.62" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="35.28" y1="4" x2="35.28" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="36.94" y1="4" x2="36.94" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="38.599999999999994" y1="4" x2="38.599999999999994" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="40.26" y1="4" x2="40.26" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="41.92" y1="4" x2="41.92" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="43.58" y1="4" x2="43.58" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="45.239999999999995" y1="4" x2="45.239999999999995" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="46.9" y1="4" x2="46.9" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="48.56" y1="4" x2="48.56" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="50.22" y1="4" x2="50.22" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="51.879999999999995" y1="4" x2="51.879999999999995" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="53.54" y1="4" x2="53.54" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="55.199999999999996" y1="4" x2="55.199999999999996" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="56.86" y1="4" x2="56.86" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="58.519999999999996" y1="4" x2="58.519999999999996" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="60.18" y1="4" x2="60.18" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="61.839999999999996" y1="4" x2="61.839999999999996" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="63.5" y1="4" x2="63.5" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="65.16" y1="4" x2="65.16" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="66.82" y1="4" x2="66.82" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="68.47999999999999" y1="4" x2="68.47999999999999" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="70.14" y1="4" x2="70.14" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="71.8" y1="4" x2="71.8" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="73.46000000000001" y1="4" x2="73.46000000000001" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="75.12" y1="4" x2="75.12" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="76.78" y1="4" x2="76.78" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="78.44" y1="4" x2="78.44" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="80.1" y1="4" x2="80.1" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="81.75999999999999" y1="4" x2="81.75999999999999" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="83.41999999999999" y1="4" x2="83.41999999999999" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="85.08" y1="4" x2="85.08" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="86.74" y1="4" x2="86.74" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="88.39999999999999" y1="4" x2="88.39999999999999" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="90.06" y1="4" x2="90.06" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="91.72" y1="4" x2="91.72" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="93.38" y1="4" x2="93.38" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="95.03999999999999" y1="4" x2="95.03999999999999" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="96.7" y1="4" x2="96.7" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="98.36" y1="4" x2="98.36" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="100.02" y1="4" x2="100.02" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="101.67999999999999" y1="4" x2="101.67999999999999" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="103.33999999999999" y1="4" x2="103.33999999999999" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="105.0" y1="4" x2="105.0" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="106.66" y1="4" x2="106.66" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="108.32" y1="4" x2="108.32" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="109.97999999999999" y1="4" x2="109.97999999999999" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="111.64" y1="4" x2="111.64" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="113.3" y1="4" x2="113.3" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="114.96" y1="4" x2="114.96" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="116.61999999999999" y1="4" x2="116.61999999999999" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="118.28" y1="4" x2="118.28" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="119.94" y1="4" x2="119.94" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="121.6" y1="4" x2="121.6" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="123.25999999999999" y1="4" x2="123.25999999999999" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="124.92" y1="4" x2="124.92" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="126.58" y1="4" x2="126.58" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="128.24" y1="4" x2="128.24" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="129.89999999999998" y1="4" x2="129.89999999999998" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="131.56" y1="4" x2="131.56" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="133.22" y1="4" x2="133.22" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="134.88" y1="4" x2="134.88" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="136.54" y1="4" x2="136.54" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="138.2" y1="4" x2="138.2" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="139.86" y1="4" x2="139.86" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="141.51999999999998" y1="4" x2="141.51999999999998" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="143.18" y1="4" x2="143.18" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="144.83999999999997" y1="4" x2="144.83999999999997" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="146.5" y1="4" x2="146.5" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="148.16" y1="4" x2="148.16" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="149.82" y1="4" x2="149.82" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="151.48" y1="4" x2="151.48" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="153.14" y1="4" x2="153.14" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="154.79999999999998" y1="4" x2="154.79999999999998" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="156.45999999999998" y1="4" x2="156.45999999999998" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="158.12" y1="4" x2="158.12" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="159.78" y1="4" x2="159.78" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="161.44" y1="4" x2="161.44" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="163.1" y1="4" x2="163.1" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="164.76" y1="4" x2="164.76" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="166.42" y1="4" x2="166.42" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="168.07999999999998" y1="4" x2="168.07999999999998" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="169.73999999999998" y1="4" x2="169.73999999999998" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="171.4" y1="4" x2="171.4" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="173.06" y1="4" x2="173.06" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="174.72" y1="4" x2="174.72" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="176.38" y1="4" x2="176.38" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="178.04" y1="4" x2="178.04" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="179.7" y1="4" x2="179.7" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="181.35999999999999" y1="4" x2="181.35999999999999" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="183.01999999999998" y1="4" x2="183.01999999999998" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="184.67999999999998" y1="4" x2="184.67999999999998" y2="22" stroke="#fff" stroke-width="0.6"/><line x1="186.34" y1="4" x2="186.34" y2="22" stroke="#fff" stroke-width="0.6"/><text x="105" y="36" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="800" font-size="9" fill="#5B2E10">1 m (100 small ticks)</text>
-<text x="95" y="56" text-anchor="middle" font-family="Lora,Georgia,serif" font-style="italic" font-size="11" fill="#3A4A6B">How many cm fit in 1 m?</text>
+<svg height="62" style="max-width:100%;" viewbox="0 0 190 62" width="190">
+<rect fill="#E89A6B" height="18" rx="1" stroke="#5B2E10" stroke-width="1.2" width="8" x="2" y="4"></rect>
+<text fill="#5B2E10" font-family="Nunito,sans-serif" font-size="9" font-weight="800" text-anchor="middle" x="6" y="36">1 cm</text>
+<rect fill="#C56C3F" height="18" rx="2" stroke="#5B2E10" stroke-width="1.2" width="166" x="22" y="4"></rect><line stroke="#fff" stroke-width="0.6" x1="23.66" x2="23.66" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="25.32" x2="25.32" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="26.98" x2="26.98" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="28.64" x2="28.64" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="30.299999999999997" x2="30.299999999999997" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="31.96" x2="31.96" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="33.62" x2="33.62" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="35.28" x2="35.28" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="36.94" x2="36.94" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="38.599999999999994" x2="38.599999999999994" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="40.26" x2="40.26" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="41.92" x2="41.92" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="43.58" x2="43.58" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="45.239999999999995" x2="45.239999999999995" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="46.9" x2="46.9" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="48.56" x2="48.56" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="50.22" x2="50.22" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="51.879999999999995" x2="51.879999999999995" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="53.54" x2="53.54" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="55.199999999999996" x2="55.199999999999996" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="56.86" x2="56.86" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="58.519999999999996" x2="58.519999999999996" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="60.18" x2="60.18" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="61.839999999999996" x2="61.839999999999996" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="63.5" x2="63.5" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="65.16" x2="65.16" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="66.82" x2="66.82" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="68.47999999999999" x2="68.47999999999999" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="70.14" x2="70.14" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="71.8" x2="71.8" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="73.46000000000001" x2="73.46000000000001" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="75.12" x2="75.12" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="76.78" x2="76.78" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="78.44" x2="78.44" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="80.1" x2="80.1" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="81.75999999999999" x2="81.75999999999999" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="83.41999999999999" x2="83.41999999999999" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="85.08" x2="85.08" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="86.74" x2="86.74" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="88.39999999999999" x2="88.39999999999999" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="90.06" x2="90.06" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="91.72" x2="91.72" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="93.38" x2="93.38" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="95.03999999999999" x2="95.03999999999999" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="96.7" x2="96.7" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="98.36" x2="98.36" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="100.02" x2="100.02" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="101.67999999999999" x2="101.67999999999999" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="103.33999999999999" x2="103.33999999999999" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="105.0" x2="105.0" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="106.66" x2="106.66" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="108.32" x2="108.32" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="109.97999999999999" x2="109.97999999999999" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="111.64" x2="111.64" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="113.3" x2="113.3" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="114.96" x2="114.96" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="116.61999999999999" x2="116.61999999999999" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="118.28" x2="118.28" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="119.94" x2="119.94" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="121.6" x2="121.6" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="123.25999999999999" x2="123.25999999999999" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="124.92" x2="124.92" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="126.58" x2="126.58" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="128.24" x2="128.24" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="129.89999999999998" x2="129.89999999999998" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="131.56" x2="131.56" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="133.22" x2="133.22" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="134.88" x2="134.88" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="136.54" x2="136.54" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="138.2" x2="138.2" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="139.86" x2="139.86" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="141.51999999999998" x2="141.51999999999998" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="143.18" x2="143.18" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="144.83999999999997" x2="144.83999999999997" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="146.5" x2="146.5" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="148.16" x2="148.16" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="149.82" x2="149.82" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="151.48" x2="151.48" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="153.14" x2="153.14" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="154.79999999999998" x2="154.79999999999998" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="156.45999999999998" x2="156.45999999999998" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="158.12" x2="158.12" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="159.78" x2="159.78" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="161.44" x2="161.44" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="163.1" x2="163.1" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="164.76" x2="164.76" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="166.42" x2="166.42" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="168.07999999999998" x2="168.07999999999998" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="169.73999999999998" x2="169.73999999999998" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="171.4" x2="171.4" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="173.06" x2="173.06" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="174.72" x2="174.72" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="176.38" x2="176.38" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="178.04" x2="178.04" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="179.7" x2="179.7" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="181.35999999999999" x2="181.35999999999999" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="183.01999999999998" x2="183.01999999999998" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="184.67999999999998" x2="184.67999999999998" y1="4" y2="22"></line><line stroke="#fff" stroke-width="0.6" x1="186.34" x2="186.34" y1="4" y2="22"></line><text fill="#5B2E10" font-family="Nunito,sans-serif" font-size="9" font-weight="800" text-anchor="middle" x="105" y="36">1 m (100 small ticks)</text>
+<text fill="#3A4A6B" font-family="Lora,Georgia,serif" font-size="11" font-style="italic" text-anchor="middle" x="95" y="56">How many cm fit in 1 m?</text>
 </svg>
 </div>
 <div class="value-card-row" style="margin:0;">
@@ -391,11 +441,11 @@
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
 <div style="background:#fff;border:1.5px solid #F5D4BC;border-radius:10px;padding:8px 10px;min-width:200px;text-align:center;">
 <div style="font-size:11px;color:#5B2E10;font-weight:800;text-transform:uppercase;letter-spacing:.4px;margin-bottom:6px;">m vs. km</div>
-<svg width="190" height="62" viewBox="0 0 190 62" style="max-width:100%;">
-<rect x="2" y="6" width="3" height="14" fill="#E89A6B" stroke="#5B2E10" stroke-width="1" rx="1"/>
-<text x="3" y="34" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="800" font-size="9" fill="#5B2E10">1 m</text>
-<rect x="18" y="6" width="170" height="14" fill="#C56C3F" stroke="#5B2E10" stroke-width="1.2" rx="2"/><line x1="35.0" y1="6" x2="35.0" y2="20" stroke="#fff" stroke-width="1"/><line x1="52.0" y1="6" x2="52.0" y2="20" stroke="#fff" stroke-width="1"/><line x1="69.0" y1="6" x2="69.0" y2="20" stroke="#fff" stroke-width="1"/><line x1="86.0" y1="6" x2="86.0" y2="20" stroke="#fff" stroke-width="1"/><line x1="103.0" y1="6" x2="103.0" y2="20" stroke="#fff" stroke-width="1"/><line x1="120.0" y1="6" x2="120.0" y2="20" stroke="#fff" stroke-width="1"/><line x1="137.0" y1="6" x2="137.0" y2="20" stroke="#fff" stroke-width="1"/><line x1="154.0" y1="6" x2="154.0" y2="20" stroke="#fff" stroke-width="1"/><line x1="171.0" y1="6" x2="171.0" y2="20" stroke="#fff" stroke-width="1"/><text x="103" y="34" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="800" font-size="9" fill="#5B2E10">1 km (10 chunks of 100 m)</text>
-<text x="95" y="56" text-anchor="middle" font-family="Lora,Georgia,serif" font-style="italic" font-size="11" fill="#3A4A6B">How many m fit in 1 km?</text>
+<svg height="62" style="max-width:100%;" viewbox="0 0 190 62" width="190">
+<rect fill="#E89A6B" height="14" rx="1" stroke="#5B2E10" stroke-width="1" width="3" x="2" y="6"></rect>
+<text fill="#5B2E10" font-family="Nunito,sans-serif" font-size="9" font-weight="800" text-anchor="middle" x="3" y="34">1 m</text>
+<rect fill="#C56C3F" height="14" rx="2" stroke="#5B2E10" stroke-width="1.2" width="170" x="18" y="6"></rect><line stroke="#fff" stroke-width="1" x1="35.0" x2="35.0" y1="6" y2="20"></line><line stroke="#fff" stroke-width="1" x1="52.0" x2="52.0" y1="6" y2="20"></line><line stroke="#fff" stroke-width="1" x1="69.0" x2="69.0" y1="6" y2="20"></line><line stroke="#fff" stroke-width="1" x1="86.0" x2="86.0" y1="6" y2="20"></line><line stroke="#fff" stroke-width="1" x1="103.0" x2="103.0" y1="6" y2="20"></line><line stroke="#fff" stroke-width="1" x1="120.0" x2="120.0" y1="6" y2="20"></line><line stroke="#fff" stroke-width="1" x1="137.0" x2="137.0" y1="6" y2="20"></line><line stroke="#fff" stroke-width="1" x1="154.0" x2="154.0" y1="6" y2="20"></line><line stroke="#fff" stroke-width="1" x1="171.0" x2="171.0" y1="6" y2="20"></line><text fill="#5B2E10" font-family="Nunito,sans-serif" font-size="9" font-weight="800" text-anchor="middle" x="103" y="34">1 km (10 chunks of 100 m)</text>
+<text fill="#3A4A6B" font-family="Lora,Georgia,serif" font-size="11" font-style="italic" text-anchor="middle" x="95" y="56">How many m fit in 1 km?</text>
 </svg>
 </div>
 <div class="value-card-row" style="margin:0;">
@@ -407,11 +457,11 @@
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
 <div style="background:#fff;border:1.5px solid #F5D4BC;border-radius:10px;padding:8px 10px;min-width:200px;text-align:center;">
 <div style="font-size:11px;color:#5B2E10;font-weight:800;text-transform:uppercase;letter-spacing:.4px;margin-bottom:6px;">mm vs. cm</div>
-<svg width="190" height="62" viewBox="0 0 190 62" style="max-width:100%;">
-<rect x="6" y="6" width="6" height="22" fill="#E89A6B" stroke="#5B2E10" stroke-width="1.2" rx="1"/>
-<text x="9" y="40" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="800" font-size="9" fill="#5B2E10">1 mm</text>
-<rect x="30" y="6" width="150" height="22" fill="#C56C3F" stroke="#5B2E10" stroke-width="1.2" rx="2"/><line x1="45" y1="6" x2="45" y2="28" stroke="#fff" stroke-width="1.2"/><line x1="60" y1="6" x2="60" y2="28" stroke="#fff" stroke-width="1.2"/><line x1="75" y1="6" x2="75" y2="28" stroke="#fff" stroke-width="1.2"/><line x1="90" y1="6" x2="90" y2="28" stroke="#fff" stroke-width="1.2"/><line x1="105" y1="6" x2="105" y2="28" stroke="#fff" stroke-width="1.2"/><line x1="120" y1="6" x2="120" y2="28" stroke="#fff" stroke-width="1.2"/><line x1="135" y1="6" x2="135" y2="28" stroke="#fff" stroke-width="1.2"/><line x1="150" y1="6" x2="150" y2="28" stroke="#fff" stroke-width="1.2"/><line x1="165" y1="6" x2="165" y2="28" stroke="#fff" stroke-width="1.2"/><text x="105" y="40" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="800" font-size="9" fill="#5B2E10">1 cm (10 ticks of 1 mm)</text>
-<text x="95" y="56" text-anchor="middle" font-family="Lora,Georgia,serif" font-style="italic" font-size="11" fill="#3A4A6B">How many mm fit in 1 cm?</text>
+<svg height="62" style="max-width:100%;" viewbox="0 0 190 62" width="190">
+<rect fill="#E89A6B" height="22" rx="1" stroke="#5B2E10" stroke-width="1.2" width="6" x="6" y="6"></rect>
+<text fill="#5B2E10" font-family="Nunito,sans-serif" font-size="9" font-weight="800" text-anchor="middle" x="9" y="40">1 mm</text>
+<rect fill="#C56C3F" height="22" rx="2" stroke="#5B2E10" stroke-width="1.2" width="150" x="30" y="6"></rect><line stroke="#fff" stroke-width="1.2" x1="45" x2="45" y1="6" y2="28"></line><line stroke="#fff" stroke-width="1.2" x1="60" x2="60" y1="6" y2="28"></line><line stroke="#fff" stroke-width="1.2" x1="75" x2="75" y1="6" y2="28"></line><line stroke="#fff" stroke-width="1.2" x1="90" x2="90" y1="6" y2="28"></line><line stroke="#fff" stroke-width="1.2" x1="105" x2="105" y1="6" y2="28"></line><line stroke="#fff" stroke-width="1.2" x1="120" x2="120" y1="6" y2="28"></line><line stroke="#fff" stroke-width="1.2" x1="135" x2="135" y1="6" y2="28"></line><line stroke="#fff" stroke-width="1.2" x1="150" x2="150" y1="6" y2="28"></line><line stroke="#fff" stroke-width="1.2" x1="165" x2="165" y1="6" y2="28"></line><text fill="#5B2E10" font-family="Nunito,sans-serif" font-size="9" font-weight="800" text-anchor="middle" x="105" y="40">1 cm (10 ticks of 1 mm)</text>
+<text fill="#3A4A6B" font-family="Lora,Georgia,serif" font-size="11" font-style="italic" text-anchor="middle" x="95" y="56">How many mm fit in 1 cm?</text>
 </svg>
 </div>
 <div class="value-card-row" style="margin:0;">
@@ -424,8 +474,8 @@
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Conversion factors:</strong> mm ↔ cm = ×10. cm ↔ m = ×100. m ↔ km = ×1,000. Also: g ↔ kg = ×1,000, and mL ↔ L = ×1,000.</div>
-<div class="journal-label">✏️ Which pairs of units use ×1,000? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: conversion factors" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-10-01-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.10.01</div><div class="video-wrap-title">Conversion factors connect units</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-10-01_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "Three numbers do all the metric work: 10, 100, 1,000. Millimeters and centimeters are 10 apart. Centimeters and meters are 100 apart. Meters and kilometers are 1,000 apart. Mass and volume each have just one factor — 1,000." Frame: <strong>Memorize the chart. Then it is just multiply or divide.</strong></div><div class="video-placeholder-id"><!-- slot: lesson-readiness-feedback --></div></div></div></div>
+<div class="journal-label">✏️ Which pairs of units use ×1,000? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: conversion factors" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Small to big OR big to small.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">📏</span><p>If a fence is <strong>5,000 mm</strong> long, how many centimeters is that? How many meters?</p></div>
 <div class="strategy-chip-row">
@@ -436,11 +486,10 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>5,000 mm.</strong> ÷10 → <strong>500 cm</strong>. ÷100 from cm → <strong>5 m</strong>. The same length, three names.</p></div>
 <div class="journal-label">✏️ Why is the NUMBER smaller as the UNIT gets bigger? <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think: number shrinks unit grows" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think: number shrinks unit grows" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">Now build a meter from smaller pieces.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-10-01-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-10-01 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-10-01-concept --></div></div></div></div>
 <div aria-label="Daily vocabulary flash cards" class="vocab-section">
 <div class="vocab-section-head">
 <div class="vocab-section-icon">📚</div>
@@ -451,40 +500,38 @@
 </div>
 <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
 <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for millimeter. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">📏</div><div class="fc-word">millimeter (mm)</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">millimeter (mm)</div><div class="fc-def">smallest common length unit. 10 mm = 1 cm. About the thickness of a dime.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for centimeter. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">📐</div><div class="fc-word">centimeter (cm)</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">centimeter (cm)</div><div class="fc-def">100 cm = 1 m. About the width of a fingernail.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for meter. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">📏</div><div class="fc-word">meter (m)</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">meter (m)</div><div class="fc-def">1,000 m = 1 km. About the height of a doorknob from the floor.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for conversion. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🔄</div><div class="fc-word">conversion</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">conversion</div><div class="fc-def">changing one unit into another while keeping the same length, mass, or volume.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div aria-label="Vocabulary card for millimeter. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">📏</div><div class="fc-word">millimeter (mm)</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">millimeter (mm)</div><div class="fc-def">smallest common length unit. 10 mm = 1 cm. About the thickness of a dime.</div><div class="fc-tap-back">tap to flip back</div></div>
 </div>
-<div class="video-wrap" data-video-slot="4-10-01-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.10.01</div><div class="video-wrap-title">Build the bigger metric unit from smaller pieces.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-10-01_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Three converts walked end to end. (1) 5,000 mL → L. Group into 1,000s. Five chunks → 5 L. (2) 6 m → cm. Each meter is 100 cm. 6 × 100 = 600 cm. (3) 1 km − 300 m. First convert: 1,000 m. Then subtract: 1,000 − 300 = 700 m. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-concept --></div></div></div></div>
+</div>
+<div aria-label="Vocabulary card for centimeter. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">📐</div><div class="fc-word">centimeter (cm)</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">centimeter (cm)</div><div class="fc-def">100 cm = 1 m. About the width of a fingernail.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for meter. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">📏</div><div class="fc-word">meter (m)</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">meter (m)</div><div class="fc-def">1,000 m = 1 km. About the height of a doorknob from the floor.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for conversion. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🔄</div><div class="fc-word">conversion</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">conversion</div><div class="fc-def">changing one unit into another while keeping the same length, mass, or volume.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
 <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Pick how many groups to SPLIT the bar into. Then click groups to TAKE them.</p></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#C56C3F;">🏗️</div><div><div class="activity-title">Unit Builder</div><div class="activity-sub">Click pieces to stack small units into bigger ones. Watch the bar fill.</div></div></div><div class="activity-body"><p>Three rounds. Each one stacks small pieces into a larger unit. Click until the bar fills.</p>
-
-<div class="ub-card" data-id="1" data-small-unit="mm" data-small-value="1" data-big-unit="cm" data-target="10" data-step="1" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="ub-card" data-big-unit="cm" data-id="1" data-small-unit="mm" data-small-value="1" data-step="1" data-target="10" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 1 · Build a centimeter</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">10 millimeters fill 1 centimeter. Click 10 times.</div>
-
 <div style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:14px;margin-bottom:12px;">
 <div style="text-align:center;font-size:11px;font-weight:900;color:#5B2E10;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;">Stacking mm pieces toward 1 cm</div>
 <div id="ubBar-1" style="display:flex;flex-wrap:wrap;gap:2px;justify-content:flex-start;min-height:46px;background:#F5D4BC;border:1px solid #F0BD96;border-radius:8px;padding:4px;"></div>
@@ -492,19 +539,15 @@
 <span id="ubCount-1">0</span> mm of <span id="ubTarget-1">10</span> mm = <span id="ubPct-1" style="color:#C56C3F;">0%</span> of 1 cm
 </div>
 </div>
-
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="ubAdd('1')" id="ubAddBtn-1" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 mm</button>
+<button id="ubAddBtn-1" onclick="ubAdd('1')" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 mm</button>
 <button onclick="ubReset('1')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="ubStatus-1" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Click to start stacking.</div>
 </div>
-
-<div class="ub-card" data-id="2" data-small-unit="cm" data-small-value="1" data-big-unit="m" data-target="100" data-step="10" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="ub-card" data-big-unit="m" data-id="2" data-small-unit="cm" data-small-value="1" data-step="10" data-target="100" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 2 · Build a meter</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">100 centimeters fill 1 meter. The button adds 10 cm at a time so you don't have to click 100 times.</div>
-
 <div style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:14px;margin-bottom:12px;">
 <div style="text-align:center;font-size:11px;font-weight:900;color:#5B2E10;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;">Stacking cm pieces toward 1 m</div>
 <div id="ubBar-2" style="display:flex;flex-wrap:wrap;gap:2px;justify-content:flex-start;min-height:46px;background:#F5D4BC;border:1px solid #F0BD96;border-radius:8px;padding:4px;"></div>
@@ -512,19 +555,15 @@
 <span id="ubCount-2">0</span> cm of <span id="ubTarget-2">100</span> cm = <span id="ubPct-2" style="color:#C56C3F;">0%</span> of 1 m
 </div>
 </div>
-
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="ubAdd('2')" id="ubAddBtn-2" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+10 cm</button>
+<button id="ubAddBtn-2" onclick="ubAdd('2')" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+10 cm</button>
 <button onclick="ubReset('2')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="ubStatus-2" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Click to start stacking.</div>
 </div>
-
-<div class="ub-card" data-id="3" data-small-unit="m" data-small-value="1" data-big-unit="km" data-target="1000" data-step="100" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="ub-card" data-big-unit="km" data-id="3" data-small-unit="m" data-small-value="1" data-step="100" data-target="1000" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 3 · Build a kilometer</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">1,000 meters fill 1 kilometer. Each click adds 100 m chunks.</div>
-
 <div style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:14px;margin-bottom:12px;">
 <div style="text-align:center;font-size:11px;font-weight:900;color:#5B2E10;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;">Stacking m pieces toward 1 km</div>
 <div id="ubBar-3" style="display:flex;flex-wrap:wrap;gap:2px;justify-content:flex-start;min-height:46px;background:#F5D4BC;border:1px solid #F0BD96;border-radius:8px;padding:4px;"></div>
@@ -532,15 +571,12 @@
 <span id="ubCount-3">0</span> m of <span id="ubTarget-3">1000</span> m = <span id="ubPct-3" style="color:#C56C3F;">0%</span> of 1 km
 </div>
 </div>
-
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="ubAdd('3')" id="ubAddBtn-3" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+100 m</button>
+<button id="ubAddBtn-3" onclick="ubAdd('3')" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+100 m</button>
 <button onclick="ubReset('3')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="ubStatus-3" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Click to start stacking.</div>
 </div>
-
 <div class="reveal-box" id="learnReveal"><strong>Built.</strong> 10 mm = 1 cm. 100 cm = 1 m. 1,000 m = 1 km. The same pattern works for mass (1,000 g = 1 kg) and volume (1,000 mL = 1 L).</div>
 </div></div>
 <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 The Metric Chart</div><p><strong>Length:</strong> 10 mm = 1 cm. 100 cm = 1 m. 1,000 m = 1 km.</p><p><strong>Mass:</strong> 1,000 g = 1 kg.</p><p><strong>Volume:</strong> 1,000 mL = 1 L.</p><p><strong>To convert:</strong> small → big, divide. Big → small, multiply.</p></div>
@@ -562,7 +598,7 @@
 <textarea class="journal-box" data-label="Learn — Socratic: 1,000 vs 100" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: 1 km − 300 m</div><div class="activity-sub">Convert first. Then subtract.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Find <strong>1 km − 300 m</strong>. Express in meters.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
-<div class="video-wrap" data-video-slot="4-10-01-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.10.01</div><div class="video-wrap-title">1 km − 300 m = 700 m</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-10-01_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Atlas: "Different units! Convert first." Felix: "1 km = 1,000 m. Now subtract: 1,000 − 300 = 700 m." Cora: "Check units: answer is in meters ✓." About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-10-01-example --></div></div></div></div>
+
 <div style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.9;font-size:16px;">
 <strong>Step 1.</strong> Convert to the same unit: 1 km = <span style="color:#C56C3F;font-weight:900;">1,000 m</span>.<br/>
@@ -583,12 +619,10 @@
 <div class="callout callout-info"><span class="callout-icon">🏗️</span><p>Three more units to build — for mass and volume this time.</p></div>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Each round:</strong> Click pieces. The bar fills. The readout counts up.</p></div>
 <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Pattern:</strong> 1,000 small units = 1 big unit (for g→kg and mL→L).</p></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#C56C3F;">1</div><div><div class="activity-title">Build 1 Kilogram</div><div class="activity-sub">1,000 grams → 1 kg.</div></div><span class="activity-time" style="background:#C56C3F;">~5 min</span></div><div class="activity-body">
-<div class="ub-card" data-id="p1" data-small-unit="g" data-small-value="1" data-big-unit="kg" data-target="1000" data-step="100" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="ub-card" data-big-unit="kg" data-id="p1" data-small-unit="g" data-small-value="1" data-step="100" data-target="1000" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Each click adds 100 g chunks</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Click 10 times to reach 1 kg.</div>
-
 <div style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:14px;margin-bottom:12px;">
 <div style="text-align:center;font-size:11px;font-weight:900;color:#5B2E10;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;">Stacking g pieces toward 1 kg</div>
 <div id="ubBar-p1" style="display:flex;flex-wrap:wrap;gap:2px;justify-content:flex-start;min-height:46px;background:#F5D4BC;border:1px solid #F0BD96;border-radius:8px;padding:4px;"></div>
@@ -596,23 +630,19 @@
 <span id="ubCount-p1">0</span> g of <span id="ubTarget-p1">1000</span> g = <span id="ubPct-p1" style="color:#C56C3F;">0%</span> of 1 kg
 </div>
 </div>
-
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="ubAdd('p1')" id="ubAddBtn-p1" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+100 g</button>
+<button id="ubAddBtn-p1" onclick="ubAdd('p1')" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+100 g</button>
 <button onclick="ubReset('p1')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="ubStatus-p1" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Click to start stacking.</div>
 </div>
 <div class="journal-label">✏️ How many grams make a kilogram? Why does the number for kilograms get smaller than the number for grams? <span class="saved-dot" id="dot-p1"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 1: build 1 kg" id="journal-p1" oninput="autoSave(this,'dot-p1')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Build 1 Liter</div><div class="activity-sub">1,000 milliliters → 1 L.</div></div></div><div class="activity-body">
-<div class="ub-card" data-id="p2" data-small-unit="mL" data-small-value="1" data-big-unit="L" data-target="1000" data-step="100" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="ub-card" data-big-unit="L" data-id="p2" data-small-unit="mL" data-small-value="1" data-step="100" data-target="1000" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Each click adds 100 mL chunks</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Click 10 times to fill 1 L.</div>
-
 <div style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:14px;margin-bottom:12px;">
 <div style="text-align:center;font-size:11px;font-weight:900;color:#5B2E10;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;">Stacking mL pieces toward 1 L</div>
 <div id="ubBar-p2" style="display:flex;flex-wrap:wrap;gap:2px;justify-content:flex-start;min-height:46px;background:#F5D4BC;border:1px solid #F0BD96;border-radius:8px;padding:4px;"></div>
@@ -620,33 +650,26 @@
 <span id="ubCount-p2">0</span> mL of <span id="ubTarget-p2">1000</span> mL = <span id="ubPct-p2" style="color:#C56C3F;">0%</span> of 1 L
 </div>
 </div>
-
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="ubAdd('p2')" id="ubAddBtn-p2" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+100 mL</button>
+<button id="ubAddBtn-p2" onclick="ubAdd('p2')" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+100 mL</button>
 <button onclick="ubReset('p2')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="ubStatus-p2" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Click to start stacking.</div>
 </div>
 <div class="journal-label">✏️ A juice bottle holds 650 mL. How many bottles fit in 1 L? <span class="saved-dot" id="dot-p2"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 2: build 1 L" id="journal-p2" oninput="autoSave(this,'dot-p2')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#C56C3F;">3</div><div><div class="activity-title">Word Problem — Amy's Juice</div><div class="activity-sub">5 bottles. 650 mL each. Total?</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🧃</span><p><strong>Amy bought 5 bottles of juice.</strong> Each bottle contains 650 mL of juice. How much juice in all? Express in mL and in L.</p></div>
 <div class="journal-label">✏️ Your work and answer <span class="saved-dot" id="dot-p3"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 3: Amy's juice" id="journal-p3" oninput="autoSave(this,'dot-p3')" placeholder="5 × 650 mL = ____ mL = ____ L ____ mL" style="min-height:80px;"></textarea>
 </div></div>
-
 <div class="tab-next-wrap"><p class="tab-transition-voice">You stacked, multiplied, converted. Now show it.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">For each problem, convert between metric units. Show your work.</div></div></div><div class="activity-body"><p>Use the chart: 10 mm = 1 cm, 100 cm = 1 m, 1,000 m = 1 km, 1,000 g = 1 kg, 1,000 mL = 1 L.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Do the denominators MATCH? Or do I need to rename one or both? Or is a benchmark (<span class="frac"><span class="num">1</span><span class="den">2</span></span>, 1) faster?</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Convert length.</strong><br/>(a) 6 m = ___ cm<br/>(b) 5,450 cm = ___ m ___ cm<br/>(c) 3 × 8 m = ___ m<br/>(d) 3 × 42 cm = ___ cm</p><div class="journal-label">✏️ All four answers <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: convert length" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-
 <div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Word problem — Amy's juice.</strong> Amy bought 5 bottles of juice. Each bottle contains 650 mL. (a) Total mL? (b) Express as L and mL.</p><div class="journal-label">✏️ Both forms <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: Amy juice" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
-
-
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#C56C3F;"><div class="activity-head"><div class="activity-num" style="background:#C56C3F;color:#fff;">🗺️</div><div><div class="activity-title">Unit 7 Complete — Where This Goes Next</div><div class="activity-sub">Looking ahead</div></div></div><div class="activity-body"><p>You've compared and ordered fractions that all fit between 0 and 1.</p><p>Next lesson: <strong>Improper Fractions and Mixed Numbers.</strong> What if the top is BIGGER than the bottom? <span class="frac"><span class="num">8</span><span class="den">5</span></span> of a pie isn't just half — it's a WHOLE pie plus some extra. That's an improper fraction, and it can also be written as a mixed number (1 <span class="frac"><span class="num">3</span><span class="den">5</span></span>).</p><p>The big question opening 6.03: <em>How do you show a fraction that's more than 1 whole?</em></p></div></div></div></div>
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed all 6 problems above.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed both column subtractions on every problem.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed the borrow step whenever the fraction column needed it and simplified at the end.</span></div></div></div>
@@ -1240,12 +1263,12 @@ function ccOpen(){ var o = document.getElementById('ccOverlay'); if(o) o.classLi
 function ccClose(){ var o = document.getElementById('ccOverlay'); if(o) o.classList.remove('show'); }
 
 </script>
-<button class="cc-fab" onclick="ccOpen()" aria-label="Open conversion chart" title="Conversion Chart">📋 Conversion Chart</button>
+<button aria-label="Open conversion chart" class="cc-fab" onclick="ccOpen()" title="Conversion Chart">📋 Conversion Chart</button>
 <div class="cc-overlay" id="ccOverlay" onclick="if(event.target.id==='ccOverlay')ccClose()">
 <div class="cc-modal">
 <div class="cc-modal-head">
 <div class="cc-modal-title">📋 Conversion Chart</div>
-<button class="cc-close" onclick="ccClose()" aria-label="Close">×</button>
+<button aria-label="Close" class="cc-close" onclick="ccClose()">×</button>
 </div>
 <div class="cc-section">
 <div class="cc-section-head">Metric · Length</div>
@@ -1285,4 +1308,73 @@ function ccClose(){ var o = document.getElementById('ccOverlay'); if(o) o.classL
 </div>
 </div>
 </div>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Mixed Multiplication Facts — Maintenance";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
+</script>
 </body></html>

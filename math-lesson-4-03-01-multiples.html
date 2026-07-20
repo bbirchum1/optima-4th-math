@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Optima Academy Online — Grade 4 Math Lesson 4.03.01</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
@@ -306,25 +307,51 @@
 .bubble-text{font-size:14.5px;color:#0E1C42;line-height:1.5;font-weight:600;font-family:'Lora',Georgia,serif;font-style:italic}
 @media(max-width:620px){.bubble{flex:1 1 100%;max-width:100%}}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
 <div class="progress-wrap"><span class="progress-label">📐 Lesson Progress</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><span class="progress-pct" id="progressPct">0%</span></div>
 <div class="header">
-  <div class="header-brand">
-    <div class="header-logo">
-      <img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" />
-    </div>
-    <div>
-      <div class="header-org">Optima Academy Online</div>
-      <div class="header-sub">An Education Experience Company</div>
-    </div>
-  </div>
-  <div class="header-title"><em>Multiples</em> — the rhythm of skip counting</div>
-  <div class="header-badge">
-    <span class="header-badge-icon">🦉</span>
-    <span class="header-badge-text">Lesson 4.03.01</span>
-  </div>
+<div class="header-brand">
+<div class="header-logo">
+<img alt="Optima Academy" src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png"/>
+</div>
+<div>
+<div class="header-org">Optima Academy Online</div>
+<div class="header-sub">An Education Experience Company</div>
+</div>
+</div>
+<div class="header-title"><em>Multiples</em> — the rhythm of skip counting</div>
+<div class="header-badge">
+<span class="header-badge-icon">🦉</span>
+<span class="header-badge-text">Lesson 4.03.01</span>
+</div>
 </div>
 <div class="quote-strip"><div class="quote-strip-text">"A multiple of 4 is anything you land on while skip-counting by 4. The same rule works for every number."</div><div class="quote-strip-attr">Multiples Big Idea</div></div>
 <div class="info-strip"><div class="info-cell"><div class="info-icon" style="background:#F0E8FF;">🧭</div><div><div class="info-label">Unit</div><div class="info-value">Unit 3</div><div class="info-detail">Multiples and Factors</div></div></div><div class="info-cell"><div class="info-icon" style="background:#E3F8ED;">📅</div><div><div class="info-label">Lesson</div><div class="info-value">4.03.01</div><div class="info-detail">U1 Anchor</div></div></div><div class="info-cell"><div class="info-icon" style="background:#EAF0FF;">📐</div><div><div class="info-label">Standard</div><div class="info-value">MA.4.AR.3.1</div><div class="info-detail">Find common multiples</div></div></div><div class="info-cell"><div class="info-icon" style="background:#FFF8E6;">🔢</div><div><div class="info-label">Focus</div><div class="info-value">Skip counting</div><div class="info-detail">MTR.5.1 · MTR.6.1</div></div></div></div>
@@ -332,22 +359,45 @@
 <div class="intro-2col"><div class="intro-card theme-question"><div class="intro-card-head"><div class="intro-card-head-icon">❓</div><div><div class="intro-card-head-label">Essential Question</div><div class="intro-card-head-title">What does it mean for a number to be a "multiple" of another number?</div></div></div><div class="intro-card-body"><p>A <strong>multiple</strong> of 4 is any number you can MAKE by multiplying 4 by a whole number. 4 × 1 = 4. 4 × 2 = 8. 4 × 3 = 12. So 4, 8, 12, 16, 20… are all multiples of 4.</p><p>Same thing — said different: a multiple of 4 is any number you LAND on when you skip count by 4. Two ways. One idea.</p></div></div><div class="intro-card theme-objectives"><div class="intro-card-head"><div class="intro-card-head-icon">🎯</div><div><div class="intro-card-head-label">Today's Objectives</div><div class="intro-card-head-title">You will…</div></div></div><div class="intro-card-body"><div class="obj-line"><span class="obj-icon">🔢</span><span><strong>List the first ten multiples</strong> of any one-digit number using skip counting.</span></div><div class="obj-line"><span class="obj-icon">🎯</span><span><strong>Decide</strong> whether a given number is or is NOT a multiple of another (use division or skip counting).</span></div><div class="obj-line"><span class="obj-icon">🧠</span><span><strong>Explain</strong> the connection between multiples, skip counting, and the multiplication table.</span></div></div></div></div>
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
-
 <div class="tab-panel active" id="tab-warmup">
-  <div class="video-wrap" data-video-slot="4-03-01-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.03.01</div><div class="video-wrap-title">Multiples — the family of numbers you land on</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-01_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Start with a finger-snap rhythm or hand-clap pattern: clap on 4, 8, 12, 16, 20. "Recognize that? You've been skip-counting since first grade." Write the numbers as you say them. "Every number you just landed on is a MULTIPLE of 4. The first one — 4. Second — 8. Third — 12. The number you ARE skip-counting BY, and the COUNT of how many times you stepped, multiplied together. 4 × 1 = 4. 4 × 2 = 8. 4 × 3 = 12. Same numbers. Two ways to think about them — skip counting OR multiplying." Now flip the question. "Is 28 a multiple of 4? Keep skip-counting: 4, 8, 12, 16, 20, 24, 28. Yes — I landed on it. So 28 = 4 × 7. Is 30 a multiple of 4? 4, 8, 12, 16, 20, 24, 28, 32 — never landed on 30. So no, 30 is NOT a multiple of 4." Frame: "Today you'll find multiples three ways — by skip counting, by multiplying, and by dividing to check. They're all the same family of numbers. We're starting Unit 3, which is all about how numbers relate to each other through multiplication." Tone: warm and new — fresh territory after a long unit on addition and subtraction. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-02-welcome --></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
-    <p>Unit 3 begins. The crew steps into multiplication's neighborhood — multiples, factors, primes. Each member gets a new specialty.</p>
-    <div class="bubble-row">
-      <div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — skip counter</div><div class="bubble-text">"My job: skip count by the number. 4, 8, 12, 16, 20… every place I land is a multiple. I write the first ten on a number line."</div></div></div>
-      <div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — multiplier</div><div class="bubble-text">"I think in × instead of skipping. 4 × 1, 4 × 2, 4 × 3… same multiples Atlas finds, just from the multiplication table."</div></div></div>
-    </div>
-    <div class="bubble-row">
-      <div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — array builder</div><div class="bubble-text">"I draw multiples as arrays of dots. 4 × 3 = 12 dots in a 4-by-3 rectangle. You can SEE the multiplication. It's a picture of the multiple."</div></div></div>
-      <div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — divides to check</div><div class="bubble-text">"To check if a number IS a multiple of 4, I divide. 28 ÷ 4 = 7 with no remainder → yes, multiple. 30 ÷ 4 = 7 r 2 → no, not a multiple."</div></div></div>
-    </div>
-    <div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>Cora's check is the universal test: <em>if it divides evenly with no remainder, it IS a multiple. If there's a remainder, it ISN'T.</em></p></div>
-  </div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Skip Count to Spot Multiples</div><div class="activity-sub">Skip-count by each given number. The pattern shows the multiples.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>Two quick checks. Your full practice is in the Independent Practice PDF.</p>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Known-Fact Bridges: ×3 and ×6</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">3 × 4</span><input autocomplete="off" class="fluency-input" data-answer="12" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 4</span><input autocomplete="off" class="fluency-input" data-answer="24" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">3 × 7</span><input autocomplete="off" class="fluency-input" data-answer="21" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 5</span><input autocomplete="off" class="fluency-input" data-answer="30" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">3 × 8</span><input autocomplete="off" class="fluency-input" data-answer="24" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 6</span><input autocomplete="off" class="fluency-input" data-answer="36" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">3 × 9</span><input autocomplete="off" class="fluency-input" data-answer="27" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 7</span><input autocomplete="off" class="fluency-input" data-answer="42" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">3 × 6</span><input autocomplete="off" class="fluency-input" data-answer="18" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 9</span><input autocomplete="off" class="fluency-input" data-answer="54" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Known-Fact Bridges: ×3 and ×6)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
+<p>Unit 3 begins. The crew steps into multiplication's neighborhood — multiples, factors, primes. Each member gets a new specialty.</p>
+<div class="bubble-row">
+<div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — skip counter</div><div class="bubble-text">"My job: skip count by the number. 4, 8, 12, 16, 20… every place I land is a multiple. I write the first ten on a number line."</div></div></div>
+<div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — multiplier</div><div class="bubble-text">"I think in × instead of skipping. 4 × 1, 4 × 2, 4 × 3… same multiples Atlas finds, just from the multiplication table."</div></div></div>
+</div>
+<div class="bubble-row">
+<div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — array builder</div><div class="bubble-text">"I draw multiples as arrays of dots. 4 × 3 = 12 dots in a 4-by-3 rectangle. You can SEE the multiplication. It's a picture of the multiple."</div></div></div>
+<div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — divides to check</div><div class="bubble-text">"To check if a number IS a multiple of 4, I divide. 28 ÷ 4 = 7 with no remainder → yes, multiple. 30 ÷ 4 = 7 r 2 → no, not a multiple."</div></div></div>
+</div>
+<div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>Cora's check is the universal test: <em>if it divides evenly with no remainder, it IS a multiple. If there's a remainder, it ISN'T.</em></p></div>
+</div></div>
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Skip Count to Spot Multiples</div><div class="activity-sub">Skip-count by each given number. The pattern shows the multiples.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>Two quick checks. Your full practice is in the Independent Practice PDF.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:grid;gap:14px;">
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
@@ -378,16 +428,16 @@
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Answers:</strong> 3 + 3 = <strong>15</strong> (next multiple of 3). 25 + 5 = <strong>30</strong> (next multiple of 5). 24 + 4 = <strong>28</strong> (next multiple of 4). Notice the pattern: each step is the same SIZE as the number you're skip-counting by. That's the heartbeat of multiples.</div>
-<div class="journal-label">✏️ Pick any one of the three skip-count patterns above. List the FIRST TEN multiples. (For example, if you pick 4: 4, 8, 12, 16, 20, 24, 28, 32, 36, 40.) Notice how each multiple is the number ADDED to the previous one. <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: First ten multiples of a chosen number" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-03-01-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.03.01</div><div class="video-wrap-title">Skip counting IS multiplication, the long way</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-01_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk each. <strong>Skip count by 3:</strong> "3, 6, 9, 12 — next is 12 + 3 = <strong>15</strong>." Tap each on a number line. "Each step is the same size — three." <strong>Skip count by 5:</strong> "5, 10, 15, 20, 25 — next is 25 + 5 = <strong>30</strong>." <strong>Skip count by 4:</strong> "4, 8, 12, 16, 20, 24 — next is 24 + 4 = <strong>28</strong>." Pause. "Every step is the same size. The numbers you land on are MULTIPLES. Multiples of 3 are spaced 3 apart. Multiples of 5 are spaced 5 apart. Multiples of 4 are spaced 4 apart." Now flip it: "Another way to say 'the third multiple of 5' is '5 × 3' — and that equals 15. Skip counting and multiplication are two views of the same picture." (~1-2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-02-readiness-feedback --></div></div></div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
+<div class="journal-label">✏️ Pick any one of the three skip-count patterns above. List the FIRST TEN multiples. (For example, if you pick 4: 4, 8, 12, 16, 20, 24, 28, 32, 36, 40.) Notice how each multiple is the number ADDED to the previous one. <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: First ten multiples of a chosen number" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">🥁</span><p>A drum line has <strong>4 drummers</strong>. The director arranges them in equal-sized rows for halftime. <strong>Could she arrange them in 6 rows of equal size? In 8 rows?</strong> What sized GROUPS could she make using the drummers? (Hint: think about multiples of 4.)</p></div>
 <div class="number-talk-visual">
 <div class="number-talk-prompt">Skip count by 4 in your head: 4, 8, 12, 16, 20, 24, 28… Which of these matches a number of drummers we could arrange? The drum line has just 4. But what if the question were about 28 drummers — would that work in rows of 4? Of 6?</div>
-<div class="visual-equation" style="font-size:22px;letter-spacing:1px;">4 × ? &nbsp;=&nbsp; how many drummers fit in a row pattern?</div>
+<div class="visual-equation" style="font-size:22px;letter-spacing:1px;">4 × ?  =  how many drummers fit in a row pattern?</div>
 <div class="notice-wonder-grid">
-<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" id="journal-notice" data-label="Warm-Up — Notice: What I notice about the drum line pattern" placeholder="" oninput="autoSave(this,'dot-notice')" style="min-height:60px;"></textarea></div>
-<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" id="journal-wonder" data-label="Warm-Up — Wonder: What I wonder about row sizes and multiples" placeholder="" oninput="autoSave(this,'dot-wonder')" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" data-label="Warm-Up — Notice: What I notice about the drum line pattern" id="journal-notice" oninput="autoSave(this,'dot-notice')" placeholder="" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" data-label="Warm-Up — Wonder: What I wonder about row sizes and multiples" id="journal-wonder" oninput="autoSave(this,'dot-wonder')" placeholder="" style="min-height:60px;"></textarea></div>
 </div>
 </div>
 <p><strong>Predict:</strong> If 28 drummers stood in EQUAL rows, which of these would work as a row size? Pick all that fit.</p>
@@ -399,50 +449,49 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>Before you predict, ask yourself:</strong> 28 ÷ row size has to come out EVEN (no remainder). Which row sizes divide 28 with no remainder? That's another way of saying: 28 has to be a MULTIPLE of the row size.</p></div>
 <div class="journal-label">✏️ My prediction and reasoning: Which row sizes work for 28 drummers? Why? Use multiples or division to defend your choice. <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think Prompt: Row sizes that divide 28 evenly" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think Prompt: Row sizes that divide 28 evenly" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">You predicted which row sizes work. Now let's build the multiples toolkit — skip counting, multiplication, and division — and see how all three find the same family of numbers.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
-  <div class="vocab-section" aria-label="Daily vocabulary flash cards">
-  <div class="vocab-section-head">
-    <div class="vocab-section-icon">📚</div>
-    <div>
-      <div class="vocab-section-label">Daily Vocabulary</div>
-      <div class="vocab-section-title">Tap to Build Today’s Math Language</div>
-    </div>
-  </div>
-  <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
-  <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for multiple. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🔢</div><div class="fc-word">multiple</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">multiple</div><div class="fc-def">a number that you can MAKE by multiplying. 12 is a multiple of 4 because 4 × 3 = 12. Multiples of 4 are 4, 8, 12, 16, 20, 24…</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for skip count. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🦘</div><div class="fc-word">skip count</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">skip count</div><div class="fc-def">to count by jumps of the same size. Skip counting by 4: 4, 8, 12, 16, 20… Each landing is a multiple of 4.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for array. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">⬜</div><div class="fc-word">array</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">array</div><div class="fc-def">a rectangle of equal rows and columns. A 4-by-3 array has 12 dots — picturing 4 × 3 = 12. Arrays make multiples visible.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for divisible. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">✂️</div><div class="fc-word">divisible</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">divisible</div><div class="fc-def">a number is divisible by 4 if it divides evenly with NO remainder. 28 ÷ 4 = 7 → divisible. 30 ÷ 4 = 7 r 2 → not divisible.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-03-01-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-03-01 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-03-01-concept --></div></div></div></div>
+<div aria-label="Daily vocabulary flash cards" class="vocab-section">
+<div class="vocab-section-head">
+<div class="vocab-section-icon">📚</div>
+<div>
+<div class="vocab-section-label">Daily Vocabulary</div>
+<div class="vocab-section-title">Tap to Build Today’s Math Language</div>
 </div>
-<div class="video-wrap" data-video-slot="4-03-01-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.03.01</div><div class="video-wrap-title">Three ways to find a multiple — skip count, multiply, divide</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-01_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Frame: "There are three ways to find multiples — skip counting, multiplying, dividing. They're all the same family of numbers." Pick the number 6. <strong>Way 1 — Skip count by 6.</strong> Write a number line. Place hops: "0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60." Say each as you land. "These are the first ten positive multiples of 6." <strong>Way 2 — Multiplication table.</strong> Write: 6 × 1 = 6, 6 × 2 = 12, 6 × 3 = 18, … 6 × 10 = 60. "The 6 times table IS the list of multiples of 6." <strong>Way 3 — Division test.</strong> Pick any number: 42. Divide by 6. 42 ÷ 6 = 7 with no remainder. "Yes — 42 is a multiple of 6 because it divides evenly." Try 50. 50 ÷ 6 = 8 with remainder 2. "No — 50 is NOT a multiple of 6 because there's a remainder." All three ways give the same answer. Show array: 6 rows of 7 dots = 42 dots. "And here's the picture — 6 × 7 = 42 visually." Frame: "The first ten multiples of any number are worth memorizing. Multiples explain why some divisions work cleanly and others have leftovers." Tone: foundational — this is the language of multiplication. (~2-3 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-01-concept --></div></div></div></div>
-  <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Three questions below. Each asks whether a number IS or IS NOT a multiple of another. Skip count in your head, or divide. Either method works.</p></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🎯</div><div><div class="activity-title">Multiples Checker: Yes or No?</div><div class="activity-sub">Three quick decisions. Use skip counting or division.</div></div></div><div class="activity-body"><p>For each, decide whether the first number is a multiple of the second. Skip count in your head, or do the division.</p>
+</div>
+<p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
+<div class="vocab-grid">
+<div aria-label="Vocabulary card for multiple. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🔢</div><div class="fc-word">multiple</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">multiple</div><div class="fc-def">a number that you can MAKE by multiplying. 12 is a multiple of 4 because 4 × 3 = 12. Multiples of 4 are 4, 8, 12, 16, 20, 24…</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for skip count. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🦘</div><div class="fc-word">skip count</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">skip count</div><div class="fc-def">to count by jumps of the same size. Skip counting by 4: 4, 8, 12, 16, 20… Each landing is a multiple of 4.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for array. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">⬜</div><div class="fc-word">array</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">array</div><div class="fc-def">a rectangle of equal rows and columns. A 4-by-3 array has 12 dots — picturing 4 × 3 = 12. Arrays make multiples visible.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for divisible. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">✂️</div><div class="fc-word">divisible</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">divisible</div><div class="fc-def">a number is divisible by 4 if it divides evenly with NO remainder. 28 ÷ 4 = 7 → divisible. 30 ÷ 4 = 7 r 2 → not divisible.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Three questions below. Each asks whether a number IS or IS NOT a multiple of another. Skip count in your head, or divide. Either method works.</p></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🎯</div><div><div class="activity-title">Multiples Checker: Yes or No?</div><div class="activity-sub">Three quick decisions. Use skip counting or division.</div></div></div><div class="activity-body"><p>For each, decide whether the first number is a multiple of the second. Skip count in your head, or do the division.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:18px 14px;margin:12px 0;">
 <div style="margin-bottom:18px;">
 <div style="font-family:'Lora',Georgia,serif;font-size:20px;font-weight:900;color:#0E1C42;text-align:center;margin-bottom:10px;">Is <strong>32</strong> a multiple of <strong>4</strong>?</div>
@@ -469,24 +518,24 @@
 </div>
 <div class="reveal-box" id="learnReveal"><strong>Yes / No / Yes.</strong> 32 IS a multiple of 4 (4 × 8 = 32, or 32 ÷ 4 = 8). 23 is NOT a multiple of 3 (24 ÷ 3 = 8, but 23 ÷ 3 = 7 r 2 — between 21 and 24 in the skip-count). 45 IS a multiple of 9 (9 × 5 = 45). The rule is simple: divides evenly → YES, multiple. Has a remainder → NO, not a multiple.</div>
 </div></div>
-  <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 What You Just Saw</div><p><strong>Three equivalent definitions of "multiple."</strong></p><p>A number is a multiple of 4 if (all three mean the same thing):</p><p>1. <strong>You land on it</strong> when you skip count by 4 (starting at 4).</p><p>2. <strong>You can make it</strong> by multiplying 4 by some whole number — 4 × 1, 4 × 2, 4 × 3, etc.</p><p>3. <strong>It divides evenly</strong> by 4 — no remainder.</p><p>These are not three different things. They are three views of the SAME family of numbers.</p></div>
-  <div class="activity bl-violet" style="margin-top:16px;"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">⬜</div><div><div class="activity-title">Picture It: Multiples as Arrays</div><div class="activity-sub">See multiples as rectangles of dots.</div></div></div><div class="activity-body"><p>Hazel's array view makes multiples visible. Each multiple of 4 is a rectangle with 4 in one dimension and SOMETHING in the other. Look at the picture below — what do you notice?</p>
+<div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 What You Just Saw</div><p><strong>Three equivalent definitions of "multiple."</strong></p><p>A number is a multiple of 4 if (all three mean the same thing):</p><p>1. <strong>You land on it</strong> when you skip count by 4 (starting at 4).</p><p>2. <strong>You can make it</strong> by multiplying 4 by some whole number — 4 × 1, 4 × 2, 4 × 3, etc.</p><p>3. <strong>It divides evenly</strong> by 4 — no remainder.</p><p>These are not three different things. They are three views of the SAME family of numbers.</p></div>
+<div class="activity bl-violet" style="margin-top:16px;"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">⬜</div><div><div class="activity-title">Picture It: Multiples as Arrays</div><div class="activity-sub">See multiples as rectangles of dots.</div></div></div><div class="activity-body"><p>Hazel's array view makes multiples visible. Each multiple of 4 is a rectangle with 4 in one dimension and SOMETHING in the other. Look at the picture below — what do you notice?</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:18px;margin:12px 0;font-family:'Lora',Georgia,serif;font-size:15px;color:#0E1C42;line-height:1.8;">
 <p style="margin-bottom:12px;"><strong>Three arrays of multiples of 4:</strong></p>
 <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;text-align:center;">
 <div>
 <div style="font-size:11px;color:#6B3FA0;text-transform:uppercase;letter-spacing:.5px;font-weight:900;margin-bottom:4px;">4 × 2 = 8</div>
-<div style="font-size:22px;letter-spacing:6px;line-height:1.3;">●●●●<br>●●●●</div>
+<div style="font-size:22px;letter-spacing:6px;line-height:1.3;">●●●●<br/>●●●●</div>
 <div style="font-size:12px;color:#3A4A6B;font-weight:700;margin-top:4px;">2nd multiple of 4</div>
 </div>
 <div>
 <div style="font-size:11px;color:#6B3FA0;text-transform:uppercase;letter-spacing:.5px;font-weight:900;margin-bottom:4px;">4 × 4 = 16</div>
-<div style="font-size:22px;letter-spacing:6px;line-height:1.3;">●●●●<br>●●●●<br>●●●●<br>●●●●</div>
+<div style="font-size:22px;letter-spacing:6px;line-height:1.3;">●●●●<br/>●●●●<br/>●●●●<br/>●●●●</div>
 <div style="font-size:12px;color:#3A4A6B;font-weight:700;margin-top:4px;">4th multiple of 4</div>
 </div>
 <div>
 <div style="font-size:11px;color:#6B3FA0;text-transform:uppercase;letter-spacing:.5px;font-weight:900;margin-bottom:4px;">4 × 6 = 24</div>
-<div style="font-size:22px;letter-spacing:6px;line-height:1.3;">●●●●<br>●●●●<br>●●●●<br>●●●●<br>●●●●<br>●●●●</div>
+<div style="font-size:22px;letter-spacing:6px;line-height:1.3;">●●●●<br/>●●●●<br/>●●●●<br/>●●●●<br/>●●●●<br/>●●●●</div>
 <div style="font-size:12px;color:#3A4A6B;font-weight:700;margin-top:4px;">6th multiple of 4</div>
 </div>
 </div>
@@ -494,10 +543,10 @@
 </div>
 <div class="socratic-box"><div class="socratic-label">🧠 Socratic — Think Like a Mathematician</div><p class="socratic-q">Could you build a rectangle of 22 dots that has 4 in one direction? Why or why not? What does that tell you about whether 22 is a multiple of 4?</p>
 <div class="journal-label">✏️ My thinking <span class="saved-dot" id="dot-soc"></span></div>
-<textarea class="journal-box" id="journal-soc" data-label="Learn — Socratic: Why can\'t 22 form a 4-row rectangle?" placeholder="" oninput="autoSave(this,'dot-soc')"></textarea></div>
+<textarea class="journal-box" data-label="Learn — Socratic: Why can\'t 22 form a 4-row rectangle?" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: List the First Ten Multiples of 6</div><div class="activity-sub">Skip count, multiply, then check with division.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>List the first 10 positive multiples of 6. Then explain TWO different ways to know your list is correct.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
-<div class="video-wrap" data-video-slot="4-03-01-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.03.01</div><div class="video-wrap-title">First ten multiples of 6 — three ways, same answers</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-01_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Atlas skip-counts on a number line: "0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60." Write across the top. "First ten positive multiples of 6 — done." Felix flips to multiplication: "Same list from the 6-times table. 6×1=6. 6×2=12. 6×3=18. Same numbers." Write the column. Cora cross-checks any one: "42 ÷ 6 = 7, no remainder — yes, 42 is on our list." Hazel sketches one as an array: 6 columns × 4 rows of dots = 24 dots = 4th multiple. Frame: "All three methods landed on the same family. Skip counting, multiplying, dividing — three windows looking at the SAME ten numbers. Memorizing the first ten multiples of each small number (2–10) is one of the most important things to know in 4th grade math." (~2 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-01-example --></div></div></div></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: List the First Ten Multiples of 6</div><div class="activity-sub">Skip count, multiply, then check with division.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>List the first 10 positive multiples of 6. Then explain TWO different ways to know your list is correct.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
+
 <div class="key-concept" style="margin-top:14px;"><div class="key-concept-label">⚖️ First Ten Multiples</div>
 <div style="background:#F0E8FF;border:2px solid #D8CCF0;border-radius:12px;padding:14px;margin-top:8px;font-family:'Lora',Georgia,serif;color:#0E1C42;">
 <div style="display:grid;grid-template-columns:80px 1fr;gap:8px;font-size:15px;line-height:1.7;">
@@ -516,23 +565,22 @@
 </div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">Three views of the same family. Now apply: find multiples, check multiples, and explain.</p><button class="tab-next-btn" onclick="switchTab('practice')">Continue to 🧮 Practice →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-practice">
-  <div class="callout callout-info"><span class="callout-icon">🧭</span><p>Three problems. Each one tests a different way of finding multiples.</p></div>
-  <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Do I skip count? Do I multiply? Do I divide to check? Any of the three works.</p></div>
-  <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Go back to the First Ten Multiples chart in Learn. Re-skip-count the family you need.</p></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">What is the 8th Multiple of 7?</div><div class="activity-sub">Skip count or use the 7-times table.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>List in your head: 7, 14, 21, 28, 35, 42, 49, 56… The 8th number is the 8th multiple of 7. Or use 7 × 8.</p>
+<div class="callout callout-info"><span class="callout-icon">🧭</span><p>Three problems. Each one tests a different way of finding multiples.</p></div>
+<div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Do I skip count? Do I multiply? Do I divide to check? Any of the three works.</p></div>
+<div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Go back to the First Ten Multiples chart in Learn. Re-skip-count the family you need.</p></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">What is the 8th Multiple of 7?</div><div class="activity-sub">Skip count or use the 7-times table.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>List in your head: 7, 14, 21, 28, 35, 42, 49, 56… The 8th number is the 8th multiple of 7. Or use 7 × 8.</p>
 <div class="value-card-row" style="justify-content:center;">
 <button class="value-card" onclick="pickP1Round(this,'56')" style="min-width:90px;"><div class="big">56</div></button>
 <button class="value-card" onclick="pickP1Round(this,'63')" style="min-width:90px;"><div class="big">63</div></button>
 <button class="value-card" onclick="pickP1Round(this,'49')" style="min-width:90px;"><div class="big">49</div></button>
 </div>
 <div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Got it.</strong> 7 × 8 = <strong>56</strong>. Skip counting: 7, 14, 21, 28, 35, 42, 49, 56 — the 8th hop lands on 56. Two ways, same answer.
-<div class="video-wrap" data-video-slot="4-03-01-practice-1-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 1</div><div class="video-wrap-title">Skip counting = multiplying</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-01_Practice-1_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Celebrate. "Skip counting and multiplying are the same idea, just in different clothes. 7 × 8 says it short. 7, 14, 21, 28, 35, 42, 49, 56 says it long. Both land on 56." (~30 sec)</div><div class="video-placeholder-id"><!-- slot: 4-03-01-practice-1-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Not quite.</strong> Count out loud: 7, 14, 21, 28, 35, 42, 49, 56 — the 8th time you say a number is the 8th multiple. Or just compute 7 × 8.
 <div class="hint-callout">Each number in the skip-count is one bigger STEP than the previous. The 8th step is 7 × 8 = 56.</div>
-<div class="video-wrap" data-video-slot="4-03-01-practice-1-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 1</div><div class="video-wrap-title">8 steps of 7 = 56</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-01_Practice-1_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk it slowly. "Step 1 — 7. Step 2 — 14. Step 3 — 21. Step 4 — 28. Step 5 — 35. Step 6 — 42. Step 7 — 49. Step 8 — 56. That's the 8th multiple of 7. Or just say 7 × 8 = 56." (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-01-practice-1-retry --></div></div></div></div></div></div></div>
-  <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three Tests — Is It a Multiple?</div><div class="activity-sub">Use division (or skip counting) to decide.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Three division-style checks. Use Cora's rule — if it divides evenly, it IS a multiple. If there's a remainder, it ISN'T.</p></div>
+</div></div></div>
+<div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three Tests — Is It a Multiple?</div><div class="activity-sub">Use division (or skip counting) to decide.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Three division-style checks. Use Cora's rule — if it divides evenly, it IS a multiple. If there's a remainder, it ISN'T.</p></div>
 <p>For each, pick the next multiple to complete the sequence.</p>
 <div style="display:grid;gap:14px;margin:14px 0;">
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:14px;">
@@ -561,16 +609,16 @@
 </div>
 </div>
 <div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ Three for three.</strong> 2a — 32 + 8 = <strong>40</strong> (next multiple of 8). 2b — 30 + 6 = <strong>36</strong>. 2c — 45 + 9 = <strong>54</strong> (yes, 54 IS a multiple of 9 — it's the 6th one).
-<div class="video-wrap" data-video-slot="4-03-01-practice-2-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 2</div><div class="video-wrap-title">Each step is the SAME size — that's the multiples rhythm</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-01_Practice-2_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "Every step in a multiples list is the same size — the number itself. Multiples of 8 are spaced 8 apart. Multiples of 6 are 6 apart. Multiples of 9 are 9 apart. The pattern never breaks." (~45 sec)</div><div class="video-placeholder-id"><!-- slot: 4-03-01-practice-2-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Look again.</strong> Each step is the same size as the number you're counting by. Add the number to the previous one to get the next.
 <div class="hint-callout">2a — last number 32, plus 8 = next. 2b — last shown 30, plus 6 = next (it must be less than 42). 2c — last shown 45, plus 9 = next.</div>
-<div class="video-wrap" data-video-slot="4-03-01-practice-2-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 2</div><div class="video-wrap-title">Same-size steps build a multiples list</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-01_Practice-2_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the step-size rule with all three sequences. Show the addition explicitly between each multiple. (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-01-practice-2-retry --></div></div></div></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Sam's Mistake — Is 35 a Multiple of 6?</div><div class="activity-sub">Walk through Sam's reasoning and spot the error.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Sam claims 35 IS a multiple of 6. Read his reasoning and find the slip.</p></div>
+</div></div></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Sam's Mistake — Is 35 a Multiple of 6?</div><div class="activity-sub">Walk through Sam's reasoning and spot the error.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Sam claims 35 IS a multiple of 6. Read his reasoning and find the slip.</p></div>
 <div class="task-box"><div class="task-label">Sam's Work</div>
 <p>Sam was asked: <strong>"Is 35 a multiple of 6?"</strong> He wrote:</p>
 <div style="background:#FFF8E6;border:2px solid #F5C518;border-radius:12px;padding:14px 16px;font-family:'Lora',Georgia,serif;font-size:17px;line-height:1.8;color:#5A4A3A;margin:10px 0;">
-"35 is bigger than 6. And 35 ÷ 6 is about 5 and a half.<br>
-So 35 must be a multiple of 6.<br>
+"35 is bigger than 6. And 35 ÷ 6 is about 5 and a half.<br/>
+So 35 must be a multiple of 6.<br/>
 Answer: <strong>Yes</strong>."
 </div>
 <p><strong>Your task:</strong> Tap every statement below that is true about Sam's reasoning.</p>
@@ -582,27 +630,23 @@ Answer: <strong>Yes</strong>."
 </div>
 <button class="purple-btn" onclick="checkErrorAnalysis()">✓ Check My Picks</button>
 <div class="journal-label">✏️ Write the rule in your own words: how do you check whether a number IS or IS NOT a multiple of another? Give Sam your rule so he doesn't make this mistake again. <span class="saved-dot" id="dot-ea"></span></div>
-<textarea class="journal-box" id="journal-ea" data-label="Practice 3 — Error Analysis: The multiples rule (no remainder)" placeholder="" oninput="autoSave(this,'dot-ea')"></textarea>
-<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> "About 5 and a half" hides a remainder. The rule is strict: only NO remainder counts. 35 ÷ 6 = 5 r 5. So 35 is NOT a multiple of 6. (The nearby multiples of 6 are 30 and 36 — 35 falls between them.)<div class="video-wrap" data-video-slot="4-03-01-practice-3-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 3</div><div class="video-wrap-title">No remainder = yes multiple. Any remainder = not a multiple.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-01_Practice-3_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "The remainder is the giveaway. If the division comes out clean — no leftover — it's a multiple. Any leftover at all means no. There's no 'almost a multiple.'" (~45 sec)</div><div class="video-placeholder-id"><!-- slot: 4-03-01-practice-3-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">"About 5 and a half" is the clue. A multiple gives a WHOLE number when you divide. 5 and a half is not a whole number — that means a remainder exists, which means 35 is NOT a multiple of 6.</div><div class="video-wrap" data-video-slot="4-03-01-practice-3-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 3</div><div class="video-wrap-title">"About" hides a remainder — the rule is strict</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-01_Practice-3_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the division check using 35 ÷ 6. Show the remainder clearly. (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-01-practice-3-retry --></div></div></div></div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
+<textarea class="journal-box" data-label="Practice 3 — Error Analysis: The multiples rule (no remainder)" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
+<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> "About 5 and a half" hides a remainder. The rule is strict: only NO remainder counts. 35 ÷ 6 = 5 r 5. So 35 is NOT a multiple of 6. (The nearby multiples of 6 are 30 and 36 — 35 falls between them.)</div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">"About 5 and a half" is the clue. A multiple gives a WHOLE number when you divide. 5 and a half is not a whole number — that means a remainder exists, which means 35 is NOT a multiple of 6.</div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">You skip counted, checked divisions, and caught a "close enough" mistake. Now show what you know.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-assignment">
-  <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Find multiples, decide multiples, explain multiples.</div></div></div><div class="activity-body"><p>Today you learned three ways to find a multiple — skip count, multiply, divide. Use whichever way fits each question. Show your reasoning.</p>
+<div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Find multiples, decide multiples, explain multiples.</div></div></div><div class="activity-body"><p>Today you learned three ways to find a multiple — skip count, multiply, divide. Use whichever way fits each question. Show your reasoning.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> What's the question really asking? Do I need to FIND multiples, or CHECK whether something IS a multiple?</p></div>
-<div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>List the first 10 multiples</strong> of each number. Skip count or use the multiplication table.<br>(a) Multiples of 3<br>(b) Multiples of 7<br>(c) Multiples of 9</p><div class="journal-label">✏️ My lists <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" id="journal-a1" data-label="Show What You Know — Problem 1: First 10 multiples of 3, 7, and 9" placeholder="" oninput="autoSave(this,'dot-a1')"></textarea></div>
-
-<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> "A multiple of 4 is a number that you can MAKE by multiplying 4 by a whole number." In your own words, explain why this is the same as saying "a number that 4 divides evenly into." Use 24 and 30 as examples — one IS a multiple of 4, one ISN'T.</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" id="journal-a6" data-label="Show What You Know — Problem 6: Why multiplication and division give the same multiples" placeholder="" oninput="autoSave(this,'dot-a6')"></textarea></div>
-
-
-<div class="activity bl-slate" style="margin-top:18px;border-left-color:#55C8E8;"><div class="activity-head"><div class="activity-num" style="background:#55C8E8;color:#0E1C42;">🗺️</div><div><div class="activity-title">Connection Forward: What Comes Next</div><div class="activity-sub">Preview Lesson 4.03.02 — Common Multiples</div></div></div><div class="activity-body"><p>Today you learned the multiples of one number at a time. Tomorrow you'll learn what happens when you list the multiples of TWO numbers — and look for numbers that appear in BOTH lists.</p><p>Multiples of 4: 4, 8, <strong>12</strong>, 16, 20, <strong>24</strong>, 28, 32, <strong>36</strong>… <br>Multiples of 6: 6, <strong>12</strong>, 18, <strong>24</strong>, 30, <strong>36</strong>… <br>See the bold numbers? Those are <strong>common multiples</strong> — numbers that ARE multiples of BOTH 4 AND 6.</p><p>The big question next time: <em>Why do common multiples matter for problems like "when will two events line up again"?</em></p></div></div></div></div>
-<div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly>Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
-  <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
+<div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>List the first 10 multiples</strong> of each number. Skip count or use the multiplication table.<br/>(a) Multiples of 3<br/>(b) Multiples of 7<br/>(c) Multiples of 9</p><div class="journal-label">✏️ My lists <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: First 10 multiples of 3, 7, and 9" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
+<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> "A multiple of 4 is a number that you can MAKE by multiplying 4 by a whole number." In your own words, explain why this is the same as saying "a number that 4 divides evenly into." Use 24 and 30 as examples — one IS a multiple of 4, one ISN'T.</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: Why multiplication and division give the same multiples" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
+<div class="activity bl-slate" style="margin-top:18px;border-left-color:#55C8E8;"><div class="activity-head"><div class="activity-num" style="background:#55C8E8;color:#0E1C42;">🗺️</div><div><div class="activity-title">Connection Forward: What Comes Next</div><div class="activity-sub">Preview Lesson 4.03.02 — Common Multiples</div></div></div><div class="activity-body"><p>Today you learned the multiples of one number at a time. Tomorrow you'll learn what happens when you list the multiples of TWO numbers — and look for numbers that appear in BOTH lists.</p><p>Multiples of 4: 4, 8, <strong>12</strong>, 16, 20, <strong>24</strong>, 28, 32, <strong>36</strong>… <br/>Multiples of 6: 6, <strong>12</strong>, 18, <strong>24</strong>, 30, <strong>36</strong>… <br/>See the bold numbers? Those are <strong>common multiples</strong> — numbers that ARE multiples of BOTH 4 AND 6.</p><p>The big question next time: <em>Why do common multiples matter for problems like "when will two events line up again"?</em></p></div></div></div></div>
+<div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
+<div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
 </div>
 <div class="footer">
-  <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
-  <div class="footer-sub">Math · Grade 4 · 4.03.01</div>
-  <div class="footer-copy">© 2025 Optima Academy Online</div>
+<div class="footer-main">🏫 <span>Optima Academy Online</span></div>
+<div class="footer-sub">Math · Grade 4 · 4.03.01</div>
+<div class="footer-copy">© 2025 Optima Academy Online</div>
 </div>
 </div>
 <canvas id="confettiCanvas"></canvas>
@@ -1039,6 +1083,75 @@ async function loadVideoManifest(){try{let res=await fetch('video-manifest.md',{
 function parseManifest(txt){let map={};let lines=txt.split(/\r?\n/);let current=null,buf=[];function commit(){if(current&&buf.join('\n').trim())map[current]=buf.join('\n').trim();buf=[]}for(let line of lines){let m=line.match(/^([A-Za-z0-9-]+):\s*$/);if(m){commit();current=m[1]}else if(current){buf.push(line)}}commit();return map}
 function showPageFeedback(msg){var panel=document.querySelector('.tab-panel.active')||document.body;var box=panel.querySelector(':scope > .page-feedback');if(!box){box=document.createElement('div');box.className='page-feedback';panel.insertBefore(box,panel.firstChild);}box.className='page-feedback show warn';box.innerHTML=msg;}
 window.addEventListener('DOMContentLoaded',()=>{restoreJournals();updateProgress();loadVideoManifest()});
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Known-Fact Bridges: ×3 and ×6";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
 </script>
 </body>
 </html>

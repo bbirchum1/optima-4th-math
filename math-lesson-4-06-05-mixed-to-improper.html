@@ -314,6 +314,32 @@
 .frac.frac-lg{font-size:1.05em}
 .frac.frac-on-dark .num{border-bottom-color:#fff}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
@@ -341,7 +367,31 @@
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
-<div class="video-wrap" data-video-slot="4-06-05-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.06.05</div><div class="video-wrap-title">Multiply, add, write the improper — going the other way</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-05_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Show 3 <span class="frac"><span class="num">2</span><span class="den">5</span></span> on the board. "Yesterday we went FROM improper TO mixed using division. Today: the REVERSE — from mixed to improper." Pause. "3 <span class="frac"><span class="num">2</span><span class="den">5</span></span> means three WHOLE pies + <span class="frac"><span class="num">2</span><span class="den">5</span></span> of one more pie. To write that as a single improper fraction, count every slice as a fifth. Three full pies, each cut into 5ths = 3 × 5 = 15 slices in the wholes. Plus 2 more fifths. 15 + 2 = 17 slices total. Put it over 5. So 3 <span class="frac"><span class="num">2</span><span class="den">5</span></span> = 17/5." Write the rule: <strong>Whole × Bottom + Top = New Top. Same bottom.</strong> Show one more: 4 1/3. "4 wholes × 3 = 12 thirds. Plus 1 more = 13. Improper = 13/3." And another: 2 5/8. "2 × 8 = 16. + 5 = 21. Improper = 21/8." Check: <span class="frac"><span class="num">21</span><span class="den">8</span></span> = 21 ÷ 8 = 2 r 5 = 2 5/8. Matches the original. Frame: "Multiply, add, write the new top. Same denominator. Three steps every time." Tone: clean, methodical. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-welcome --></div></div></div></div>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Two-Digit × One-Digit</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">24 × 6</span><input autocomplete="off" class="fluency-input" data-answer="144" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">35 × 8</span><input autocomplete="off" class="fluency-input" data-answer="280" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">46 × 7</span><input autocomplete="off" class="fluency-input" data-answer="322" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">52 × 9</span><input autocomplete="off" class="fluency-input" data-answer="468" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">38 × 4</span><input autocomplete="off" class="fluency-input" data-answer="152" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">27 × 6</span><input autocomplete="off" class="fluency-input" data-answer="162" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">63 × 5</span><input autocomplete="off" class="fluency-input" data-answer="315" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">74 × 3</span><input autocomplete="off" class="fluency-input" data-answer="222" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">48 × 7</span><input autocomplete="off" class="fluency-input" data-answer="336" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">56 × 9</span><input autocomplete="off" class="fluency-input" data-answer="504" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Two-Digit × One-Digit)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
 <p>Felix passes the chalk to Atlas. Multiplication is Atlas's favorite. Today: multiply the whole by the bottom, add the top. Felix and Cora support.</p>
 <div class="bubble-row">
@@ -386,7 +436,7 @@
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Answers:</strong> 3 × 5 + 2 = <strong>17</strong>. 4 × 3 + 1 = <strong>13</strong>. 2 × 8 + 5 = <strong>21</strong>. These ARE the conversions: 3 <span class="frac"><span class="num">2</span><span class="den">5</span></span> = 17/5. 4 <span class="frac"><span class="num">1</span><span class="den">3</span></span> = 13/3. 2 <span class="frac"><span class="num">5</span><span class="den">8</span></span> = 21/8. Multiply whole × bottom, add top, put over the same bottom.</div>
 <div class="journal-label">✏️ Pick one. Write the mixed number it converts and explain the steps. <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: Multiply and add" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
-<div class="video-wrap" data-video-slot="4-06-05-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.06.05</div><div class="video-wrap-title">Multiply and add — the improper appears</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-05_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk each. "3 × 5 + 2 = 17. That gives you <span class="frac"><span class="num">17</span><span class="den">5</span></span>, which is the improper version of 3 2/5." Then 4 × 3 + 1 = 13 → <span class="frac"><span class="num">13</span><span class="den">3</span></span> = 4 1/3. Then 2 × 8 + 5 = 21 → <span class="frac"><span class="num">21</span><span class="den">8</span></span> = 2 5/8. Frame: "Multiply, add. Done in two operations. Same denominator carries through. Watch this work on bigger numbers next."</div><div class="video-placeholder-id"><!-- slot: lesson-readiness-feedback --></div></div></div></div>
+
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Mixed to improper — two short steps.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">✖️</span><p>Convert <strong>3 <span class="frac"><span class="num">2</span><span class="den">5</span></span></strong> to an improper fraction. The picture below shows it as pies — count the slices.</p></div>
 <div class="number-talk-visual">
@@ -414,7 +464,7 @@
 <textarea class="journal-box" data-label="Warm-Up — Think Prompt: 3 2/5 to improper" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">You used multiply-and-add on a small mixed number. Now master the rule for any mixed number.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-<div class="tab-panel" id="tab-learn">
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-06-05-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-06-05 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-06-05-concept --></div></div></div></div>
 <div aria-label="Daily vocabulary flash cards" class="vocab-section">
 <div class="vocab-section-head">
 <div class="vocab-section-icon">📚</div>
@@ -451,7 +501,7 @@
 </div>
 </div>
 </div>
-<div class="video-wrap" data-video-slot="4-06-05-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.06.05</div><div class="video-wrap-title">Multiply the whole by the bottom, then add the top</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-05_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Three examples, one routine. Example 1: 4 1/3. "4 wholes × 3 = 12. Plus 1 = 13. Put it over the same 3. So 4 <span class="frac"><span class="num">1</span><span class="den">3</span></span> = 13/3." Example 2: 7 2/5. "7 × 5 = 35. + 2 = 37. So 7 <span class="frac"><span class="num">2</span><span class="den">5</span></span> = 37/5." Example 3: 9 5/6. "9 × 6 = 54. + 5 = 59. So 9 <span class="frac"><span class="num">5</span><span class="den">6</span></span> = 59/6." Check on example 3: 59 ÷ 6 = 9 r 5 = 9 5/6. Matches. Frame: "Multiply the whole by the bottom. Add the top. Same bottom. Three keystrokes." Tone: clean and direct. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-concept --></div></div></div></div>
+
 <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Three mixed numbers below. Multiply, add, and pick the matching improper fraction.</p></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#FF7A45;">🧩</div><div><div class="activity-title">Composer</div><div class="activity-sub">Multiply, add. Pick the matching improper fraction.</div></div></div><div class="activity-body"><p>Each problem shows a mixed number. Multiply whole × denominator, add the top. Pick the improper fraction.</p>
 <div style="background:#FFF8F0;border:2px solid #FFD0A8;border-radius:14px;padding:18px 14px;margin:12px 0;">
@@ -511,7 +561,7 @@
 <textarea class="journal-box" data-label="Learn — Socratic: Converting in a circle returns the original" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: Convert 7 <span class="frac"><span class="num">2</span><span class="den">3</span></span> to an Improper Fraction</div><div class="activity-sub">Multiply, add, write.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Convert <strong>7 <span class="frac"><span class="num">2</span><span class="den">3</span></span></strong> to an improper fraction. Show your multiply-and-add.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
-<div class="video-wrap" data-video-slot="4-06-05-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.06.05</div><div class="video-wrap-title">7 <span class="frac"><span class="num">2</span><span class="den">3</span></span> → <span class="frac"><span class="num">23</span><span class="den">3</span></span> in two steps</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-05_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Atlas reads. "7 2/3. Whole is 7, top is 2, bottom is 3." Multiplies: "7 × 3 = 21. That counts every slice inside the 7 whole pies, each cut into thirds." Adds: "21 + 2 = 23. That adds in the 2 leftover slices." Writes: "7 <span class="frac"><span class="num">2</span><span class="den">3</span></span> = 23/3." Cora checks by converting back: "23 ÷ 3 = 7 r 2 → 7 2/3. Matches the original. Conversion is right." Hazel pictures it: "Seven pies cut into thirds = 21 slices. Plus 2 more = 23 slices, each a third. So 23/3." Frame: "Multiply, add, write. Same denominator. Check by converting back." Tone: clean and procedural. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-06-05-example --></div></div></div></div>
+
 <div style="background:#FFF8F0;border:2px solid #FFD0A8;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;margin-bottom:14px;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.8;font-size:15px;">
 <strong>Step 1:</strong> Multiply the whole by the bottom. 7 × 3 = 21.<br/>
@@ -551,10 +601,10 @@
 <button class="value-card" onclick="pickP1Round(this,'12/5')" style="min-width:100px;"><div class="big"><span class="frac"><span class="num">12</span><span class="den">5</span></span></div></button>
 </div>
 <div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Exactly.</strong> 4 × 5 = 20. + 3 = 23. Same denominator 5 → <strong><span class="frac"><span class="num">23</span><span class="den">5</span></span></strong>.
-<div class="video-wrap" data-video-slot="4-06-05-practice-1-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 1</div><div class="video-wrap-title">Multiply, add — that's it</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-05_Practice-1_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "4 × 5 = 20. + 3 = 23. Over 5. 23/5. Clean." About 45 sec.</div><div class="video-placeholder-id"><!-- slot: 4-06-05-practice-1-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Look again.</strong> Multiply whole by bottom: 4 × 5. Then add the top: + 3.
 <div class="hint-callout">4 × 5 = 20. 20 + 3 = 23. Same bottom 5. So 4 <span class="frac"><span class="num">3</span><span class="den">5</span></span> = 23/5.</div>
-<div class="video-wrap" data-video-slot="4-06-05-practice-1-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 1</div><div class="video-wrap-title">Whole × bottom + top</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-05_Practice-1_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the rule. About 1 min.</div><div class="video-placeholder-id"><!-- slot: 4-06-05-practice-1-retry --></div></div></div></div></div></div></div>
+</div></div></div>
 <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three More Conversions</div><div class="activity-sub">Same routine. Pick the improper.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>Strategy:</strong> Multiply whole × bottom. Add top. Put over same bottom.</p></div>
 <p>For each mixed number, pick the improper fraction.</p>
 <div style="display:grid;gap:14px;margin:14px 0;">
@@ -584,10 +634,10 @@
 </div>
 </div>
 <div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ Three for three.</strong> 2a — 2 × 9 + 7 = 25 → <strong><span class="frac"><span class="num">25</span><span class="den">9</span></span></strong>. 2b — 6 × 2 + 1 = 13 → <strong><span class="frac"><span class="num">13</span><span class="den">2</span></span></strong>. 2c — 10 × 4 + 3 = 43 → <strong><span class="frac"><span class="num">43</span><span class="den">4</span></span></strong>.
-<div class="video-wrap" data-video-slot="4-06-05-practice-2-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 2</div><div class="video-wrap-title">Multiply, add, write — three for three</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-05_Practice-2_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk all three. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-06-05-practice-2-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Look again.</strong> For each: whole × bottom + top.
 <div class="hint-callout">2a: 2 × 9 + 7 = 25 → 25/9. 2b: 6 × 2 + 1 = 13 → 13/2. 2c: 10 × 4 + 3 = 43 → 43/4.</div>
-<div class="video-wrap" data-video-slot="4-06-05-practice-2-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 2</div><div class="video-wrap-title">Multiply, add, write</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-05_Practice-2_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-06-05-practice-2-retry --></div></div></div></div></div></div></div>
+</div></div></div>
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#FF7A45;">3</div><div><div class="activity-title">Find Jana's Mistake — She Forgot to Multiply</div><div class="activity-sub">She added before multiplying. Wrong order, wrong answer.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Jana tried to convert 3 <span class="frac"><span class="num">2</span><span class="den">5</span></span> but added the whole and the top instead of multiplying first. The result is way too small.</p></div>
 <div class="task-box"><div class="task-label">Jana's Work</div>
 <p>Jana was asked: <strong>"Write 3 <span class="frac"><span class="num">2</span><span class="den">5</span></span> as an improper fraction."</strong></p>
@@ -604,17 +654,14 @@
 <button class="purple-btn" onclick="checkErrorAnalysis()">✓ Check My Picks</button>
 <div class="journal-label">✏️ Help Jana. Write a rule: in what ORDER do you multiply and add? <span class="saved-dot" id="dot-ea"></span></div>
 <textarea class="journal-box" data-label="Practice 3 — Error Analysis: Multiply first, then add" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
-<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Jana skipped the multiplication. Rule: multiply FIRST (whole × bottom), THEN add (+ top). Correct: 3 × 5 + 2 = 17 → <strong><span class="frac"><span class="num">17</span><span class="den">5</span></span></strong>. <div class="video-wrap" data-video-slot="4-06-05-practice-3-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 3</div><div class="video-wrap-title">Multiply before you add</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-05_Practice-3_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Frame the order-of-operations point. About 45 sec.</div><div class="video-placeholder-id"><!-- slot: 4-06-05-practice-3-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">Rule: multiply whole × bottom FIRST, then add the top. 3 × 5 + 2 = 17. Same bottom 5. Answer: 17/5.</div><div class="video-wrap" data-video-slot="4-06-05-practice-3-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 3</div><div class="video-wrap-title">Order matters</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-05_Practice-3_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the order. About 1 min.</div><div class="video-placeholder-id"><!-- slot: 4-06-05-practice-3-retry --></div></div></div></div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
+<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Jana skipped the multiplication. Rule: multiply FIRST (whole × bottom), THEN add (+ top). Correct: 3 × 5 + 2 = 17 → <strong><span class="frac"><span class="num">17</span><span class="den">5</span></span></strong>. </div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">Rule: multiply whole × bottom FIRST, then add the top. 3 × 5 + 2 = 17. Same bottom 5. Answer: 17/5.</div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">Multiply, add, write. Now practice composing.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Mixed to improper — multiply and add. Check by converting back.</div></div></div><div class="activity-body"><p>Show your multiply-and-add for each. Verify by converting back.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Do the denominators MATCH? Or do I need to rename one or both? Or is a benchmark (<span class="frac"><span class="num">1</span><span class="den">2</span></span>, 1) faster?</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Convert each mixed number to an improper fraction.</strong> Show your multiply-and-add.<br/>(a) 3 <span class="frac"><span class="num">1</span><span class="den">4</span></span><br/>(b) 5 <span class="frac"><span class="num">2</span><span class="den">3</span></span><br/>(c) 7 <span class="frac"><span class="num">4</span><span class="den">9</span></span></p><div class="journal-label">✏️ My answers in simplest form + the simplification step <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: Convert three improper to mixed" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-
 <div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Story problem.</strong> A baker made 3 <span class="frac"><span class="num">1</span><span class="den">2</span></span> batches of cookies. Each batch fills <span class="frac"><span class="num">1</span><span class="den">2</span></span> of a tray. (a) Write 3 <span class="frac"><span class="num">1</span><span class="den">2</span></span> as an improper fraction with denominator 2. (b) How many half-trays of cookies is that in total?</p><div class="journal-label">✏️ My answers <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: Cake story with simplification" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
-
-
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#FF7A45;"><div class="activity-head"><div class="activity-num" style="background:#FF7A45;color:#fff;">🗺️</div><div><div class="activity-title">Connection Forward: Fractions as Division</div><div class="activity-sub">What comes next — Unit 6 closer</div></div></div><div class="activity-body"><p>You've compared and ordered fractions that all fit between 0 and 1.</p><p>Next lesson: <strong>Improper Fractions and Mixed Numbers.</strong> What if the top is BIGGER than the bottom? <span class="frac"><span class="num">8</span><span class="den">5</span></span> of a pie isn't just half — it's a WHOLE pie plus some extra. That's an improper fraction, and it can also be written as a mixed number (1 <span class="frac"><span class="num">3</span><span class="den">5</span></span>).</p><p>The big question opening 6.03: <em>How do you show a fraction that's more than 1 whole?</em></p></div></div></div></div>
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed all 6 problems above.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed my multiply-and-add for every conversion.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I double-checked by converting at least one improper back to its mixed form.</span></div></div></div>
@@ -1059,6 +1106,75 @@ async function loadVideoManifest(){try{let res=await fetch('video-manifest.md',{
 function parseManifest(txt){let map={};let lines=txt.split(/\r?\n/);let current=null,buf=[];function commit(){if(current&&buf.join('\n').trim())map[current]=buf.join('\n').trim();buf=[]}for(let line of lines){let m=line.match(/^([A-Za-z0-9-]+):\s*$/);if(m){commit();current=m[1]}else if(current){buf.push(line)}}commit();return map}
 function showPageFeedback(msg){var panel=document.querySelector('.tab-panel.active')||document.body;var box=panel.querySelector(':scope > .page-feedback');if(!box){box=document.createElement('div');box.className='page-feedback';panel.insertBefore(box,panel.firstChild);}box.className='page-feedback show warn';box.innerHTML=msg;}
 window.addEventListener('DOMContentLoaded',()=>{restoreJournals();updateProgress();loadVideoManifest()});
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Two-Digit × One-Digit";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
 </script>
 </body>
 </html>

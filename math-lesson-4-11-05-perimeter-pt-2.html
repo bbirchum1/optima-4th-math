@@ -329,6 +329,32 @@
 .cc-row strong{color:#4A8A4A;font-weight:900;font-family:Lora,Georgia,serif}
 .cc-row em{color:#7A88A8;font-style:italic;font-size:12px}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
@@ -343,7 +369,7 @@
 <div class="header-sub">An Education Experience Company</div>
 </div>
 </div>
-<div class="header-title"><em>Perimeter &mdash; Part 2</em></div>
+<div class="header-title"><em>Perimeter — Part 2</em></div>
 <div class="header-badge">
 <span class="header-badge-icon">🦉</span>
 <span class="header-badge-text">Lesson 4.11.05</span>
@@ -356,7 +382,42 @@
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
-<div class="video-wrap" data-video-slot="4-11-05-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.11.05</div><div class="video-wrap-title">Perimeter of a composite figure &mdash; find missing sides, then add.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-11-05_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Sketch an L-shape on graph paper. Label only the outer dimensions and the notch. "Six sides, but only four labeled. The inner sides aren't labeled — but they're hiding in plain sight." Compute each missing side by subtraction, then add all six. Frame: <strong>Label every side, then sum them once.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-welcome --></div></div></div></div>
+<div class="fluency-box" data-timed="true">
+<div class="fluency-head">
+<div class="fluency-head-icon">⏳</div>
+<div><div class="fluency-head-label">TIMED FLUENCY CHECK</div><div class="fluency-head-title">Mixed All-Operations — One-Minute Check</div></div>
+<div class="fluency-timer-ui"><span class="fluency-timer-display" id="fluencyTimerDisplay">60s</span><button class="fluency-start-btn" id="fluencyStartBtn" onclick="fluencyStart()">Start 1-Minute Check</button></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Unit check — Quarter 4 timed fluency. Click Start, then answer as many as you can in 60 seconds. Answers lock in automatically when time is up.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">9 × 7</span><input autocomplete="off" class="fluency-input" data-answer="63" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 8</span><input autocomplete="off" class="fluency-input" data-answer="64" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 9</span><input autocomplete="off" class="fluency-input" data-answer="63" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 9</span><input autocomplete="off" class="fluency-input" data-answer="54" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">11 × 7</span><input autocomplete="off" class="fluency-input" data-answer="77" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">12 × 8</span><input autocomplete="off" class="fluency-input" data-answer="96" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 9</span><input autocomplete="off" class="fluency-input" data-answer="81" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 6</span><input autocomplete="off" class="fluency-input" data-answer="48" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 8</span><input autocomplete="off" class="fluency-input" data-answer="56" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 7</span><input autocomplete="off" class="fluency-input" data-answer="42" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">63 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">72 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">56 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="7" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">96 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="12" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">81 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">48 ÷ 6</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">88 ÷ 11</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">108 ÷ 12</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">64 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">77 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="11" disabled="" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" disabled="" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Mixed All-Operations — One-Minute Check)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
 <p>Hazel sketches the figure first. Cora labels every side, even the hidden ones. Atlas finds missing sides by subtraction. Felix sums them all.</p>
 <div class="bubble-row">
@@ -372,15 +433,14 @@
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Find the Missing Side</div><div class="activity-sub">Three composite figures with one side missing. Subtract to find it.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>The full long side is split into two pieces. One is labeled; one is missing. Find the missing piece.</p>
 <div style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:grid;gap:18px;">
-
 <div style="display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;">
 <div style="background:#fff;border:1.5px solid #C9E4C9;border-radius:10px;padding:8px;">
-<svg width="180" height="60" viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="display:block;">
-<rect x="10" y="20" width="160" height="20" fill="#7CB87C" fill-opacity="0.5" stroke="#2D5A2D" stroke-width="1.5"/>
-<text x="90" y="15" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="11" fill="#0E1C42" font-weight="700">total = 10 cm</text>
-<text x="40" y="55" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="11" fill="#0E1C42" font-weight="700">6 cm</text>
-<text x="130" y="55" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="11" fill="#C56C3F" font-weight="900">? cm</text>
-<line x1="74" y1="20" x2="74" y2="40" stroke="#5B2E10" stroke-width="2" stroke-dasharray="3,2"/>
+<svg height="60" style="display:block;" viewbox="0 0 180 60" width="180" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#7CB87C" fill-opacity="0.5" height="20" stroke="#2D5A2D" stroke-width="1.5" width="160" x="10" y="20"></rect>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="11" font-weight="700" text-anchor="middle" x="90" y="15">total = 10 cm</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="11" font-weight="700" text-anchor="middle" x="40" y="55">6 cm</text>
+<text fill="#C56C3F" font-family="Lora,Georgia,serif" font-size="11" font-weight="900" text-anchor="middle" x="130" y="55">? cm</text>
+<line stroke="#5B2E10" stroke-dasharray="3,2" stroke-width="2" x1="74" x2="74" y1="20" y2="40"></line>
 </svg>
 </div>
 <div class="value-card-row" style="margin:0;">
@@ -389,15 +449,14 @@
 <button class="value-card" onclick="pickReadinessRound(this,1,'6 cm')" style="min-width:80px;"><div class="big" style="font-size:14px;">6 cm</div></button>
 </div>
 </div>
-
 <div style="display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;">
 <div style="background:#fff;border:1.5px solid #C9E4C9;border-radius:10px;padding:8px;">
-<svg width="180" height="60" viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="display:block;">
-<rect x="10" y="20" width="160" height="20" fill="#9BC89B" fill-opacity="0.5" stroke="#2D5A2D" stroke-width="1.5"/>
-<text x="90" y="15" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="11" fill="#0E1C42" font-weight="700">total = 14 m</text>
-<text x="40" y="55" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="11" fill="#C56C3F" font-weight="900">? m</text>
-<text x="130" y="55" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="11" fill="#0E1C42" font-weight="700">9 m</text>
-<line x1="74" y1="20" x2="74" y2="40" stroke="#5B2E10" stroke-width="2" stroke-dasharray="3,2"/>
+<svg height="60" style="display:block;" viewbox="0 0 180 60" width="180" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#9BC89B" fill-opacity="0.5" height="20" stroke="#2D5A2D" stroke-width="1.5" width="160" x="10" y="20"></rect>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="11" font-weight="700" text-anchor="middle" x="90" y="15">total = 14 m</text>
+<text fill="#C56C3F" font-family="Lora,Georgia,serif" font-size="11" font-weight="900" text-anchor="middle" x="40" y="55">? m</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="11" font-weight="700" text-anchor="middle" x="130" y="55">9 m</text>
+<line stroke="#5B2E10" stroke-dasharray="3,2" stroke-width="2" x1="74" x2="74" y1="20" y2="40"></line>
 </svg>
 </div>
 <div class="value-card-row" style="margin:0;">
@@ -406,15 +465,14 @@
 <button class="value-card" onclick="pickReadinessRound(this,2,'9 m')" style="min-width:80px;"><div class="big" style="font-size:14px;">9 m</div></button>
 </div>
 </div>
-
 <div style="display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;">
 <div style="background:#fff;border:1.5px solid #C9E4C9;border-radius:10px;padding:8px;">
-<svg width="180" height="60" viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="display:block;">
-<rect x="10" y="20" width="160" height="20" fill="#7CB87C" fill-opacity="0.5" stroke="#2D5A2D" stroke-width="1.5"/>
-<text x="90" y="15" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="11" fill="#0E1C42" font-weight="700">total = 12 ft</text>
-<text x="35" y="55" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="11" fill="#0E1C42" font-weight="700">3 ft</text>
-<text x="125" y="55" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="11" fill="#C56C3F" font-weight="900">? ft</text>
-<line x1="62" y1="20" x2="62" y2="40" stroke="#5B2E10" stroke-width="2" stroke-dasharray="3,2"/>
+<svg height="60" style="display:block;" viewbox="0 0 180 60" width="180" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#7CB87C" fill-opacity="0.5" height="20" stroke="#2D5A2D" stroke-width="1.5" width="160" x="10" y="20"></rect>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="11" font-weight="700" text-anchor="middle" x="90" y="15">total = 12 ft</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="11" font-weight="700" text-anchor="middle" x="35" y="55">3 ft</text>
+<text fill="#C56C3F" font-family="Lora,Georgia,serif" font-size="11" font-weight="900" text-anchor="middle" x="125" y="55">? ft</text>
+<line stroke="#5B2E10" stroke-dasharray="3,2" stroke-width="2" x1="62" x2="62" y1="20" y2="40"></line>
 </svg>
 </div>
 <div class="value-card-row" style="margin:0;">
@@ -423,13 +481,12 @@
 <button class="value-card" onclick="pickReadinessRound(this,3,'4 ft')" style="min-width:80px;"><div class="big" style="font-size:14px;">4 ft</div></button>
 </div>
 </div>
-
 </div>
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Missing pieces:</strong> 10 − 6 = <strong>4</strong>. 14 − 9 = <strong>5</strong>. 12 − 3 = <strong>9</strong>. To find a missing piece, subtract the known piece from the total.</div>
-<div class="journal-label">✏️ How does subtraction help find a missing side on a composite figure? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: missing piece" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-11-05-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.11.05</div><div class="video-wrap-title">Find missing sides; sum all sides</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-11-05_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "Three pieces, all the same idea: subtract to find what's missing. On a composite figure, the top has to equal the sum of the top pieces. Same for the side." Frame: <strong>Missing piece = total − known.</strong></div><div class="video-placeholder-id"><!-- slot: lesson-readiness-feedback --></div></div></div></div>
+<div class="journal-label">✏️ How does subtraction help find a missing side on a composite figure? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: missing piece" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">All six sides of an L.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">📐</span><p>An L-shape: outer is 7 cm × 5 cm, and a 3 cm × 2 cm notch is cut from the top-right corner. What is the perimeter?</p></div>
 <div class="strategy-chip-row">
@@ -451,11 +508,10 @@
 </div></div>
 <div class="callout callout-info"><span class="callout-icon">✨</span><p><strong>Cool result:</strong> The outer bounding rectangle perimeter is 2 × (7 + 5) = 24. Same answer! L-shape perimeters equal their outer rectangle's perimeter.</p></div>
 <div class="journal-label">✏️ Why does the notch NOT change the perimeter? Hint: think about the sides that get added and removed. <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think: L-shape perimeter" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think: L-shape perimeter" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">Now find missing sides yourself.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-11-05-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-11-05 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-11-05-concept --></div></div></div></div>
 <div aria-label="Daily vocabulary flash cards" class="vocab-section">
 <div class="vocab-section-head">
 <div class="vocab-section-icon">📚</div>
@@ -466,33 +522,33 @@
 </div>
 <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
 <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for composite figure. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🧩</div><div class="fc-word">composite figure</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">composite figure</div><div class="fc-def">a shape made of two or more rectangles joined together — L-shapes, T-shapes, stairs.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for missing side. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">❓</div><div class="fc-word">missing side</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">missing side</div><div class="fc-def">a side length not labeled directly. Find it by subtracting the labeled pieces from the full length.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for sum all sides. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">➕</div><div class="fc-word">sum all sides</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">sum all sides</div><div class="fc-def">the perimeter of any shape — add every side once. Watch out: don't miss a side or double-count.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for bounding rectangle. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🟩</div><div class="fc-word">bounding rectangle</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">bounding rectangle</div><div class="fc-def">the smallest rectangle that contains the whole composite figure. For an L-shape, its perimeter equals the L-shape's perimeter.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div aria-label="Vocabulary card for composite figure. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🧩</div><div class="fc-word">composite figure</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">composite figure</div><div class="fc-def">a shape made of two or more rectangles joined together — L-shapes, T-shapes, stairs.</div><div class="fc-tap-back">tap to flip back</div></div>
 </div>
-<div class="video-wrap" data-video-slot="4-11-05-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.11.05</div><div class="video-wrap-title">Composite figure perimeter — label every side, then add.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-11-05_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Three composites. (1) L-shape outer 7×5, notch 3×2: P = 4+2+3+3+7+5 = 24. (2) T-shape: label all 8 sides, sum = 34. (3) Stairs: 3 steps, all sides labeled, sum = 30. Frame: <strong>Find every side first. Then add all sides exactly once.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-concept --></div></div></div></div>
+</div>
+<div aria-label="Vocabulary card for missing side. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">❓</div><div class="fc-word">missing side</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">missing side</div><div class="fc-def">a side length not labeled directly. Find it by subtracting the labeled pieces from the full length.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for sum all sides. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">➕</div><div class="fc-word">sum all sides</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">sum all sides</div><div class="fc-def">the perimeter of any shape — add every side once. Watch out: don't miss a side or double-count.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for bounding rectangle. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🟩</div><div class="fc-word">bounding rectangle</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">bounding rectangle</div><div class="fc-def">the smallest rectangle that contains the whole composite figure. For an L-shape, its perimeter equals the L-shape's perimeter.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
 <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Pick how many groups to SPLIT the bar into. Then click groups to TAKE them.</p></div>
 <div class="callout callout-tip" style="margin-bottom:14px;background:#F0F7F0;border:2px solid #C9E4C9;"><span class="callout-icon">🪜</span><p><strong>How to find the perimeter of any composite figure:</strong></p>
 <div style="margin-top:8px;display:grid;gap:6px;font-size:15px;color:#0E1C42;">
@@ -502,87 +558,68 @@
 </div>
 </div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#4A8A4A;">📐</div><div><div class="activity-title">Side-Sum Calculator</div><div class="activity-sub">Six sides labeled A through F clockwise. Two are hidden — find them by subtraction. Then sum.</div></div></div><div class="activity-body"><p>Three L-shapes. Press Next Step to reveal missing sides; press again to sum.</p>
-
-<div class="ss-card" data-id="1" data-unit="cm" data-ow="7" data-oh="5" data-nw="3" data-nh="2" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="ss-card" data-id="1" data-nh="2" data-nw="3" data-oh="5" data-ow="7" data-unit="cm" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 1 · L-shape (cm)</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Outer 7 × 5, notch 3 × 2 from top-right. What are the two inner sides?</div>
-
 <div id="ssStage-1" style="background:#fff;border:2px solid #C9E4C9;border-radius:10px;padding:14px;margin-bottom:12px;min-height:220px;display:flex;justify-content:center;align-items:center;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:24px;" id="ssReadout-1">Click <em>Reveal Missing Sides</em>.</div>
-
+<div id="ssReadout-1" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:24px;">Click <em>Reveal Missing Sides</em>.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="ssStep('1')" id="ssStepBtn-1" style="background:#4A8A4A;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Next Step</button>
+<button id="ssStepBtn-1" onclick="ssStep('1')" style="background:#4A8A4A;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Next Step</button>
 <button onclick="ssReset('1')" style="background:#6BA56B;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="ssStatus-1" style="background:#9BC89B;border:2px solid #7CB87C;border-radius:10px;padding:10px 14px;font-size:14px;color:#2D5A2D;font-weight:700;line-height:1.5;text-align:center;">Step 1: reveal the missing inner sides. Step 2: sum all sides for the perimeter.</div>
 </div>
-
-<div class="ss-card" data-id="2" data-unit="m" data-ow="9" data-oh="6" data-nw="4" data-nh="3" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="ss-card" data-id="2" data-nh="3" data-nw="4" data-oh="6" data-ow="9" data-unit="m" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 2 · Bigger L-shape (m)</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Outer 9 × 6, notch 4 × 3 from top-right.</div>
-
 <div id="ssStage-2" style="background:#fff;border:2px solid #C9E4C9;border-radius:10px;padding:14px;margin-bottom:12px;min-height:220px;display:flex;justify-content:center;align-items:center;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:24px;" id="ssReadout-2">Click <em>Reveal Missing Sides</em>.</div>
-
+<div id="ssReadout-2" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:24px;">Click <em>Reveal Missing Sides</em>.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="ssStep('2')" id="ssStepBtn-2" style="background:#4A8A4A;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Next Step</button>
+<button id="ssStepBtn-2" onclick="ssStep('2')" style="background:#4A8A4A;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Next Step</button>
 <button onclick="ssReset('2')" style="background:#6BA56B;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="ssStatus-2" style="background:#9BC89B;border:2px solid #7CB87C;border-radius:10px;padding:10px 14px;font-size:14px;color:#2D5A2D;font-weight:700;line-height:1.5;text-align:center;">Step 1: reveal the missing inner sides. Step 2: sum all sides for the perimeter.</div>
 </div>
-
-<div class="ss-card" data-id="3" data-unit="ft" data-ow="12" data-oh="8" data-nw="5" data-nh="4" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="ss-card" data-id="3" data-nh="4" data-nw="5" data-oh="8" data-ow="12" data-unit="ft" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 3 · Wider L-shape (ft)</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Outer 12 × 8, notch 5 × 4 from top-right.</div>
-
 <div id="ssStage-3" style="background:#fff;border:2px solid #C9E4C9;border-radius:10px;padding:14px;margin-bottom:12px;min-height:220px;display:flex;justify-content:center;align-items:center;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:24px;" id="ssReadout-3">Click <em>Reveal Missing Sides</em>.</div>
-
+<div id="ssReadout-3" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:24px;">Click <em>Reveal Missing Sides</em>.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="ssStep('3')" id="ssStepBtn-3" style="background:#4A8A4A;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Next Step</button>
+<button id="ssStepBtn-3" onclick="ssStep('3')" style="background:#4A8A4A;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Next Step</button>
 <button onclick="ssReset('3')" style="background:#6BA56B;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="ssStatus-3" style="background:#9BC89B;border:2px solid #7CB87C;border-radius:10px;padding:10px 14px;font-size:14px;color:#2D5A2D;font-weight:700;line-height:1.5;text-align:center;">Step 1: reveal the missing inner sides. Step 2: sum all sides for the perimeter.</div>
 </div>
-
 <div class="reveal-box" id="learnReveal"><strong>What you saw.</strong> The perimeter of any L-shape equals the perimeter of its OUTER bounding rectangle. The notch removes some sides and adds equal-length sides — they cancel. P = 2 × (outer length + outer width).</div>
 </div></div>
 <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 The Composite Perimeter Rule</div><p><strong>Label every side first.</strong> Find any missing sides by subtracting the known pieces from the full length.</p><p><strong>Then add every side exactly once.</strong> For L-shapes, T-shapes, and stairs, the perimeter equals the perimeter of the outer bounding rectangle.</p></div>
 <div class="activity bl-violet" style="margin-top:16px;"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">📐</div><div><div class="activity-title">Picture It: Why the Notch Doesn't Change the Perimeter</div><div class="activity-sub">The L-shape and its bounding rectangle have the same perimeter.</div></div></div><div class="activity-body">
 <div style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px;margin:12px 0;">
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:560px;margin:14px auto;">
-
 <div style="text-align:center;">
-<svg width="180" height="140" viewBox="0 0 180 140" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto;">
-<rect x="20" y="20" width="140" height="100" fill="#7CB87C" fill-opacity="0.4" stroke="#2D5A2D" stroke-width="2"/>
-<text x="90" y="14" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="11" fill="#0E1C42" font-weight="700">7 cm</text>
-<text x="14" y="70" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="11" fill="#0E1C42" font-weight="700" transform="rotate(-90,14,70)">5 cm</text>
+<svg height="140" style="display:block;margin:0 auto;" viewbox="0 0 180 140" width="180" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#7CB87C" fill-opacity="0.4" height="100" stroke="#2D5A2D" stroke-width="2" width="140" x="20" y="20"></rect>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="11" font-weight="700" text-anchor="middle" x="90" y="14">7 cm</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="11" font-weight="700" text-anchor="middle" transform="rotate(-90,14,70)" x="14" y="70">5 cm</text>
 </svg>
 <div style="font-family:'Lora',Georgia,serif;font-weight:900;color:#4A8A4A;margin-top:6px;">Outer rectangle</div>
 <div style="font-size:12px;color:#3A4A6B;">P = 2 × (7 + 5) = 24 cm</div>
 </div>
-
 <div style="text-align:center;">
-<svg width="180" height="140" viewBox="0 0 180 140" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto;">
-<path d="M 20,20 L 100,20 L 100,60 L 160,60 L 160,120 L 20,120 Z" fill="#7CB87C" fill-opacity="0.4" stroke="#2D5A2D" stroke-width="2"/>
-<text x="60" y="14" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="11" fill="#2D5A2D" font-weight="700">4 cm</text>
-<text x="110" y="42" font-family="Lora,Georgia,serif" font-size="10" fill="#C56C3F" font-weight="900">2 cm</text>
-<text x="130" y="54" font-family="Lora,Georgia,serif" font-size="10" fill="#C56C3F" font-weight="900">3 cm</text>
-<text x="166" y="92" font-family="Lora,Georgia,serif" font-size="11" fill="#0E1C42" font-weight="700">3 cm</text>
-<text x="90" y="135" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="11" fill="#0E1C42" font-weight="700">7 cm</text>
-<text x="14" y="70" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="11" fill="#0E1C42" font-weight="700" transform="rotate(-90,14,70)">5 cm</text>
+<svg height="140" style="display:block;margin:0 auto;" viewbox="0 0 180 140" width="180" xmlns="http://www.w3.org/2000/svg">
+<path d="M 20,20 L 100,20 L 100,60 L 160,60 L 160,120 L 20,120 Z" fill="#7CB87C" fill-opacity="0.4" stroke="#2D5A2D" stroke-width="2"></path>
+<text fill="#2D5A2D" font-family="Lora,Georgia,serif" font-size="11" font-weight="700" text-anchor="middle" x="60" y="14">4 cm</text>
+<text fill="#C56C3F" font-family="Lora,Georgia,serif" font-size="10" font-weight="900" x="110" y="42">2 cm</text>
+<text fill="#C56C3F" font-family="Lora,Georgia,serif" font-size="10" font-weight="900" x="130" y="54">3 cm</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="11" font-weight="700" x="166" y="92">3 cm</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="11" font-weight="700" text-anchor="middle" x="90" y="135">7 cm</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="11" font-weight="700" text-anchor="middle" transform="rotate(-90,14,70)" x="14" y="70">5 cm</text>
 </svg>
 <div style="font-family:'Lora',Georgia,serif;font-weight:900;color:#4A8A4A;margin-top:6px;">L-shape</div>
 <div style="font-size:12px;color:#3A4A6B;">P = 4+2+3+3+7+5 = 24 cm</div>
 </div>
 </div>
-
 <div style="text-align:center;color:#0E1C42;font-size:15px;font-weight:700;margin-top:14px;">Same perimeter — 24 cm — even though the L-shape has 6 sides and the rectangle has 4.</div>
 <div style="text-align:center;color:#3A4A6B;font-size:13px;margin-top:8px;font-style:italic;">The notch removed a piece of length 3 from the top but added an equal piece of length 3 to the inside. Same for the 2 — removed from the right side, added inside. Net change: zero.</div>
 </div>
@@ -591,7 +628,7 @@
 <textarea class="journal-box" data-label="Learn — Socratic: bounding rectangle rule" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: Asher's T-rug</div><div class="activity-sub">8 sides — find the two missing, then add all 8.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Asher's T-shaped rug: the top bar is <strong>12 cm</strong> wide × <strong>3 cm</strong> tall. The stem of the T is <strong>4 cm</strong> wide × <strong>5 cm</strong> tall, centered under the bar. Find the perimeter.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew:</p>
-<div class="video-wrap" data-video-slot="4-11-05-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.11.05</div><div class="video-wrap-title">T-shape perimeter: 12 + 3 + 4 + 5 + 4 + 5 + 4 + 3 = 40 cm</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-11-05_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Hazel: "Draw the T. Label every side." Cora: "Find the two missing pieces under the bar. Each is (12 − 4) ÷ 2 = 4 cm." Felix: "Add all 8 sides: 12 + 3 + 4 + 5 + 4 + 5 + 4 + 3 = 40 cm." About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-11-05-example --></div></div></div></div>
+
 <div style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.8;font-size:15px;">
 <div style="font-weight:900;color:#2D5A2D;margin-bottom:10px;">Step 1: Label every side.</div>
@@ -626,60 +663,49 @@
 <div class="callout callout-info"><span class="callout-icon">📐</span><p>Three composite figures. Reveal missing sides; sum all sides.</p></div>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Method:</strong> Label every side first. For an L-shape with notch: missing inner sides = outer dimension − notch dimension.</p></div>
 <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Bounding-rectangle shortcut:</strong> For an L-shape, perimeter = 2 × (outer L + outer W).</p></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#4A8A4A;">1</div><div><div class="activity-title">Imani L-rug</div><div class="activity-sub">Outer 6 × 5 cm, notch 2 × 2 cm.</div></div><span class="activity-time" style="background:#4A8A4A;">~5 min</span></div><div class="activity-body">
-<div class="ss-card" data-id="p1" data-unit="cm" data-ow="6" data-oh="5" data-nw="2" data-nh="2" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="ss-card" data-id="p1" data-nh="2" data-nw="2" data-oh="5" data-ow="6" data-unit="cm" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Imani L-shape</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Reveal missing sides, then sum all six.</div>
-
 <div id="ssStage-p1" style="background:#fff;border:2px solid #C9E4C9;border-radius:10px;padding:14px;margin-bottom:12px;min-height:220px;display:flex;justify-content:center;align-items:center;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:24px;" id="ssReadout-p1">Click <em>Reveal Missing Sides</em>.</div>
-
+<div id="ssReadout-p1" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:24px;">Click <em>Reveal Missing Sides</em>.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="ssStep('p1')" id="ssStepBtn-p1" style="background:#4A8A4A;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Next Step</button>
+<button id="ssStepBtn-p1" onclick="ssStep('p1')" style="background:#4A8A4A;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Next Step</button>
 <button onclick="ssReset('p1')" style="background:#6BA56B;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="ssStatus-p1" style="background:#9BC89B;border:2px solid #7CB87C;border-radius:10px;padding:10px 14px;font-size:14px;color:#2D5A2D;font-weight:700;line-height:1.5;text-align:center;">Step 1: reveal the missing inner sides. Step 2: sum all sides for the perimeter.</div>
 </div>
 <div class="journal-label">✏️ Two missing sides: ___ and ___. Perimeter = ___ cm. Verify with the bounding rectangle: 2 × (6 + 5) = ___ <span class="saved-dot" id="dot-p1"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 1: Imani L" id="journal-p1" oninput="autoSave(this,'dot-p1')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Priya bigger L</div><div class="activity-sub">Outer 10 × 7 ft, notch 4 × 3 ft.</div></div></div><div class="activity-body">
-<div class="ss-card" data-id="p2" data-unit="ft" data-ow="10" data-oh="7" data-nw="4" data-nh="3" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="ss-card" data-id="p2" data-nh="3" data-nw="4" data-oh="7" data-ow="10" data-unit="ft" style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Priya L-shape</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Same idea — bigger numbers.</div>
-
 <div id="ssStage-p2" style="background:#fff;border:2px solid #C9E4C9;border-radius:10px;padding:14px;margin-bottom:12px;min-height:220px;display:flex;justify-content:center;align-items:center;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:24px;" id="ssReadout-p2">Click <em>Reveal Missing Sides</em>.</div>
-
+<div id="ssReadout-p2" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:24px;">Click <em>Reveal Missing Sides</em>.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="ssStep('p2')" id="ssStepBtn-p2" style="background:#4A8A4A;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Next Step</button>
+<button id="ssStepBtn-p2" onclick="ssStep('p2')" style="background:#4A8A4A;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">▶ Next Step</button>
 <button onclick="ssReset('p2')" style="background:#6BA56B;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
-
 <div id="ssStatus-p2" style="background:#9BC89B;border:2px solid #7CB87C;border-radius:10px;padding:10px 14px;font-size:14px;color:#2D5A2D;font-weight:700;line-height:1.5;text-align:center;">Step 1: reveal the missing inner sides. Step 2: sum all sides for the perimeter.</div>
 </div>
 <div class="journal-label">✏️ Perimeter = ___ ft. Does it match 2 × (10 + 7)? <span class="saved-dot" id="dot-p2"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 2: Priya L" id="journal-p2" oninput="autoSave(this,'dot-p2')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#4A8A4A;">3</div><div><div class="activity-title">Stairs — Theo</div><div class="activity-sub">3 steps, each 2 cm × 2 cm. Outer bounding box: 6 cm × 6 cm.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🪜</span><p><strong>Steps:</strong> count the sides (stair shape has more than 6). Add them carefully. Compare to outer perimeter.</p></div>
 <div style="background:#FAFCF9;border:2px solid #C9E4C9;border-radius:14px;padding:14px;margin:14px 0;">
 <div style="display:flex;justify-content:center;margin:10px 0;">
-<svg width="220" height="180" viewBox="0 0 220 180" xmlns="http://www.w3.org/2000/svg">
-<path d="M 30,30 L 70,30 L 70,70 L 110,70 L 110,110 L 150,110 L 150,150 L 30,150 Z" fill="#7CB87C" fill-opacity="0.4" stroke="#2D5A2D" stroke-width="2"/>
-<text x="50" y="22" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="11" fill="#0E1C42" font-weight="700">2</text>
-<text x="78" y="55" font-family="Lora,Georgia,serif" font-size="11" fill="#0E1C42" font-weight="700">2</text>
-<text x="90" y="62" font-family="Lora,Georgia,serif" font-size="11" fill="#0E1C42" font-weight="700">2</text>
-<text x="118" y="95" font-family="Lora,Georgia,serif" font-size="11" fill="#0E1C42" font-weight="700">2</text>
-<text x="130" y="102" font-family="Lora,Georgia,serif" font-size="11" fill="#0E1C42" font-weight="700">2</text>
-<text x="160" y="132" font-family="Lora,Georgia,serif" font-size="11" fill="#0E1C42" font-weight="700">2</text>
-<text x="90" y="165" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="11" fill="#0E1C42" font-weight="700">6</text>
-<text x="24" y="90" text-anchor="middle" font-family="Lora,Georgia,serif" font-size="11" fill="#0E1C42" font-weight="700" transform="rotate(-90,24,90)">6</text>
+<svg height="180" viewbox="0 0 220 180" width="220" xmlns="http://www.w3.org/2000/svg">
+<path d="M 30,30 L 70,30 L 70,70 L 110,70 L 110,110 L 150,110 L 150,150 L 30,150 Z" fill="#7CB87C" fill-opacity="0.4" stroke="#2D5A2D" stroke-width="2"></path>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="11" font-weight="700" text-anchor="middle" x="50" y="22">2</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="11" font-weight="700" x="78" y="55">2</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="11" font-weight="700" x="90" y="62">2</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="11" font-weight="700" x="118" y="95">2</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="11" font-weight="700" x="130" y="102">2</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="11" font-weight="700" x="160" y="132">2</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="11" font-weight="700" text-anchor="middle" x="90" y="165">6</text>
+<text fill="#0E1C42" font-family="Lora,Georgia,serif" font-size="11" font-weight="700" text-anchor="middle" transform="rotate(-90,24,90)" x="24" y="90">6</text>
 </svg>
 </div>
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:15px;color:#3A4A6B;"><strong>Step 1:</strong> Each step is 2 cm × 2 cm. Count the sides in the stair shape. (Hint: there are 8.) <br/><strong>Step 2:</strong> Add them all: 2 + 2 + 2 + 2 + 2 + 2 + 6 + 6 = <strong style="color:#4A8A4A;">___ cm</strong></div>
@@ -688,18 +714,13 @@
 <div class="journal-label">✏️ Stair perimeter = ___ cm. Outer square perimeter = ___ cm. Same or different? Explain. <span class="saved-dot" id="dot-p3"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 3: stairs" id="journal-p3" oninput="autoSave(this,'dot-p3')" placeholder="" style="min-height:80px;"></textarea>
 </div></div>
-
 <div class="tab-next-wrap"><p class="tab-transition-voice">Composite perimeters done. Quick check time.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Two quick checks. Your full practice is in the Independent Practice PDF.</div></div></div><div class="activity-body"><p>If you got these, you're ready for the Independent Practice.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Have I labeled every side? Have I found the missing sides by subtraction? Am I summing each side exactly ONCE?</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Quick check — L-shape perimeter.</strong> An L-shape: outer 8 cm × 6 cm, notch 3 cm × 2 cm cut from one corner. Find the perimeter.</p><div class="journal-label">✏️ Perimeter = ___ cm. (Hint: use the bounding-rectangle shortcut to check.) <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-
 <div class="q-block"><p class="q-text"><span class="q-num">2</span><strong>Quick check — find a missing side.</strong> A T-shape has 8 sides. The top bar is 10 cm wide. The stem is 4 cm wide and centered under the bar. What is the length of each piece of the bar on either side of the stem?</p><div class="journal-label">✏️ Each piece = ___ cm. Show how you found it. <span class="saved-dot" id="dot-a2"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 2" id="journal-a2" oninput="autoSave(this,'dot-a2')" placeholder=""></textarea></div>
-
-
-
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed both quick-check problems above.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I labeled every side of each composite figure clockwise (A, B, C, D, E, F).</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed the subtraction for each missing side and the full sum.</span></div></div></div>
 </div>
@@ -1365,7 +1386,74 @@ if(typeof window !== 'undefined'){
 
 
 </script>
-
-
 </div>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = true;
+var FLUENCY_TITLE = "Mixed All-Operations — One-Minute Check";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
+</script>
 </body></html>

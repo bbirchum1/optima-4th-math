@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Optima Academy Online — Grade 4 Math Lesson 4.03.03</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
@@ -306,25 +307,51 @@
 .bubble-text{font-size:14.5px;color:#0E1C42;line-height:1.5;font-weight:600;font-family:'Lora',Georgia,serif;font-style:italic}
 @media(max-width:620px){.bubble{flex:1 1 100%;max-width:100%}}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
 <div class="progress-wrap"><span class="progress-label">📐 Lesson Progress</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><span class="progress-pct" id="progressPct">0%</span></div>
 <div class="header">
-  <div class="header-brand">
-    <div class="header-logo">
-      <img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" />
-    </div>
-    <div>
-      <div class="header-org">Optima Academy Online</div>
-      <div class="header-sub">An Education Experience Company</div>
-    </div>
-  </div>
-  <div class="header-title"><em>Factors</em> — the building blocks of a number</div>
-  <div class="header-badge">
-    <span class="header-badge-icon">🦉</span>
-    <span class="header-badge-text">Lesson 4.03.03</span>
-  </div>
+<div class="header-brand">
+<div class="header-logo">
+<img alt="Optima Academy" src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png"/>
+</div>
+<div>
+<div class="header-org">Optima Academy Online</div>
+<div class="header-sub">An Education Experience Company</div>
+</div>
+</div>
+<div class="header-title"><em>Factors</em> — the building blocks of a number</div>
+<div class="header-badge">
+<span class="header-badge-icon">🦉</span>
+<span class="header-badge-text">Lesson 4.03.03</span>
+</div>
 </div>
 <div class="quote-strip"><div class="quote-strip-text">"A factor of 12 is any number that divides 12 evenly. Find all the factors — and you find every way to break the number apart."</div><div class="quote-strip-attr">Factors Big Idea</div></div>
 <div class="info-strip"><div class="info-cell"><div class="info-icon" style="background:#F0E8FF;">🧭</div><div><div class="info-label">Unit</div><div class="info-value">Unit 3</div><div class="info-detail">Multiples and Factors</div></div></div><div class="info-cell"><div class="info-icon" style="background:#E3F8ED;">📅</div><div><div class="info-label">Lesson</div><div class="info-value">4.03.03</div><div class="info-detail">U3 Apply</div></div></div><div class="info-cell"><div class="info-icon" style="background:#EAF0FF;">📐</div><div><div class="info-label">Standard</div><div class="info-value">MA.4.AR.3.2</div><div class="info-detail">Find factor pairs</div></div></div><div class="info-cell"><div class="info-icon" style="background:#FFF8E6;">🔢</div><div><div class="info-label">Focus</div><div class="info-value">Factor pairs</div><div class="info-detail">MTR.5.1 · MTR.6.1</div></div></div></div>
@@ -332,22 +359,45 @@
 <div class="intro-2col"><div class="intro-card theme-question"><div class="intro-card-head"><div class="intro-card-head-icon">❓</div><div><div class="intro-card-head-label">Essential Question</div><div class="intro-card-head-title">If multiples are the family a number BELONGS to, what are factors?</div></div></div><div class="intro-card-body"><p>12 is a multiple of 3 (because 3 × 4 = 12). Flip it: 3 is a <strong>factor</strong> of 12. So is 4. So is 12 ÷ 1 = 12, and 12 ÷ 2 = 6, and 12 ÷ 6 = 2, and 12 ÷ 12 = 1.</p><p>Factors come in <strong>pairs</strong>: 1 × 12 = 12. 2 × 6 = 12. 3 × 4 = 12. Every multiplication that ENDS at 12 names two of its factors.</p></div></div><div class="intro-card theme-objectives"><div class="intro-card-head"><div class="intro-card-head-icon">🎯</div><div><div class="intro-card-head-label">Today's Objectives</div><div class="intro-card-head-title">You will…</div></div></div><div class="intro-card-body"><div class="obj-line"><span class="obj-icon">🧩</span><span><strong>List all factor pairs</strong> of a given number by trying division systematically (1, 2, 3, 4…).</span></div><div class="obj-line"><span class="obj-icon">🎯</span><span><strong>Decide</strong> whether one number IS or IS NOT a factor of another (Cora's no-remainder rule).</span></div><div class="obj-line"><span class="obj-icon">🧠</span><span><strong>Explain</strong> why every factor comes with a paired factor — and when to stop searching.</span></div></div></div></div>
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
-
 <div class="tab-panel active" id="tab-warmup">
-  <div class="video-wrap" data-video-slot="4-03-03-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.03.03</div><div class="video-wrap-title">Factors — every multiplication that ends at your number</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-03_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write the number <strong>12</strong> at the top of the board. "Today we ask the OPPOSITE question from before. Multiples were 'what can I MAKE by multiplying?' Factors are 'what divides INTO this number with no remainder?'" Start dividing 12 by every whole number, in order. "12 ÷ 1 = 12. Yes, no remainder. So 1 IS a factor. 12 is also a factor — because 1 × 12 = 12." Write: <strong>1 × 12 = 12</strong> below. "Try 2. 12 ÷ 2 = 6. No remainder. So 2 is a factor. And 6 is a factor." Write: <strong>2 × 6 = 12</strong>. "Try 3. 12 ÷ 3 = 4. No remainder. So 3 and 4 are factors." Write: <strong>3 × 4 = 12</strong>. "Try 5. 12 ÷ 5 = 2 with remainder 2. NOT a factor. Skip." "Try 6 — already have it." Pause. "When the smaller factor in a pair gets bigger than the partner — we stop. We've listed every factor pair." Read the full factor list: 1, 2, 3, 4, 6, 12. "Six factors total. Three pairs. Every multiplication that ENDS at 12 just gave us two of its factors." Frame: "Today you list every factor of a number. Two ways: division test (Cora's favorite), or building arrays (Hazel's favorite). The factor pairs are the building blocks — how the number breaks apart." Tone: revealing the inverse — same number, opposite question. (~1-2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-02-welcome --></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
-    <p>Yesterday: multiples (the family the number BELONGS to). Today: factors (the numbers INSIDE it). The crew flips direction.</p>
-    <div class="bubble-row">
-      <div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — systematic divider</div><div class="bubble-text">"I try 1, then 2, then 3, then 4 — in order — and check each time. Does the division come out clean? Then I found a factor pair."</div></div></div>
-      <div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — factor matcher</div><div class="bubble-text">"I write factor pairs as a multiplication. 1 × 12 = 12. 2 × 6 = 12. 3 × 4 = 12. Each pair gives me TWO factors at once."</div></div></div>
-    </div>
-    <div class="bubble-row">
-      <div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — rectangle builder</div><div class="bubble-text">"I draw EVERY rectangle that has 12 dots. 1×12, 2×6, 3×4. Each rectangle's sides ARE a factor pair. The sizes that don't form rectangles aren't factors."</div></div></div>
-      <div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — divides to check</div><div class="bubble-text">"To check if a number IS a multiple of 4, I divide. 28 ÷ 4 = 7 with no remainder → yes, multiple. 30 ÷ 4 = 7 r 2 → no, not a multiple."</div></div></div>
-    </div>
-    <div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>Cora's rule (still): <em>no remainder = factor. Any remainder = not a factor.</em> Same test as multiples — just asked in the other direction.</p></div>
-  </div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Spot the Factor</div><div class="activity-sub">For each number, decide which of the choices below IS a factor of it.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>Divide each target number by each choice. The one that divides EVENLY is a factor.</p>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">The Hardest Facts (6–9)</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">6 × 7</span><input autocomplete="off" class="fluency-input" data-answer="42" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 8</span><input autocomplete="off" class="fluency-input" data-answer="48" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 7</span><input autocomplete="off" class="fluency-input" data-answer="49" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 8</span><input autocomplete="off" class="fluency-input" data-answer="56" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 9</span><input autocomplete="off" class="fluency-input" data-answer="63" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 8</span><input autocomplete="off" class="fluency-input" data-answer="64" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 9</span><input autocomplete="off" class="fluency-input" data-answer="72" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 9</span><input autocomplete="off" class="fluency-input" data-answer="81" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 6</span><input autocomplete="off" class="fluency-input" data-answer="42" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 7</span><input autocomplete="off" class="fluency-input" data-answer="56" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (The Hardest Facts (6–9))" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
+<p>Yesterday: multiples (the family the number BELONGS to). Today: factors (the numbers INSIDE it). The crew flips direction.</p>
+<div class="bubble-row">
+<div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — systematic divider</div><div class="bubble-text">"I try 1, then 2, then 3, then 4 — in order — and check each time. Does the division come out clean? Then I found a factor pair."</div></div></div>
+<div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — factor matcher</div><div class="bubble-text">"I write factor pairs as a multiplication. 1 × 12 = 12. 2 × 6 = 12. 3 × 4 = 12. Each pair gives me TWO factors at once."</div></div></div>
+</div>
+<div class="bubble-row">
+<div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — rectangle builder</div><div class="bubble-text">"I draw EVERY rectangle that has 12 dots. 1×12, 2×6, 3×4. Each rectangle's sides ARE a factor pair. The sizes that don't form rectangles aren't factors."</div></div></div>
+<div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — divides to check</div><div class="bubble-text">"To check if a number IS a multiple of 4, I divide. 28 ÷ 4 = 7 with no remainder → yes, multiple. 30 ÷ 4 = 7 r 2 → no, not a multiple."</div></div></div>
+</div>
+<div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>Cora's rule (still): <em>no remainder = factor. Any remainder = not a factor.</em> Same test as multiples — just asked in the other direction.</p></div>
+</div></div>
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Spot the Factor</div><div class="activity-sub">For each number, decide which of the choices below IS a factor of it.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>Divide each target number by each choice. The one that divides EVENLY is a factor.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:grid;gap:14px;">
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
@@ -378,16 +428,16 @@
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Answers:</strong> 5 IS a factor of 20 (20 ÷ 5 = 4, no remainder). 6 IS a factor of 18 (18 ÷ 6 = 3). 8 IS a factor of 24 (24 ÷ 8 = 3). Cora's rule: divide; if it comes out CLEAN, you found a factor.</div>
-<div class="journal-label">✏️ Pick one of the three target numbers (20, 18, or 24). List every factor you can find. (Hint: factors come in pairs. Each pair multiplies to your target.) <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: List all factors of one target" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-03-03-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.03.03</div><div class="video-wrap-title">Cora's divide-and-check, for factors</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-03_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk each. <strong>20 ÷ 5 = 4</strong> with no remainder. "5 IS a factor of 20. And so is 4 — because 5 × 4 = 20. Factors come in pairs." <strong>18 ÷ 6 = 3</strong>. "6 IS a factor of 18. And 3 is also a factor — same pair." <strong>24 ÷ 8 = 3</strong>. "8 IS a factor of 24. And 3 is the partner." Pause. "Every time you find a factor by dividing, you find ANOTHER factor for free — the quotient. They come in PAIRS. 5 and 4. 6 and 3. 8 and 3. Each pair multiplies to make the target number." Frame: "Today you'll list every factor of a number by systematically trying 1, 2, 3, 4… and writing down every pair you find." (~1-2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-02-readiness-feedback --></div></div></div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
+<div class="journal-label">✏️ Pick one of the three target numbers (20, 18, or 24). List every factor you can find. (Hint: factors come in pairs. Each pair multiplies to your target.) <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: List all factors of one target" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">🍕</span><p>A pizza party has <strong>36 students</strong>. The teacher needs to put them in EQUAL-sized groups for tables. <strong>What are ALL the group sizes that would work?</strong> (Hint: each group size has to divide 36 with no remainder — it has to be a FACTOR of 36.)</p></div>
 <div class="number-talk-visual">
 <div class="number-talk-prompt">Try every group size from 1 up. 36 ÷ 1, 36 ÷ 2, 36 ÷ 3, 36 ÷ 4… which ones divide evenly? Each one that does is a FACTOR of 36, and a valid group size.</div>
 <div class="visual-equation" style="font-size:22px;letter-spacing:1px;">Every group size that DIVIDES 36 evenly is a factor.</div>
 <div class="notice-wonder-grid">
-<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" id="journal-notice" data-label="Warm-Up — Notice: What I notice about the pizza party group sizes" placeholder="" oninput="autoSave(this,'dot-notice')" style="min-height:60px;"></textarea></div>
-<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" id="journal-wonder" data-label="Warm-Up — Wonder: What I wonder about factor pairs" placeholder="" oninput="autoSave(this,'dot-wonder')" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" data-label="Warm-Up — Notice: What I notice about the pizza party group sizes" id="journal-notice" oninput="autoSave(this,'dot-notice')" placeholder="" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" data-label="Warm-Up — Wonder: What I wonder about factor pairs" id="journal-wonder" oninput="autoSave(this,'dot-wonder')" placeholder="" style="min-height:60px;"></textarea></div>
 </div>
 </div>
 <p><strong>Predict:</strong> Which of these group sizes would work for 36 students? Click all that fit.</p>
@@ -399,50 +449,49 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>Before you predict, ask yourself:</strong> 36 ÷ group size has to come out EVEN (no remainder). Which group sizes work? Each one is a FACTOR of 36.</p></div>
 <div class="journal-label">✏️ My prediction and reasoning: Which group sizes work for 36 students? Defend each with a division. List EVERY factor of 36 you can find. <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think Prompt: All factors of 36" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think Prompt: All factors of 36" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">You predicted which group sizes work. Now let's find EVERY factor — systematically — so we never miss one.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
-  <div class="vocab-section" aria-label="Daily vocabulary flash cards">
-  <div class="vocab-section-head">
-    <div class="vocab-section-icon">📚</div>
-    <div>
-      <div class="vocab-section-label">Daily Vocabulary</div>
-      <div class="vocab-section-title">Tap to Build Today’s Math Language</div>
-    </div>
-  </div>
-  <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
-  <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for factor. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🧩</div><div class="fc-word">factor</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">factor</div><div class="fc-def">a number that divides another evenly. 3 is a factor of 12 because 12 ÷ 3 = 4 (no remainder). Factors of 12: 1, 2, 3, 4, 6, 12.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for factor pair. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">👯</div><div class="fc-word">factor pair</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">factor pair</div><div class="fc-def">two factors that multiply to give a number. For 12: 1×12, 2×6, 3×4. Each pair names two factors at once.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for rectangle method. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">▭</div><div class="fc-word">rectangle method</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">rectangle method</div><div class="fc-def">draw every possible rectangle with that many dots. Each rectangle's side lengths ARE a factor pair. If no rectangle works, the number isn't a factor.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for divisor. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">📏</div><div class="fc-word">divisor</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">divisor</div><div class="fc-def">the number you DIVIDE BY. In 24 ÷ 3 = 8, the divisor is 3. Every factor of a number works as a divisor that leaves no remainder.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-03-03-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-03-03 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-03-03-concept --></div></div></div></div>
+<div aria-label="Daily vocabulary flash cards" class="vocab-section">
+<div class="vocab-section-head">
+<div class="vocab-section-icon">📚</div>
+<div>
+<div class="vocab-section-label">Daily Vocabulary</div>
+<div class="vocab-section-title">Tap to Build Today’s Math Language</div>
 </div>
-<div class="video-wrap" data-video-slot="4-03-03-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.03.03</div><div class="video-wrap-title">Finding every factor — systematic division</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-03_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Find ALL factors of 24 — slowly. "Start with 1. 24 ÷ 1 = 24. 1 is a factor. So is 24." Write: <strong>1 × 24 = 24</strong>. "Try 2. 24 ÷ 2 = 12. Both 2 and 12 are factors." Write: <strong>2 × 12</strong>. "Try 3. 24 ÷ 3 = 8. Both 3 and 8 are factors." Write: <strong>3 × 8</strong>. "Try 4. 24 ÷ 4 = 6. Both 4 and 6 are factors." Write: <strong>4 × 6</strong>. "Try 5. 24 ÷ 5 = 4 remainder 4. NOT a factor — skip." "Try 6. We already have it as the partner in 4 × 6 = 24." Pause. "Here's the rule: when the smaller number in the pair gets BIGGER than the partner, you've found every pair. We started small at 1 and have crossed paths at 4 × 6 — the next pair would be 5 × something, but 5 isn't a factor. So we're done." Read the full list: <strong>1, 2, 3, 4, 6, 8, 12, 24</strong>. Now show Hazel's rectangle view: 1-by-24 rectangle (1 row of 24 dots), 2-by-12 (2 rows of 12), 3-by-8, 4-by-6. Each rectangle IS a factor pair. 5-by-something doesn't make a rectangle of 24 — so 5 isn't a factor. Frame: "Two equivalent ways to list factors — try each whole number with division, OR build every rectangle. Both find the same pairs." Tone: methodical, systematic. (~2-3 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-03-concept --></div></div></div></div>
-  <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Three questions below. Each asks whether a number IS a factor of another. Use Cora's divide-and-check.</p></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🎯</div><div><div class="activity-title">Factor Checker: Yes or No?</div><div class="activity-sub">Three quick checks. Divide; no remainder means YES, factor.</div></div></div><div class="activity-body"><p>For each, decide whether the first number is a factor of the second.</p>
+</div>
+<p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
+<div class="vocab-grid">
+<div aria-label="Vocabulary card for factor. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🧩</div><div class="fc-word">factor</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">factor</div><div class="fc-def">a number that divides another evenly. 3 is a factor of 12 because 12 ÷ 3 = 4 (no remainder). Factors of 12: 1, 2, 3, 4, 6, 12.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for factor pair. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">👯</div><div class="fc-word">factor pair</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">factor pair</div><div class="fc-def">two factors that multiply to give a number. For 12: 1×12, 2×6, 3×4. Each pair names two factors at once.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for rectangle method. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">▭</div><div class="fc-word">rectangle method</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">rectangle method</div><div class="fc-def">draw every possible rectangle with that many dots. Each rectangle's side lengths ARE a factor pair. If no rectangle works, the number isn't a factor.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for divisor. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">📏</div><div class="fc-word">divisor</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">divisor</div><div class="fc-def">the number you DIVIDE BY. In 24 ÷ 3 = 8, the divisor is 3. Every factor of a number works as a divisor that leaves no remainder.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Three questions below. Each asks whether a number IS a factor of another. Use Cora's divide-and-check.</p></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🎯</div><div><div class="activity-title">Factor Checker: Yes or No?</div><div class="activity-sub">Three quick checks. Divide; no remainder means YES, factor.</div></div></div><div class="activity-body"><p>For each, decide whether the first number is a factor of the second.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:18px 14px;margin:12px 0;">
 <div style="margin-bottom:18px;">
 <div style="font-family:'Lora',Georgia,serif;font-size:20px;font-weight:900;color:#0E1C42;text-align:center;margin-bottom:10px;">Is <strong>6</strong> a factor of <strong>30</strong>?</div>
@@ -469,8 +518,8 @@
 </div>
 <div class="reveal-box" id="learnReveal"><strong>Yes / No / Yes.</strong> 6 IS a factor of 30 (30 ÷ 6 = 5, clean). 7 is NOT a factor of 40 (40 ÷ 7 = 5 r 5). 9 IS a factor of 45 (45 ÷ 9 = 5). The rule never changes — divisor + zero remainder = factor.</div>
 </div></div>
-  <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 What You Just Saw</div><p><strong>How to find EVERY factor of a number — systematically.</strong></p><p>1. <strong>Start at 1.</strong> Every whole number has 1 as a factor (and the number itself). Write down 1 × <em>number</em>.</p><p>2. <strong>Try each whole number in order.</strong> 2, 3, 4, 5… Divide. If no remainder, you've found a factor PAIR — that divisor AND its quotient.</p><p>3. <strong>Stop when the divisor equals or passes its partner.</strong> If 24 ÷ 5 doesn't work and you've already found pairs up to 4 × 6, you're done — every smaller number has been checked.</p><p>Factors come in pairs. Every "yes" gives you TWO factors at once. The factor list is finite — you can't miss any if you go in order.</p></div>
-  <div class="activity bl-violet" style="margin-top:16px;"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">▭</div><div><div class="activity-title">Picture It: Every Rectangle = One Factor Pair</div><div class="activity-sub">Hazel's rectangle method, applied to 12.</div></div></div><div class="activity-body"><p>Hazel's strategy: draw every rectangle you can make with that many dots. The side lengths ARE the factor pair. If no rectangle works, the number is not a factor.</p>
+<div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 What You Just Saw</div><p><strong>How to find EVERY factor of a number — systematically.</strong></p><p>1. <strong>Start at 1.</strong> Every whole number has 1 as a factor (and the number itself). Write down 1 × <em>number</em>.</p><p>2. <strong>Try each whole number in order.</strong> 2, 3, 4, 5… Divide. If no remainder, you've found a factor PAIR — that divisor AND its quotient.</p><p>3. <strong>Stop when the divisor equals or passes its partner.</strong> If 24 ÷ 5 doesn't work and you've already found pairs up to 4 × 6, you're done — every smaller number has been checked.</p><p>Factors come in pairs. Every "yes" gives you TWO factors at once. The factor list is finite — you can't miss any if you go in order.</p></div>
+<div class="activity bl-violet" style="margin-top:16px;"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">▭</div><div><div class="activity-title">Picture It: Every Rectangle = One Factor Pair</div><div class="activity-sub">Hazel's rectangle method, applied to 12.</div></div></div><div class="activity-body"><p>Hazel's strategy: draw every rectangle you can make with that many dots. The side lengths ARE the factor pair. If no rectangle works, the number is not a factor.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:18px;margin:12px 0;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.7;">
 <p style="margin-bottom:12px;text-align:center;font-weight:800;">All rectangles of 12 dots — and their factor pairs:</p>
 <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;text-align:center;">
@@ -481,12 +530,12 @@
 </div>
 <div>
 <div style="font-size:11px;color:#6B3FA0;text-transform:uppercase;letter-spacing:.5px;font-weight:900;margin-bottom:6px;">2 × 6</div>
-<div style="font-size:18px;letter-spacing:6px;line-height:1.3;">●●●●●●<br>●●●●●●</div>
+<div style="font-size:18px;letter-spacing:6px;line-height:1.3;">●●●●●●<br/>●●●●●●</div>
 <div style="font-size:12px;color:#3A4A6B;font-weight:700;margin-top:6px;">Factors: 2, 6</div>
 </div>
 <div>
 <div style="font-size:11px;color:#6B3FA0;text-transform:uppercase;letter-spacing:.5px;font-weight:900;margin-bottom:6px;">3 × 4</div>
-<div style="font-size:18px;letter-spacing:6px;line-height:1.3;">●●●●<br>●●●●<br>●●●●</div>
+<div style="font-size:18px;letter-spacing:6px;line-height:1.3;">●●●●<br/>●●●●<br/>●●●●</div>
 <div style="font-size:12px;color:#3A4A6B;font-weight:700;margin-top:6px;">Factors: 3, 4</div>
 </div>
 </div>
@@ -494,10 +543,10 @@
 </div>
 <div class="socratic-box"><div class="socratic-label">🧠 Socratic — Think Like a Mathematician</div><p class="socratic-q">Why do factors COME IN PAIRS? When you find one factor of a number by dividing, why do you automatically get a second one?</p>
 <div class="journal-label">✏️ My thinking <span class="saved-dot" id="dot-soc"></span></div>
-<textarea class="journal-box" id="journal-soc" data-label="Learn — Socratic: Why factors come in pairs" placeholder="" oninput="autoSave(this,'dot-soc')"></textarea></div>
+<textarea class="journal-box" data-label="Learn — Socratic: Why factors come in pairs" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: All Factors of 36</div><div class="activity-sub">Try every divisor in order; stop when the partners cross.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>List EVERY factor of 36. Show your reasoning — try divisors in order, stop when the pair flips.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
-<div class="video-wrap" data-video-slot="4-03-03-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.03.03</div><div class="video-wrap-title">Every factor of 36 — systematic search</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-03_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk Atlas's systematic search. "Try 1. 36 ÷ 1 = 36. Pair: 1 × 36." Write. "Try 2. 36 ÷ 2 = 18. Pair: 2 × 18." Write. "Try 3. 36 ÷ 3 = 12. Pair: 3 × 12." Write. "Try 4. 36 ÷ 4 = 9. Pair: 4 × 9." Write. "Try 5. 36 ÷ 5 = 7 r 1. Not a factor." "Try 6. 36 ÷ 6 = 6. Pair: 6 × 6 — same number twice. That's a SQUARE — 6 is a factor that pairs with itself." Write 6 × 6 = 36. "When the pair flips — partners equal — we've found every factor." Read the list: <strong>1, 2, 3, 4, 6, 9, 12, 18, 36</strong>. Nine factors total. Note: 36 has an ODD number of factors because 6 pairs with itself. "Numbers that are perfect squares always have an odd number of factors. Bonus pattern to notice." Show Hazel's rectangles: 1×36, 2×18, 3×12, 4×9, and a 6×6 SQUARE. Cora's check: every factor in the list divides 36 with no remainder. (~2-3 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-03-example --></div></div></div></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: All Factors of 36</div><div class="activity-sub">Try every divisor in order; stop when the partners cross.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>List EVERY factor of 36. Show your reasoning — try divisors in order, stop when the pair flips.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
+
 <div class="key-concept" style="margin-top:14px;"><div class="key-concept-label">⚖️ Factors of 36</div>
 <div style="background:#F0E8FF;border:2px solid #D8CCF0;border-radius:12px;padding:14px;margin-top:8px;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.7;">
 <div style="display:grid;grid-template-columns:120px 1fr;gap:8px;font-size:15px;">
@@ -514,23 +563,22 @@
 </div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">Every divisor checked. Every factor listed. Now apply.</p><button class="tab-next-btn" onclick="switchTab('practice')">Continue to 🧮 Practice →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-practice">
-  <div class="callout callout-info"><span class="callout-icon">🧭</span><p>Three problems on factors. List, divide, decide.</p></div>
-  <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Does this number divide evenly? If yes, factor. Are there other pairs I haven't tried yet?</p></div>
-  <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Try every divisor in order: 1, 2, 3, 4, 5… Stop when the pair flips. Use rectangles if you want a picture.</p></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">How many factors does 28 have?</div><div class="activity-sub">List them all, then count.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>Try 1, 2, 3, 4, 5… Find every divisor that leaves no remainder. Each divisor finds a pair. Stop when the pair flips. Then count.</p>
+<div class="callout callout-info"><span class="callout-icon">🧭</span><p>Three problems on factors. List, divide, decide.</p></div>
+<div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Does this number divide evenly? If yes, factor. Are there other pairs I haven't tried yet?</p></div>
+<div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Try every divisor in order: 1, 2, 3, 4, 5… Stop when the pair flips. Use rectangles if you want a picture.</p></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">How many factors does 28 have?</div><div class="activity-sub">List them all, then count.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>Try 1, 2, 3, 4, 5… Find every divisor that leaves no remainder. Each divisor finds a pair. Stop when the pair flips. Then count.</p>
 <div class="value-card-row" style="justify-content:center;">
 <button class="value-card" onclick="pickP1Round(this,'6')" style="min-width:90px;"><div class="big">6</div></button>
 <button class="value-card" onclick="pickP1Round(this,'4')" style="min-width:90px;"><div class="big">4</div></button>
 <button class="value-card" onclick="pickP1Round(this,'8')" style="min-width:90px;"><div class="big">8</div></button>
 </div>
 <div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Got it.</strong> Factors of 28: 1, 2, 4, 7, 14, 28 — that's <strong>6 factors</strong>. The pairs: 1×28, 2×14, 4×7. (3 and 5 and 6 don't divide 28 evenly.) Three pairs × 2 = 6 factors.
-<div class="video-wrap" data-video-slot="4-03-03-practice-1-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 1</div><div class="video-wrap-title">Three pairs, six factors</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-03_Practice-1_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Celebrate. "Each factor pair gives you TWO factors. 1 and 28. 2 and 14. 4 and 7. That's three pairs — six factors total. Always count carefully." (~30 sec)</div><div class="video-placeholder-id"><!-- slot: 4-03-03-practice-1-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Look again.</strong> List the factors of 28 in order: 1, 2, 4, 7, 14, 28. Try dividing 28 by each whole number from 1 upward, write each pair down, and count.
 <div class="hint-callout">28 ÷ 1 = 28 (pair: 1, 28). 28 ÷ 2 = 14 (pair: 2, 14). 28 ÷ 3 = 9 r 1 (no). 28 ÷ 4 = 7 (pair: 4, 7). 28 ÷ 5, ÷ 6 don't divide. We hit 4 × 7 — partners are next to each other — done. Count the factors: 1, 2, 4, 7, 14, 28 = 6.</div>
-<div class="video-wrap" data-video-slot="4-03-03-practice-1-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 1</div><div class="video-wrap-title">Three pairs make six factors</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-03_Practice-1_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk the systematic check of 28. Show each pair. Count to 6 at the end. (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-03-practice-1-retry --></div></div></div></div></div></div></div>
-  <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three Factor Checks</div><div class="activity-sub">Use the division test to decide each.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Three quick factor decisions. Some are obvious from the times tables. Use Cora's rule: no remainder = YES.</p></div>
+</div></div></div>
+<div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three Factor Checks</div><div class="activity-sub">Use the division test to decide each.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Three quick factor decisions. Some are obvious from the times tables. Use Cora's rule: no remainder = YES.</p></div>
 <p>For each, decide YES (factor) or NO (not a factor).</p>
 <div style="display:grid;gap:14px;margin:14px 0;">
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:14px;">
@@ -556,17 +604,17 @@
 </div>
 </div>
 <div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ Three for three.</strong> 2a — 8 IS a factor of 56 (56 ÷ 8 = 7; 8 × 7 = 56). 2b — 7 is NOT a factor of 50 (50 ÷ 7 = 7 r 1). 2c — 9 IS a factor of 63 (63 ÷ 9 = 7; 9 × 7 = 63).
-<div class="video-wrap" data-video-slot="4-03-03-practice-2-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 2</div><div class="video-wrap-title">Divide and check — every time</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-03_Practice-2_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Recap. "Memorize the times tables, and most factor checks become instant. 56 ÷ 8 = 7 — yes. 50 ÷ 7 = 7 with leftover — no. 63 ÷ 9 = 7 — yes. Times tables are factor encyclopedias." (~45 sec)</div><div class="video-placeholder-id"><!-- slot: 4-03-03-practice-2-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Look again.</strong> Recall the times tables: 8 × 7 = 56, 9 × 7 = 63. Those tell you 8 and 9 are factors of those products. What times 7 equals 50? Nothing whole — 50 ÷ 7 has a remainder.
 <div class="hint-callout">2a — 56 ÷ 8 = 7, no remainder. 2b — 50 ÷ 7 = 7 r 1. 2c — 63 ÷ 9 = 7, no remainder.</div>
-<div class="video-wrap" data-video-slot="4-03-03-practice-2-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 2</div><div class="video-wrap-title">Times tables are factor encyclopedias</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-03_Practice-2_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the test using division for each pair. (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-03-practice-2-retry --></div></div></div></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Ben's Mistake — Missing Factors</div><div class="activity-sub">Walk through Ben's factor list. He missed some.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Ben listed SOME of the factors of 32 but stopped too early. Find what he missed.</p></div>
+</div></div></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Ben's Mistake — Missing Factors</div><div class="activity-sub">Walk through Ben's factor list. He missed some.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Ben listed SOME of the factors of 32 but stopped too early. Find what he missed.</p></div>
 <div class="task-box"><div class="task-label">Ben's Work</div>
 <p>Ben was asked: <strong>"List all factors of 32."</strong> He wrote:</p>
 <div style="background:#FFF8E6;border:2px solid #F5C518;border-radius:12px;padding:14px 16px;font-family:'Lora',Georgia,serif;font-size:17px;line-height:1.8;color:#5A4A3A;margin:10px 0;">
-"1 × 32 = 32. So 1 and 32 are factors.<br>
-2 × 16 = 32. So 2 and 16 are factors.<br>
-3 doesn't work (32 ÷ 3 has a remainder). Skip.<br>
+"1 × 32 = 32. So 1 and 32 are factors.<br/>
+2 × 16 = 32. So 2 and 16 are factors.<br/>
+3 doesn't work (32 ÷ 3 has a remainder). Skip.<br/>
 Answer: <strong>1, 2, 16, 32</strong>."
 </div>
 <p><strong>Your task:</strong> Tap every statement below that is true about Ben's reasoning.</p>
@@ -578,27 +626,23 @@ Answer: <strong>1, 2, 16, 32</strong>."
 </div>
 <button class="purple-btn" onclick="checkErrorAnalysis()">✓ Check My Picks</button>
 <div class="journal-label">✏️ Help Ben. Write a one-sentence rule for when to STOP searching for factors. <span class="saved-dot" id="dot-ea"></span></div>
-<textarea class="journal-box" id="journal-ea" data-label="Practice 3 — Error Analysis: When to stop searching for factors" placeholder="" oninput="autoSave(this,'dot-ea')"></textarea>
-<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Ben skipped 4 when 3 didn't work. The full list of factors of 32 is <strong>1, 2, 4, 8, 16, 32</strong> — three pairs. Rule: try EVERY whole number in order until the pair you're finding has FLIPPED (the smaller half becomes bigger than the bigger half). For 32, the pair 4 × 8 is the LAST one — 5 doesn't divide, and 6 also wouldn't. Done.<div class="video-wrap" data-video-slot="4-03-03-practice-3-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 3</div><div class="video-wrap-title">Don't stop on one "no" — keep going till the pair flips</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-03_Practice-3_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "Some numbers in your search don't divide. That's okay. Skip them and keep going. You're only DONE when the pairs FLIP — when the divisor gets bigger than its partner." (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-03-practice-3-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">After trying 3 and finding it doesn't divide 32, Ben should have tried 4 next. 32 ÷ 4 = 8 — yes! Factor pair 4 × 8 = 32. Missing 4 and 8 made his list incomplete.</div><div class="video-wrap" data-video-slot="4-03-03-practice-3-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 3</div><div class="video-wrap-title">Skip the "no," try the next number</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-03_Practice-3_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach using 32. Walk through 1, 2, 3 (fail), 4 (yes), 5 (fail), 6 (fail). Done at 4 × 8. (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-03-practice-3-retry --></div></div></div></div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
+<textarea class="journal-box" data-label="Practice 3 — Error Analysis: When to stop searching for factors" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
+<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Ben skipped 4 when 3 didn't work. The full list of factors of 32 is <strong>1, 2, 4, 8, 16, 32</strong> — three pairs. Rule: try EVERY whole number in order until the pair you're finding has FLIPPED (the smaller half becomes bigger than the bigger half). For 32, the pair 4 × 8 is the LAST one — 5 doesn't divide, and 6 also wouldn't. Done.</div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">After trying 3 and finding it doesn't divide 32, Ben should have tried 4 next. 32 ÷ 4 = 8 — yes! Factor pair 4 × 8 = 32. Missing 4 and 8 made his list incomplete.</div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">Three factor pairs found. One missing-factor mistake caught. Now show what you know.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-assignment">
-  <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">List factors. Decide factors. Spot patterns.</div></div></div><div class="activity-body"><p>Today's tools: systematic division (Atlas) and rectangles (Hazel). Use whichever helps. Show your reasoning.</p>
+<div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">List factors. Decide factors. Spot patterns.</div></div></div><div class="activity-body"><p>Today's tools: systematic division (Atlas) and rectangles (Hazel). Use whichever helps. Show your reasoning.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Is this a "list ALL factors" question, or a "is this ONE thing a factor" question?</p></div>
-<div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>List all factors</strong> of each. Show your factor pairs.<br>(a) 18<br>(b) 25<br>(c) 40</p><div class="journal-label">✏️ My factor lists <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" id="journal-a1" data-label="Show What You Know — Problem 1: Factors of 18, 25, 40" placeholder="" oninput="autoSave(this,'dot-a1')"></textarea></div>
-
-<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> Yesterday you learned about multiples (numbers you MAKE by multiplying). Today you learned factors (numbers you DIVIDE by evenly). In one paragraph, explain the relationship — if 6 is a factor of 24, then 24 is a __________ of 6. Fill in the blank and explain why.</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" id="journal-a6" data-label="Show What You Know — Problem 6: Factor and multiple are inverses" placeholder="" oninput="autoSave(this,'dot-a6')"></textarea></div>
-
-
+<div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>List all factors</strong> of each. Show your factor pairs.<br/>(a) 18<br/>(b) 25<br/>(c) 40</p><div class="journal-label">✏️ My factor lists <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: Factors of 18, 25, 40" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
+<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> Yesterday you learned about multiples (numbers you MAKE by multiplying). Today you learned factors (numbers you DIVIDE by evenly). In one paragraph, explain the relationship — if 6 is a factor of 24, then 24 is a __________ of 6. Fill in the blank and explain why.</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: Factor and multiple are inverses" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#55C8E8;"><div class="activity-head"><div class="activity-num" style="background:#55C8E8;color:#0E1C42;">🗺️</div><div><div class="activity-title">Connection Forward: What Comes Next</div><div class="activity-sub">Preview Lesson 4.03.04 — Prime and Composite Numbers</div></div></div><div class="activity-body"><p>Today you listed every factor of any number. Tomorrow you'll meet a SPECIAL category — numbers with only TWO factors (1 and themselves). They're called <strong>prime numbers</strong>: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31… Every other whole number (besides 1) has MORE factors. We call those <strong>composite numbers</strong>.</p><p>The big question next time: <em>Why is 1 neither prime nor composite — and why do mathematicians treat it as its own special case?</em></p></div></div></div></div>
-<div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly>Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
-  <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
+<div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
+<div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
 </div>
 <div class="footer">
-  <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
-  <div class="footer-sub">Math · Grade 4 · 4.03.03</div>
-  <div class="footer-copy">© 2025 Optima Academy Online</div>
+<div class="footer-main">🏫 <span>Optima Academy Online</span></div>
+<div class="footer-sub">Math · Grade 4 · 4.03.03</div>
+<div class="footer-copy">© 2025 Optima Academy Online</div>
 </div>
 </div>
 <canvas id="confettiCanvas"></canvas>
@@ -1035,6 +1079,75 @@ async function loadVideoManifest(){try{let res=await fetch('video-manifest.md',{
 function parseManifest(txt){let map={};let lines=txt.split(/\r?\n/);let current=null,buf=[];function commit(){if(current&&buf.join('\n').trim())map[current]=buf.join('\n').trim();buf=[]}for(let line of lines){let m=line.match(/^([A-Za-z0-9-]+):\s*$/);if(m){commit();current=m[1]}else if(current){buf.push(line)}}commit();return map}
 function showPageFeedback(msg){var panel=document.querySelector('.tab-panel.active')||document.body;var box=panel.querySelector(':scope > .page-feedback');if(!box){box=document.createElement('div');box.className='page-feedback';panel.insertBefore(box,panel.firstChild);}box.className='page-feedback show warn';box.innerHTML=msg;}
 window.addEventListener('DOMContentLoaded',()=>{restoreJournals();updateProgress();loadVideoManifest()});
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "The Hardest Facts (6–9)";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
 </script>
 </body>
 </html>

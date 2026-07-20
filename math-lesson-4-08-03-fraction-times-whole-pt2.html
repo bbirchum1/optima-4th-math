@@ -314,6 +314,32 @@
 .frac.frac-lg{font-size:1.05em}
 .frac.frac-on-dark .num{border-bottom-color:#fff}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
@@ -328,7 +354,7 @@
 <div class="header-sub">An Education Experience Company</div>
 </div>
 </div>
-<div class="header-title"><em>Fraction × Whole — Part 2: Resolve & Simplify</em></div>
+<div class="header-title"><em>Fraction × Whole — Part 2: Resolve &amp; Simplify</em></div>
 <div class="header-badge">
 <span class="header-badge-icon">🦉</span>
 <span class="header-badge-text">Lesson 4.08.03</span>
@@ -341,7 +367,31 @@
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
-<div class="video-wrap" data-video-slot="4-08-03-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.08.03</div><div class="video-wrap-title">Resolve products into mixed numbers in simplest form.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-08-03_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Show 4 pies cut in fourths, 3 slices shaded each. "4 × 3/4. Multiply tops: 12. Bottom stays: 4. So <span class="frac"><span class="num">12</span><span class="den">4</span></span> — but that's 12 loose slices. RESOLVE them: 4 slices = 1 whole pie. 12 slices = 3 whole pies. No leftover. So 4 × <span class="frac"><span class="num">3</span><span class="den">4</span></span> = <strong>3</strong>." Then 6 × <span class="frac"><span class="num">5</span><span class="den">9</span></span>: 30/9. Resolve: 9s in 30 = 3, remainder 3. Wait — simplify <span class="frac"><span class="num">3</span><span class="den">9</span></span> = 1/3. Final: 3 1/3. Frame: <strong>Multiply, resolve, simplify.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-welcome --></div></div></div></div>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Mixed Division Facts — Maintenance</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">64 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="8" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">45 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="5" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">56 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="8" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">88 ÷ 11</span><input autocomplete="off" class="fluency-input" data-answer="8" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">72 ÷ 6</span><input autocomplete="off" class="fluency-input" data-answer="12" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">96 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="12" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">108 ÷ 12</span><input autocomplete="off" class="fluency-input" data-answer="9" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">49 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="7" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">84 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="12" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">63 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="7" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Mixed Division Facts — Maintenance)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
 <p>Today Cora steps up — her job is the BIGGEST part of this lesson. Felix multiplies. Hazel regroups. Cora simplifies the leftover.</p>
 <div class="bubble-row">
@@ -385,8 +435,8 @@
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Answers:</strong> <span class="frac"><span class="num">12</span><span class="den">4</span></span> = <strong>3</strong> (4s in 12 = 3, no remainder). <span class="frac"><span class="num">28</span><span class="den">10</span></span> = 2 <span class="frac"><span class="num">8</span><span class="den">10</span></span> = <strong>2 <span class="frac"><span class="num">4</span><span class="den">5</span></span></strong> (simplify). <span class="frac"><span class="num">30</span><span class="den">9</span></span> = 3 <span class="frac"><span class="num">3</span><span class="den">9</span></span> = <strong>3 <span class="frac"><span class="num">1</span><span class="den">3</span></span></strong> (simplify).</div>
-<div class="journal-label">✏️ Which trick is harder for you — converting or simplifying? Why? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: Convert and simplify" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-08-03-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.08.03</div><div class="video-wrap-title">Resolve and simplify</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-08-03_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "<span class="frac"><span class="num">12</span><span class="den">4</span></span> — how many groups of 4 fit in 12? Three. No remainder. So <span class="frac"><span class="num">12</span><span class="den">4</span></span> = 3. <span class="frac"><span class="num">28</span><span class="den">10</span></span> — 2 groups of 10 in 28, remainder 8. So 2 8/10. But <span class="frac"><span class="num">8</span><span class="den">10</span></span> = 4/5. Final: 2 4/5. ALWAYS simplify the leftover." Frame: <strong>Convert improper → divide. Simplify the leftover.</strong></div><div class="video-placeholder-id"><!-- slot: lesson-readiness-feedback --></div></div></div></div>
+<div class="journal-label">✏️ Which trick is harder for you — converting or simplifying? Why? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: Convert and simplify" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Sometimes the product is a whole number.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">🥧</span><p>What is <strong>4 × <span class="frac"><span class="num">3</span><span class="den">4</span></span></strong>?</p></div>
 <p>Predict before you build below:</p>
@@ -398,11 +448,10 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>Rule:</strong> 4 × <span class="frac"><span class="num">3</span><span class="den">4</span></span> = 12/4. Twelve quarter-slices = three whole pies. <strong>4 × <span class="frac"><span class="num">3</span><span class="den">4</span></span> = 3</strong>.</p></div>
 <div class="journal-label">✏️ Why is the answer a whole number this time? <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think: 4 × 3/4 lands on 3" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think: 4 × 3/4 lands on 3" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">Now: build, RESOLVE, simplify.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-08-03-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-08-03 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-08-03-concept --></div></div></div></div>
 <div aria-label="Daily vocabulary flash cards" class="vocab-section">
 <div class="vocab-section-head">
 <div class="vocab-section-icon">📚</div>
@@ -413,73 +462,73 @@
 </div>
 <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
 <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for resolve. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🧩</div><div class="fc-word">resolve</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">resolve</div><div class="fc-def">to regroup loose slices into whole pies plus a leftover. <span class="frac"><span class="num">12</span><span class="den">4</span></span> resolves to 3.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for improper fraction. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">⬆️</div><div class="fc-word">improper fraction</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">improper fraction</div><div class="fc-def">a fraction where the top is bigger than the bottom. <span class="frac"><span class="num">12</span><span class="den">4</span></span>, 30/9. Always resolve.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for simplify. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">✨</div><div class="fc-word">simplify</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">simplify</div><div class="fc-def">divide top and bottom by the same factor. <span class="frac"><span class="num">8</span><span class="den">10</span></span> → 4/5. <span class="frac"><span class="num">3</span><span class="den">9</span></span> → 1/3.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for simplest form. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🎯</div><div class="fc-word">simplest form</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">simplest form</div><div class="fc-def">when the top and bottom of the leftover share no factors. 2 <span class="frac"><span class="num">4</span><span class="den">5</span></span> is simplest. 2 <span class="frac"><span class="num">8</span><span class="den">10</span></span> is NOT.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div aria-label="Vocabulary card for resolve. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🧩</div><div class="fc-word">resolve</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">resolve</div><div class="fc-def">to regroup loose slices into whole pies plus a leftover. <span class="frac"><span class="num">12</span><span class="den">4</span></span> resolves to 3.</div><div class="fc-tap-back">tap to flip back</div></div>
 </div>
-<div class="video-wrap" data-video-slot="4-08-03-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.08.03</div><div class="video-wrap-title">Multiply → resolve into pies → simplify the leftover.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-08-03_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Three examples. (1) 4 × <span class="frac"><span class="num">3</span><span class="den">4</span></span> = <span class="frac"><span class="num">12</span><span class="den">4</span></span> → resolve → 3 whole pies. No leftover. (2) 6 × <span class="frac"><span class="num">5</span><span class="den">9</span></span> = <span class="frac"><span class="num">30</span><span class="den">9</span></span> → 3 wholes, <span class="frac"><span class="num">3</span><span class="den">9</span></span> leftover → simplify to <span class="frac"><span class="num">1</span><span class="den">3</span></span> → 3 1/3. (3) 15 × <span class="frac"><span class="num">2</span><span class="den">5</span></span> = <span class="frac"><span class="num">30</span><span class="den">5</span></span> → 6 whole pies, no leftover → 6. Frame: <strong>Multiply, resolve, simplify.</strong> Tone: methodical, three-step. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-concept --></div></div></div></div>
+</div>
+<div aria-label="Vocabulary card for improper fraction. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">⬆️</div><div class="fc-word">improper fraction</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">improper fraction</div><div class="fc-def">a fraction where the top is bigger than the bottom. <span class="frac"><span class="num">12</span><span class="den">4</span></span>, 30/9. Always resolve.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for simplify. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">✨</div><div class="fc-word">simplify</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">simplify</div><div class="fc-def">divide top and bottom by the same factor. <span class="frac"><span class="num">8</span><span class="den">10</span></span> → 4/5. <span class="frac"><span class="num">3</span><span class="den">9</span></span> → 1/3.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for simplest form. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🎯</div><div class="fc-word">simplest form</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">simplest form</div><div class="fc-def">when the top and bottom of the leftover share no factors. 2 <span class="frac"><span class="num">4</span><span class="den">5</span></span> is simplest. 2 <span class="frac"><span class="num">8</span><span class="den">10</span></span> is NOT.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
 <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Build the product, then click RESOLVE to regroup the slices.</p></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#D97706;">🧩</div><div><div class="activity-title">Mixed-Number Resolver</div><div class="activity-sub">Build the product, then click RESOLVE to regroup loose slices into whole pies.</div></div></div><div class="activity-body"><p>Three problems. Two-stage tool: <strong>BUILD</strong> first (add groups), then <strong>RESOLVE</strong> (fills the loose slices into whole pies + remainder).</p>
 <!-- Problem 1: 4 × 3/4 (lands on 3) -->
-<div class="mr-builder" data-id="1" data-denom="4" data-numer="3" data-target="4" style="background:#FFFBEB;border:2px solid #FCD34D;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="mr-builder" data-denom="4" data-id="1" data-numer="3" data-target="4" style="background:#FFFBEB;border:2px solid #FCD34D;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:20px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 1 · <span style="color:#D97706;">4 × <span class="frac"><span class="num">3</span><span class="den">4</span></span></span></div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:12px;">Target: 4 groups of 3/4. After you build, resolve into whole pies.</div>
 <div id="mrLoose-1" style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:12px;min-height:80px;"></div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;line-height:1.6;margin:10px 0;" id="mrStage-1">Stage: BUILD &nbsp;|&nbsp; Loose slices: <span id="mrLoose-count-1">0</span> &nbsp; total: <span id="mrTotal-1" style="color:#D97706;"><span class="frac"><span class="num">0</span><span class="den">4</span></span></span></div>
+<div id="mrStage-1" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;line-height:1.6;margin:10px 0;">Stage: BUILD  |  Loose slices: <span id="mrLoose-count-1">0</span>   total: <span id="mrTotal-1" style="color:#D97706;"><span class="frac"><span class="num">0</span><span class="den">4</span></span></span></div>
 <div id="mrResolved-1" style="display:none;margin:10px 0;text-align:center;"></div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
 <button id="mrBuildBtn-1" onclick="mrAdd(1)" style="background:#D97706;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 group of <span class="frac"><span class="num">3</span><span class="den">4</span></span></button>
-<button id="mrResolveBtn-1" onclick="mrResolve(1)" disabled style="background:#7A88A8;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;opacity:0.6;">▶ Resolve</button>
+<button disabled="" id="mrResolveBtn-1" onclick="mrResolve(1)" style="background:#7A88A8;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;opacity:0.6;">▶ Resolve</button>
 <button onclick="mrReset(1)" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
 <div id="mrStatus-1" style="background:#FDE68A;border:2px solid #FCD34D;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E1C42;font-weight:700;line-height:1.5;text-align:center;">Stage 1: Click +1 group, 4 times.</div>
 </div>
 <!-- Problem 2: 6 × 5/9 (needs simplify after resolve) -->
-<div class="mr-builder" data-id="2" data-denom="9" data-numer="5" data-target="6" style="background:#FFFBEB;border:2px solid #FCD34D;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="mr-builder" data-denom="9" data-id="2" data-numer="5" data-target="6" style="background:#FFFBEB;border:2px solid #FCD34D;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:20px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 2 · <span style="color:#D97706;">6 × <span class="frac"><span class="num">5</span><span class="den">9</span></span></span></div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:12px;">After resolve, the leftover fraction will need simplifying.</div>
 <div id="mrLoose-2" style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:12px;min-height:80px;"></div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;line-height:1.6;margin:10px 0;" id="mrStage-2">Stage: BUILD &nbsp;|&nbsp; Loose slices: <span id="mrLoose-count-2">0</span> &nbsp; total: <span id="mrTotal-2" style="color:#D97706;"><span class="frac"><span class="num">0</span><span class="den">9</span></span></span></div>
+<div id="mrStage-2" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;line-height:1.6;margin:10px 0;">Stage: BUILD  |  Loose slices: <span id="mrLoose-count-2">0</span>   total: <span id="mrTotal-2" style="color:#D97706;"><span class="frac"><span class="num">0</span><span class="den">9</span></span></span></div>
 <div id="mrResolved-2" style="display:none;margin:10px 0;text-align:center;"></div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
 <button id="mrBuildBtn-2" onclick="mrAdd(2)" style="background:#D97706;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 group of <span class="frac"><span class="num">5</span><span class="den">9</span></span></button>
-<button id="mrResolveBtn-2" onclick="mrResolve(2)" disabled style="background:#7A88A8;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;opacity:0.6;">▶ Resolve</button>
+<button disabled="" id="mrResolveBtn-2" onclick="mrResolve(2)" style="background:#7A88A8;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;opacity:0.6;">▶ Resolve</button>
 <button onclick="mrReset(2)" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
 <div id="mrStatus-2" style="background:#FDE68A;border:2px solid #FCD34D;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E1C42;font-weight:700;line-height:1.5;text-align:center;">Stage 1: Click +1 group, 6 times.</div>
 </div>
 <!-- Problem 3: 15 × 2/5 (lands on whole 6) -->
-<div class="mr-builder" data-id="3" data-denom="5" data-numer="2" data-target="15" style="background:#FFFBEB;border:2px solid #FCD34D;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="mr-builder" data-denom="5" data-id="3" data-numer="2" data-target="15" style="background:#FFFBEB;border:2px solid #FCD34D;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:20px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 3 · <span style="color:#D97706;">15 × <span class="frac"><span class="num">2</span><span class="den">5</span></span></span></div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:12px;">Big build. 30 slices of <span class="frac"><span class="num">1</span><span class="den">5</span></span> — see how many whole pies.</div>
 <div id="mrLoose-3" style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:12px;min-height:60px;"></div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;line-height:1.6;margin:10px 0;" id="mrStage-3">Stage: BUILD &nbsp;|&nbsp; Loose slices: <span id="mrLoose-count-3">0</span> &nbsp; total: <span id="mrTotal-3" style="color:#D97706;"><span class="frac"><span class="num">0</span><span class="den">5</span></span></span></div>
+<div id="mrStage-3" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;line-height:1.6;margin:10px 0;">Stage: BUILD  |  Loose slices: <span id="mrLoose-count-3">0</span>   total: <span id="mrTotal-3" style="color:#D97706;"><span class="frac"><span class="num">0</span><span class="den">5</span></span></span></div>
 <div id="mrResolved-3" style="display:none;margin:10px 0;text-align:center;"></div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
 <button id="mrBuildBtn-3" onclick="mrAdd(3)" style="background:#D97706;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">+1 group of <span class="frac"><span class="num">2</span><span class="den">5</span></span></button>
-<button id="mrResolveBtn-3" onclick="mrResolve(3)" disabled style="background:#7A88A8;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;opacity:0.6;">▶ Resolve</button>
+<button disabled="" id="mrResolveBtn-3" onclick="mrResolve(3)" style="background:#7A88A8;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;opacity:0.6;">▶ Resolve</button>
 <button onclick="mrReset(3)" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
 </div>
 <div id="mrStatus-3" style="background:#FDE68A;border:2px solid #FCD34D;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E1C42;font-weight:700;line-height:1.5;text-align:center;">Stage 1: Click +1 group, 15 times. (Or just spam it.)</div>
@@ -516,7 +565,7 @@
 <textarea class="journal-box" data-label="Learn — Socratic: 3 3/9 vs 3 1/3" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: 8 × <span class="frac"><span class="num">3</span><span class="den">10</span></span></div><div class="activity-sub">Multiply → resolve → simplify.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Find <strong>8 × <span class="frac"><span class="num">3</span><span class="den">10</span></span></strong> as a mixed number in simplest form.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
-<div class="video-wrap" data-video-slot="4-08-03-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.08.03</div><div class="video-wrap-title">8 × <span class="frac"><span class="num">3</span><span class="den">10</span></span> = <span class="frac"><span class="num">24</span><span class="den">10</span></span> = 2 <span class="frac"><span class="num">4</span><span class="den">10</span></span> = 2 <span class="frac"><span class="num">2</span><span class="den">5</span></span></div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-08-03_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Felix: "8 × 3/10. Top × whole: 24. Keep bottom: 10. So 24/10." Hazel: "Resolve. 10s in 24 = 2, remainder 4. So 2 4/10." Cora: "Simplest? 4 and 10 share factor 2. 4 ÷ 2 = 2. 10 ÷ 2 = 5. So 2 2/5." Frame: <strong>Multiply, resolve, simplify.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-08-03-example --></div></div></div></div>
+
 <div style="background:#FFFBEB;border:2px solid #FCD34D;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.9;font-size:16px;">
 <strong>Step 1.</strong> 8 × <span class="frac"><span class="num">3</span><span class="den">10</span></span> = <span style="color:#D97706;font-weight:900;"><span class="frac"><span class="num">24</span><span class="den">10</span></span></span>.<br/>
@@ -544,10 +593,10 @@
 <button class="value-card" onclick="pickP1Round(this,'28/10')" style="min-width:100px;"><div class="big"><span class="frac"><span class="num">28</span><span class="den">10</span></span></div></button>
 </div>
 <div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ All three steps.</strong> 4 × 7 = 28, /10 = 2 R 8 → 2 8/10. Simplify <span class="frac"><span class="num">8</span><span class="den">10</span></span> = 4/5. <strong>2 <span class="frac"><span class="num">4</span><span class="den">5</span></span></strong>.
-<div class="video-wrap" data-video-slot="4-08-03-practice-1-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 1</div><div class="video-wrap-title">Multiply, resolve, simplify</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-08-03_Practice-1_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk all three. About 45 sec.</div><div class="video-placeholder-id"></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Look again.</strong> Did you simplify the leftover?
 <div class="hint-callout">4 × <span class="frac"><span class="num">7</span><span class="den">10</span></span> = 28/10. Resolve: 2 8/10. Simplify <span class="frac"><span class="num">8</span><span class="den">10</span></span> → 4/5. Final: 2 4/5.</div>
-<div class="video-wrap" data-video-slot="4-08-03-practice-1-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 1</div><div class="video-wrap-title">Don't skip simplify</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-08-03_Practice-1_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. About 1 min.</div><div class="video-placeholder-id"></div></div></div></div></div></div></div>
+</div></div></div>
 <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three Resolutions</div><div class="activity-sub">Each finishes differently.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>Strategy:</strong> One is already whole. One needs simplify. One is already simplest.</p></div>
 <div style="display:grid;gap:14px;margin:14px 0;">
 <div style="background:#FFFBEB;border:2px solid #FCD34D;border-radius:14px;padding:14px;">
@@ -576,10 +625,10 @@
 </div>
 </div>
 <div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ Three for three.</strong> 2a — <span class="frac"><span class="num">60</span><span class="den">9</span></span> = 6 <span class="frac"><span class="num">6</span><span class="den">9</span></span>, <span class="frac"><span class="num">6</span><span class="den">9</span></span> = <span class="frac"><span class="num">2</span><span class="den">3</span></span> → <strong>6 <span class="frac"><span class="num">2</span><span class="den">3</span></span></strong>. 2b — <span class="frac"><span class="num">30</span><span class="den">8</span></span> = 3 <span class="frac"><span class="num">6</span><span class="den">8</span></span>, <span class="frac"><span class="num">6</span><span class="den">8</span></span> = <span class="frac"><span class="num">3</span><span class="den">4</span></span> → <strong>3 <span class="frac"><span class="num">3</span><span class="den">4</span></span></strong>. 2c — <span class="frac"><span class="num">6</span><span class="den">9</span></span> simplifies to <strong><span class="frac"><span class="num">2</span><span class="den">3</span></span></strong>.
-<div class="video-wrap" data-video-slot="4-08-03-practice-2-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 2</div><div class="video-wrap-title">All three simplified</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-08-03_Practice-2_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk all three. About 1-2 min.</div><div class="video-placeholder-id"></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Look again.</strong> One of yours skipped the simplify step.
 <div class="hint-callout">2a: 15×4/9 = <span class="frac"><span class="num">60</span><span class="den">9</span></span> = 6 <span class="frac"><span class="num">6</span><span class="den">9</span></span> → 6 2/3. 2b: 10×3/8 = <span class="frac"><span class="num">30</span><span class="den">8</span></span> = 3 <span class="frac"><span class="num">6</span><span class="den">8</span></span> → 3 3/4. 2c: 3×2/9 = <span class="frac"><span class="num">6</span><span class="den">9</span></span> → 2/3.</div>
-<div class="video-wrap" data-video-slot="4-08-03-practice-2-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 2</div><div class="video-wrap-title">Don't stop at the resolve</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-08-03_Practice-2_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. About 1-2 min.</div><div class="video-placeholder-id"></div></div></div></div></div></div></div>
+</div></div></div>
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#D97706;">3</div><div><div class="activity-title">Spot the Stop-Early — A Student Stopped at "2 <span class="frac"><span class="num">6</span><span class="den">8</span></span>"</div><div class="activity-sub">Same answer, but is it FINISHED?</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> A student finished "8 × <span class="frac"><span class="num">3</span><span class="den">4</span></span> = <span class="frac"><span class="num">24</span><span class="den">4</span></span> = 6". She got the right number. But for 10 × <span class="frac"><span class="num">3</span><span class="den">8</span></span>, she wrote "<span class="frac"><span class="num">30</span><span class="den">8</span></span> = 3 <span class="frac"><span class="num">6</span><span class="den">8</span></span>" — and stopped. The leftover <span class="frac"><span class="num">6</span><span class="den">8</span></span> still simplifies to 3/4.</p></div>
 <p>Which is the truly finished answer for 10 × <span class="frac"><span class="num">3</span><span class="den">8</span></span>?</p>
 <div class="value-card-row" style="justify-content:center;">
@@ -588,20 +637,17 @@
 <button class="value-card" onclick="pickP3Round(this,'30/8')" style="min-width:100px;"><div class="big"><span class="frac"><span class="num">30</span><span class="den">8</span></span></div></button>
 </div>
 <div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ Right.</strong> <span class="frac"><span class="num">6</span><span class="den">8</span></span> ÷ <span class="frac"><span class="num">2</span><span class="den">2</span></span> = 3/4. Final: <strong>3 <span class="frac"><span class="num">3</span><span class="den">4</span></span></strong>.
-<div class="video-wrap" data-video-slot="4-08-03-practice-3-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 3</div><div class="video-wrap-title">Finished means simplest</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-08-03_Practice-3_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Cora: "Not done until simplified." About 30 sec.</div><div class="video-placeholder-id"></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again.</strong> Both <span class="frac"><span class="num">6</span><span class="den">8</span></span> and <span class="frac"><span class="num">30</span><span class="den">8</span></span> are correct numbers, but neither is in simplest form.
 <div class="hint-callout">10 × <span class="frac"><span class="num">3</span><span class="den">8</span></span> = <span class="frac"><span class="num">30</span><span class="den">8</span></span> → resolve 3 <span class="frac"><span class="num">6</span><span class="den">8</span></span> → simplify <span class="frac"><span class="num">6</span><span class="den">8</span></span> = <span class="frac"><span class="num">3</span><span class="den">4</span></span> → final 3 3/4.</div>
-<div class="video-wrap" data-video-slot="4-08-03-practice-3-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 3</div><div class="video-wrap-title">Simplest = all three steps</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-08-03_Practice-3_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. About 1 min.</div><div class="video-placeholder-id"></div></div></div></div></div></div></div>
+</div></div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">Three steps every time. Now show it.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Each answer: multiply, resolve, simplify. All three steps every time.</div></div></div><div class="activity-body"><p>For each: show all three steps — multiply, resolve, simplify.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Do the denominators MATCH? Or do I need to rename one or both? Or is a benchmark (<span class="frac"><span class="num">1</span><span class="den">2</span></span>, 1) faster?</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Resolve to whole numbers.</strong> Each lands on a whole number.<br/>(a) 4 × <span class="frac"><span class="num">3</span><span class="den">4</span></span><br/>(b) 15 × <span class="frac"><span class="num">2</span><span class="den">5</span></span><br/>(c) 6 × <span class="frac"><span class="num">2</span><span class="den">3</span></span></p><div class="journal-label">✏️ My whole-number answers <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: Resolve to whole" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-
 <div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Word problem — water bottles.</strong> Tia drinks <span class="frac"><span class="num">3</span><span class="den">4</span></span> of a bottle every day. After 8 days, how many full bottles did she drink? Show all three steps and finish in simplest form.</p><div class="journal-label">✏️ My work and final answer <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: 8 days of water" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
-
-
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#D97706;"><div class="activity-head"><div class="activity-num" style="background:#D97706;color:#fff;">🗺️</div><div><div class="activity-title">Unit 7 Complete — Where This Goes Next</div><div class="activity-sub">Looking ahead</div></div></div><div class="activity-body"><p>You've compared and ordered fractions that all fit between 0 and 1.</p><p>Next lesson: <strong>Improper Fractions and Mixed Numbers.</strong> What if the top is BIGGER than the bottom? <span class="frac"><span class="num">8</span><span class="den">5</span></span> of a pie isn't just half — it's a WHOLE pie plus some extra. That's an improper fraction, and it can also be written as a mixed number (1 <span class="frac"><span class="num">3</span><span class="den">5</span></span>).</p><p>The big question opening 6.03: <em>How do you show a fraction that's more than 1 whole?</em></p></div></div></div></div>
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed all 6 problems above.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed both column subtractions on every problem.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed the borrow step whenever the fraction column needed it and simplified at the end.</span></div></div></div>
@@ -1240,4 +1286,74 @@ if(typeof window !== 'undefined'){
     setTimeout(function(){ [1,2,3].forEach(function(id){ mrRender(id); }); }, 0);
   }
 }
-</script></body></html>
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Mixed Division Facts — Maintenance";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
+</script>
+</body></html>

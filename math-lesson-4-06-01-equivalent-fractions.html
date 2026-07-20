@@ -314,6 +314,32 @@
 .frac.frac-lg{font-size:1.05em}
 .frac.frac-on-dark .num{border-bottom-color:#fff}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
@@ -341,7 +367,31 @@
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
-<div class="video-wrap" data-video-slot="4-06-01-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.06.01</div><div class="video-wrap-title">Same pie, different cuts — that's an equivalent fraction</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-01_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Open with a pie. Cut it in half. "1 out of 2 pieces — that's 1/2." Cut each half in half. "Now I have 4 pieces, and 2 of them shaded — 2/4. But it's the SAME amount of pie." Cut each piece in half again. "Now 8 pieces, 4 shaded — 4/8. Still the same pie." Pause. "<span class="frac"><span class="num">1</span><span class="den">2</span></span> = <span class="frac"><span class="num">2</span><span class="den">4</span></span> = 4/8. These are EQUIVALENT FRACTIONS — same value, different number of cuts." Show the multiplication: <span class="frac"><span class="num">1</span><span class="den">2</span></span>, multiply top and bottom by 2 → 2/4. Multiply by 4 → 4/8. Multiply by 50 → 50/100. "Same rule every time: multiply BOTH top and bottom by the same number — the value stays exactly the same." Now flip it. Show 6/12. Divide top and bottom by 2 → 3/6. Divide by 3 → 1/2. "Same pie. Less cut up. Division gives you the SIMPLEST FORM — the fewest cuts that still show the same amount." Frame: "Today and all of Unit 6, fractions get visual. You'll see pies, bars, and number lines — and learn how the same amount can wear many different costumes." Tone: warm, inviting, visually-driven. (~1-2 min)</div><div class="video-placeholder-id"><!-- slot: lesson-welcome --></div></div></div></div>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Multiplying by Multiples of Ten</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">6 × 70</span><input autocomplete="off" class="fluency-input" data-answer="420" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 40</span><input autocomplete="off" class="fluency-input" data-answer="320" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">3 × 60</span><input autocomplete="off" class="fluency-input" data-answer="180" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 50</span><input autocomplete="off" class="fluency-input" data-answer="450" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 80</span><input autocomplete="off" class="fluency-input" data-answer="560" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">4 × 90</span><input autocomplete="off" class="fluency-input" data-answer="360" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">5 × 60</span><input autocomplete="off" class="fluency-input" data-answer="300" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 90</span><input autocomplete="off" class="fluency-input" data-answer="540" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 30</span><input autocomplete="off" class="fluency-input" data-answer="240" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 70</span><input autocomplete="off" class="fluency-input" data-answer="490" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Multiplying by Multiples of Ten)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
 <p>Unit 6 opens. Hazel is in her element — fractions are visual, and her bar models and pies do the heavy lifting. The rest of the crew supports.</p>
 <div class="bubble-row">
@@ -389,7 +439,7 @@
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Answers:</strong> Pie 1 — <strong><span class="frac"><span class="num">3</span><span class="den">4</span></span></strong> shaded (3 out of 4 pieces). Pie 2 — <strong><span class="frac"><span class="num">2</span><span class="den">6</span></span></strong> shaded (2 out of 6 pieces). Pie 3 — <strong><span class="frac"><span class="num">5</span><span class="den">8</span></span></strong> shaded (5 out of 8 pieces). Notice: pie 2 shows <span class="frac"><span class="num">2</span><span class="den">6</span></span>, but visually it ALSO equals 1/3. Hold that thought — that's where today's lesson goes.</div>
 <div class="journal-label">✏️ Look at pie 2 again. It shows <span class="frac"><span class="num">2</span><span class="den">6</span></span> shaded. But if you look at the SHAPE of the shaded part, what other fraction could name the same amount? Why? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: Name the fraction" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
-<div class="video-wrap" data-video-slot="4-06-01-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.06.01</div><div class="video-wrap-title">Same shaded amount, two ways to name it</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-01_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk each pie. <strong>Pie 1:</strong> "4 equal pieces. 3 shaded. So <span class="frac"><span class="num">3</span><span class="den">4</span></span> of the pie is shaded." <strong>Pie 2:</strong> "6 equal pieces. 2 shaded. So 2/6." Then pause. "Wait — look at where the shaded part IS. It's 1 of 3 equal sections of pie. So <span class="frac"><span class="num">2</span><span class="den">6</span></span> and <span class="frac"><span class="num">1</span><span class="den">3</span></span> are the SAME shaded amount, just counted in different-sized pieces." This is the bridge to today's lesson. <strong>Pie 3:</strong> "8 equal pieces. 5 shaded. 5/8." Frame: "Today's lesson is about that surprise from Pie 2 — when the same shaded amount has more than one fraction name." Tone: warm, observational. (~1-2 min)</div><div class="video-placeholder-id"><!-- slot: lesson-readiness-feedback --></div></div></div></div>
+
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Same pie. Different cuts.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">🥧</span><p>Hazel cuts a pie in half and eats 1 piece. She wrote <strong><span class="frac"><span class="num">1</span><span class="den">2</span></span></strong>. Her friend cuts the SAME-sized pie into 8 pieces and eats 4 of them. He wrote <strong><span class="frac"><span class="num">4</span><span class="den">8</span></span></strong>. <strong>Did they eat the same amount of pie?</strong></p></div>
 <div class="number-talk-visual">
@@ -423,7 +473,7 @@
 <textarea class="journal-box" data-label="Warm-Up — Think Prompt: Which fractions equal 1/2" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">You spotted that two different-looking fractions can be the same. Now learn the rule: multiply or divide both top and bottom by the same number.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-<div class="tab-panel" id="tab-learn">
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-06-01-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-06-01 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-06-01-concept --></div></div></div></div>
 <div aria-label="Daily vocabulary flash cards" class="vocab-section">
 <div class="vocab-section-head">
 <div class="vocab-section-icon">📚</div>
@@ -460,7 +510,7 @@
 </div>
 </div>
 </div>
-<div class="video-wrap" data-video-slot="4-06-01-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.06.01</div><div class="video-wrap-title">The ×n/n rule and the ÷n/n rule</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-01_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Show two pies side by side. Left: <span class="frac"><span class="num">1</span><span class="den">2</span></span> (a pie cut in half, one slice shaded). Right: a blank pie. Pause. "These two are going to end up showing the SAME amount. Watch what happens if I cut the right pie into more pieces." Cut right pie into 4. "Now 2 of the 4 pieces shade to match — that's 2/4." Show the rule: write <span class="frac"><span class="num">1</span><span class="den">2</span></span> with arrows over and under, "× 2 / × 2" — top: 1×2=2. bottom: 2×2=4. Result: 2/4. "Multiply BOTH the top and bottom by the same number. The pie didn't lose any pie — I just cut it more times. <span class="frac"><span class="num">1</span><span class="den">2</span></span> = 2/4." Repeat with ×3: <span class="frac"><span class="num">1</span><span class="den">2</span></span> × <span class="frac"><span class="num">3</span><span class="den">3</span></span> = 3/6. With ×4: <span class="frac"><span class="num">1</span><span class="den">2</span></span> × <span class="frac"><span class="num">4</span><span class="den">4</span></span> = 4/8. With ×50: <span class="frac"><span class="num">1</span><span class="den">2</span></span> × <span class="frac"><span class="num">50</span><span class="den">50</span></span> = 50/100. "Same half. Different costumes." Now flip the rule. Show 6/12. "Six little pieces shaded, twelve total. That's a LOT of cuts." Draw arrows divided by 2: 6÷2=3, 12÷2=6 → 3/6. Divide by 3: 3÷3=1, 6÷3=2 → 1/2. "Divide both by the same number. When you can't divide anymore — when the only number that goes into both is 1 — that's SIMPLEST FORM." Frame: "Two rules. ×n/n to make equivalents. ÷n/n to simplify. Both: top and bottom move TOGETHER by the same number." Tone: visual, rule-anchored, calm. (~2 min)</div><div class="video-placeholder-id"><!-- slot: lesson-concept --></div></div></div></div>
+
 <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Three pies below. For each starting fraction, pick the multiplier that builds the matching equivalent pie.</p></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#FF7A45;">🥧</div><div><div class="activity-title">Equivalence Builder</div><div class="activity-sub">Match the multiplier to the equivalent pie.</div></div></div><div class="activity-body"><p>Each row shows a starting fraction (small pie) and an equivalent target (big pie with more cuts). Pick the ×n/n multiplier that takes you from one to the other.</p>
 <div style="background:#FFF8F0;border:2px solid #FFD0A8;border-radius:14px;padding:18px 14px;margin:12px 0;">
@@ -558,7 +608,7 @@
 <textarea class="journal-box" data-label="Learn — Socratic: Why does ×n/n leave the value the same?" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: Simplify <span class="frac"><span class="num">6</span><span class="den">12</span></span> to <span class="frac"><span class="num">1</span><span class="den">2</span></span></div><div class="activity-sub">Divide both top and bottom by the same number until you can't anymore.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Hazel was given the fraction <strong><span class="frac"><span class="num">6</span><span class="den">12</span></span></strong>. Her teacher asked: "Write this in <strong>simplest form</strong>." What's the simplest form, and how did she get there?</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
-<div class="video-wrap" data-video-slot="4-06-01-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.06.01</div><div class="video-wrap-title">Divide top and bottom by the same number — over and over</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-01_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Show <span class="frac"><span class="num">6</span><span class="den">12</span></span> as a pie (12 cuts, 6 shaded coral). Hazel: "Six out of twelve. That's a lot of cuts. Let me simplify." Step 1 — pick any common factor. "Both 6 and 12 are even, so I'll divide both by 2." Write: 6 ÷ 2 = 3, 12 ÷ 2 = 6 → 3/6. Show NEW pie: 6 cuts, 3 shaded. "Same coral. Half as many cuts." Step 2 — keep going. "3 and 6 share a common factor of 3." Write: 3 ÷ 3 = 1, 6 ÷ 3 = 2 → 1/2. Show pie: 2 cuts, 1 shaded. "Half the pie. Two cuts. Can't simplify any further — 1 and 2 don't share a factor bigger than 1." Frame the GCF route: "Cora's shortcut — find the GCF first. The GCF of 6 and 12 is 6. 6 ÷ 6 = 1, 12 ÷ 6 = 2. Straight to simplest form in one step." Tone: rule-anchored, visual. (~2 min)</div><div class="video-placeholder-id"><!-- slot: 4-06-01-example --></div></div></div></div>
+
 <div style="background:#FFF8F0;border:2px solid #FFD0A8;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;">
 <div style="text-align:center;">
@@ -628,10 +678,10 @@
 <button class="value-card" onclick="pickP1Round(this,'10')" style="min-width:90px;"><div class="big">10</div></button>
 </div>
 <div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Exactly.</strong> Bottom: 5 × 2 = 10. So top also × 2: 3 × 2 = <strong>6</strong>. <span class="frac"><span class="num">3</span><span class="den">5</span></span> = 6/10.
-<div class="video-wrap" data-video-slot="4-06-01-practice-1-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 1</div><div class="video-wrap-title">Top and bottom move TOGETHER</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-01_Practice-1_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "Bottom went from 5 to 10 — that's ×2. So the top also has to ×2. 3 × 2 = 6. <span class="frac"><span class="num">3</span><span class="den">5</span></span> = 6/10. The pie has the same amount shaded, just cut into twice as many pieces." (~45 sec)</div><div class="video-placeholder-id"><!-- slot: 4-06-01-practice-1-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Look again.</strong> The bottom went from 5 to 10 — that's ×2. The TOP has to do the same thing.
 <div class="hint-callout">5 × 2 = 10 (you can see that). So 3 × ? = ? must also use × 2. 3 × 2 = 6.</div>
-<div class="video-wrap" data-video-slot="4-06-01-practice-1-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 1</div><div class="video-wrap-title">Top and bottom move together</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-01_Practice-1_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the ×n/n rule using <span class="frac"><span class="num">3</span><span class="den">5</span></span> → ?/10. (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-06-01-practice-1-retry --></div></div></div></div></div></div></div>
+</div></div></div>
 <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Simplify Three Fractions (÷n/n)</div><div class="activity-sub">Use the GCF. Pick the simplest form.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>Strategy:</strong> Divide BOTH top and bottom by their GCF. If you don't see the GCF right away, just divide by ANY common factor and keep going.</p></div>
 <p>For each fraction, pick the simplest form.</p>
 <div style="display:grid;gap:14px;margin:14px 0;">
@@ -661,10 +711,10 @@
 </div>
 </div>
 <div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ Three for three.</strong> 2a — <span class="frac"><span class="num">8</span><span class="den">12</span></span> ÷ <span class="frac"><span class="num">4</span><span class="den">4</span></span> = <strong><span class="frac"><span class="num">2</span><span class="den">3</span></span></strong>. 2b — <span class="frac"><span class="num">10</span><span class="den">25</span></span> ÷ <span class="frac"><span class="num">5</span><span class="den">5</span></span> = <strong><span class="frac"><span class="num">2</span><span class="den">5</span></span></strong>. 2c — <span class="frac"><span class="num">9</span><span class="den">24</span></span> ÷ <span class="frac"><span class="num">3</span><span class="den">3</span></span> = <strong><span class="frac"><span class="num">3</span><span class="den">8</span></span></strong>. In each, you divided by the GCF.
-<div class="video-wrap" data-video-slot="4-06-01-practice-2-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 2</div><div class="video-wrap-title">Divide by the GCF, land in simplest form</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-01_Practice-2_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk all three. "8 and 12 share 4 → 2/3. 10 and 25 share 5 → 2/5. 9 and 24 share 3 → 3/8. Divide by the GCF, get to simplest form in one move." (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-06-01-practice-2-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Look again.</strong> Simplest form means top and bottom share no common factor bigger than 1.
 <div class="hint-callout">2a: 8 and 12 share 4 → 8÷4=2, 12÷4=3 → 2/3. 2b: 10 and 25 share 5 → 10÷5=2, 25÷5=5 → 2/5. 2c: 9 and 24 share 3 → 9÷3=3, 24÷3=8 → 3/8.</div>
-<div class="video-wrap" data-video-slot="4-06-01-practice-2-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 2</div><div class="video-wrap-title">Find the GCF, divide both numbers</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-01_Practice-2_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the ÷n/n simplification rule. (~1-2 min)</div><div class="video-placeholder-id"><!-- slot: 4-06-01-practice-2-retry --></div></div></div></div></div></div></div>
+</div></div></div>
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#FF7A45;">3</div><div><div class="activity-title">Find Jana's Mistake — She Only Multiplied the Top</div><div class="activity-sub">Top AND bottom must move together. Jana forgot the bottom.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Jana wanted an equivalent of <span class="frac"><span class="num">2</span><span class="den">5</span></span>, so she multiplied the top by 3 — but she didn't do anything to the bottom. That breaks the rule.</p></div>
 <div class="task-box"><div class="task-label">Jana's Work</div>
 <p>Jana was asked: <strong>"Write an equivalent fraction for <span class="frac"><span class="num">2</span><span class="den">5</span></span> with a numerator of 6."</strong></p>
@@ -682,17 +732,14 @@ Answer: <strong><span class="frac"><span class="num">6</span><span class="den">5
 <button class="purple-btn" onclick="checkErrorAnalysis()">✓ Check My Picks</button>
 <div class="journal-label">✏️ Help Jana. Write a rule about what BOTH numbers must do when you build an equivalent fraction. <span class="saved-dot" id="dot-ea"></span></div>
 <textarea class="journal-box" data-label="Practice 3 — Error Analysis: Top and bottom must both change" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
-<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Jana only multiplied the top. To keep the value the same, BOTH numerator and denominator must be multiplied by the same number. <span class="frac"><span class="num">2</span><span class="den">5</span></span> × <span class="frac"><span class="num">3</span><span class="den">3</span></span> = <strong><span class="frac"><span class="num">6</span><span class="den">15</span></span></strong>. <div class="video-wrap" data-video-slot="4-06-01-practice-3-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 3</div><div class="video-wrap-title">Multiply BOTH or you change the value</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-01_Practice-3_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "Top alone changes the value. Top AND bottom by the same number keeps the value. <span class="frac"><span class="num">2</span><span class="den">5</span></span> × <span class="frac"><span class="num">3</span><span class="den">3</span></span> = 6/15." (~45 sec)</div><div class="video-placeholder-id"><!-- slot: 4-06-01-practice-3-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout"><span class="frac"><span class="num">2</span><span class="den">5</span></span> × <span class="frac"><span class="num">3</span><span class="den">3</span></span> means BOTH ×3. 2×3=6 and 5×3=15. The right answer is 6/15. Jana's <span class="frac"><span class="num">6</span><span class="den">5</span></span> is bigger than 1, but <span class="frac"><span class="num">2</span><span class="den">5</span></span> is less than 1 — they can't be equivalent.</div><div class="video-wrap" data-video-slot="4-06-01-practice-3-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 3</div><div class="video-wrap-title">Top alone breaks the rule</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-01_Practice-3_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the ×n/n rule. (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-06-01-practice-3-retry --></div></div></div></div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
+<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Jana only multiplied the top. To keep the value the same, BOTH numerator and denominator must be multiplied by the same number. <span class="frac"><span class="num">2</span><span class="den">5</span></span> × <span class="frac"><span class="num">3</span><span class="den">3</span></span> = <strong><span class="frac"><span class="num">6</span><span class="den">15</span></span></strong>. </div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout"><span class="frac"><span class="num">2</span><span class="den">5</span></span> × <span class="frac"><span class="num">3</span><span class="den">3</span></span> means BOTH ×3. 2×3=6 and 5×3=15. The right answer is 6/15. Jana's <span class="frac"><span class="num">6</span><span class="den">5</span></span> is bigger than 1, but <span class="frac"><span class="num">2</span><span class="den">5</span></span> is less than 1 — they can't be equivalent.</div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">×n/n to build. ÷n/n to simplify. Both rules in your toolkit. Now show what you know.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Equivalent fractions — build with ×n/n, simplify with ÷n/n.</div></div></div><div class="activity-body"><p>Two quick checks. Your full practice is in the Independent Practice PDF.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Is the bottom getting BIGGER (use ×n/n) or SMALLER (use ÷n/n)? What's the multiplier or divisor?</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Fill in the blanks.</strong> Use ×n/n to build the equivalents.<br/>(a) <span class="frac"><span class="num">1</span><span class="den">3</span></span> = ?/12<br/>(b) <span class="frac"><span class="num">3</span><span class="den">4</span></span> = ?/20<br/>(c) <span class="frac"><span class="num">5</span><span class="den">6</span></span> = ?/24</p><div class="journal-label">✏️ My answers + the multiplier I used <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: Build equivalents with ×n/n" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-
 <div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Real-world fraction.</strong> A pan of brownies is cut into 12 equal squares. Anna ate 4 squares. (a) What fraction of the pan did Anna eat? (b) Write that fraction in simplest form. (c) Draw or describe a pan cut into only 3 squares — could you show the same amount Anna ate? Explain.</p><div class="journal-label">✏️ My answers <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: Brownie pan and simplest form" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
-
-
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#FF7A45;"><div class="activity-head"><div class="activity-num" style="background:#FF7A45;color:#fff;">🗺️</div><div><div class="activity-title">Connection Forward: Comparing Fractions</div><div class="activity-sub">What comes next in Unit 6</div></div></div><div class="activity-body"><p>You've learned that the SAME fraction can be written many ways. Same pie, different cuts. Same value, different numbers.</p><p>Next lesson: <strong>Comparing and Ordering Fractions.</strong> If <span class="frac"><span class="num">1</span><span class="den">2</span></span> and <span class="frac"><span class="num">4</span><span class="den">8</span></span> are equal, how do you tell which is bigger between <span class="frac"><span class="num">1</span><span class="den">2</span></span> and <span class="frac"><span class="num">3</span><span class="den">8</span></span>? Hint — make the denominators MATCH first. Equivalent fractions are the tool. ×n/n is the move.</p><p>The big question opening 6.02: <em>If two fractions have different denominators, how do you decide which is bigger?</em></p></div></div></div></div>
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed all 6 problems above.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I named the move (×n/n or ÷n/n) on every equivalence problem.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I checked my work — simplest forms have no shared factor bigger than 1.</span></div></div></div>
@@ -1137,6 +1184,75 @@ async function loadVideoManifest(){try{let res=await fetch('video-manifest.md',{
 function parseManifest(txt){let map={};let lines=txt.split(/\r?\n/);let current=null,buf=[];function commit(){if(current&&buf.join('\n').trim())map[current]=buf.join('\n').trim();buf=[]}for(let line of lines){let m=line.match(/^([A-Za-z0-9-]+):\s*$/);if(m){commit();current=m[1]}else if(current){buf.push(line)}}commit();return map}
 function showPageFeedback(msg){var panel=document.querySelector('.tab-panel.active')||document.body;var box=panel.querySelector(':scope > .page-feedback');if(!box){box=document.createElement('div');box.className='page-feedback';panel.insertBefore(box,panel.firstChild);}box.className='page-feedback show warn';box.innerHTML=msg;}
 window.addEventListener('DOMContentLoaded',()=>{restoreJournals();updateProgress();loadVideoManifest()});
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Multiplying by Multiples of Ten";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
 </script>
 </body>
 </html>

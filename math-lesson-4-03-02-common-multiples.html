@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Optima Academy Online — Grade 4 Math Lesson 4.03.02</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
@@ -306,25 +307,51 @@
 .bubble-text{font-size:14.5px;color:#0E1C42;line-height:1.5;font-weight:600;font-family:'Lora',Georgia,serif;font-style:italic}
 @media(max-width:620px){.bubble{flex:1 1 100%;max-width:100%}}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
 <div class="progress-wrap"><span class="progress-label">📐 Lesson Progress</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><span class="progress-pct" id="progressPct">0%</span></div>
 <div class="header">
-  <div class="header-brand">
-    <div class="header-logo">
-      <img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" />
-    </div>
-    <div>
-      <div class="header-org">Optima Academy Online</div>
-      <div class="header-sub">An Education Experience Company</div>
-    </div>
-  </div>
-  <div class="header-title"><em>Common Multiples</em> — numbers that belong to two families</div>
-  <div class="header-badge">
-    <span class="header-badge-icon">🦉</span>
-    <span class="header-badge-text">Lesson 4.03.02</span>
-  </div>
+<div class="header-brand">
+<div class="header-logo">
+<img alt="Optima Academy" src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png"/>
+</div>
+<div>
+<div class="header-org">Optima Academy Online</div>
+<div class="header-sub">An Education Experience Company</div>
+</div>
+</div>
+<div class="header-title"><em>Common Multiples</em> — numbers that belong to two families</div>
+<div class="header-badge">
+<span class="header-badge-icon">🦉</span>
+<span class="header-badge-text">Lesson 4.03.02</span>
+</div>
 </div>
 <div class="quote-strip"><div class="quote-strip-text">"A common multiple of 4 and 6 is a number that lives in BOTH skip-count lists. The first one is the smallest meeting point."</div><div class="quote-strip-attr">Common Multiples Big Idea</div></div>
 <div class="info-strip"><div class="info-cell"><div class="info-icon" style="background:#F0E8FF;">🧭</div><div><div class="info-label">Unit</div><div class="info-value">Unit 3</div><div class="info-detail">Multiples and Factors</div></div></div><div class="info-cell"><div class="info-icon" style="background:#E3F8ED;">📅</div><div><div class="info-label">Lesson</div><div class="info-value">4.03.02</div><div class="info-detail">U2 Connect</div></div></div><div class="info-cell"><div class="info-icon" style="background:#EAF0FF;">📐</div><div><div class="info-label">Standard</div><div class="info-value">MA.4.AR.3.1</div><div class="info-detail">Common multiples · LCM</div></div></div><div class="info-cell"><div class="info-icon" style="background:#FFF8E6;">🔢</div><div><div class="info-label">Focus</div><div class="info-value">Shared multiples</div><div class="info-detail">MTR.5.1 · MTR.7.1</div></div></div></div>
@@ -332,26 +359,49 @@
 <div class="intro-2col"><div class="intro-card theme-question"><div class="intro-card-head"><div class="intro-card-head-icon">❓</div><div><div class="intro-card-head-label">Essential Question</div><div class="intro-card-head-title">When two skip-count rhythms line up, what does that meeting point mean?</div></div></div><div class="intro-card-body"><p>Skip count by 4: 4, 8, 12, 16, 20, 24… Skip count by 6: 6, 12, 18, 24, 30… <strong>12 shows up in both.</strong> 24 shows up in both. Those are <em>common multiples</em>.</p><p>The smallest one — 12 — has a special name: the <strong>Least Common Multiple</strong> (LCM). Common multiples solve real problems: when will two events that repeat on different rhythms line up again?</p></div></div><div class="intro-card theme-objectives"><div class="intro-card-head"><div class="intro-card-head-icon">🎯</div><div><div class="intro-card-head-label">Today's Objectives</div><div class="intro-card-head-title">You will…</div></div></div><div class="intro-card-body"><div class="obj-line"><span class="obj-icon">📋</span><span><strong>List multiples of two numbers</strong> and circle the ones that appear in BOTH lists.</span></div><div class="obj-line"><span class="obj-icon">🎯</span><span><strong>Find the Least Common Multiple (LCM)</strong> — the smallest number both lists share.</span></div><div class="obj-line"><span class="obj-icon">🧠</span><span><strong>Apply</strong> common multiples to story problems (events repeating on different schedules).</span></div></div></div></div>
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
-
 <div class="tab-panel active" id="tab-warmup">
-  <div class="video-wrap" data-video-slot="4-03-02-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.03.02</div><div class="video-wrap-title">When two skip-counts meet — common multiples</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-02_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write two skip-count rhythms side by side. Top line — multiples of 4: 4, 8, 12, 16, 20, 24, 28, 32, 36, 40. Bottom line — multiples of 6: 6, 12, 18, 24, 30, 36, 42. Circle the numbers that appear in BOTH: 12, 24, 36. "These are the <em>common multiples</em> of 4 and 6. They show up in BOTH families." Star the smallest one — 12. "The smallest common multiple has a name: the <strong>Least Common Multiple</strong>. LCM for short. The LCM of 4 and 6 is 12." Pause and link to a real problem: "Why care? Two buses arrive at the corner — one every 4 minutes, one every 6 minutes. If they both arrive at 8:00, when's the next time they're both there at once? Answer: at the LCM — 12 minutes later, 8:12. Then again at 8:24. Then 8:36. The skip-count rhythms line up at the common multiples." Frame: "Today you'll list multiples of two numbers, hunt for the shared ones, find the LCM, and use it to solve scheduling problems. Same skip-counting you did yesterday — done twice, looking for the overlap." Tone: connective, problem-driven. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-02-welcome --></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
-    <p>Yesterday's crew finds multiples. Today they hunt for the OVERLAP between two multiples lists.</p>
-    <div class="bubble-row">
-      <div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — two number lines</div><div class="bubble-text">"I draw TWO number lines stacked. Top one: multiples of the first number. Bottom: multiples of the second. The places where BOTH lines hit are the common multiples."</div></div></div>
-      <div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — list maker</div><div class="bubble-text">"I make two columns from the multiplication tables. Highlight numbers that show up in both columns. The lowest one is the LCM."</div></div></div>
-    </div>
-    <div class="bubble-row">
-      <div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — Venn diagram</div><div class="bubble-text">"I use two overlapping circles. Multiples of 4 in one. Multiples of 6 in the other. Common multiples sit in the OVERLAP. The picture makes the idea obvious."</div></div></div>
-      <div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — divides BOTH ways</div><div class="bubble-text">"To check if 24 is a common multiple of 4 AND 6, I divide BOTH ways. 24 ÷ 4 = 6 (no remainder). 24 ÷ 6 = 4 (no remainder). Yes — common multiple."</div></div></div>
-    </div>
-    <div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>Cora's common multiple test: <em>a number is a common multiple ONLY if BOTH divisions come out with no remainder.</em> One clean, one messy → not common.</p></div>
-  </div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Find the First Shared Multiple</div><div class="activity-sub">For each pair of numbers, find the FIRST number that appears in BOTH skip-count lists.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>For each pair, scan the two lists. Pick the smallest number that appears in BOTH.</p>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">×9 as Ten Groups Minus One</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">9 × 2</span><input autocomplete="off" class="fluency-input" data-answer="18" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 3</span><input autocomplete="off" class="fluency-input" data-answer="27" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 4</span><input autocomplete="off" class="fluency-input" data-answer="36" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 5</span><input autocomplete="off" class="fluency-input" data-answer="45" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 6</span><input autocomplete="off" class="fluency-input" data-answer="54" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 7</span><input autocomplete="off" class="fluency-input" data-answer="63" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 8</span><input autocomplete="off" class="fluency-input" data-answer="72" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 9</span><input autocomplete="off" class="fluency-input" data-answer="81" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 10</span><input autocomplete="off" class="fluency-input" data-answer="90" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 11</span><input autocomplete="off" class="fluency-input" data-answer="99" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (×9 as Ten Groups Minus One)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
+<p>Yesterday's crew finds multiples. Today they hunt for the OVERLAP between two multiples lists.</p>
+<div class="bubble-row">
+<div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — two number lines</div><div class="bubble-text">"I draw TWO number lines stacked. Top one: multiples of the first number. Bottom: multiples of the second. The places where BOTH lines hit are the common multiples."</div></div></div>
+<div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — list maker</div><div class="bubble-text">"I make two columns from the multiplication tables. Highlight numbers that show up in both columns. The lowest one is the LCM."</div></div></div>
+</div>
+<div class="bubble-row">
+<div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — Venn diagram</div><div class="bubble-text">"I use two overlapping circles. Multiples of 4 in one. Multiples of 6 in the other. Common multiples sit in the OVERLAP. The picture makes the idea obvious."</div></div></div>
+<div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — divides BOTH ways</div><div class="bubble-text">"To check if 24 is a common multiple of 4 AND 6, I divide BOTH ways. 24 ÷ 4 = 6 (no remainder). 24 ÷ 6 = 4 (no remainder). Yes — common multiple."</div></div></div>
+</div>
+<div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>Cora's common multiple test: <em>a number is a common multiple ONLY if BOTH divisions come out with no remainder.</em> One clean, one messy → not common.</p></div>
+</div></div>
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Find the First Shared Multiple</div><div class="activity-sub">For each pair of numbers, find the FIRST number that appears in BOTH skip-count lists.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>For each pair, scan the two lists. Pick the smallest number that appears in BOTH.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:grid;gap:14px;">
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
-<span style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:#0E1C42;max-width:520px;">Multiples of 2: 2, 4, 6, 8, 10, 12…<br>Multiples of 3: 3, 6, 9, 12, 15…<br><strong>First shared multiple?</strong></span>
+<span style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:#0E1C42;max-width:520px;">Multiples of 2: 2, 4, 6, 8, 10, 12…<br/>Multiples of 3: 3, 6, 9, 12, 15…<br/><strong>First shared multiple?</strong></span>
 <div class="value-card-row" style="margin:0;">
 <button class="value-card" onclick="pickReadinessRound(this,1,'6')" style="min-width:60px;"><div class="big" style="font-size:16px;">6</div></button>
 <button class="value-card" onclick="pickReadinessRound(this,1,'12')" style="min-width:60px;"><div class="big" style="font-size:16px;">12</div></button>
@@ -359,7 +409,7 @@
 </div>
 </div>
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
-<span style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:#0E1C42;max-width:520px;">Multiples of 3: 3, 6, 9, 12, 15, 18…<br>Multiples of 4: 4, 8, 12, 16, 20…<br><strong>First shared multiple?</strong></span>
+<span style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:#0E1C42;max-width:520px;">Multiples of 3: 3, 6, 9, 12, 15, 18…<br/>Multiples of 4: 4, 8, 12, 16, 20…<br/><strong>First shared multiple?</strong></span>
 <div class="value-card-row" style="margin:0;">
 <button class="value-card" onclick="pickReadinessRound(this,2,'12')" style="min-width:60px;"><div class="big" style="font-size:16px;">12</div></button>
 <button class="value-card" onclick="pickReadinessRound(this,2,'7')" style="min-width:60px;"><div class="big" style="font-size:16px;">7</div></button>
@@ -367,7 +417,7 @@
 </div>
 </div>
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
-<span style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:#0E1C42;max-width:520px;">Multiples of 5: 5, 10, 15, 20, 25, 30, 35…<br>Multiples of 6: 6, 12, 18, 24, 30, 36…<br><strong>First shared multiple?</strong></span>
+<span style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:#0E1C42;max-width:520px;">Multiples of 5: 5, 10, 15, 20, 25, 30, 35…<br/>Multiples of 6: 6, 12, 18, 24, 30, 36…<br/><strong>First shared multiple?</strong></span>
 <div class="value-card-row" style="margin:0;">
 <button class="value-card" onclick="pickReadinessRound(this,3,'30')" style="min-width:60px;"><div class="big" style="font-size:16px;">30</div></button>
 <button class="value-card" onclick="pickReadinessRound(this,3,'15')" style="min-width:60px;"><div class="big" style="font-size:16px;">15</div></button>
@@ -378,16 +428,16 @@
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Answers:</strong> LCM of 2 and 3 = <strong>6</strong>. LCM of 3 and 4 = <strong>12</strong>. LCM of 5 and 6 = <strong>30</strong>. To find the LCM: scan both lists from smallest to biggest and pick the first number that shows up in BOTH.</div>
-<div class="journal-label">✏️ Look at the LCMs above (6, 12, 30). Each is the SMALLEST number that appears in BOTH of the two lists. Pick one pair (say, 3 and 4) and explain — why is 12 the first overlap and NOT something smaller like 7 or 8? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: Why the LCM is the first overlap" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-03-02-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.03.02</div><div class="video-wrap-title">Hunt the lists for the FIRST shared number</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-02_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk each. <strong>LCM of 2 and 3:</strong> Stack lists. 2: 2, 4, <em>6</em>, 8, 10, 12. 3: 3, <em>6</em>, 9, 12. Circle the first match — 6. "First shared multiple of 2 and 3 is 6. That's the LCM." <strong>LCM of 3 and 4:</strong> 3: 3, 6, 9, <em>12</em>, 15. 4: 4, 8, <em>12</em>, 16. First match — 12. <strong>LCM of 5 and 6:</strong> 5: 5, 10, 15, 20, 25, <em>30</em>, 35. 6: 6, 12, 18, 24, <em>30</em>. First match — 30. Pause. "Notice: the LCM of 5 and 6 is 30 — which is 5 × 6. When two numbers don't share any factor, the LCM equals their product. That's a useful shortcut to remember." Frame: "Listing both, scanning for the first match, is the most reliable way. With practice you'll spot some shortcuts." (~1-2 min)</div><div class="video-placeholder-id"><!-- slot: 4-02-02-readiness-feedback --></div></div></div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
+<div class="journal-label">✏️ Look at the LCMs above (6, 12, 30). Each is the SMALLEST number that appears in BOTH of the two lists. Pick one pair (say, 3 and 4) and explain — why is 12 the first overlap and NOT something smaller like 7 or 8? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: Why the LCM is the first overlap" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">🚌</span><p>Two buses leave the same stop at 9:00 AM. Bus A returns every <strong>6 minutes</strong>. Bus B returns every <strong>8 minutes</strong>. After 9:00, what's the next time they BOTH arrive together? (Hint: find the LCM of 6 and 8.)</p></div>
 <div class="number-talk-visual">
 <div class="number-talk-prompt">List the first few multiples of 6 (6, 12, 18, 24…) and of 8 (8, 16, 24…). What's the first number that shows up in BOTH lists?</div>
 <div class="visual-equation" style="font-size:22px;letter-spacing:1px;">When does Bus A (every 6 min) line up with Bus B (every 8 min) again?</div>
 <div class="notice-wonder-grid">
-<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" id="journal-notice" data-label="Warm-Up — Notice: What I notice about the bus schedules" placeholder="" oninput="autoSave(this,'dot-notice')" style="min-height:60px;"></textarea></div>
-<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" id="journal-wonder" data-label="Warm-Up — Wonder: What I wonder about how multiples line up" placeholder="" oninput="autoSave(this,'dot-wonder')" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" data-label="Warm-Up — Notice: What I notice about the bus schedules" id="journal-notice" oninput="autoSave(this,'dot-notice')" placeholder="" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" data-label="Warm-Up — Wonder: What I wonder about how multiples line up" id="journal-wonder" oninput="autoSave(this,'dot-wonder')" placeholder="" style="min-height:60px;"></textarea></div>
 </div>
 </div>
 <p><strong>Predict:</strong> When will Bus A (every 6 min) and Bus B (every 8 min) next meet up? Pick the closest minute.</p>
@@ -399,53 +449,52 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>Before you predict, ask yourself:</strong> Bus A arrives at minute 6, 12, 18, 24, 30… Bus B at minute 8, 16, 24, 32… Find the smallest number that appears in BOTH lists.</p></div>
 <div class="journal-label">✏️ My prediction and reasoning: When do the buses next meet? Show how you used the two lists to find the LCM. <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think Prompt: LCM of 6 and 8 = when buses meet" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think Prompt: LCM of 6 and 8 = when buses meet" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">You found one LCM by listing. Now let's see two ways to do it — list comparison and the multiplication shortcut.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
-  <div class="vocab-section" aria-label="Daily vocabulary flash cards">
-  <div class="vocab-section-head">
-    <div class="vocab-section-icon">📚</div>
-    <div>
-      <div class="vocab-section-label">Daily Vocabulary</div>
-      <div class="vocab-section-title">Tap to Build Today’s Math Language</div>
-    </div>
-  </div>
-  <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
-  <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for common multiple. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🔗</div><div class="fc-word">common multiple</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">common multiple</div><div class="fc-def">a number that is a multiple of TWO (or more) numbers. 12 is a common multiple of 4 and 6 because 12 ÷ 4 = 3 and 12 ÷ 6 = 2. No remainders.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for LCM. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🥇</div><div class="fc-word">LCM</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">Least Common Multiple</div><div class="fc-def">the SMALLEST number that is a multiple of two (or more) numbers. LCM of 4 and 6 is 12. The first number that shows up in BOTH lists.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for Venn diagram. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">⭕</div><div class="fc-word">Venn diagram</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">Venn diagram</div><div class="fc-def">two overlapping circles. Each circle holds one set of multiples. Common multiples sit in the OVERLAP — they belong to BOTH circles.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for product shortcut. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">✖️</div><div class="fc-word">product shortcut</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">product shortcut</div><div class="fc-def">when two numbers share NO factors, their LCM equals their product. LCM of 5 and 6 is 5 × 6 = 30. Only works if they share no factor besides 1.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-03-02-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-03-02 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-03-02-concept --></div></div></div></div>
+<div aria-label="Daily vocabulary flash cards" class="vocab-section">
+<div class="vocab-section-head">
+<div class="vocab-section-icon">📚</div>
+<div>
+<div class="vocab-section-label">Daily Vocabulary</div>
+<div class="vocab-section-title">Tap to Build Today’s Math Language</div>
 </div>
-<div class="video-wrap" data-video-slot="4-03-02-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.03.02</div><div class="video-wrap-title">Two skip-count rhythms — finding the overlap</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-02_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Find the LCM of 6 and 8 — two ways. <strong>Way 1 — List both, scan for overlap.</strong> Multiples of 6: 6, 12, 18, <strong>24</strong>, 30, 36, 42, <strong>48</strong>, 54. Multiples of 8: 8, 16, <strong>24</strong>, 32, 40, <strong>48</strong>. Circle the matches. First overlap — 24. Second overlap — 48. The LCM of 6 and 8 is <strong>24</strong>. <strong>Way 2 — Venn diagram.</strong> Two big circles, partly overlapping. Label left "Multiples of 6". Label right "Multiples of 8". Put numbers in: 6 in left only, 8 in right only, 12 in left only, 16 in right only, 18 in left only, 24 in the OVERLAP, etc. The overlap holds the common multiples. The smallest one in the overlap is the LCM. Pause. Show one more pair to introduce the shortcut: 5 and 6. List: multiples of 5: 5, 10, 15, 20, 25, <strong>30</strong>… Multiples of 6: 6, 12, 18, 24, <strong>30</strong>… LCM = 30. "Notice: 5 × 6 = 30. When two numbers share NO factor (besides 1), the LCM is just their product." But 6 and 8 DO share a factor (2), so 6 × 8 = 48 is NOT the LCM — 24 is. The shortcut works ONLY sometimes. List comparison ALWAYS works. Then connect to a story: "Two bells. One every 6 minutes, one every 8. After 9:00 they next ring together at 9:24 — the LCM in minutes." Tone: shows the listing method first (reliable) then the shortcut as a bonus. (~2-3 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-02-concept --></div></div></div></div>
-  <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Three pairs of numbers below. For each, you'll list both sets of multiples in your head and pick the first SHARED multiple.</p></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🎯</div><div><div class="activity-title">LCM Finder: Pick the First Shared Multiple</div><div class="activity-sub">Three number pairs. Find the LCM.</div></div></div><div class="activity-body"><p>For each pair, scan both multiple lists and pick the smallest number that appears in BOTH.</p>
+</div>
+<p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
+<div class="vocab-grid">
+<div aria-label="Vocabulary card for common multiple. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🔗</div><div class="fc-word">common multiple</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">common multiple</div><div class="fc-def">a number that is a multiple of TWO (or more) numbers. 12 is a common multiple of 4 and 6 because 12 ÷ 4 = 3 and 12 ÷ 6 = 2. No remainders.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for LCM. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🥇</div><div class="fc-word">LCM</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">Least Common Multiple</div><div class="fc-def">the SMALLEST number that is a multiple of two (or more) numbers. LCM of 4 and 6 is 12. The first number that shows up in BOTH lists.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for Venn diagram. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">⭕</div><div class="fc-word">Venn diagram</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">Venn diagram</div><div class="fc-def">two overlapping circles. Each circle holds one set of multiples. Common multiples sit in the OVERLAP — they belong to BOTH circles.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for product shortcut. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">✖️</div><div class="fc-word">product shortcut</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">product shortcut</div><div class="fc-def">when two numbers share NO factors, their LCM equals their product. LCM of 5 and 6 is 5 × 6 = 30. Only works if they share no factor besides 1.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Three pairs of numbers below. For each, you'll list both sets of multiples in your head and pick the first SHARED multiple.</p></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🎯</div><div><div class="activity-title">LCM Finder: Pick the First Shared Multiple</div><div class="activity-sub">Three number pairs. Find the LCM.</div></div></div><div class="activity-body"><p>For each pair, scan both multiple lists and pick the smallest number that appears in BOTH.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:18px 14px;margin:12px 0;">
 <div style="margin-bottom:18px;">
-<div style="font-family:'Lora',Georgia,serif;font-size:18px;font-weight:700;color:#0E1C42;text-align:center;margin-bottom:8px;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.6;">LCM of <strong>3</strong> and <strong>5</strong>?<br><span style="font-size:14px;color:#3A4A6B;">Multiples of 3: 3, 6, 9, 12, 15, 18, 21…<br>Multiples of 5: 5, 10, 15, 20, 25, 30…</span></div>
+<div style="font-family:'Lora',Georgia,serif;font-size:18px;font-weight:700;color:#0E1C42;text-align:center;margin-bottom:8px;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.6;">LCM of <strong>3</strong> and <strong>5</strong>?<br/><span style="font-size:14px;color:#3A4A6B;">Multiples of 3: 3, 6, 9, 12, 15, 18, 21…<br/>Multiples of 5: 5, 10, 15, 20, 25, 30…</span></div>
 <div class="value-card-row" style="margin:0;justify-content:center;">
 <button class="value-card" onclick="pickStrategy(this,1,'15')" style="min-width:80px;"><div class="big">15</div></button>
 <button class="value-card" onclick="pickStrategy(this,1,'30')" style="min-width:80px;"><div class="big">30</div></button>
@@ -453,7 +502,7 @@
 </div>
 </div>
 <div style="margin-bottom:18px;">
-<div style="font-family:'Lora',Georgia,serif;font-size:18px;font-weight:700;color:#0E1C42;text-align:center;margin-bottom:8px;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.6;">LCM of <strong>4</strong> and <strong>10</strong>?<br><span style="font-size:14px;color:#3A4A6B;">Multiples of 4: 4, 8, 12, 16, 20, 24, 28, 32, 36, 40…<br>Multiples of 10: 10, 20, 30, 40…</span></div>
+<div style="font-family:'Lora',Georgia,serif;font-size:18px;font-weight:700;color:#0E1C42;text-align:center;margin-bottom:8px;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.6;">LCM of <strong>4</strong> and <strong>10</strong>?<br/><span style="font-size:14px;color:#3A4A6B;">Multiples of 4: 4, 8, 12, 16, 20, 24, 28, 32, 36, 40…<br/>Multiples of 10: 10, 20, 30, 40…</span></div>
 <div class="value-card-row" style="margin:0;justify-content:center;">
 <button class="value-card" onclick="pickStrategy(this,2,'20')" style="min-width:80px;"><div class="big">20</div></button>
 <button class="value-card" onclick="pickStrategy(this,2,'40')" style="min-width:80px;"><div class="big">40</div></button>
@@ -461,7 +510,7 @@
 </div>
 </div>
 <div>
-<div style="font-family:'Lora',Georgia,serif;font-size:18px;font-weight:700;color:#0E1C42;text-align:center;margin-bottom:8px;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.6;">LCM of <strong>7</strong> and <strong>2</strong>?<br><span style="font-size:14px;color:#3A4A6B;">Multiples of 7: 7, 14, 21, 28, 35…<br>Multiples of 2: 2, 4, 6, 8, 10, 12, 14, 16…</span></div>
+<div style="font-family:'Lora',Georgia,serif;font-size:18px;font-weight:700;color:#0E1C42;text-align:center;margin-bottom:8px;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.6;">LCM of <strong>7</strong> and <strong>2</strong>?<br/><span style="font-size:14px;color:#3A4A6B;">Multiples of 7: 7, 14, 21, 28, 35…<br/>Multiples of 2: 2, 4, 6, 8, 10, 12, 14, 16…</span></div>
 <div class="value-card-row" style="margin:0;justify-content:center;">
 <button class="value-card" onclick="pickStrategy(this,3,'14')" style="min-width:80px;"><div class="big">14</div></button>
 <button class="value-card" onclick="pickStrategy(this,3,'21')" style="min-width:80px;"><div class="big">21</div></button>
@@ -472,8 +521,8 @@
 </div>
 <div class="reveal-box" id="learnReveal"><strong>LCMs:</strong> LCM(3, 5) = <strong>15</strong> (3 × 5 = 15; product shortcut works because 3 and 5 share no factor). LCM(4, 10) = <strong>20</strong> (4 × 10 = 40, but the actual LCM is HALF that — because 4 and 10 share the factor 2). LCM(7, 2) = <strong>14</strong> (7 × 2 = 14; product shortcut works). Listing is always safe. The product shortcut only works when the two numbers share no common factor.</div>
 </div></div>
-  <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 What You Just Saw</div><p><strong>Two methods for finding the LCM of two numbers.</strong></p><p>1. <strong>List and scan.</strong> List the first 5-10 multiples of each number. Scan for the FIRST number that appears in BOTH lists. That's the LCM. Always works.</p><p>2. <strong>Product shortcut (sometimes).</strong> When two numbers share NO common factor (like 3 and 5, or 7 and 8), the LCM equals their product. 3 × 5 = 15 = LCM. Doesn't work when they share a factor — then you have to list.</p><p>Big idea: a <strong>common multiple</strong> is a number that lives in BOTH lists. The LCM is the smallest one. Common multiples solve "when do two repeating events line up" problems.</p></div>
-  <div class="activity bl-violet" style="margin-top:16px;"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">⭕</div><div><div class="activity-title">Picture It: The Venn Diagram</div><div class="activity-sub">Two circles. The overlap holds the common multiples.</div></div></div><div class="activity-body"><p>Hazel sketches common multiples as a Venn diagram. Two overlapping circles: one for each number's multiples. Numbers that belong only to one circle go in that side. Numbers that belong to BOTH go in the overlap.</p>
+<div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 What You Just Saw</div><p><strong>Two methods for finding the LCM of two numbers.</strong></p><p>1. <strong>List and scan.</strong> List the first 5-10 multiples of each number. Scan for the FIRST number that appears in BOTH lists. That's the LCM. Always works.</p><p>2. <strong>Product shortcut (sometimes).</strong> When two numbers share NO common factor (like 3 and 5, or 7 and 8), the LCM equals their product. 3 × 5 = 15 = LCM. Doesn't work when they share a factor — then you have to list.</p><p>Big idea: a <strong>common multiple</strong> is a number that lives in BOTH lists. The LCM is the smallest one. Common multiples solve "when do two repeating events line up" problems.</p></div>
+<div class="activity bl-violet" style="margin-top:16px;"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">⭕</div><div><div class="activity-title">Picture It: The Venn Diagram</div><div class="activity-sub">Two circles. The overlap holds the common multiples.</div></div></div><div class="activity-body"><p>Hazel sketches common multiples as a Venn diagram. Two overlapping circles: one for each number's multiples. Numbers that belong only to one circle go in that side. Numbers that belong to BOTH go in the overlap.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:18px;margin:12px 0;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.7;">
 <p style="margin-bottom:12px;text-align:center;font-weight:800;">Multiples of 4 and Multiples of 6 (up to 24)</p>
 <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;text-align:center;">
@@ -494,20 +543,20 @@
 </div>
 <div class="socratic-box"><div class="socratic-label">🧠 Socratic — Think Like a Mathematician</div><p class="socratic-q">In the diagram above, 24 lives in the overlap because 24 ÷ 4 = 6 AND 24 ÷ 6 = 4 — both come out even. If you kept listing both, would 36 also land in the overlap? How about 30? Explain.</p>
 <div class="journal-label">✏️ My thinking <span class="saved-dot" id="dot-soc"></span></div>
-<textarea class="journal-box" id="journal-soc" data-label="Learn — Socratic: Which numbers land in the overlap?" placeholder="" oninput="autoSave(this,'dot-soc')"></textarea></div>
+<textarea class="journal-box" data-label="Learn — Socratic: Which numbers land in the overlap?" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: The Bus Stop Problem</div><div class="activity-sub">List multiples → find LCM → answer a real schedule question.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Two buses leave the same stop at 9:00 AM. Bus A arrives at the stop every <strong>6 minutes</strong>. Bus B arrives every <strong>8 minutes</strong>. After 9:00, when is the NEXT time both buses are at the stop together?</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
-<div class="video-wrap" data-video-slot="4-03-02-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.03.02</div><div class="video-wrap-title">List, scan, find the LCM — bus schedules line up</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-02_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Atlas: "Bus A arrives at minute 6, 12, 18, 24, 30, 36, 42, 48… Bus B arrives at minute 8, 16, 24, 32, 40, 48…" Write both lists. Scan together. Cora circles the first match: 24. "First overlap is 24. So 24 minutes after 9:00 — at <strong>9:24</strong> — both buses arrive together again." Felix asks: "What about after 9:24?" Look for the next overlap: 48. "Right — 9:48 is the next meet-up. The buses meet every 24 minutes, on the LCM rhythm." Hazel checks: "Does the product shortcut work here? 6 × 8 = 48. But the actual LCM is 24. So no — 6 and 8 share a factor (they're both even). The shortcut overshoots." Cora ends: "Always list when in doubt. The shortcut only works when the two numbers share no factor." Tone: a worked story that ties common multiples to a real-life scheduling question. (~2 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-02-example --></div></div></div></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: The Bus Stop Problem</div><div class="activity-sub">List multiples → find LCM → answer a real schedule question.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Two buses leave the same stop at 9:00 AM. Bus A arrives at the stop every <strong>6 minutes</strong>. Bus B arrives every <strong>8 minutes</strong>. After 9:00, when is the NEXT time both buses are at the stop together?</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
+
 <div class="key-concept" style="margin-top:14px;"><div class="key-concept-label">⚖️ When Does the Product Shortcut Work?</div>
 <div style="background:#F0E8FF;border:2px solid #D8CCF0;border-radius:12px;padding:14px;margin-top:8px;font-family:'Lora',Georgia,serif;font-size:15px;color:#0E1C42;line-height:1.7;">
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
 <div style="background:#E3F8ED;border:1.5px solid #B8E8CF;border-radius:10px;padding:12px;">
 <div style="font-size:12px;color:#1A8A5A;text-transform:uppercase;letter-spacing:.5px;font-weight:900;margin-bottom:5px;">✅ Shortcut WORKS</div>
-<div style="font-size:14px;line-height:1.6;">When the two numbers share no factor besides 1.<br>LCM(3, 5) = 3 × 5 = <strong>15</strong> ✓<br>LCM(7, 4) = 7 × 4 = <strong>28</strong> ✓<br>LCM(9, 2) = 9 × 2 = <strong>18</strong> ✓</div>
+<div style="font-size:14px;line-height:1.6;">When the two numbers share no factor besides 1.<br/>LCM(3, 5) = 3 × 5 = <strong>15</strong> ✓<br/>LCM(7, 4) = 7 × 4 = <strong>28</strong> ✓<br/>LCM(9, 2) = 9 × 2 = <strong>18</strong> ✓</div>
 </div>
 <div style="background:#FFF0E6;border:1.5px solid #F5C8A0;border-radius:10px;padding:12px;">
 <div style="font-size:12px;color:#A04A00;text-transform:uppercase;letter-spacing:.5px;font-weight:900;margin-bottom:5px;">❌ Shortcut FAILS</div>
-<div style="font-size:14px;line-height:1.6;">When they share a factor.<br>LCM(6, 8) = <strong>24</strong>, not 48<br>LCM(4, 10) = <strong>20</strong>, not 40<br>LCM(6, 9) = <strong>18</strong>, not 54</div>
+<div style="font-size:14px;line-height:1.6;">When they share a factor.<br/>LCM(6, 8) = <strong>24</strong>, not 48<br/>LCM(4, 10) = <strong>20</strong>, not 40<br/>LCM(6, 9) = <strong>18</strong>, not 54</div>
 </div>
 </div>
 <p style="margin-top:10px;text-align:center;font-style:italic;color:#3A4A6B;">When unsure — list. The list method ALWAYS works.</p>
@@ -516,23 +565,22 @@
 </div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">List, scan, find the LCM. Time to apply it to real schedules.</p><button class="tab-next-btn" onclick="switchTab('practice')">Continue to 🧮 Practice →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-practice">
-  <div class="callout callout-info"><span class="callout-icon">🧭</span><p>Three problems on common multiples and the LCM. List, scan, decide.</p></div>
-  <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> What are the two multiple lists? What's the first number in BOTH?</p></div>
-  <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Go back to the First Ten Multiples chart in Lesson 4.03.01 — same chart, two lines side by side.</p></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">LCM of 4 and 6</div><div class="activity-sub">Two number lists. One overlap.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>List the multiples of 4: 4, 8, 12, 16, 20, 24… List the multiples of 6: 6, 12, 18, 24… Pick the FIRST number that appears in both.</p>
+<div class="callout callout-info"><span class="callout-icon">🧭</span><p>Three problems on common multiples and the LCM. List, scan, decide.</p></div>
+<div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> What are the two multiple lists? What's the first number in BOTH?</p></div>
+<div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Go back to the First Ten Multiples chart in Lesson 4.03.01 — same chart, two lines side by side.</p></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">LCM of 4 and 6</div><div class="activity-sub">Two number lists. One overlap.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>List the multiples of 4: 4, 8, 12, 16, 20, 24… List the multiples of 6: 6, 12, 18, 24… Pick the FIRST number that appears in both.</p>
 <div class="value-card-row" style="justify-content:center;">
 <button class="value-card" onclick="pickP1Round(this,'12')" style="min-width:90px;"><div class="big">12</div></button>
 <button class="value-card" onclick="pickP1Round(this,'24')" style="min-width:90px;"><div class="big">24</div></button>
 <button class="value-card" onclick="pickP1Round(this,'10')" style="min-width:90px;"><div class="big">10</div></button>
 </div>
 <div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Exactly.</strong> Multiples of 4: 4, 8, <strong>12</strong>, 16, 20, <strong>24</strong>… Multiples of 6: 6, <strong>12</strong>, 18, <strong>24</strong>… The FIRST overlap is 12. So LCM(4, 6) = <strong>12</strong>. 24 is also a common multiple — but not the LEAST one.
-<div class="video-wrap" data-video-slot="4-03-02-practice-1-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 1</div><div class="video-wrap-title">Find the FIRST overlap, not just any one</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-02_Practice-1_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Celebrate. "The LCM is the LEAST common multiple — emphasis on LEAST. There are infinitely many common multiples, but only one smallest. 12 is the LCM. 24, 36, 48… are common multiples that come after." (~45 sec)</div><div class="video-placeholder-id"><!-- slot: 4-03-02-practice-1-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Look again.</strong> List both: 4: 4, 8, 12, 16, 20, 24, 28… and 6: 6, 12, 18, 24… The FIRST shared number is the LCM.
 <div class="hint-callout">Scan slowly from smallest. The very first match in BOTH lists is the LCM. Don't jump to the second match.</div>
-<div class="video-wrap" data-video-slot="4-03-02-practice-1-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 1</div><div class="video-wrap-title">First match in BOTH lists = LCM</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-02_Practice-1_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. Walk both lists slowly, circling 12 in BOTH on the first time it appears. (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-02-practice-1-retry --></div></div></div></div></div></div></div>
-  <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three LCMs — Sometimes the Shortcut, Sometimes the Listing</div><div class="activity-sub">Try the product shortcut. If the numbers share a factor, list instead.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> One pair shares no factor (shortcut works). One pair shares a factor (shortcut fails — must list). Read carefully.</p></div>
+</div></div></div>
+<div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three LCMs — Sometimes the Shortcut, Sometimes the Listing</div><div class="activity-sub">Try the product shortcut. If the numbers share a factor, list instead.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> One pair shares no factor (shortcut works). One pair shares a factor (shortcut fails — must list). Read carefully.</p></div>
 <p>For each pair, find the LCM.</p>
 <div style="display:grid;gap:14px;margin:14px 0;">
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:14px;">
@@ -564,15 +612,15 @@
 </div>
 </div>
 <div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ Three for three.</strong> 2a — LCM(5, 6) = <strong>30</strong> (5 × 6 = 30; shortcut works). 2b — LCM(6, 9) = <strong>18</strong> (must list: 6, 12, 18 and 9, 18 — first shared is 18; 6 × 9 = 54 OVERSHOOTS). 2c — LCM(3, 8) = <strong>24</strong> (3 × 8 = 24; shortcut works).
-<div class="video-wrap" data-video-slot="4-03-02-practice-2-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 2</div><div class="video-wrap-title">Listing always works. The shortcut is a bonus.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-02_Practice-2_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Recap. "When the two numbers share no factor — like 5 & 6, or 3 & 8 — the LCM is just their product. When they DO share a factor — like 6 & 9 — the product overshoots. Always check by listing if you're not sure." (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-02-practice-2-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Look again.</strong> Try the product shortcut FIRST. If the two numbers share a factor, the shortcut will overshoot — then list to find the real LCM.
 <div class="hint-callout">2a — 5 × 6 = 30 (5 and 6 share no factor). 2b — 6 × 9 = 54, but list shows the LCM is 18 (because both are divisible by 3). 2c — 3 × 8 = 24 (3 and 8 share no factor).</div>
-<div class="video-wrap" data-video-slot="4-03-02-practice-2-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 2</div><div class="video-wrap-title">Shortcut works when no factor is shared</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-02_Practice-2_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the shortcut rule. Walk all three pairs slowly. (~1-2 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-02-practice-2-retry --></div></div></div></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Mia's Mistake — She Used the Shortcut on Wrong Numbers</div><div class="activity-sub">Walk through Mia's work and spot the trap.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Mia used the product shortcut on a pair that SHARES a factor. The result overshoots. Find the error and the correct LCM.</p></div>
+</div></div></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Mia's Mistake — She Used the Shortcut on Wrong Numbers</div><div class="activity-sub">Walk through Mia's work and spot the trap.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Mia used the product shortcut on a pair that SHARES a factor. The result overshoots. Find the error and the correct LCM.</p></div>
 <div class="task-box"><div class="task-label">Mia's Work</div>
 <p>Mia was asked to find <strong>LCM(4, 8)</strong>. She wrote:</p>
 <div style="background:#FFF8E6;border:2px solid #F5C518;border-radius:12px;padding:14px 16px;font-family:'Lora',Georgia,serif;font-size:17px;line-height:1.8;color:#5A4A3A;margin:10px 0;">
-"LCM is just their product, so 4 × 8 = 32.<br>
+"LCM is just their product, so 4 × 8 = 32.<br/>
 Answer: <strong>LCM(4, 8) = 32</strong>."
 </div>
 <p><strong>Your task:</strong> Tap every statement below that is true about Mia's reasoning.</p>
@@ -584,27 +632,23 @@ Answer: <strong>LCM(4, 8) = 32</strong>."
 </div>
 <button class="purple-btn" onclick="checkErrorAnalysis()">✓ Check My Picks</button>
 <div class="journal-label">✏️ Help Mia. Write her a quick rule for when the product shortcut works and when it doesn't. <span class="saved-dot" id="dot-ea"></span></div>
-<textarea class="journal-box" id="journal-ea" data-label="Practice 3 — Error Analysis: When the product shortcut breaks" placeholder="" oninput="autoSave(this,'dot-ea')"></textarea>
-<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> 4 and 8 share the factor 4 itself — so the product shortcut overshoots. The correct LCM is just <strong>8</strong> (since 8 is already a multiple of 4). Big idea: when one number divides the other evenly, the LCM IS the bigger number — no listing needed.<div class="video-wrap" data-video-slot="4-03-02-practice-3-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 3</div><div class="video-wrap-title">When one divides the other — LCM is the bigger one</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-02_Practice-3_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "When 4 divides 8 evenly, every multiple of 8 is automatically a multiple of 4. So the smallest one — 8 itself — is the LCM. Quick check: 8 ÷ 4 = 2 (no remainder), 8 ÷ 8 = 1 (no remainder). 8 is a common multiple, the smallest one." (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-02-practice-3-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">4 divides 8 evenly (8 ÷ 4 = 2). When one number divides the other, the LCM is just the BIGGER number. So LCM(4, 8) = 8 — not 32. The shortcut only works when the two numbers share no common factor.</div><div class="video-wrap" data-video-slot="4-03-02-practice-3-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 3</div><div class="video-wrap-title">When 4 divides 8 evenly → LCM is the bigger</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-03-02_Practice-3_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. List multiples of 4 and 8 side by side until the first match shows up — at 8 itself. (~1 min)</div><div class="video-placeholder-id"><!-- slot: 4-03-02-practice-3-retry --></div></div></div></div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
+<textarea class="journal-box" data-label="Practice 3 — Error Analysis: When the product shortcut breaks" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
+<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> 4 and 8 share the factor 4 itself — so the product shortcut overshoots. The correct LCM is just <strong>8</strong> (since 8 is already a multiple of 4). Big idea: when one number divides the other evenly, the LCM IS the bigger number — no listing needed.</div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">4 divides 8 evenly (8 ÷ 4 = 2). When one number divides the other, the LCM is just the BIGGER number. So LCM(4, 8) = 8 — not 32. The shortcut only works when the two numbers share no common factor.</div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">You found LCMs, used the shortcut, caught Mia's mistake. Now show what you know.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-assignment">
-  <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Find LCMs. Apply them to schedules.</div></div></div><div class="activity-body"><p>List both sets of multiples. Scan for the first shared number. That's the LCM. Use it to solve real-world rhythm problems.</p>
+<div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Find LCMs. Apply them to schedules.</div></div></div><div class="activity-body"><p>List both sets of multiples. Scan for the first shared number. That's the LCM. Use it to solve real-world rhythm problems.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Do the two numbers share a factor? If not, the shortcut works. If yes, list — the LCM is smaller than their product.</p></div>
-<div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Find each LCM.</strong> Show your work — list the multiples and circle the first match.<br>(a) LCM(3, 4)<br>(b) LCM(4, 5)<br>(c) LCM(2, 9)</p><div class="journal-label">✏️ My LCMs and lists <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" id="journal-a1" data-label="Show What You Know — Problem 1: Three LCMs by listing" placeholder="" oninput="autoSave(this,'dot-a1')"></textarea></div>
-
-<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> Why is the LCM useful in real life? Pick one example (schedules, repeating events, music beats, gear teeth, anything) and explain how finding the LCM solves the problem.</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" id="journal-a6" data-label="Show What You Know — Problem 6: A real-world use of LCM" placeholder="" oninput="autoSave(this,'dot-a6')"></textarea></div>
-
-
+<div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Find each LCM.</strong> Show your work — list the multiples and circle the first match.<br/>(a) LCM(3, 4)<br/>(b) LCM(4, 5)<br/>(c) LCM(2, 9)</p><div class="journal-label">✏️ My LCMs and lists <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: Three LCMs by listing" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
+<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> Why is the LCM useful in real life? Pick one example (schedules, repeating events, music beats, gear teeth, anything) and explain how finding the LCM solves the problem.</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: A real-world use of LCM" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#55C8E8;"><div class="activity-head"><div class="activity-num" style="background:#55C8E8;color:#0E1C42;">🗺️</div><div><div class="activity-title">Connection Forward: What Comes Next</div><div class="activity-sub">Preview Lesson 4.03.03 — Factors</div></div></div><div class="activity-body"><p>Today: numbers that MAKE other numbers when multiplied — multiples. Tomorrow: the reverse direction. What numbers <strong>divide INTO</strong> a given number with no remainder?</p><p>The factors of 12 are 1, 2, 3, 4, 6, 12 — every number that divides 12 evenly. Multiples are the OUTSIDE. Factors are the INSIDE.</p><p>The big question next time: <em>Can you list ALL the factors of a number, and how do you know when you've found them all?</em></p></div></div></div></div>
-<div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly>Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
-  <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
+<div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
+<div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
 </div>
 <div class="footer">
-  <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
-  <div class="footer-sub">Math · Grade 4 · 4.03.02</div>
-  <div class="footer-copy">© 2025 Optima Academy Online</div>
+<div class="footer-main">🏫 <span>Optima Academy Online</span></div>
+<div class="footer-sub">Math · Grade 4 · 4.03.02</div>
+<div class="footer-copy">© 2025 Optima Academy Online</div>
 </div>
 </div>
 <canvas id="confettiCanvas"></canvas>
@@ -1041,6 +1085,75 @@ async function loadVideoManifest(){try{let res=await fetch('video-manifest.md',{
 function parseManifest(txt){let map={};let lines=txt.split(/\r?\n/);let current=null,buf=[];function commit(){if(current&&buf.join('\n').trim())map[current]=buf.join('\n').trim();buf=[]}for(let line of lines){let m=line.match(/^([A-Za-z0-9-]+):\s*$/);if(m){commit();current=m[1]}else if(current){buf.push(line)}}commit();return map}
 function showPageFeedback(msg){var panel=document.querySelector('.tab-panel.active')||document.body;var box=panel.querySelector(':scope > .page-feedback');if(!box){box=document.createElement('div');box.className='page-feedback';panel.insertBefore(box,panel.firstChild);}box.className='page-feedback show warn';box.innerHTML=msg;}
 window.addEventListener('DOMContentLoaded',()=>{restoreJournals();updateProgress();loadVideoManifest()});
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "×9 as Ten Groups Minus One";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
 </script>
 </body>
 </html>

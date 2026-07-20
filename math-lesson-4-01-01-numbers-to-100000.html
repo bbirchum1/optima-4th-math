@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Optima Academy Online — Grade 4 Math Lesson 4.01.01</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
@@ -306,25 +307,51 @@
 .bubble-text{font-size:14.5px;color:#0E1C42;line-height:1.5;font-weight:600;font-family:'Lora',Georgia,serif;font-style:italic}
 @media(max-width:620px){.bubble{flex:1 1 100%;max-width:100%}}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
 <div class="progress-wrap"><span class="progress-label">📐 Lesson Progress</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><span class="progress-pct" id="progressPct">0%</span></div>
 <div class="header">
-  <div class="header-brand">
-    <div class="header-logo">
-      <img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" />
-    </div>
-    <div>
-      <div class="header-org">Optima Academy Online</div>
-      <div class="header-sub">An Education Experience Company</div>
-    </div>
-  </div>
-  <div class="header-title"><em>Numbers to 100,000</em></div>
-  <div class="header-badge">
-    <span class="header-badge-icon">🦉</span>
-    <span class="header-badge-text">Lesson 4.01.01</span>
-  </div>
+<div class="header-brand">
+<div class="header-logo">
+<img alt="Optima Academy" src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png"/>
+</div>
+<div>
+<div class="header-org">Optima Academy Online</div>
+<div class="header-sub">An Education Experience Company</div>
+</div>
+</div>
+<div class="header-title"><em>Numbers to 100,000</em></div>
+<div class="header-badge">
+<span class="header-badge-icon">🦉</span>
+<span class="header-badge-text">Lesson 4.01.01</span>
+</div>
 </div>
 <div class="quote-strip"><div class="quote-strip-text">"The same pattern that built thousands keeps going. Each new place is ten times the one before it."</div><div class="quote-strip-attr">Place Value Big Idea</div></div>
 <div class="info-strip"><div class="info-cell"><div class="info-icon" style="background:#F0E8FF;">🧭</div><div><div class="info-label">Unit</div><div class="info-value">Unit 1</div><div class="info-detail">Numbers to 1,000,000</div></div></div><div class="info-cell"><div class="info-icon" style="background:#E3F8ED;">📅</div><div><div class="info-label">Lesson</div><div class="info-value">4.01.01</div><div class="info-detail">U1 Anchor</div></div></div><div class="info-cell"><div class="info-icon" style="background:#EAF0FF;">📐</div><div><div class="info-label">Standard</div><div class="info-value">MA.4.NSO.1.1</div><div class="info-detail">Read and write to 1,000,000</div></div></div><div class="info-cell"><div class="info-icon" style="background:#FFF8E6;">🔢</div><div><div class="info-label">Focus</div><div class="info-value">Ten Thousands</div><div class="info-detail">MTR.2.1 · MTR.5.1</div></div></div></div>
@@ -332,31 +359,54 @@
 <div class="intro-2col"><div class="intro-card theme-question"><div class="intro-card-head"><div class="intro-card-head-icon">❓</div><div><div class="intro-card-head-label">Essential Question</div><div class="intro-card-head-title">What happens to a number when we add one more place to the left?</div></div></div><div class="intro-card-body"><p>You already know thousands, hundreds, tens, and ones. Today you'll meet a new place: <strong>ten thousands</strong>.</p><p>Each new place is ten times larger than the place to its right. That pattern is the rule that keeps numbers growing.</p></div></div><div class="intro-card theme-objectives"><div class="intro-card-head"><div class="intro-card-head-icon">🎯</div><div><div class="intro-card-head-label">Today's Objectives</div><div class="intro-card-head-title">You will…</div></div></div><div class="intro-card-body"><div class="obj-line"><span class="obj-icon">🔢</span><span><strong>Read and write</strong> five-digit numbers in standard form, expanded form, and word form.</span></div><div class="obj-line"><span class="obj-icon">📐</span><span><strong>Build</strong> five-digit numbers using a place-value chart with ten thousands.</span></div><div class="obj-line"><span class="obj-icon">💬</span><span><strong>Explain</strong> the value of each digit and why a zero is not the same as no digit.</span></div></div></div></div>
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
-
 <div class="tab-panel active" id="tab-warmup">
-  <div class="video-wrap" data-video-slot="4-01-01-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.01.01</div><div class="video-wrap-title">One more place to the left</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-01_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Welcome students to fourth grade math and Unit 1: Numbers to 1,000,000. Hold up physical place-value disks (or draw them on a whiteboard). Show a four-digit number students already know from third grade — like 4,219. Say: "Last year you built numbers up to 9,999. This year, numbers get bigger. Today you'll add a new place to your chart. It sits to the left of thousands, and it's called <em>ten thousands</em>." Hold up a disc and say: "One disc in this new place is worth ten thousand. We'll see why in a minute." Ask: "Where might you see a number that big in real life?" Examples: stadium attendance, city populations, library book counts. Tone: warm, a little proud — they're growing into bigger math. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-01-welcome --></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
-    <p>You may remember these four from last year. They're back, and they're thinking with you again — only now the numbers are bigger, and so are the questions. Watch how each one approaches a problem in their own way.</p>
-    <div class="bubble-row">
-      <div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — the builder</div><div class="bubble-text">"I still like discs and charts. They show me what each digit is really worth."</div></div></div>
-      <div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — the diagrammer</div><div class="bubble-text">"I sketch the place-value chart fast. It works for big numbers too."</div></div></div>
-    </div>
-    <div class="bubble-row">
-      <div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — the shortcutter</div><div class="bubble-text">"Once I know the pattern, I can read the digits straight off the number."</div></div></div>
-      <div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — the checker</div><div class="bubble-text">"I check the zeros. Big numbers love to hide a zero in the middle."</div></div></div>
-    </div>
-    <div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>This year, try to use more than one strategy on each problem. Build it, draw it, and then check it. That is how you grow as a mathematician.</p></div>
-  </div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Build 4,219</div><div class="activity-sub">A quick review from last year — then we go bigger.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~6 min</span></div><div class="activity-body"><p>Before we add a new place, let's check that thousands, hundreds, tens, and ones still feel solid. Use the + and − buttons to build <strong>4,219</strong> on the mat below. The ten-thousands column stays empty for now.</p><div class="number-display"><div class="digits" id="rNumber">0</div><div class="words" id="rWords">Build 4,219 with discs.</div></div><div class="pv-mat" id="readinessMat"></div><button class="check-btn" onclick="checkReadiness()">Check My Model ✓</button><div class="reveal-box" id="readinessReveal"><strong>4,219</strong> means 4 thousands, 2 hundreds, 1 ten, and 9 ones. The digit 4 is worth 4,000 because it is in the thousands place.</div><div class="journal-label">✏️ Pick any one digit in 4,219. Write what it is worth and how you know. <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: Pick a digit in 4,219 and explain its value" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-01-01-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.01.01</div><div class="video-wrap-title">Thousands, hundreds, tens, ones — and one more</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-01_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Show 4,219 on a physical or drawn place-value mat with five columns (ten-thousands left empty). Point to each column slowly and say the value aloud: "4 thousands — that is 4,000. 2 hundreds — that is 200. 1 ten — that is 10. 9 ones — that is 9." Write the expanded form: 4,000 + 200 + 10 + 9 = 4,219. Then point to the empty fifth column on the left. Say: "Notice this empty spot? In third grade you only used four columns. This year, we add a fifth one — ten thousands. One disc here is worth 10,000. We'll build a number that uses it next." Do NOT fill ten-thousands yet — the next activity does that. Pace slowly; let students feel the pattern. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-01-readiness-feedback --></div></div></div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Facts of 0, 1, 2, 5, 10</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">0 × 7</span><input autocomplete="off" class="fluency-input" data-answer="0" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">1 × 8</span><input autocomplete="off" class="fluency-input" data-answer="8" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">2 × 6</span><input autocomplete="off" class="fluency-input" data-answer="12" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">5 × 4</span><input autocomplete="off" class="fluency-input" data-answer="20" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">10 × 3</span><input autocomplete="off" class="fluency-input" data-answer="30" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">2 × 9</span><input autocomplete="off" class="fluency-input" data-answer="18" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">5 × 7</span><input autocomplete="off" class="fluency-input" data-answer="35" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">10 × 6</span><input autocomplete="off" class="fluency-input" data-answer="60" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">0 × 9</span><input autocomplete="off" class="fluency-input" data-answer="0" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">1 × 5</span><input autocomplete="off" class="fluency-input" data-answer="5" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Facts of 0, 1, 2, 5, 10)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
+<p>You may remember these four from last year. They're back, and they're thinking with you again — only now the numbers are bigger, and so are the questions. Watch how each one approaches a problem in their own way.</p>
+<div class="bubble-row">
+<div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — the builder</div><div class="bubble-text">"I still like discs and charts. They show me what each digit is really worth."</div></div></div>
+<div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — the diagrammer</div><div class="bubble-text">"I sketch the place-value chart fast. It works for big numbers too."</div></div></div>
+</div>
+<div class="bubble-row">
+<div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — the shortcutter</div><div class="bubble-text">"Once I know the pattern, I can read the digits straight off the number."</div></div></div>
+<div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — the checker</div><div class="bubble-text">"I check the zeros. Big numbers love to hide a zero in the middle."</div></div></div>
+</div>
+<div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>This year, try to use more than one strategy on each problem. Build it, draw it, and then check it. That is how you grow as a mathematician.</p></div>
+</div></div>
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Build 4,219</div><div class="activity-sub">A quick review from last year — then we go bigger.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~6 min</span></div><div class="activity-body"><p>Before we add a new place, let's check that thousands, hundreds, tens, and ones still feel solid. Use the + and − buttons to build <strong>4,219</strong> on the mat below. The ten-thousands column stays empty for now.</p><div class="number-display"><div class="digits" id="rNumber">0</div><div class="words" id="rWords">Build 4,219 with discs.</div></div><div class="pv-mat" id="readinessMat"></div><button class="check-btn" onclick="checkReadiness()">Check My Model ✓</button><div class="reveal-box" id="readinessReveal"><strong>4,219</strong> means 4 thousands, 2 hundreds, 1 ten, and 9 ones. The digit 4 is worth 4,000 because it is in the thousands place.</div><div class="journal-label">✏️ Pick any one digit in 4,219. Write what it is worth and how you know. <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: Pick a digit in 4,219 and explain its value" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">🏟️</span><p>The scoreboard at a high school championship game reads <strong>27,438 fans</strong>. That is more people than any four-digit number could hold. How would you build this number on a place-value chart?</p></div>
 <div class="number-talk-visual">
 <div class="number-talk-prompt">Look at 27,438 carefully before you do anything else. What do you notice? What do you wonder?</div>
 <div class="visual-equation">2 7 , 4 3 8</div>
 <div class="notice-wonder-grid">
-<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" id="journal-notice" data-label="Warm-Up — Notice: What I notice about 27,438" placeholder="" oninput="autoSave(this,'dot-notice')" style="min-height:60px;"></textarea></div>
-<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" id="journal-wonder" data-label="Warm-Up — Wonder: What I wonder about 27,438" placeholder="" oninput="autoSave(this,'dot-wonder')" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" data-label="Warm-Up — Notice: What I notice about 27,438" id="journal-notice" oninput="autoSave(this,'dot-notice')" placeholder="" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" data-label="Warm-Up — Wonder: What I wonder about 27,438" id="journal-wonder" oninput="autoSave(this,'dot-wonder')" placeholder="" style="min-height:60px;"></textarea></div>
 </div>
 </div>
 <p><strong>Estimate first:</strong> Without counting digit by digit, about how many <em>thousands</em> are in 27,438? Tap your best guess.</p>
@@ -367,67 +417,66 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>Before you build, ask yourself:</strong> What do I already know about thousands? What is new in 27,438 that wasn't there in 4,219? What tool would I reach for first?</p></div>
 <div class="journal-label">✏️ My prediction: How would you build 27,438? Which places would have discs, and how many in each? <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think Prompt: Build 27,438" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think Prompt: Build 27,438" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">You warmed up with thousands. Now meet the new place — ten thousands.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
-  <div class="vocab-section" aria-label="Daily vocabulary flash cards">
-  <div class="vocab-section-head">
-    <div class="vocab-section-icon">📚</div>
-    <div>
-      <div class="vocab-section-label">Daily Vocabulary</div>
-      <div class="vocab-section-title">Tap to Build Today’s Math Language</div>
-    </div>
-  </div>
-  <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
-  <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for ten thousands. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🔟</div><div class="fc-word">ten thousands</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">ten thousands</div><div class="fc-def">the place to the left of thousands. One ten thousand is worth 10,000.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for standard form. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🧮</div><div class="fc-word">standard form</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">standard form</div><div class="fc-def">the usual way to write a number using digits, like 27,438.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for expanded form. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">➕</div><div class="fc-word">expanded form</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">expanded form</div><div class="fc-def">a number written as the sum of the value of each digit, like 20,000 + 7,000 + 400 + 30 + 8.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for word form. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">✏️</div><div class="fc-word">word form</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">word form</div><div class="fc-def">a number written using words, like twenty-seven thousand, four hundred thirty-eight.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-01-01-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-01-01 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-01-01-concept --></div></div></div></div>
+<div aria-label="Daily vocabulary flash cards" class="vocab-section">
+<div class="vocab-section-head">
+<div class="vocab-section-icon">📚</div>
+<div>
+<div class="vocab-section-label">Daily Vocabulary</div>
+<div class="vocab-section-title">Tap to Build Today’s Math Language</div>
 </div>
-<div class="video-wrap" data-video-slot="4-01-01-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.01.01</div><div class="video-wrap-title">Adding the ten-thousands place</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-01_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> CPA transition — show 27,438 three ways. <strong>Concrete:</strong> Place physical discs on a 5-column mat — 2 pink ten-thousands, 7 purple thousands, 4 blue hundreds, 3 green tens, 8 orange ones. Say each value: "2 ten-thousands is 20,000. 7 thousands is 7,000…" Add them aloud as you go. <strong>Pictorial:</strong> Draw a 5-column place-value chart. Write 2 under TT, 7 under Th, 4 under H, 3 under T, 8 under O. <strong>Abstract:</strong> Write 27,438 in standard form, then expanded form: 20,000 + 7,000 + 400 + 30 + 8. Point back and forth. Say: "The pattern is the same as last year — each place is ten times the one to its right. Tens, hundreds, thousands, and now ten-thousands. The chart got one column longer. The rule stayed the same." Read the number aloud: "twenty-seven thousand, four hundred thirty-eight." (~2–3 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-01-concept --></div></div></div></div>
-  <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Before you read the Key Concept below, build 27,438 yourself on the mat. Notice which column is new. Then come back to read what the math says.</p></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🟣</div><div><div class="activity-title">Interactive Model: Build 27,438</div><div class="activity-sub">Build it before you read the rule. Then check what the math says.</div></div></div><div class="activity-body"><p>This is the stadium number from your warm-up. Use the + and − buttons to build <strong>27,438</strong> on the mat. Notice that the chart now has <strong>five</strong> columns — ten thousands is on the far left.</p><div class="callout callout-tip"><span class="callout-icon">🔎</span><p>Work left to right. Start with the largest place first. That keeps your build organized when the numbers get big.</p></div><div class="number-display"><div class="digits" id="learnNumber">0</div><div class="words" id="learnWords">Start with the ten-thousands column.</div></div><div class="pv-mat" id="learnMat"></div><button class="check-btn" onclick="checkLearnBuild()">Check My Build ✓</button><div class="reveal-box" id="learnReveal"><strong>You got it.</strong> 2 ten-thousands + 7 thousands + 4 hundreds + 3 tens + 8 ones = <strong>27,438</strong>. The chart, the discs, and the standard form all agree.</div>
-  <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 What You Just Saw</div><p><strong>Each place is ten times the place to its right.</strong></p><p>10 ones make 1 ten. 10 tens make 1 hundred. 10 hundreds make 1 thousand. And now — <strong>10 thousands make 1 ten-thousand</strong>. The same pattern keeps the chart growing.</p><p>In 27,438, the 2 sits in the ten-thousands place, so it is worth <strong>20,000</strong>. The 7 right next to it is worth 7,000. Same digit, very different value — the place decides.</p></div>
+</div>
+<p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
+<div class="vocab-grid">
+<div aria-label="Vocabulary card for ten thousands. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🔟</div><div class="fc-word">ten thousands</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">ten thousands</div><div class="fc-def">the place to the left of thousands. One ten thousand is worth 10,000.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for standard form. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🧮</div><div class="fc-word">standard form</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">standard form</div><div class="fc-def">the usual way to write a number using digits, like 27,438.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for expanded form. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">➕</div><div class="fc-word">expanded form</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">expanded form</div><div class="fc-def">a number written as the sum of the value of each digit, like 20,000 + 7,000 + 400 + 30 + 8.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for word form. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">✏️</div><div class="fc-word">word form</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">word form</div><div class="fc-def">a number written using words, like twenty-seven thousand, four hundred thirty-eight.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Before you read the Key Concept below, build 27,438 yourself on the mat. Notice which column is new. Then come back to read what the math says.</p></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🟣</div><div><div class="activity-title">Interactive Model: Build 27,438</div><div class="activity-sub">Build it before you read the rule. Then check what the math says.</div></div></div><div class="activity-body"><p>This is the stadium number from your warm-up. Use the + and − buttons to build <strong>27,438</strong> on the mat. Notice that the chart now has <strong>five</strong> columns — ten thousands is on the far left.</p><div class="callout callout-tip"><span class="callout-icon">🔎</span><p>Work left to right. Start with the largest place first. That keeps your build organized when the numbers get big.</p></div><div class="number-display"><div class="digits" id="learnNumber">0</div><div class="words" id="learnWords">Start with the ten-thousands column.</div></div><div class="pv-mat" id="learnMat"></div><button class="check-btn" onclick="checkLearnBuild()">Check My Build ✓</button><div class="reveal-box" id="learnReveal"><strong>You got it.</strong> 2 ten-thousands + 7 thousands + 4 hundreds + 3 tens + 8 ones = <strong>27,438</strong>. The chart, the discs, and the standard form all agree.</div>
+<div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 What You Just Saw</div><p><strong>Each place is ten times the place to its right.</strong></p><p>10 ones make 1 ten. 10 tens make 1 hundred. 10 hundreds make 1 thousand. And now — <strong>10 thousands make 1 ten-thousand</strong>. The same pattern keeps the chart growing.</p><p>In 27,438, the 2 sits in the ten-thousands place, so it is worth <strong>20,000</strong>. The 7 right next to it is worth 7,000. Same digit, very different value — the place decides.</p></div>
 <div style="margin-top:16px;">
 <div class="key-concept"><div class="key-concept-label">🔗 27,438 — Four Ways to Show the Same Number</div>
 <p>You just built 27,438 with discs. Look at the <strong>same number</strong> shown four different ways. The form changes. The value does not.</p>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0;">
 <div style="background:#EAF8FD;border:2px solid #D6F2FB;border-radius:14px;padding:12px;text-align:center;">
 <div style="font-size:11px;color:#1A6B8E;font-weight:900;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px;">Touch It (Discs)</div>
-<div style="font-size:13px;color:#3A4A6B;font-weight:800;line-height:1.5;">2 ten-thousand discs<br>7 thousand discs<br>4 hundred discs<br>3 ten discs · 8 one discs</div>
+<div style="font-size:13px;color:#3A4A6B;font-weight:800;line-height:1.5;">2 ten-thousand discs<br/>7 thousand discs<br/>4 hundred discs<br/>3 ten discs · 8 one discs</div>
 </div>
 <div style="background:#F0E8FF;border:2px solid #D8CCF0;border-radius:14px;padding:12px;text-align:center;">
 <div style="font-size:11px;color:#6B3FA0;font-weight:900;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px;">See It (Chart)</div>
 <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:3px;margin-bottom:4px;">
-<div style="background:#C43B6B;color:#fff;border-radius:6px;padding:4px 2px;font-size:10px;font-weight:900;">TT<br>2</div>
-<div style="background:#6B3FA0;color:#fff;border-radius:6px;padding:4px 2px;font-size:10px;font-weight:900;">Th<br>7</div>
-<div style="background:#3A6B9A;color:#fff;border-radius:6px;padding:4px 2px;font-size:10px;font-weight:900;">H<br>4</div>
-<div style="background:#2DB87A;color:#fff;border-radius:6px;padding:4px 2px;font-size:10px;font-weight:900;">T<br>3</div>
-<div style="background:#E07B39;color:#fff;border-radius:6px;padding:4px 2px;font-size:10px;font-weight:900;">O<br>8</div>
+<div style="background:#C43B6B;color:#fff;border-radius:6px;padding:4px 2px;font-size:10px;font-weight:900;">TT<br/>2</div>
+<div style="background:#6B3FA0;color:#fff;border-radius:6px;padding:4px 2px;font-size:10px;font-weight:900;">Th<br/>7</div>
+<div style="background:#3A6B9A;color:#fff;border-radius:6px;padding:4px 2px;font-size:10px;font-weight:900;">H<br/>4</div>
+<div style="background:#2DB87A;color:#fff;border-radius:6px;padding:4px 2px;font-size:10px;font-weight:900;">T<br/>3</div>
+<div style="background:#E07B39;color:#fff;border-radius:6px;padding:4px 2px;font-size:10px;font-weight:900;">O<br/>8</div>
 </div>
 <div style="font-size:11px;color:#3A4A6B;font-weight:700;">Place-value chart</div>
 </div>
@@ -438,37 +487,37 @@
 </div>
 <div style="background:#FFF8E6;border:2px solid #F5E6C8;border-radius:14px;padding:12px;text-align:center;">
 <div style="font-size:11px;color:#8A6D2B;font-weight:900;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px;">Say It (Word Form)</div>
-<div style="font-size:13px;font-weight:900;color:#0E1C42;line-height:1.4;">twenty-seven thousand,<br>four hundred thirty-eight</div>
+<div style="font-size:13px;font-weight:900;color:#0E1C42;line-height:1.4;">twenty-seven thousand,<br/>four hundred thirty-eight</div>
 </div>
 </div>
 <p><strong>What stays the same?</strong> The value — 27,438 every time. <strong>What changes?</strong> How we write it. Standard, expanded, word form, and the chart all match.</p>
 </div>
 </div>
 </div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👆</div><div><div class="activity-title">Tap a Digit, See Its Value</div><div class="activity-sub">Five digits. Five different jobs.</div></div></div><div class="activity-body"><p>Tap each digit in <strong>27,438</strong>. Each tap shows what that digit is worth in this number. Try them in any order.</p><div class="digit-strip"><button class="digit-tile" onclick="showDigitValue(2,'ten-thousands',20000,this)">2</button><button class="digit-tile" onclick="showDigitValue(7,'thousands',7000,this)">7</button><button class="digit-tile" onclick="showDigitValue(4,'hundreds',400,this)">4</button><button class="digit-tile" onclick="showDigitValue(3,'tens',30,this)">3</button><button class="digit-tile" onclick="showDigitValue(8,'ones',8,this)">8</button></div><div class="place-bubble" id="digitExplain">Tap a digit to see what it is worth.</div><div class="journal-label">✏️ The 2 in 27,438 looks small, but it has the greatest value. Explain why a 2 can be worth more than a 7 or an 8. <span class="saved-dot" id="dot-digit"></span></div><textarea class="journal-box" id="journal-digit" data-label="Learn — Digit Value: Why 2 is worth more than 7 or 8 in 27,438" placeholder="" oninput="autoSave(this,'dot-digit')"></textarea></div></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: A Different Game</div><div class="activity-sub">A bigger crowd. A trickier number.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>The next weekend, the championship draws an even bigger crowd: <strong>5 ten-thousands, 3 thousands, 2 hundreds, 0 tens, and 6 ones</strong>. Build the number and write it in standard form and expanded form.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch how the Math Crew thinks through this one:</p>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👆</div><div><div class="activity-title">Tap a Digit, See Its Value</div><div class="activity-sub">Five digits. Five different jobs.</div></div></div><div class="activity-body"><p>Tap each digit in <strong>27,438</strong>. Each tap shows what that digit is worth in this number. Try them in any order.</p><div class="digit-strip"><button class="digit-tile" onclick="showDigitValue(2,'ten-thousands',20000,this)">2</button><button class="digit-tile" onclick="showDigitValue(7,'thousands',7000,this)">7</button><button class="digit-tile" onclick="showDigitValue(4,'hundreds',400,this)">4</button><button class="digit-tile" onclick="showDigitValue(3,'tens',30,this)">3</button><button class="digit-tile" onclick="showDigitValue(8,'ones',8,this)">8</button></div><div class="place-bubble" id="digitExplain">Tap a digit to see what it is worth.</div><div class="journal-label">✏️ The 2 in 27,438 looks small, but it has the greatest value. Explain why a 2 can be worth more than a 7 or an 8. <span class="saved-dot" id="dot-digit"></span></div><textarea class="journal-box" data-label="Learn — Digit Value: Why 2 is worth more than 7 or 8 in 27,438" id="journal-digit" oninput="autoSave(this,'dot-digit')" placeholder=""></textarea></div></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: A Different Game</div><div class="activity-sub">A bigger crowd. A trickier number.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>The next weekend, the championship draws an even bigger crowd: <strong>5 ten-thousands, 3 thousands, 2 hundreds, 0 tens, and 6 ones</strong>. Build the number and write it in standard form and expanded form.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch how the Math Crew thinks through this one:</p>
 <div class="bubble-row">
-  <div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — concrete</div><div class="bubble-text">"5 ten-thousand discs, 3 thousand discs, 2 hundred discs, then ZERO ten discs, then 6 one discs. The tens column stays empty."</div></div></div>
-  <div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — pictorial</div><div class="bubble-text">"In the chart: 5 under TT, 3 under Th, 2 under H, 0 under T, 6 under O. Read it left to right and the chart spells out 53,206."</div></div></div>
+<div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — concrete</div><div class="bubble-text">"5 ten-thousand discs, 3 thousand discs, 2 hundred discs, then ZERO ten discs, then 6 one discs. The tens column stays empty."</div></div></div>
+<div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — pictorial</div><div class="bubble-text">"In the chart: 5 under TT, 3 under Th, 2 under H, 0 under T, 6 under O. Read it left to right and the chart spells out 53,206."</div></div></div>
 </div>
 <p style="font-family:'Lora',Georgia,serif;background:#FAFBFF;border:2px solid #E2E8F4;border-radius:12px;padding:10px;text-align:center;font-size:20px;font-weight:800;">53,206 = 50,000 + 3,000 + 200 + 0 + 6</p>
 <div class="bubble-row">
-  <div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — shortcut</div><div class="bubble-text">"I read the digits straight off: five-three-two-zero-six. Then I say the place names: ten-thousands, thousands, hundreds, tens, ones."</div></div></div>
-  <div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — checking</div><div class="bubble-text">"Watch the zero. If I leave it out, 53,206 turns into 5,326 — a totally different number. The zero holds the tens place open."</div></div></div>
+<div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — shortcut</div><div class="bubble-text">"I read the digits straight off: five-three-two-zero-six. Then I say the place names: ten-thousands, thousands, hundreds, tens, ones."</div></div></div>
+<div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — checking</div><div class="bubble-text">"Watch the zero. If I leave it out, 53,206 turns into 5,326 — a totally different number. The zero holds the tens place open."</div></div></div>
 </div>
 <div class="callout callout-tip"><span class="callout-icon">⚠️</span><p><strong>About that zero:</strong> When a place has no value, we still have to write its digit in standard form. The 0 in 53,206 is not nothing. It says, "The tens place is empty here." Drop the zero and you change the number.</p></div></div></div>
-  <div class="video-wrap" data-video-slot="4-01-01-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.01.01</div><div class="video-wrap-title">53,206 — and why the zero matters</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-01_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Model 53,206 step by step on a 5-column mat. Narrate each move slowly. Place 5 ten-thousand discs — "5 ten-thousands is 50,000." Place 3 thousand discs — "3 thousands is 3,000." Place 2 hundred discs — "2 hundreds is 200." Pause at tens: "How many tens? Zero. So I leave this column empty — but I do NOT skip it." Place 6 one discs — "6 ones is 6." Read the chart aloud: "fifty-three thousand, two hundred six." Write standard form: 53,206. Write expanded form on the board: 50,000 + 3,000 + 200 + 6. Now write 53,206 next to 5,326 and ask: "Are these the same number? No. The zero is doing a real job — it holds the tens place open." Compare back to 27,438 from the build: "Last time every place had a digit. This time one place is zero. The rule is the same — we read left to right and respect every place." (~2–3 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-01-example --></div></div></div></div>
-  <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">⚖️</div><div><div class="activity-title">Compare Two Strategies: 53,206</div><div class="activity-sub">Same number, different tools. Which one would you reach for?</div></div></div><div class="activity-body">
+
+<div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">⚖️</div><div><div class="activity-title">Compare Two Strategies: 53,206</div><div class="activity-sub">Same number, different tools. Which one would you reach for?</div></div></div><div class="activity-body">
 <p>Two students wrote 53,206 in different ways. Read both carefully. Then decide which strategy helps <em>you</em> think — and explain why.</p>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0;">
 <div style="background:#EAF8FD;border:2px solid #D6F2FB;border-radius:14px;padding:14px;">
 <div style="font-size:12px;color:#1A6B8E;font-weight:900;margin-bottom:6px;">STUDENT A — Place-Value Chart</div>
 <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:3px;">
-<div style="background:#C43B6B;color:#fff;border-radius:6px;padding:6px 3px;font-size:11px;font-weight:900;text-align:center;">TT<br>5</div>
-<div style="background:#6B3FA0;color:#fff;border-radius:6px;padding:6px 3px;font-size:11px;font-weight:900;text-align:center;">Th<br>3</div>
-<div style="background:#3A6B9A;color:#fff;border-radius:6px;padding:6px 3px;font-size:11px;font-weight:900;text-align:center;">H<br>2</div>
-<div style="background:#2DB87A;color:#fff;border-radius:6px;padding:6px 3px;font-size:11px;font-weight:900;text-align:center;">T<br>0</div>
-<div style="background:#E07B39;color:#fff;border-radius:6px;padding:6px 3px;font-size:11px;font-weight:900;text-align:center;">O<br>6</div>
+<div style="background:#C43B6B;color:#fff;border-radius:6px;padding:6px 3px;font-size:11px;font-weight:900;text-align:center;">TT<br/>5</div>
+<div style="background:#6B3FA0;color:#fff;border-radius:6px;padding:6px 3px;font-size:11px;font-weight:900;text-align:center;">Th<br/>3</div>
+<div style="background:#3A6B9A;color:#fff;border-radius:6px;padding:6px 3px;font-size:11px;font-weight:900;text-align:center;">H<br/>2</div>
+<div style="background:#2DB87A;color:#fff;border-radius:6px;padding:6px 3px;font-size:11px;font-weight:900;text-align:center;">T<br/>0</div>
+<div style="background:#E07B39;color:#fff;border-radius:6px;padding:6px 3px;font-size:11px;font-weight:900;text-align:center;">O<br/>6</div>
 </div>
 </div>
 <div style="background:#FFF8E6;border:2px solid #F5E6C8;border-radius:14px;padding:14px;">
@@ -478,23 +527,22 @@
 </div>
 <div class="callout callout-info"><span class="callout-icon">🧐</span><p>Both students are correct. Look at how the zero shows up: Student A puts a 0 in the tens column. Student B leaves the tens piece out of the sum. Both ways say the same thing about the tens place.</p></div>
 <div class="journal-label">✏️ Which strategy would you reach for first when you see a big number? Explain why — and explain how the zero is shown in <strong>both</strong> strategies. <span class="saved-dot" id="dot-compare"></span></div>
-<textarea class="journal-box" id="journal-compare" data-label="Learn — Strategy Comparison: Chart vs Expanded Form for 53,206" placeholder="" oninput="autoSave(this,'dot-compare')"></textarea>
+<textarea class="journal-box" data-label="Learn — Strategy Comparison: Chart vs Expanded Form for 53,206" id="journal-compare" oninput="autoSave(this,'dot-compare')" placeholder=""></textarea>
 </div></div>
-  <div class="socratic-box"><div class="socratic-label">🔮 Think Like a Mathematician</div><p class="socratic-q">The digit 2 is smaller than 6 or 7 or 8. But in 27,438, the 2 is worth more than any of the other digits. Explain how a small digit can be worth more than a big one. What would have to change for the 8 to be worth more than the 2?</p><div class="journal-label">✏️ My reasoning <span class="saved-dot" id="dot-soc1"></span></div><textarea class="journal-box" id="journal-soc1" data-label="Learn — Socratic: How can a small digit be worth more than a big one?" placeholder="" oninput="autoSave(this,'dot-soc1')"></textarea></div>
-  <div class="tab-next-wrap"><p class="tab-transition-voice">You built a five-digit number, met the new place, and saw what a zero in the middle really does. Time to try a few on your own.</p><button class="tab-next-btn" onclick="switchTab('practice')">Continue to 🧮 Practice →</button></div>
+<div class="socratic-box"><div class="socratic-label">🔮 Think Like a Mathematician</div><p class="socratic-q">The digit 2 is smaller than 6 or 7 or 8. But in 27,438, the 2 is worth more than any of the other digits. Explain how a small digit can be worth more than a big one. What would have to change for the 8 to be worth more than the 2?</p><div class="journal-label">✏️ My reasoning <span class="saved-dot" id="dot-soc1"></span></div><textarea class="journal-box" data-label="Learn — Socratic: How can a small digit be worth more than a big one?" id="journal-soc1" oninput="autoSave(this,'dot-soc1')" placeholder=""></textarea></div>
+<div class="tab-next-wrap"><p class="tab-transition-voice">You built a five-digit number, met the new place, and saw what a zero in the middle really does. Time to try a few on your own.</p><button class="tab-next-btn" onclick="switchTab('practice')">Continue to 🧮 Practice →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-practice">
-  <div class="callout callout-info"><span class="callout-icon">🧭</span><p>You built 27,438 in Learn. The numbers in Practice are also five digits — but each one changes <strong>one thing</strong>. Pay attention to what is different. That is where the new thinking lives.</p></div>
-  <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask yourself:</strong> What do I already know about this number? What is the same as the Learn examples? What is new?</p></div>
-  <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Go back to the Learn tab. Look at the "Four Ways" panel or the worked example for 53,206. Good mathematicians re-read their own notes.</p></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">Build It: 38,572</div><div class="activity-sub">A new five-digit number — all five places have a value.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>Build <strong>38,572</strong> on the mat. Every place — ten-thousands, thousands, hundreds, tens, ones — has a value. None of them are zero.</p><div class="callout callout-tip" style="margin-bottom:10px;"><span class="callout-icon">🧐</span><p><strong>What stayed the same from Learn?</strong> Still five places. Still no zeros. <strong>What changed?</strong> Every digit is different — you have to read each place carefully.</p></div><div class="number-display"><div class="digits" id="p1Number">0</div><div class="words" id="p1Words">Build 38,572.</div></div><div class="pv-mat" id="p1Mat"></div><button class="check-btn" onclick="checkP1()">Submit Model ✓</button><div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Yes.</strong> 3 ten-thousands + 8 thousands + 5 hundreds + 7 tens + 2 ones = 38,572. Read aloud: "thirty-eight thousand, five hundred seventy-two."<div class="video-wrap" data-video-slot="4-01-01-practice-1-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 1</div><div class="video-wrap-title">Reading 38,572 with confidence</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-01_Practice-1_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Confirm the model: "3 ten-thousands, 8 thousands, 5 hundreds, 7 tens, 2 ones — that is 38,572." Now show the expanded form: 30,000 + 8,000 + 500 + 70 + 2. Read the number aloud: "thirty-eight thousand, five hundred seventy-two." Close by previewing: "Notice that every place had a digit you could see. In the next problem, two of the places will be zero — and you'll have to figure out where they go." (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-01-practice-1-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Take another pass.</strong><div class="hint-callout">Work left to right. 38,572 needs 3 ten-thousands, 8 thousands, 5 hundreds, 7 tens, and 2 ones.</div><div class="video-wrap" data-video-slot="4-01-01-practice-1-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 1</div><div class="video-wrap-title">One column at a time</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-01_Practice-1_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the left-to-right strategy for a 5-digit number. Slowly: "Look at the digits in 38,572. Read them left to right. The 3 — point to ten-thousands. 3 ten-thousands. The 8 — point to thousands. 8 thousands. The 5 — point to hundreds. 5 hundreds. The 7 — point to tens. 7 tens. The 2 — point to ones. 2 ones." Build it on a real mat as you go. Concept being retaught: matching each digit in a 5-digit number to its place by working left to right. Do NOT introduce zeros — that's the next problem. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-01-practice-1-retry --></div></div></div></div><button class="orange-btn" onclick="resetModel('p1')">↩ Reset and Try Again</button></div></div></div>
-  <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Place the Digit Cards: 70,406</div><div class="activity-sub">This time, two of the places are zero. Where do they go?</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed from Problem 1?</strong> Two zeros now. In 53,206 (Learn) there was one zero. <strong>What stayed the same?</strong> Read the number aloud, then match each digit to its place.</p></div><div class="student-task-banner"><strong>Your task:</strong> Build <strong>70,406</strong> in the place-value chart.<span class="task-steps">Step 1: Read the number aloud. "Seventy thousand, four hundred six." Step 2: Tap a digit card. Step 3: Tap the place where that digit belongs. Step 4: Repeat until every column has a digit.</span></div><div class="sortable-row" id="digitBank"><button class="digit-bank-card" onclick="selectDigitCard(this,'7')">7</button><button class="digit-bank-card" onclick="selectDigitCard(this,'0')">0</button><button class="digit-bank-card" onclick="selectDigitCard(this,'4')">4</button><button class="digit-bank-card" onclick="selectDigitCard(this,'0')">0</button><button class="digit-bank-card" onclick="selectDigitCard(this,'6')">6</button></div><div class="pv-mat" style="grid-template-columns:repeat(5,1fr)"><div><div class="pv-col-head" style="background:#C43B6B;border-radius:12px 12px 0 0;">Ten Thousands</div><div class="chart-slot" data-place="tenthousands" onclick="placeDigit(this)">?</div></div><div><div class="pv-col-head" style="background:#6B3FA0;border-radius:12px 12px 0 0;">Thousands</div><div class="chart-slot" data-place="thousands" onclick="placeDigit(this)">?</div></div><div><div class="pv-col-head" style="background:#3A6B9A;border-radius:12px 12px 0 0;">Hundreds</div><div class="chart-slot" data-place="hundreds" onclick="placeDigit(this)">?</div></div><div><div class="pv-col-head" style="background:#2DB87A;border-radius:12px 12px 0 0;">Tens</div><div class="chart-slot" data-place="tens" onclick="placeDigit(this)">?</div></div><div><div class="pv-col-head" style="background:#E07B39;border-radius:12px 12px 0 0;">Ones</div><div class="chart-slot" data-place="ones" onclick="placeDigit(this)">?</div></div></div><button class="check-btn" onclick="checkDigitChart()">Check Digit Chart ✓</button><div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ Yes!</strong> 7 ten-thousands, 0 thousands, 4 hundreds, 0 tens, 6 ones. Both zeros are doing real work — they hold the thousands and tens places open.<div class="video-wrap" data-video-slot="4-01-01-practice-2-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 2</div><div class="video-wrap-title">Two zeros, two jobs</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-01_Practice-2_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Show 70,406 in the 5-column chart. Compare it to 7,406 written next to it. Ask: "What is different about these two numbers?" Highlight that the first zero is in thousands — without it, the 7 would slide one place to the right and become 7,000 instead of 70,000. Highlight that the second zero is in tens — without it, the 4 and the 6 would smash together. Read 70,406 in expanded form: 70,000 + 0 + 400 + 0 + 6. Say: "Even though we write the zeros, we sometimes leave them out of expanded form. But in the chart and in standard form, every place gets a digit." (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-01-practice-2-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Read the number aloud again, then check each place.</strong><div class="hint-callout">"Seventy thousand, four hundred six." That tells you: 7 ten-thousands, 0 thousands, 4 hundreds, 0 tens, 6 ones.</div><div class="video-wrap" data-video-slot="4-01-01-practice-2-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 2</div><div class="video-wrap-title">Hear the number, then write it</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-01_Practice-2_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach by reading aloud first. "Say the number with me: <em>seventy thousand, four hundred six.</em>" Pause. "What did you hear? Seventy thousand — so the ten-thousands place gets 7. We did NOT hear 'one thousand' or 'two thousand' — so the thousands place is zero. Four hundred — so hundreds gets 4. We did NOT hear any tens — so tens is zero. Six — so ones gets 6." Build it slowly on a real mat. Concept being retaught: using the spoken name of a number to place each digit, especially when zeros appear in the middle. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-01-practice-2-retry --></div></div></div></div><button class="orange-btn" onclick="resetDigitChart()">↩ Reset and Try Again</button></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Alex's Mistakes</div><div class="activity-sub">Be the math teacher — what did this student get wrong?</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> No more building. This time you read someone else's work and decide what is right and what is wrong. A mathematician has to be able to find an error and explain it.</p></div>
+<div class="callout callout-info"><span class="callout-icon">🧭</span><p>You built 27,438 in Learn. The numbers in Practice are also five digits — but each one changes <strong>one thing</strong>. Pay attention to what is different. That is where the new thinking lives.</p></div>
+<div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask yourself:</strong> What do I already know about this number? What is the same as the Learn examples? What is new?</p></div>
+<div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Go back to the Learn tab. Look at the "Four Ways" panel or the worked example for 53,206. Good mathematicians re-read their own notes.</p></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">Build It: 38,572</div><div class="activity-sub">A new five-digit number — all five places have a value.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>Build <strong>38,572</strong> on the mat. Every place — ten-thousands, thousands, hundreds, tens, ones — has a value. None of them are zero.</p><div class="callout callout-tip" style="margin-bottom:10px;"><span class="callout-icon">🧐</span><p><strong>What stayed the same from Learn?</strong> Still five places. Still no zeros. <strong>What changed?</strong> Every digit is different — you have to read each place carefully.</p></div><div class="number-display"><div class="digits" id="p1Number">0</div><div class="words" id="p1Words">Build 38,572.</div></div><div class="pv-mat" id="p1Mat"></div><button class="check-btn" onclick="checkP1()">Submit Model ✓</button><div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Yes.</strong> 3 ten-thousands + 8 thousands + 5 hundreds + 7 tens + 2 ones = 38,572. Read aloud: "thirty-eight thousand, five hundred seventy-two."</div><div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Take another pass.</strong><div class="hint-callout">Work left to right. 38,572 needs 3 ten-thousands, 8 thousands, 5 hundreds, 7 tens, and 2 ones.</div><button class="orange-btn" onclick="resetModel('p1')">↩ Reset and Try Again</button></div></div></div>
+<div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Place the Digit Cards: 70,406</div><div class="activity-sub">This time, two of the places are zero. Where do they go?</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed from Problem 1?</strong> Two zeros now. In 53,206 (Learn) there was one zero. <strong>What stayed the same?</strong> Read the number aloud, then match each digit to its place.</p></div><div class="student-task-banner"><strong>Your task:</strong> Build <strong>70,406</strong> in the place-value chart.<span class="task-steps">Step 1: Read the number aloud. "Seventy thousand, four hundred six." Step 2: Tap a digit card. Step 3: Tap the place where that digit belongs. Step 4: Repeat until every column has a digit.</span></div><div class="sortable-row" id="digitBank"><button class="digit-bank-card" onclick="selectDigitCard(this,'7')">7</button><button class="digit-bank-card" onclick="selectDigitCard(this,'0')">0</button><button class="digit-bank-card" onclick="selectDigitCard(this,'4')">4</button><button class="digit-bank-card" onclick="selectDigitCard(this,'0')">0</button><button class="digit-bank-card" onclick="selectDigitCard(this,'6')">6</button></div><div class="pv-mat" style="grid-template-columns:repeat(5,1fr)"><div><div class="pv-col-head" style="background:#C43B6B;border-radius:12px 12px 0 0;">Ten Thousands</div><div class="chart-slot" data-place="tenthousands" onclick="placeDigit(this)">?</div></div><div><div class="pv-col-head" style="background:#6B3FA0;border-radius:12px 12px 0 0;">Thousands</div><div class="chart-slot" data-place="thousands" onclick="placeDigit(this)">?</div></div><div><div class="pv-col-head" style="background:#3A6B9A;border-radius:12px 12px 0 0;">Hundreds</div><div class="chart-slot" data-place="hundreds" onclick="placeDigit(this)">?</div></div><div><div class="pv-col-head" style="background:#2DB87A;border-radius:12px 12px 0 0;">Tens</div><div class="chart-slot" data-place="tens" onclick="placeDigit(this)">?</div></div><div><div class="pv-col-head" style="background:#E07B39;border-radius:12px 12px 0 0;">Ones</div><div class="chart-slot" data-place="ones" onclick="placeDigit(this)">?</div></div></div><button class="check-btn" onclick="checkDigitChart()">Check Digit Chart ✓</button><div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ Yes!</strong> 7 ten-thousands, 0 thousands, 4 hundreds, 0 tens, 6 ones. Both zeros are doing real work — they hold the thousands and tens places open.</div><div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Read the number aloud again, then check each place.</strong><div class="hint-callout">"Seventy thousand, four hundred six." That tells you: 7 ten-thousands, 0 thousands, 4 hundreds, 0 tens, 6 ones.</div><button class="orange-btn" onclick="resetDigitChart()">↩ Reset and Try Again</button></div></div></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Alex's Mistakes</div><div class="activity-sub">Be the math teacher — what did this student get wrong?</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> No more building. This time you read someone else's work and decide what is right and what is wrong. A mathematician has to be able to find an error and explain it.</p></div>
 <div class="task-box"><div class="task-label">Alex's Work</div>
 <p>Alex was asked to write <strong>80,500</strong> in expanded form and read it aloud. Here is what Alex wrote:</p>
 <div style="background:#FFF0E6;border:2px solid #F5C8A0;border-radius:12px;padding:14px 16px;font-family:'Lora',Georgia,serif;font-size:16px;color:#0E1C42;line-height:1.7;margin-top:8px;">
-"<strong>80,500</strong> = 8 thousands + 5 hundreds"<br>
+"<strong>80,500</strong> = 8 thousands + 5 hundreds"<br/>
 "I read it as: <em>eight thousand, five hundred.</em>"
 </div>
 </div>
@@ -508,30 +556,26 @@
 </div>
 <button class="check-btn" onclick="checkErrorAnalysis()">Check My Answers ✓</button>
 <div class="journal-label">✏️ In your own words, explain what Alex misunderstood about the digit 8 in 80,500. <span class="saved-dot" id="dot-ea"></span></div>
-<textarea class="journal-box" id="journal-ea" data-label="Practice 3 — Error Analysis: Explain Alex's mistake about the 8 in 80,500" placeholder="" oninput="autoSave(this,'dot-ea')"></textarea>
-<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Alex skipped the ten-thousands place. The 8 in 80,500 is worth 80,000, and the number reads "eighty thousand, five hundred." Always check the leftmost digit and its place first.<div class="video-wrap" data-video-slot="4-01-01-practice-3-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 3</div><div class="video-wrap-title">Why Alex's mistake is easy to make</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-01_Practice-3_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Show 80,500 in a 5-column chart. Point to the 8 in the ten-thousands column and the 0 in the thousands column. Say: "When students see the 8 right next to a comma, they sometimes read it as 8 thousands. But the comma in a five-digit number sits between thousands and hundreds — so the 8 is actually in the ten-thousands place." Write expanded form: 80,000 + 500 (note that 0 + 0 + 0 is usually left out). Read aloud carefully: "eighty thousand, five hundred." Close with a check: "Anytime you see a five-digit number, find the leftmost digit and ask: which place is it in? Ten-thousands. So that digit's value starts with ten thousand." (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-01-practice-3-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — there are three true statements.</strong><div class="hint-callout">Hint: Alex made two big mistakes — one about the value of the 8, and one about how to read the number aloud. The first three statements describe those mistakes.</div><div class="video-wrap" data-video-slot="4-01-01-practice-3-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 3</div><div class="video-wrap-title">Where does the 8 really live?</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-01_Practice-3_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach how to find the place of each digit in a 5-digit number. Write 80,500 on the board with a 5-column place-value chart above it. Slowly point to each column and place each digit: "8 — ten-thousands. 0 — thousands. 5 — hundreds. 0 — tens. 0 — ones." Then say: "Alex thought the 8 was in thousands. That would only be true if the number were 8,500 — a four-digit number. Counting places in a five-digit number changes everything." Concept being retaught: that the place of each digit depends on how many digits the whole number has. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-01-practice-3-retry --></div></div></div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
-  <div class="socratic-box"><div class="socratic-label">🔮 Think Like a Mathematician</div><p class="socratic-q">Alex made a mistake that students often make: when a number gets longer, the same digit sits in a different place. Suppose a number was 5,720, and then a zero was added to the front to make it 05,720 — would that change the value of the 5? Would adding a digit to the <em>end</em> change the value of the 5? Explain how the position of a digit decides its value.</p><div class="journal-label">✏️ My reasoning <span class="saved-dot" id="dot-soc2"></span></div><textarea class="journal-box" id="journal-soc2" data-label="Practice — Socratic: How position decides value" placeholder="" oninput="autoSave(this,'dot-soc2')"></textarea></div>
-  <div class="tab-next-wrap"><p class="tab-transition-voice">You've built, placed, and corrected someone else's work. Now it's your turn to show what you know.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
+<textarea class="journal-box" data-label="Practice 3 — Error Analysis: Explain Alex's mistake about the 8 in 80,500" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
+<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Alex skipped the ten-thousands place. The 8 in 80,500 is worth 80,000, and the number reads "eighty thousand, five hundred." Always check the leftmost digit and its place first.</div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — there are three true statements.</strong><div class="hint-callout">Hint: Alex made two big mistakes — one about the value of the 8, and one about how to read the number aloud. The first three statements describe those mistakes.</div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
+<div class="socratic-box"><div class="socratic-label">🔮 Think Like a Mathematician</div><p class="socratic-q">Alex made a mistake that students often make: when a number gets longer, the same digit sits in a different place. Suppose a number was 5,720, and then a zero was added to the front to make it 05,720 — would that change the value of the 5? Would adding a digit to the <em>end</em> change the value of the 5? Explain how the position of a digit decides its value.</p><div class="journal-label">✏️ My reasoning <span class="saved-dot" id="dot-soc2"></span></div><textarea class="journal-box" data-label="Practice — Socratic: How position decides value" id="journal-soc2" oninput="autoSave(this,'dot-soc2')" placeholder=""></textarea></div>
+<div class="tab-next-wrap"><p class="tab-transition-voice">You've built, placed, and corrected someone else's work. Now it's your turn to show what you know.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-assignment">
-  <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Use the chart, expanded form, or words — whichever helps you think.</div></div></div><div class="activity-body"><p>You met a new place today and built numbers that climb past ten thousand. These problems give you a chance to put it all together. Use any strategy from Learn — the chart, the discs, expanded form, or word form.</p>
+<div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Use the chart, expanded form, or words — whichever helps you think.</div></div></div><div class="activity-body"><p>You met a new place today and built numbers that climb past ten thousand. These problems give you a chance to put it all together. Use any strategy from Learn — the chart, the discs, expanded form, or word form.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask yourself:</strong> Which place is each digit in? Which tool will help me see that fastest?</p></div>
-<div class="q-block"><p class="q-text"><span class="q-num">1</span>Write <strong>46,309</strong> in expanded form and in word form. Then explain what the <strong>0</strong> in the number is doing.</p><div class="journal-label">✏️ My answer <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" id="journal-a1" data-label="Show What You Know — Problem 1: Expanded form, word form, and the role of 0 in 46,309" placeholder="" oninput="autoSave(this,'dot-a1')"></textarea></div>
-
-<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> What is the biggest difference between reading a four-digit number and a five-digit number? If you had to add one more place after ten-thousands, what do you think it would be worth?</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" id="journal-a6" data-label="Show What You Know — Problem 6: Reflection on 4-digit vs 5-digit, predicting next place" placeholder="" oninput="autoSave(this,'dot-a6')"></textarea></div>
-
-
+<div class="q-block"><p class="q-text"><span class="q-num">1</span>Write <strong>46,309</strong> in expanded form and in word form. Then explain what the <strong>0</strong> in the number is doing.</p><div class="journal-label">✏️ My answer <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: Expanded form, word form, and the role of 0 in 46,309" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
+<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> What is the biggest difference between reading a four-digit number and a five-digit number? If you had to add one more place after ten-thousands, what do you think it would be worth?</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: Reflection on 4-digit vs 5-digit, predicting next place" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#55C8E8;"><div class="activity-head"><div class="activity-num" style="background:#55C8E8;color:#0E1C42;">🗺️</div><div><div class="activity-title">Connection Forward: What Comes Next</div><div class="activity-sub">Preview Lesson 4.01.02 — Numbers to 1,000,000</div></div></div><div class="activity-body"><p>Today you stretched your chart one column to the left and met ten thousands. The number kept the same rules — read left to right, every place gets a digit, each new place is ten times the one before it.</p><p>Next lesson, the same pattern keeps going. You'll add <strong>one more column</strong> to the left — the hundred-thousands place — and meet numbers up to <strong>1,000,000</strong>. That's a number bigger than the population of most Florida cities.</p><p>The big question next time: <em>What happens when we keep stretching the chart? Is there a limit to how big a number can get?</em></p></div></div>
 </div></div>
-  <div class="video-wrap" data-video-slot="4-01-01-assignment-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Show What You Know Feedback · Lesson 4.01.01</div><div class="video-wrap-title">The two trickiest problems</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-01_SWYK-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk through Problem 4 and Problem 5 — the two problems most worth re-teaching. <strong>Problem 4 (find and fix):</strong> Write 90,030 on the board. "The student wrote '9 thousands + 30.' Two things are off. First, the 9 sits in the <em>ten-thousands</em> place, not thousands — so it is worth 90,000. Second, the expanded form skipped over the ten-thousands. The correct expanded form is 90,000 + 30, which we can also write as 90,000 + 0 + 0 + 30 + 0 to show every place. Either way works." <strong>Problem 5 (stadium reasoning):</strong> "32,847 in word form: thirty-two thousand, eight hundred forty-seven. In expanded form: 30,000 + 2,000 + 800 + 40 + 7. Was the stadium more than half full? Half of 45,000 is 22,500. 32,847 is bigger than 22,500, so yes — more than half. The 30,000 alone told us we were past halfway." Pace slowly. End with a sentence connecting forward: "Next lesson, we add the hundred-thousands place — the same rule keeps going." (~2–3 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-01-assignment-feedback --></div></div></div></div>
-  <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly>Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
-  <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
+
+<div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
+<div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
 </div>
 <div class="footer">
-  <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
-  <div class="footer-sub">Math · Grade 4 · 4.01.01</div>
-  <div class="footer-copy">© 2025 Optima Academy Online</div>
+<div class="footer-main">🏫 <span>Optima Academy Online</span></div>
+<div class="footer-sub">Math · Grade 4 · 4.01.01</div>
+<div class="footer-copy">© 2025 Optima Academy Online</div>
 </div>
 </div>
 <canvas id="confettiCanvas"></canvas>
@@ -680,6 +724,75 @@ function flipVocabCard(card){card.classList.toggle('flipped');}
 
 function checkExitA(card,correct){document.querySelectorAll('#tab-assignment .q-block:first-of-type .value-card').forEach(c=>{c.classList.remove('good','bad','selected')});var fb=document.getElementById('exitA-fb');if(correct){card.classList.add('good');fb.className='inline-feedback show good';fb.innerHTML='<strong>✅ Yes!</strong> The 3 is in the thousands place, so it is worth 3,000.';miniCelebrate(card)}else{card.classList.add('bad');fb.className='inline-feedback show think';fb.innerHTML='<strong>Not quite.</strong> Think about which <em>place</em> the 3 sits in. Thousands? Hundreds? Tens? Ones?'}}
 function checkExitB(card,correct){document.querySelectorAll('#tab-assignment .q-block:nth-of-type(2) .value-card').forEach(c=>{c.classList.remove('good','bad','selected')});var fb=document.getElementById('exitB-fb');if(correct){card.classList.add('good');fb.className='inline-feedback show good';fb.innerHTML='<strong>✅ Yes!</strong> 9,060 = 9,000 + 0 hundreds + 60 + 0 ones. The 6 is in the tens place, so it is 60, not 600 or 6.';miniCelebrate(card)}else{card.classList.add('bad');fb.className='inline-feedback show think';fb.innerHTML='<strong>Not quite.</strong> Look at 9,060 — which place is the 6 in? Is it hundreds, tens, or ones?'}}
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Facts of 0, 1, 2, 5, 10";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
 </script>
 </body>
 </html>

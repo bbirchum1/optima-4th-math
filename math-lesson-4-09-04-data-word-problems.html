@@ -314,6 +314,32 @@
 .frac.frac-lg{font-size:1.05em}
 .frac.frac-on-dark .num{border-bottom-color:#fff}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
@@ -341,7 +367,42 @@
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
-<div class="video-wrap" data-video-slot="4-09-04-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.09.04</div><div class="video-wrap-title">Read the story. Pick the measure. Compute.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-09-04_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "Story: 'Mr. Helfer's class has these homework hours: 1, 2, 3, 3, 3, 4. What hour amount did the most students do?' That word MOST is the giveaway — find the MODE. Mode = 3 hours." Run another: 'How spread out are the scores?' → RANGE. 'What is the middle student's score?' → MEDIAN. Frame: <strong>Read first. Pick second. Compute third.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-welcome --></div></div></div></div>
+<div class="fluency-box" data-timed="true">
+<div class="fluency-head">
+<div class="fluency-head-icon">⏳</div>
+<div><div class="fluency-head-label">TIMED FLUENCY CHECK</div><div class="fluency-head-title">Mixed Multiplication &amp; Division — One-Minute Check</div></div>
+<div class="fluency-timer-ui"><span class="fluency-timer-display" id="fluencyTimerDisplay">60s</span><button class="fluency-start-btn" id="fluencyStartBtn" onclick="fluencyStart()">Start 1-Minute Check</button></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Unit check — Quarter 3 timed fluency. Click Start, then answer as many as you can in 60 seconds. Answers lock in automatically when time is up.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">7 × 8</span><input autocomplete="off" class="fluency-input" data-answer="56" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 9</span><input autocomplete="off" class="fluency-input" data-answer="54" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 9</span><input autocomplete="off" class="fluency-input" data-answer="81" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 7</span><input autocomplete="off" class="fluency-input" data-answer="56" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">11 × 5</span><input autocomplete="off" class="fluency-input" data-answer="55" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">12 × 6</span><input autocomplete="off" class="fluency-input" data-answer="72" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 7</span><input autocomplete="off" class="fluency-input" data-answer="49" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 6</span><input autocomplete="off" class="fluency-input" data-answer="54" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 8</span><input autocomplete="off" class="fluency-input" data-answer="64" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 7</span><input autocomplete="off" class="fluency-input" data-answer="42" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">72 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">63 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="7" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">56 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">48 ÷ 6</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">81 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">96 ÷ 12</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">45 ÷ 5</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">64 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">88 ÷ 11</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">54 ÷ 6</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" disabled="" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Mixed Multiplication &amp; Division — One-Minute Check)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
 <p>Hazel leads — data analysis is all about seeing the picture. Atlas names the three measures. Felix sorts and computes. Cora double-checks.</p>
 <div class="bubble-row">
@@ -385,8 +446,8 @@
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Cheat sheet:</strong> "Most common" → MODE. "Middle" → MEDIAN. "Difference / spread" → RANGE. "How many altogether" → COUNT.</div>
-<div class="journal-label">✏️ Which measure would you use for "What was the average score"? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: pick the measure" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-09-04-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.09.04</div><div class="video-wrap-title">Question words pick the measure</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-09-04_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "The question word is your clue. 'MOST' = mode. 'MIDDLE' = median. 'DIFFERENCE' or 'SPREAD' = range. 'HOW MANY ALTOGETHER' = count up all the data points." Frame: <strong>Read the question word, pick the measure, compute.</strong></div><div class="video-placeholder-id"><!-- slot: lesson-readiness-feedback --></div></div></div></div>
+<div class="journal-label">✏️ Which measure would you use for "What was the average score"? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: pick the measure" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">One data set, three different questions.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">📋</span><p>Six kids reported reading minutes: <strong>20, 30, 20, 15, 25, 20</strong>.</p><p>(a) "What is the most popular reading time?" → mode = ?<br/>(b) "What is the middle reading time?" → median = ?<br/>(c) "How spread out are the times?" → range = ?</p></div>
 <div class="strategy-chip-row">
@@ -397,11 +458,10 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>Sorted: 15, 20, 20, 20, 25, 30.</strong> <strong>Mode = 20</strong> (three times). <strong>Median = 20</strong> (middle two are both 20). <strong>Range = 30 − 15 = 15</strong>.</p></div>
 <div class="journal-label">✏️ Same data set — three different answers depending on the question. Why does that make sense? <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think: one set three answers" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think: one set three answers" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">Now you read, pick, and compute.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-09-04-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-09-04 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-09-04-concept --></div></div></div></div>
 <div aria-label="Daily vocabulary flash cards" class="vocab-section">
 <div class="vocab-section-head">
 <div class="vocab-section-icon">📚</div>
@@ -412,96 +472,83 @@
 </div>
 <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
 <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for question word. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">❓</div><div class="fc-word">question word</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">question word</div><div class="fc-def">a key word that signals which measure to use. "Most" → mode. "Middle" → median. "Spread" → range.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for units. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">📏</div><div class="fc-word">units</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">units</div><div class="fc-def">what the numbers describe — minutes, students, dollars, miles. Always include units in your answer.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for sense-check. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🔍</div><div class="fc-word">sense-check</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">sense-check</div><div class="fc-def">does my answer fit the story? The median should be between the smallest and largest. The range can't be negative.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for compare. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">⚖️</div><div class="fc-word">compare</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">compare</div><div class="fc-def">two data sets can be compared by their measures: which has a higher median? a wider range? a different mode?</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div aria-label="Vocabulary card for question word. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">❓</div><div class="fc-word">question word</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">question word</div><div class="fc-def">a key word that signals which measure to use. "Most" → mode. "Middle" → median. "Spread" → range.</div><div class="fc-tap-back">tap to flip back</div></div>
 </div>
-<div class="video-wrap" data-video-slot="4-09-04-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.09.04</div><div class="video-wrap-title">Read carefully. Pick the measure. Compute.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-09-04_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Three real-world stories. (1) Reading minutes — "most popular time" → mode. (2) Test scores — "middle student" → median. (3) Race times — "fastest minus slowest" → range. For each, name the measure first, then compute. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-concept --></div></div></div></div>
+</div>
+<div aria-label="Vocabulary card for units. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">📏</div><div class="fc-word">units</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">units</div><div class="fc-def">what the numbers describe — minutes, students, dollars, miles. Always include units in your answer.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for sense-check. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🔍</div><div class="fc-word">sense-check</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">sense-check</div><div class="fc-def">does my answer fit the story? The median should be between the smallest and largest. The range can't be negative.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for compare. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">⚖️</div><div class="fc-word">compare</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">compare</div><div class="fc-def">two data sets can be compared by their measures: which has a higher median? a wider range? a different mode?</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
 <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Pick how many groups to SPLIT the bar into. Then click groups to TAKE them.</p></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#1E5F9E;">🕵️</div><div><div class="activity-title">Data Detective</div><div class="activity-sub">Read the story. Pick the right measure. Type the answer with units.</div></div></div><div class="activity-body"><p>Three real-world stories. Each one asks for a different measure. Pick carefully, compute, and check.</p>
-
-<div class="dd-card" data-id="1" data-values="3,5,3,8,3,6,4" data-correct-measure="mode" data-correct-answer="3" data-units="puppies per day" style="background:#F5FBFE;border:2px solid #BFE3F2;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="dd-card" data-correct-answer="3" data-correct-measure="mode" data-id="1" data-units="puppies per day" data-values="3,5,3,8,3,6,4" style="background:#F5FBFE;border:2px solid #BFE3F2;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="background:#fff;border-left:4px solid #1E5F9E;padding:12px 14px;border-radius:8px;margin-bottom:14px;color:#0E1C42;font-family:'Lora',Georgia,serif;font-size:15px;line-height:1.6;"><strong>Story.</strong> A pet store recorded the number of puppies adopted each day for a week: 3, 5, 3, 8, 3, 6, 4. Which day count was MOST common?</div>
-
 <div style="text-align:center;font-size:12px;color:#0D3D6B;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Data set</div>
 <div style="text-align:center;background:#fff;border:1.5px dashed #BFE3F2;border-radius:10px;padding:10px 14px;margin-bottom:14px;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:#0E1C42;">3, 5, 3, 8, 3, 6, 4 <span style="color:#3A4A6B;font-weight:400;font-size:13px;">(puppies per day)</span></div>
-
 <div style="text-align:center;font-size:12px;color:#0D3D6B;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 1 · Pick the measure</div>
-<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;"><button onclick="ddPickMeasure('1','mode')" id="ddChip-1-mode" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">mode</button><button onclick="ddPickMeasure('1','median')" id="ddChip-1-median" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">median</button><button onclick="ddPickMeasure('1','range')" id="ddChip-1-range" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">range</button><button onclick="ddPickMeasure('1','count')" id="ddChip-1-count" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">count</button></div>
+<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;"><button id="ddChip-1-mode" onclick="ddPickMeasure('1','mode')" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">mode</button><button id="ddChip-1-median" onclick="ddPickMeasure('1','median')" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">median</button><button id="ddChip-1-range" onclick="ddPickMeasure('1','range')" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">range</button><button id="ddChip-1-count" onclick="ddPickMeasure('1','count')" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">count</button></div>
 <div id="ddMeasureFb-1" style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:10px;min-height:18px;"></div>
-
 <div style="text-align:center;font-size:12px;color:#0D3D6B;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 2 · Type your answer</div>
 <div style="display:flex;justify-content:center;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px;">
-<input type="number" step="any" id="ddAns-1" placeholder="?" style="border:2px solid #D6D6D6;border-radius:10px;padding:8px 12px;font-size:18px;font-weight:800;text-align:center;width:100px;font-family:'Lora',Georgia,serif;color:#0E1C42;" />
+<input id="ddAns-1" placeholder="?" step="any" style="border:2px solid #D6D6D6;border-radius:10px;padding:8px 12px;font-size:18px;font-weight:800;text-align:center;width:100px;font-family:'Lora',Georgia,serif;color:#0E1C42;" type="number"/>
 <span style="font-family:'Lora',Georgia,serif;font-size:14px;color:#3A4A6B;">puppies per day</span>
 <button onclick="ddCheck('1')" style="background:#3A6B9A;color:#fff;border:none;border-radius:10px;padding:9px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">✓ Check</button>
 <button onclick="ddReset('1')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺</button>
 </div>
 <div id="ddStatus-1" style="background:#D6ECF7;border:2px solid #BFE3F2;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E1C42;font-weight:700;line-height:1.5;text-align:center;">The word MOST tells you which measure.</div>
 </div>
-
-<div class="dd-card" data-id="2" data-values="12,15,18,14,11,16,13" data-correct-measure="range" data-correct-answer="7" data-units="seconds" style="background:#F5FBFE;border:2px solid #BFE3F2;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="dd-card" data-correct-answer="7" data-correct-measure="range" data-id="2" data-units="seconds" data-values="12,15,18,14,11,16,13" style="background:#F5FBFE;border:2px solid #BFE3F2;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="background:#fff;border-left:4px solid #1E5F9E;padding:12px 14px;border-radius:8px;margin-bottom:14px;color:#0E1C42;font-family:'Lora',Georgia,serif;font-size:15px;line-height:1.6;"><strong>Story.</strong> Race times (in seconds): 12, 15, 18, 14, 11, 16, 13. What was the SPREAD between the fastest and slowest runner?</div>
-
 <div style="text-align:center;font-size:12px;color:#0D3D6B;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Data set</div>
 <div style="text-align:center;background:#fff;border:1.5px dashed #BFE3F2;border-radius:10px;padding:10px 14px;margin-bottom:14px;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:#0E1C42;">12, 15, 18, 14, 11, 16, 13 <span style="color:#3A4A6B;font-weight:400;font-size:13px;">(seconds)</span></div>
-
 <div style="text-align:center;font-size:12px;color:#0D3D6B;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 1 · Pick the measure</div>
-<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;"><button onclick="ddPickMeasure('2','mode')" id="ddChip-2-mode" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">mode</button><button onclick="ddPickMeasure('2','median')" id="ddChip-2-median" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">median</button><button onclick="ddPickMeasure('2','range')" id="ddChip-2-range" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">range</button><button onclick="ddPickMeasure('2','count')" id="ddChip-2-count" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">count</button></div>
+<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;"><button id="ddChip-2-mode" onclick="ddPickMeasure('2','mode')" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">mode</button><button id="ddChip-2-median" onclick="ddPickMeasure('2','median')" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">median</button><button id="ddChip-2-range" onclick="ddPickMeasure('2','range')" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">range</button><button id="ddChip-2-count" onclick="ddPickMeasure('2','count')" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">count</button></div>
 <div id="ddMeasureFb-2" style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:10px;min-height:18px;"></div>
-
 <div style="text-align:center;font-size:12px;color:#0D3D6B;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 2 · Type your answer</div>
 <div style="display:flex;justify-content:center;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px;">
-<input type="number" step="any" id="ddAns-2" placeholder="?" style="border:2px solid #D6D6D6;border-radius:10px;padding:8px 12px;font-size:18px;font-weight:800;text-align:center;width:100px;font-family:'Lora',Georgia,serif;color:#0E1C42;" />
+<input id="ddAns-2" placeholder="?" step="any" style="border:2px solid #D6D6D6;border-radius:10px;padding:8px 12px;font-size:18px;font-weight:800;text-align:center;width:100px;font-family:'Lora',Georgia,serif;color:#0E1C42;" type="number"/>
 <span style="font-family:'Lora',Georgia,serif;font-size:14px;color:#3A4A6B;">seconds</span>
 <button onclick="ddCheck('2')" style="background:#3A6B9A;color:#fff;border:none;border-radius:10px;padding:9px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">✓ Check</button>
 <button onclick="ddReset('2')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺</button>
 </div>
 <div id="ddStatus-2" style="background:#D6ECF7;border:2px solid #BFE3F2;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E1C42;font-weight:700;line-height:1.5;text-align:center;">SPREAD is the giveaway.</div>
 </div>
-
-<div class="dd-card" data-id="3" data-values="5,7,3,5,8,5,11,4,2" data-correct-measure="median" data-correct-answer="5" data-units="month number" style="background:#F5FBFE;border:2px solid #BFE3F2;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="dd-card" data-correct-answer="5" data-correct-measure="median" data-id="3" data-units="month number" data-values="5,7,3,5,8,5,11,4,2" style="background:#F5FBFE;border:2px solid #BFE3F2;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="background:#fff;border-left:4px solid #1E5F9E;padding:12px 14px;border-radius:8px;margin-bottom:14px;color:#0E1C42;font-family:'Lora',Georgia,serif;font-size:15px;line-height:1.6;"><strong>Story.</strong> A class of 9 students wrote their birth-month numbers: 5, 7, 3, 5, 8, 5, 11, 4, 2. The teacher wants the MIDDLE birth month when sorted.</div>
-
 <div style="text-align:center;font-size:12px;color:#0D3D6B;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Data set</div>
 <div style="text-align:center;background:#fff;border:1.5px dashed #BFE3F2;border-radius:10px;padding:10px 14px;margin-bottom:14px;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:#0E1C42;">5, 7, 3, 5, 8, 5, 11, 4, 2 <span style="color:#3A4A6B;font-weight:400;font-size:13px;">(month number)</span></div>
-
 <div style="text-align:center;font-size:12px;color:#0D3D6B;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 1 · Pick the measure</div>
-<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;"><button onclick="ddPickMeasure('3','mode')" id="ddChip-3-mode" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">mode</button><button onclick="ddPickMeasure('3','median')" id="ddChip-3-median" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">median</button><button onclick="ddPickMeasure('3','range')" id="ddChip-3-range" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">range</button><button onclick="ddPickMeasure('3','count')" id="ddChip-3-count" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">count</button></div>
+<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;"><button id="ddChip-3-mode" onclick="ddPickMeasure('3','mode')" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">mode</button><button id="ddChip-3-median" onclick="ddPickMeasure('3','median')" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">median</button><button id="ddChip-3-range" onclick="ddPickMeasure('3','range')" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">range</button><button id="ddChip-3-count" onclick="ddPickMeasure('3','count')" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">count</button></div>
 <div id="ddMeasureFb-3" style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:10px;min-height:18px;"></div>
-
 <div style="text-align:center;font-size:12px;color:#0D3D6B;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 2 · Type your answer</div>
 <div style="display:flex;justify-content:center;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px;">
-<input type="number" step="any" id="ddAns-3" placeholder="?" style="border:2px solid #D6D6D6;border-radius:10px;padding:8px 12px;font-size:18px;font-weight:800;text-align:center;width:100px;font-family:'Lora',Georgia,serif;color:#0E1C42;" />
+<input id="ddAns-3" placeholder="?" step="any" style="border:2px solid #D6D6D6;border-radius:10px;padding:8px 12px;font-size:18px;font-weight:800;text-align:center;width:100px;font-family:'Lora',Georgia,serif;color:#0E1C42;" type="number"/>
 <span style="font-family:'Lora',Georgia,serif;font-size:14px;color:#3A4A6B;">month number</span>
 <button onclick="ddCheck('3')" style="background:#3A6B9A;color:#fff;border:none;border-radius:10px;padding:9px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">✓ Check</button>
 <button onclick="ddReset('3')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺</button>
 </div>
 <div id="ddStatus-3" style="background:#D6ECF7;border:2px solid #BFE3F2;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E1C42;font-weight:700;line-height:1.5;text-align:center;">MIDDLE → median. Sort first.</div>
 </div>
-
 <div class="reveal-box" id="learnReveal"><strong>Solved.</strong> Puppies — most common = 3. Race spread = 7 seconds. Birth-month median = 5. Each story needed a different measure.</div>
 </div></div>
 <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 Question-Word Cheat Sheet</div><p><strong>Most common / typical:</strong> MODE.</p><p><strong>Middle / halfway:</strong> MEDIAN (sort first).</p><p><strong>Spread / difference / how varied:</strong> RANGE (largest − smallest).</p><p><strong>How many altogether:</strong> COUNT.</p></div>
@@ -526,7 +573,7 @@
 <textarea class="journal-box" data-label="Learn — Socratic: which measure tells more" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: Travel Times</div><div class="activity-sub">Same data set, three questions, three measures.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>15 students reported travel times to school: <strong>10, 20, 5, 25, 15, 10, 30, 15, 25, 20, 25, 40, 30, 15, 35</strong> minutes. (a) Most common time? (b) Middle time when sorted? (c) Difference between longest and shortest?</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it:</p>
-<div class="video-wrap" data-video-slot="4-09-04-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.09.04</div><div class="video-wrap-title">One data set — three questions, three measures</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-09-04_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Felix sorts: 5, 10, 10, 15, 15, 15, 20, 20, 25, 25, 25, 30, 30, 35, 40. Atlas: "(a) MODE — 15 and 25 each appear three times. (b) MEDIAN — 15 numbers, middle is the 8th = 20. (c) RANGE — 40 − 5 = 35." Cora verifies. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-09-04-example --></div></div></div></div>
+
 <div style="background:#F5FBFE;border:2px solid #BFE3F2;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.9;font-size:15px;margin-bottom:12px;">
 <strong>Sorted:</strong> 5, 10, 10, 15, 15, 15, 20, 20, 25, 25, 25, 30, 30, 35, 40
@@ -562,21 +609,17 @@
 <div class="callout callout-info"><span class="callout-icon">🕵️</span><p>Three more stories. Read carefully, pick a measure, compute, check.</p></div>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Question-word cheat:</strong> most → mode. middle → median. spread/difference → range. altogether → count.</p></div>
 <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Re-read the question. The key word is usually one you already know.</p></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#1E5F9E;">1</div><div><div class="activity-title">Story 1 — Spelling Test</div><div class="activity-sub">Pick the measure that answers the question.</div></div><span class="activity-time" style="background:#1E5F9E;">~5 min</span></div><div class="activity-body">
-<div class="dd-card" data-id="p1" data-values="8,10,7,9,8,6,10,8,9,7" data-correct-measure="mode" data-correct-answer="8" data-units="points" style="background:#F5FBFE;border:2px solid #BFE3F2;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="dd-card" data-correct-answer="8" data-correct-measure="mode" data-id="p1" data-units="points" data-values="8,10,7,9,8,6,10,8,9,7" style="background:#F5FBFE;border:2px solid #BFE3F2;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="background:#fff;border-left:4px solid #1E5F9E;padding:12px 14px;border-radius:8px;margin-bottom:14px;color:#0E1C42;font-family:'Lora',Georgia,serif;font-size:15px;line-height:1.6;"><strong>Story.</strong> A class scored: 8, 10, 7, 9, 8, 6, 10, 8, 9, 7. What score did the MOST students get?</div>
-
 <div style="text-align:center;font-size:12px;color:#0D3D6B;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Data set</div>
 <div style="text-align:center;background:#fff;border:1.5px dashed #BFE3F2;border-radius:10px;padding:10px 14px;margin-bottom:14px;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:#0E1C42;">8, 10, 7, 9, 8, 6, 10, 8, 9, 7 <span style="color:#3A4A6B;font-weight:400;font-size:13px;">(points)</span></div>
-
 <div style="text-align:center;font-size:12px;color:#0D3D6B;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 1 · Pick the measure</div>
-<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;"><button onclick="ddPickMeasure('p1','mode')" id="ddChip-p1-mode" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">mode</button><button onclick="ddPickMeasure('p1','median')" id="ddChip-p1-median" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">median</button><button onclick="ddPickMeasure('p1','range')" id="ddChip-p1-range" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">range</button><button onclick="ddPickMeasure('p1','count')" id="ddChip-p1-count" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">count</button></div>
+<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;"><button id="ddChip-p1-mode" onclick="ddPickMeasure('p1','mode')" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">mode</button><button id="ddChip-p1-median" onclick="ddPickMeasure('p1','median')" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">median</button><button id="ddChip-p1-range" onclick="ddPickMeasure('p1','range')" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">range</button><button id="ddChip-p1-count" onclick="ddPickMeasure('p1','count')" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">count</button></div>
 <div id="ddMeasureFb-p1" style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:10px;min-height:18px;"></div>
-
 <div style="text-align:center;font-size:12px;color:#0D3D6B;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 2 · Type your answer</div>
 <div style="display:flex;justify-content:center;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px;">
-<input type="number" step="any" id="ddAns-p1" placeholder="?" style="border:2px solid #D6D6D6;border-radius:10px;padding:8px 12px;font-size:18px;font-weight:800;text-align:center;width:100px;font-family:'Lora',Georgia,serif;color:#0E1C42;" />
+<input id="ddAns-p1" placeholder="?" step="any" style="border:2px solid #D6D6D6;border-radius:10px;padding:8px 12px;font-size:18px;font-weight:800;text-align:center;width:100px;font-family:'Lora',Georgia,serif;color:#0E1C42;" type="number"/>
 <span style="font-family:'Lora',Georgia,serif;font-size:14px;color:#3A4A6B;">points</span>
 <button onclick="ddCheck('p1')" style="background:#3A6B9A;color:#fff;border:none;border-radius:10px;padding:9px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">✓ Check</button>
 <button onclick="ddReset('p1')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺</button>
@@ -586,21 +629,17 @@
 <div class="journal-label">✏️ Your reasoning <span class="saved-dot" id="dot-p1"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 1: spelling mode" id="journal-p1" oninput="autoSave(this,'dot-p1')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Story 2 — Rainfall</div><div class="activity-sub">Pick the right measure.</div></div></div><div class="activity-body">
-<div class="dd-card" data-id="p2" data-values="0,1,3,0,2,5,0" data-correct-measure="range" data-correct-answer="5" data-units="inches" style="background:#F5FBFE;border:2px solid #BFE3F2;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="dd-card" data-correct-answer="5" data-correct-measure="range" data-id="p2" data-units="inches" data-values="0,1,3,0,2,5,0" style="background:#F5FBFE;border:2px solid #BFE3F2;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="background:#fff;border-left:4px solid #1E5F9E;padding:12px 14px;border-radius:8px;margin-bottom:14px;color:#0E1C42;font-family:'Lora',Georgia,serif;font-size:15px;line-height:1.6;"><strong>Story.</strong> Rainfall in inches for 7 days: 0, 1, 3, 0, 2, 5, 0. What was the DIFFERENCE between the wettest and driest day?</div>
-
 <div style="text-align:center;font-size:12px;color:#0D3D6B;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Data set</div>
 <div style="text-align:center;background:#fff;border:1.5px dashed #BFE3F2;border-radius:10px;padding:10px 14px;margin-bottom:14px;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:#0E1C42;">0, 1, 3, 0, 2, 5, 0 <span style="color:#3A4A6B;font-weight:400;font-size:13px;">(inches)</span></div>
-
 <div style="text-align:center;font-size:12px;color:#0D3D6B;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 1 · Pick the measure</div>
-<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;"><button onclick="ddPickMeasure('p2','mode')" id="ddChip-p2-mode" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">mode</button><button onclick="ddPickMeasure('p2','median')" id="ddChip-p2-median" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">median</button><button onclick="ddPickMeasure('p2','range')" id="ddChip-p2-range" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">range</button><button onclick="ddPickMeasure('p2','count')" id="ddChip-p2-count" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">count</button></div>
+<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;"><button id="ddChip-p2-mode" onclick="ddPickMeasure('p2','mode')" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">mode</button><button id="ddChip-p2-median" onclick="ddPickMeasure('p2','median')" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">median</button><button id="ddChip-p2-range" onclick="ddPickMeasure('p2','range')" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">range</button><button id="ddChip-p2-count" onclick="ddPickMeasure('p2','count')" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">count</button></div>
 <div id="ddMeasureFb-p2" style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:10px;min-height:18px;"></div>
-
 <div style="text-align:center;font-size:12px;color:#0D3D6B;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 2 · Type your answer</div>
 <div style="display:flex;justify-content:center;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px;">
-<input type="number" step="any" id="ddAns-p2" placeholder="?" style="border:2px solid #D6D6D6;border-radius:10px;padding:8px 12px;font-size:18px;font-weight:800;text-align:center;width:100px;font-family:'Lora',Georgia,serif;color:#0E1C42;" />
+<input id="ddAns-p2" placeholder="?" step="any" style="border:2px solid #D6D6D6;border-radius:10px;padding:8px 12px;font-size:18px;font-weight:800;text-align:center;width:100px;font-family:'Lora',Georgia,serif;color:#0E1C42;" type="number"/>
 <span style="font-family:'Lora',Georgia,serif;font-size:14px;color:#3A4A6B;">inches</span>
 <button onclick="ddCheck('p2')" style="background:#3A6B9A;color:#fff;border:none;border-radius:10px;padding:9px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">✓ Check</button>
 <button onclick="ddReset('p2')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺</button>
@@ -610,21 +649,17 @@
 <div class="journal-label">✏️ Your reasoning <span class="saved-dot" id="dot-p2"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 2: rainfall range" id="journal-p2" oninput="autoSave(this,'dot-p2')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#1E5F9E;">3</div><div><div class="activity-title">Story 3 — Bookshelf</div><div class="activity-sub">A trickier story.</div></div></div><div class="activity-body">
-<div class="dd-card" data-id="p3" data-values="12,18,15,20,9" data-correct-measure="median" data-correct-answer="15" data-units="books" style="background:#F5FBFE;border:2px solid #BFE3F2;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="dd-card" data-correct-answer="15" data-correct-measure="median" data-id="p3" data-units="books" data-values="12,18,15,20,9" style="background:#F5FBFE;border:2px solid #BFE3F2;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="background:#fff;border-left:4px solid #1E5F9E;padding:12px 14px;border-radius:8px;margin-bottom:14px;color:#0E1C42;font-family:'Lora',Georgia,serif;font-size:15px;line-height:1.6;"><strong>Story.</strong> Sam counted books on 5 shelves: 12, 18, 15, 20, 9. Sam wants to know the MIDDLE shelf count when sorted.</div>
-
 <div style="text-align:center;font-size:12px;color:#0D3D6B;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Data set</div>
 <div style="text-align:center;background:#fff;border:1.5px dashed #BFE3F2;border-radius:10px;padding:10px 14px;margin-bottom:14px;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:#0E1C42;">12, 18, 15, 20, 9 <span style="color:#3A4A6B;font-weight:400;font-size:13px;">(books)</span></div>
-
 <div style="text-align:center;font-size:12px;color:#0D3D6B;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 1 · Pick the measure</div>
-<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;"><button onclick="ddPickMeasure('p3','mode')" id="ddChip-p3-mode" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">mode</button><button onclick="ddPickMeasure('p3','median')" id="ddChip-p3-median" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">median</button><button onclick="ddPickMeasure('p3','range')" id="ddChip-p3-range" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">range</button><button onclick="ddPickMeasure('p3','count')" id="ddChip-p3-count" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">count</button></div>
+<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;"><button id="ddChip-p3-mode" onclick="ddPickMeasure('p3','mode')" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">mode</button><button id="ddChip-p3-median" onclick="ddPickMeasure('p3','median')" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">median</button><button id="ddChip-p3-range" onclick="ddPickMeasure('p3','range')" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">range</button><button id="ddChip-p3-count" onclick="ddPickMeasure('p3','count')" style="background:#fff;border:2px solid #BFE3F2;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;color:#0E1C42;">count</button></div>
 <div id="ddMeasureFb-p3" style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:10px;min-height:18px;"></div>
-
 <div style="text-align:center;font-size:12px;color:#0D3D6B;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Step 2 · Type your answer</div>
 <div style="display:flex;justify-content:center;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px;">
-<input type="number" step="any" id="ddAns-p3" placeholder="?" style="border:2px solid #D6D6D6;border-radius:10px;padding:8px 12px;font-size:18px;font-weight:800;text-align:center;width:100px;font-family:'Lora',Georgia,serif;color:#0E1C42;" />
+<input id="ddAns-p3" placeholder="?" step="any" style="border:2px solid #D6D6D6;border-radius:10px;padding:8px 12px;font-size:18px;font-weight:800;text-align:center;width:100px;font-family:'Lora',Georgia,serif;color:#0E1C42;" type="number"/>
 <span style="font-family:'Lora',Georgia,serif;font-size:14px;color:#3A4A6B;">books</span>
 <button onclick="ddCheck('p3')" style="background:#3A6B9A;color:#fff;border:none;border-radius:10px;padding:9px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">✓ Check</button>
 <button onclick="ddReset('p3')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺</button>
@@ -634,17 +669,13 @@
 <div class="journal-label">✏️ Your sorted list + reasoning <span class="saved-dot" id="dot-p3"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 3: bookshelf median" id="journal-p3" oninput="autoSave(this,'dot-p3')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="tab-next-wrap"><p class="tab-transition-voice">Three detective cases solved. Now show it.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">For each story, name the measure, compute, and answer with units.</div></div></div><div class="activity-body"><p>For each story: read carefully, pick the measure, compute, sense-check the answer.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Do the denominators MATCH? Or do I need to rename one or both? Or is a benchmark (<span class="frac"><span class="num">1</span><span class="den">2</span></span>, 1) faster?</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Forecast.</strong> 5 days of high temperatures (°F): 78, 81, 75, 81, 80. (a) MOST common temperature? (b) MIDDLE temperature when sorted? (c) DIFFERENCE between hottest and coolest?</p><div class="journal-label">✏️ All three answers with units <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: forecast" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-
 <div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Unit 9 closer.</strong> Make your OWN data set of 7 numbers (any whole numbers from 1 to 20) that has: mode 8, median 8, and range 10. Write your data set and verify all three measures.</p><div class="journal-label">✏️ My data set + check <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: design own" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
-
-
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#1E5F9E;"><div class="activity-head"><div class="activity-num" style="background:#1E5F9E;color:#fff;">🗺️</div><div><div class="activity-title">Unit 7 Complete — Where This Goes Next</div><div class="activity-sub">Looking ahead</div></div></div><div class="activity-body"><p>You've compared and ordered fractions that all fit between 0 and 1.</p><p>Next lesson: <strong>Improper Fractions and Mixed Numbers.</strong> What if the top is BIGGER than the bottom? <span class="frac"><span class="num">8</span><span class="den">5</span></span> of a pie isn't just half — it's a WHOLE pie plus some extra. That's an improper fraction, and it can also be written as a mixed number (1 <span class="frac"><span class="num">3</span><span class="den">5</span></span>).</p><p>The big question opening 6.03: <em>How do you show a fraction that's more than 1 whole?</em></p></div></div></div></div>
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed all 6 problems above.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed both column subtractions on every problem.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed the borrow step whenever the fraction column needed it and simplified at the end.</span></div></div></div>
@@ -1240,4 +1271,74 @@ if(typeof window !== 'undefined'){
     setTimeout(ddInitAll, 0);
   }
 }
-</script></body></html>
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = true;
+var FLUENCY_TITLE = "Mixed Multiplication & Division — One-Minute Check";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
+</script>
+</body></html>

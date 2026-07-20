@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Optima Academy Online — Grade 4 Math Lesson 4.01.07</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
@@ -306,48 +307,108 @@
 .bubble-text{font-size:14.5px;color:#0E1C42;line-height:1.5;font-weight:600;font-family:'Lora',Georgia,serif;font-style:italic}
 @media(max-width:620px){.bubble{flex:1 1 100%;max-width:100%}}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
 <div class="progress-wrap"><span class="progress-label">📐 Lesson Progress</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><span class="progress-pct" id="progressPct">0%</span></div>
 <div class="header">
-  <div class="header-brand">
-    <div class="header-logo">
-      <img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" />
-    </div>
-    <div>
-      <div class="header-org">Optima Academy Online</div>
-      <div class="header-sub">An Education Experience Company</div>
-    </div>
-  </div>
-  <div class="header-title"><em>Calculations and Place Value</em></div>
-  <div class="header-badge">
-    <span class="header-badge-icon">🦉</span>
-    <span class="header-badge-text">Lesson 4.01.07</span>
-  </div>
+<div class="header-brand">
+<div class="header-logo">
+<img alt="Optima Academy" src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png"/>
+</div>
+<div>
+<div class="header-org">Optima Academy Online</div>
+<div class="header-sub">An Education Experience Company</div>
+</div>
+</div>
+<div class="header-title"><em>Calculations and Place Value</em></div>
+<div class="header-badge">
+<span class="header-badge-icon">🦉</span>
+<span class="header-badge-text">Lesson 4.01.07</span>
+</div>
 </div>
 <div class="quote-strip"><div class="quote-strip-text">"Estimate first. Then check. Place value runs both moves."</div><div class="quote-strip-attr">Fluency Big Idea</div></div>
-<div class="info-strip"><div class="info-cell"><div class="info-icon" style="background:#F0E8FF;">🧭</div><div><div class="info-label">Unit</div><div class="info-value">Unit 1</div><div class="info-detail">Numbers to 1,000,000</div></div></div><div class="info-cell"><div class="info-icon" style="background:#E3F8ED;">📅</div><div><div class="info-label">Lesson</div><div class="info-value">4.01.07</div><div class="info-detail">U5 Fluency</div></div></div><div class="info-cell"><div class="info-icon" style="background:#EAF0FF;">📐</div><div><div class="info-label">Standard</div><div class="info-value">MA.4.NSO.1.x</div><div class="info-detail">Place value & calculation</div></div></div><div class="info-cell"><div class="info-icon" style="background:#FFF8E6;">🔢</div><div><div class="info-label">Focus</div><div class="info-value">Estimate &amp; Check</div><div class="info-detail">MTR.5.1 · MTR.6.1</div></div></div></div>
+<div class="info-strip"><div class="info-cell"><div class="info-icon" style="background:#F0E8FF;">🧭</div><div><div class="info-label">Unit</div><div class="info-value">Unit 1</div><div class="info-detail">Numbers to 1,000,000</div></div></div><div class="info-cell"><div class="info-icon" style="background:#E3F8ED;">📅</div><div><div class="info-label">Lesson</div><div class="info-value">4.01.07</div><div class="info-detail">U5 Fluency</div></div></div><div class="info-cell"><div class="info-icon" style="background:#EAF0FF;">📐</div><div><div class="info-label">Standard</div><div class="info-value">MA.4.NSO.1.x</div><div class="info-detail">Place value &amp; calculation</div></div></div><div class="info-cell"><div class="info-icon" style="background:#FFF8E6;">🔢</div><div><div class="info-label">Focus</div><div class="info-value">Estimate &amp; Check</div><div class="info-detail">MTR.5.1 · MTR.6.1</div></div></div></div>
 <div class="explorer-strip"><span class="explorer-compass">🧭</span><div><div class="explorer-mission-label">Today's Mission</div><div class="explorer-mission-text">Put the whole unit to work. Use rounding to ESTIMATE a sum or difference, then add or subtract by place to get the EXACT answer. Compare the two to check that your answer makes sense.</div></div></div>
 <div class="intro-2col"><div class="intro-card theme-question"><div class="intro-card-head"><div class="intro-card-head-icon">❓</div><div><div class="intro-card-head-label">Essential Question</div><div class="intro-card-head-title">How can place value make calculations both faster AND more honest?</div></div></div><div class="intro-card-body"><p>Every lesson in this unit used place value — to read numbers, to find patterns, to compare, to round. Today, place value pulls another job: <strong>doing calculations</strong>.</p><p>You'll estimate a sum by rounding both numbers first. Then you'll add them exactly, by place. The estimate tells you what to expect; the exact answer tells you the truth. If they don't agree, something's off — and you can find it.</p></div></div><div class="intro-card theme-objectives"><div class="intro-card-head"><div class="intro-card-head-icon">🎯</div><div><div class="intro-card-head-label">Today's Objectives</div><div class="intro-card-head-title">You will…</div></div></div><div class="intro-card-body"><div class="obj-line"><span class="obj-icon">📐</span><span><strong>Estimate</strong> sums and differences by rounding first.</span></div><div class="obj-line"><span class="obj-icon">🧮</span><span><strong>Add and subtract</strong> multi-digit numbers by place value.</span></div><div class="obj-line"><span class="obj-icon">💬</span><span><strong>Check</strong> exact answers against your estimate — and catch mistakes when the two don't agree.</span></div></div></div></div>
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
-
 <div class="tab-panel active" id="tab-warmup">
-  <div class="video-wrap" data-video-slot="4-01-07-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.01.07</div><div class="video-wrap-title">Estimate first. Then check.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-07_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write two season attendance totals on the board: <strong>487,290</strong> and <strong>312,580</strong>. Ask: "About how many fans came across both seasons combined?" Pause. "We could just add them up — but a smart move is to <em>estimate</em> first." Round each to the nearest 100,000: 487,290 → 500,000. 312,580 → 300,000. Add the rounded numbers: 500,000 + 300,000 = 800,000. "So the answer should be about 800,000." Now compute the EXACT answer by place: 487,290 + 312,580. Add ones (0+0=0), tens (9+8=17, write 7 carry 1), hundreds (2+5+1=8), thousands (7+2=9), ten-thousands (8+1=9), hundred-thousands (4+3=7). Write 799,870. "799,870 is REALLY close to 800,000 — only 130 different. The estimate told us what to expect. The exact answer matched. We can trust it." Connect to the unit: "Place value was the thread the whole way. You used it to read numbers, find patterns, compare them, and round. Today, place value runs the calculation — and rounding runs the check." Tone: tying things together. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-07-welcome --></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
-    <p>The crew has been with you through the whole unit. Each one runs a part of today's "estimate, then check" routine.</p>
-    <div class="bubble-row">
-      <div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — estimates first</div><div class="bubble-text">"Before I calculate, I round both numbers and add (or subtract) the rounded versions. That gives me a target."</div></div></div>
-      <div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — adds by place</div><div class="bubble-text">"I stack the numbers and add each place separately. Ones first, then tens, then hundreds — same way it's always worked."</div></div></div>
-    </div>
-    <div class="bubble-row">
-      <div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — uses a bar model for word problems</div><div class="bubble-text">"For word problems I draw two bars side by side. Then I can SEE whether to add or subtract."</div></div></div>
-      <div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — checks against the estimate</div><div class="bubble-text">"After I get an exact answer, I compare it to Felix's estimate. If they're nowhere near each other, one of them is wrong."</div></div></div>
-    </div>
-    <div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>The whole crew works together today. Felix sets the target. Atlas does the math. Hazel draws when the problem needs a picture. Cora double-checks against the target.</p></div>
-  </div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Estimate the Sum</div><div class="activity-sub">Round each number first, then add the rounded versions.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>Two quick checks. Your full practice is in the Independent Practice PDF.</p>
+<div class="fluency-box" data-timed="true">
+<div class="fluency-head">
+<div class="fluency-head-icon">⏳</div>
+<div><div class="fluency-head-label">TIMED FLUENCY CHECK</div><div class="fluency-head-title">Mixed Multiplication &amp; Division — One-Minute Check</div></div>
+<div class="fluency-timer-ui"><span class="fluency-timer-display" id="fluencyTimerDisplay">60s</span><button class="fluency-start-btn" id="fluencyStartBtn" onclick="fluencyStart()">Start 1-Minute Check</button></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Unit check — Quarter 1 timed fluency. Click Start, then answer as many as you can in 60 seconds. Answers lock in automatically when time is up.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">7 × 8</span><input autocomplete="off" class="fluency-input" data-answer="56" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 9</span><input autocomplete="off" class="fluency-input" data-answer="54" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 7</span><input autocomplete="off" class="fluency-input" data-answer="56" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 6</span><input autocomplete="off" class="fluency-input" data-answer="54" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">11 × 4</span><input autocomplete="off" class="fluency-input" data-answer="44" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">12 × 3</span><input autocomplete="off" class="fluency-input" data-answer="36" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 9</span><input autocomplete="off" class="fluency-input" data-answer="81" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 8</span><input autocomplete="off" class="fluency-input" data-answer="64" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 7</span><input autocomplete="off" class="fluency-input" data-answer="42" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 6</span><input autocomplete="off" class="fluency-input" data-answer="42" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">56 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">63 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="7" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">72 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">48 ÷ 6</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">81 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">64 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">42 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="6" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">36 ÷ 4</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">96 ÷ 12</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">66 ÷ 11</span><input autocomplete="off" class="fluency-input" data-answer="6" disabled="" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" disabled="" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Mixed Multiplication &amp; Division — One-Minute Check)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
+<p>The crew has been with you through the whole unit. Each one runs a part of today's "estimate, then check" routine.</p>
+<div class="bubble-row">
+<div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — estimates first</div><div class="bubble-text">"Before I calculate, I round both numbers and add (or subtract) the rounded versions. That gives me a target."</div></div></div>
+<div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — adds by place</div><div class="bubble-text">"I stack the numbers and add each place separately. Ones first, then tens, then hundreds — same way it's always worked."</div></div></div>
+</div>
+<div class="bubble-row">
+<div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — uses a bar model for word problems</div><div class="bubble-text">"For word problems I draw two bars side by side. Then I can SEE whether to add or subtract."</div></div></div>
+<div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — checks against the estimate</div><div class="bubble-text">"After I get an exact answer, I compare it to Felix's estimate. If they're nowhere near each other, one of them is wrong."</div></div></div>
+</div>
+<div class="callout callout-tip" style="margin-top:8px;"><span class="callout-icon">💡</span><p>The whole crew works together today. Felix sets the target. Atlas does the math. Hazel draws when the problem needs a picture. Cora double-checks against the target.</p></div>
+</div></div>
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🔎</div><div><div class="activity-title">Warm-Up: Estimate the Sum</div><div class="activity-sub">Round each number first, then add the rounded versions.</div></div><span class="activity-time" style="background:#F5C518;color:#0E1C42;">~5 min</span></div><div class="activity-body"><p>Two quick checks. Your full practice is in the Independent Practice PDF.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:grid;gap:14px;">
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
@@ -378,16 +439,16 @@
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Answers:</strong> 38,000 + 47,000 ≈ 40,000 + 50,000 = <strong>90,000</strong>. 26,800 + 13,400 ≈ 30,000 + 10,000 = <strong>40,000</strong>. 52,300 − 19,800 ≈ 50,000 − 20,000 = <strong>30,000</strong>. Rounding each number first turns a hard calculation into a quick one.</div>
-<div class="journal-label">✏️ Why does rounding BEFORE adding make the calculation easier? Use what you know about place value. <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: Why rounding before adding makes it easier" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-01-07-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.01.07</div><div class="video-wrap-title">Left to right finds the answer fastest</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-07_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Show that estimating turns hard arithmetic into easy. <strong>38,000 + 47,000 (nearest 10,000):</strong> Round to 40,000 + 50,000 = 90,000. "Estimate: about 90,000." <strong>26,800 + 13,400 (nearest 10,000):</strong> Round to 30,000 + 10,000 = 40,000. "About 40,000." <strong>52,300 − 19,800 (nearest 10,000):</strong> Round to 50,000 − 20,000 = 30,000. "About 30,000." Connect to the lesson: "Estimating works because once you round, you're only adding (or subtracting) ONE pair of place-value digits at a time. 5 ten-thousands + 2 ten-thousands. Done. Today, you'll do this BEFORE you compute the exact answer — so you'll know what to expect." (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-07-readiness-feedback --></div></div></div></div>
-  <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
+<div class="journal-label">✏️ Why does rounding BEFORE adding make the calculation easier? Use what you know about place value. <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: Why rounding before adding makes it easier" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
+<div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Look closely, then take a guess.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">🏟️</span><p>Two seasons of the same team are about to combine. <strong>Last year: 487,290 fans. This year: 312,580 fans.</strong> The athletic director wants to announce the two-season total at the pep rally — but she also wants to know roughly what to expect <em>before</em> she does the full addition. How would you help?</p></div>
 <div class="number-talk-visual">
 <div class="number-talk-prompt">Look at the two numbers carefully. Before any pencil-and-paper math — what's an approximate two-season total?</div>
-<div class="visual-equation" style="font-size:22px;letter-spacing:1px;">487,290 &nbsp;+&nbsp; 312,580 &nbsp;=&nbsp; ?</div>
+<div class="visual-equation" style="font-size:22px;letter-spacing:1px;">487,290  +  312,580  =  ?</div>
 <div class="notice-wonder-grid">
-<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" id="journal-notice" data-label="Warm-Up — Notice: What I notice about the two season totals" placeholder="" oninput="autoSave(this,'dot-notice')" style="min-height:60px;"></textarea></div>
-<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" id="journal-wonder" data-label="Warm-Up — Wonder: What I wonder about combining the totals" placeholder="" oninput="autoSave(this,'dot-wonder')" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>🔍 I Notice…</h4><textarea class="journal-box" data-label="Warm-Up — Notice: What I notice about the two season totals" id="journal-notice" oninput="autoSave(this,'dot-notice')" placeholder="" style="min-height:60px;"></textarea></div>
+<div class="notice-wonder-box"><h4>❓ I Wonder…</h4><textarea class="journal-box" data-label="Warm-Up — Wonder: What I wonder about combining the totals" id="journal-wonder" oninput="autoSave(this,'dot-wonder')" placeholder="" style="min-height:60px;"></textarea></div>
 </div>
 </div>
 <p><strong>Estimate first:</strong> Round each season to the nearest 100,000 in your head, then add. What's your estimate?</p>
@@ -399,50 +460,49 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>Before you predict, ask yourself:</strong> What does 487,290 round to (nearest 100,000)? What does 312,580 round to? Now add those two ROUNDED numbers in your head — that's the estimate.</p></div>
 <div class="journal-label">✏️ My estimate: Round each total to the nearest 100,000, add them in your head, and write your estimate. Then predict — will the EXACT answer be a little bigger or a little smaller than your estimate? Why? <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think Prompt: Estimate 487,290 + 312,580" placeholder="" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think Prompt: Estimate 487,290 + 312,580" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">You estimated. Now let's see the exact answer — and check whether your estimate was on target.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
-  <div class="vocab-section" aria-label="Daily vocabulary flash cards">
-  <div class="vocab-section-head">
-    <div class="vocab-section-icon">📚</div>
-    <div>
-      <div class="vocab-section-label">Daily Vocabulary</div>
-      <div class="vocab-section-title">Tap to Build Today’s Math Language</div>
-    </div>
-  </div>
-  <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
-  <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for estimate. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">📐</div><div class="fc-word">estimate</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">estimate</div><div class="fc-def">a quick, approximate answer — often made by rounding both numbers first, then adding or subtracting.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for sum. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">➕</div><div class="fc-word">sum</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">sum</div><div class="fc-def">the answer to an addition problem. The total of the two (or more) numbers you added together.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for difference. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">➖</div><div class="fc-word">difference</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">difference</div><div class="fc-def">the answer to a subtraction problem. How much one number is larger than another.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for reasonable. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">✅</div><div class="fc-word">reasonable</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">reasonable</div><div class="fc-def">an answer that makes sense — it's close to your estimate, and place value works out.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-01-07-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-01-07 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-01-07-concept --></div></div></div></div>
+<div aria-label="Daily vocabulary flash cards" class="vocab-section">
+<div class="vocab-section-head">
+<div class="vocab-section-icon">📚</div>
+<div>
+<div class="vocab-section-label">Daily Vocabulary</div>
+<div class="vocab-section-title">Tap to Build Today’s Math Language</div>
 </div>
-<div class="video-wrap" data-video-slot="4-01-07-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.01.07</div><div class="video-wrap-title">Estimate. Compute. Check.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-07_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Show the three-step workflow with the two numbers from the warm-up: <strong>487,290 + 312,580</strong>. <strong>Step 1 — Estimate.</strong> Round each to the nearest 100,000. 487,290 → 500,000 (decider 8, round up). 312,580 → 300,000 (decider 1, round down). Add: 500,000 + 300,000 = 800,000. "Estimate: about 800,000." <strong>Step 2 — Compute by place.</strong> Stack the original numbers vertically, lined up by place. Add ones (0+0=0), tens (9+8=17, write 7 carry 1), hundreds (2+5+1=8), thousands (7+2=9), ten-thousands (8+1=9), hundred-thousands (4+3=7). Write 799,870. <strong>Step 3 — Check.</strong> Compare 799,870 to the estimate (800,000). "799,870 is very close to 800,000 — only 130 off. The estimate and the exact answer agree. We can trust 799,870." Now show a CHECK that catches a mistake. Pretend a student wrote 799,870 as 7,998,700 by accident. "Estimate said about 800,000. The student wrote about 8 million. That's a factor of 10 off — something's wrong. Place value caught the error." Connect to the unit: "Place value is what makes every part of this work. Reading the digits, rounding them, adding them — same chart, same rules." Tone: triumphant, summing up the unit. (~2–3 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-07-concept --></div></div></div></div>
-  <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Use the Estimate-Then-Check workbench below. Pick a rounding place, see the two estimates, see the exact sum, and notice how close they are. The estimate is what makes the exact answer easy to trust.</p></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔢</div><div><div class="activity-title">Estimate-Then-Check Workbench</div><div class="activity-sub">Pick a rounding place. See the estimate. Then see the exact answer.</div></div></div><div class="activity-body"><p>You're combining <strong>487,290 + 312,580</strong>. Pick a rounding place — that decides how rough your estimate is. Then tap <strong>Show Exact Answer</strong> to compute the real sum. Compare them.</p><div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:14px;margin:12px 0;">
+</div>
+<p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
+<div class="vocab-grid">
+<div aria-label="Vocabulary card for estimate. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">📐</div><div class="fc-word">estimate</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">estimate</div><div class="fc-def">a quick, approximate answer — often made by rounding both numbers first, then adding or subtracting.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for sum. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">➕</div><div class="fc-word">sum</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">sum</div><div class="fc-def">the answer to an addition problem. The total of the two (or more) numbers you added together.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for difference. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">➖</div><div class="fc-word">difference</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">difference</div><div class="fc-def">the answer to a subtraction problem. How much one number is larger than another.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for reasonable. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">✅</div><div class="fc-word">reasonable</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">reasonable</div><div class="fc-def">an answer that makes sense — it's close to your estimate, and place value works out.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Use the Estimate-Then-Check workbench below. Pick a rounding place, see the two estimates, see the exact sum, and notice how close they are. The estimate is what makes the exact answer easy to trust.</p></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔢</div><div><div class="activity-title">Estimate-Then-Check Workbench</div><div class="activity-sub">Pick a rounding place. See the estimate. Then see the exact answer.</div></div></div><div class="activity-body"><p>You're combining <strong>487,290 + 312,580</strong>. Pick a rounding place — that decides how rough your estimate is. Then tap <strong>Show Exact Answer</strong> to compute the real sum. Compare them.</p><div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:14px;margin:12px 0;">
 <div style="text-align:center;font-size:13px;color:#3A4A6B;font-weight:700;margin-bottom:10px;">Round each number to the nearest:</div>
 <div class="value-card-row" id="estPlaceBank" style="justify-content:center;margin-bottom:14px;flex-wrap:wrap;">
 <button class="value-card" onclick="pickEstimatePlace(1000,this)" style="min-width:70px;"><div class="big" style="font-size:16px;">1,000</div></button>
@@ -468,7 +528,7 @@
 <div style="text-align:center;margin-top:12px;"><button class="purple-btn" onclick="revealExactSum()">Show Exact Answer</button> <button class="orange-btn" onclick="resetEstimate()" style="margin-left:8px;">↩ Reset</button></div>
 </div>
 <div class="reveal-box" id="learnReveal"><strong>You ran the workflow.</strong> The estimate told you what to expect. The exact answer (799,870) lined up with the estimate. Place value did both jobs — the rounding AND the addition by place.</div>
-  <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 What You Just Saw</div><p><strong>Estimate first. Compute exactly. Compare.</strong></p><p>Step 1 — <strong>Estimate</strong>: round both numbers to a place you can add in your head. Add the rounded versions.</p><p>Step 2 — <strong>Compute exactly</strong>: stack the original numbers by place. Add or subtract one place at a time, starting from the ones. Carry when a place hits 10.</p><p>Step 3 — <strong>Compare</strong>: does the exact answer match the estimate? If yes, trust it. If no — something's wrong. Re-check.</p><p>This is what fluency looks like. You're not just answering — you're predicting, computing, and self-checking. Place value runs all three.</p></div>
+<div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 What You Just Saw</div><p><strong>Estimate first. Compute exactly. Compare.</strong></p><p>Step 1 — <strong>Estimate</strong>: round both numbers to a place you can add in your head. Add the rounded versions.</p><p>Step 2 — <strong>Compute exactly</strong>: stack the original numbers by place. Add or subtract one place at a time, starting from the ones. Carry when a place hits 10.</p><p>Step 3 — <strong>Compare</strong>: does the exact answer match the estimate? If yes, trust it. If no — something's wrong. Re-check.</p><p>This is what fluency looks like. You're not just answering — you're predicting, computing, and self-checking. Place value runs all three.</p></div>
 <div style="margin-top:16px;">
 <div class="key-concept"><div class="key-concept-label">🔗 Three Estimates, One Truth</div>
 <p>The exact sum of <strong>487,290 + 312,580</strong> is <strong>799,870</strong>. Three different rounding choices give three different estimates — each closer or further from the truth.</p>
@@ -502,7 +562,7 @@
 </div>
 </div>
 </div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">🧮</div><div><div class="activity-title">Add by Place</div><div class="activity-sub">Place by place. Carry when you must.</div></div></div><div class="activity-body"><p>Atlas's strategy: stack the two numbers by place, then add one column at a time, starting from the ones. Tap each column's answer below.</p>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">🧮</div><div><div class="activity-title">Add by Place</div><div class="activity-sub">Place by place. Carry when you must.</div></div></div><div class="activity-body"><p>Atlas's strategy: stack the two numbers by place, then add one column at a time, starting from the ones. Tap each column's answer below.</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:14px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:22px;font-weight:900;color:#0E1C42;line-height:1.6;margin-bottom:14px;">
 <div>235,418</div>
@@ -534,22 +594,22 @@
 </div>
 </div>
 </div>
-<div id="addByPlaceFb" class="inline-feedback" style="margin-top:14px;"></div>
+<div class="inline-feedback" id="addByPlaceFb" style="margin-top:14px;"></div>
 </div>
-<div class="journal-label">✏️ Why do we always start with the ONES place when adding by place — instead of starting at the leftmost place? <span class="saved-dot" id="dot-digit"></span></div><textarea class="journal-box" id="journal-digit" data-label="Learn — Add by Place: Why start at ones?" placeholder="" oninput="autoSave(this,'dot-digit')"></textarea></div></div>
-  <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: Find the Difference</div><div class="activity-sub">Estimate, subtract by place, check.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>The home team drew <strong>564,830</strong> fans last season. The away team drew <strong>318,470</strong>. How many MORE fans did the home team draw? Use the estimate-then-check workflow.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew work through it:</p>
+<div class="journal-label">✏️ Why do we always start with the ONES place when adding by place — instead of starting at the leftmost place? <span class="saved-dot" id="dot-digit"></span></div><textarea class="journal-box" data-label="Learn — Add by Place: Why start at ones?" id="journal-digit" oninput="autoSave(this,'dot-digit')" placeholder=""></textarea></div></div>
+<div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: Find the Difference</div><div class="activity-sub">Estimate, subtract by place, check.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>The home team drew <strong>564,830</strong> fans last season. The away team drew <strong>318,470</strong>. How many MORE fans did the home team draw? Use the estimate-then-check workflow.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew work through it:</p>
 <div class="bubble-row">
-  <div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — estimate</div><div class="bubble-text">"Round each to the nearest 10,000. 564,830 → 560,000 (decider thousands 4, round down). 318,470 → 320,000 (decider thousands 8, round up). Estimate: 560,000 − 320,000 = 240,000."</div></div></div>
-  <div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — subtract by place</div><div class="bubble-text">"Stack them. Subtract place by place, starting from ones. Ones: 0 − 0 = 0. Tens: 3 − 7 — need to borrow. Take 1 from hundreds: 13 − 7 = 6. Hundreds is now 7. 7 − 4 = 3. Thousands: 4 − 8 — borrow again from ten-thousands. 14 − 8 = 6. Ten-thousands now 5. 5 − 1 = 4. Hundred-thousands: 5 − 3 = 2."</div></div></div>
+<div class="bubble felix"><div class="bubble-avatar">F</div><div class="bubble-body"><div class="bubble-name">Felix — estimate</div><div class="bubble-text">"Round each to the nearest 10,000. 564,830 → 560,000 (decider thousands 4, round down). 318,470 → 320,000 (decider thousands 8, round up). Estimate: 560,000 − 320,000 = 240,000."</div></div></div>
+<div class="bubble atlas"><div class="bubble-avatar">A</div><div class="bubble-body"><div class="bubble-name">Atlas — subtract by place</div><div class="bubble-text">"Stack them. Subtract place by place, starting from ones. Ones: 0 − 0 = 0. Tens: 3 − 7 — need to borrow. Take 1 from hundreds: 13 − 7 = 6. Hundreds is now 7. 7 − 4 = 3. Thousands: 4 − 8 — borrow again from ten-thousands. 14 − 8 = 6. Ten-thousands now 5. 5 − 1 = 4. Hundred-thousands: 5 − 3 = 2."</div></div></div>
 </div>
 <p style="font-family:'Lora',Georgia,serif;background:#FAFBFF;border:2px solid #E2E8F4;border-radius:12px;padding:10px;text-align:center;font-size:18px;font-weight:800;">564,830 − 318,470 = 246,360</p>
 <div class="bubble-row">
-  <div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — draws the bar model</div><div class="bubble-text">"I picture two bars: a long one (home) labeled 564,830, and a shorter one (away) labeled 318,470 below it. The DIFFERENCE is the part that sticks out — the gap between them."</div></div></div>
-  <div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — checks against the estimate</div><div class="bubble-text">"Felix's estimate said about 240,000. Atlas's exact answer is 246,360. Difference of about 6,360 — that's within the rounding error. The answer is REASONABLE. We can trust 246,360."</div></div></div>
+<div class="bubble hazel"><div class="bubble-avatar">H</div><div class="bubble-body"><div class="bubble-name">Hazel — draws the bar model</div><div class="bubble-text">"I picture two bars: a long one (home) labeled 564,830, and a shorter one (away) labeled 318,470 below it. The DIFFERENCE is the part that sticks out — the gap between them."</div></div></div>
+<div class="bubble cora"><div class="bubble-avatar">C</div><div class="bubble-body"><div class="bubble-name">Cora — checks against the estimate</div><div class="bubble-text">"Felix's estimate said about 240,000. Atlas's exact answer is 246,360. Difference of about 6,360 — that's within the rounding error. The answer is REASONABLE. We can trust 246,360."</div></div></div>
 </div>
 <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>The whole crew working together:</strong> Felix sets the target with a fast estimate. Atlas does the place-by-place subtraction. Hazel's bar model helps when the word problem is about comparison. Cora checks the exact answer against the estimate. If they don't roughly agree, something is off — and that's a flag to re-check the work.</p></div></div></div>
-  <div class="video-wrap" data-video-slot="4-01-07-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.01.07</div><div class="video-wrap-title">Estimate, subtract by place, then check</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-07_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk through all three steps end to end. <strong>Step 1 — Estimate.</strong> Round both numbers to nearest 10,000. 564,830 → 560,000 (decider thousands = 4, down). 318,470 → 320,000 (decider thousands = 8, up). Subtract: 560,000 − 320,000 = 240,000. "Estimate: about 240,000." <strong>Step 2 — Bar model (for word problems).</strong> Draw two bars stacked, long one above short one. Label them 564,830 and 318,470. Mark the gap "difference." Say: "We're finding the gap — that means subtract." <strong>Step 3 — Subtract by place.</strong> Stack numbers vertically. Subtract column by column from the ones. Show the two borrows clearly: tens borrow from hundreds (3-7 → 13-7); thousands borrow from ten-thousands (4-8 → 14-8). Final answer: 246,360. <strong>Step 4 — Check.</strong> Compare 246,360 to estimate 240,000. "Off by about 6,000 — that's within rounding error. Both answers agree. Done." Tone: methodical, capstone-feeling — every part of the unit is showing up. (~2–3 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-07-example --></div></div></div></div>
-  <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">⚖️</div><div><div class="activity-title">Estimate, Then Exact — Same Story Told Twice</div><div class="activity-sub">A word problem solved two ways.</div></div></div><div class="activity-body">
+
+<div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">⚖️</div><div><div class="activity-title">Estimate, Then Exact — Same Story Told Twice</div><div class="activity-sub">A word problem solved two ways.</div></div></div><div class="activity-body">
 <p>Two students solved this word problem: <em>"At a music festival, 246,800 fans came on Saturday and 184,300 came on Sunday. About how many in total?"</em></p>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0;">
 <div style="background:#EAF8FD;border:2px solid #D6F2FB;border-radius:14px;padding:14px;">
@@ -563,17 +623,16 @@
 </div>
 <div class="callout callout-info"><span class="callout-icon">🧐</span><p>Both students get a correct, useful answer. Student A's estimate (430,000) is enough when the question says "about how many." Student B's exact answer (431,100) is needed when the question asks for precision. The word "about" tells you which one fits.</p></div>
 <div class="journal-label">✏️ When does a problem REQUIRE the exact answer? When is an estimate good enough? Give one real-world example of each. <span class="saved-dot" id="dot-compare"></span></div>
-<textarea class="journal-box" id="journal-compare" data-label="Learn — Strategy Comparison: When is an estimate enough?" placeholder="" oninput="autoSave(this,'dot-compare')"></textarea>
+<textarea class="journal-box" data-label="Learn — Strategy Comparison: When is an estimate enough?" id="journal-compare" oninput="autoSave(this,'dot-compare')" placeholder=""></textarea>
 </div></div>
-  <div class="socratic-box"><div class="socratic-label">🔮 Think Like a Mathematician</div><p class="socratic-q">Place value showed up in EVERY lesson this unit. You used it to read numbers (4.01.01–02), find patterns (4.01.03), compare (4.01.04), round (4.01.05–06), and now calculate (4.01.07). Why does ONE idea — place value — let you do all those different things? What is it about how our number system is built that makes place value so powerful?</p><div class="journal-label">✏️ My reasoning <span class="saved-dot" id="dot-soc1"></span></div><textarea class="journal-box" id="journal-soc1" data-label="Learn — Socratic: Why is place value so powerful?" placeholder="" oninput="autoSave(this,'dot-soc1')"></textarea></div>
-  <div class="tab-next-wrap"><p class="tab-transition-voice">You estimated, computed by place, and checked your answer against your estimate. Time to put it all together.</p><button class="tab-next-btn" onclick="switchTab('practice')">Continue to 🧮 Practice →</button></div>
+<div class="socratic-box"><div class="socratic-label">🔮 Think Like a Mathematician</div><p class="socratic-q">Place value showed up in EVERY lesson this unit. You used it to read numbers (4.01.01–02), find patterns (4.01.03), compare (4.01.04), round (4.01.05–06), and now calculate (4.01.07). Why does ONE idea — place value — let you do all those different things? What is it about how our number system is built that makes place value so powerful?</p><div class="journal-label">✏️ My reasoning <span class="saved-dot" id="dot-soc1"></span></div><textarea class="journal-box" data-label="Learn — Socratic: Why is place value so powerful?" id="journal-soc1" oninput="autoSave(this,'dot-soc1')" placeholder=""></textarea></div>
+<div class="tab-next-wrap"><p class="tab-transition-voice">You estimated, computed by place, and checked your answer against your estimate. Time to put it all together.</p><button class="tab-next-btn" onclick="switchTab('practice')">Continue to 🧮 Practice →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-practice">
-  <div class="callout callout-info"><span class="callout-icon">🧭</span><p>You built 472,830 in Learn. The Practice numbers are all six digits — but each one changes <strong>one thing</strong>. Pay attention to what is different. That is where the new thinking lives.</p></div>
-  <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask yourself:</strong> Which place is the leftmost digit in? What does the comma tell me about how to read this?</p></div>
-  <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Go back to the Learn tab. The "Four Ways" panel for 472,830 and the Worked Example for 1,000,000 are still there. Re-read your own notes.</p></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">Estimate, Then Compute: 36,420 + 28,750</div><div class="activity-sub">Step 1: estimate. Step 2: pick the exact sum.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>You're going to add <strong>36,420 + 28,750</strong>. First, what's a good estimate (rounding to the nearest 10,000)?</p>
+<div class="callout callout-info"><span class="callout-icon">🧭</span><p>You built 472,830 in Learn. The Practice numbers are all six digits — but each one changes <strong>one thing</strong>. Pay attention to what is different. That is where the new thinking lives.</p></div>
+<div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask yourself:</strong> Which place is the leftmost digit in? What does the comma tell me about how to read this?</p></div>
+<div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Go back to the Learn tab. The "Four Ways" panel for 472,830 and the Worked Example for 1,000,000 are still there. Re-read your own notes.</p></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">Estimate, Then Compute: 36,420 + 28,750</div><div class="activity-sub">Step 1: estimate. Step 2: pick the exact sum.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>You're going to add <strong>36,420 + 28,750</strong>. First, what's a good estimate (rounding to the nearest 10,000)?</p>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:24px;font-weight:900;color:#0E1C42;margin-bottom:14px;">36,420 + 28,750</div>
 <p style="text-align:center;font-size:13px;color:#3A4A6B;font-weight:700;margin-bottom:10px;">Now pick the EXACT sum:</p>
@@ -585,8 +644,8 @@
 </div>
 <p style="text-align:center;font-size:13px;color:#3A4A6B;font-weight:700;margin-top:14px;">Hint: estimate first. 36,000 + 29,000 ≈ 65,000. The exact answer should be close to 65,000.</p>
 </div>
-<div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Yes.</strong> 36,420 + 28,750 = <strong>65,170</strong>. Estimate was about 65,000 — the exact answer matches. Adding by place: ones 0+0=0, tens 2+5=7, hundreds 4+7=11 (write 1 carry 1), thousands 6+8+1=15 (write 5 carry 1), ten-thousands 3+2+1=6. Result: 65,170.<div class="video-wrap" data-video-slot="4-01-07-practice-1-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 1</div><div class="video-wrap-title">Estimate matched the truth</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-07_Practice-1_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Show the estimate: 36,000 + 29,000 = 65,000. Then add the exact numbers stacked vertically: 36,420 + 28,750. Ones 0+0=0. Tens 2+5=7. Hundreds 4+7=11 (write 1, carry 1). Thousands 6+8+1=15 (write 5, carry 1). Ten-thousands 3+2+1=6. Answer: 65,170. "Estimate said about 65,000. Exact says 65,170. Off by 170 — well within rounding error. We can trust 65,170." Close: "The estimate didn't tell us the exact answer — it told us what range the answer should be IN. When the exact answer falls in that range, we know we did the math right." (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-07-practice-1-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Use the estimate.</strong><div class="hint-callout">36,000 + 29,000 ≈ 65,000. The exact answer should be CLOSE to 65,000 — not 5,000, not 75,000, and definitely not 650,000.</div><div class="video-wrap" data-video-slot="4-01-07-practice-1-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 1</div><div class="video-wrap-title">Estimate is your check</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-07_Practice-1_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the estimate-as-check idea. Write 36,420 ≈ 36,000 and 28,750 ≈ 29,000. Add to get 65,000. Say: "Whatever the exact answer is, it should be CLOSE to 65,000 — give or take a thousand or so." Now show the answer choices. "55,170 is 10,000 low — too far. 74,170 is 9,000 high — too far. 650,170 is TEN TIMES too big. 65,170 is the only one in the right neighborhood." Concept being retaught: using a rough estimate to eliminate unreasonable choices before doing exact math. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-07-practice-1-retry --></div></div></div></div><button class="orange-btn" onclick="resetP1Round()">↩ Reset and Try Again</button></div></div></div>
-  <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three Calculations — Use Estimates as Checks</div><div class="activity-sub">Pick the right exact answer for each. Estimate first to weed out the bad ones.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Three different problems. One is a sum, one is a difference, one is a bigger sum. For each — estimate first in your head, then pick the exact answer.</p></div>
+<div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Yes.</strong> 36,420 + 28,750 = <strong>65,170</strong>. Estimate was about 65,000 — the exact answer matches. Adding by place: ones 0+0=0, tens 2+5=7, hundreds 4+7=11 (write 1 carry 1), thousands 6+8+1=15 (write 5 carry 1), ten-thousands 3+2+1=6. Result: 65,170.</div><div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Use the estimate.</strong><div class="hint-callout">36,000 + 29,000 ≈ 65,000. The exact answer should be CLOSE to 65,000 — not 5,000, not 75,000, and definitely not 650,000.</div><button class="orange-btn" onclick="resetP1Round()">↩ Reset and Try Again</button></div></div></div>
+<div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three Calculations — Use Estimates as Checks</div><div class="activity-sub">Pick the right exact answer for each. Estimate first to weed out the bad ones.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Three different problems. One is a sum, one is a difference, one is a bigger sum. For each — estimate first in your head, then pick the exact answer.</p></div>
 <div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:grid;gap:16px;">
 <div>
@@ -619,12 +678,12 @@
 </div>
 <div style="text-align:center;margin-top:14px;"><button class="orange-btn" onclick="resetP2Round()" style="margin:0;">↩ Reset</button></div>
 </div>
-<div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ All three!</strong> 45,300 + 22,900 = <strong>68,200</strong> (estimate said about 70,000 — match). 78,500 − 31,200 = <strong>47,300</strong> (estimate said about 50,000 — match). 156,700 + 84,300 = <strong>241,000</strong> (estimate said about 240,000 — match). Each estimate kept you in the right neighborhood; each exact answer was checked against it.<div class="video-wrap" data-video-slot="4-01-07-practice-2-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 2</div><div class="video-wrap-title">Halfway rounds UP</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-07_Practice-2_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write 84,562. For each round, identify the decider. <strong>Nearest 100:</strong> Decider is tens (6). 6 ≥ 5, round up. 84,562 → 84,600. <strong>Nearest 1,000:</strong> Decider is hundreds (5). "Exactly 5! That's halfway between 84,000 and 85,000. The rule says round UP." Show a number line: 84,000 ←→ 85,000, halfway 84,500. Place 84,562 just to the right of halfway. "Yes, past halfway. Round up to 85,000." <strong>Nearest 10,000:</strong> Decider is thousands (4). 4 ≤ 4, round down. 84,562 → 80,000. Stack the three: 84,600 / 85,000 / 80,000. "Watch how the same number rounds DIFFERENTLY depending on the zoom level. All correct." (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-07-practice-2-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Find the decider digit for each round.</strong><div class="hint-callout">Nearest 100 → decider is tens (6). Nearest 1,000 → decider is hundreds (5). Nearest 10,000 → decider is thousands (4). Apply: 5 or higher rounds UP, 4 or lower rounds DOWN. Note: a decider of exactly 5 still rounds UP.</div><div class="video-wrap" data-video-slot="4-01-07-practice-2-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 2</div><div class="video-wrap-title">The halfway rule: 5 rounds up</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-07_Practice-2_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach especially the halfway case. Write 84,562 with each place labeled. Walk through the 1,000-round case slowly: "I'm rounding to thousands. The decider is hundreds — that's 5. <em>Exactly 5</em>. The rule says 5 or higher rounds up. So we round UP — thousands 4 becomes 5, everything to the right becomes 0. Answer: 85,000." Draw a number line 84,000 ←→ 85,000, halfway 84,500. Place 84,562 a tiny bit to the right of 84,500. "See? It's past halfway. The rule and the number line agree." Concept being retaught: the convention that 5 rounds UP even at halfway. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-07-practice-2-retry --></div></div></div></div></div></div></div>
-  <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Marcus's Mistake — Use the Estimate</div><div class="activity-sub">An exact answer that doesn't match the estimate is a flag.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Marcus did the math but didn't check his answer against an estimate. Use the estimate-as-check to find what went wrong.</p></div>
+<div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ All three!</strong> 45,300 + 22,900 = <strong>68,200</strong> (estimate said about 70,000 — match). 78,500 − 31,200 = <strong>47,300</strong> (estimate said about 50,000 — match). 156,700 + 84,300 = <strong>241,000</strong> (estimate said about 240,000 — match). Each estimate kept you in the right neighborhood; each exact answer was checked against it.</div><div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Find the decider digit for each round.</strong><div class="hint-callout">Nearest 100 → decider is tens (6). Nearest 1,000 → decider is hundreds (5). Nearest 10,000 → decider is thousands (4). Apply: 5 or higher rounds UP, 4 or lower rounds DOWN. Note: a decider of exactly 5 still rounds UP.</div></div></div></div>
+<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Find Marcus's Mistake — Use the Estimate</div><div class="activity-sub">An exact answer that doesn't match the estimate is a flag.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Marcus did the math but didn't check his answer against an estimate. Use the estimate-as-check to find what went wrong.</p></div>
 <div class="task-box"><div class="task-label">Marcus's Work</div>
 <p>Marcus was asked to add <strong>47,500 + 38,200</strong>. He wrote:</p>
 <div style="background:#FFF0E6;border:2px solid #F5C8A0;border-radius:12px;padding:14px 16px;font-family:'Lora',Georgia,serif;font-size:16px;color:#0E1C42;line-height:1.7;margin-top:8px;">
-"<strong>47,500 + 38,200 = 8,570.</strong>"<br>
+"<strong>47,500 + 38,200 = 8,570.</strong>"<br/>
 "I lined them up and added column by column."
 </div>
 </div>
@@ -638,30 +697,26 @@
 </div>
 <button class="check-btn" onclick="checkErrorAnalysis()">Check My Answers ✓</button>
 <div class="journal-label">✏️ Marcus had the right strategy (add by place) but made a mistake somewhere. What probably happened? How would the estimate have caught it BEFORE he submitted? <span class="saved-dot" id="dot-ea"></span></div>
-<textarea class="journal-box" id="journal-ea" data-label="Practice 3 — Error Analysis: How estimate would have caught Marcus's mistake" placeholder="" oninput="autoSave(this,'dot-ea')"></textarea>
-<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> The estimate (90,000) immediately reveals that 8,570 is impossible. The exact answer is 85,700. Marcus probably misaligned the digits when copying — but he never checked his answer against an estimate. That's the whole point of today's lesson: <em>always check.</em><div class="video-wrap" data-video-slot="4-01-07-practice-3-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 3</div><div class="video-wrap-title">Following a carry all the way through</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-07_Practice-3_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Write 199,500 with each digit labeled by place: HT-TT-Th-H-T-O = 1-9-9-5-0-0. Round to nearest 1,000. Underline hundreds (5). "Decider is 5. Halfway rounds UP." Add 1 to thousands: 9 + 1 = 10. Pause. "Ten can't sit in one place. Write 0 in thousands and carry the 1 to ten-thousands." Ten-thousands 9 + 1 = 10. "Carry again. 0 in ten-thousands, carry to hundred-thousands." Hundred-thousands 1 + 1 = 2. Write 200,000. Now show Priya's wrong answer (190,000): "Priya wrote 0 in thousands but never carried. She left ten-thousands as 9. That's how she got 190,000 — exactly 10,000 too small." End: "Most rounds don't carry. But when the rounding place is 9 and you round UP, slow down and follow the ripple." (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-07-practice-3-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">When 9 + 1 = 10 in a place, that 1 has to ripple to the next place. If THAT place is also 9, ripple again. Don't stop early.</div><div class="video-wrap" data-video-slot="4-01-07-practice-3-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 3</div><div class="video-wrap-title">Carry the 1 every time it hits 10</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-07_Practice-3_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the carry chain. Slowly: "9 + 1 = 10. We write 0 and carry the 1. That 1 has to LAND somewhere — and it lands one place to the left. If THAT place becomes 10 too, we carry again. Keep going until you don't need to carry anymore." Walk through 199,500 step by step. Concept being retaught: the carry isn't optional. Whenever a digit + 1 equals 10, the 1 must ripple to the next place. (~1–2 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-07-practice-3-retry --></div></div></div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
-  <div class="socratic-box"><div class="socratic-label">🔮 Think Like a Mathematician</div><p class="socratic-q">A friend says, "Estimating is a waste of time. I'd rather just do the exact math from the start." Would you agree? When does estimating SAVE time — and when does it actually catch mistakes you wouldn't have found any other way? Defend your answer with an example.</p><div class="journal-label">✏️ My reasoning <span class="saved-dot" id="dot-soc2"></span></div><textarea class="journal-box" id="journal-soc2" data-label="Practice — Socratic: Is estimating worth the time?" placeholder="" oninput="autoSave(this,'dot-soc2')"></textarea></div>
-  <div class="tab-next-wrap"><p class="tab-transition-voice">You estimated, computed by place, used a bar model for a word problem, and caught a mistake using the estimate-as-check. Now bring it all together.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
+<textarea class="journal-box" data-label="Practice 3 — Error Analysis: How estimate would have caught Marcus's mistake" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
+<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> The estimate (90,000) immediately reveals that 8,570 is impossible. The exact answer is 85,700. Marcus probably misaligned the digits when copying — but he never checked his answer against an estimate. That's the whole point of today's lesson: <em>always check.</em></div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">When 9 + 1 = 10 in a place, that 1 has to ripple to the next place. If THAT place is also 9, ripple again. Don't stop early.</div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
+<div class="socratic-box"><div class="socratic-label">🔮 Think Like a Mathematician</div><p class="socratic-q">A friend says, "Estimating is a waste of time. I'd rather just do the exact math from the start." Would you agree? When does estimating SAVE time — and when does it actually catch mistakes you wouldn't have found any other way? Defend your answer with an example.</p><div class="journal-label">✏️ My reasoning <span class="saved-dot" id="dot-soc2"></span></div><textarea class="journal-box" data-label="Practice — Socratic: Is estimating worth the time?" id="journal-soc2" oninput="autoSave(this,'dot-soc2')" placeholder=""></textarea></div>
+<div class="tab-next-wrap"><p class="tab-transition-voice">You estimated, computed by place, used a bar model for a word problem, and caught a mistake using the estimate-as-check. Now bring it all together.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
-
 <div class="tab-panel" id="tab-assignment">
-  <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Use the chart, expanded form, or words — whichever helps you think.</div></div></div><div class="activity-body"><p>You met a new place today and built numbers that climb past ten thousand. These problems give you a chance to put it all together. Use any strategy from Learn — the chart, the discs, expanded form, or word form.</p>
+<div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Use the chart, expanded form, or words — whichever helps you think.</div></div></div><div class="activity-body"><p>You met a new place today and built numbers that climb past ten thousand. These problems give you a chance to put it all together. Use any strategy from Learn — the chart, the discs, expanded form, or word form.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask yourself:</strong> Which place is each digit in? Which tool will help me see that fastest?</p></div>
-<div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Estimate, then compute.</strong> For each, first write an estimate (round to nearest 10,000), then compute the exact answer. Show your check.<br>(a) <strong>53,820 + 27,400</strong><br>(b) <strong>76,500 − 31,800</strong></p><div class="journal-label">✏️ My answer <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" id="journal-a1" data-label="Show What You Know — Problem 1: Estimate then compute two problems" placeholder="" oninput="autoSave(this,'dot-a1')"></textarea></div>
-
-<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> Place value showed up in every lesson of this unit. Pick TWO different lessons and explain how place value helped you in each. Why is it the foundation for everything else in number work?</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" id="journal-a6" data-label="Show What You Know — Problem 6: Reflection on place value across the unit" placeholder="" oninput="autoSave(this,'dot-a6')"></textarea></div>
-
-
+<div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Estimate, then compute.</strong> For each, first write an estimate (round to nearest 10,000), then compute the exact answer. Show your check.<br/>(a) <strong>53,820 + 27,400</strong><br/>(b) <strong>76,500 − 31,800</strong></p><div class="journal-label">✏️ My answer <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: Estimate then compute two problems" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
+<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> Place value showed up in every lesson of this unit. Pick TWO different lessons and explain how place value helped you in each. Why is it the foundation for everything else in number work?</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: Reflection on place value across the unit" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#55C8E8;"><div class="activity-head"><div class="activity-num" style="background:#55C8E8;color:#0E1C42;">🗺️</div><div><div class="activity-title">Connection Forward: What Comes Next</div><div class="activity-sub">Unit 1 wraps. Unit 2 begins.</div></div></div><div class="activity-body"><p>You finished Unit 1. You can now read, write, compare, round, find patterns in, and calculate with whole numbers up to 1,000,000 — and you can explain WHY every step works, using place value.</p><p>Unit 2 picks up where this ends. We'll start <strong>adding and subtracting in earnest</strong> — multi-step word problems, mental strategies, and the kind of fluency where place value makes the calculation feel obvious. You've laid the foundation. Now we build the building.</p><p>One last big idea to carry forward: <em>Place value isn't just a chart. It's a thinking tool. Every time the math feels stuck, ask yourself — which place is doing the work?</em></p></div></div>
 </div></div>
-  <div class="video-wrap" data-video-slot="4-01-07-assignment-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Show What You Know Feedback · Lesson 4.01.07</div><div class="video-wrap-title">The two trickiest problems</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-01-07_SWYK-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk through Problem 4 and Problem 5 — the capstone moments of the unit. <strong>Problem 4 (find the misalignment):</strong> Write 245,000 + 187,000 on the board. Estimate: 250,000 + 200,000 = 450,000. "The student wrote 4,320,000 — that's about 10 times too big. The estimate immediately flags it as wrong. Adding two 6-digit numbers gives a 6- or 7-digit number, not 7 digits with a 4 in millions. The exact answer is 432,000." Stack vertically and add by place: 245,000 + 187,000 = 432,000. "Off by a factor of 10 because the student misaligned by one place." <strong>Problem 5 (unit synthesis):</strong> Walk through what students should produce. Use 384,572 as a sample number. (a) Expanded: 300,000 + 80,000 + 4,000 + 500 + 70 + 2. (b) Round to nearest 1,000: decider is hundreds (5), round UP → 385,000. To nearest 100,000: decider is ten-thousands (8), round UP → 400,000. (c) Pattern: 384,372 → 384,472 → 384,572 → 384,672 (rule: +100). (d) Compare to 384,275 (sample): 384,572 &gt; 384,275 (hundreds 5 &gt; 2). "EVERY skill from the unit shows up here. The chart never went away." End: "You've done the foundation. Unit 2 picks up where this leaves off." (~2–3 min)</div><div class="video-placeholder-id"><!-- slot: 4-01-07-assignment-feedback --></div></div></div></div>
-  <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly>Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
-  <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
+
+<div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
+<div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
 </div>
 <div class="footer">
-  <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
-  <div class="footer-sub">Math · Grade 4 · 4.01.07</div>
-  <div class="footer-copy">© 2025 Optima Academy Online</div>
+<div class="footer-main">🏫 <span>Optima Academy Online</span></div>
+<div class="footer-sub">Math · Grade 4 · 4.01.07</div>
+<div class="footer-copy">© 2025 Optima Academy Online</div>
 </div>
 </div>
 <canvas id="confettiCanvas"></canvas>
@@ -1070,6 +1125,75 @@ async function loadVideoManifest(){try{let res=await fetch('video-manifest.md',{
 function parseManifest(txt){let map={};let lines=txt.split(/\r?\n/);let current=null,buf=[];function commit(){if(current&&buf.join('\n').trim())map[current]=buf.join('\n').trim();buf=[]}for(let line of lines){let m=line.match(/^([A-Za-z0-9-]+):\s*$/);if(m){commit();current=m[1]}else if(current){buf.push(line)}}commit();return map}
 function showPageFeedback(msg){var panel=document.querySelector('.tab-panel.active')||document.body;var box=panel.querySelector(':scope > .page-feedback');if(!box){box=document.createElement('div');box.className='page-feedback';panel.insertBefore(box,panel.firstChild);}box.className='page-feedback show warn';box.innerHTML=msg;}
 window.addEventListener('DOMContentLoaded',()=>{restoreJournals();updateProgress();loadVideoManifest()});
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = true;
+var FLUENCY_TITLE = "Mixed Multiplication & Division — One-Minute Check";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
 </script>
 </body>
 </html>

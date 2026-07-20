@@ -329,6 +329,32 @@
 .cc-row strong{color:#C56C3F;font-weight:900;font-family:Lora,Georgia,serif}
 .cc-row em{color:#7A88A8;font-style:italic;font-size:12px}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
@@ -356,7 +382,31 @@
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
-<div class="video-wrap" data-video-slot="4-10-05-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.10.05</div><div class="video-wrap-title">Stack seconds into minutes, minutes into hours.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-10-05_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Hold up a clock with a second hand. "60 ticks of the second hand make 1 minute. 60 minutes make 1 hour. 24 hours make 1 day. 7 days make 1 week." Convert: "4 min = 240 sec. 190 min = 3 h 10 min. 6 h 32 min in minutes? 6 × 60 + 32 = 392 minutes." Frame: <strong>Stack small to big. Multiply by 60 between seconds and minutes; 60 between minutes and hours; 24 for days.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-welcome --></div></div></div></div>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Fraction Comparisons</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q"><span class="vfrac"><span class="vf-num">5</span><span class="vf-den">8</span></span> ___ <span class="vfrac"><span class="vf-num">3</span><span class="vf-den">4</span></span></span><input autocomplete="off" class="fluency-input" data-answer="&lt;" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q"><span class="vfrac"><span class="vf-num">2</span><span class="vf-den">3</span></span> ___ <span class="vfrac"><span class="vf-num">1</span><span class="vf-den">2</span></span></span><input autocomplete="off" class="fluency-input" data-answer="&gt;" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q"><span class="vfrac"><span class="vf-num">3</span><span class="vf-den">5</span></span> ___ <span class="vfrac"><span class="vf-num">6</span><span class="vf-den">10</span></span></span><input autocomplete="off" class="fluency-input" data-answer="=" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q"><span class="vfrac"><span class="vf-num">7</span><span class="vf-den">8</span></span> ___ <span class="vfrac"><span class="vf-num">3</span><span class="vf-den">4</span></span></span><input autocomplete="off" class="fluency-input" data-answer="&gt;" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q"><span class="vfrac"><span class="vf-num">1</span><span class="vf-den">3</span></span> ___ <span class="vfrac"><span class="vf-num">2</span><span class="vf-den">5</span></span></span><input autocomplete="off" class="fluency-input" data-answer="&lt;" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q"><span class="vfrac"><span class="vf-num">4</span><span class="vf-den">5</span></span> ___ <span class="vfrac"><span class="vf-num">7</span><span class="vf-den">10</span></span></span><input autocomplete="off" class="fluency-input" data-answer="&gt;" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q"><span class="vfrac"><span class="vf-num">1</span><span class="vf-den">2</span></span> ___ <span class="vfrac"><span class="vf-num">4</span><span class="vf-den">8</span></span></span><input autocomplete="off" class="fluency-input" data-answer="=" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q"><span class="vfrac"><span class="vf-num">3</span><span class="vf-den">8</span></span> ___ <span class="vfrac"><span class="vf-num">1</span><span class="vf-den">2</span></span></span><input autocomplete="off" class="fluency-input" data-answer="&lt;" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q"><span class="vfrac"><span class="vf-num">5</span><span class="vf-den">6</span></span> ___ <span class="vfrac"><span class="vf-num">3</span><span class="vf-den">4</span></span></span><input autocomplete="off" class="fluency-input" data-answer="&gt;" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q"><span class="vfrac"><span class="vf-num">2</span><span class="vf-den">4</span></span> ___ <span class="vfrac"><span class="vf-num">1</span><span class="vf-den">4</span></span></span><input autocomplete="off" class="fluency-input" data-answer="&gt;" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Fraction Comparisons)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
 <p>Atlas takes the lead — measurement is about naming units and applying conversion rules. Felix multiplies. Hazel builds the picture. Cora checks units.</p>
 <div class="bubble-row">
@@ -373,7 +423,7 @@
 <div style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="display:grid;gap:14px;">
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
-<div style="background:#fff;border:1.5px solid #F5D4BC;border-radius:10px;padding:10px;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:#0E1C42;min-width:200px;text-align:center;">2 minutes&nbsp;&nbsp;⏱&nbsp;&nbsp;100 seconds</div>
+<div style="background:#fff;border:1.5px solid #F5D4BC;border-radius:10px;padding:10px;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:#0E1C42;min-width:200px;text-align:center;">2 minutes  ⏱  100 seconds</div>
 <div class="value-card-row" style="margin:0;">
 <button class="value-card" onclick="pickReadinessRound(this,1,'2 minutes')" style="min-width:110px;"><div class="big" style="font-size:13px;">2 minutes longer</div></button>
 <button class="value-card" onclick="pickReadinessRound(this,1,'100 seconds')" style="min-width:110px;"><div class="big" style="font-size:13px;">100 sec longer</div></button>
@@ -381,7 +431,7 @@
 </div>
 </div>
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
-<div style="background:#fff;border:1.5px solid #F5D4BC;border-radius:10px;padding:10px;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:#0E1C42;min-width:200px;text-align:center;">1 hour&nbsp;&nbsp;⏱&nbsp;&nbsp;60 minutes</div>
+<div style="background:#fff;border:1.5px solid #F5D4BC;border-radius:10px;padding:10px;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:#0E1C42;min-width:200px;text-align:center;">1 hour  ⏱  60 minutes</div>
 <div class="value-card-row" style="margin:0;">
 <button class="value-card" onclick="pickReadinessRound(this,2,'equal')" style="min-width:110px;"><div class="big" style="font-size:13px;">equal</div></button>
 <button class="value-card" onclick="pickReadinessRound(this,2,'1 hour')" style="min-width:110px;"><div class="big" style="font-size:13px;">1 hour longer</div></button>
@@ -389,7 +439,7 @@
 </div>
 </div>
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
-<div style="background:#fff;border:1.5px solid #F5D4BC;border-radius:10px;padding:10px;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:#0E1C42;min-width:200px;text-align:center;">1 week&nbsp;&nbsp;⏱&nbsp;&nbsp;150 hours</div>
+<div style="background:#fff;border:1.5px solid #F5D4BC;border-radius:10px;padding:10px;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:#0E1C42;min-width:200px;text-align:center;">1 week  ⏱  150 hours</div>
 <div class="value-card-row" style="margin:0;">
 <button class="value-card" onclick="pickReadinessRound(this,3,'1 week')" style="min-width:110px;"><div class="big" style="font-size:13px;">1 week longer</div></button>
 <button class="value-card" onclick="pickReadinessRound(this,3,'150 hours')" style="min-width:110px;"><div class="big" style="font-size:13px;">150 hrs longer</div></button>
@@ -400,8 +450,8 @@
 <div class="inline-feedback" id="rCmpFb"></div>
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Comparisons:</strong> 2 min = 120 sec, so <strong>2 minutes &gt; 100 seconds</strong>. 1 hour = 60 min, so <strong>equal</strong>. 1 week = 7 × 24 = 168 hours, so <strong>1 week &gt; 150 hours</strong>.</div>
-<div class="journal-label">✏️ Which comparison was hardest? Why? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" id="journal-r1" data-label="Warm-Up — Readiness: time comparison" placeholder="" oninput="autoSave(this,'dot-r1')"></textarea></div></div>
-  <div class="video-wrap" data-video-slot="4-10-05-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.10.05</div><div class="video-wrap-title">Time conversion comparison</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-10-05_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "Time uses four factors. 60 between seconds and minutes. 60 between minutes and hours. 24 between hours and days. 7 between days and weeks. To compare across units, convert one to the other first." Frame: <strong>Convert to a common unit first.</strong></div><div class="video-placeholder-id"><!-- slot: lesson-readiness-feedback --></div></div></div></div>
+<div class="journal-label">✏️ Which comparison was hardest? Why? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: time comparison" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
+
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Composite time to a single unit.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">⏱</span><p>Convert <strong>6 hours 32 minutes</strong> into minutes.</p></div>
 <div class="strategy-chip-row">
@@ -412,11 +462,10 @@
 </div>
 <div class="callout callout-tip"><span class="callout-icon">🧠</span><p><strong>6 × 60 = 360 min. Then add the 32 min:</strong> 360 + 32 = <strong>392 min</strong>.</p></div>
 <div class="journal-label">✏️ How do you convert 392 min BACK to hours and minutes? <span class="saved-dot" id="dot-think"></span></div>
-<textarea class="journal-box" id="journal-think" data-label="Warm-Up — Think: 6 h 32 min" placeholder="Hint: 392 ÷ 60 = ?" oninput="autoSave(this,'dot-think')"></textarea>
+<textarea class="journal-box" data-label="Warm-Up — Think: 6 h 32 min" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder="Hint: 392 ÷ 60 = ?"></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">Now stack time on the timeline.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-
-<div class="tab-panel" id="tab-learn">
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-10-05-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-10-05 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-10-05-concept --></div></div></div></div>
 <div aria-label="Daily vocabulary flash cards" class="vocab-section">
 <div class="vocab-section-head">
 <div class="vocab-section-icon">📚</div>
@@ -427,40 +476,38 @@
 </div>
 <p class="vocab-section-directions">Tap each card to flip it. Read the word, then read the meaning. You will use these words in today’s models and explanations.</p>
 <div class="vocab-grid">
-        <div class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for second. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">⏱</div><div class="fc-word">second (s)</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">second (s)</div><div class="fc-def">smallest common time unit. 60 seconds = 1 minute. About one tick of a clock.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for minute. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">⏲</div><div class="fc-word">minute (min)</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">minute (min)</div><div class="fc-def">1 min = 60 seconds. About long enough to read one paragraph.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for hour. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">🕐</div><div class="fc-word">hour (h)</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">hour (h)</div><div class="fc-def">1 hour = 60 minutes. 24 hours make a day.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-        <div class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Vocabulary card for day and week. Tap to flip." onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"><div class="fc-emoji">📅</div><div class="fc-word">day &amp; week</div><div class="fc-tap">tap to flip</div></div>
-            <div class="flip-card-back"><div class="fc-word-back">day &amp; week</div><div class="fc-def">1 day = 24 hours. 1 week = 7 days. The factors aren't 60 — careful.</div><div class="fc-tap-back">tap to flip back</div></div>
-          </div>
-        </div>
-  </div>
+<div aria-label="Vocabulary card for second. Tap to flip." class="flip-card fc-color-1" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">⏱</div><div class="fc-word">second (s)</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">second (s)</div><div class="fc-def">smallest common time unit. 60 seconds = 1 minute. About one tick of a clock.</div><div class="fc-tap-back">tap to flip back</div></div>
 </div>
-<div class="video-wrap" data-video-slot="4-10-05-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.10.05</div><div class="video-wrap-title">Stack seconds, minutes, hours, days.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-10-05_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Three converts. (1) 4 min = 240 sec (4 × 60). (2) 190 min = 3 h 10 min (190 ÷ 60 = 3 R 10). (3) 6 h 32 min = 392 min (6 × 60 + 32). Frame: <strong>×60 for sec/min and min/hr. ×24 for hr/day. ×7 for day/week.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-concept --></div></div></div></div>
+</div>
+<div aria-label="Vocabulary card for minute. Tap to flip." class="flip-card fc-color-2" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">⏲</div><div class="fc-word">minute (min)</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">minute (min)</div><div class="fc-def">1 min = 60 seconds. About long enough to read one paragraph.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for hour. Tap to flip." class="flip-card fc-color-3" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">🕐</div><div class="fc-word">hour (h)</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">hour (h)</div><div class="fc-def">1 hour = 60 minutes. 24 hours make a day.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+<div aria-label="Vocabulary card for day and week. Tap to flip." class="flip-card fc-color-4" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped');}" role="button" tabindex="0">
+<div class="flip-card-inner">
+<div class="flip-card-front"><div class="fc-emoji">📅</div><div class="fc-word">day &amp; week</div><div class="fc-tap">tap to flip</div></div>
+<div class="flip-card-back"><div class="fc-word-back">day &amp; week</div><div class="fc-def">1 day = 24 hours. 1 week = 7 days. The factors aren't 60 — careful.</div><div class="fc-tap-back">tap to flip back</div></div>
+</div>
+</div>
+</div>
+</div>
+
 <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Pick how many groups to SPLIT the bar into. Then click groups to TAKE them.</p></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#C56C3F;">⏱</div><div><div class="activity-title">Time Stacker</div><div class="activity-sub">Click time buttons to stack seconds, minutes, hours. The digital clock counts up.</div></div></div><div class="activity-body"><p>Three rounds. Stack time to match each goal. Use the bigger buttons to jump faster.</p>
-
-<div class="ts-card" data-id="1" data-target-sec="240" data-target-label="4 minutes" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="ts-card" data-id="1" data-target-label="4 minutes" data-target-sec="240" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 1 · Build 4 minutes</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Goal: 240 seconds = 4 minutes.</div>
-
 <div style="background:#fff;border:2px solid #C56C3F;border-radius:10px;padding:14px 16px;margin-bottom:14px;">
 <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
 <div style="background:#C56C3F;color:#fff;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">🎯</div>
@@ -469,11 +516,8 @@
 <div style="font-family:'Lora',Georgia,serif;font-size:18px;color:#0E1C42;line-height:1.5;">Stack to <strong style="color:#C56C3F;font-size:22px;">4 minutes</strong>. <span style="color:#3A4A6B;font-size:14px;">That is <strong>4 minutes</strong>.</span></div>
 <div style="background:#FDF3EC;border-left:3px solid #E89A6B;padding:8px 12px;margin-top:10px;border-radius:6px;font-family:'Nunito',sans-serif;font-size:13px;color:#5B2E10;"><strong>💡 Try this:</strong> +1 min 4×.</div>
 </div>
-
 <div id="tsTape-1" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:14px;margin-bottom:12px;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:24px;font-weight:900;color:#C56C3F;margin-bottom:12px;letter-spacing:1.5px;" id="tsClock-1">0d 0h 0m 0s</div>
-
+<div id="tsClock-1" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:24px;font-weight:900;color:#C56C3F;margin-bottom:12px;letter-spacing:1.5px;">0d 0h 0m 0s</div>
 <div style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:10px;">
 <button onclick="tsAdd('1',1)" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;">+1 sec</button>
 <button onclick="tsAdd('1',60)" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;">+1 min (60 s)</button>
@@ -481,14 +525,11 @@
 <button onclick="tsAdd('1',86400)" style="background:#F0BD96;color:#5B2E10;border:none;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;">+1 day (24 hr)</button>
 <button onclick="tsReset('1')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;">↺ Reset</button>
 </div>
-
 <div id="tsStatus-1" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Click time buttons to stack toward the target.</div>
 </div>
-
-<div class="ts-card" data-id="2" data-target-sec="10800" data-target-label="3 hours" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="ts-card" data-id="2" data-target-label="3 hours" data-target-sec="10800" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 2 · Build 3 hours</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Goal: 3 hours = 180 minutes. Use +1 hr to jump straight to a full hour.</div>
-
 <div style="background:#fff;border:2px solid #C56C3F;border-radius:10px;padding:14px 16px;margin-bottom:14px;">
 <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
 <div style="background:#C56C3F;color:#fff;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">🎯</div>
@@ -497,11 +538,8 @@
 <div style="font-family:'Lora',Georgia,serif;font-size:18px;color:#0E1C42;line-height:1.5;">Stack to <strong style="color:#C56C3F;font-size:22px;">3 hours</strong>. <span style="color:#3A4A6B;font-size:14px;">That is <strong>3 hours</strong>.</span></div>
 <div style="background:#FDF3EC;border-left:3px solid #E89A6B;padding:8px 12px;margin-top:10px;border-radius:6px;font-family:'Nunito',sans-serif;font-size:13px;color:#5B2E10;"><strong>💡 Try this:</strong> +1 hr 3×.</div>
 </div>
-
 <div id="tsTape-2" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:14px;margin-bottom:12px;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:24px;font-weight:900;color:#C56C3F;margin-bottom:12px;letter-spacing:1.5px;" id="tsClock-2">0d 0h 0m 0s</div>
-
+<div id="tsClock-2" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:24px;font-weight:900;color:#C56C3F;margin-bottom:12px;letter-spacing:1.5px;">0d 0h 0m 0s</div>
 <div style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:10px;">
 <button onclick="tsAdd('2',1)" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;">+1 sec</button>
 <button onclick="tsAdd('2',60)" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;">+1 min (60 s)</button>
@@ -509,14 +547,11 @@
 <button onclick="tsAdd('2',86400)" style="background:#F0BD96;color:#5B2E10;border:none;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;">+1 day (24 hr)</button>
 <button onclick="tsReset('2')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;">↺ Reset</button>
 </div>
-
 <div id="tsStatus-2" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Click time buttons to stack toward the target.</div>
 </div>
-
-<div class="ts-card" data-id="3" data-target-sec="23520" data-target-label="6 h 32 min" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="ts-card" data-id="3" data-target-label="6 h 32 min" data-target-sec="23520" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Round 3 · Build 6 h 32 min</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Goal: 6 hours and 32 minutes. Total: 392 minutes.</div>
-
 <div style="background:#fff;border:2px solid #C56C3F;border-radius:10px;padding:14px 16px;margin-bottom:14px;">
 <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
 <div style="background:#C56C3F;color:#fff;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">🎯</div>
@@ -525,11 +560,8 @@
 <div style="font-family:'Lora',Georgia,serif;font-size:18px;color:#0E1C42;line-height:1.5;">Stack to <strong style="color:#C56C3F;font-size:22px;">6 h 32 min</strong>. <span style="color:#3A4A6B;font-size:14px;">That is <strong>6 hours</strong> + <strong>32 minutes</strong>.</span></div>
 <div style="background:#FDF3EC;border-left:3px solid #E89A6B;padding:8px 12px;margin-top:10px;border-radius:6px;font-family:'Nunito',sans-serif;font-size:13px;color:#5B2E10;"><strong>💡 Try this:</strong> +1 hr 6× then +1 min 32×.</div>
 </div>
-
 <div id="tsTape-3" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:14px;margin-bottom:12px;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:24px;font-weight:900;color:#C56C3F;margin-bottom:12px;letter-spacing:1.5px;" id="tsClock-3">0d 0h 0m 0s</div>
-
+<div id="tsClock-3" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:24px;font-weight:900;color:#C56C3F;margin-bottom:12px;letter-spacing:1.5px;">0d 0h 0m 0s</div>
 <div style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:10px;">
 <button onclick="tsAdd('3',1)" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;">+1 sec</button>
 <button onclick="tsAdd('3',60)" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;">+1 min (60 s)</button>
@@ -537,10 +569,8 @@
 <button onclick="tsAdd('3',86400)" style="background:#F0BD96;color:#5B2E10;border:none;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;">+1 day (24 hr)</button>
 <button onclick="tsReset('3')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;">↺ Reset</button>
 </div>
-
 <div id="tsStatus-3" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Click time buttons to stack toward the target.</div>
 </div>
-
 <div class="reveal-box" id="learnReveal"><strong>Stacked.</strong> 4 min = 240 sec. 3 hr = 180 min = 10,800 sec. 6 h 32 min = 392 min. Every click adds to ALL the unit columns.</div>
 </div></div>
 <div class="key-concept" style="margin-top:16px;"><div class="key-concept-label">📐 The Time Chart</div><p><strong>60 seconds = 1 minute.</strong></p><p><strong>60 minutes = 1 hour.</strong></p><p><strong>24 hours = 1 day.</strong></p><p><strong>7 days = 1 week.</strong></p></div>
@@ -560,7 +590,7 @@
 <textarea class="journal-box" data-label="Learn — Socratic: 190 minutes" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: Laila and Gavin's Trips</div><div class="activity-sub">Find half of a composite time.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Laila's bus ride lasted <strong>3 h 14 min</strong>. Gavin's train ride lasted exactly half as long. How long was Gavin's train ride in hours and minutes?</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew:</p>
-<div class="video-wrap" data-video-slot="4-10-05-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.10.05</div><div class="video-wrap-title">Half of 3 h 14 min = 1 h 37 min</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-10-05_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Felix: "First, convert Laila's time fully to minutes. 3 × 60 + 14 = 194 minutes." Atlas: "Half of 194 = 97 minutes." Hazel: "Convert back: 97 ÷ 60 = 1 R 37, so 1 h 37 min." About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-10-05-example --></div></div></div></div>
+
 <div style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.9;font-size:16px;">
 <strong>Step 1.</strong> 3 h 14 min → all minutes: 3 × 60 + 14 = <span style="color:#C56C3F;font-weight:900;">194 min</span>.<br/>
@@ -581,12 +611,10 @@
 <div class="callout callout-info"><span class="callout-icon">⏱</span><p>Two more time stacks and an arithmetic problem.</p></div>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Strategy:</strong> Use +1 hr or +1 day to jump fast. Use +1 min and +1 sec for the leftover.</p></div>
 <div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Pattern:</strong> Big-to-small multiplies. Small-to-big divides with remainder.</p></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#C56C3F;">1</div><div><div class="activity-title">Stack 9 hours in seconds</div><div class="activity-sub">Big number! Use +1 hr nine times.</div></div><span class="activity-time" style="background:#C56C3F;">~5 min</span></div><div class="activity-body">
-<div class="ts-card" data-id="p1" data-target-sec="32400" data-target-label="9 hours" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="ts-card" data-id="p1" data-target-label="9 hours" data-target-sec="32400" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Stack to 9 hours (= 32,400 seconds)</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Goal: 9 hours. Click +1 hr 9 times.</div>
-
 <div style="background:#fff;border:2px solid #C56C3F;border-radius:10px;padding:14px 16px;margin-bottom:14px;">
 <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
 <div style="background:#C56C3F;color:#fff;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">🎯</div>
@@ -595,11 +623,8 @@
 <div style="font-family:'Lora',Georgia,serif;font-size:18px;color:#0E1C42;line-height:1.5;">Stack to <strong style="color:#C56C3F;font-size:22px;">9 hours</strong>. <span style="color:#3A4A6B;font-size:14px;">That is <strong>9 hours</strong>.</span></div>
 <div style="background:#FDF3EC;border-left:3px solid #E89A6B;padding:8px 12px;margin-top:10px;border-radius:6px;font-family:'Nunito',sans-serif;font-size:13px;color:#5B2E10;"><strong>💡 Try this:</strong> +1 hr 9×.</div>
 </div>
-
 <div id="tsTape-p1" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:14px;margin-bottom:12px;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:24px;font-weight:900;color:#C56C3F;margin-bottom:12px;letter-spacing:1.5px;" id="tsClock-p1">0d 0h 0m 0s</div>
-
+<div id="tsClock-p1" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:24px;font-weight:900;color:#C56C3F;margin-bottom:12px;letter-spacing:1.5px;">0d 0h 0m 0s</div>
 <div style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:10px;">
 <button onclick="tsAdd('p1',1)" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;">+1 sec</button>
 <button onclick="tsAdd('p1',60)" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;">+1 min (60 s)</button>
@@ -607,18 +632,15 @@
 <button onclick="tsAdd('p1',86400)" style="background:#F0BD96;color:#5B2E10;border:none;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;">+1 day (24 hr)</button>
 <button onclick="tsReset('p1')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;">↺ Reset</button>
 </div>
-
 <div id="tsStatus-p1" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Click time buttons to stack toward the target.</div>
 </div>
 <div class="journal-label">✏️ How many seconds is 9 hours? Show 9 × 60 × 60. <span class="saved-dot" id="dot-p1"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 1: 9 hours in seconds" id="journal-p1" oninput="autoSave(this,'dot-p1')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Stack 7 days in hours</div><div class="activity-sub">A whole week.</div></div></div><div class="activity-body">
-<div class="ts-card" data-id="p2" data-target-sec="604800" data-target-label="7 days = 1 week" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
+<div class="ts-card" data-id="p2" data-target-label="7 days = 1 week" data-target-sec="604800" style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:18px 14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Stack to 7 days</div>
 <div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Goal: 7 days. Click +1 day 7 times. How many hours total?</div>
-
 <div style="background:#fff;border:2px solid #C56C3F;border-radius:10px;padding:14px 16px;margin-bottom:14px;">
 <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
 <div style="background:#C56C3F;color:#fff;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">🎯</div>
@@ -627,11 +649,8 @@
 <div style="font-family:'Lora',Georgia,serif;font-size:18px;color:#0E1C42;line-height:1.5;">Stack to <strong style="color:#C56C3F;font-size:22px;">7 days = 1 week</strong>. <span style="color:#3A4A6B;font-size:14px;">That is <strong>7 days</strong>.</span></div>
 <div style="background:#FDF3EC;border-left:3px solid #E89A6B;padding:8px 12px;margin-top:10px;border-radius:6px;font-family:'Nunito',sans-serif;font-size:13px;color:#5B2E10;"><strong>💡 Try this:</strong> +1 day 7×.</div>
 </div>
-
 <div id="tsTape-p2" style="background:#fff;border:2px solid #F5D4BC;border-radius:10px;padding:14px;margin-bottom:12px;"></div>
-
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:24px;font-weight:900;color:#C56C3F;margin-bottom:12px;letter-spacing:1.5px;" id="tsClock-p2">0d 0h 0m 0s</div>
-
+<div id="tsClock-p2" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:24px;font-weight:900;color:#C56C3F;margin-bottom:12px;letter-spacing:1.5px;">0d 0h 0m 0s</div>
 <div style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:10px;">
 <button onclick="tsAdd('p2',1)" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;">+1 sec</button>
 <button onclick="tsAdd('p2',60)" style="background:#C56C3F;color:#fff;border:none;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;">+1 min (60 s)</button>
@@ -639,34 +658,28 @@
 <button onclick="tsAdd('p2',86400)" style="background:#F0BD96;color:#5B2E10;border:none;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;">+1 day (24 hr)</button>
 <button onclick="tsReset('p2')" style="background:#E07B39;color:#fff;border:none;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer;font-family:Nunito,sans-serif;font-size:13px;">↺ Reset</button>
 </div>
-
 <div id="tsStatus-p2" style="background:#F0BD96;border:2px solid #E89A6B;border-radius:10px;padding:10px 14px;font-size:14px;color:#5B2E10;font-weight:700;line-height:1.5;text-align:center;">Click time buttons to stack toward the target.</div>
 </div>
 <div class="journal-label">✏️ How many hours in 7 days? Show 7 × 24. <span class="saved-dot" id="dot-p2"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 2: 7 days in hours" id="journal-p2" oninput="autoSave(this,'dot-p2')" placeholder="" style="min-height:60px;"></textarea>
 </div></div>
-
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#C56C3F;">3</div><div><div class="activity-title">Convert: 160 minutes</div><div class="activity-sub">Find the hour-and-minute form.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🧮</span><p><strong>Method:</strong> 60 minutes per hour. Divide 160 by 60, check the remainder.</p></div>
 <div style="background:#FFFAF5;border:2px solid #F5D4BC;border-radius:14px;padding:14px;margin:14px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;color:#0E1C42;font-weight:700;margin-bottom:8px;">160 minutes</div>
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:14px;color:#3A4A6B;">160 ÷ 60 = ?</div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:14px;color:#3A4A6B;margin-top:6px;">Whole hours: __ &nbsp; · &nbsp; Remainder minutes: __</div>
+<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:14px;color:#3A4A6B;margin-top:6px;">Whole hours: __   ·   Remainder minutes: __</div>
 <div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;color:#C56C3F;font-weight:900;margin-top:10px;">= __ h __ min</div>
 </div>
 <div class="journal-label">✏️ Your answer with division work. Also: how many SECONDS is 160 minutes? <span class="saved-dot" id="dot-p3"></span></div>
 <textarea class="journal-box" data-label="Practice — Problem 3: 160 min to h+min and sec" id="journal-p3" oninput="autoSave(this,'dot-p3')" placeholder="160 ÷ 60 = ___ R ___ → ___ h ___ min. In seconds: 160 × 60 = ___" style="min-height:80px;"></textarea>
 </div></div>
-
 <div class="tab-next-wrap"><p class="tab-transition-voice">Stacks done. Now show it.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">For each problem, convert between units of time. Show your work.</div></div></div><div class="activity-body"><p>Use the chart: 60 sec = 1 min, 60 min = 1 hr, 24 hr = 1 day, 7 days = 1 week.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Do the denominators MATCH? Or do I need to rename one or both? Or is a benchmark (<span class="frac"><span class="num">1</span><span class="den">2</span></span>, 1) faster?</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Small to big.</strong><br/>(a) 4 minutes = ___ seconds<br/>(b) 3 hours = ___ minutes<br/>(c) 7 days = ___ hours<br/>(d) 9 hours = ___ seconds</p><div class="journal-label">✏️ All four answers with multiplication shown <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: small to big" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-
 <div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Word problem — Laila and Gavin.</strong> Laila's bus ride lasted 3 h 14 min. Gavin's train ride lasted exactly half as long. (a) Convert Laila's time to minutes. (b) Take half. (c) Convert back to hours and minutes.</p><div class="journal-label">✏️ All three steps <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: half of 3 h 14 min" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
-
-
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#C56C3F;"><div class="activity-head"><div class="activity-num" style="background:#C56C3F;color:#fff;">🗺️</div><div><div class="activity-title">Unit 7 Complete — Where This Goes Next</div><div class="activity-sub">Looking ahead</div></div></div><div class="activity-body"><p>You've compared and ordered fractions that all fit between 0 and 1.</p><p>Next lesson: <strong>Improper Fractions and Mixed Numbers.</strong> What if the top is BIGGER than the bottom? <span class="frac"><span class="num">8</span><span class="den">5</span></span> of a pie isn't just half — it's a WHOLE pie plus some extra. That's an improper fraction, and it can also be written as a mixed number (1 <span class="frac"><span class="num">3</span><span class="den">5</span></span>).</p><p>The big question opening 6.03: <em>How do you show a fraction that's more than 1 whole?</em></p></div></div></div></div>
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed all 6 problems above.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed both column subtractions on every problem.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed the borrow step whenever the fraction column needed it and simplified at the end.</span></div></div></div>
@@ -1294,12 +1307,12 @@ function ccOpen(){ var o = document.getElementById('ccOverlay'); if(o) o.classLi
 function ccClose(){ var o = document.getElementById('ccOverlay'); if(o) o.classList.remove('show'); }
 
 </script>
-<button class="cc-fab" onclick="ccOpen()" aria-label="Open conversion chart" title="Conversion Chart">📋 Conversion Chart</button>
+<button aria-label="Open conversion chart" class="cc-fab" onclick="ccOpen()" title="Conversion Chart">📋 Conversion Chart</button>
 <div class="cc-overlay" id="ccOverlay" onclick="if(event.target.id==='ccOverlay')ccClose()">
 <div class="cc-modal">
 <div class="cc-modal-head">
 <div class="cc-modal-title">📋 Conversion Chart</div>
-<button class="cc-close" onclick="ccClose()" aria-label="Close">×</button>
+<button aria-label="Close" class="cc-close" onclick="ccClose()">×</button>
 </div>
 <div class="cc-section">
 <div class="cc-section-head">Metric · Length</div>
@@ -1339,4 +1352,73 @@ function ccClose(){ var o = document.getElementById('ccOverlay'); if(o) o.classL
 </div>
 </div>
 </div>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Fraction Comparisons";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
+</script>
 </body></html>

@@ -314,6 +314,32 @@
 .frac.frac-lg{font-size:1.05em}
 .frac.frac-on-dark .num{border-bottom-color:#fff}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
@@ -341,7 +367,42 @@
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
-<div class="video-wrap" data-video-slot="4-07-06-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.07.06</div><div class="video-wrap-title">Two mixed numbers, two columns, two subtractions.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-06_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Show two boards. "Board A is 7 <span class="frac"><span class="num">5</span><span class="den">16</span></span> ft. Cut off Board B which is 2 <span class="frac"><span class="num">7</span><span class="den">8</span></span> ft. How long is what's left?" Pause. "Different denominators — 16 and 8. Rename <span class="frac"><span class="num">7</span><span class="den">8</span></span> with denom 16. <span class="frac"><span class="num">7</span><span class="den">8</span></span> × <span class="frac"><span class="num">2</span><span class="den">2</span></span> = 14/16. So 2 <span class="frac"><span class="num">7</span><span class="den">8</span></span> = 2 14/16." Now both are 16ths. Compare fraction columns: "<span class="frac"><span class="num">5</span><span class="den">16</span></span> minuend vs <span class="frac"><span class="num">14</span><span class="den">16</span></span> subtrahend. 5 &lt; 14 — must BORROW." Show borrow: "Take 1 whole from 7. Now 6 wholes + <span class="frac"><span class="num">16</span><span class="den">16</span></span> + <span class="frac"><span class="num">5</span><span class="den">16</span></span> = 6 21/16." Subtract fractions: <span class="frac"><span class="num">21</span><span class="den">16</span></span> − <span class="frac"><span class="num">14</span><span class="den">16</span></span> = 7/16. Subtract wholes: 6 − 2 = 4. Final: <strong>4 <span class="frac"><span class="num">7</span><span class="den">16</span></span> ft</strong>. Frame: "Rename, check, borrow if needed, subtract each column, simplify." Tone: clear, methodical, Unit 7 closer. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-welcome --></div></div></div></div>
+<div class="fluency-box" data-timed="true">
+<div class="fluency-head">
+<div class="fluency-head-icon">⏳</div>
+<div><div class="fluency-head-label">TIMED FLUENCY CHECK</div><div class="fluency-head-title">Mixed Multiplication &amp; Division — One-Minute Check</div></div>
+<div class="fluency-timer-ui"><span class="fluency-timer-display" id="fluencyTimerDisplay">60s</span><button class="fluency-start-btn" id="fluencyStartBtn" onclick="fluencyStart()">Start 1-Minute Check</button></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Unit check — Quarter 3 timed fluency. Click Start, then answer as many as you can in 60 seconds. Answers lock in automatically when time is up.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">7 × 8</span><input autocomplete="off" class="fluency-input" data-answer="56" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 9</span><input autocomplete="off" class="fluency-input" data-answer="54" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 9</span><input autocomplete="off" class="fluency-input" data-answer="81" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 7</span><input autocomplete="off" class="fluency-input" data-answer="56" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">11 × 5</span><input autocomplete="off" class="fluency-input" data-answer="55" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">12 × 6</span><input autocomplete="off" class="fluency-input" data-answer="72" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 7</span><input autocomplete="off" class="fluency-input" data-answer="49" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 6</span><input autocomplete="off" class="fluency-input" data-answer="54" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 8</span><input autocomplete="off" class="fluency-input" data-answer="64" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 7</span><input autocomplete="off" class="fluency-input" data-answer="42" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">72 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">63 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="7" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">56 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">48 ÷ 6</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">81 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">96 ÷ 12</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">45 ÷ 5</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">64 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">88 ÷ 11</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">54 ÷ 6</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" disabled="" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Mixed Multiplication &amp; Division — One-Minute Check)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
 <p>Unit 7 closer. Atlas still leads. Today: subtract two mixed numbers. Hazel runs the fraction column. Felix runs the wholes. Cora simplifies.</p>
 <div class="bubble-row">
@@ -383,7 +444,7 @@
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Answers:</strong> 7 <span class="frac"><span class="num">2</span><span class="den">9</span></span> − 4 <span class="frac"><span class="num">5</span><span class="den">9</span></span>: 2 &lt; 5 → <strong>Borrow</strong>. 6 <span class="frac"><span class="num">5</span><span class="den">16</span></span> − 2 <span class="frac"><span class="num">7</span><span class="den">16</span></span>: 5 &lt; 7 → <strong>Borrow</strong>. 9 <span class="frac"><span class="num">7</span><span class="den">8</span></span> − 3 <span class="frac"><span class="num">3</span><span class="den">8</span></span>: 7 ≥ 3 → <strong>No borrow</strong>. Always check the fraction column FIRST.</div>
 <div class="journal-label">✏️ Pick one. Show how you decided. <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: Borrow check mixed-mixed" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
-<div class="video-wrap" data-video-slot="4-07-06-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.07.06</div><div class="video-wrap-title">Borrow check for two mixed numbers</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-06_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk each. "7 <span class="frac"><span class="num">2</span><span class="den">9</span></span> − 4 <span class="frac"><span class="num">5</span><span class="den">9</span></span>: top fraction <span class="frac"><span class="num">2</span><span class="den">9</span></span>, bottom <span class="frac"><span class="num">5</span><span class="den">9</span></span> — 2 &lt; 5, must borrow." "6 <span class="frac"><span class="num">5</span><span class="den">16</span></span> − 2 <span class="frac"><span class="num">7</span><span class="den">16</span></span>: 5 &lt; 7, borrow." "9 <span class="frac"><span class="num">7</span><span class="den">8</span></span> − 3 <span class="frac"><span class="num">3</span><span class="den">8</span></span>: 7 ≥ 3, no borrow." Frame: "Same check as 7.05 — but now you also subtract a whole-number part from the wholes column."</div><div class="video-placeholder-id"><!-- slot: lesson-readiness-feedback --></div></div></div></div>
+
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Two mixed numbers, borrow in the middle.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">📐</span><p>A carpenter has a <strong>7 <span class="frac"><span class="num">5</span><span class="den">16</span></span> ft</strong> board. She cuts off <strong>2 <span class="frac"><span class="num">7</span><span class="den">8</span></span> ft</strong>. How long is the remaining piece?</p></div>
 <div class="number-talk-visual">
@@ -413,7 +474,7 @@
 <textarea class="journal-box" data-label="Warm-Up — Think Prompt: 7 5/16 - 2 7/8 board" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">Two columns. Borrow when the fraction column is too small. Subtract each. Now use the Subtraction Tracker to walk through three problems.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-<div class="tab-panel" id="tab-learn">
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-07-06-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-07-06 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-07-06-concept --></div></div></div></div>
 <div aria-label="Daily vocabulary flash cards" class="vocab-section">
 <div class="vocab-section-head">
 <div class="vocab-section-icon">📚</div>
@@ -450,7 +511,7 @@
 </div>
 </div>
 </div>
-<div class="video-wrap" data-video-slot="4-07-06-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.07.06</div><div class="video-wrap-title">Two mixed numbers: rename, check, borrow, subtract each column.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-06_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Three examples. Example 1 (same denom, no borrow): 9 <span class="frac"><span class="num">7</span><span class="den">8</span></span> − 3 3/8. Fractions: 7 ≥ 3, no borrow. <span class="frac"><span class="num">7</span><span class="den">8</span></span> − <span class="frac"><span class="num">3</span><span class="den">8</span></span> = <span class="frac"><span class="num">4</span><span class="den">8</span></span> = 1/2. Wholes: 9 − 3 = 6. Final: 6 1/2. Example 2 (same denom, borrow): 7 <span class="frac"><span class="num">5</span><span class="den">16</span></span> − 2 7/8. Rename <span class="frac"><span class="num">7</span><span class="den">8</span></span> = 14/16. Compare 5 vs 14 → borrow. 7 <span class="frac"><span class="num">5</span><span class="den">16</span></span> → 6 21/16. Fractions: <span class="frac"><span class="num">21</span><span class="den">16</span></span> − <span class="frac"><span class="num">14</span><span class="den">16</span></span> = 7/16. Wholes: 6 − 2 = 4. Final: 4 7/16. Example 3 (different denom, borrow): 6 <span class="frac"><span class="num">1</span><span class="den">3</span></span> − 3 7/12. Rename <span class="frac"><span class="num">1</span><span class="den">3</span></span> = 4/12. 4 &lt; 7 → borrow. 6 <span class="frac"><span class="num">4</span><span class="den">12</span></span> → 5 16/12. Fractions: <span class="frac"><span class="num">16</span><span class="den">12</span></span> − <span class="frac"><span class="num">7</span><span class="den">12</span></span> = <span class="frac"><span class="num">9</span><span class="den">12</span></span> = 3/4. Wholes: 5 − 3 = 2. Final: 2 3/4. Frame: "Same routine each time. Rename, check, borrow if needed, subtract both columns, simplify." Tone: methodical. About 2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-concept --></div></div></div></div>
+
 <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Use the Subtraction Tracker below. Step through Rename → Borrow → Subtract Fractions → Subtract Wholes for each problem.</p></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#0E8A8C;">📉</div><div><div class="activity-title">Subtraction Tracker</div><div class="activity-sub">Step through Rename → Borrow → Subtract Fractions → Subtract Wholes.</div></div></div><div class="activity-body"><p>Three problems below. Click each step in order. Watch the visual update with every click.</p>
 <!-- Problem 1: 9 7/8 - 3 3/8 (no borrow) -->
@@ -542,7 +603,7 @@
 <textarea class="journal-box" data-label="Learn — Socratic: Borrowing parallels whole-number subtraction" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: 14 <span class="frac"><span class="num">1</span><span class="den">2</span></span> − 6 <span class="frac"><span class="num">3</span><span class="den">4</span></span> − 1 <span class="frac"><span class="num">7</span><span class="den">8</span></span></div><div class="activity-sub">Three mixed numbers in a row — Unit 7 closer.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Find <strong>14 <span class="frac"><span class="num">1</span><span class="den">2</span></span> − 6 <span class="frac"><span class="num">3</span><span class="den">4</span></span> − 1 <span class="frac"><span class="num">7</span><span class="den">8</span></span></strong> in simplest form.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
-<div class="video-wrap" data-video-slot="4-07-06-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.07.06</div><div class="video-wrap-title">14 <span class="frac"><span class="num">1</span><span class="den">2</span></span> − 6 <span class="frac"><span class="num">3</span><span class="den">4</span></span> − 1 <span class="frac"><span class="num">7</span><span class="den">8</span></span> = 5 <span class="frac"><span class="num">7</span><span class="den">8</span></span></div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-06_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Atlas reads. "14 <span class="frac"><span class="num">1</span><span class="den">2</span></span> − 6 <span class="frac"><span class="num">3</span><span class="den">4</span></span> − 1 7/8. Work left to right. First: 14 <span class="frac"><span class="num">1</span><span class="den">2</span></span> − 6 3/4." Rename: <span class="frac"><span class="num">1</span><span class="den">2</span></span> = 2/4. Compare <span class="frac"><span class="num">2</span><span class="den">4</span></span> vs <span class="frac"><span class="num">3</span><span class="den">4</span></span> → borrow. 14 <span class="frac"><span class="num">2</span><span class="den">4</span></span> → 13 6/4. Subtract: <span class="frac"><span class="num">6</span><span class="den">4</span></span> − <span class="frac"><span class="num">3</span><span class="den">4</span></span> = 3/4. Wholes: 13 − 6 = 7. Partial: 7 3/4. Next: 7 <span class="frac"><span class="num">3</span><span class="den">4</span></span> − 1 7/8. Rename <span class="frac"><span class="num">3</span><span class="den">4</span></span> = 6/8. Compare <span class="frac"><span class="num">6</span><span class="den">8</span></span> vs <span class="frac"><span class="num">7</span><span class="den">8</span></span> → borrow. 7 <span class="frac"><span class="num">6</span><span class="den">8</span></span> → 6 14/8. Subtract: <span class="frac"><span class="num">14</span><span class="den">8</span></span> − <span class="frac"><span class="num">7</span><span class="den">8</span></span> = 7/8. Wholes: 6 − 1 = 5. Final: <strong>5 <span class="frac"><span class="num">7</span><span class="den">8</span></span></strong>. Cora simplifies — already simplest. Frame: "Multi-step subtraction. Work left to right. Each step is the regular two-column subtraction." Tone: Unit 7 closer, methodical, confident. About 2 min.</div><div class="video-placeholder-id"><!-- slot: 4-07-06-example --></div></div></div></div>
+
 <div style="background:#F3F9F8;border:2px solid #A8D8D6;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.8;font-size:15px;">
 <strong>Phase 1:</strong> 14 <span class="frac"><span class="num">1</span><span class="den">2</span></span> − 6 3/4. Rename <span class="frac"><span class="num">1</span><span class="den">2</span></span> = 2/4. 2 &lt; 3 → borrow → 13 6/4. Subtract: <span class="frac"><span class="num">6</span><span class="den">4</span></span> − <span class="frac"><span class="num">3</span><span class="den">4</span></span> = 3/4. Wholes 13 − 6 = 7. <span style="color:#0E8A8C;font-weight:900;">→ 7 <span class="frac"><span class="num">3</span><span class="den">4</span></span></span><br/>
@@ -570,10 +631,10 @@
 <button class="value-card" onclick="pickP1Round(this,'12 10/8')" style="min-width:100px;"><div class="big">12 <span class="frac"><span class="num">10</span><span class="den">8</span></span></div></button>
 </div>
 <div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Exactly.</strong> <span class="frac"><span class="num">7</span><span class="den">8</span></span> − <span class="frac"><span class="num">3</span><span class="den">8</span></span> = <span class="frac"><span class="num">4</span><span class="den">8</span></span> = 1/2. Wholes: 9 − 3 = 6. Final: <strong>6 <span class="frac"><span class="num">1</span><span class="den">2</span></span></strong>.
-<div class="video-wrap" data-video-slot="4-07-06-practice-1-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 1</div><div class="video-wrap-title">No borrow needed</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-06_Practice-1_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk it clean. About 45 sec.</div><div class="video-placeholder-id"></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Look again.</strong> Same denominator. Just subtract each column.
 <div class="hint-callout">Fractions: <span class="frac"><span class="num">7</span><span class="den">8</span></span> − <span class="frac"><span class="num">3</span><span class="den">8</span></span> = <span class="frac"><span class="num">4</span><span class="den">8</span></span> → simplify 1/2. Wholes: 9 − 3 = 6. Final: 6 1/2.</div>
-<div class="video-wrap" data-video-slot="4-07-06-practice-1-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 1</div><div class="video-wrap-title">Subtract each column</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-06_Practice-1_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. About 1 min.</div><div class="video-placeholder-id"></div></div></div></div></div></div></div>
+</div></div></div>
 <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three More — Mixed − Mixed</div><div class="activity-sub">Some need rename. Some need borrow. Some need both.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>Strategy:</strong> Rename → Check → Borrow if needed → Subtract both columns → Simplify.</p></div>
 <div style="display:grid;gap:14px;margin:14px 0;">
 <div style="background:#F3F9F8;border:2px solid #A8D8D6;border-radius:14px;padding:14px;">
@@ -602,10 +663,10 @@
 </div>
 </div>
 <div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ Three for three.</strong> 2a — rename <span class="frac"><span class="num">7</span><span class="den">8</span></span>=<span class="frac"><span class="num">14</span><span class="den">16</span></span>, borrow, 6 <span class="frac"><span class="num">21</span><span class="den">16</span></span> − 2 <span class="frac"><span class="num">14</span><span class="den">16</span></span> = <strong>4 <span class="frac"><span class="num">7</span><span class="den">16</span></span></strong>. 2b — rename <span class="frac"><span class="num">1</span><span class="den">3</span></span>=<span class="frac"><span class="num">4</span><span class="den">12</span></span>, borrow, 5 <span class="frac"><span class="num">16</span><span class="den">12</span></span> − 3 <span class="frac"><span class="num">7</span><span class="den">12</span></span> = 2 <span class="frac"><span class="num">9</span><span class="den">12</span></span> = <strong>2 <span class="frac"><span class="num">3</span><span class="den">4</span></span></strong>. 2c — rename <span class="frac"><span class="num">1</span><span class="den">2</span></span>=<span class="frac"><span class="num">4</span><span class="den">8</span></span>, borrow, 4 <span class="frac"><span class="num">12</span><span class="den">8</span></span> − 4 <span class="frac"><span class="num">5</span><span class="den">8</span></span> = 0 <span class="frac"><span class="num">7</span><span class="den">8</span></span> = <strong><span class="frac"><span class="num">7</span><span class="den">8</span></span></strong>.
-<div class="video-wrap" data-video-slot="4-07-06-practice-2-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 2</div><div class="video-wrap-title">Rename, borrow, subtract, simplify</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-06_Practice-2_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk all three. About 2 min.</div><div class="video-placeholder-id"></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Look again.</strong> Rename, check, borrow if needed, subtract both columns.
 <div class="hint-callout">2a: rename <span class="frac"><span class="num">7</span><span class="den">8</span></span>=<span class="frac"><span class="num">14</span><span class="den">16</span></span>, 5&lt;14 borrow → 6 <span class="frac"><span class="num">21</span><span class="den">16</span></span> − 2 <span class="frac"><span class="num">14</span><span class="den">16</span></span> = 4 7/16. 2b: rename <span class="frac"><span class="num">1</span><span class="den">3</span></span>=<span class="frac"><span class="num">4</span><span class="den">12</span></span>, 4&lt;7 borrow → 5 <span class="frac"><span class="num">16</span><span class="den">12</span></span> − 3 <span class="frac"><span class="num">7</span><span class="den">12</span></span> = 2 <span class="frac"><span class="num">9</span><span class="den">12</span></span> = 2 3/4. 2c: rename <span class="frac"><span class="num">1</span><span class="den">2</span></span>=<span class="frac"><span class="num">4</span><span class="den">8</span></span>, 4&lt;5 borrow → 4 <span class="frac"><span class="num">12</span><span class="den">8</span></span> − 4 <span class="frac"><span class="num">5</span><span class="den">8</span></span> = 0 <span class="frac"><span class="num">7</span><span class="den">8</span></span> = 7/8.</div>
-<div class="video-wrap" data-video-slot="4-07-06-practice-2-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 2</div><div class="video-wrap-title">Five-step procedure</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-06_Practice-2_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. About 1-2 min.</div><div class="video-placeholder-id"></div></div></div></div></div></div></div>
+</div></div></div>
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#0E8A8C;">3</div><div><div class="activity-title">Find Jana's Mistake — She Borrowed Wrong</div><div class="activity-sub">She added the borrow to the fraction, but didn't subtract from the whole.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Jana set up 6 <span class="frac"><span class="num">1</span><span class="den">4</span></span> − 2 3/4. She knew she needed to borrow. She added <span class="frac"><span class="num">4</span><span class="den">4</span></span> to the fraction column (making it <span class="frac"><span class="num">5</span><span class="den">4</span></span>) but FORGOT to subtract 1 from the wholes column.</p></div>
 <div class="task-box"><div class="task-label">Jana's Work</div>
 <p>Jana was asked: <strong>"Find 6 <span class="frac"><span class="num">1</span><span class="den">4</span></span> − 2 <span class="frac"><span class="num">3</span><span class="den">4</span></span> in simplest form."</strong></p>
@@ -622,17 +683,14 @@
 <button class="purple-btn" onclick="checkErrorAnalysis()">✓ Check My Picks</button>
 <div class="journal-label">✏️ Help Jana. Write a rule about the BORROW move — where does the 1 come from and where does it go? <span class="saved-dot" id="dot-ea"></span></div>
 <textarea class="journal-box" data-label="Practice 3 — Error Analysis: Borrow takes from whole and adds to fraction" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
-<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Borrow takes 1 FROM the whole-number column AND adds denom slices to the fraction column. 6 <span class="frac"><span class="num">1</span><span class="den">4</span></span> → 5 <span class="frac"><span class="num">5</span><span class="den">4</span></span> (not 6 <span class="frac"><span class="num">5</span><span class="den">4</span></span>). Then 5 <span class="frac"><span class="num">5</span><span class="den">4</span></span> − 2 <span class="frac"><span class="num">3</span><span class="den">4</span></span> = <strong>3 <span class="frac"><span class="num">1</span><span class="den">2</span></span></strong>. <div class="video-wrap" data-video-slot="4-07-06-practice-3-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 3</div><div class="video-wrap-title">Borrow = move 1 across</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-06_Practice-3_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Frame the borrow rule. About 45 sec.</div><div class="video-placeholder-id"></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three are true.</strong><div class="hint-callout">Borrow takes 1 OUT of the whole-number column. 6 → 5. Adds denom to the fraction column. <span class="frac"><span class="num">1</span><span class="den">4</span></span> → 5/4. Now subtract: 5 <span class="frac"><span class="num">5</span><span class="den">4</span></span> − 2 <span class="frac"><span class="num">3</span><span class="den">4</span></span> = 3 <span class="frac"><span class="num">2</span><span class="den">4</span></span> = 3 1/2.</div><div class="video-wrap" data-video-slot="4-07-06-practice-3-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 3</div><div class="video-wrap-title">Borrow exchanges 1 whole for denom slices</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-07-06_Practice-3_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. About 1 min.</div><div class="video-placeholder-id"></div></div></div></div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
+<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Borrow takes 1 FROM the whole-number column AND adds denom slices to the fraction column. 6 <span class="frac"><span class="num">1</span><span class="den">4</span></span> → 5 <span class="frac"><span class="num">5</span><span class="den">4</span></span> (not 6 <span class="frac"><span class="num">5</span><span class="den">4</span></span>). Then 5 <span class="frac"><span class="num">5</span><span class="den">4</span></span> − 2 <span class="frac"><span class="num">3</span><span class="den">4</span></span> = <strong>3 <span class="frac"><span class="num">1</span><span class="den">2</span></span></strong>. </div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three are true.</strong><div class="hint-callout">Borrow takes 1 OUT of the whole-number column. 6 → 5. Adds denom to the fraction column. <span class="frac"><span class="num">1</span><span class="den">4</span></span> → 5/4. Now subtract: 5 <span class="frac"><span class="num">5</span><span class="den">4</span></span> − 2 <span class="frac"><span class="num">3</span><span class="den">4</span></span> = 3 <span class="frac"><span class="num">2</span><span class="den">4</span></span> = 3 1/2.</div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">You stepped through the full subtraction. Now practice.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Subtracting two mixed numbers. Rename, check, borrow if needed, subtract each column. Unit 7 closer.</div></div></div><div class="activity-body"><p>For each, show your two-column subtraction with the borrow step if needed.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Do the denominators MATCH? Or do I need to rename one or both? Or is a benchmark (<span class="frac"><span class="num">1</span><span class="den">2</span></span>, 1) faster?</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Same denominator, no borrow.</strong><br/>(a) 9 <span class="frac"><span class="num">7</span><span class="den">8</span></span> − 3 <span class="frac"><span class="num">3</span><span class="den">8</span></span><br/>(b) 6 <span class="frac"><span class="num">7</span><span class="den">9</span></span> − 2 <span class="frac"><span class="num">4</span><span class="den">9</span></span><br/>(c) 11 <span class="frac"><span class="num">7</span><span class="den">16</span></span> − 5 <span class="frac"><span class="num">3</span><span class="den">16</span></span></p><div class="journal-label">✏️ My answers in simplest form + the simplification step <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: Convert three improper to mixed" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-
 <div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Word problem — fabric closer.</strong> Gina started with 10 <span class="frac"><span class="num">3</span><span class="den">8</span></span> yards of fabric. She used 4 <span class="frac"><span class="num">5</span><span class="den">6</span></span> yards for one project and 1 <span class="frac"><span class="num">3</span><span class="den">4</span></span> yards for another. How much fabric is left?</p><div class="journal-label">✏️ My answers <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: Cake story with simplification" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
-
-
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#0E8A8C;"><div class="activity-head"><div class="activity-num" style="background:#0E8A8C;color:#fff;">🗺️</div><div><div class="activity-title">Unit 7 Complete — Where This Goes Next</div><div class="activity-sub">Looking ahead</div></div></div><div class="activity-body"><p>You've compared and ordered fractions that all fit between 0 and 1.</p><p>Next lesson: <strong>Improper Fractions and Mixed Numbers.</strong> What if the top is BIGGER than the bottom? <span class="frac"><span class="num">8</span><span class="den">5</span></span> of a pie isn't just half — it's a WHOLE pie plus some extra. That's an improper fraction, and it can also be written as a mixed number (1 <span class="frac"><span class="num">3</span><span class="den">5</span></span>).</p><p>The big question opening 6.03: <em>How do you show a fraction that's more than 1 whole?</em></p></div></div></div></div>
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed all 6 problems above.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed both column subtractions on every problem.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed the borrow step whenever the fraction column needed it and simplified at the end.</span></div></div></div>
@@ -1186,6 +1244,75 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 setTimeout(function(){ for(const id in sts) stRender(parseInt(id)); }, 0);
 
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = true;
+var FLUENCY_TITLE = "Mixed Multiplication & Division — One-Minute Check";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
 </script>
 </body>
 </html>

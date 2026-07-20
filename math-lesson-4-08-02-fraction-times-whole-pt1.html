@@ -314,6 +314,32 @@
 .frac.frac-lg{font-size:1.05em}
 .frac.frac-on-dark .num{border-bottom-color:#fff}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
@@ -341,7 +367,31 @@
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
-<div class="video-wrap" data-video-slot="4-08-02-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.08.02</div><div class="video-wrap-title">Multiplying any fraction by a whole number.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-08-02_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Hold up 3 pies, each cut into 4ths. Shade 3 of 4 on each. "Each pie shows 3/4. 3 × <span class="frac"><span class="num">3</span><span class="den">4</span></span> — that's 3 groups of 3/4." Push the shaded slices together. "Count the slices: 3 + 3 + 3 = 9. Each is 1/4. So I have 9/4." Convert: "How many 4s in 9? Two. Remainder 1. So <span class="frac"><span class="num">9</span><span class="den">4</span></span> = 2 1/4." Show 5 × <span class="frac"><span class="num">2</span><span class="den">3</span></span> with number-line jumps. Frame: <strong>(numerator × whole number) ÷ denominator. Multiply top by whole. Keep bottom.</strong> Tone: bright, building. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-welcome --></div></div></div></div>
+<div class="fluency-box" data-timed="false">
+<div class="fluency-head">
+<div class="fluency-head-icon">✍️</div>
+<div><div class="fluency-head-label">FLUENCY WARM-UP</div><div class="fluency-head-title">Mixed Multiplication Facts — Maintenance</div></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Warm up your fact fluency before today’s lesson. Work through these, then check your answers.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">7 × 8</span><input autocomplete="off" class="fluency-input" data-answer="56" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 9</span><input autocomplete="off" class="fluency-input" data-answer="54" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 8</span><input autocomplete="off" class="fluency-input" data-answer="64" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 7</span><input autocomplete="off" class="fluency-input" data-answer="63" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">11 × 7</span><input autocomplete="off" class="fluency-input" data-answer="77" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">12 × 5</span><input autocomplete="off" class="fluency-input" data-answer="60" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 6</span><input autocomplete="off" class="fluency-input" data-answer="36" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 9</span><input autocomplete="off" class="fluency-input" data-answer="63" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 6</span><input autocomplete="off" class="fluency-input" data-answer="48" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 4</span><input autocomplete="off" class="fluency-input" data-answer="36" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Mixed Multiplication Facts — Maintenance)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
 <p>Felix still leads. Today: any fraction, not just unit fractions. Atlas names the new rule, Hazel pictures the groups, Cora finishes.</p>
 <div class="bubble-row">
@@ -386,7 +436,7 @@
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Answers:</strong> <span class="frac"><span class="num">3</span><span class="den">4</span></span> + <span class="frac"><span class="num">3</span><span class="den">4</span></span> + <span class="frac"><span class="num">3</span><span class="den">4</span></span> = <strong>3 × <span class="frac"><span class="num">3</span><span class="den">4</span></span> = <span class="frac"><span class="num">9</span><span class="den">4</span></span></strong>. 5 × <span class="frac"><span class="num">2</span><span class="den">3</span></span> = <strong><span class="frac"><span class="num">10</span><span class="den">3</span></span></strong> (= 3 <span class="frac"><span class="num">1</span><span class="den">3</span></span>). 7 × <span class="frac"><span class="num">2</span><span class="den">9</span></span> = <strong><span class="frac"><span class="num">14</span><span class="den">9</span></span></strong> (= 1 <span class="frac"><span class="num">5</span><span class="den">9</span></span>).</div>
 <div class="journal-label">✏️ Notice the pattern: the top gets bigger, the bottom stays. Why? <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: Pattern in fraction × whole" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
-<div class="video-wrap" data-video-slot="4-08-02-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.08.02</div><div class="video-wrap-title">Top grows, bottom stays</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-08-02_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "<span class="frac"><span class="num">3</span><span class="den">4</span></span> + <span class="frac"><span class="num">3</span><span class="den">4</span></span> + <span class="frac"><span class="num">3</span><span class="den">4</span></span> — three of the same. That's 3 GROUPS of <span class="frac"><span class="num">3</span><span class="den">4</span></span>, which is 3 × 3/4. Multiply the top: 3 × 3 = 9. Keep the bottom: 4. So 3 × <span class="frac"><span class="num">3</span><span class="den">4</span></span> = 9/4." Frame: <strong>Multiply the numerator by the whole number. The denominator never changes.</strong></div><div class="video-placeholder-id"><!-- slot: lesson-readiness-feedback --></div></div></div></div>
+
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Three groups of 3/4.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">🥧</span><p>What is <strong>3 × <span class="frac"><span class="num">3</span><span class="den">4</span></span></strong>?</p></div>
 <div class="number-talk-visual">
@@ -413,7 +463,7 @@
 <textarea class="journal-box" data-label="Warm-Up — Think Prompt: 3 × 3/4" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">Now click to add groups — bigger ones this time.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-<div class="tab-panel" id="tab-learn">
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-08-02-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-08-02 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-08-02-concept --></div></div></div></div>
 <div aria-label="Daily vocabulary flash cards" class="vocab-section">
 <div class="vocab-section-head">
 <div class="vocab-section-icon">📚</div>
@@ -450,7 +500,7 @@
 </div>
 </div>
 </div>
-<div class="video-wrap" data-video-slot="4-08-02-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.08.02</div><div class="video-wrap-title">Multiply the numerator by the whole number. Keep the denominator.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-08-02_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Three examples. (1) 3 × <span class="frac"><span class="num">3</span><span class="den">4</span></span> = <span class="frac"><span class="num">9</span><span class="den">4</span></span> = 2 1/4. (2) 5 × <span class="frac"><span class="num">2</span><span class="den">3</span></span> = <span class="frac"><span class="num">10</span><span class="den">3</span></span> = 3 1/3. (3) 7 × <span class="frac"><span class="num">2</span><span class="den">9</span></span> = <span class="frac"><span class="num">14</span><span class="den">9</span></span> = 1 5/9. Each time: multiply the whole by the top. Keep the bottom. Convert if improper. Frame: <strong>Multiply the numerator by the whole number. Keep the denominator.</strong> Tone: bright, building. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-concept --></div></div></div></div>
+
 <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Click to BUILD each product — each click adds a whole GROUP of slices.</p></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#D97706;">🏗️</div><div><div class="activity-title">Group Builder Pro</div><div class="activity-sub">Each click adds ONE WHOLE GROUP of slices (numerator-worth in each).</div></div></div><div class="activity-body"><p>Three problems. Click <strong>+1 group</strong> to add a whole group at once.</p>
 <!-- Problem 1: 3 × 3/4 -->
@@ -509,7 +559,7 @@
 <textarea class="journal-box" data-label="Learn — Socratic: 5 × 2/3 vs 5 × 3/3" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: 7 × <span class="frac"><span class="num">5</span><span class="den">12</span></span></div><div class="activity-sub">Apply the rule. Convert at the end.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Find <strong>7 × <span class="frac"><span class="num">5</span><span class="den">12</span></span></strong> in simplest form.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
-<div class="video-wrap" data-video-slot="4-08-02-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.08.02</div><div class="video-wrap-title">7 × <span class="frac"><span class="num">5</span><span class="den">12</span></span> = <span class="frac"><span class="num">35</span><span class="den">12</span></span> = 2 <span class="frac"><span class="num">11</span><span class="den">12</span></span></div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-08-02_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Atlas: "7 × <span class="frac"><span class="num">5</span><span class="den">12</span></span> — 7 groups of 5/12." Felix: "Multiply top: 7 × 5 = 35. Keep bottom: 12. So 35/12." Cora: "Improper. How many 12s in 35? Two (24). Remainder 11. So 2 11/12. Already simplest." Frame: <strong>Multiply the numerator by the whole number. Keep the denominator. Then convert.</strong> About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-08-02-example --></div></div></div></div>
+
 <div style="background:#FFFBEB;border:2px solid #FCD34D;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.9;font-size:16px;">
 <strong>Step 1.</strong> 7 × <span class="frac"><span class="num">5</span><span class="den">12</span></span> means 7 groups of 5/12.<br/>
@@ -538,10 +588,10 @@
 <button class="value-card" onclick="pickP1Round(this,'6/14')" style="min-width:100px;"><div class="big"><span class="frac"><span class="num">6</span><span class="den">14</span></span></div></button>
 </div>
 <div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Right.</strong> 2 × 3 = 6. Keep 7. <strong><span class="frac"><span class="num">6</span><span class="den">7</span></span></strong> — already simplest.
-<div class="video-wrap" data-video-slot="4-08-02-practice-1-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 1</div><div class="video-wrap-title">Multiply top, keep bottom</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-08-02_Practice-1_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk clean. About 30 sec.</div><div class="video-placeholder-id"></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Look again.</strong> Multiply 2 × the top (3). Keep the bottom (7).
 <div class="hint-callout">2 × <span class="frac"><span class="num">3</span><span class="den">7</span></span> = (2 × 3)/7 = 6/7. Top: 2 × 3 = 6. Bottom stays 7.</div>
-<div class="video-wrap" data-video-slot="4-08-02-practice-1-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 1</div><div class="video-wrap-title">Top × whole, bottom stays</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-08-02_Practice-1_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. About 45 sec.</div><div class="video-placeholder-id"></div></div></div></div></div></div></div>
+</div></div></div>
 <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three More — Fraction × Whole Number</div><div class="activity-sub">Each one converts to a mixed number.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>Strategy:</strong> Multiply tops → keep bottom → convert improper.</p></div>
 <div style="display:grid;gap:14px;margin:14px 0;">
 <div style="background:#FFFBEB;border:2px solid #FCD34D;border-radius:14px;padding:14px;">
@@ -570,10 +620,10 @@
 </div>
 </div>
 <div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ Three for three.</strong> 2a — 3 × <span class="frac"><span class="num">3</span><span class="den">5</span></span> = <span class="frac"><span class="num">9</span><span class="den">5</span></span> = <strong>1 <span class="frac"><span class="num">4</span><span class="den">5</span></span></strong>. 2b — 9 × <span class="frac"><span class="num">3</span><span class="den">10</span></span> = <span class="frac"><span class="num">27</span><span class="den">10</span></span> = <strong>2 <span class="frac"><span class="num">7</span><span class="den">10</span></span></strong>. 2c — 5 × <span class="frac"><span class="num">5</span><span class="den">6</span></span> = <span class="frac"><span class="num">25</span><span class="den">6</span></span> = <strong>4 <span class="frac"><span class="num">1</span><span class="den">6</span></span></strong>.
-<div class="video-wrap" data-video-slot="4-08-02-practice-2-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 2</div><div class="video-wrap-title">All three convert</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-08-02_Practice-2_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk all three. About 1-2 min.</div><div class="video-placeholder-id"></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Look again.</strong> Multiply numerator × whole number. Keep bottom. Then divide top by bottom.
 <div class="hint-callout">2a: 3 × <span class="frac"><span class="num">3</span><span class="den">5</span></span> = <span class="frac"><span class="num">9</span><span class="den">5</span></span> → 1 R 4 → 1 4/5. 2b: 9 × <span class="frac"><span class="num">3</span><span class="den">10</span></span> = <span class="frac"><span class="num">27</span><span class="den">10</span></span> → 2 R 7 → 2 7/10. 2c: 5 × <span class="frac"><span class="num">5</span><span class="den">6</span></span> = <span class="frac"><span class="num">25</span><span class="den">6</span></span> → 4 R 1 → 4 1/6.</div>
-<div class="video-wrap" data-video-slot="4-08-02-practice-2-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 2</div><div class="video-wrap-title">Rule, then convert</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-08-02_Practice-2_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. About 1-2 min.</div><div class="video-placeholder-id"></div></div></div></div></div></div></div>
+</div></div></div>
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#D97706;">3</div><div><div class="activity-title">Find Otis's Mistake — He Multiplied Both</div><div class="activity-sub">He multiplied the top AND the bottom.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Otis computed 4 × 2/5. He wrote 4 × 2 = 8 (correct), then 4 × 5 = 20 (wrong — bottom stays). His answer: <span class="frac"><span class="num">8</span><span class="den">20</span></span> = 2/5. The real answer: <span class="frac"><span class="num">8</span><span class="den">5</span></span> = 1 3/5.</p></div>
 <p>Pick the right answer to 4 × 2/5.</p>
 <div class="value-card-row" style="justify-content:center;">
@@ -582,20 +632,17 @@
 <button class="value-card" onclick="pickP3Round(this,'8/20')" style="min-width:100px;"><div class="big"><span class="frac"><span class="num">8</span><span class="den">20</span></span></div></button>
 </div>
 <div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ Spot on.</strong> 4 × 2 = 8, bottom stays 5. <strong><span class="frac"><span class="num">8</span><span class="den">5</span></span> = 1 <span class="frac"><span class="num">3</span><span class="den">5</span></span></strong>.
-<div class="video-wrap" data-video-slot="4-08-02-practice-3-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 3</div><div class="video-wrap-title">Keep the denominator</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-08-02_Practice-3_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Atlas: "Bottom stays!" About 30 sec.</div><div class="video-placeholder-id"></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again.</strong> Only the TOP gets multiplied. The bottom never changes.
 <div class="hint-callout">4 × <span class="frac"><span class="num">2</span><span class="den">5</span></span> = (4 × 2)/5 = 8/5. Top: 4 × 2 = 8. Bottom: stays 5.</div>
-<div class="video-wrap" data-video-slot="4-08-02-practice-3-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 3</div><div class="video-wrap-title">Only top changes</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-08-02_Practice-3_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. About 45 sec.</div><div class="video-placeholder-id"></div></div></div></div></div></div></div>
+</div></div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">Built, converted, fixed. Now show it.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Multiplying any fraction by a whole number. Apply the rule, then convert if improper.</div></div></div><div class="activity-body"><p>For each, show: (whole × top) / bottom → mixed number.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Do the denominators MATCH? Or do I need to rename one or both? Or is a benchmark (<span class="frac"><span class="num">1</span><span class="den">2</span></span>, 1) faster?</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Basic rule.</strong> Find each. Leave as improper fractions.<br/>(a) 3 × <span class="frac"><span class="num">3</span><span class="den">4</span></span><br/>(b) 2 × <span class="frac"><span class="num">3</span><span class="den">7</span></span><br/>(c) 5 × <span class="frac"><span class="num">2</span><span class="den">3</span></span></p><div class="journal-label">✏️ My improper-fraction answers <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: Apply the rule" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-
 <div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Word problem — broccoli bags.</strong> Each bag of broccoli weighs <span class="frac"><span class="num">3</span><span class="den">4</span></span> lb. (a) How many pounds do 3 bags weigh in total? (b) Write your answer as a mixed number.</p><div class="journal-label">✏️ My answers <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: Broccoli bag story" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
-
-
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#D97706;"><div class="activity-head"><div class="activity-num" style="background:#D97706;color:#fff;">🗺️</div><div><div class="activity-title">Unit 7 Complete — Where This Goes Next</div><div class="activity-sub">Looking ahead</div></div></div><div class="activity-body"><p>You've compared and ordered fractions that all fit between 0 and 1.</p><p>Next lesson: <strong>Improper Fractions and Mixed Numbers.</strong> What if the top is BIGGER than the bottom? <span class="frac"><span class="num">8</span><span class="den">5</span></span> of a pie isn't just half — it's a WHOLE pie plus some extra. That's an improper fraction, and it can also be written as a mixed number (1 <span class="frac"><span class="num">3</span><span class="den">5</span></span>).</p><p>The big question opening 6.03: <em>How do you show a fraction that's more than 1 whole?</em></p></div></div></div></div>
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed all 6 problems above.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed both column subtractions on every problem.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I showed the borrow step whenever the fraction column needed it and simplified at the end.</span></div></div></div>
@@ -1203,5 +1250,74 @@ if(typeof window !== 'undefined'){
     setTimeout(function(){ [1,2,3].forEach(function(id){ gbRender(id); }); }, 0);
   }
 }</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = false;
+var FLUENCY_TITLE = "Mixed Multiplication Facts — Maintenance";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
+</script>
 </body>
 </html>

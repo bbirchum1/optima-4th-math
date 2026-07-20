@@ -314,6 +314,32 @@
 .frac.frac-lg{font-size:1.05em}
 .frac.frac-on-dark .num{border-bottom-color:#fff}
 </style>
+<style id="fluencyStyles">
+.fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
+.fluency-head{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#F5C518,#E8B723);padding:14px 20px;flex-wrap:wrap}
+.fluency-head-icon{font-size:26px;line-height:1}
+.fluency-head-label{font-size:10px;color:#0E1C42;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.fluency-head-title{font-size:15px;color:#0E1C42;font-weight:800}
+.fluency-timer-ui{margin-left:auto;display:flex;align-items:center;gap:10px}
+.fluency-timer-display{font-size:20px;font-weight:800;color:#0E1C42;min-width:46px;text-align:center}
+.fluency-start-btn{background:#0E1C42;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer}
+.fluency-start-btn:disabled{opacity:0.55;cursor:default}
+.fluency-body{padding:16px 20px}
+.fluency-instructions{font-size:13px;color:#4A5568;margin:0 0 12px}
+.fluency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.fluency-item{display:flex;align-items:center;gap:6px;background:#FAFBFF;border:1.5px solid #E2E8F4;border-radius:10px;padding:8px 10px;flex-wrap:wrap}
+.fluency-item.fluency-correct{border-color:#2DB87A;background:#EAFBF3}
+.fluency-item.fluency-wrong{border-color:#E07B39;background:#FDF1E9}
+.fluency-q{font-size:13px;font-weight:700;color:#0E1C42;white-space:normal}
+.fluency-input{width:52px;border:1.5px solid #CBD5E8;border-radius:6px;padding:4px;font-size:14px;text-align:center;font-family:'Nunito',sans-serif}
+.fluency-input:disabled{background:#F0F2F8}
+.fluency-check-btn{background:#2DB87A;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer}
+.fluency-check-btn:disabled{opacity:0.55;cursor:default}
+.fluency-result{margin-top:10px;font-size:14px;color:#0E1C42;font-weight:700}
+.vfrac{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.05;vertical-align:middle;margin:0 2px}
+.vfrac .vf-num{padding:0 3px;border-bottom:1.5px solid #0E1C42}
+.vfrac .vf-den{padding:0 3px}
+</style>
 </head>
 <body id="pageTop">
 <div class="page-wrap">
@@ -341,7 +367,42 @@
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
 <div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
-<div class="video-wrap" data-video-slot="4-06-06-welcome"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Welcome · Lesson 4.06.06</div><div class="video-wrap-title">The fraction bar IS a division sign — the big reveal</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-06_Welcome.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Hold up 2 pizzas. "5 friends, 2 pizzas. How does each friend get an equal share? Divide each pizza into 5 equal slices. That gives 10 slices total. Each friend gets 2 of them — <span class="frac"><span class="num">2</span><span class="den">5</span></span> of a pizza." Pause. "Notice: 2 pizzas divided by 5 friends gives <span class="frac"><span class="num">2</span><span class="den">5</span></span> each. The DIVISION 2 ÷ 5 IS the fraction 2/5." Write the rule big: <strong>a ÷ b = a/b</strong>. "The fraction bar is the division symbol. They mean the same thing." Show 7 ÷ 5. "Seven pizzas shared by 5 friends. Each friend gets <span class="frac"><span class="num">7</span><span class="den">5</span></span> of a pizza. That's improper — more than one whole pizza. Convert: 7 ÷ 5 = 1 r 2 → 1 2/5. So each friend gets 1 whole pizza plus <span class="frac"><span class="num">2</span><span class="den">5</span></span> of another." Now flip it. Show 6/8. "Six divided by eight. Each friend gets less than one — <span class="frac"><span class="num">6</span><span class="den">8</span></span> of a pizza, which simplifies to 3/4." Frame: "From now on, every fraction is a division you might not have computed yet. Equal sharing, fair share — that's what fractions are for." Tone: warm, summative, pulling Unit 6 together. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-welcome --></div></div></div></div>
+<div class="fluency-box" data-timed="true">
+<div class="fluency-head">
+<div class="fluency-head-icon">⏳</div>
+<div><div class="fluency-head-label">TIMED FLUENCY CHECK</div><div class="fluency-head-title">Mixed Multiplication &amp; Division — One-Minute Check</div></div>
+<div class="fluency-timer-ui"><span class="fluency-timer-display" id="fluencyTimerDisplay">60s</span><button class="fluency-start-btn" id="fluencyStartBtn" onclick="fluencyStart()">Start 1-Minute Check</button></div>
+</div>
+<div class="fluency-body">
+<p class="fluency-instructions">Unit check — Quarter 2 timed fluency. Click Start, then answer as many as you can in 60 seconds. Answers lock in automatically when time is up.</p>
+<div class="fluency-grid" id="fluencyGrid">
+<div class="fluency-item"><span class="fluency-q">8 × 7</span><input autocomplete="off" class="fluency-input" data-answer="56" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 6</span><input autocomplete="off" class="fluency-input" data-answer="54" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 7</span><input autocomplete="off" class="fluency-input" data-answer="49" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 9</span><input autocomplete="off" class="fluency-input" data-answer="54" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">11 × 6</span><input autocomplete="off" class="fluency-input" data-answer="66" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">12 × 7</span><input autocomplete="off" class="fluency-input" data-answer="84" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">8 × 9</span><input autocomplete="off" class="fluency-input" data-answer="72" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">9 × 9</span><input autocomplete="off" class="fluency-input" data-answer="81" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">7 × 8</span><input autocomplete="off" class="fluency-input" data-answer="56" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">6 × 7</span><input autocomplete="off" class="fluency-input" data-answer="42" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">63 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">56 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">72 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">81 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="9" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">48 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="6" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">96 ÷ 12</span><input autocomplete="off" class="fluency-input" data-answer="8" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">77 ÷ 7</span><input autocomplete="off" class="fluency-input" data-answer="11" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">66 ÷ 11</span><input autocomplete="off" class="fluency-input" data-answer="6" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">88 ÷ 8</span><input autocomplete="off" class="fluency-input" data-answer="11" disabled="" inputmode="text" type="text"/></div>
+<div class="fluency-item"><span class="fluency-q">54 ÷ 9</span><input autocomplete="off" class="fluency-input" data-answer="6" disabled="" inputmode="text" type="text"/></div>
+</div>
+<button class="fluency-check-btn" disabled="" id="fluencyCheckBtn" onclick="fluencyCheck()">Check My Answers</button>
+<div class="fluency-result" id="fluencyResult"></div>
+</div>
+<textarea class="journal-box" data-label="Fluency Warm-Up (Mixed Multiplication &amp; Division — One-Minute Check)" id="fluencyJournal" readonly="" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;"></textarea>
+</div>
+
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
 <p>All four take a bow — Unit 6 closer. Hazel pictures the sharing. Atlas names the rule (a ÷ b = a/b). Felix divides for the answer. Cora simplifies to land clean.</p>
 <div class="bubble-row">
@@ -386,7 +447,7 @@
 </div>
 <div class="reveal-box" id="readinessReveal"><strong>Answers:</strong> 3 ÷ 5 = <strong><span class="frac"><span class="num">3</span><span class="den">5</span></span></strong>. 7 ÷ 8 = <strong><span class="frac"><span class="num">7</span><span class="den">8</span></span></strong>. 9 ÷ 4 = <strong><span class="frac"><span class="num">9</span><span class="den">4</span></span></strong>. Top is the dividend (the thing being divided). Bottom is the divisor (the number you're dividing by). Same numbers, different symbol — a fraction IS a division.</div>
 <div class="journal-label">✏️ Pick one. Tell a quick story: who is sharing, what is shared, and what each person gets. <span class="saved-dot" id="dot-r1"></span></div><textarea class="journal-box" data-label="Warm-Up — Readiness: Write division as a fraction" id="journal-r1" oninput="autoSave(this,'dot-r1')" placeholder=""></textarea></div></div>
-<div class="video-wrap" data-video-slot="4-06-06-readiness-feedback"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Readiness Feedback · Lesson 4.06.06</div><div class="video-wrap-title">Every fraction names a division</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-06_Readiness-Feedback.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk all three. "3 divided by 5 = 3/5. Imagine 3 candy bars shared by 5 friends — each friend gets <span class="frac"><span class="num">3</span><span class="den">5</span></span> of a bar. 7 divided by 8 = 7/8. Less than one whole each. 9 divided by 4 = <span class="frac"><span class="num">9</span><span class="den">4</span></span> — improper, more than one whole each. As a mixed number, 9 ÷ 4 = 2 r 1 → 2 1/4." Frame: "The fraction bar IS the division symbol. Same operation, two ways to write it."</div><div class="video-placeholder-id"><!-- slot: lesson-readiness-feedback --></div></div></div></div>
+
 <div class="activity bl-yellow"><div class="activity-head"><div class="activity-num" style="background:#F5C518;color:#0E1C42;">🤔</div><div><div class="activity-title">Think About It</div><div class="activity-sub">Fair sharing turns into a fraction.</div></div></div><div class="activity-body">
 <div class="callout callout-think"><span class="callout-icon">🤝</span><p>Four friends want to share 3 pizzas equally. <strong>How much pizza does each friend get?</strong></p></div>
 <div class="number-talk-visual">
@@ -413,7 +474,7 @@
 <textarea class="journal-box" data-label="Warm-Up — Think Prompt: 3 pizzas 4 friends" id="journal-think" oninput="autoSave(this,'dot-think')" placeholder=""></textarea>
 </div></div><div class="tab-next-wrap"><p class="tab-transition-voice">Fair sharing IS the meaning of a fraction. Now learn the full rule.</p><button class="tab-next-btn" onclick="switchTab('learn')">Continue to 📐 Learn →</button></div>
 </div>
-<div class="tab-panel" id="tab-learn">
+<div class="tab-panel" id="tab-learn"><div class="video-wrap" data-video-slot="4-06-06-concept"><div class="video-wrap-header"><span style="font-size:20px">📖</span><div><div class="video-wrap-type">Learn Video</div><div class="video-wrap-title">Lesson 4-06-06 — Concept Video</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">📖</div><div class="video-placeholder-text">Video coming soon.</div><div class="video-placeholder-id"><!-- slot: 4-06-06-concept --></div></div></div></div>
 <div aria-label="Daily vocabulary flash cards" class="vocab-section">
 <div class="vocab-section-head">
 <div class="vocab-section-icon">📚</div>
@@ -450,7 +511,7 @@
 </div>
 </div>
 </div>
-<div class="video-wrap" data-video-slot="4-06-06-concept"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Concept · Lesson 4.06.06</div><div class="video-wrap-title">a divided by b equals a/b — the fraction IS a division</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-06_Concept.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Three sharing examples. Example 1: 2 candy bars, 5 students. Each student gets <span class="frac"><span class="num">2</span><span class="den">5</span></span> of a bar. Write: 2 ÷ 5 = 2/5. Example 2: 7 cookies, 5 students. 7 ÷ 5 = <span class="frac"><span class="num">7</span><span class="den">5</span></span> = 1 2/5. Each student gets 1 whole cookie plus <span class="frac"><span class="num">2</span><span class="den">5</span></span> of another. Example 3: 6 brownies, 8 students. 6 ÷ 8 = 6/8. Simplify: 3/4. Each student gets <span class="frac"><span class="num">3</span><span class="den">4</span></span> of a brownie. Frame the rule: a divided by b equals a/b. Top is the dividend, bottom is the divisor. Tone: warm, summative — closing Unit 6. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: lesson-concept --></div></div></div></div>
+
 <div class="callout callout-think" style="margin-bottom:14px;"><span class="callout-icon">🧠</span><p><strong>Try before the rule:</strong> Three sharing problems below. Pick the fraction that names each share.</p></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#FF7A45;">🤝</div><div><div class="activity-title">Sharing Visualizer</div><div class="activity-sub">Equal sharing → write the share as a fraction.</div></div></div><div class="activity-body"><p>Each row shows some pies and some students who will share them EQUALLY. Pick the fraction (or mixed number) that names how much each student gets.</p>
 <div style="background:#FFF8F0;border:2px solid #FFD0A8;border-radius:14px;padding:18px 14px;margin:12px 0;">
@@ -526,7 +587,7 @@
 <textarea class="journal-box" data-label="Learn — Socratic: pattern of pies divided by friends" id="journal-soc" oninput="autoSave(this,'dot-soc')" placeholder=""></textarea></div>
 </div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: 31 ÷ 9 — Share 31 by 9</div><div class="activity-sub">Big numbers. Same rule. Write the share as a fraction and a mixed number.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>Find the value of <strong>31 ÷ 9</strong>. Write it as a fraction. Then convert to a mixed number in simplest form.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew solve it together:</p>
-<div class="video-wrap" data-video-slot="4-06-06-example"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">Worked Example · Lesson 4.06.06</div><div class="video-wrap-title">31 ÷ 9 = <span class="frac"><span class="num">31</span><span class="den">9</span></span> = 3 <span class="frac"><span class="num">4</span><span class="den">9</span></span></div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-06_Worked-Example.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Atlas reads. "31 ÷ 9. The dividend is 31, the divisor is 9. Write as a fraction: 31/9." Hazel pictures it: "Imagine 31 candy bars shared by 9 friends. Each friend gets <span class="frac"><span class="num">31</span><span class="den">9</span></span> of a bar — more than 1 each, but less than 4." Felix divides: "9 goes into 31 three times (9 × 3 = 27). 31 − 27 = 4. So 31 ÷ 9 = 3 r 4 → 3 4/9. Each friend gets 3 whole candy bars and <span class="frac"><span class="num">4</span><span class="den">9</span></span> of another." Cora checks the fraction part: "<span class="frac"><span class="num">4</span><span class="den">9</span></span> in simplest form? GCF of 4 and 9 is 1. Already simplest." Frame: "Three steps: write the fraction (dividend/divisor). Divide for the mixed number. Simplify the fraction part if you can." Tone: confident, summative — Unit 6 closer. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-06-06-example --></div></div></div></div>
+
 <div style="background:#FFF8F0;border:2px solid #FFD0A8;border-radius:14px;padding:16px;margin:12px 0;">
 <div style="text-align:center;font-family:'Lora',Georgia,serif;color:#0E1C42;line-height:1.8;font-size:15px;">
 <strong>Step 1 — Fraction form.</strong> 31 ÷ 9 = <span style="color:#FF7A45;font-weight:900;"><span class="frac"><span class="num">31</span><span class="den">9</span></span></span><br/>
@@ -555,10 +616,10 @@
 <button class="value-card" onclick="pickP1Round(this,'40')" style="min-width:100px;"><div class="big">40</div></button>
 </div>
 <div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Exactly.</strong> 5 ÷ 8 = <strong><span class="frac"><span class="num">5</span><span class="den">8</span></span></strong> of a cupcake per friend. Dividend (5 cupcakes) on top, divisor (8 friends) on bottom.
-<div class="video-wrap" data-video-slot="4-06-06-practice-1-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 1</div><div class="video-wrap-title">Division IS a fraction</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-06_Practice-1_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> "5 cupcakes, 8 friends. Each gets 5/8. The thing being shared goes on top." About 45 sec.</div><div class="video-placeholder-id"><!-- slot: 4-06-06-practice-1-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Look again.</strong> Dividend (cupcakes being shared) on top. Divisor (number of people) on bottom.
 <div class="hint-callout">5 cupcakes ÷ 8 friends. The thing being shared (cupcakes = 5) on top. The number of people sharing (friends = 8) on bottom. Answer: 5/8.</div>
-<div class="video-wrap" data-video-slot="4-06-06-practice-1-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 1</div><div class="video-wrap-title">Dividend on top, divisor on bottom</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-06_Practice-1_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach the rule. About 1 min.</div><div class="video-placeholder-id"><!-- slot: 4-06-06-practice-1-retry --></div></div></div></div></div></div></div>
+</div></div></div>
 <div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three Shares — Pick the Right Fraction</div><div class="activity-sub">When the share is more than 1 each, use a mixed number.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>Strategy:</strong> Write the fraction first (dividend/divisor). Then convert to mixed if it's improper. Simplify if needed.</p></div>
 <p>Pick the simplest correct answer.</p>
 <div style="display:grid;gap:14px;margin:14px 0;">
@@ -588,10 +649,10 @@
 </div>
 </div>
 <div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ Three for three.</strong> 2a — 3 ÷ 4 = <strong><span class="frac"><span class="num">3</span><span class="den">4</span></span></strong> of a cookie each. 2b — 11 ÷ 3 = <span class="frac"><span class="num">11</span><span class="den">3</span></span> = <strong>3 <span class="frac"><span class="num">2</span><span class="den">3</span></span></strong> brownies each. 2c — 6 ÷ 8 = <span class="frac"><span class="num">6</span><span class="den">8</span></span> = <strong><span class="frac"><span class="num">3</span><span class="den">4</span></span></strong> of a pizza each (simplified).
-<div class="video-wrap" data-video-slot="4-06-06-practice-2-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 2</div><div class="video-wrap-title">Write the fraction, then convert or simplify</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-06_Practice-2_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Walk all three. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-06-06-practice-2-pass --></div></div></div></div></div>
+</div>
 <div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Look again.</strong> Write the division as a fraction first. Then simplify or convert.
 <div class="hint-callout">2a: 3 ÷ 4 = 3/4. 2b: 11 ÷ 3 = <span class="frac"><span class="num">11</span><span class="den">3</span></span> = 3 2/3. 2c: 6 ÷ 8 = <span class="frac"><span class="num">6</span><span class="den">8</span></span> = <span class="frac"><span class="num">3</span><span class="den">4</span></span> (simplest form).</div>
-<div class="video-wrap" data-video-slot="4-06-06-practice-2-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 2</div><div class="video-wrap-title">Write, then simplify or convert</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-06_Practice-2_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. About 1-2 min.</div><div class="video-placeholder-id"><!-- slot: 4-06-06-practice-2-retry --></div></div></div></div></div></div></div>
+</div></div></div>
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#FF7A45;">3</div><div><div class="activity-title">Find Jana's Mistake — She Flipped the Fraction</div><div class="activity-sub">Dividend and divisor in the wrong positions.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Jana tried to write 4 ÷ 7 as a fraction. She remembered the rule a/b but put the numbers in the wrong slots — divisor on top, dividend on bottom.</p></div>
 <div class="task-box"><div class="task-label">Jana's Work</div>
 <p>Jana was asked: <strong>"Write 4 ÷ 7 as a fraction."</strong></p>
@@ -608,17 +669,14 @@
 <button class="purple-btn" onclick="checkErrorAnalysis()">✓ Check My Picks</button>
 <div class="journal-label">✏️ Help Jana. Write a rule: which number goes on top of the fraction bar — and why? <span class="saved-dot" id="dot-ea"></span></div>
 <textarea class="journal-box" data-label="Practice 3 — Error Analysis: Dividend on top of the fraction bar" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
-<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> The dividend (the thing being divided) ALWAYS goes on top of the fraction bar. 4 ÷ 7 = <strong><span class="frac"><span class="num">4</span><span class="den">7</span></span></strong>, not 7/4. <div class="video-wrap" data-video-slot="4-06-06-practice-3-pass" style="margin-top:12px;"><div class="video-wrap-header"><span>✅</span><div><div class="video-wrap-type">Great Work · Practice 3</div><div class="video-wrap-title">Dividend on top — always</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-06_Practice-3_Pass.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Frame the dividend/divisor positions. About 45 sec.</div><div class="video-placeholder-id"><!-- slot: 4-06-06-practice-3-pass --></div></div></div></div></div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">a ÷ b = a/b. The first number (dividend) goes on top. The second number (divisor) goes on bottom. 4 ÷ 7 = 4/7.</div><div class="video-wrap" data-video-slot="4-06-06-practice-3-retry" style="margin-top:12px;"><div class="video-wrap-header"><span>🔄</span><div><div class="video-wrap-type">Try Again · Practice 3</div><div class="video-wrap-title">Dividend / Divisor — order matters</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text">📹 <strong>4-06-06_Practice-3_Retry.mp4</strong></div><div class="record-note"><strong>Recording prompt:</strong> Reteach. About 1 min.</div><div class="video-placeholder-id"><!-- slot: 4-06-06-practice-3-retry --></div></div></div></div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
+<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> The dividend (the thing being divided) ALWAYS goes on top of the fraction bar. 4 ÷ 7 = <strong><span class="frac"><span class="num">4</span><span class="den">7</span></span></strong>, not 7/4. </div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">a ÷ b = a/b. The first number (dividend) goes on top. The second number (divisor) goes on bottom. 4 ÷ 7 = 4/7.</div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
 <div class="tab-next-wrap"><p class="tab-transition-voice">Sharing IS dividing IS fractioning. Now practice.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Fractions and division — write the division as a fraction, solve real sharing problems.</div></div></div><div class="activity-body"><p>Show your work using the rule a ÷ b = a/b. Convert to mixed when helpful. Simplify when possible.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Do the denominators MATCH? Or do I need to rename one or both? Or is a benchmark (<span class="frac"><span class="num">1</span><span class="den">2</span></span>, 1) faster?</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Write each division as a fraction.</strong><br/>(a) 7 ÷ 9<br/>(b) 2 ÷ 11<br/>(c) 13 ÷ 6 (also write as a mixed number)</p><div class="journal-label">✏️ My answers in simplest form + the simplification step <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: Convert three improper to mixed" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-
 <div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Story problem (Unit 6 closer).</strong> A pizza shop sold 23 pizzas and 6 large parties each bought an equal share. (a) Write the number of pizzas per party as a division. (b) Write it as a fraction. (c) Convert to a mixed number. (d) What does that mean in plain English?</p><div class="journal-label">✏️ My answers <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: Cake story with simplification" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
-
-
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#FF7A45;"><div class="activity-head"><div class="activity-num" style="background:#FF7A45;color:#fff;">🗺️</div><div><div class="activity-title">Unit 6 Complete — Where This Goes Next</div><div class="activity-sub">Looking ahead</div></div></div><div class="activity-body"><p>You've compared and ordered fractions that all fit between 0 and 1.</p><p>Next lesson: <strong>Improper Fractions and Mixed Numbers.</strong> What if the top is BIGGER than the bottom? <span class="frac"><span class="num">8</span><span class="den">5</span></span> of a pie isn't just half — it's a WHOLE pie plus some extra. That's an improper fraction, and it can also be written as a mixed number (1 <span class="frac"><span class="num">3</span><span class="den">5</span></span>).</p><p>The big question opening 6.03: <em>How do you show a fraction that's more than 1 whole?</em></p></div></div></div></div>
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed all 6 problems above.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I wrote every division as a fraction first.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I converted to a mixed number or simplified when the problem called for it.</span></div></div></div>
@@ -1063,6 +1121,75 @@ async function loadVideoManifest(){try{let res=await fetch('video-manifest.md',{
 function parseManifest(txt){let map={};let lines=txt.split(/\r?\n/);let current=null,buf=[];function commit(){if(current&&buf.join('\n').trim())map[current]=buf.join('\n').trim();buf=[]}for(let line of lines){let m=line.match(/^([A-Za-z0-9-]+):\s*$/);if(m){commit();current=m[1]}else if(current){buf.push(line)}}commit();return map}
 function showPageFeedback(msg){var panel=document.querySelector('.tab-panel.active')||document.body;var box=panel.querySelector(':scope > .page-feedback');if(!box){box=document.createElement('div');box.className='page-feedback';panel.insertBefore(box,panel.firstChild);}box.className='page-feedback show warn';box.innerHTML=msg;}
 window.addEventListener('DOMContentLoaded',()=>{restoreJournals();updateProgress();loadVideoManifest()});
+</script>
+<script id="fluencyScript">
+(function(){
+var FLUENCY_TIMED = true;
+var FLUENCY_TITLE = "Mixed Multiplication & Division — One-Minute Check";
+var fluencyInterval = null;
+var fluencySecondsLeft = 60;
+
+window.fluencyStart = function(){
+  if(!FLUENCY_TIMED) return;
+  var grid = document.getElementById('fluencyGrid');
+  if(!grid) return;
+  grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = false; });
+  var btn = document.getElementById('fluencyStartBtn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Timer Running\u2026'; }
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = false;
+  fluencySecondsLeft = 60;
+  fluencyUpdateDisplay();
+  fluencyInterval = setInterval(function(){
+    fluencySecondsLeft--;
+    fluencyUpdateDisplay();
+    if(fluencySecondsLeft <= 0){
+      clearInterval(fluencyInterval);
+      grid.querySelectorAll('.fluency-input').forEach(function(i){ i.disabled = true; });
+      window.fluencyCheck();
+    }
+  }, 1000);
+};
+
+function fluencyUpdateDisplay(){
+  var el = document.getElementById('fluencyTimerDisplay');
+  if(el) el.textContent = fluencySecondsLeft + 's';
+}
+
+function fluencyNormalize(s){
+  return (s||'').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+window.fluencyCheck = function(){
+  if(fluencyInterval){ clearInterval(fluencyInterval); fluencyInterval = null; }
+  var items = document.querySelectorAll('#fluencyGrid .fluency-item');
+  var correct = 0, attempted = 0, total = items.length;
+  var lines = [];
+  items.forEach(function(item){
+    var input = item.querySelector('.fluency-input');
+    var qText = item.querySelector('.fluency-q').textContent;
+    var given = (input.value || '').trim();
+    var ans = input.dataset.answer;
+    var ok = given !== '' && fluencyNormalize(given) === fluencyNormalize(ans);
+    if(given !== '') attempted++;
+    item.classList.remove('fluency-correct','fluency-wrong');
+    if(ok){ correct++; item.classList.add('fluency-correct'); }
+    else if(given !== ''){ item.classList.add('fluency-wrong'); }
+    lines.push(qText + '  answer: ' + ans + '   [answered: ' + (given || 'blank') + ']' + (ok ? ' \u2713' : (given ? ' \u2717' : '')));
+  });
+  var pct = total ? Math.round((correct/total)*100) : 0;
+  var timeStr = FLUENCY_TIMED ? (' in ' + (60 - fluencySecondsLeft) + ' seconds') : '';
+  var summary = 'Fluency Warm-Up \u2014 ' + FLUENCY_TITLE + '\n' + correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr + '\n\n' + lines.join('\n');
+  var j = document.getElementById('fluencyJournal');
+  if(j) j.value = summary;
+  var resEl = document.getElementById('fluencyResult');
+  if(resEl) resEl.innerHTML = correct + ' / ' + total + ' correct (' + pct + '%)' + timeStr;
+  var checkBtn = document.getElementById('fluencyCheckBtn');
+  if(checkBtn) checkBtn.disabled = true;
+  var startBtn = document.getElementById('fluencyStartBtn');
+  if(startBtn) startBtn.textContent = 'Done';
+};
+})();
 </script>
 </body>
 </html>
