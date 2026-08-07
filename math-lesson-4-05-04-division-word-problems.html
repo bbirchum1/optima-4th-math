@@ -306,6 +306,21 @@
 .bubble.cora .bubble-name{color:#1A6B8E}
 .bubble-text{font-size:14.5px;color:#0E1C42;line-height:1.5;font-weight:600;font-family:'Lora',Georgia,serif;font-style:italic}
 @media(max-width:620px){.bubble{flex:1 1 100%;max-width:100%}}
+/* STANDARDS TOGGLE BAR */
+.standards-toggle-bar{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(135deg,#1a2a3a,#1e3448);padding:10px 28px;cursor:pointer;user-select:none;border-bottom:1px solid rgba(85,200,232,.12);}
+.standards-toggle-bar:hover{background:linear-gradient(135deg,#1e3044,#23394d);}
+.standards-toggle-label{font-size:12px;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:1px;font-weight:700;display:flex;align-items:center;gap:8px;}
+.standards-toggle-arrow{font-size:10px;color:rgba(255,255,255,.35);transition:transform .25s ease;}
+.standards-toggle-bar.open .standards-toggle-arrow{transform:rotate(180deg);}
+.standards-panel{max-height:0;overflow:hidden;transition:max-height .3s ease;background:#14212e;border-bottom:1px solid rgba(85,200,232,.08);}
+.standards-panel.open{max-height:200px;}
+.standards-panel-inner{display:flex;gap:32px;padding:14px 28px 16px;flex-wrap:wrap;}
+.standards-group{display:flex;flex-direction:column;gap:6px;}
+.standards-group-label{font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.8px;font-weight:700;}
+.standards-codes{font-size:12px;color:rgba(255,255,255,.65);line-height:1.7;font-weight:500;}
+.standards-codes .fl-code{color:#80CBC4;}
+.standards-codes .tx-code{color:#FFD54F;}
+.footer-standards{font-size:10px;color:rgba(255,255,255,.3);margin-top:6px;letter-spacing:.3px;}
 </style>
 <style id="fluencyStyles">
 .fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
@@ -354,7 +369,9 @@
 </div>
 </div>
 <div class="quote-strip"><div class="quote-strip-text">"Real stories. Pick the operation. Draw a bar. Do the math. Interpret the remainder — sometimes ignore it, sometimes round UP."</div><div class="quote-strip-attr">Division Estimation Big Idea</div></div>
-<div class="info-strip"><div class="info-cell"><div class="info-icon" style="background:#F0E8FF;">🧭</div><div><div class="info-label">Unit</div><div class="info-value">Unit 5</div><div class="info-detail">Division</div></div></div><div class="info-cell"><div class="info-icon" style="background:#E3F8ED;">📅</div><div><div class="info-label">Lesson</div><div class="info-value">4.05.04</div><div class="info-detail">U5 Fluency</div></div></div><div class="info-cell"><div class="info-icon" style="background:#EAF0FF;">📐</div><div><div class="info-label">Standard</div><div class="info-value">MA.4.NSO.2.3</div><div class="info-detail">Divide up to 4-digit by 1-digit</div></div></div><div class="info-cell"><div class="info-icon" style="background:#FFF8E6;">🔢</div><div><div class="info-label">Focus</div><div class="info-value">Bar models · remainders</div><div class="info-detail">MTR.5.1 · MTR.7.1</div></div></div></div>
+
+<div class="standards-toggle-bar" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');"><span class="standards-toggle-label">Standards Alignment</span><span class="standards-toggle-arrow">&#9660;</span></div><div class="standards-panel"><div class="standards-panel-inner"><div class="standards-group"><div class="standards-group-label">Florida B.E.S.T.</div><div class="standards-codes"><span class="fl-code">MA.4.AR.1.1</span> &middot; <span class="fl-code">MTR.5.1</span> &middot; <span class="fl-code">MTR.7.1</span></div></div><div class="standards-group"><div class="standards-group-label">Texas TEKS</div><div class="standards-codes"><span class="tx-code">4.4.H</span> &middot; <span class="tx-code">4.5.A</span></div></div></div></div>
+<div class="info-strip"><div class="info-cell"><div class="info-icon" style="background:#F0E8FF;">🧭</div><div><div class="info-label">Unit</div><div class="info-value">Unit 5</div><div class="info-detail">Division</div></div></div><div class="info-cell"><div class="info-icon" style="background:#E3F8ED;">📅</div><div><div class="info-label">Lesson</div><div class="info-value">4.05.04</div><div class="info-detail">U5 Fluency</div></div></div><div class="info-cell"><div class="info-icon" style="background:#EAF0FF;">📐</div><div><div class="info-label">Standard</div><div class="info-value">MA.4.AR.1.1</div><div class="info-detail">Word problems (4 ops)</div></div></div><div class="info-cell"><div class="info-icon" style="background:#FFF8E6;">🔢</div><div><div class="info-label">Focus</div><div class="info-value">Bar models · remainders</div><div class="info-detail">MTR.5.1 · MTR.7.1</div></div></div></div>
 <div class="explorer-strip"><span class="explorer-compass">🧭</span><div><div class="explorer-mission-label">Today's Mission</div><div class="explorer-mission-text">Unit 5 capstone. Real stories. Read the story, draw the bar, choose the operation, compute, then INTERPRET the remainder. Sometimes you ignore it. Sometimes you need one MORE group to fit it. The story decides.</div></div></div>
 <div class="intro-2col"><div class="intro-card theme-question"><div class="intro-card-head"><div class="intro-card-head-icon">❓</div><div><div class="intro-card-head-label">Essential Question</div><div class="intro-card-head-title">If 2,560 eggs go into cartons of 6, do you need 426 cartons or 427? Why?</div></div></div><div class="intro-card-body"><p>2,560 ÷ 6 = 426 r 4. There are 426 FULL cartons. But the 4 leftover eggs still need a carton. So if you must ship every egg, you need 427 cartons.</p><p>The STORY decides whether to round up, ignore the remainder, or keep it as a remainder. Read carefully every time.</p></div></div><div class="intro-card theme-objectives"><div class="intro-card-head"><div class="intro-card-head-icon">🎯</div><div><div class="intro-card-head-label">Today's Objectives</div><div class="intro-card-head-title">You will…</div></div></div><div class="intro-card-body"><div class="obj-line"><span class="obj-icon">📏</span><span><strong>Draw a bar model</strong> for a division word problem (equal parts or how many groups).</span></div><div class="obj-line"><span class="obj-icon">📐</span><span><strong>Choose the right operation</strong> by reading the story — multiply, divide, or combine.</span></div><div class="obj-line"><span class="obj-icon">🎯</span><span><strong>Interpret the remainder</strong> in context — ignore, round up, or keep it.</span></div></div></div></div>
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
@@ -664,6 +681,7 @@ Answer: <strong>4 buses</strong>."
 <div class="footer">
 <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
 <div class="footer-sub">Math · Grade 4 · 4.05.04</div>
+<div class="footer-standards">FL: MA.4.AR.1.1, MTR.5.1, MTR.7.1 &middot; TX: 4.4.H, 4.5.A</div>
 <div class="footer-copy">© 2025 Optima Academy Online</div>
 </div>
 </div>
