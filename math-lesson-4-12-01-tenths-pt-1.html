@@ -574,7 +574,7 @@
 <div class="explorer-strip"><span class="explorer-compass">🧭</span><div><div class="explorer-mission-label">Today's Mission</div><div class="explorer-mission-text">Tenths are ten equal pieces of one whole. You can write 3 of those pieces as 3/10 (a fraction) or as 0.3 (a decimal). Same amount, two notations.</div></div></div>
 <div class="intro-2col"><div class="intro-card theme-question"><div class="intro-card-head"><div class="intro-card-head-icon">❓</div><div><div class="intro-card-head-label">Essential Question</div><div class="intro-card-head-title">What is a tenth? How do you write three-tenths as a decimal?</div></div></div><div class="intro-card-body"><p>One whole split into ten equal pieces. Each piece is a <strong>tenth</strong>. Shade three of them and you have 3/10 of the whole — or 0.3 in decimal form.</p><p>The number line from 0 to 1 splits the same way: ten equal jumps. The 3rd tick is at 0.3.</p></div></div><div class="intro-card theme-objectives"><div class="intro-card-head"><div class="intro-card-head-icon">🎯</div><div><div class="intro-card-head-label">Today's Objectives</div><div class="intro-card-head-title">You will…</div></div></div><div class="intro-card-body"><div class="obj-line"><span class="obj-icon">🔢</span><span><strong>Read tenths</strong> from a shaded strip and a number line.</span></div><div class="obj-line"><span class="obj-icon">✏️</span><span><strong>Write</strong> a tenth as a fraction (over 10) AND as a decimal (0.n).</span></div><div class="obj-line"><span class="obj-icon">🔄</span><span><strong>Convert</strong> between the two notations.</span></div></div></div></div></div>
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
-<div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
+<div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
 
 <div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">👋</div><div><div class="activity-title">Meet the Math Crew</div><div class="activity-sub">Four students who'll think alongside you this year.</div></div></div><div class="activity-body">
@@ -826,52 +826,7 @@
 </div>
 </div>
 </div></div>
-<div class="tab-next-wrap"><p class="tab-transition-voice">You walked the edges. Now solve three on your own.</p><button class="tab-next-btn" onclick="switchTab('practice')">Continue to 🧮 Practice →</button></div>
-</div>
-<div class="tab-panel" id="tab-practice">
-<div class="callout callout-info"><span class="callout-icon">🔟</span><p>Three problems. Shade, read, and write each as a fraction AND as a decimal.</p></div>
-<div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Pattern:</strong> count of shaded pieces = top of fraction = digit after decimal point.</p></div>
-<div class="callout callout-tip"><span class="callout-icon">💡</span><p>If 0 shaded, write 0.0. If all 10 shaded, write 1.0 (one whole).</p></div>
-<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#1A6B8E;">1</div><div><div class="activity-title">Theo shades 4 tenths</div><div class="activity-sub">Shade exactly 4 columns. What fraction? What decimal?</div></div><span class="activity-time" style="background:#1A6B8E;">~5 min</span></div><div class="activity-body">
-<div class="ts-card" data-id="p1" style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:18px 14px;margin:14px 0;">
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Try Theos strip</div>
-<div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Click 4 columns. Read the readout.</div>
-<div id="tsStage-p1" style="background:#fff;border:2px solid #D6F2FB;border-radius:10px;padding:14px;margin-bottom:12px;display:flex;justify-content:center;align-items:center;"></div>
-<div id="tsReadout-p1" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;">Click a column to start shading.</div>
-<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="tsReset('p1')" style="background:#3D8DB0;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
-</div>
-<div id="tsStatus-p1" style="background:#D6F2FB;border:2px solid #55C8E8;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E2A4A;font-weight:700;line-height:1.5;text-align:center;">Click any column to shade it. Click again to unshade. The fraction and decimal update live.</div>
-</div>
-<div class="journal-label">✏️ Fraction = ___/10. Decimal = ___. <span class="saved-dot" id="dot-p1"></span></div>
-<textarea class="journal-box" data-label="Practice — Problem 1: Theo 4 tenths" id="journal-p1" oninput="autoSave(this,'dot-p1')" placeholder="" style="min-height:60px;"></textarea>
-</div></div>
-<div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Imani shades 6 tenths</div><div class="activity-sub">Predict the decimal before you click.</div></div></div><div class="activity-body">
-<div class="ts-card" data-id="p2" style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:18px 14px;margin:14px 0;">
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:6px;">Predict, then shade</div>
-<div style="text-align:center;font-size:13px;color:#3A4A6B;margin-bottom:14px;">Predict the decimal BEFORE you click. Check yourself after.</div>
-<div id="tsStage-p2" style="background:#fff;border:2px solid #D6F2FB;border-radius:10px;padding:14px;margin-bottom:12px;display:flex;justify-content:center;align-items:center;"></div>
-<div id="tsReadout-p2" style="text-align:center;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:900;color:#0E1C42;margin-bottom:12px;min-height:28px;">Click a column to start shading.</div>
-<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px;">
-<button onclick="tsReset('p2')" style="background:#3D8DB0;color:#fff;border:none;border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;">↺ Reset</button>
-</div>
-<div id="tsStatus-p2" style="background:#D6F2FB;border:2px solid #55C8E8;border-radius:10px;padding:10px 14px;font-size:14px;color:#0E2A4A;font-weight:700;line-height:1.5;text-align:center;">Click any column to shade it. Click again to unshade. The fraction and decimal update live.</div>
-</div>
-<div class="journal-label">✏️ Predicted: ___ . Actual: ___ . Match? <span class="saved-dot" id="dot-p2"></span></div>
-<textarea class="journal-box" data-label="Practice — Problem 2: Imani 6 tenths" id="journal-p2" oninput="autoSave(this,'dot-p2')" placeholder="" style="min-height:60px;"></textarea>
-</div></div>
-<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#1A6B8E;">3</div><div><div class="activity-title">Wren's missing pieces</div><div class="activity-sub">Reverse direction: given a decimal, find the fraction.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔁</span><p><strong>Reverse:</strong> A decimal like 0.5 means 5 tenths. The fraction is 5/10.</p></div>
-<div style="background:#F5FBFD;border:2px solid #D6F2FB;border-radius:14px;padding:14px;margin:14px 0;">
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:17px;color:#0E1C42;font-weight:700;margin-bottom:8px;">Write each decimal as a fraction.</div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:15px;color:#3A4A6B;margin-top:6px;">(a) 0.5 = ___/10</div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:15px;color:#3A4A6B;margin-top:6px;">(b) 0.2 = ___/10</div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:15px;color:#3A4A6B;margin-top:6px;">(c) 0.9 = ___/10</div>
-<div style="text-align:center;font-family:'Lora',Georgia,serif;font-size:15px;color:#3A4A6B;margin-top:6px;">(d) 1.0 = ___/10</div>
-</div>
-<div class="journal-label">✏️ Show all four. <span class="saved-dot" id="dot-p3"></span></div>
-<textarea class="journal-box" data-label="Practice — Problem 3: decimal → fraction" id="journal-p3" oninput="autoSave(this,'dot-p3')" placeholder="" style="min-height:80px;"></textarea>
-</div></div>
-<div class="tab-next-wrap"><p class="tab-transition-voice">Three strips done. Quick check time.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
+<div class="tab-next-wrap"><p class="tab-transition-voice">You walked the edges. Now solve three on your own.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Two quick checks. Your full practice is in the Independent Practice PDF.</div></div></div><div class="activity-body"><p>If you got these, you're ready for the Independent Practice.</p>
@@ -1278,7 +1233,7 @@ function checkErrorAnalysis(){const cards=document.querySelectorAll('#errorAnaly
 function resetErrorAnalysis(){document.querySelectorAll('#errorAnalysisGrid .value-card').forEach(c=>{c.classList.remove('selected','good','bad')});['p3-pass','p3-retry'].forEach(x=>{let el=document.getElementById(x);if(el)el.classList.remove('show')})}
 
 function switchTab(tab){document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));document.getElementById('tab-'+tab).classList.add('active');document.querySelectorAll('.tab-btn').forEach(b=>{b.classList.remove('active');if(b.dataset.tab===tab){b.classList.add('active');b.classList.add('visited')}});updateProgress();window.scrollTo({top:0,behavior:'smooth'})}
-function updateProgress(){const tabs=['warmup','learn','practice','assignment'];let active=[...document.querySelectorAll('.tab-btn')].findIndex(b=>b.classList.contains('active'));let pct=Math.round(((active+1)/tabs.length)*100);document.getElementById('progressFill').style.width=pct+'%';document.getElementById('progressPct').textContent=pct+'%'}
+function updateProgress(){const tabs=['warmup','learn','assignment'];let active=[...document.querySelectorAll('.tab-btn')].findIndex(b=>b.classList.contains('active'));let pct=Math.round(((active+1)/tabs.length)*100);document.getElementById('progressFill').style.width=pct+'%';document.getElementById('progressPct').textContent=pct+'%'}
 function autoSave(el,dotId){localStorage.setItem('g4-4-12-01-'+el.id,el.value);let dot=document.getElementById(dotId);if(dot){dot.classList.add('saved');setTimeout(()=>dot.classList.remove('saved'),900)}}
 function restoreJournals(){document.querySelectorAll('textarea.journal-box').forEach(t=>{let v=localStorage.getItem('g4-4-12-01-'+t.id);if(v)t.value=v})}
 function gatherAnswers(){let out='Lesson 4.12.01 — Tenths Pt 1\n\n';document.querySelectorAll('textarea.journal-box').forEach(t=>{out+=t.dataset.label+'\n'+(t.value.trim()||'[No answer yet]')+'\n\n'});document.getElementById('gatheredOutput').value=out}

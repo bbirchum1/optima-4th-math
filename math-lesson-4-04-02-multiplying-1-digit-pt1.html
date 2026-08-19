@@ -578,7 +578,7 @@
 <div class="explorer-strip"><span class="explorer-compass">🧭</span><div><div class="explorer-mission-label">Today's Mission</div><div class="explorer-mission-text">Yesterday's mental tools handle special cases. Today: the standard column algorithm — works EVERY time. Estimate first to predict the answer's range. Then multiply place by place.</div></div></div>
 <div class="intro-2col"><div class="intro-card theme-question"><div class="intro-card-head"><div class="intro-card-head-icon">❓</div><div><div class="intro-card-head-label">Essential Question</div><div class="intro-card-head-title">If decomposition SHOWS why multiplication works, how does the column algorithm DO the same thing with less writing?</div></div></div><div class="intro-card-body"><p>Yesterday: 23 × 4 = (20 × 4) + (3 × 4) = 80 + 12 = 92. Three lines of writing.</p><p>Today: the column algorithm stacks 23 over 4 and produces 92 in two compact steps. It's doing the SAME place-value decomposition — just hiding it in column moves. Today we make the hidden steps visible.</p></div></div><div class="intro-card theme-objectives"><div class="intro-card-head"><div class="intro-card-head-icon">🎯</div><div><div class="intro-card-head-label">Today's Objectives</div><div class="intro-card-head-title">You will…</div></div></div><div class="intro-card-body"><div class="obj-line"><span class="obj-icon">📏</span><span><strong>Estimate</strong> any product by rounding one factor to a friendly number.</span></div><div class="obj-line"><span class="obj-icon">▭</span><span><strong>Use an area model</strong> to multiply a multi-digit number by a one-digit number.</span></div><div class="obj-line"><span class="obj-icon">📐</span><span><strong>Use the column algorithm</strong> for the same product — and see how it matches the area model place by place.</span></div></div></div></div>
 <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Math Journal</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">📏 Ruler or straight edge</span></div>
-<div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">🧮 Practice <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
+<div class="tab-bar" id="tabBar"><button class="tab-btn active" data-tab="warmup" onclick="switchTab('warmup')">🔍 Warm-Up <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="learn" onclick="switchTab('learn')">📐 Learn <span class="tab-check">✓</span></button><button class="tab-btn" data-tab="assignment" onclick="switchTab('assignment')">🌟 Show What You Know <span class="tab-check">✓</span></button></div>
 <div class="tab-panel active" id="tab-warmup">
 <div class="fluency-box" data-timed="false">
 <div class="fluency-head">
@@ -786,79 +786,7 @@
 </div>
 </div>
 </div></div>
-<div class="tab-next-wrap"><p class="tab-transition-voice">Two estimates frame the exact. The area model proves the algorithm. Now apply.</p><button class="tab-next-btn" onclick="switchTab('practice')">Continue to 🧮 Practice →</button></div>
-</div>
-<div class="tab-panel" id="tab-practice">
-<div class="callout callout-info"><span class="callout-icon">🧭</span><p>Three column-algorithm products with carries. Estimate first, then compute exact.</p></div>
-<div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> What's my estimate? Where will the answer land? Where will carries happen?</p></div>
-<div class="callout callout-tip"><span class="callout-icon">💡</span><p><strong>Stuck?</strong> Draw the area model. Each place piece × the one-digit factor = a cell. Sum the cells.</p></div>
-<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">1</div><div><div class="activity-title">3,521 × 3</div><div class="activity-sub">Estimate first, then column algorithm.</div></div><span class="activity-time" style="background:#6B3FA0;">~5 min</span></div><div class="activity-body"><p>Estimate by rounding 3,521 to the nearest thousand → 4,000 × 3 = 12,000. Now compute exact with the column algorithm.</p>
-<div class="value-card-row" style="justify-content:center;">
-<button class="value-card" onclick="pickP1Round(this,'10563')" style="min-width:100px;"><div class="big">10,563</div></button>
-<button class="value-card" onclick="pickP1Round(this,'10653')" style="min-width:100px;"><div class="big">10,653</div></button>
-<button class="value-card" onclick="pickP1Round(this,'9563')" style="min-width:100px;"><div class="big">9,563</div></button>
-</div>
-<div class="feedback-branch feedback-pass" id="p1-pass"><strong>✅ Exactly.</strong> Column algorithm on 3,521 × 3: ones 1×3=3; tens 2×3=6; hundreds 5×3=15 (write 5, carry 1); thousands 3×3=9 + carry 1 = 10. Answer: <strong>10,563</strong>. Close to the 12,000 estimate (because 3,521 rounded UP to 4,000, so estimate ran high).
-</div>
-<div class="feedback-branch feedback-retry" id="p1-retry"><strong>🔄 Look again.</strong> Stack 3,521 over 3. Multiply right to left. Carry the tens digit when a column product is 10 or more.
-<div class="hint-callout">Ones: 1 × 3 = 3. Tens: 2 × 3 = 6. Hundreds: 5 × 3 = 15 — write 5, carry 1. Thousands: 3 × 3 = 9 + carry 1 = 10 — write 0 in thousands, 1 in ten-thousands. Answer: 10,563.</div>
-</div></div></div>
-<div class="activity bl-green"><div class="activity-head"><div class="activity-num" style="background:#2DB87A;">2</div><div><div class="activity-title">Three Products — All with Carries</div><div class="activity-sub">Estimate first. Then compute exact.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Three different products. Each has different carry patterns. Estimates are given.</p></div>
-<p>For each, find the exact product.</p>
-<div style="display:grid;gap:14px;margin:14px 0;">
-<div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:14px;">
-<div style="font-family:'Lora',Georgia,serif;font-size:22px;font-weight:900;color:#0E1C42;text-align:center;margin-bottom:8px;">2a. <strong>8,292 × 3</strong></div>
-<div style="font-size:12px;color:#6B3FA0;text-transform:uppercase;letter-spacing:.5px;text-align:center;margin-bottom:8px;">Estimate: 8,000 × 3 = 24,000.</div>
-<div class="value-card-row" style="justify-content:center;margin:0;">
-<button class="value-card" onclick="pickP2Round(this,1000,'24876')" style="min-width:100px;"><div class="big">24,876</div></button>
-<button class="value-card" onclick="pickP2Round(this,1000,'24786')" style="min-width:100px;"><div class="big">24,786</div></button>
-<button class="value-card" onclick="pickP2Round(this,1000,'25876')" style="min-width:100px;"><div class="big">25,876</div></button>
-</div>
-</div>
-<div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:14px;">
-<div style="font-family:'Lora',Georgia,serif;font-size:22px;font-weight:900;color:#0E1C42;text-align:center;margin-bottom:8px;">2b. <strong>6,710 × 8</strong></div>
-<div style="font-size:12px;color:#6B3FA0;text-transform:uppercase;letter-spacing:.5px;text-align:center;margin-bottom:8px;">Estimate: 7,000 × 8 = 56,000.</div>
-<div class="value-card-row" style="justify-content:center;margin:0;">
-<button class="value-card" onclick="pickP2Round(this,10000,'53680')" style="min-width:100px;"><div class="big">53,680</div></button>
-<button class="value-card" onclick="pickP2Round(this,10000,'53860')" style="min-width:100px;"><div class="big">53,860</div></button>
-<button class="value-card" onclick="pickP2Round(this,10000,'54680')" style="min-width:100px;"><div class="big">54,680</div></button>
-</div>
-</div>
-<div style="background:#FAFBFF;border:2px solid #E2E8F4;border-radius:14px;padding:14px;">
-<div style="font-family:'Lora',Georgia,serif;font-size:22px;font-weight:900;color:#0E1C42;text-align:center;margin-bottom:8px;">2c. <strong>6,114 × 7</strong></div>
-<div style="font-size:12px;color:#6B3FA0;text-transform:uppercase;letter-spacing:.5px;text-align:center;margin-bottom:8px;">Estimate: 6,000 × 7 = 42,000.</div>
-<div class="value-card-row" style="justify-content:center;margin:0;">
-<button class="value-card" onclick="pickP2Round(this,100000,'42798')" style="min-width:100px;"><div class="big">42,798</div></button>
-<button class="value-card" onclick="pickP2Round(this,100000,'42898')" style="min-width:100px;"><div class="big">42,898</div></button>
-<button class="value-card" onclick="pickP2Round(this,100000,'42678')" style="min-width:100px;"><div class="big">42,678</div></button>
-</div>
-</div>
-</div>
-<div class="feedback-branch feedback-pass" id="p2-pass"><strong>✅ Three for three.</strong> 2a — 8,292 × 3 = <strong>24,876</strong> (carries at tens). 2b — 6,710 × 8 = <strong>53,680</strong> (carries at tens, hundreds, thousands). 2c — 6,114 × 7 = <strong>42,798</strong> (carry at ones, tens, hundreds). Estimate set the range; algorithm filled in the details.
-</div>
-<div class="feedback-branch feedback-retry" id="p2-retry"><strong>🔄 Look again.</strong> Walk right to left. Carry when a column product hits 10+.
-<div class="hint-callout">2a — 8,292 × 3: ones 2×3=6; tens 9×3=27 (carry 2); hundreds 2×3=6+2=8; thousands 8×3=24. Answer 24,876. 2b — 6,710 × 8: ones 0×8=0; tens 1×8=8; hundreds 7×8=56 (carry 5); thousands 6×8=48+5=53. Answer 53,680. 2c — 6,114 × 7: ones 4×7=28 (carry 2); tens 1×7=7+2=9; hundreds 1×7=7; thousands 6×7=42. Answer 42,798.</div>
-</div></div></div>
-<div class="activity bl-violet"><div class="activity-head"><div class="activity-num" style="background:#6B3FA0;">3</div><div><div class="activity-title">Whose Estimate is Closer — Dion or Mei?</div><div class="activity-sub">Two students estimate the same product differently.</div></div></div><div class="activity-body"><div class="callout callout-tip"><span class="callout-icon">🔍</span><p><strong>What changed?</strong> Two students round the same number to different places.</p></div>
-<div class="task-box"><div class="task-label">The Problem</div>
-<p>The product is <strong>3,521 × 3</strong>.</p>
-<div style="background:#FFF8E6;border:2px solid #F5C518;border-radius:12px;padding:14px 16px;font-family:'Lora',Georgia,serif;font-size:17px;line-height:1.8;color:#5A4A3A;margin:10px 0;">
-"<strong>Dion</strong> rounded 3,521 to <strong>4,000</strong> and estimated 4,000 × 3 = <strong>12,000</strong>.<br/>
-<strong>Mei</strong> rounded 3,521 to <strong>3,500</strong> and estimated 3,500 × 3 = <strong>10,500</strong>.<br/>
-The actual product (from Practice 1) is <strong>10,563</strong>."
-</div>
-<p><strong>Your task:</strong> Tap every statement below that is true.</p>
-<div style="display:grid;gap:8px;margin:12px 0;">
-<button class="value-card" data-ea-correct="1" onclick="toggleEACard(this)" style="text-align:left;padding:14px 16px;min-width:0;"><div style="font-size:14px;font-weight:800;color:#0E1C42;line-height:1.5;"><strong>Mei's estimate (10,500) is closer</strong> to the actual product (10,563). Off by only 63.</div></button>
-<button class="value-card" data-ea-correct="1" onclick="toggleEACard(this)" style="text-align:left;padding:14px 16px;min-width:0;"><div style="font-size:14px;font-weight:800;color:#0E1C42;line-height:1.5;">Dion's estimate (12,000) is off by 1,437 — much further from the exact answer. He rounded to a BIGGER place (thousand), so he lost more precision.</div></button>
-<button class="value-card" data-ea-correct="1" onclick="toggleEACard(this)" style="text-align:left;padding:14px 16px;min-width:0;"><div style="font-size:14px;font-weight:800;color:#0E1C42;line-height:1.5;">Rounding to a SMALLER place (hundred instead of thousand) keeps more of the original number — so the estimate stays closer to exact.</div></button>
-<button class="value-card" data-ea-correct="0" onclick="toggleEACard(this)" style="text-align:left;padding:14px 16px;min-width:0;"><div style="font-size:14px;font-weight:800;color:#0E1C42;line-height:1.5;">Dion's estimate is closer because rounding to a bigger place is always more accurate.</div></button>
-</div>
-<button class="purple-btn" onclick="checkErrorAnalysis()">✓ Check My Picks</button>
-<div class="journal-label">✏️ Explain in your own words: rounding to a SMALLER place gives a CLOSER estimate. Why? <span class="saved-dot" id="dot-ea"></span></div>
-<textarea class="journal-box" data-label="Practice 3 — Error Analysis: Why smaller-place rounding gives closer estimates" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
-<div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Mei's estimate (10,500) was closer because she rounded to the nearest hundred, keeping more precision. Dion rounded to the nearest thousand and lost the "500" part. When you need precision — round to a smaller place. When you just need a quick sanity check — round to a bigger place (it's faster).</div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">Compute the difference between each estimate and the actual 10,563. Dion: 12,000 − 10,563 = 1,437. Mei: 10,563 − 10,500 = 63. Mei is closer.</div></div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
-<div class="tab-next-wrap"><p class="tab-transition-voice">Three products mastered. Estimate-precision rule clear. Now show what you know.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
+<div class="tab-next-wrap"><p class="tab-transition-voice">Two estimates frame the exact. The area model proves the algorithm. Now apply.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 🌟 Show What You Know →</button></div>
 </div>
 <div class="tab-panel" id="tab-assignment">
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Estimate. Compute. Compare. Check.</div></div></div><div class="activity-body"><p>Today's job: estimate before every multiplication, then run the column algorithm. The estimate is your sanity check.</p>
@@ -1252,7 +1180,7 @@ function checkErrorAnalysis(){const cards=document.querySelectorAll('#errorAnaly
 function resetErrorAnalysis(){document.querySelectorAll('#errorAnalysisGrid .value-card').forEach(c=>{c.classList.remove('selected','good','bad')});['p3-pass','p3-retry'].forEach(x=>{let el=document.getElementById(x);if(el)el.classList.remove('show')})}
 
 function switchTab(tab){document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));document.getElementById('tab-'+tab).classList.add('active');document.querySelectorAll('.tab-btn').forEach(b=>{b.classList.remove('active');if(b.dataset.tab===tab){b.classList.add('active');b.classList.add('visited')}});updateProgress();window.scrollTo({top:0,behavior:'smooth'})}
-function updateProgress(){const tabs=['warmup','learn','practice','assignment'];let active=[...document.querySelectorAll('.tab-btn')].findIndex(b=>b.classList.contains('active'));let pct=Math.round(((active+1)/tabs.length)*100);document.getElementById('progressFill').style.width=pct+'%';document.getElementById('progressPct').textContent=pct+'%'}
+function updateProgress(){const tabs=['warmup','learn','assignment'];let active=[...document.querySelectorAll('.tab-btn')].findIndex(b=>b.classList.contains('active'));let pct=Math.round(((active+1)/tabs.length)*100);document.getElementById('progressFill').style.width=pct+'%';document.getElementById('progressPct').textContent=pct+'%'}
 function autoSave(el,dotId){localStorage.setItem('g4-4-02-02-'+el.id,el.value);let dot=document.getElementById(dotId);if(dot){dot.classList.add('saved');setTimeout(()=>dot.classList.remove('saved'),900)}}
 function restoreJournals(){document.querySelectorAll('textarea.journal-box').forEach(t=>{let v=localStorage.getItem('g4-4-02-02-'+t.id);if(v)t.value=v})}
 function gatherAnswers(){let out='Lesson 4.02.02 — Subtraction\n\n';document.querySelectorAll('textarea.journal-box').forEach(t=>{out+=t.dataset.label+'\n'+(t.value.trim()||'[No answer yet]')+'\n\n'});document.getElementById('gatheredOutput').value=out}
