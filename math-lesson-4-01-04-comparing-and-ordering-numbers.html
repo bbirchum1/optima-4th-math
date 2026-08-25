@@ -321,6 +321,9 @@
 .standards-codes .fl-code{color:#80CBC4;}
 .standards-codes .tx-code{color:#FFD54F;}
 .footer-standards{font-size:10px;color:rgba(255,255,255,.3);margin-top:6px;letter-spacing:.3px;}
+
+.practice-note { font-size: 12px; color: #8899AA; text-align: center; margin: 6px 0 2px; font-style: italic; line-height: 1.4; }
+
 </style>
 <style id="fluencyStyles">
 .fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
@@ -904,6 +907,8 @@
 <button class="value-card" data-ea-correct="0" onclick="toggleEACard(this)" style="text-align:left;padding:14px 16px;min-width:0;"><div style="font-size:14px;font-weight:800;color:#0E1C42;line-height:1.5;">Riley should use the chart-walk to compare. (Felix's shortcut already works here.)</div></button>
 </div>
 <button class="check-btn" onclick="checkErrorAnalysis()">Check My Answers ✓</button>
+<p class="practice-note">This interactive is a practice tool — your work here won't be saved if you leave the page. Your written answers below are saved automatically.</p>
+
 <div class="journal-label">✏️ In your own words, explain to Riley why 658,900 is bigger than 65,890 — even though the digits look similar. <span class="saved-dot" id="dot-ea"></span></div>
 <textarea class="journal-box" data-label="Practice 3 — Error Analysis: Why 658,900 &gt; 65,890" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
 <div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Riley got tricked by similar digits. The first number is FIVE digits (sixty-five thousand). The second is SIX digits (six hundred fifty-eight thousand) — about ten times bigger. When digit counts differ, Felix's shortcut answers the question instantly.</div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">Hint: count digits in each number first. Riley made one big error — she compared the words "sixty-five" and "six hundred fifty-eight" backwards. The first three statements explain why.</div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
@@ -919,6 +924,8 @@
 </div></div>
 
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
+<p class="practice-note">This interactive is a practice tool — your work here won't be saved if you leave the page. Your written answers below are saved automatically.</p>
+
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
 </div>
 <div class="footer">

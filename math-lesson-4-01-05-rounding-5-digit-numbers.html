@@ -321,6 +321,9 @@
 .standards-codes .fl-code{color:#80CBC4;}
 .standards-codes .tx-code{color:#FFD54F;}
 .footer-standards{font-size:10px;color:rgba(255,255,255,.3);margin-top:6px;letter-spacing:.3px;}
+
+.practice-note { font-size: 12px; color: #8899AA; text-align: center; margin: 6px 0 2px; font-style: italic; line-height: 1.4; }
+
 </style>
 <style id="fluencyStyles">
 .fluency-box{background:#fff;border:2px solid #F5C518;border-radius:18px;overflow:hidden;margin-bottom:22px;font-family:'Nunito',sans-serif}
@@ -901,6 +904,8 @@
 <button class="value-card" data-ea-correct="0" onclick="toggleEACard(this)" style="text-align:left;padding:14px 16px;min-width:0;"><div style="font-size:14px;font-weight:800;color:#0E1C42;line-height:1.5;">Looking at the last digit always works for rounding — Marcus is using a real shortcut.</div></button>
 </div>
 <button class="check-btn" onclick="checkErrorAnalysis()">Check My Answers ✓</button>
+<p class="practice-note">This interactive is a practice tool — your work here won't be saved if you leave the page. Your written answers below are saved automatically.</p>
+
 <div class="journal-label">✏️ Test Marcus's "look at the last digit" strategy on <strong>62,437</strong>. What answer would Marcus's wrong method give? What is the correct answer? Show your thinking. <span class="saved-dot" id="dot-ea"></span></div>
 <textarea class="journal-box" data-label="Practice 3 — Error Analysis: Test Marcus's wrong rule on 62,437" id="journal-ea" oninput="autoSave(this,'dot-ea')" placeholder=""></textarea>
 <div class="feedback-branch feedback-pass" id="p3-pass"><strong>✅ You found it.</strong> Marcus got lucky — the ones digit (7) happened to point the right way for 62,837. But the real decider is the HUNDREDS digit (8). On 62,437, Marcus's wrong rule would still say "round up" (ones = 7), giving 63,000 — but the real decider is hundreds = 4, which rounds DOWN to 62,000.</div><div class="feedback-branch feedback-retry" id="p3-retry"><strong>🔄 Look again — three of the statements are true.</strong><div class="hint-callout">The decider digit isn't always the last digit. It's the digit one place to the right of where you're rounding. For rounding to thousands, the decider is the hundreds digit.</div><button class="orange-btn" onclick="resetErrorAnalysis()">↩ Reset and Try Again</button></div></div></div>
@@ -916,6 +921,8 @@
 </div></div>
 
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
+<p class="practice-note">This interactive is a practice tool — your work here won't be saved if you leave the page. Your written answers below are saved automatically.</p>
+
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
 </div>
 <div class="footer">
