@@ -829,7 +829,7 @@
 <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📬</div><div><div class="activity-title">Show What You Know</div><div class="activity-sub">Use Make Friendly, Decompose, or the Algorithm — whichever fits the numbers.</div></div></div><div class="activity-body"><p>You built three strategies today. Now use them. For each problem, read the numbers first — then pick the strategy that fits. The algorithm is always a safe choice, but mental moves are faster when the numbers cooperate.</p>
 <div class="callout callout-think"><span class="callout-icon">🧠</span><p><strong>Before each problem, ask:</strong> Is one number close to a friendly value (within 5)? Are the place values clean and easy to split? If yes — use the mental move. If no — stack and carry.</p></div>
 <div class="q-block"><p class="q-text"><span class="q-num">1</span><strong>Make Friendly drill.</strong> Use the Make Friendly strategy on each. Show your bump (what you added or subtracted to make a friendly number), the easy addition, and the take-back step.<br/>(a) <strong>1,996 + 4,237</strong><br/>(b) <strong>5,003 + 2,468</strong><br/>(c) <strong>2,998 + 6,415</strong></p><div class="journal-label">✏️ My work <span class="saved-dot" id="dot-a1"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 1: Three Make-Friendly sums" id="journal-a1" oninput="autoSave(this,'dot-a1')" placeholder=""></textarea></div>
-<div class="q-block"><p class="q-text"><span class="q-num">6</span><strong>Reflection.</strong> The standard algorithm works EVERY time. So why did we spend a whole lesson learning Make Friendly and Decompose? In your own words, explain when a mental strategy WINS over the algorithm — and when it doesn't.</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 6: When mental math wins over the algorithm" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
+<div class="q-block"><p class="q-text"><span class="q-num">2</span><strong>Reflection.</strong> The standard algorithm works EVERY time. So why did we spend a whole lesson learning Make Friendly and Decompose? In your own words, explain when a mental strategy WINS over the algorithm — and when it doesn't.</p><div class="journal-label">✏️ My reflection <span class="saved-dot" id="dot-a6"></span></div><textarea class="journal-box" data-label="Show What You Know — Problem 2: When mental math wins over the algorithm" id="journal-a6" oninput="autoSave(this,'dot-a6')" placeholder=""></textarea></div>
 <div class="activity bl-slate" style="margin-top:18px;border-left-color:#55C8E8;"><div class="activity-head"><div class="activity-num" style="background:#55C8E8;color:#0E1C42;">🗺️</div><div><div class="activity-title">Connection Forward: What Comes Next</div><div class="activity-sub">Preview Lesson 4.02.04 — Other Ways to Add and Subtract Part 2</div></div></div><div class="activity-body"><p>Today's mental strategies all worked for ADDITION. But subtraction has its own tricks — especially when regrouping across zeros gets ugly.</p><p>Next lesson, you'll meet <strong>count-up</strong> (start at the smaller number and count up to the bigger one), and <strong>equal-change</strong> (add the same amount to both numbers — the difference stays the same). When 4,002 − 1,998 turns into 4,004 − 2,000, the answer falls out instantly.</p><p>The big question next time: <em>If adding the same amount to BOTH numbers in a subtraction doesn't change the difference, why is that true?</em></p></div></div></div></div>
 <div class="gathered-box"><div class="gathered-head"><div class="gathered-head-icon">📋</div><div><div class="gathered-head-label">Your Math Journal</div><div class="gathered-head-title">All Answers from Today</div></div></div><div class="gathered-body"><textarea class="gathered-output" id="gatheredOutput" readonly="">Click "Gather My Answers" to collect your work.</textarea><div class="gathered-actions"><button class="purple-btn" onclick="gatherAnswers()">📋 Gather My Answers</button><button class="green-btn" onclick="copyAnswers()">Copy All Answers</button><button class="check-btn" onclick="downloadJournal()">Download My Math Journal</button></div></div></div>
 <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Turn-In Checklist</div><div class="turn-in-header-title">Ready to Submit?</div></div></div><div class="turn-in-body"><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I completed the Show What You Know problems on this lesson page.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I used place-value words in my explanations.</span></div><div class="turn-in-item" onclick="toggleCheck(this)"><span class="turn-in-check">✓</span><span>I reviewed my gathered Math Journal answers.</span></div></div></div>
@@ -863,7 +863,6 @@ document.addEventListener('click', function(e){
 
 
 /* 4.02.02 — Addition (number-line + decider-digit) */
-const models={}; // empty
 /* Warm-Up readiness: 3 quick rounds */
 const rRoundAnswers={1:'200',2:'4,000',3:'3,000'};
 const rRoundDone={1:false,2:false,3:false};
@@ -885,110 +884,12 @@ function pickReadinessRound(btn,pair,val){
     }
   } else {
     btn.classList.add('bad');setTimeout(()=>btn.classList.remove('bad'),350);
-    fb.className='inline-feedback show think';fb.innerHTML='Not that one. Picture a number line and ask: which round neighbor is closer? Halfway and up rounds UP.';
+    fb.className='inline-feedback show think';fb.innerHTML='Not that one. Which clean number is only a step or two away from this one? That is the friendly buddy.';
   }
 }
 /* Rounding Lab (Learn): round 23,847 to a chosen place */
-const roundingState={target:487290,place:null,decided:false};
-const placeLabels={10:'10',100:'100',1000:'1,000',10000:'10,000'};
-function pickRoundingPlace(amount,btn){
-  document.querySelectorAll('#roundPlaceBank .value-card').forEach(c=>c.classList.remove('selected'));
-  btn.classList.add('selected');
-  roundingState.place=amount;roundingState.decided=false;
-  const lower=Math.floor(roundingState.target/amount)*amount;
-  const upper=lower+amount;
-  const halfway=lower+amount/2;
-  const pos=(roundingState.target-lower)/amount; // 0..1 along the line
-  // Position the elements
-  document.getElementById('roundLinePrompt').style.display='none';
-  const lowerLbl=document.getElementById('roundLowerLabel');lowerLbl.style.display='block';lowerLbl.textContent=lower.toLocaleString();
-  const upperLbl=document.getElementById('roundUpperLabel');upperLbl.style.display='block';upperLbl.textContent=upper.toLocaleString();
-  const halfwayTick=document.getElementById('roundHalfwayTick');halfwayTick.style.display='block';
-  const halfwayLbl=document.getElementById('roundHalfwayLabel');halfwayLbl.style.display='block';halfwayLbl.textContent='halfway: '+halfway.toLocaleString();
-  const tick=document.getElementById('roundTargetTick');tick.style.display='block';tick.style.left=(5+pos*90)+'%';
-  const lbl=document.getElementById('roundTargetLabel');lbl.style.display='block';lbl.style.left=(5+pos*90)+'%';lbl.textContent=roundingState.target.toLocaleString();
-  document.getElementById('roundStatus').innerHTML='Two neighbors: <strong>'+lower.toLocaleString()+'</strong> and <strong>'+upper.toLocaleString()+'</strong>. Halfway is <strong>'+halfway.toLocaleString()+'</strong>. Where does 487,290 sit?';
-}
-function revealRoundingAnswer(){
-  if(!roundingState.place){document.getElementById('roundStatus').innerHTML='Pick a "round to" amount first.';return;}
-  const amount=roundingState.place;
-  const lower=Math.floor(roundingState.target/amount)*amount;
-  const upper=lower+amount;
-  const halfway=lower+amount/2;
-  const answer=roundingState.target>=halfway?upper:lower;
-  const direction=answer===upper?'UP':'DOWN';
-  document.getElementById('roundStatus').innerHTML='<strong>487,290 rounds '+direction+' to '+answer.toLocaleString()+'</strong>. It’s '+(roundingState.target>=halfway?'past':'before')+' halfway, so the closer neighbor is '+answer.toLocaleString()+'.';
-  roundingState.decided=true;
-  document.getElementById('learnReveal').classList.add('show');
-  miniCelebrate(document.getElementById('learnReveal'));
-}
-function resetRounding(){
-  roundingState.place=null;roundingState.decided=false;
-  document.querySelectorAll('#roundPlaceBank .value-card').forEach(c=>c.classList.remove('selected'));
-  ['roundLowerLabel','roundUpperLabel','roundHalfwayTick','roundHalfwayLabel','roundTargetTick','roundTargetLabel'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.display='none';});
-  document.getElementById('roundLinePrompt').style.display='block';
-  document.getElementById('roundStatus').innerHTML='Tap a "round to" button to see the number line.';
-  document.getElementById('learnReveal').classList.remove('show');
-}
 /* Estimate-Then-Check Workbench (Learn) */
-const estState={a:487290,b:312580,place:null,revealed:false};
-function pickEstimatePlace(amount,btn){
-  document.querySelectorAll('#estPlaceBank .value-card').forEach(c=>c.classList.remove('selected'));
-  btn.classList.add('selected');
-  estState.place=amount;estState.revealed=false;
-  const roundA=Math.round(estState.a/amount)*amount;
-  const roundB=Math.round(estState.b/amount)*amount;
-  const estSum=roundA+roundB;
-  document.getElementById('estDisplay').style.display='block';
-  document.getElementById('estRoundedA').textContent=roundA.toLocaleString();
-  document.getElementById('estRoundedB').textContent=roundB.toLocaleString();
-  document.getElementById('estSum').textContent=estSum.toLocaleString();
-  document.getElementById('estStatus').innerHTML='Estimate is in! Now tap <strong>Show Exact Answer</strong> to see the truth.';
-  document.getElementById('exactDisplay').style.display='none';
-}
-function revealExactSum(){
-  if(!estState.place){document.getElementById('estStatus').innerHTML='Pick a rounding place first.';return;}
-  const exact=estState.a+estState.b;
-  document.getElementById('exactDisplay').style.display='block';
-  const roundA=Math.round(estState.a/estState.place)*estState.place;
-  const roundB=Math.round(estState.b/estState.place)*estState.place;
-  const estSum=roundA+roundB;
-  const diff=Math.abs(exact-estSum);
-  document.getElementById('exactCompare').innerHTML='Estimate said about <strong>'+estSum.toLocaleString()+'</strong>. Exact is <strong>'+exact.toLocaleString()+'</strong>. Off by '+diff.toLocaleString()+'. The estimate kept us in the right neighborhood.';
-  estState.revealed=true;
-  document.getElementById('learnReveal').classList.add('show');
-  miniCelebrate(document.getElementById('learnReveal'));
-}
-function resetEstimate(){
-  estState.place=null;estState.revealed=false;
-  document.querySelectorAll('#estPlaceBank .value-card').forEach(c=>c.classList.remove('selected'));
-  document.getElementById('estDisplay').style.display='none';
-  document.getElementById('exactDisplay').style.display='none';
-  document.getElementById('estStatus').innerHTML='Pick a rounding place to see Felix\'s estimate.';
-  document.getElementById('learnReveal').classList.remove('show');
-}
 /* Add by Place (Learn) — 235,418 + 142,367 */
-const addByPlaceAnswers={ones:'3',tens:'1',hundreds:'4'};
-const addByPlaceDone={ones:false,tens:false,hundreds:false};
-function pickAddByPlace(btn,place,val){
-  const fb=document.getElementById('addByPlaceFb');
-  if(addByPlaceDone[place])return;
-  if(val===addByPlaceAnswers[place]){
-    btn.classList.add('good');
-    btn.parentElement.querySelectorAll('.value-card').forEach(c=>{if(c!==btn)c.style.pointerEvents='none';});
-    addByPlaceDone[place]=true;
-    if(Object.values(addByPlaceDone).every(v=>v)){
-      fb.className='inline-feedback show good';
-      fb.innerHTML='✅ Ones 15 (write 5, carry 1). Tens 1+6+1=8. Hundreds 4+3=7. Full sum so far: 8+1+7=...keep going. The full answer is 377,785.';
-    } else {
-      fb.className='inline-feedback show info';
-      fb.innerHTML='Correct. Move to the next place.';
-    }
-  } else {
-    btn.classList.add('bad');setTimeout(()=>btn.classList.remove('bad'),350);
-    fb.className='inline-feedback show think';fb.innerHTML='Not that one. Add the digits in that place. Remember to carry from the place to the right if needed.';
-  }
-}
 /* Step-Through Subtractor (Learn) — 52,846 − 18,259 */
 const stratPicks={};
 const stratCorrect={1:'friendly',2:'decompose',3:'algorithm'};
@@ -1020,212 +921,22 @@ function pickStrategy(btn,problem,strategy){
     status.innerHTML='Picked '+Object.keys(stratPicks).length+' of 3. Keep going.';
   }
 }
-function stepAddition(){/* legacy hook, no-op in 4.02.03 */}
-function resetAddition(){/* legacy hook, no-op in 4.02.03 */}
 /* Spot the Decider (Learn) — legacy, kept for safety */
-function pickDecider(btn,place,digit){
-  const decRow=btn.parentElement;
-  decRow.querySelectorAll('.digit-tile').forEach(t=>t.classList.remove('active','bad'));
-  const fb=document.getElementById('deciderFb');
-  if(place==='O'){
-    btn.classList.add('active');
-    fb.className='inline-feedback show good';fb.innerHTML='✅ Right. Rounding to the nearest 10 means the decider is the ONES digit.';
-  } else {
-    btn.classList.add('bad');setTimeout(()=>btn.classList.remove('bad'),350);
-    fb.className='inline-feedback show think';fb.innerHTML='Not that one. The decider always lives one place to the RIGHT of the rounding place. Rounding to tens? Look at ones.';
-  }
-}
-function pickDecider2(btn,place,digit){
-  const decRow=btn.parentElement;
-  decRow.querySelectorAll('.digit-tile').forEach(t=>t.classList.remove('active','bad'));
-  const fb=document.getElementById('deciderFb');
-  if(place==='H'){
-    btn.classList.add('active');
-    fb.className='inline-feedback show good';fb.innerHTML='✅ Right. Rounding to the nearest 1,000 means the decider is the HUNDREDS digit.';
-  } else {
-    btn.classList.add('bad');setTimeout(()=>btn.classList.remove('bad'),350);
-    fb.className='inline-feedback show think';fb.innerHTML='Not that one. Rounding to thousands? The decider is one place to the right — hundreds.';
-  }
-}
 /* (legacy comparison functions kept below for safety, but unused) */
-const rCmpAnswers={1:'<',2:'>',3:'='};
-const rCmpDone={1:false,2:false,3:false};
-function pickReadinessCmp(btn,pair,val){
-  const correct=(val===rCmpAnswers[pair]);
-  const fb=document.getElementById('rCmpFb');
-  if(correct){
-    btn.classList.add('good');
-    btn.parentElement.querySelectorAll('.value-card').forEach(c=>{if(c!==btn)c.style.pointerEvents='none';});
-    rCmpDone[pair]=true;
-    if(Object.values(rCmpDone).every(v=>v)){
-      document.getElementById('readinessReveal').classList.add('show');
-      miniCelebrate(document.getElementById('readinessReveal'));
-      fb.className='inline-feedback show good';
-      fb.innerHTML='✅ All three locked in. The first arguing place decides every comparison.';
-    } else {
-      fb.className='inline-feedback show info';
-      fb.innerHTML='Nice. Keep going — '+(3-Object.values(rCmpDone).filter(v=>v).length)+' more.';
-    }
-  } else {
-    btn.classList.add('bad');setTimeout(()=>btn.classList.remove('bad'),350);
-    fb.className='inline-feedback show think';fb.innerHTML='Not that one. Walk the digits left to right and find the first place they differ.';
-  }
-}
 /* Comparison Walker (Learn): 487,290 vs 478,920 */
-const cmpState={a:'487290',b:'478920',step:-1,decided:false};
-const cmpPlaceNames=['hundred-thousands','ten-thousands','thousands','hundreds','tens','ones'];
-function cmpStepRight(){
-  if(cmpState.decided)return;
-  cmpState.step++;
-  const i=cmpState.step;
-  if(i>=6){
-    document.getElementById('cmpSymbol').textContent='=';
-    document.getElementById('cmpStatus').innerHTML='All six places match. The numbers are equal.';
-    cmpState.decided=true;return;
-  }
-  const da=cmpState.a[i],db=cmpState.b[i];
-  if(da===db){
-    document.getElementById('cmpA'+i).style.background='#E3F8ED';
-    document.getElementById('cmpA'+i).style.borderColor='#B8E8CF';
-    document.getElementById('cmpB'+i).style.background='#E3F8ED';
-    document.getElementById('cmpB'+i).style.borderColor='#B8E8CF';
-    document.getElementById('cmpStatus').innerHTML='<strong>'+cmpPlaceNames[i]+':</strong> '+da+' = '+db+'. Same. Move right.';
-  } else {
-    document.getElementById('cmpA'+i).style.background='#FFF8E6';
-    document.getElementById('cmpA'+i).style.borderColor='#F5C518';
-    document.getElementById('cmpB'+i).style.background='#FFF8E6';
-    document.getElementById('cmpB'+i).style.borderColor='#F5C518';
-    const sym=da>db?'>':'<';
-    document.getElementById('cmpSymbol').textContent=sym;
-    const winner=da>db?'A (487,290)':'B (478,920)';
-    document.getElementById('cmpStatus').innerHTML='<strong>'+cmpPlaceNames[i]+':</strong> '+da+' '+sym+' '+db+'. <strong>First argument!</strong> Team '+winner+' wins.';
-    cmpState.decided=true;
-    document.getElementById('learnReveal').classList.add('show');
-    miniCelebrate(document.getElementById('learnReveal'));
-  }
-}
-function cmpReset(){
-  cmpState.step=-1;cmpState.decided=false;
-  for(let i=0;i<6;i++){
-    const a=document.getElementById('cmpA'+i),b=document.getElementById('cmpB'+i);
-    if(a){a.style.background='#FAFBFF';a.style.borderColor='#E2E8F4';}
-    if(b){b.style.background='#FAFBFF';b.style.borderColor='#E2E8F4';}
-  }
-  document.getElementById('cmpSymbol').textContent='?';
-  document.getElementById('cmpStatus').innerHTML='Tap Step Right to begin comparing 487,290 and 478,920.';
-  document.getElementById('learnReveal').classList.remove('show');
-}
 /* Symbol Pointer */
-function flipSymbol(symId,correct){
-  const el=document.getElementById(symId);
-  if(!el)return;
-  if(el.textContent===correct){
-    el.textContent='?';el.style.background='#0E1C42';el.style.color='#F5C518';
-  } else {
-    el.textContent=correct;el.style.background='#2DB87A';el.style.color='#fff';
-  }
-}
 /* Practice 1: 36,420 + 28,750 (answer: '65,170') */
-function pickP1Round(btn,val){
-  document.querySelectorAll('#p1Bank .value-card').forEach(c=>c.classList.remove('good','bad'));
-  if(val==='6,262'){
-    btn.classList.add('good');
-    showBranch('p1-pass');window._practice1Done=true;
-    miniCelebrate(document.getElementById('p1-pass'));
-    document.getElementById('p1-retry').classList.remove('show');
-  } else {
-    btn.classList.add('bad');
-    showBranch('p1-retry');
-    document.getElementById('p1-pass').classList.remove('show');
-  }
-}
-function resetP1Round(){
-  document.querySelectorAll('#p1Bank .value-card').forEach(c=>c.classList.remove('good','bad'));
-  ['p1-pass','p1-retry'].forEach(x=>{let el=document.getElementById(x);if(el)el.classList.remove('show');});
-}
 /* Practice 2: Round 84,562 to three places */
-const p2RoundAnswers={1000:'7,151',10000:'7,800',100000:'8,843'};
-const p2RoundDone={1000:false,10000:false,100000:false};
-let p2RoundWrongs=0;
-function pickP2Round(btn,goal,val){
-  if(p2RoundDone[goal])return;
-  if(val===p2RoundAnswers[goal]){
-    btn.classList.add('good');
-    btn.parentElement.querySelectorAll('.value-card').forEach(c=>{if(c!==btn)c.style.pointerEvents='none';});
-    p2RoundDone[goal]=true;
-    if(Object.values(p2RoundDone).every(v=>v)){
-      showBranch('p2-pass');miniCelebrate(document.getElementById('p2-pass'));
-    }
-  } else {
-    btn.classList.add('bad');setTimeout(()=>btn.classList.remove('bad'),350);
-    p2RoundWrongs++;
-    if(p2RoundWrongs>=2)showBranch('p2-retry');
-  }
-}
-function resetP2Round(){
-  Object.keys(p2RoundDone).forEach(k=>p2RoundDone[k]=false);
-  p2RoundWrongs=0;
-  document.querySelectorAll('[data-p2-goal] .value-card').forEach(c=>{c.classList.remove('good','bad');c.style.pointerEvents='';});
-  ['p2-pass','p2-retry'].forEach(x=>{let el=document.getElementById(x);if(el)el.classList.remove('show');});
-}
 /* legacy: pickP1Symbol kept below */
-function pickP1Symbol(btn,val){
-  document.querySelectorAll('#p1Bank .value-card').forEach(c=>c.classList.remove('good','bad'));
-  if(val==='>'){
-    btn.classList.add('good');
-    document.getElementById('p1Sym').textContent='>';
-    document.getElementById('p1Sym').style.background='#2DB87A';
-    document.getElementById('p1Sym').style.color='#fff';
-    showBranch('p1-pass');window._practice1Done=true;
-    miniCelebrate(document.getElementById('p1-pass'));
-    document.getElementById('p1-retry').classList.remove('show');
-  } else {
-    btn.classList.add('bad');
-    showBranch('p1-retry');
-    document.getElementById('p1-pass').classList.remove('show');
-  }
-}
-function resetP1Symbol(){
-  document.querySelectorAll('#p1Bank .value-card').forEach(c=>c.classList.remove('good','bad'));
-  const sym=document.getElementById('p1Sym');sym.textContent='?';sym.style.background='#0E1C42';sym.style.color='#F5C518';
-  ['p1-pass','p1-retry'].forEach(x=>{let el=document.getElementById(x);if(el)el.classList.remove('show');});
-}
 /* Practice 2: Order four numbers */
-const p2OrderAnswers=['92,500','92,950','920,500','925,000'];
-const p2OrderState={idx:0,wrongs:0};
-function pickP2Order(btn,val){
-  if(btn.classList.contains('good'))return;
-  if(val===p2OrderAnswers[p2OrderState.idx]){
-    const slot=document.getElementById('p2OrderSlot'+(p2OrderState.idx+1));
-    if(slot){slot.textContent=val;slot.style.background='#E3F8ED';slot.style.borderStyle='solid';slot.style.borderColor='#B8E8CF';slot.style.color='#0E1C42';}
-tn.classList.add('good');btn.style.pointerEvents='none';
-    p2OrderState.idx++;
-    if(p2OrderState.idx===4){showBranch('p2-pass');miniCelebrate(document.getElementById('p2-pass'));}
-  } else {
-    btn.classList.add('bad');setTimeout(()=>btn.classList.remove('bad'),350);
-    p2OrderState.wrongs++;
-    if(p2OrderState.wrongs>=2)showBranch('p2-retry');
-  }
-}
-function resetP2Order(){
-  if(typeof p2OrderState!=='undefined'){p2OrderState.idx=0;p2OrderState.wrongs=0;}
-  for(let i=1;i<=4;i++){const s=document.getElementById('p2OrderSlot'+i);if(s){s.textContent='?';s.style.background='#FFF8E6';s.style.borderStyle='dashed';s.style.borderColor='#F5C518';s.style.color='#8A6D2B';}}
-  document.querySelectorAll('#p2OrderBank .value-card').forEach(c=>{c.classList.remove('good','bad');c.style.pointerEvents='';});
-  ['p2-pass','p2-retry'].forEach(x=>{let el=document.getElementById(x);if(el)el.classList.remove('show');});
-}
 
 function miniCelebrate(el){if(!el)return;var emojis=['⭐','✨','🎉','💫','🌟'];for(var i=0;i<8;i++){var s=document.createElement('span');s.textContent=emojis[Math.floor(Math.random()*emojis.length)];s.style.cssText='position:absolute;font-size:'+(16+Math.random()*14)+'px;pointer-events:none;z-index:999;animation:miniPop .7s ease-out forwards;left:'+(20+Math.random()*60)+'%;top:'+(Math.random()*40)+'%;';el.style.position='relative';el.style.overflow='visible';el.appendChild(s);setTimeout(function(x){x.remove()}.bind(null,s),800)}}
-function hideFeedback(prefix){['pass','retry'].forEach(x=>{let el=document.getElementById(prefix+'-'+x);if(el)el.classList.remove('show')})}
-function showBranch(id){let el=document.getElementById(id);if(el)el.classList.add('show')}
-function toggleEACard(card){card.classList.toggle('selected')}
-function checkErrorAnalysis(){const cards=document.querySelectorAll('#errorAnalysisGrid .value-card');let ok=true;cards.forEach(c=>{const correct=c.dataset.eaCorrect==='1';const chosen=c.classList.contains('selected');c.classList.remove('good','bad');if(correct&&chosen){c.classList.add('good')}else if(correct&&!chosen){ok=false}else if(!correct&&chosen){c.classList.add('bad');ok=false}});['p3-pass','p3-retry'].forEach(x=>{let el=document.getElementById(x);if(el)el.classList.remove('show')});if(ok){showBranch('p3-pass');miniCelebrate(document.getElementById('p3-pass'))}else{showBranch('p3-retry')}}
-function resetErrorAnalysis(){document.querySelectorAll('#errorAnalysisGrid .value-card').forEach(c=>{c.classList.remove('selected','good','bad')});['p3-pass','p3-retry'].forEach(x=>{let el=document.getElementById(x);if(el)el.classList.remove('show')})}
 
 function switchTab(tab){document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));document.getElementById('tab-'+tab).classList.add('active');document.querySelectorAll('.tab-btn').forEach(b=>{b.classList.remove('active');if(b.dataset.tab===tab){b.classList.add('active');b.classList.add('visited')}});updateProgress();window.scrollTo({top:0,behavior:'smooth'})}
 function updateProgress(){const tabs=['warmup','learn','assignment'];let active=[...document.querySelectorAll('.tab-btn')].findIndex(b=>b.classList.contains('active'));let pct=Math.round(((active+1)/tabs.length)*100);document.getElementById('progressFill').style.width=pct+'%';document.getElementById('progressPct').textContent=pct+'%'}
-function autoSave(el,dotId){localStorage.setItem('g4-4-02-02-'+el.id,el.value);let dot=document.getElementById(dotId);if(dot){dot.classList.add('saved');setTimeout(()=>dot.classList.remove('saved'),900)}}
-function restoreJournals(){document.querySelectorAll('textarea.journal-box').forEach(t=>{let v=localStorage.getItem('g4-4-02-02-'+t.id);if(v)t.value=v})}
-function gatherAnswers(){let out='Lesson 4.02.02 — Subtraction\n\n';document.querySelectorAll('textarea.journal-box').forEach(t=>{out+=t.dataset.label+'\n'+(t.value.trim()||'[No answer yet]')+'\n\n'});document.getElementById('gatheredOutput').value=out}
+function autoSave(el,dotId){localStorage.setItem('g4-4-02-03-'+el.id,el.value);let dot=document.getElementById(dotId);if(dot){dot.classList.add('saved');setTimeout(()=>dot.classList.remove('saved'),900)}}
+function restoreJournals(){document.querySelectorAll('textarea.journal-box').forEach(t=>{let v=localStorage.getItem('g4-4-02-03-'+t.id);if(v)t.value=v})}
+function gatherAnswers(){let out='Lesson 4.02.03 — Other Ways to Add and Subtract, Part 1\n\n';document.querySelectorAll('textarea.journal-box').forEach(t=>{out+=t.dataset.label+'\n'+(t.value.trim()||'[No answer yet]')+'\n\n'});document.getElementById('gatheredOutput').value=out}
 function copyAnswers(){gatherAnswers();navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('gatheredOutput').value);showPageFeedback&&showPageFeedback('Your answers were copied.');}
 function downloadJournal(){gatherAnswers();let text=document.getElementById('gatheredOutput').value;let w=window.open('','_blank');w.document.write('<pre style="font-family:Arial;white-space:pre-wrap;font-size:14px;line-height:1.5;">'+text.replace(/[&<>]/g,s=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[s]))+'</pre>');w.document.close();w.print()}
 function toggleCheck(item){
@@ -1278,7 +989,6 @@ function fireConfetti() {
 
 async function loadVideoManifest(){try{let res=await fetch('video-manifest.md',{cache:'no-store'});if(!res.ok)return;let txt=await res.text();let map=parseManifest(txt);document.querySelectorAll('.video-wrap[data-video-slot]').forEach(w=>{let slot=w.dataset.videoSlot;if(map[slot]){let ratio=w.querySelector('.video-ratio');ratio.innerHTML=map[slot].trim();let iframe=ratio.querySelector('iframe');if(iframe){iframe.classList.add('video-iframe');iframe.setAttribute('allowfullscreen','');iframe.setAttribute('loading','lazy')}}})}catch(e){}}
 function parseManifest(txt){let map={};let lines=txt.split(/\r?\n/);let current=null,buf=[];function commit(){if(current&&buf.join('\n').trim())map[current]=buf.join('\n').trim();buf=[]}for(let line of lines){let m=line.match(/^([A-Za-z0-9-]+):\s*$/);if(m){commit();current=m[1]}else if(current){buf.push(line)}}commit();return map}
-function showPageFeedback(msg){var panel=document.querySelector('.tab-panel.active')||document.body;var box=panel.querySelector(':scope > .page-feedback');if(!box){box=document.createElement('div');box.className='page-feedback';panel.insertBefore(box,panel.firstChild);}box.className='page-feedback show warn';box.innerHTML=msg;}
 window.addEventListener('DOMContentLoaded',()=>{restoreJournals();updateProgress();loadVideoManifest()});
 </script>
 <script id="fluencyScript">

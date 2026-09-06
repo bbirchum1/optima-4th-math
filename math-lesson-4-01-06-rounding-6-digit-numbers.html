@@ -794,6 +794,7 @@
 <button class="digit-tile" onclick="pickDecider(this,'T','7')">7</button>
 <button class="digit-tile" onclick="pickDecider(this,'O','5')">5</button>
 </div>
+<div class="inline-feedback" id="deciderFb" style="margin-top:10px;"></div>
 </div>
 <div style="text-align:center;">
 <div style="font-size:14px;color:#3A4A6B;font-weight:700;margin-bottom:6px;">Rounding to the nearest <strong>100,000</strong> — tap the decider:</div>
@@ -805,9 +806,9 @@
 <button class="digit-tile" onclick="pickDecider2(this,'T','7')">7</button>
 <button class="digit-tile" onclick="pickDecider2(this,'O','5')">5</button>
 </div>
+<div class="inline-feedback" id="deciderFb2" style="margin-top:10px;"></div>
 </div>
 </div>
-<div class="inline-feedback" id="deciderFb" style="margin-top:14px;"></div>
 </div>
 <div class="journal-label">✏️ For the new "nearest 100,000" goal — which place is the decider in, and why? <span class="saved-dot" id="dot-digit"></span></div><textarea class="journal-box" data-label="Learn — Decider Digit: Where it lives for nearest 100,000" id="journal-digit" oninput="autoSave(this,'dot-digit')" placeholder=""></textarea></div></div>
 <div class="activity bl-slate"><div class="activity-head"><div class="activity-num" style="background:#3A6B9A;">🔍</div><div><div class="activity-title">Worked Example: The Carry Case (599,500)</div><div class="activity-sub">When rounding UP makes more than one digit change.</div></div></div><div class="activity-body"><div class="task-box"><div class="task-label">Problem</div><p>A multi-team festival reported exactly <strong>599,500</strong> total attendees. Round it to the nearest <strong>1,000</strong>. Watch what happens — the answer is going to surprise you a little.</p></div><p style="margin:8px 0;font-weight:700;color:#3A4A6B;">Watch the Math Crew work through it:</p>
@@ -1029,24 +1030,24 @@ function pickDecider(btn,place,digit){
   const decRow=btn.parentElement;
   decRow.querySelectorAll('.digit-tile').forEach(t=>t.classList.remove('active','bad'));
   const fb=document.getElementById('deciderFb');
-  if(place==='O'){
+  if(place==='H'){
     btn.classList.add('active');
-    fb.className='inline-feedback show good';fb.innerHTML='✅ Right. Rounding to the nearest 10 means the decider is the ONES digit.';
+    fb.className='inline-feedback show good';fb.innerHTML='✅ Right. Rounding to the nearest 1,000 means the decider is the HUNDREDS digit — the 4.';
   } else {
     btn.classList.add('bad');setTimeout(()=>btn.classList.remove('bad'),350);
-    fb.className='inline-feedback show think';fb.innerHTML='Not that one. The decider always lives one place to the RIGHT of the rounding place. Rounding to tens? Look at ones.';
+    fb.className='inline-feedback show think';fb.innerHTML='Not that one. The decider always lives one place to the RIGHT of the rounding place. Rounding to thousands? Look at hundreds.';
   }
 }
 function pickDecider2(btn,place,digit){
   const decRow=btn.parentElement;
   decRow.querySelectorAll('.digit-tile').forEach(t=>t.classList.remove('active','bad'));
-  const fb=document.getElementById('deciderFb');
-  if(place==='H'){
+  const fb=document.getElementById('deciderFb2');
+  if(place==='TT'){
     btn.classList.add('active');
-    fb.className='inline-feedback show good';fb.innerHTML='✅ Right. Rounding to the nearest 1,000 means the decider is the HUNDREDS digit.';
+    fb.className='inline-feedback show good';fb.innerHTML='✅ Right. Rounding to the nearest 100,000 means the decider is the TEN-THOUSANDS digit — the 6.';
   } else {
     btn.classList.add('bad');setTimeout(()=>btn.classList.remove('bad'),350);
-    fb.className='inline-feedback show think';fb.innerHTML='Not that one. Rounding to thousands? The decider is one place to the right — hundreds.';
+    fb.className='inline-feedback show think';fb.innerHTML='Not that one. Rounding to hundred-thousands? The decider is one place to the right — ten-thousands.';
   }
 }
 /* (legacy comparison functions kept below for safety, but unused) */

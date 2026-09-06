@@ -1067,7 +1067,7 @@ function pickP2Order(btn,val){
     const slot=document.getElementById('p2OrderSlot'+(p2OrderState.idx+1));
     if(slot){slot.textContent=val;slot.style.background='#E3F8ED';slot.style.borderStyle='solid';slot.style.borderColor='#B8E8CF';slot.style.color='#0E1C42';}
     btn.classList.add('good');btn.style.pointerEvents='none';
-e.idx++;
+    p2OrderState.idx++;
     if(p2OrderState.idx===4){showBranch('p2-pass');miniCelebrate(document.getElementById('p2-pass'));}
   } else {
     btn.classList.add('bad');setTimeout(()=>btn.classList.remove('bad'),350);
